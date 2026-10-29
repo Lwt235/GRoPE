@@ -9,6 +9,12 @@ import sys
 
 
 def launch():
+    arguments = sys.argv[1:]
+    module = 'experiments.matching_probe'
+    if arguments[:1] == ['--module']:
+        module, arguments = arguments[1], arguments[2:]
+        if not module.startswith('experiments.'):
+            raise SystemExit('Only experiments.* modules may be launched.')
     output = subprocess.check_output([
         'nvidia-smi', '--query-gpu=index,uuid,memory.used', '--format=csv,noheader,nounits'
     ], text=True)
@@ -25,7 +31,7 @@ def launch():
             env['OMP_NUM_THREADS'] = '1'
             env['MKL_NUM_THREADS'] = '1'
             print(f'Using idle physical GPU {index}, uuid={uuid}, memory={memory}MiB', flush=True)
-            os.execve(sys.executable, [sys.executable, '-m', 'experiments.matching_probe', '--device', 'cuda', *sys.argv[1:]], env)
+            os.execve(sys.executable, [sys.executable, '-m', module, '--device', 'cuda', *arguments], env)
     raise SystemExit('No idle GPU; pilot not started.')
 
 

@@ -1,0 +1,28 @@
+{
+  "latent_std": [
+    1.2817610502243042,
+    1.4998847246170044,
+    1.5072784423828125,
+    1.287803053855896,
+    1.498466968536377,
+    1.2968801259994507
+  ],
+  "noise_std": [
+    0.5249618291854858,
+    0.5987117290496826,
+    0.6047547459602356,
+    0.5244545936584473,
+    0.6087514162063599,
+    0.5212384462356567
+  ],
+  "marginal_std": [
+    1.3850979804992676,
+    1.6149643659591675,
+    1.6240742206573486,
+    1.3904997110366821,
+    1.6173996925354004,
+    1.3977079391479492
+  ],
+  "calibration_seed": 51771,
+  "interpretation": "Paired 6D Gaussian identity; diagonal marginal and per-coordinate correspondence residual variance matched to log-covariance using a separate calibration split only. Higher-order distributions are not identical."
+}

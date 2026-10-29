@@ -1,0 +1,362 @@
+[
+  {
+    "regime": "oracle_train",
+    "a": "rope_normal",
+    "b": "rope3d",
+    "condition": "oracle",
+    "scene_mean_gain_pp": 1.0721363039079521,
+    "paired_95_low_pp": 0.1581119634082047,
+    "paired_95_high_pp": 1.9629700383130226
+  },
+  {
+    "regime": "oracle_train",
+    "a": "rope_normal",
+    "b": "rope3d",
+    "condition": "normal_noise",
+    "scene_mean_gain_pp": -39.0215616336171,
+    "paired_95_low_pp": -41.835008327314796,
+    "paired_95_high_pp": -35.62729885569583
+  },
+  {
+    "regime": "oracle_train",
+    "a": "rope_normal",
+    "b": "rope3d",
+    "condition": "mixed",
+    "scene_mean_gain_pp": -9.878620633096856,
+    "paired_95_low_pp": -11.009586092380248,
+    "paired_95_high_pp": -8.467374850355473
+  },
+  {
+    "regime": "oracle_train",
+    "a": "rope_normal",
+    "b": "rope3d",
+    "condition": "depth_fit",
+    "scene_mean_gain_pp": -4.187635433114553,
+    "paired_95_low_pp": -5.116538849889922,
+    "paired_95_high_pp": -3.1748427540460096
+  },
+  {
+    "regime": "oracle_train",
+    "a": "rope_normal",
+    "b": "rope3d",
+    "condition": "wide",
+    "scene_mean_gain_pp": 1.6155220071155618,
+    "paired_95_low_pp": 0.8217684344788024,
+    "paired_95_high_pp": 2.2876823417188086
+  },
+  {
+    "regime": "oracle_train",
+    "a": "rope_normal_anisotropy",
+    "b": "rope_normal",
+    "condition": "oracle",
+    "scene_mean_gain_pp": -0.3504553889061454,
+    "paired_95_low_pp": -0.5469677946454782,
+    "paired_95_high_pp": -0.16247036417562427
+  },
+  {
+    "regime": "oracle_train",
+    "a": "rope_normal_anisotropy",
+    "b": "rope_normal",
+    "condition": "normal_noise",
+    "scene_mean_gain_pp": -9.896085367354662,
+    "paired_95_low_pp": -11.566978425040448,
+    "paired_95_high_pp": -8.494570922060635
+  },
+  {
+    "regime": "oracle_train",
+    "a": "rope_normal_anisotropy",
+    "b": "rope_normal",
+    "condition": "mixed",
+    "scene_mean_gain_pp": -24.21293485223176,
+    "paired_95_low_pp": -25.172380361976167,
+    "paired_95_high_pp": -23.259379752404445
+  },
+  {
+    "regime": "oracle_train",
+    "a": "rope_normal_anisotropy",
+    "b": "rope_normal",
+    "condition": "depth_fit",
+    "scene_mean_gain_pp": -1.4989003806849488,
+    "paired_95_low_pp": -1.9094174416429268,
+    "paired_95_high_pp": -1.0913519767886868
+  },
+  {
+    "regime": "oracle_train",
+    "a": "rope_normal_anisotropy",
+    "b": "rope_normal",
+    "condition": "wide",
+    "scene_mean_gain_pp": -1.051307130758284,
+    "paired_95_low_pp": -1.369699560836502,
+    "paired_95_high_pp": -0.7513663974563116
+  },
+  {
+    "regime": "oracle_train",
+    "a": "rope_covariance",
+    "b": "rope_normal",
+    "condition": "oracle",
+    "scene_mean_gain_pp": -0.43606058971615064,
+    "paired_95_low_pp": -0.7159474705153352,
+    "paired_95_high_pp": -0.1425474723239051
+  },
+  {
+    "regime": "oracle_train",
+    "a": "rope_covariance",
+    "b": "rope_normal",
+    "condition": "normal_noise",
+    "scene_mean_gain_pp": -50.710438452069226,
+    "paired_95_low_pp": -54.48216530686255,
+    "paired_95_high_pp": -47.30531620391903
+  },
+  {
+    "regime": "oracle_train",
+    "a": "rope_covariance",
+    "b": "rope_normal",
+    "condition": "mixed",
+    "scene_mean_gain_pp": -34.891743697853336,
+    "paired_95_low_pp": -36.092370122401675,
+    "paired_95_high_pp": -33.526992593099166
+  },
+  {
+    "regime": "oracle_train",
+    "a": "rope_covariance",
+    "b": "rope_normal",
+    "condition": "depth_fit",
+    "scene_mean_gain_pp": -9.273425772798344,
+    "paired_95_low_pp": -10.050824682279426,
+    "paired_95_high_pp": -8.58138377515774
+  },
+  {
+    "regime": "oracle_train",
+    "a": "rope_covariance",
+    "b": "rope_normal",
+    "condition": "wide",
+    "scene_mean_gain_pp": 0.036247777788058606,
+    "paired_95_low_pp": -0.37959994950009074,
+    "paired_95_high_pp": 0.5125425775267903
+  },
+  {
+    "regime": "oracle_train",
+    "a": "rope_overlap",
+    "b": "rope_overlap_constant",
+    "condition": "oracle",
+    "scene_mean_gain_pp": 1.223109436855088,
+    "paired_95_low_pp": 0.7630090120440496,
+    "paired_95_high_pp": 1.772597981735344
+  },
+  {
+    "regime": "oracle_train",
+    "a": "rope_overlap",
+    "b": "rope_overlap_constant",
+    "condition": "normal_noise",
+    "scene_mean_gain_pp": 0.5341214660317947,
+    "paired_95_low_pp": 0.037362823045849765,
+    "paired_95_high_pp": 1.0523711887738754
+  },
+  {
+    "regime": "oracle_train",
+    "a": "rope_overlap",
+    "b": "rope_overlap_constant",
+    "condition": "mixed",
+    "scene_mean_gain_pp": -2.397435194003671,
+    "paired_95_low_pp": -3.017278534092015,
+    "paired_95_high_pp": -1.8221593461286965
+  },
+  {
+    "regime": "oracle_train",
+    "a": "rope_overlap",
+    "b": "rope_overlap_constant",
+    "condition": "depth_fit",
+    "scene_mean_gain_pp": 0.12763055192458891,
+    "paired_95_low_pp": -0.4827344761519893,
+    "paired_95_high_pp": 0.8633757817174429
+  },
+  {
+    "regime": "oracle_train",
+    "a": "rope_overlap",
+    "b": "rope_overlap_constant",
+    "condition": "wide",
+    "scene_mean_gain_pp": 1.127696330295657,
+    "paired_95_low_pp": 0.8027641805936877,
+    "paired_95_high_pp": 1.4840129037522778
+  },
+  {
+    "regime": "oracle_train",
+    "a": "worldrope_mixture_qk",
+    "b": "rope3d",
+    "condition": "oracle",
+    "scene_mean_gain_pp": -0.9498506579833461,
+    "paired_95_low_pp": -2.2243905965901294,
+    "paired_95_high_pp": 0.6393412799744035
+  },
+  {
+    "regime": "oracle_train",
+    "a": "worldrope_mixture_qk",
+    "b": "rope3d",
+    "condition": "normal_noise",
+    "scene_mean_gain_pp": -0.9498506579833461,
+    "paired_95_low_pp": -2.2243905965901294,
+    "paired_95_high_pp": 0.6393412799744035
+  },
+  {
+    "regime": "oracle_train",
+    "a": "worldrope_mixture_qk",
+    "b": "rope3d",
+    "condition": "mixed",
+    "scene_mean_gain_pp": 1.7735821817892239,
+    "paired_95_low_pp": 0.5475535367800712,
+    "paired_95_high_pp": 3.5287573471000693
+  },
+  {
+    "regime": "oracle_train",
+    "a": "worldrope_mixture_qk",
+    "b": "rope3d",
+    "condition": "depth_fit",
+    "scene_mean_gain_pp": 0.7251221026934177,
+    "paired_95_low_pp": -0.4563827705880427,
+    "paired_95_high_pp": 2.303669404215368
+  },
+  {
+    "regime": "oracle_train",
+    "a": "worldrope_mixture_qk",
+    "b": "rope3d",
+    "condition": "wide",
+    "scene_mean_gain_pp": -1.8729661205316006,
+    "paired_95_low_pp": -3.2070955336332223,
+    "paired_95_high_pp": 0.14637423177661155
+  },
+  {
+    "regime": "robust_train",
+    "a": "rope_normal_gated",
+    "b": "rope_normal",
+    "condition": "oracle",
+    "scene_mean_gain_pp": -0.27396253674517757,
+    "paired_95_low_pp": -0.4445286697003216,
+    "paired_95_high_pp": -0.10084402412501164
+  },
+  {
+    "regime": "robust_train",
+    "a": "rope_normal_gated",
+    "b": "rope_normal",
+    "condition": "normal_noise",
+    "scene_mean_gain_pp": 3.402456629732315,
+    "paired_95_low_pp": 1.8429609923554862,
+    "paired_95_high_pp": 5.378032810798264
+  },
+  {
+    "regime": "robust_train",
+    "a": "rope_normal_gated",
+    "b": "rope_normal",
+    "condition": "mixed",
+    "scene_mean_gain_pp": 0.7951959000567381,
+    "paired_95_low_pp": 0.19982848010964993,
+    "paired_95_high_pp": 1.3894943178004213
+  },
+  {
+    "regime": "robust_train",
+    "a": "rope_normal_gated",
+    "b": "rope_normal",
+    "condition": "depth_fit",
+    "scene_mean_gain_pp": 0.7325480256484205,
+    "paired_95_low_pp": 0.20603419385074864,
+    "paired_95_high_pp": 1.268843197912606
+  },
+  {
+    "regime": "robust_train",
+    "a": "rope_normal_gated",
+    "b": "rope_normal",
+    "condition": "wide",
+    "scene_mean_gain_pp": -0.05027369493836519,
+    "paired_95_low_pp": -0.2058463478057946,
+    "paired_95_high_pp": 0.0889400976762505
+  },
+  {
+    "regime": "robust_train",
+    "a": "rope_normal_gated",
+    "b": "rope3d",
+    "condition": "oracle",
+    "scene_mean_gain_pp": 1.2396187888320707,
+    "paired_95_low_pp": 0.7814632678273344,
+    "paired_95_high_pp": 1.7142697168661503
+  },
+  {
+    "regime": "robust_train",
+    "a": "rope_normal_gated",
+    "b": "rope3d",
+    "condition": "normal_noise",
+    "scene_mean_gain_pp": -8.694536448151544,
+    "paired_95_low_pp": -11.068983356101416,
+    "paired_95_high_pp": -6.308026668970314
+  },
+  {
+    "regime": "robust_train",
+    "a": "rope_normal_gated",
+    "b": "rope3d",
+    "condition": "mixed",
+    "scene_mean_gain_pp": -1.0142196886088768,
+    "paired_95_low_pp": -1.4349746770781906,
+    "paired_95_high_pp": -0.584081095441563
+  },
+  {
+    "regime": "robust_train",
+    "a": "rope_normal_gated",
+    "b": "rope3d",
+    "condition": "depth_fit",
+    "scene_mean_gain_pp": 0.34366208628829487,
+    "paired_95_low_pp": 0.06820218167622902,
+    "paired_95_high_pp": 0.6552682734413707
+  },
+  {
+    "regime": "robust_train",
+    "a": "rope_normal_gated",
+    "b": "rope3d",
+    "condition": "wide",
+    "scene_mean_gain_pp": 1.6253335180785433,
+    "paired_95_low_pp": 1.057733965289687,
+    "paired_95_high_pp": 2.194399817226711
+  },
+  {
+    "regime": "robust_train",
+    "a": "rope_normal_gated",
+    "b": "rope_normal_gate_random",
+    "condition": "oracle",
+    "scene_mean_gain_pp": 1.0491684781477777,
+    "paired_95_low_pp": 0.5049075938139824,
+    "paired_95_high_pp": 1.649412149273536
+  },
+  {
+    "regime": "robust_train",
+    "a": "rope_normal_gated",
+    "b": "rope_normal_gate_random",
+    "condition": "normal_noise",
+    "scene_mean_gain_pp": -8.971397287631776,
+    "paired_95_low_pp": -11.495441694990063,
+    "paired_95_high_pp": -6.5974522407381775
+  },
+  {
+    "regime": "robust_train",
+    "a": "rope_normal_gated",
+    "b": "rope_normal_gate_random",
+    "condition": "mixed",
+    "scene_mean_gain_pp": -0.9884602055530595,
+    "paired_95_low_pp": -1.9403220170749254,
+    "paired_95_high_pp": 0.01090284483548958
+  },
+  {
+    "regime": "robust_train",
+    "a": "rope_normal_gated",
+    "b": "rope_normal_gate_random",
+    "condition": "depth_fit",
+    "scene_mean_gain_pp": -0.037658834662931594,
+    "paired_95_low_pp": -1.0331557120743815,
+    "paired_95_high_pp": 0.832521162215419
+  },
+  {
+    "regime": "robust_train",
+    "a": "rope_normal_gated",
+    "b": "rope_normal_gate_random",
+    "condition": "wide",
+    "scene_mean_gain_pp": 2.9581535170801234,
+    "paired_95_low_pp": 2.010685810501455,
+    "paired_95_high_pp": 4.30831253825424
+  }
+]

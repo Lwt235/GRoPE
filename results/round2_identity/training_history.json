@@ -1,0 +1,2162 @@
+[
+  {
+    "seed": 11,
+    "method": "center",
+    "step": 50,
+    "train_loss": 0.4800318777561188,
+    "grad_norm": 0.1615932285785675,
+    "val_r1": 0.7985026240348816,
+    "val_loss": 0.4878452718257904
+  },
+  {
+    "seed": 11,
+    "method": "center",
+    "step": 100,
+    "train_loss": 0.47682270407676697,
+    "grad_norm": 0.16091115772724152,
+    "val_r1": 0.8014323115348816,
+    "val_loss": 0.47811493277549744
+  },
+  {
+    "seed": 11,
+    "method": "center",
+    "step": 150,
+    "train_loss": 0.4996241629123688,
+    "grad_norm": 0.16254563629627228,
+    "val_r1": 0.7994791865348816,
+    "val_loss": 0.47551238536834717
+  },
+  {
+    "seed": 11,
+    "method": "center",
+    "step": 200,
+    "train_loss": 0.47818443179130554,
+    "grad_norm": 0.1710757464170456,
+    "val_r1": 0.7998046875,
+    "val_loss": 0.471271276473999
+  },
+  {
+    "seed": 11,
+    "method": "center",
+    "step": 250,
+    "train_loss": 0.4285435378551483,
+    "grad_norm": 0.17426715791225433,
+    "val_r1": 0.794921875,
+    "val_loss": 0.4699256420135498
+  },
+  {
+    "seed": 11,
+    "method": "center",
+    "step": 300,
+    "train_loss": 0.4577595591545105,
+    "grad_norm": 0.20426343381404877,
+    "val_r1": 0.7955729365348816,
+    "val_loss": 0.46927180886268616
+  },
+  {
+    "seed": 11,
+    "method": "center",
+    "step": 350,
+    "train_loss": 0.36995381116867065,
+    "grad_norm": 0.19385215640068054,
+    "val_r1": 0.7962239384651184,
+    "val_loss": 0.46681416034698486
+  },
+  {
+    "seed": 11,
+    "method": "center",
+    "step": 400,
+    "train_loss": 0.41635459661483765,
+    "grad_norm": 0.20320135354995728,
+    "val_r1": 0.7952473759651184,
+    "val_loss": 0.4729067385196686
+  },
+  {
+    "seed": 11,
+    "method": "rope3d_axis",
+    "step": 50,
+    "train_loss": 0.4502697288990021,
+    "grad_norm": 0.617950439453125,
+    "val_r1": 0.8880208134651184,
+    "val_loss": 0.480145663022995
+  },
+  {
+    "seed": 11,
+    "method": "rope3d_axis",
+    "step": 100,
+    "train_loss": 0.36436864733695984,
+    "grad_norm": 0.4885666072368622,
+    "val_r1": 0.9108073115348816,
+    "val_loss": 0.39926961064338684
+  },
+  {
+    "seed": 11,
+    "method": "rope3d_axis",
+    "step": 150,
+    "train_loss": 0.3746095895767212,
+    "grad_norm": 0.4256138205528259,
+    "val_r1": 0.91796875,
+    "val_loss": 0.3562606871128082
+  },
+  {
+    "seed": 11,
+    "method": "rope3d_axis",
+    "step": 200,
+    "train_loss": 0.31704530119895935,
+    "grad_norm": 0.3987202048301697,
+    "val_r1": 0.9212239384651184,
+    "val_loss": 0.3238288164138794
+  },
+  {
+    "seed": 11,
+    "method": "rope3d_axis",
+    "step": 250,
+    "train_loss": 0.2732205390930176,
+    "grad_norm": 0.3184194564819336,
+    "val_r1": 0.9248046875,
+    "val_loss": 0.29982730746269226
+  },
+  {
+    "seed": 11,
+    "method": "rope3d_axis",
+    "step": 300,
+    "train_loss": 0.23844362795352936,
+    "grad_norm": 0.27343451976776123,
+    "val_r1": 0.9248046875,
+    "val_loss": 0.2803572416305542
+  },
+  {
+    "seed": 11,
+    "method": "rope3d_axis",
+    "step": 350,
+    "train_loss": 0.2095308005809784,
+    "grad_norm": 0.27177149057388306,
+    "val_r1": 0.9244791865348816,
+    "val_loss": 0.26476263999938965
+  },
+  {
+    "seed": 11,
+    "method": "rope3d_axis",
+    "step": 400,
+    "train_loss": 0.23281478881835938,
+    "grad_norm": 0.2266097217798233,
+    "val_r1": 0.9251301884651184,
+    "val_loss": 0.2512975037097931
+  },
+  {
+    "seed": 11,
+    "method": "rope3d_axis_normal",
+    "step": 50,
+    "train_loss": 0.34416621923446655,
+    "grad_norm": 0.4857489764690399,
+    "val_r1": 0.9430338740348816,
+    "val_loss": 0.36656150221824646
+  },
+  {
+    "seed": 11,
+    "method": "rope3d_axis_normal",
+    "step": 100,
+    "train_loss": 0.2676313817501068,
+    "grad_norm": 0.37300923466682434,
+    "val_r1": 0.9606119990348816,
+    "val_loss": 0.297823429107666
+  },
+  {
+    "seed": 11,
+    "method": "rope3d_axis_normal",
+    "step": 150,
+    "train_loss": 0.27568694949150085,
+    "grad_norm": 0.3227490782737732,
+    "val_r1": 0.9619140625,
+    "val_loss": 0.26056399941444397
+  },
+  {
+    "seed": 11,
+    "method": "rope3d_axis_normal",
+    "step": 200,
+    "train_loss": 0.22036893665790558,
+    "grad_norm": 0.29624274373054504,
+    "val_r1": 0.9645182490348816,
+    "val_loss": 0.23260082304477692
+  },
+  {
+    "seed": 11,
+    "method": "rope3d_axis_normal",
+    "step": 250,
+    "train_loss": 0.19250895082950592,
+    "grad_norm": 0.23324060440063477,
+    "val_r1": 0.9671223759651184,
+    "val_loss": 0.2115468531847
+  },
+  {
+    "seed": 11,
+    "method": "rope3d_axis_normal",
+    "step": 300,
+    "train_loss": 0.1677100509405136,
+    "grad_norm": 0.19573546946048737,
+    "val_r1": 0.9658203125,
+    "val_loss": 0.1940935254096985
+  },
+  {
+    "seed": 11,
+    "method": "rope3d_axis_normal",
+    "step": 350,
+    "train_loss": 0.1376272439956665,
+    "grad_norm": 0.19205142557621002,
+    "val_r1": 0.9674479365348816,
+    "val_loss": 0.18015968799591064
+  },
+  {
+    "seed": 11,
+    "method": "rope3d_axis_normal",
+    "step": 400,
+    "train_loss": 0.15156958997249603,
+    "grad_norm": 0.16541285812854767,
+    "val_r1": 0.9680989384651184,
+    "val_loss": 0.16776752471923828
+  },
+  {
+    "seed": 11,
+    "method": "rope3d_axis_logcov",
+    "step": 50,
+    "train_loss": 0.19648116827011108,
+    "grad_norm": 0.3065674304962158,
+    "val_r1": 0.982421875,
+    "val_loss": 0.20914621651172638
+  },
+  {
+    "seed": 11,
+    "method": "rope3d_axis_logcov",
+    "step": 100,
+    "train_loss": 0.14637164771556854,
+    "grad_norm": 0.22643382847309113,
+    "val_r1": 0.9869791865348816,
+    "val_loss": 0.1646258383989334
+  },
+  {
+    "seed": 11,
+    "method": "rope3d_axis_logcov",
+    "step": 150,
+    "train_loss": 0.15358999371528625,
+    "grad_norm": 0.202571302652359,
+    "val_r1": 0.986328125,
+    "val_loss": 0.14039494097232819
+  },
+  {
+    "seed": 11,
+    "method": "rope3d_axis_logcov",
+    "step": 200,
+    "train_loss": 0.1116112470626831,
+    "grad_norm": 0.1815669983625412,
+    "val_r1": 0.9873046875,
+    "val_loss": 0.12316787242889404
+  },
+  {
+    "seed": 11,
+    "method": "rope3d_axis_logcov",
+    "step": 250,
+    "train_loss": 0.09537487477064133,
+    "grad_norm": 0.1378568559885025,
+    "val_r1": 0.9879557490348816,
+    "val_loss": 0.10977613180875778
+  },
+  {
+    "seed": 11,
+    "method": "rope3d_axis_logcov",
+    "step": 300,
+    "train_loss": 0.08580327033996582,
+    "grad_norm": 0.11493591219186783,
+    "val_r1": 0.9886067509651184,
+    "val_loss": 0.09962260723114014
+  },
+  {
+    "seed": 11,
+    "method": "rope3d_axis_logcov",
+    "step": 350,
+    "train_loss": 0.06814280897378922,
+    "grad_norm": 0.11265896260738373,
+    "val_r1": 0.9899088740348816,
+    "val_loss": 0.09159281104803085
+  },
+  {
+    "seed": 11,
+    "method": "rope3d_axis_logcov",
+    "step": 400,
+    "train_loss": 0.07143877446651459,
+    "grad_norm": 0.09991586208343506,
+    "val_r1": 0.9889323115348816,
+    "val_loss": 0.0844038650393486
+  },
+  {
+    "seed": 11,
+    "method": "rope3d_axis_paired_random",
+    "step": 50,
+    "train_loss": 0.2199632227420807,
+    "grad_norm": 0.3280890882015228,
+    "val_r1": 0.9811198115348816,
+    "val_loss": 0.21906912326812744
+  },
+  {
+    "seed": 11,
+    "method": "rope3d_axis_paired_random",
+    "step": 100,
+    "train_loss": 0.15147466957569122,
+    "grad_norm": 0.2425064593553543,
+    "val_r1": 0.9860026240348816,
+    "val_loss": 0.17248636484146118
+  },
+  {
+    "seed": 11,
+    "method": "rope3d_axis_paired_random",
+    "step": 150,
+    "train_loss": 0.15872041881084442,
+    "grad_norm": 0.2137816846370697,
+    "val_r1": 0.9879557490348816,
+    "val_loss": 0.14750714600086212
+  },
+  {
+    "seed": 11,
+    "method": "rope3d_axis_paired_random",
+    "step": 200,
+    "train_loss": 0.12123769521713257,
+    "grad_norm": 0.18273375928401947,
+    "val_r1": 0.9876301884651184,
+    "val_loss": 0.12947434186935425
+  },
+  {
+    "seed": 11,
+    "method": "rope3d_axis_paired_random",
+    "step": 250,
+    "train_loss": 0.08937286585569382,
+    "grad_norm": 0.14430607855319977,
+    "val_r1": 0.9876301884651184,
+    "val_loss": 0.11584407091140747
+  },
+  {
+    "seed": 11,
+    "method": "rope3d_axis_paired_random",
+    "step": 300,
+    "train_loss": 0.08537089824676514,
+    "grad_norm": 0.11843466758728027,
+    "val_r1": 0.98828125,
+    "val_loss": 0.10430077463388443
+  },
+  {
+    "seed": 11,
+    "method": "rope3d_axis_paired_random",
+    "step": 350,
+    "train_loss": 0.0675794705748558,
+    "grad_norm": 0.11075639724731445,
+    "val_r1": 0.98828125,
+    "val_loss": 0.09589793533086777
+  },
+  {
+    "seed": 11,
+    "method": "rope3d_axis_paired_random",
+    "step": 400,
+    "train_loss": 0.07031724601984024,
+    "grad_norm": 0.10027141124010086,
+    "val_r1": 0.990234375,
+    "val_loss": 0.08812803775072098
+  },
+  {
+    "seed": 11,
+    "method": "rope3d_axis_independent_random",
+    "step": 50,
+    "train_loss": 0.5479778051376343,
+    "grad_norm": 0.7651169300079346,
+    "val_r1": 0.828125,
+    "val_loss": 0.5801253914833069
+  },
+  {
+    "seed": 11,
+    "method": "rope3d_axis_independent_random",
+    "step": 100,
+    "train_loss": 0.43762683868408203,
+    "grad_norm": 0.6059340238571167,
+    "val_r1": 0.8518880009651184,
+    "val_loss": 0.4763098955154419
+  },
+  {
+    "seed": 11,
+    "method": "rope3d_axis_independent_random",
+    "step": 150,
+    "train_loss": 0.4345414936542511,
+    "grad_norm": 0.5077550411224365,
+    "val_r1": 0.8681640625,
+    "val_loss": 0.41798654198646545
+  },
+  {
+    "seed": 11,
+    "method": "rope3d_axis_independent_random",
+    "step": 200,
+    "train_loss": 0.3536319434642792,
+    "grad_norm": 0.46080416440963745,
+    "val_r1": 0.8798828125,
+    "val_loss": 0.3752271831035614
+  },
+  {
+    "seed": 11,
+    "method": "rope3d_axis_independent_random",
+    "step": 250,
+    "train_loss": 0.3041748106479645,
+    "grad_norm": 0.37521687150001526,
+    "val_r1": 0.8850911259651184,
+    "val_loss": 0.343887060880661
+  },
+  {
+    "seed": 11,
+    "method": "rope3d_axis_independent_random",
+    "step": 300,
+    "train_loss": 0.27311015129089355,
+    "grad_norm": 0.32673180103302,
+    "val_r1": 0.8899739384651184,
+    "val_loss": 0.3188285827636719
+  },
+  {
+    "seed": 11,
+    "method": "rope3d_axis_independent_random",
+    "step": 350,
+    "train_loss": 0.23275533318519592,
+    "grad_norm": 0.3043740391731262,
+    "val_r1": 0.8961588740348816,
+    "val_loss": 0.298043429851532
+  },
+  {
+    "seed": 11,
+    "method": "rope3d_axis_independent_random",
+    "step": 400,
+    "train_loss": 0.25566473603248596,
+    "grad_norm": 0.24953293800354004,
+    "val_r1": 0.9010416865348816,
+    "val_loss": 0.28133487701416016
+  },
+  {
+    "seed": 22,
+    "method": "center",
+    "step": 50,
+    "train_loss": 0.5218140482902527,
+    "grad_norm": 0.17936626076698303,
+    "val_r1": 0.802734375,
+    "val_loss": 0.48782822489738464
+  },
+  {
+    "seed": 22,
+    "method": "center",
+    "step": 100,
+    "train_loss": 0.4833277761936188,
+    "grad_norm": 0.16790485382080078,
+    "val_r1": 0.8030598759651184,
+    "val_loss": 0.47730645537376404
+  },
+  {
+    "seed": 22,
+    "method": "center",
+    "step": 150,
+    "train_loss": 0.5601788759231567,
+    "grad_norm": 0.15782108902931213,
+    "val_r1": 0.8050130009651184,
+    "val_loss": 0.4709078371524811
+  },
+  {
+    "seed": 22,
+    "method": "center",
+    "step": 200,
+    "train_loss": 0.4014231264591217,
+    "grad_norm": 0.17061039805412292,
+    "val_r1": 0.8043619990348816,
+    "val_loss": 0.4660770893096924
+  },
+  {
+    "seed": 22,
+    "method": "center",
+    "step": 250,
+    "train_loss": 0.3991335928440094,
+    "grad_norm": 0.17955796420574188,
+    "val_r1": 0.8014323115348816,
+    "val_loss": 0.4656887352466583
+  },
+  {
+    "seed": 22,
+    "method": "center",
+    "step": 300,
+    "train_loss": 0.44203683733940125,
+    "grad_norm": 0.192246213555336,
+    "val_r1": 0.7994791865348816,
+    "val_loss": 0.4685586988925934
+  },
+  {
+    "seed": 22,
+    "method": "center",
+    "step": 350,
+    "train_loss": 0.419034481048584,
+    "grad_norm": 0.19841553270816803,
+    "val_r1": 0.796875,
+    "val_loss": 0.4655434191226959
+  },
+  {
+    "seed": 22,
+    "method": "center",
+    "step": 400,
+    "train_loss": 0.41484954953193665,
+    "grad_norm": 0.22130021452903748,
+    "val_r1": 0.8011067509651184,
+    "val_loss": 0.46474042534828186
+  },
+  {
+    "seed": 22,
+    "method": "rope3d_axis",
+    "step": 50,
+    "train_loss": 0.4635470509529114,
+    "grad_norm": 0.6098427176475525,
+    "val_r1": 0.9069010615348816,
+    "val_loss": 0.44152164459228516
+  },
+  {
+    "seed": 22,
+    "method": "rope3d_axis",
+    "step": 100,
+    "train_loss": 0.3814581334590912,
+    "grad_norm": 0.539680540561676,
+    "val_r1": 0.9215494990348816,
+    "val_loss": 0.37447670102119446
+  },
+  {
+    "seed": 22,
+    "method": "rope3d_axis",
+    "step": 150,
+    "train_loss": 0.37720972299575806,
+    "grad_norm": 0.44329437613487244,
+    "val_r1": 0.9244791865348816,
+    "val_loss": 0.33377811312675476
+  },
+  {
+    "seed": 22,
+    "method": "rope3d_axis",
+    "step": 200,
+    "train_loss": 0.26102346181869507,
+    "grad_norm": 0.3741903603076935,
+    "val_r1": 0.9235026240348816,
+    "val_loss": 0.30615636706352234
+  },
+  {
+    "seed": 22,
+    "method": "rope3d_axis",
+    "step": 250,
+    "train_loss": 0.22488902509212494,
+    "grad_norm": 0.3051069378852844,
+    "val_r1": 0.9293619990348816,
+    "val_loss": 0.2819789946079254
+  },
+  {
+    "seed": 22,
+    "method": "rope3d_axis",
+    "step": 300,
+    "train_loss": 0.2662971019744873,
+    "grad_norm": 0.2944278120994568,
+    "val_r1": 0.9261067509651184,
+    "val_loss": 0.2642213702201843
+  },
+  {
+    "seed": 22,
+    "method": "rope3d_axis",
+    "step": 350,
+    "train_loss": 0.21443593502044678,
+    "grad_norm": 0.259199321269989,
+    "val_r1": 0.9290364384651184,
+    "val_loss": 0.24894064664840698
+  },
+  {
+    "seed": 22,
+    "method": "rope3d_axis",
+    "step": 400,
+    "train_loss": 0.21730908751487732,
+    "grad_norm": 0.2492770552635193,
+    "val_r1": 0.9306640625,
+    "val_loss": 0.23648087680339813
+  },
+  {
+    "seed": 22,
+    "method": "rope3d_axis_normal",
+    "step": 50,
+    "train_loss": 0.3490421175956726,
+    "grad_norm": 0.4816582500934601,
+    "val_r1": 0.9560546875,
+    "val_loss": 0.332895964384079
+  },
+  {
+    "seed": 22,
+    "method": "rope3d_axis_normal",
+    "step": 100,
+    "train_loss": 0.2830677330493927,
+    "grad_norm": 0.41814732551574707,
+    "val_r1": 0.9632161259651184,
+    "val_loss": 0.2749577462673187
+  },
+  {
+    "seed": 22,
+    "method": "rope3d_axis_normal",
+    "step": 150,
+    "train_loss": 0.274442583322525,
+    "grad_norm": 0.3418183922767639,
+    "val_r1": 0.9638671875,
+    "val_loss": 0.23958317935466766
+  },
+  {
+    "seed": 22,
+    "method": "rope3d_axis_normal",
+    "step": 200,
+    "train_loss": 0.18873807787895203,
+    "grad_norm": 0.27775630354881287,
+    "val_r1": 0.9635416865348816,
+    "val_loss": 0.2152152806520462
+  },
+  {
+    "seed": 22,
+    "method": "rope3d_axis_normal",
+    "step": 250,
+    "train_loss": 0.15911328792572021,
+    "grad_norm": 0.22068338096141815,
+    "val_r1": 0.966796875,
+    "val_loss": 0.19437384605407715
+  },
+  {
+    "seed": 22,
+    "method": "rope3d_axis_normal",
+    "step": 300,
+    "train_loss": 0.18480412662029266,
+    "grad_norm": 0.2172415554523468,
+    "val_r1": 0.9661458134651184,
+    "val_loss": 0.17858628928661346
+  },
+  {
+    "seed": 22,
+    "method": "rope3d_axis_normal",
+    "step": 350,
+    "train_loss": 0.1441643387079239,
+    "grad_norm": 0.1812972128391266,
+    "val_r1": 0.9671223759651184,
+    "val_loss": 0.16478945314884186
+  },
+  {
+    "seed": 22,
+    "method": "rope3d_axis_normal",
+    "step": 400,
+    "train_loss": 0.14275862276554108,
+    "grad_norm": 0.1747150719165802,
+    "val_r1": 0.9684244990348816,
+    "val_loss": 0.15293295681476593
+  },
+  {
+    "seed": 22,
+    "method": "rope3d_axis_logcov",
+    "step": 50,
+    "train_loss": 0.19213658571243286,
+    "grad_norm": 0.30848753452301025,
+    "val_r1": 0.9873046875,
+    "val_loss": 0.18387673795223236
+  },
+  {
+    "seed": 22,
+    "method": "rope3d_axis_logcov",
+    "step": 100,
+    "train_loss": 0.1619778573513031,
+    "grad_norm": 0.2678408622741699,
+    "val_r1": 0.9899088740348816,
+    "val_loss": 0.14601105451583862
+  },
+  {
+    "seed": 22,
+    "method": "rope3d_axis_logcov",
+    "step": 150,
+    "train_loss": 0.14647042751312256,
+    "grad_norm": 0.21611593663692474,
+    "val_r1": 0.9908854365348816,
+    "val_loss": 0.12325183302164078
+  },
+  {
+    "seed": 22,
+    "method": "rope3d_axis_logcov",
+    "step": 200,
+    "train_loss": 0.09712585806846619,
+    "grad_norm": 0.16083893179893494,
+    "val_r1": 0.9915364384651184,
+    "val_loss": 0.10777345299720764
+  },
+  {
+    "seed": 22,
+    "method": "rope3d_axis_logcov",
+    "step": 250,
+    "train_loss": 0.08379841595888138,
+    "grad_norm": 0.13172557950019836,
+    "val_r1": 0.9908854365348816,
+    "val_loss": 0.09539511054754257
+  },
+  {
+    "seed": 22,
+    "method": "rope3d_axis_logcov",
+    "step": 300,
+    "train_loss": 0.09573802351951599,
+    "grad_norm": 0.13529135286808014,
+    "val_r1": 0.9912109375,
+    "val_loss": 0.08607593923807144
+  },
+  {
+    "seed": 22,
+    "method": "rope3d_axis_logcov",
+    "step": 350,
+    "train_loss": 0.07443509995937347,
+    "grad_norm": 0.10588659346103668,
+    "val_r1": 0.9915364384651184,
+    "val_loss": 0.07776886969804764
+  },
+  {
+    "seed": 22,
+    "method": "rope3d_axis_logcov",
+    "step": 400,
+    "train_loss": 0.06735305488109589,
+    "grad_norm": 0.10042832046747208,
+    "val_r1": 0.9905598759651184,
+    "val_loss": 0.07080117613077164
+  },
+  {
+    "seed": 22,
+    "method": "rope3d_axis_paired_random",
+    "step": 50,
+    "train_loss": 0.20664478838443756,
+    "grad_norm": 0.32033243775367737,
+    "val_r1": 0.982421875,
+    "val_loss": 0.19939744472503662
+  },
+  {
+    "seed": 22,
+    "method": "rope3d_axis_paired_random",
+    "step": 100,
+    "train_loss": 0.1568022519350052,
+    "grad_norm": 0.2633194327354431,
+    "val_r1": 0.9866536259651184,
+    "val_loss": 0.16053974628448486
+  },
+  {
+    "seed": 22,
+    "method": "rope3d_axis_paired_random",
+    "step": 150,
+    "train_loss": 0.14394018054008484,
+    "grad_norm": 0.2097475230693817,
+    "val_r1": 0.98828125,
+    "val_loss": 0.13640689849853516
+  },
+  {
+    "seed": 22,
+    "method": "rope3d_axis_paired_random",
+    "step": 200,
+    "train_loss": 0.10340972244739532,
+    "grad_norm": 0.16572079062461853,
+    "val_r1": 0.98828125,
+    "val_loss": 0.1201384887099266
+  },
+  {
+    "seed": 22,
+    "method": "rope3d_axis_paired_random",
+    "step": 250,
+    "train_loss": 0.08068190515041351,
+    "grad_norm": 0.13402342796325684,
+    "val_r1": 0.9895833134651184,
+    "val_loss": 0.10715701431035995
+  },
+  {
+    "seed": 22,
+    "method": "rope3d_axis_paired_random",
+    "step": 300,
+    "train_loss": 0.09568370878696442,
+    "grad_norm": 0.13728588819503784,
+    "val_r1": 0.9912109375,
+    "val_loss": 0.09680337458848953
+  },
+  {
+    "seed": 22,
+    "method": "rope3d_axis_paired_random",
+    "step": 350,
+    "train_loss": 0.07309238612651825,
+    "grad_norm": 0.10830678045749664,
+    "val_r1": 0.9905598759651184,
+    "val_loss": 0.08807215839624405
+  },
+  {
+    "seed": 22,
+    "method": "rope3d_axis_paired_random",
+    "step": 400,
+    "train_loss": 0.06768011301755905,
+    "grad_norm": 0.1049572080373764,
+    "val_r1": 0.9908854365348816,
+    "val_loss": 0.0806046649813652
+  },
+  {
+    "seed": 22,
+    "method": "rope3d_axis_independent_random",
+    "step": 50,
+    "train_loss": 0.5420177578926086,
+    "grad_norm": 0.7111527919769287,
+    "val_r1": 0.849609375,
+    "val_loss": 0.5291852355003357
+  },
+  {
+    "seed": 22,
+    "method": "rope3d_axis_independent_random",
+    "step": 100,
+    "train_loss": 0.4387238025665283,
+    "grad_norm": 0.6303133964538574,
+    "val_r1": 0.8671875,
+    "val_loss": 0.44171199202537537
+  },
+  {
+    "seed": 22,
+    "method": "rope3d_axis_independent_random",
+    "step": 150,
+    "train_loss": 0.44250133633613586,
+    "grad_norm": 0.5273569822311401,
+    "val_r1": 0.8818359375,
+    "val_loss": 0.3865804970264435
+  },
+  {
+    "seed": 22,
+    "method": "rope3d_axis_independent_random",
+    "step": 200,
+    "train_loss": 0.3085852861404419,
+    "grad_norm": 0.4375942349433899,
+    "val_r1": 0.892578125,
+    "val_loss": 0.34891724586486816
+  },
+  {
+    "seed": 22,
+    "method": "rope3d_axis_independent_random",
+    "step": 250,
+    "train_loss": 0.2586195766925812,
+    "grad_norm": 0.35988807678222656,
+    "val_r1": 0.9016926884651184,
+    "val_loss": 0.31773221492767334
+  },
+  {
+    "seed": 22,
+    "method": "rope3d_axis_independent_random",
+    "step": 300,
+    "train_loss": 0.29134485125541687,
+    "grad_norm": 0.3270074129104614,
+    "val_r1": 0.9033203125,
+    "val_loss": 0.29485681653022766
+  },
+  {
+    "seed": 22,
+    "method": "rope3d_axis_independent_random",
+    "step": 350,
+    "train_loss": 0.24157492816448212,
+    "grad_norm": 0.30887240171432495,
+    "val_r1": 0.9078776240348816,
+    "val_loss": 0.27496686577796936
+  },
+  {
+    "seed": 22,
+    "method": "rope3d_axis_independent_random",
+    "step": 400,
+    "train_loss": 0.23399272561073303,
+    "grad_norm": 0.28379204869270325,
+    "val_r1": 0.9137369990348816,
+    "val_loss": 0.25950074195861816
+  },
+  {
+    "seed": 33,
+    "method": "center",
+    "step": 50,
+    "train_loss": 0.4865662157535553,
+    "grad_norm": 0.16702714562416077,
+    "val_r1": 0.8024088740348816,
+    "val_loss": 0.4900526702404022
+  },
+  {
+    "seed": 33,
+    "method": "center",
+    "step": 100,
+    "train_loss": 0.4412667155265808,
+    "grad_norm": 0.15481100976467133,
+    "val_r1": 0.8033854365348816,
+    "val_loss": 0.4816805124282837
+  },
+  {
+    "seed": 33,
+    "method": "center",
+    "step": 150,
+    "train_loss": 0.42480751872062683,
+    "grad_norm": 0.15627141296863556,
+    "val_r1": 0.7958984375,
+    "val_loss": 0.4738032817840576
+  },
+  {
+    "seed": 33,
+    "method": "center",
+    "step": 200,
+    "train_loss": 0.4833013117313385,
+    "grad_norm": 0.18858881294727325,
+    "val_r1": 0.7939453125,
+    "val_loss": 0.4735313951969147
+  },
+  {
+    "seed": 33,
+    "method": "center",
+    "step": 250,
+    "train_loss": 0.36458367109298706,
+    "grad_norm": 0.17775867879390717,
+    "val_r1": 0.7952473759651184,
+    "val_loss": 0.47245338559150696
+  },
+  {
+    "seed": 33,
+    "method": "center",
+    "step": 300,
+    "train_loss": 0.4152534604072571,
+    "grad_norm": 0.17432831227779388,
+    "val_r1": 0.8024088740348816,
+    "val_loss": 0.47067126631736755
+  },
+  {
+    "seed": 33,
+    "method": "center",
+    "step": 350,
+    "train_loss": 0.4404623508453369,
+    "grad_norm": 0.1852451115846634,
+    "val_r1": 0.794921875,
+    "val_loss": 0.47419247031211853
+  },
+  {
+    "seed": 33,
+    "method": "center",
+    "step": 400,
+    "train_loss": 0.4256749451160431,
+    "grad_norm": 0.2200917750597,
+    "val_r1": 0.794921875,
+    "val_loss": 0.47475263476371765
+  },
+  {
+    "seed": 33,
+    "method": "rope3d_axis",
+    "step": 50,
+    "train_loss": 0.4695426821708679,
+    "grad_norm": 0.6373383402824402,
+    "val_r1": 0.9029948115348816,
+    "val_loss": 0.4558681547641754
+  },
+  {
+    "seed": 33,
+    "method": "rope3d_axis",
+    "step": 100,
+    "train_loss": 0.3403569459915161,
+    "grad_norm": 0.4979662597179413,
+    "val_r1": 0.9186198115348816,
+    "val_loss": 0.3811841905117035
+  },
+  {
+    "seed": 33,
+    "method": "rope3d_axis",
+    "step": 150,
+    "train_loss": 0.29794833064079285,
+    "grad_norm": 0.4090834856033325,
+    "val_r1": 0.9215494990348816,
+    "val_loss": 0.33905017375946045
+  },
+  {
+    "seed": 33,
+    "method": "rope3d_axis",
+    "step": 200,
+    "train_loss": 0.2987181842327118,
+    "grad_norm": 0.3612304925918579,
+    "val_r1": 0.9248046875,
+    "val_loss": 0.3090956509113312
+  },
+  {
+    "seed": 33,
+    "method": "rope3d_axis",
+    "step": 250,
+    "train_loss": 0.24141274392604828,
+    "grad_norm": 0.29690688848495483,
+    "val_r1": 0.9267578125,
+    "val_loss": 0.2851175367832184
+  },
+  {
+    "seed": 33,
+    "method": "rope3d_axis",
+    "step": 300,
+    "train_loss": 0.2493174523115158,
+    "grad_norm": 0.2918805181980133,
+    "val_r1": 0.9244791865348816,
+    "val_loss": 0.26714029908180237
+  },
+  {
+    "seed": 33,
+    "method": "rope3d_axis",
+    "step": 350,
+    "train_loss": 0.22111588716506958,
+    "grad_norm": 0.25847128033638,
+    "val_r1": 0.9293619990348816,
+    "val_loss": 0.25256145000457764
+  },
+  {
+    "seed": 33,
+    "method": "rope3d_axis",
+    "step": 400,
+    "train_loss": 0.22121146321296692,
+    "grad_norm": 0.23710772395133972,
+    "val_r1": 0.9306640625,
+    "val_loss": 0.2413143664598465
+  },
+  {
+    "seed": 33,
+    "method": "rope3d_axis_normal",
+    "step": 50,
+    "train_loss": 0.36006876826286316,
+    "grad_norm": 0.5065145492553711,
+    "val_r1": 0.9541015625,
+    "val_loss": 0.3468129634857178
+  },
+  {
+    "seed": 33,
+    "method": "rope3d_axis_normal",
+    "step": 100,
+    "train_loss": 0.25301527976989746,
+    "grad_norm": 0.3737545907497406,
+    "val_r1": 0.9625651240348816,
+    "val_loss": 0.2837320864200592
+  },
+  {
+    "seed": 33,
+    "method": "rope3d_axis_normal",
+    "step": 150,
+    "train_loss": 0.21413832902908325,
+    "grad_norm": 0.3039053678512573,
+    "val_r1": 0.9658203125,
+    "val_loss": 0.24761085212230682
+  },
+  {
+    "seed": 33,
+    "method": "rope3d_axis_normal",
+    "step": 200,
+    "train_loss": 0.21294845640659332,
+    "grad_norm": 0.2675325572490692,
+    "val_r1": 0.9645182490348816,
+    "val_loss": 0.22156751155853271
+  },
+  {
+    "seed": 33,
+    "method": "rope3d_axis_normal",
+    "step": 250,
+    "train_loss": 0.16615994274616241,
+    "grad_norm": 0.21539515256881714,
+    "val_r1": 0.9674479365348816,
+    "val_loss": 0.20121681690216064
+  },
+  {
+    "seed": 33,
+    "method": "rope3d_axis_normal",
+    "step": 300,
+    "train_loss": 0.1742875576019287,
+    "grad_norm": 0.20823688805103302,
+    "val_r1": 0.9680989384651184,
+    "val_loss": 0.1848543882369995
+  },
+  {
+    "seed": 33,
+    "method": "rope3d_axis_normal",
+    "step": 350,
+    "train_loss": 0.14712627232074738,
+    "grad_norm": 0.1835649311542511,
+    "val_r1": 0.9710286259651184,
+    "val_loss": 0.1720951944589615
+  },
+  {
+    "seed": 33,
+    "method": "rope3d_axis_normal",
+    "step": 400,
+    "train_loss": 0.13908906280994415,
+    "grad_norm": 0.16731704771518707,
+    "val_r1": 0.9716796875,
+    "val_loss": 0.1610860526561737
+  },
+  {
+    "seed": 33,
+    "method": "rope3d_axis_logcov",
+    "step": 50,
+    "train_loss": 0.2071547657251358,
+    "grad_norm": 0.33258455991744995,
+    "val_r1": 0.9807942509651184,
+    "val_loss": 0.19734160602092743
+  },
+  {
+    "seed": 33,
+    "method": "rope3d_axis_logcov",
+    "step": 100,
+    "train_loss": 0.14579592645168304,
+    "grad_norm": 0.22569935023784637,
+    "val_r1": 0.9860026240348816,
+    "val_loss": 0.15514470636844635
+  },
+  {
+    "seed": 33,
+    "method": "rope3d_axis_logcov",
+    "step": 150,
+    "train_loss": 0.11209604889154434,
+    "grad_norm": 0.17957451939582825,
+    "val_r1": 0.9873046875,
+    "val_loss": 0.13156592845916748
+  },
+  {
+    "seed": 33,
+    "method": "rope3d_axis_logcov",
+    "step": 200,
+    "train_loss": 0.11013825237751007,
+    "grad_norm": 0.1584247350692749,
+    "val_r1": 0.9873046875,
+    "val_loss": 0.11506381630897522
+  },
+  {
+    "seed": 33,
+    "method": "rope3d_axis_logcov",
+    "step": 250,
+    "train_loss": 0.07964949309825897,
+    "grad_norm": 0.12416777014732361,
+    "val_r1": 0.9886067509651184,
+    "val_loss": 0.10227680951356888
+  },
+  {
+    "seed": 33,
+    "method": "rope3d_axis_logcov",
+    "step": 300,
+    "train_loss": 0.09174396097660065,
+    "grad_norm": 0.12364118546247482,
+    "val_r1": 0.9889323115348816,
+    "val_loss": 0.09234199672937393
+  },
+  {
+    "seed": 33,
+    "method": "rope3d_axis_logcov",
+    "step": 350,
+    "train_loss": 0.06908494979143143,
+    "grad_norm": 0.10763542354106903,
+    "val_r1": 0.9889323115348816,
+    "val_loss": 0.08480899780988693
+  },
+  {
+    "seed": 33,
+    "method": "rope3d_axis_logcov",
+    "step": 400,
+    "train_loss": 0.05867861583828926,
+    "grad_norm": 0.09460823982954025,
+    "val_r1": 0.9889323115348816,
+    "val_loss": 0.07782358676195145
+  },
+  {
+    "seed": 33,
+    "method": "rope3d_axis_paired_random",
+    "step": 50,
+    "train_loss": 0.1997050940990448,
+    "grad_norm": 0.3294545114040375,
+    "val_r1": 0.9830729365348816,
+    "val_loss": 0.2050599455833435
+  },
+  {
+    "seed": 33,
+    "method": "rope3d_axis_paired_random",
+    "step": 100,
+    "train_loss": 0.14183349907398224,
+    "grad_norm": 0.23936234414577484,
+    "val_r1": 0.984375,
+    "val_loss": 0.16294127702713013
+  },
+  {
+    "seed": 33,
+    "method": "rope3d_axis_paired_random",
+    "step": 150,
+    "train_loss": 0.1117667555809021,
+    "grad_norm": 0.1838916838169098,
+    "val_r1": 0.9853515625,
+    "val_loss": 0.13860689103603363
+  },
+  {
+    "seed": 33,
+    "method": "rope3d_axis_paired_random",
+    "step": 200,
+    "train_loss": 0.1108112633228302,
+    "grad_norm": 0.1623118370771408,
+    "val_r1": 0.9869791865348816,
+    "val_loss": 0.12180095911026001
+  },
+  {
+    "seed": 33,
+    "method": "rope3d_axis_paired_random",
+    "step": 250,
+    "train_loss": 0.09025375545024872,
+    "grad_norm": 0.13061590492725372,
+    "val_r1": 0.9866536259651184,
+    "val_loss": 0.10905108600854874
+  },
+  {
+    "seed": 33,
+    "method": "rope3d_axis_paired_random",
+    "step": 300,
+    "train_loss": 0.08698543161153793,
+    "grad_norm": 0.12172777205705643,
+    "val_r1": 0.9866536259651184,
+    "val_loss": 0.09857165813446045
+  },
+  {
+    "seed": 33,
+    "method": "rope3d_axis_paired_random",
+    "step": 350,
+    "train_loss": 0.07343126833438873,
+    "grad_norm": 0.11112600564956665,
+    "val_r1": 0.9876301884651184,
+    "val_loss": 0.09073198586702347
+  },
+  {
+    "seed": 33,
+    "method": "rope3d_axis_paired_random",
+    "step": 400,
+    "train_loss": 0.07486636936664581,
+    "grad_norm": 0.10390961915254593,
+    "val_r1": 0.9869791865348816,
+    "val_loss": 0.08444593101739883
+  },
+  {
+    "seed": 33,
+    "method": "rope3d_axis_independent_random",
+    "step": 50,
+    "train_loss": 0.5724255442619324,
+    "grad_norm": 0.7847107648849487,
+    "val_r1": 0.8375651240348816,
+    "val_loss": 0.5458633899688721
+  },
+  {
+    "seed": 33,
+    "method": "rope3d_axis_independent_random",
+    "step": 100,
+    "train_loss": 0.4011765420436859,
+    "grad_norm": 0.6022924184799194,
+    "val_r1": 0.8684895634651184,
+    "val_loss": 0.4475524425506592
+  },
+  {
+    "seed": 33,
+    "method": "rope3d_axis_independent_random",
+    "step": 150,
+    "train_loss": 0.3416280150413513,
+    "grad_norm": 0.48922663927078247,
+    "val_r1": 0.884765625,
+    "val_loss": 0.3911811411380768
+  },
+  {
+    "seed": 33,
+    "method": "rope3d_axis_independent_random",
+    "step": 200,
+    "train_loss": 0.34223175048828125,
+    "grad_norm": 0.43173426389694214,
+    "val_r1": 0.8916015625,
+    "val_loss": 0.3520558774471283
+  },
+  {
+    "seed": 33,
+    "method": "rope3d_axis_independent_random",
+    "step": 250,
+    "train_loss": 0.2773318886756897,
+    "grad_norm": 0.3489799201488495,
+    "val_r1": 0.8987630009651184,
+    "val_loss": 0.3213575780391693
+  },
+  {
+    "seed": 33,
+    "method": "rope3d_axis_independent_random",
+    "step": 300,
+    "train_loss": 0.27930599451065063,
+    "grad_norm": 0.340754896402359,
+    "val_r1": 0.9052734375,
+    "val_loss": 0.2974149286746979
+  },
+  {
+    "seed": 33,
+    "method": "rope3d_axis_independent_random",
+    "step": 350,
+    "train_loss": 0.24152350425720215,
+    "grad_norm": 0.2866418957710266,
+    "val_r1": 0.9088541865348816,
+    "val_loss": 0.2790365219116211
+  },
+  {
+    "seed": 33,
+    "method": "rope3d_axis_independent_random",
+    "step": 400,
+    "train_loss": 0.24069349467754364,
+    "grad_norm": 0.26739147305488586,
+    "val_r1": 0.9111328125,
+    "val_loss": 0.26476436853408813
+  },
+  {
+    "seed": 44,
+    "method": "center",
+    "step": 50,
+    "train_loss": 0.478985995054245,
+    "grad_norm": 0.16291949152946472,
+    "val_r1": 0.783203125,
+    "val_loss": 0.5041539072990417
+  },
+  {
+    "seed": 44,
+    "method": "center",
+    "step": 100,
+    "train_loss": 0.4985073506832123,
+    "grad_norm": 0.145340234041214,
+    "val_r1": 0.7848307490348816,
+    "val_loss": 0.4942179024219513
+  },
+  {
+    "seed": 44,
+    "method": "center",
+    "step": 150,
+    "train_loss": 0.5235046148300171,
+    "grad_norm": 0.17579121887683868,
+    "val_r1": 0.7893880009651184,
+    "val_loss": 0.4897482395172119
+  },
+  {
+    "seed": 44,
+    "method": "center",
+    "step": 200,
+    "train_loss": 0.4555692970752716,
+    "grad_norm": 0.167007714509964,
+    "val_r1": 0.7822265625,
+    "val_loss": 0.48513367772102356
+  },
+  {
+    "seed": 44,
+    "method": "center",
+    "step": 250,
+    "train_loss": 0.44123023748397827,
+    "grad_norm": 0.1655827760696411,
+    "val_r1": 0.7848307490348816,
+    "val_loss": 0.48548758029937744
+  },
+  {
+    "seed": 44,
+    "method": "center",
+    "step": 300,
+    "train_loss": 0.4558200240135193,
+    "grad_norm": 0.20281708240509033,
+    "val_r1": 0.7841796875,
+    "val_loss": 0.48094454407691956
+  },
+  {
+    "seed": 44,
+    "method": "center",
+    "step": 350,
+    "train_loss": 0.4620340168476105,
+    "grad_norm": 0.2072666436433792,
+    "val_r1": 0.7828776240348816,
+    "val_loss": 0.4878733456134796
+  },
+  {
+    "seed": 44,
+    "method": "center",
+    "step": 400,
+    "train_loss": 0.42709654569625854,
+    "grad_norm": 0.23187118768692017,
+    "val_r1": 0.7825520634651184,
+    "val_loss": 0.4851861298084259
+  },
+  {
+    "seed": 44,
+    "method": "rope3d_axis",
+    "step": 50,
+    "train_loss": 0.43933552503585815,
+    "grad_norm": 0.600297749042511,
+    "val_r1": 0.896484375,
+    "val_loss": 0.4725419580936432
+  },
+  {
+    "seed": 44,
+    "method": "rope3d_axis",
+    "step": 100,
+    "train_loss": 0.37424078583717346,
+    "grad_norm": 0.5023229718208313,
+    "val_r1": 0.9143880009651184,
+    "val_loss": 0.39060187339782715
+  },
+  {
+    "seed": 44,
+    "method": "rope3d_axis",
+    "step": 150,
+    "train_loss": 0.3608286380767822,
+    "grad_norm": 0.4202243387699127,
+    "val_r1": 0.919921875,
+    "val_loss": 0.3452419936656952
+  },
+  {
+    "seed": 44,
+    "method": "rope3d_axis",
+    "step": 200,
+    "train_loss": 0.2988733649253845,
+    "grad_norm": 0.3807944655418396,
+    "val_r1": 0.9231770634651184,
+    "val_loss": 0.3119066655635834
+  },
+  {
+    "seed": 44,
+    "method": "rope3d_axis",
+    "step": 250,
+    "train_loss": 0.2816774547100067,
+    "grad_norm": 0.327992707490921,
+    "val_r1": 0.9280598759651184,
+    "val_loss": 0.2882414758205414
+  },
+  {
+    "seed": 44,
+    "method": "rope3d_axis",
+    "step": 300,
+    "train_loss": 0.24953879415988922,
+    "grad_norm": 0.28364261984825134,
+    "val_r1": 0.927734375,
+    "val_loss": 0.26943010091781616
+  },
+  {
+    "seed": 44,
+    "method": "rope3d_axis",
+    "step": 350,
+    "train_loss": 0.2534692585468292,
+    "grad_norm": 0.2734568119049072,
+    "val_r1": 0.927734375,
+    "val_loss": 0.2541542947292328
+  },
+  {
+    "seed": 44,
+    "method": "rope3d_axis",
+    "step": 400,
+    "train_loss": 0.2365167737007141,
+    "grad_norm": 0.2558487057685852,
+    "val_r1": 0.9322916865348816,
+    "val_loss": 0.24085663259029388
+  },
+  {
+    "seed": 44,
+    "method": "rope3d_axis_normal",
+    "step": 50,
+    "train_loss": 0.33350661396980286,
+    "grad_norm": 0.47142520546913147,
+    "val_r1": 0.9482421875,
+    "val_loss": 0.36068782210350037
+  },
+  {
+    "seed": 44,
+    "method": "rope3d_axis_normal",
+    "step": 100,
+    "train_loss": 0.2801654040813446,
+    "grad_norm": 0.387783944606781,
+    "val_r1": 0.9576823115348816,
+    "val_loss": 0.2912274897098541
+  },
+  {
+    "seed": 44,
+    "method": "rope3d_axis_normal",
+    "step": 150,
+    "train_loss": 0.2621578872203827,
+    "grad_norm": 0.31885963678359985,
+    "val_r1": 0.9615885615348816,
+    "val_loss": 0.25245729088783264
+  },
+  {
+    "seed": 44,
+    "method": "rope3d_axis_normal",
+    "step": 200,
+    "train_loss": 0.21076363325119019,
+    "grad_norm": 0.2863334119319916,
+    "val_r1": 0.9654948115348816,
+    "val_loss": 0.22386986017227173
+  },
+  {
+    "seed": 44,
+    "method": "rope3d_axis_normal",
+    "step": 250,
+    "train_loss": 0.19371028244495392,
+    "grad_norm": 0.24191103875637054,
+    "val_r1": 0.9674479365348816,
+    "val_loss": 0.2029923051595688
+  },
+  {
+    "seed": 44,
+    "method": "rope3d_axis_normal",
+    "step": 300,
+    "train_loss": 0.1734611541032791,
+    "grad_norm": 0.21060310304164886,
+    "val_r1": 0.966796875,
+    "val_loss": 0.18610335886478424
+  },
+  {
+    "seed": 44,
+    "method": "rope3d_axis_normal",
+    "step": 350,
+    "train_loss": 0.1699705421924591,
+    "grad_norm": 0.19791975617408752,
+    "val_r1": 0.9690755009651184,
+    "val_loss": 0.17184720933437347
+  },
+  {
+    "seed": 44,
+    "method": "rope3d_axis_normal",
+    "step": 400,
+    "train_loss": 0.15672063827514648,
+    "grad_norm": 0.18238936364650726,
+    "val_r1": 0.9713541865348816,
+    "val_loss": 0.15978865325450897
+  },
+  {
+    "seed": 44,
+    "method": "rope3d_axis_logcov",
+    "step": 50,
+    "train_loss": 0.19217906892299652,
+    "grad_norm": 0.30685436725616455,
+    "val_r1": 0.9817708134651184,
+    "val_loss": 0.20404618978500366
+  },
+  {
+    "seed": 44,
+    "method": "rope3d_axis_logcov",
+    "step": 100,
+    "train_loss": 0.15414218604564667,
+    "grad_norm": 0.23752997815608978,
+    "val_r1": 0.9886067509651184,
+    "val_loss": 0.1585422158241272
+  },
+  {
+    "seed": 44,
+    "method": "rope3d_axis_logcov",
+    "step": 150,
+    "train_loss": 0.14324846863746643,
+    "grad_norm": 0.1973811388015747,
+    "val_r1": 0.9895833134651184,
+    "val_loss": 0.13327229022979736
+  },
+  {
+    "seed": 44,
+    "method": "rope3d_axis_logcov",
+    "step": 200,
+    "train_loss": 0.10422220826148987,
+    "grad_norm": 0.1705845147371292,
+    "val_r1": 0.990234375,
+    "val_loss": 0.11524009704589844
+  },
+  {
+    "seed": 44,
+    "method": "rope3d_axis_logcov",
+    "step": 250,
+    "train_loss": 0.09311522543430328,
+    "grad_norm": 0.1448904126882553,
+    "val_r1": 0.9918619990348816,
+    "val_loss": 0.10221431404352188
+  },
+  {
+    "seed": 44,
+    "method": "rope3d_axis_logcov",
+    "step": 300,
+    "train_loss": 0.08966974169015884,
+    "grad_norm": 0.12972022593021393,
+    "val_r1": 0.9908854365348816,
+    "val_loss": 0.09121640771627426
+  },
+  {
+    "seed": 44,
+    "method": "rope3d_axis_logcov",
+    "step": 350,
+    "train_loss": 0.0817607119679451,
+    "grad_norm": 0.12210425734519958,
+    "val_r1": 0.9921875,
+    "val_loss": 0.08299989253282547
+  },
+  {
+    "seed": 44,
+    "method": "rope3d_axis_logcov",
+    "step": 400,
+    "train_loss": 0.0725591629743576,
+    "grad_norm": 0.10494740307331085,
+    "val_r1": 0.9928385615348816,
+    "val_loss": 0.07564393430948257
+  },
+  {
+    "seed": 44,
+    "method": "rope3d_axis_paired_random",
+    "step": 50,
+    "train_loss": 0.1790880411863327,
+    "grad_norm": 0.29638800024986267,
+    "val_r1": 0.9775390625,
+    "val_loss": 0.21611525118350983
+  },
+  {
+    "seed": 44,
+    "method": "rope3d_axis_paired_random",
+    "step": 100,
+    "train_loss": 0.15866968035697937,
+    "grad_norm": 0.245480015873909,
+    "val_r1": 0.9830729365348816,
+    "val_loss": 0.1697647124528885
+  },
+  {
+    "seed": 44,
+    "method": "rope3d_axis_paired_random",
+    "step": 150,
+    "train_loss": 0.14510653913021088,
+    "grad_norm": 0.2044539451599121,
+    "val_r1": 0.9853515625,
+    "val_loss": 0.14443469047546387
+  },
+  {
+    "seed": 44,
+    "method": "rope3d_axis_paired_random",
+    "step": 200,
+    "train_loss": 0.11151978373527527,
+    "grad_norm": 0.17420612275600433,
+    "val_r1": 0.986328125,
+    "val_loss": 0.12620438635349274
+  },
+  {
+    "seed": 44,
+    "method": "rope3d_axis_paired_random",
+    "step": 250,
+    "train_loss": 0.09959343820810318,
+    "grad_norm": 0.14669367671012878,
+    "val_r1": 0.98828125,
+    "val_loss": 0.11288689821958542
+  },
+  {
+    "seed": 44,
+    "method": "rope3d_axis_paired_random",
+    "step": 300,
+    "train_loss": 0.08617269992828369,
+    "grad_norm": 0.12961722910404205,
+    "val_r1": 0.9873046875,
+    "val_loss": 0.10215398669242859
+  },
+  {
+    "seed": 44,
+    "method": "rope3d_axis_paired_random",
+    "step": 350,
+    "train_loss": 0.08465524017810822,
+    "grad_norm": 0.12673310935497284,
+    "val_r1": 0.9873046875,
+    "val_loss": 0.09290794283151627
+  },
+  {
+    "seed": 44,
+    "method": "rope3d_axis_paired_random",
+    "step": 400,
+    "train_loss": 0.07691481709480286,
+    "grad_norm": 0.11176352202892303,
+    "val_r1": 0.9866536259651184,
+    "val_loss": 0.08607557415962219
+  },
+  {
+    "seed": 44,
+    "method": "rope3d_axis_independent_random",
+    "step": 50,
+    "train_loss": 0.512474536895752,
+    "grad_norm": 0.7350503206253052,
+    "val_r1": 0.8297526240348816,
+    "val_loss": 0.5617640614509583
+  },
+  {
+    "seed": 44,
+    "method": "rope3d_axis_independent_random",
+    "step": 100,
+    "train_loss": 0.4521491527557373,
+    "grad_norm": 0.6342907547950745,
+    "val_r1": 0.8577473759651184,
+    "val_loss": 0.4592793881893158
+  },
+  {
+    "seed": 44,
+    "method": "rope3d_axis_independent_random",
+    "step": 150,
+    "train_loss": 0.4359326958656311,
+    "grad_norm": 0.500407874584198,
+    "val_r1": 0.8684895634651184,
+    "val_loss": 0.4011270999908447
+  },
+  {
+    "seed": 44,
+    "method": "rope3d_axis_independent_random",
+    "step": 200,
+    "train_loss": 0.33253830671310425,
+    "grad_norm": 0.4434081017971039,
+    "val_r1": 0.8844401240348816,
+    "val_loss": 0.35784444212913513
+  },
+  {
+    "seed": 44,
+    "method": "rope3d_axis_independent_random",
+    "step": 250,
+    "train_loss": 0.3136075735092163,
+    "grad_norm": 0.37888455390930176,
+    "val_r1": 0.8916015625,
+    "val_loss": 0.32688581943511963
+  },
+  {
+    "seed": 44,
+    "method": "rope3d_axis_independent_random",
+    "step": 300,
+    "train_loss": 0.27732500433921814,
+    "grad_norm": 0.3255915641784668,
+    "val_r1": 0.8942057490348816,
+    "val_loss": 0.30231499671936035
+  },
+  {
+    "seed": 44,
+    "method": "rope3d_axis_independent_random",
+    "step": 350,
+    "train_loss": 0.28075525164604187,
+    "grad_norm": 0.31546157598495483,
+    "val_r1": 0.9026692509651184,
+    "val_loss": 0.28307750821113586
+  },
+  {
+    "seed": 44,
+    "method": "rope3d_axis_independent_random",
+    "step": 400,
+    "train_loss": 0.26144665479660034,
+    "grad_norm": 0.2937542200088501,
+    "val_r1": 0.9095051884651184,
+    "val_loss": 0.2659130394458771
+  },
+  {
+    "seed": 55,
+    "method": "center",
+    "step": 50,
+    "train_loss": 0.5214555263519287,
+    "grad_norm": 0.21224725246429443,
+    "val_r1": 0.7981770634651184,
+    "val_loss": 0.49266743659973145
+  },
+  {
+    "seed": 55,
+    "method": "center",
+    "step": 100,
+    "train_loss": 0.4328674376010895,
+    "grad_norm": 0.17790785431861877,
+    "val_r1": 0.7981770634651184,
+    "val_loss": 0.48188337683677673
+  },
+  {
+    "seed": 55,
+    "method": "center",
+    "step": 150,
+    "train_loss": 0.4346543550491333,
+    "grad_norm": 0.1638401597738266,
+    "val_r1": 0.7972005009651184,
+    "val_loss": 0.4744744300842285
+  },
+  {
+    "seed": 55,
+    "method": "center",
+    "step": 200,
+    "train_loss": 0.47994130849838257,
+    "grad_norm": 0.19933591783046722,
+    "val_r1": 0.7972005009651184,
+    "val_loss": 0.4710361659526825
+  },
+  {
+    "seed": 55,
+    "method": "center",
+    "step": 250,
+    "train_loss": 0.46023696660995483,
+    "grad_norm": 0.17502640187740326,
+    "val_r1": 0.7991536259651184,
+    "val_loss": 0.4690115451812744
+  },
+  {
+    "seed": 55,
+    "method": "center",
+    "step": 300,
+    "train_loss": 0.4904480278491974,
+    "grad_norm": 0.20669162273406982,
+    "val_r1": 0.7985026240348816,
+    "val_loss": 0.46508124470710754
+  },
+  {
+    "seed": 55,
+    "method": "center",
+    "step": 350,
+    "train_loss": 0.44907987117767334,
+    "grad_norm": 0.2017868161201477,
+    "val_r1": 0.7978515625,
+    "val_loss": 0.4659072458744049
+  },
+  {
+    "seed": 55,
+    "method": "center",
+    "step": 400,
+    "train_loss": 0.48650047183036804,
+    "grad_norm": 0.243925079703331,
+    "val_r1": 0.7939453125,
+    "val_loss": 0.4659132957458496
+  },
+  {
+    "seed": 55,
+    "method": "rope3d_axis",
+    "step": 50,
+    "train_loss": 0.4646691679954529,
+    "grad_norm": 0.6206789612770081,
+    "val_r1": 0.9052734375,
+    "val_loss": 0.43767133355140686
+  },
+  {
+    "seed": 55,
+    "method": "rope3d_axis",
+    "step": 100,
+    "train_loss": 0.3548864722251892,
+    "grad_norm": 0.5111089944839478,
+    "val_r1": 0.9108073115348816,
+    "val_loss": 0.3734588325023651
+  },
+  {
+    "seed": 55,
+    "method": "rope3d_axis",
+    "step": 150,
+    "train_loss": 0.3163929879665375,
+    "grad_norm": 0.4382602870464325,
+    "val_r1": 0.9169921875,
+    "val_loss": 0.33086439967155457
+  },
+  {
+    "seed": 55,
+    "method": "rope3d_axis",
+    "step": 200,
+    "train_loss": 0.3082618713378906,
+    "grad_norm": 0.3434089124202728,
+    "val_r1": 0.91796875,
+    "val_loss": 0.30374065041542053
+  },
+  {
+    "seed": 55,
+    "method": "rope3d_axis",
+    "step": 250,
+    "train_loss": 0.29206499457359314,
+    "grad_norm": 0.3394821286201477,
+    "val_r1": 0.9182942509651184,
+    "val_loss": 0.28088974952697754
+  },
+  {
+    "seed": 55,
+    "method": "rope3d_axis",
+    "step": 300,
+    "train_loss": 0.27288612723350525,
+    "grad_norm": 0.2854899764060974,
+    "val_r1": 0.923828125,
+    "val_loss": 0.26162824034690857
+  },
+  {
+    "seed": 55,
+    "method": "rope3d_axis",
+    "step": 350,
+    "train_loss": 0.2322346717119217,
+    "grad_norm": 0.2671046257019043,
+    "val_r1": 0.9244791865348816,
+    "val_loss": 0.24617111682891846
+  },
+  {
+    "seed": 55,
+    "method": "rope3d_axis",
+    "step": 400,
+    "train_loss": 0.25763458013534546,
+    "grad_norm": 0.23328518867492676,
+    "val_r1": 0.9293619990348816,
+    "val_loss": 0.23299680650234222
+  },
+  {
+    "seed": 55,
+    "method": "rope3d_axis_normal",
+    "step": 50,
+    "train_loss": 0.3534727096557617,
+    "grad_norm": 0.489104300737381,
+    "val_r1": 0.947265625,
+    "val_loss": 0.3328194320201874
+  },
+  {
+    "seed": 55,
+    "method": "rope3d_axis_normal",
+    "step": 100,
+    "train_loss": 0.2647917568683624,
+    "grad_norm": 0.3913205564022064,
+    "val_r1": 0.9537760615348816,
+    "val_loss": 0.2771155834197998
+  },
+  {
+    "seed": 55,
+    "method": "rope3d_axis_normal",
+    "step": 150,
+    "train_loss": 0.22915418446063995,
+    "grad_norm": 0.3304522633552551,
+    "val_r1": 0.9625651240348816,
+    "val_loss": 0.24042554199695587
+  },
+  {
+    "seed": 55,
+    "method": "rope3d_axis_normal",
+    "step": 200,
+    "train_loss": 0.21614022552967072,
+    "grad_norm": 0.25484606623649597,
+    "val_r1": 0.9625651240348816,
+    "val_loss": 0.216506227850914
+  },
+  {
+    "seed": 55,
+    "method": "rope3d_axis_normal",
+    "step": 250,
+    "train_loss": 0.2031136006116867,
+    "grad_norm": 0.2517310380935669,
+    "val_r1": 0.9645182490348816,
+    "val_loss": 0.1962095946073532
+  },
+  {
+    "seed": 55,
+    "method": "rope3d_axis_normal",
+    "step": 300,
+    "train_loss": 0.18967749178409576,
+    "grad_norm": 0.20864838361740112,
+    "val_r1": 0.966796875,
+    "val_loss": 0.1796412467956543
+  },
+  {
+    "seed": 55,
+    "method": "rope3d_axis_normal",
+    "step": 350,
+    "train_loss": 0.1584514081478119,
+    "grad_norm": 0.19116297364234924,
+    "val_r1": 0.966796875,
+    "val_loss": 0.1654892861843109
+  },
+  {
+    "seed": 55,
+    "method": "rope3d_axis_normal",
+    "step": 400,
+    "train_loss": 0.16574066877365112,
+    "grad_norm": 0.1678788661956787,
+    "val_r1": 0.970703125,
+    "val_loss": 0.1534956842660904
+  },
+  {
+    "seed": 55,
+    "method": "rope3d_axis_logcov",
+    "step": 50,
+    "train_loss": 0.2023584097623825,
+    "grad_norm": 0.31526315212249756,
+    "val_r1": 0.9840494990348816,
+    "val_loss": 0.19149774312973022
+  },
+  {
+    "seed": 55,
+    "method": "rope3d_axis_logcov",
+    "step": 100,
+    "train_loss": 0.14965106546878815,
+    "grad_norm": 0.24420519173145294,
+    "val_r1": 0.986328125,
+    "val_loss": 0.15398149192333221
+  },
+  {
+    "seed": 55,
+    "method": "rope3d_axis_logcov",
+    "step": 150,
+    "train_loss": 0.11695539951324463,
+    "grad_norm": 0.20103076100349426,
+    "val_r1": 0.9886067509651184,
+    "val_loss": 0.13015881180763245
+  },
+  {
+    "seed": 55,
+    "method": "rope3d_axis_logcov",
+    "step": 200,
+    "train_loss": 0.11413247883319855,
+    "grad_norm": 0.15797476470470428,
+    "val_r1": 0.9892578125,
+    "val_loss": 0.11455663293600082
+  },
+  {
+    "seed": 55,
+    "method": "rope3d_axis_logcov",
+    "step": 250,
+    "train_loss": 0.09735964238643646,
+    "grad_norm": 0.1512799710035324,
+    "val_r1": 0.9895833134651184,
+    "val_loss": 0.10142960399389267
+  },
+  {
+    "seed": 55,
+    "method": "rope3d_axis_logcov",
+    "step": 300,
+    "train_loss": 0.09547292441129684,
+    "grad_norm": 0.1277112513780594,
+    "val_r1": 0.9892578125,
+    "val_loss": 0.09181154519319534
+  },
+  {
+    "seed": 55,
+    "method": "rope3d_axis_logcov",
+    "step": 350,
+    "train_loss": 0.08015742152929306,
+    "grad_norm": 0.11625397950410843,
+    "val_r1": 0.9889323115348816,
+    "val_loss": 0.08349903672933578
+  },
+  {
+    "seed": 55,
+    "method": "rope3d_axis_logcov",
+    "step": 400,
+    "train_loss": 0.07536586374044418,
+    "grad_norm": 0.10546200722455978,
+    "val_r1": 0.9899088740348816,
+    "val_loss": 0.07648351043462753
+  },
+  {
+    "seed": 55,
+    "method": "rope3d_axis_paired_random",
+    "step": 50,
+    "train_loss": 0.19827693700790405,
+    "grad_norm": 0.3137039542198181,
+    "val_r1": 0.9820963740348816,
+    "val_loss": 0.19404780864715576
+  },
+  {
+    "seed": 55,
+    "method": "rope3d_axis_paired_random",
+    "step": 100,
+    "train_loss": 0.14241313934326172,
+    "grad_norm": 0.23801831901073456,
+    "val_r1": 0.9817708134651184,
+    "val_loss": 0.15575601160526276
+  },
+  {
+    "seed": 55,
+    "method": "rope3d_axis_paired_random",
+    "step": 150,
+    "train_loss": 0.11862225085496902,
+    "grad_norm": 0.19019964337348938,
+    "val_r1": 0.9847005009651184,
+    "val_loss": 0.1311500519514084
+  },
+  {
+    "seed": 55,
+    "method": "rope3d_axis_paired_random",
+    "step": 200,
+    "train_loss": 0.122181236743927,
+    "grad_norm": 0.16778631508350372,
+    "val_r1": 0.9856770634651184,
+    "val_loss": 0.1154756173491478
+  },
+  {
+    "seed": 55,
+    "method": "rope3d_axis_paired_random",
+    "step": 250,
+    "train_loss": 0.10495670884847641,
+    "grad_norm": 0.15486614406108856,
+    "val_r1": 0.986328125,
+    "val_loss": 0.10266753286123276
+  },
+  {
+    "seed": 55,
+    "method": "rope3d_axis_paired_random",
+    "step": 300,
+    "train_loss": 0.0987808033823967,
+    "grad_norm": 0.12820956110954285,
+    "val_r1": 0.9860026240348816,
+    "val_loss": 0.09250431507825851
+  },
+  {
+    "seed": 55,
+    "method": "rope3d_axis_paired_random",
+    "step": 350,
+    "train_loss": 0.08715588599443436,
+    "grad_norm": 0.1144423559308052,
+    "val_r1": 0.9873046875,
+    "val_loss": 0.08407571911811829
+  },
+  {
+    "seed": 55,
+    "method": "rope3d_axis_paired_random",
+    "step": 400,
+    "train_loss": 0.08922083675861359,
+    "grad_norm": 0.11062978953123093,
+    "val_r1": 0.98828125,
+    "val_loss": 0.07720956206321716
+  },
+  {
+    "seed": 55,
+    "method": "rope3d_axis_independent_random",
+    "step": 50,
+    "train_loss": 0.5409870743751526,
+    "grad_norm": 0.7441673874855042,
+    "val_r1": 0.8411458134651184,
+    "val_loss": 0.5348502397537231
+  },
+  {
+    "seed": 55,
+    "method": "rope3d_axis_independent_random",
+    "step": 100,
+    "train_loss": 0.43752020597457886,
+    "grad_norm": 0.6186902523040771,
+    "val_r1": 0.8587239384651184,
+    "val_loss": 0.448291152715683
+  },
+  {
+    "seed": 55,
+    "method": "rope3d_axis_independent_random",
+    "step": 150,
+    "train_loss": 0.3530813455581665,
+    "grad_norm": 0.4845723509788513,
+    "val_r1": 0.8717448115348816,
+    "val_loss": 0.38996970653533936
+  },
+  {
+    "seed": 55,
+    "method": "rope3d_axis_independent_random",
+    "step": 200,
+    "train_loss": 0.35214683413505554,
+    "grad_norm": 0.4064330756664276,
+    "val_r1": 0.8824869990348816,
+    "val_loss": 0.3520197570323944
+  },
+  {
+    "seed": 55,
+    "method": "rope3d_axis_independent_random",
+    "step": 250,
+    "train_loss": 0.327159583568573,
+    "grad_norm": 0.39106282591819763,
+    "val_r1": 0.8902994990348816,
+    "val_loss": 0.32154130935668945
+  },
+  {
+    "seed": 55,
+    "method": "rope3d_axis_independent_random",
+    "step": 300,
+    "train_loss": 0.30500298738479614,
+    "grad_norm": 0.33290332555770874,
+    "val_r1": 0.8968098759651184,
+    "val_loss": 0.29643750190734863
+  },
+  {
+    "seed": 55,
+    "method": "rope3d_axis_independent_random",
+    "step": 350,
+    "train_loss": 0.2580285370349884,
+    "grad_norm": 0.3084213137626648,
+    "val_r1": 0.9010416865348816,
+    "val_loss": 0.2768249213695526
+  },
+  {
+    "seed": 55,
+    "method": "rope3d_axis_independent_random",
+    "step": 400,
+    "train_loss": 0.27198508381843567,
+    "grad_norm": 0.25259292125701904,
+    "val_r1": 0.9088541865348816,
+    "val_loss": 0.25974634289741516
+  }
+]

@@ -1,0 +1,1442 @@
+[
+  {
+    "regime": "oracle_train",
+    "seed": 11,
+    "method": "rope3d",
+    "condition": "oracle",
+    "closed_r1": 0.9722808599472046,
+    "visible_r1": 0.9287222623825073,
+    "visible_rejection_rate": 0.05675818398594856
+  },
+  {
+    "regime": "oracle_train",
+    "seed": 11,
+    "method": "rope3d",
+    "condition": "normal_noise",
+    "closed_r1": 0.9722808599472046,
+    "visible_r1": 0.9287222623825073,
+    "visible_rejection_rate": 0.05675818398594856
+  },
+  {
+    "regime": "oracle_train",
+    "seed": 11,
+    "method": "rope3d",
+    "condition": "mixed",
+    "closed_r1": 0.9538014531135559,
+    "visible_r1": 0.8970432877540588,
+    "visible_rejection_rate": 0.07972545176744461
+  },
+  {
+    "regime": "oracle_train",
+    "seed": 11,
+    "method": "rope3d",
+    "condition": "rgb",
+    "closed_r1": 0.8835797309875488,
+    "visible_r1": 0.8672122359275818,
+    "visible_rejection_rate": 0.02771911211311817
+  },
+  {
+    "regime": "oracle_train",
+    "seed": 11,
+    "method": "rope_normal",
+    "condition": "oracle",
+    "closed_r1": 0.9786166548728943,
+    "visible_r1": 0.9469376802444458,
+    "visible_rejection_rate": 0.043822597712278366
+  },
+  {
+    "regime": "oracle_train",
+    "seed": 11,
+    "method": "rope_normal",
+    "condition": "normal_noise",
+    "closed_r1": 0.883843719959259,
+    "visible_r1": 0.5227032899856567,
+    "visible_rejection_rate": 0.45036959648132324
+  },
+  {
+    "regime": "oracle_train",
+    "seed": 11,
+    "method": "rope_normal",
+    "condition": "mixed",
+    "closed_r1": 0.9305702447891235,
+    "visible_r1": 0.7967265248298645,
+    "visible_rejection_rate": 0.1784582883119583
+  },
+  {
+    "regime": "oracle_train",
+    "seed": 11,
+    "method": "rope_normal",
+    "condition": "rgb",
+    "closed_r1": 0.883843719959259,
+    "visible_r1": 0.883843719959259,
+    "visible_rejection_rate": 0.0013199577806517482
+  },
+  {
+    "regime": "oracle_train",
+    "seed": 11,
+    "method": "rope_covariance",
+    "condition": "oracle",
+    "closed_r1": 0.9807286262512207,
+    "visible_r1": 0.9424498677253723,
+    "visible_rejection_rate": 0.04989440366625786
+  },
+  {
+    "regime": "oracle_train",
+    "seed": 11,
+    "method": "rope_covariance",
+    "condition": "normal_noise",
+    "closed_r1": 0.16921858489513397,
+    "visible_r1": 0.049630410969257355,
+    "visible_rejection_rate": 0.9376980066299438
+  },
+  {
+    "regime": "oracle_train",
+    "seed": 11,
+    "method": "rope_covariance",
+    "condition": "mixed",
+    "closed_r1": 0.6124603748321533,
+    "visible_r1": 0.4464097023010254,
+    "visible_rejection_rate": 0.5150474905967712
+  },
+  {
+    "regime": "oracle_train",
+    "seed": 11,
+    "method": "rope_covariance",
+    "condition": "rgb",
+    "closed_r1": 0.883843719959259,
+    "visible_r1": 0.8677402138710022,
+    "visible_rejection_rate": 0.035902850329875946
+  },
+  {
+    "regime": "oracle_train",
+    "seed": 11,
+    "method": "rope_normal_uncertainty",
+    "condition": "oracle",
+    "closed_r1": 0.974392831325531,
+    "visible_r1": 0.9279302954673767,
+    "visible_rejection_rate": 0.0593980997800827
+  },
+  {
+    "regime": "oracle_train",
+    "seed": 11,
+    "method": "rope_normal_uncertainty",
+    "condition": "normal_noise",
+    "closed_r1": 0.8804118037223816,
+    "visible_r1": 0.5,
+    "visible_rejection_rate": 0.474392831325531
+  },
+  {
+    "regime": "oracle_train",
+    "seed": 11,
+    "method": "rope_normal_uncertainty",
+    "condition": "mixed",
+    "closed_r1": 0.9274023175239563,
+    "visible_r1": 0.7687433958053589,
+    "visible_rejection_rate": 0.20644138753414154
+  },
+  {
+    "regime": "oracle_train",
+    "seed": 11,
+    "method": "rope_normal_uncertainty",
+    "condition": "rgb",
+    "closed_r1": 0.883843719959259,
+    "visible_r1": 0.4524815082550049,
+    "visible_rejection_rate": 0.5065997838973999
+  },
+  {
+    "regime": "robust_train",
+    "seed": 11,
+    "method": "rope3d",
+    "condition": "oracle",
+    "closed_r1": 0.9712249040603638,
+    "visible_r1": 0.9363780617713928,
+    "visible_rejection_rate": 0.04672650620341301
+  },
+  {
+    "regime": "robust_train",
+    "seed": 11,
+    "method": "rope3d",
+    "condition": "normal_noise",
+    "closed_r1": 0.9712249040603638,
+    "visible_r1": 0.9363780617713928,
+    "visible_rejection_rate": 0.04672650620341301
+  },
+  {
+    "regime": "robust_train",
+    "seed": 11,
+    "method": "rope3d",
+    "condition": "mixed",
+    "closed_r1": 0.9511615633964539,
+    "visible_r1": 0.9089229106903076,
+    "visible_rejection_rate": 0.06335797160863876
+  },
+  {
+    "regime": "robust_train",
+    "seed": 11,
+    "method": "rope3d",
+    "condition": "rgb",
+    "closed_r1": 0.883843719959259,
+    "visible_r1": 0.8782998919487,
+    "visible_rejection_rate": 0.014255544170737267
+  },
+  {
+    "regime": "robust_train",
+    "seed": 11,
+    "method": "rope_normal",
+    "condition": "oracle",
+    "closed_r1": 0.9775606989860535,
+    "visible_r1": 0.9588173031806946,
+    "visible_rejection_rate": 0.027455121278762817
+  },
+  {
+    "regime": "robust_train",
+    "seed": 11,
+    "method": "rope_normal",
+    "condition": "normal_noise",
+    "closed_r1": 0.9516895413398743,
+    "visible_r1": 0.8043822646141052,
+    "visible_rejection_rate": 0.1718585044145584
+  },
+  {
+    "regime": "robust_train",
+    "seed": 11,
+    "method": "rope_normal",
+    "condition": "mixed",
+    "closed_r1": 0.9498416185379028,
+    "visible_r1": 0.8891235589981079,
+    "visible_rejection_rate": 0.08342132717370987
+  },
+  {
+    "regime": "robust_train",
+    "seed": 11,
+    "method": "rope_normal",
+    "condition": "rgb",
+    "closed_r1": 0.883843719959259,
+    "visible_r1": 0.883843719959259,
+    "visible_rejection_rate": 0.00026399156195111573
+  },
+  {
+    "regime": "robust_train",
+    "seed": 11,
+    "method": "rope_covariance",
+    "condition": "oracle",
+    "closed_r1": 0.9772967100143433,
+    "visible_r1": 0.958025336265564,
+    "visible_rejection_rate": 0.028775079175829887
+  },
+  {
+    "regime": "robust_train",
+    "seed": 11,
+    "method": "rope_covariance",
+    "condition": "normal_noise",
+    "closed_r1": 0.9503695964813232,
+    "visible_r1": 0.7985744476318359,
+    "visible_rejection_rate": 0.17977824807167053
+  },
+  {
+    "regime": "robust_train",
+    "seed": 11,
+    "method": "rope_covariance",
+    "condition": "mixed",
+    "closed_r1": 0.9511615633964539,
+    "visible_r1": 0.8854276537895203,
+    "visible_rejection_rate": 0.08870115876197815
+  },
+  {
+    "regime": "robust_train",
+    "seed": 11,
+    "method": "rope_covariance",
+    "condition": "rgb",
+    "closed_r1": 0.883843719959259,
+    "visible_r1": 0.883843719959259,
+    "visible_rejection_rate": 0.0
+  },
+  {
+    "regime": "robust_train",
+    "seed": 11,
+    "method": "rope_normal_uncertainty",
+    "condition": "oracle",
+    "closed_r1": 0.974392831325531,
+    "visible_r1": 0.9503695964813232,
+    "visible_rejection_rate": 0.032470960170030594
+  },
+  {
+    "regime": "robust_train",
+    "seed": 11,
+    "method": "rope_normal_uncertainty",
+    "condition": "normal_noise",
+    "closed_r1": 0.9485216736793518,
+    "visible_r1": 0.787750780582428,
+    "visible_rejection_rate": 0.18848997354507446
+  },
+  {
+    "regime": "robust_train",
+    "seed": 11,
+    "method": "rope_normal_uncertainty",
+    "condition": "mixed",
+    "closed_r1": 0.9461457133293152,
+    "visible_r1": 0.8714361190795898,
+    "visible_rejection_rate": 0.10110876709222794
+  },
+  {
+    "regime": "robust_train",
+    "seed": 11,
+    "method": "rope_normal_uncertainty",
+    "condition": "rgb",
+    "closed_r1": 0.883843719959259,
+    "visible_r1": 0.5058078169822693,
+    "visible_rejection_rate": 0.44271382689476013
+  },
+  {
+    "regime": "oracle_train",
+    "seed": 22,
+    "method": "rope3d",
+    "condition": "oracle",
+    "closed_r1": 0.9770892858505249,
+    "visible_r1": 0.9716219902038574,
+    "visible_rejection_rate": 0.00833116378635168
+  },
+  {
+    "regime": "oracle_train",
+    "seed": 22,
+    "method": "rope3d",
+    "condition": "normal_noise",
+    "closed_r1": 0.9770892858505249,
+    "visible_r1": 0.9716219902038574,
+    "visible_rejection_rate": 0.00833116378635168
+  },
+  {
+    "regime": "oracle_train",
+    "seed": 22,
+    "method": "rope3d",
+    "condition": "mixed",
+    "closed_r1": 0.95652174949646,
+    "visible_r1": 0.9476698637008667,
+    "visible_rejection_rate": 0.01562093198299408
+  },
+  {
+    "regime": "oracle_train",
+    "seed": 22,
+    "method": "rope3d",
+    "condition": "rgb",
+    "closed_r1": 0.8786774277687073,
+    "visible_r1": 0.8763343095779419,
+    "visible_rejection_rate": 0.0031241863034665585
+  },
+  {
+    "regime": "oracle_train",
+    "seed": 22,
+    "method": "rope_normal",
+    "condition": "oracle",
+    "closed_r1": 0.979692816734314,
+    "visible_r1": 0.9687581062316895,
+    "visible_rejection_rate": 0.015360583551228046
+  },
+  {
+    "regime": "oracle_train",
+    "seed": 22,
+    "method": "rope_normal",
+    "condition": "normal_noise",
+    "closed_r1": 0.8911741971969604,
+    "visible_r1": 0.5977609753608704,
+    "visible_rejection_rate": 0.3686539828777313
+  },
+  {
+    "regime": "oracle_train",
+    "seed": 22,
+    "method": "rope_normal",
+    "condition": "mixed",
+    "closed_r1": 0.9302265048027039,
+    "visible_r1": 0.8456131219863892,
+    "visible_rejection_rate": 0.11793803423643112
+  },
+  {
+    "regime": "oracle_train",
+    "seed": 22,
+    "method": "rope_normal",
+    "condition": "rgb",
+    "closed_r1": 0.8786774277687073,
+    "visible_r1": 0.8763343095779419,
+    "visible_rejection_rate": 0.003384535200893879
+  },
+  {
+    "regime": "oracle_train",
+    "seed": 22,
+    "method": "rope_covariance",
+    "condition": "oracle",
+    "closed_r1": 0.9807341694831848,
+    "visible_r1": 0.9622493982315063,
+    "visible_rejection_rate": 0.027596980333328247
+  },
+  {
+    "regime": "oracle_train",
+    "seed": 22,
+    "method": "rope_covariance",
+    "condition": "normal_noise",
+    "closed_r1": 0.16688361763954163,
+    "visible_r1": 0.054933611303567886,
+    "visible_rejection_rate": 0.9354335069656372
+  },
+  {
+    "regime": "oracle_train",
+    "seed": 22,
+    "method": "rope_covariance",
+    "condition": "mixed",
+    "closed_r1": 0.6365529894828796,
+    "visible_r1": 0.485029935836792,
+    "visible_rejection_rate": 0.47097110748291016
+  },
+  {
+    "regime": "oracle_train",
+    "seed": 22,
+    "method": "rope_covariance",
+    "condition": "rgb",
+    "closed_r1": 0.8786774277687073,
+    "visible_r1": 0.8784170746803284,
+    "visible_rejection_rate": 0.0013017443707212806
+  },
+  {
+    "regime": "oracle_train",
+    "seed": 22,
+    "method": "rope_normal_uncertainty",
+    "condition": "oracle",
+    "closed_r1": 0.9778703451156616,
+    "visible_r1": 0.9718823432922363,
+    "visible_rejection_rate": 0.008591512218117714
+  },
+  {
+    "regime": "oracle_train",
+    "seed": 22,
+    "method": "rope_normal_uncertainty",
+    "condition": "normal_noise",
+    "closed_r1": 0.8919551968574524,
+    "visible_r1": 0.6336891651153564,
+    "visible_rejection_rate": 0.32699817419052124
+  },
+  {
+    "regime": "oracle_train",
+    "seed": 22,
+    "method": "rope_normal_uncertainty",
+    "condition": "mixed",
+    "closed_r1": 0.9312679171562195,
+    "visible_r1": 0.8552460074424744,
+    "visible_rejection_rate": 0.1043998971581459
+  },
+  {
+    "regime": "oracle_train",
+    "seed": 22,
+    "method": "rope_normal_uncertainty",
+    "condition": "rgb",
+    "closed_r1": 0.8784170746803284,
+    "visible_r1": 0.7302785515785217,
+    "visible_rejection_rate": 0.19135642051696777
+  },
+  {
+    "regime": "robust_train",
+    "seed": 22,
+    "method": "rope3d",
+    "condition": "oracle",
+    "closed_r1": 0.9739651083946228,
+    "visible_r1": 0.9703202247619629,
+    "visible_rejection_rate": 0.006769070401787758
+  },
+  {
+    "regime": "robust_train",
+    "seed": 22,
+    "method": "rope3d",
+    "condition": "normal_noise",
+    "closed_r1": 0.9739651083946228,
+    "visible_r1": 0.9703202247619629,
+    "visible_rejection_rate": 0.006769070401787758
+  },
+  {
+    "regime": "robust_train",
+    "seed": 22,
+    "method": "rope3d",
+    "condition": "mixed",
+    "closed_r1": 0.9539182782173157,
+    "visible_r1": 0.94688880443573,
+    "visible_rejection_rate": 0.013798490166664124
+  },
+  {
+    "regime": "robust_train",
+    "seed": 22,
+    "method": "rope3d",
+    "condition": "rgb",
+    "closed_r1": 0.8784170746803284,
+    "visible_r1": 0.876073956489563,
+    "visible_rejection_rate": 0.00416558189317584
+  },
+  {
+    "regime": "robust_train",
+    "seed": 22,
+    "method": "rope_normal",
+    "condition": "oracle",
+    "closed_r1": 0.9778703451156616,
+    "visible_r1": 0.976047933101654,
+    "visible_rejection_rate": 0.004425930790603161
+  },
+  {
+    "regime": "robust_train",
+    "seed": 22,
+    "method": "rope_normal",
+    "condition": "normal_noise",
+    "closed_r1": 0.9533975720405579,
+    "visible_r1": 0.8729497790336609,
+    "visible_rejection_rate": 0.09971361607313156
+  },
+  {
+    "regime": "robust_train",
+    "seed": 22,
+    "method": "rope_normal",
+    "condition": "mixed",
+    "closed_r1": 0.9505336880683899,
+    "visible_r1": 0.9281437397003174,
+    "visible_rejection_rate": 0.03150221332907677
+  },
+  {
+    "regime": "robust_train",
+    "seed": 22,
+    "method": "rope_normal",
+    "condition": "rgb",
+    "closed_r1": 0.8786774277687073,
+    "visible_r1": 0.8778963685035706,
+    "visible_rejection_rate": 0.0013017443707212806
+  },
+  {
+    "regime": "robust_train",
+    "seed": 22,
+    "method": "rope_covariance",
+    "condition": "oracle",
+    "closed_r1": 0.9789117574691772,
+    "visible_r1": 0.9763082265853882,
+    "visible_rejection_rate": 0.004946628585457802
+  },
+  {
+    "regime": "robust_train",
+    "seed": 22,
+    "method": "rope_covariance",
+    "condition": "normal_noise",
+    "closed_r1": 0.949752688407898,
+    "visible_r1": 0.8653996586799622,
+    "visible_rejection_rate": 0.10934652388095856
+  },
+  {
+    "regime": "robust_train",
+    "seed": 22,
+    "method": "rope_covariance",
+    "condition": "mixed",
+    "closed_r1": 0.9489716291427612,
+    "visible_r1": 0.9237177968025208,
+    "visible_rejection_rate": 0.036969538778066635
+  },
+  {
+    "regime": "robust_train",
+    "seed": 22,
+    "method": "rope_covariance",
+    "condition": "rgb",
+    "closed_r1": 0.8784170746803284,
+    "visible_r1": 0.8781567215919495,
+    "visible_rejection_rate": 0.0007810465758666396
+  },
+  {
+    "regime": "robust_train",
+    "seed": 22,
+    "method": "rope_normal_uncertainty",
+    "condition": "oracle",
+    "closed_r1": 0.9781306982040405,
+    "visible_r1": 0.9757875800132751,
+    "visible_rejection_rate": 0.00416558189317584
+  },
+  {
+    "regime": "robust_train",
+    "seed": 22,
+    "method": "rope_normal_uncertainty",
+    "condition": "normal_noise",
+    "closed_r1": 0.9536579251289368,
+    "visible_r1": 0.8864879012107849,
+    "visible_rejection_rate": 0.08357198536396027
+  },
+  {
+    "regime": "robust_train",
+    "seed": 22,
+    "method": "rope_normal_uncertainty",
+    "condition": "mixed",
+    "closed_r1": 0.9492319822311401,
+    "visible_r1": 0.9286643862724304,
+    "visible_rejection_rate": 0.029419422149658203
+  },
+  {
+    "regime": "robust_train",
+    "seed": 22,
+    "method": "rope_normal_uncertainty",
+    "condition": "rgb",
+    "closed_r1": 0.8784170746803284,
+    "visible_r1": 0.7399114966392517,
+    "visible_rejection_rate": 0.1791200190782547
+  },
+  {
+    "regime": "oracle_train",
+    "seed": 33,
+    "method": "rope3d",
+    "condition": "oracle",
+    "closed_r1": 0.9760665893554688,
+    "visible_r1": 0.9573361277580261,
+    "visible_rejection_rate": 0.024193547666072845
+  },
+  {
+    "regime": "oracle_train",
+    "seed": 33,
+    "method": "rope3d",
+    "condition": "normal_noise",
+    "closed_r1": 0.9760665893554688,
+    "visible_r1": 0.9573361277580261,
+    "visible_rejection_rate": 0.024193547666072845
+  },
+  {
+    "regime": "oracle_train",
+    "seed": 33,
+    "method": "rope3d",
+    "condition": "mixed",
+    "closed_r1": 0.9604578614234924,
+    "visible_r1": 0.9250780344009399,
+    "visible_rejection_rate": 0.04968782514333725
+  },
+  {
+    "regime": "oracle_train",
+    "seed": 33,
+    "method": "rope3d",
+    "condition": "rgb",
+    "closed_r1": 0.8681061267852783,
+    "visible_r1": 0.8457335829734802,
+    "visible_rejection_rate": 0.034079086035490036
+  },
+  {
+    "regime": "oracle_train",
+    "seed": 33,
+    "method": "rope_normal",
+    "condition": "oracle",
+    "closed_r1": 0.9830905199050903,
+    "visible_r1": 0.9604578614234924,
+    "visible_rejection_rate": 0.0288761705160141
+  },
+  {
+    "regime": "oracle_train",
+    "seed": 33,
+    "method": "rope_normal",
+    "condition": "normal_noise",
+    "closed_r1": 0.8855358958244324,
+    "visible_r1": 0.5338189601898193,
+    "visible_rejection_rate": 0.4430280923843384
+  },
+  {
+    "regime": "oracle_train",
+    "seed": 33,
+    "method": "rope_normal",
+    "condition": "mixed",
+    "closed_r1": 0.9386056065559387,
+    "visible_r1": 0.8178980350494385,
+    "visible_rejection_rate": 0.1566077023744583
+  },
+  {
+    "regime": "oracle_train",
+    "seed": 33,
+    "method": "rope_normal",
+    "condition": "rgb",
+    "closed_r1": 0.8688865900039673,
+    "visible_r1": 0.8686264157295227,
+    "visible_rejection_rate": 0.00026014569448307157
+  },
+  {
+    "regime": "oracle_train",
+    "seed": 33,
+    "method": "rope_covariance",
+    "condition": "oracle",
+    "closed_r1": 0.9841310977935791,
+    "visible_r1": 0.9555150866508484,
+    "visible_rejection_rate": 0.035379812121391296
+  },
+  {
+    "regime": "oracle_train",
+    "seed": 33,
+    "method": "rope_covariance",
+    "condition": "normal_noise",
+    "closed_r1": 0.1766389161348343,
+    "visible_r1": 0.04838709533214569,
+    "visible_rejection_rate": 0.942507803440094
+  },
+  {
+    "regime": "oracle_train",
+    "seed": 33,
+    "method": "rope_covariance",
+    "condition": "mixed",
+    "closed_r1": 0.6173257231712341,
+    "visible_r1": 0.4583767056465149,
+    "visible_rejection_rate": 0.493756502866745
+  },
+  {
+    "regime": "oracle_train",
+    "seed": 33,
+    "method": "rope_covariance",
+    "condition": "rgb",
+    "closed_r1": 0.8688865900039673,
+    "visible_r1": 0.8675858378410339,
+    "visible_rejection_rate": 0.006763787940144539
+  },
+  {
+    "regime": "oracle_train",
+    "seed": 33,
+    "method": "rope_normal_uncertainty",
+    "condition": "oracle",
+    "closed_r1": 0.9755463004112244,
+    "visible_r1": 0.9614984393119812,
+    "visible_rejection_rate": 0.018210196867585182
+  },
+  {
+    "regime": "oracle_train",
+    "seed": 33,
+    "method": "rope_normal_uncertainty",
+    "condition": "normal_noise",
+    "closed_r1": 0.8915192484855652,
+    "visible_r1": 0.5528095960617065,
+    "visible_rejection_rate": 0.4227367341518402
+  },
+  {
+    "regime": "oracle_train",
+    "seed": 33,
+    "method": "rope_normal_uncertainty",
+    "condition": "mixed",
+    "closed_r1": 0.9362643361091614,
+    "visible_r1": 0.8129552602767944,
+    "visible_rejection_rate": 0.1571279913187027
+  },
+  {
+    "regime": "oracle_train",
+    "seed": 33,
+    "method": "rope_normal_uncertainty",
+    "condition": "rgb",
+    "closed_r1": 0.8688865900039673,
+    "visible_r1": 0.5163891911506653,
+    "visible_rejection_rate": 0.4040062427520752
+  },
+  {
+    "regime": "robust_train",
+    "seed": 33,
+    "method": "rope3d",
+    "condition": "oracle",
+    "closed_r1": 0.9763267636299133,
+    "visible_r1": 0.9643600583076477,
+    "visible_rejection_rate": 0.016129031777381897
+  },
+  {
+    "regime": "robust_train",
+    "seed": 33,
+    "method": "rope3d",
+    "condition": "normal_noise",
+    "closed_r1": 0.9763267636299133,
+    "visible_r1": 0.9643600583076477,
+    "visible_rejection_rate": 0.016129031777381897
+  },
+  {
+    "regime": "robust_train",
+    "seed": 33,
+    "method": "rope3d",
+    "condition": "mixed",
+    "closed_r1": 0.959937572479248,
+    "visible_r1": 0.9334027171134949,
+    "visible_rejection_rate": 0.03746097907423973
+  },
+  {
+    "regime": "robust_train",
+    "seed": 33,
+    "method": "rope3d",
+    "condition": "rgb",
+    "closed_r1": 0.8686264157295227,
+    "visible_r1": 0.8634235262870789,
+    "visible_rejection_rate": 0.0096253901720047
+  },
+  {
+    "regime": "robust_train",
+    "seed": 33,
+    "method": "rope_normal",
+    "condition": "oracle",
+    "closed_r1": 0.9807491898536682,
+    "visible_r1": 0.9771071672439575,
+    "visible_rejection_rate": 0.00624349620193243
+  },
+  {
+    "regime": "robust_train",
+    "seed": 33,
+    "method": "rope_normal",
+    "condition": "normal_noise",
+    "closed_r1": 0.9477106928825378,
+    "visible_r1": 0.826742947101593,
+    "visible_rejection_rate": 0.14620187878608704
+  },
+  {
+    "regime": "robust_train",
+    "seed": 33,
+    "method": "rope_normal",
+    "condition": "mixed",
+    "closed_r1": 0.954994797706604,
+    "visible_r1": 0.9118106365203857,
+    "visible_rejection_rate": 0.058792922645807266
+  },
+  {
+    "regime": "robust_train",
+    "seed": 33,
+    "method": "rope_normal",
+    "condition": "rgb",
+    "closed_r1": 0.8688865900039673,
+    "visible_r1": 0.8686264157295227,
+    "visible_rejection_rate": 0.00026014569448307157
+  },
+  {
+    "regime": "robust_train",
+    "seed": 33,
+    "method": "rope_covariance",
+    "condition": "oracle",
+    "closed_r1": 0.9804890751838684,
+    "visible_r1": 0.9760665893554688,
+    "visible_rejection_rate": 0.0078043704852461815
+  },
+  {
+    "regime": "robust_train",
+    "seed": 33,
+    "method": "rope_covariance",
+    "condition": "normal_noise",
+    "closed_r1": 0.9464100003242493,
+    "visible_r1": 0.8106139302253723,
+    "visible_rejection_rate": 0.16259105503559113
+  },
+  {
+    "regime": "robust_train",
+    "seed": 33,
+    "method": "rope_covariance",
+    "condition": "mixed",
+    "closed_r1": 0.9544745087623596,
+    "visible_r1": 0.9021852016448975,
+    "visible_rejection_rate": 0.06789802014827728
+  },
+  {
+    "regime": "robust_train",
+    "seed": 33,
+    "method": "rope_covariance",
+    "condition": "rgb",
+    "closed_r1": 0.8688865900039673,
+    "visible_r1": 0.8688865900039673,
+    "visible_rejection_rate": 0.0
+  },
+  {
+    "regime": "robust_train",
+    "seed": 33,
+    "method": "rope_normal_uncertainty",
+    "condition": "oracle",
+    "closed_r1": 0.974245548248291,
+    "visible_r1": 0.9664412140846252,
+    "visible_rejection_rate": 0.010405827313661575
+  },
+  {
+    "regime": "robust_train",
+    "seed": 33,
+    "method": "rope_normal_uncertainty",
+    "condition": "normal_noise",
+    "closed_r1": 0.9456295371055603,
+    "visible_r1": 0.8142560124397278,
+    "visible_rejection_rate": 0.15582726895809174
+  },
+  {
+    "regime": "robust_train",
+    "seed": 33,
+    "method": "rope_normal_uncertainty",
+    "condition": "mixed",
+    "closed_r1": 0.9521331787109375,
+    "visible_r1": 0.8964620232582092,
+    "visible_rejection_rate": 0.06919874995946884
+  },
+  {
+    "regime": "robust_train",
+    "seed": 33,
+    "method": "rope_normal_uncertainty",
+    "condition": "rgb",
+    "closed_r1": 0.8688865900039673,
+    "visible_r1": 0.49817898869514465,
+    "visible_rejection_rate": 0.42091572284698486
+  },
+  {
+    "regime": "oracle_train",
+    "seed": 44,
+    "method": "rope3d",
+    "condition": "oracle",
+    "closed_r1": 0.977800726890564,
+    "visible_r1": 0.9468249678611755,
+    "visible_rejection_rate": 0.04052658751606941
+  },
+  {
+    "regime": "oracle_train",
+    "seed": 44,
+    "method": "rope3d",
+    "condition": "normal_noise",
+    "closed_r1": 0.977800726890564,
+    "visible_r1": 0.9468249678611755,
+    "visible_rejection_rate": 0.04052658751606941
+  },
+  {
+    "regime": "oracle_train",
+    "seed": 44,
+    "method": "rope3d",
+    "condition": "mixed",
+    "closed_r1": 0.9592152833938599,
+    "visible_r1": 0.9189468026161194,
+    "visible_rejection_rate": 0.05885389819741249
+  },
+  {
+    "regime": "oracle_train",
+    "seed": 44,
+    "method": "rope3d",
+    "condition": "rgb",
+    "closed_r1": 0.8902942538261414,
+    "visible_r1": 0.8871967196464539,
+    "visible_rejection_rate": 0.005162622779607773
+  },
+  {
+    "regime": "oracle_train",
+    "seed": 44,
+    "method": "rope_normal",
+    "condition": "oracle",
+    "closed_r1": 0.9855446815490723,
+    "visible_r1": 0.9574083685874939,
+    "visible_rejection_rate": 0.034331440925598145
+  },
+  {
+    "regime": "oracle_train",
+    "seed": 44,
+    "method": "rope_normal",
+    "condition": "normal_noise",
+    "closed_r1": 0.8776458501815796,
+    "visible_r1": 0.5423334836959839,
+    "visible_rejection_rate": 0.4303045868873596
+  },
+  {
+    "regime": "oracle_train",
+    "seed": 44,
+    "method": "rope_normal",
+    "condition": "mixed",
+    "closed_r1": 0.9318533539772034,
+    "visible_r1": 0.8128549456596375,
+    "visible_rejection_rate": 0.1605575680732727
+  },
+  {
+    "regime": "oracle_train",
+    "seed": 44,
+    "method": "rope_normal",
+    "condition": "rgb",
+    "closed_r1": 0.8908105492591858,
+    "visible_r1": 0.8908105492591858,
+    "visible_rejection_rate": 0.0
+  },
+  {
+    "regime": "oracle_train",
+    "seed": 44,
+    "method": "rope_covariance",
+    "condition": "oracle",
+    "closed_r1": 0.9868353009223938,
+    "visible_r1": 0.9581827521324158,
+    "visible_rejection_rate": 0.035105831921100616
+  },
+  {
+    "regime": "oracle_train",
+    "seed": 44,
+    "method": "rope_covariance",
+    "condition": "normal_noise",
+    "closed_r1": 0.16985028982162476,
+    "visible_r1": 0.05369127541780472,
+    "visible_rejection_rate": 0.93262779712677
+  },
+  {
+    "regime": "oracle_train",
+    "seed": 44,
+    "method": "rope_covariance",
+    "condition": "mixed",
+    "closed_r1": 0.6378419995307922,
+    "visible_r1": 0.4845121204853058,
+    "visible_rejection_rate": 0.469540536403656
+  },
+  {
+    "regime": "oracle_train",
+    "seed": 44,
+    "method": "rope_covariance",
+    "condition": "rgb",
+    "closed_r1": 0.8908105492591858,
+    "visible_r1": 0.8905524015426636,
+    "visible_rejection_rate": 0.0012906556949019432
+  },
+  {
+    "regime": "oracle_train",
+    "seed": 44,
+    "method": "rope_normal_uncertainty",
+    "condition": "oracle",
+    "closed_r1": 0.9821889400482178,
+    "visible_r1": 0.9669592380523682,
+    "visible_rejection_rate": 0.018843572586774826
+  },
+  {
+    "regime": "oracle_train",
+    "seed": 44,
+    "method": "rope_normal_uncertainty",
+    "condition": "normal_noise",
+    "closed_r1": 0.8789365291595459,
+    "visible_r1": 0.5557563304901123,
+    "visible_rejection_rate": 0.4145585894584656
+  },
+  {
+    "regime": "oracle_train",
+    "seed": 44,
+    "method": "rope_normal_uncertainty",
+    "condition": "mixed",
+    "closed_r1": 0.9323696494102478,
+    "visible_r1": 0.8218895196914673,
+    "visible_rejection_rate": 0.14687661826610565
+  },
+  {
+    "regime": "oracle_train",
+    "seed": 44,
+    "method": "rope_normal_uncertainty",
+    "condition": "rgb",
+    "closed_r1": 0.8908105492591858,
+    "visible_r1": 0.6479091644287109,
+    "visible_rejection_rate": 0.29736706614494324
+  },
+  {
+    "regime": "robust_train",
+    "seed": 44,
+    "method": "rope3d",
+    "condition": "oracle",
+    "closed_r1": 0.9757356643676758,
+    "visible_r1": 0.9574083685874939,
+    "visible_rejection_rate": 0.026071244850754738
+  },
+  {
+    "regime": "robust_train",
+    "seed": 44,
+    "method": "rope3d",
+    "condition": "normal_noise",
+    "closed_r1": 0.9757356643676758,
+    "visible_r1": 0.9574083685874939,
+    "visible_rejection_rate": 0.026071244850754738
+  },
+  {
+    "regime": "robust_train",
+    "seed": 44,
+    "method": "rope3d",
+    "condition": "mixed",
+    "closed_r1": 0.9561176896095276,
+    "visible_r1": 0.9254000782966614,
+    "visible_rejection_rate": 0.04878678545355797
+  },
+  {
+    "regime": "robust_train",
+    "seed": 44,
+    "method": "rope3d",
+    "condition": "rgb",
+    "closed_r1": 0.8908105492591858,
+    "visible_r1": 0.8877129554748535,
+    "visible_rejection_rate": 0.006195147056132555
+  },
+  {
+    "regime": "robust_train",
+    "seed": 44,
+    "method": "rope_normal",
+    "condition": "oracle",
+    "closed_r1": 0.9827052354812622,
+    "visible_r1": 0.971347451210022,
+    "visible_rejection_rate": 0.01522973645478487
+  },
+  {
+    "regime": "robust_train",
+    "seed": 44,
+    "method": "rope_normal",
+    "condition": "normal_noise",
+    "closed_r1": 0.9416623711585999,
+    "visible_r1": 0.8128549456596375,
+    "visible_rejection_rate": 0.1626226156949997
+  },
+  {
+    "regime": "robust_train",
+    "seed": 44,
+    "method": "rope_normal",
+    "condition": "mixed",
+    "closed_r1": 0.9481156468391418,
+    "visible_r1": 0.9032008051872253,
+    "visible_rejection_rate": 0.06453277915716171
+  },
+  {
+    "regime": "robust_train",
+    "seed": 44,
+    "method": "rope_normal",
+    "condition": "rgb",
+    "closed_r1": 0.8908105492591858,
+    "visible_r1": 0.8908105492591858,
+    "visible_rejection_rate": 0.0
+  },
+  {
+    "regime": "robust_train",
+    "seed": 44,
+    "method": "rope_covariance",
+    "condition": "oracle",
+    "closed_r1": 0.984254002571106,
+    "visible_r1": 0.9798657894134521,
+    "visible_rejection_rate": 0.006453278474509716
+  },
+  {
+    "regime": "robust_train",
+    "seed": 44,
+    "method": "rope_covariance",
+    "condition": "normal_noise",
+    "closed_r1": 0.943727433681488,
+    "visible_r1": 0.8371192812919617,
+    "visible_rejection_rate": 0.1362932324409485
+  },
+  {
+    "regime": "robust_train",
+    "seed": 44,
+    "method": "rope_covariance",
+    "condition": "mixed",
+    "closed_r1": 0.951987624168396,
+    "visible_r1": 0.9217862486839294,
+    "visible_rejection_rate": 0.045689210295677185
+  },
+  {
+    "regime": "robust_train",
+    "seed": 44,
+    "method": "rope_covariance",
+    "condition": "rgb",
+    "closed_r1": 0.8908105492591858,
+    "visible_r1": 0.8908105492591858,
+    "visible_rejection_rate": 0.0
+  },
+  {
+    "regime": "robust_train",
+    "seed": 44,
+    "method": "rope_normal_uncertainty",
+    "condition": "oracle",
+    "closed_r1": 0.9808983206748962,
+    "visible_r1": 0.9721218347549438,
+    "visible_rejection_rate": 0.011099638417363167
+  },
+  {
+    "regime": "robust_train",
+    "seed": 44,
+    "method": "rope_normal_uncertainty",
+    "condition": "normal_noise",
+    "closed_r1": 0.9442436695098877,
+    "visible_r1": 0.8211151361465454,
+    "visible_rejection_rate": 0.1541042923927307
+  },
+  {
+    "regime": "robust_train",
+    "seed": 44,
+    "method": "rope_normal_uncertainty",
+    "condition": "mixed",
+    "closed_r1": 0.9506969451904297,
+    "visible_r1": 0.903975248336792,
+    "visible_rejection_rate": 0.06504904478788376
+  },
+  {
+    "regime": "robust_train",
+    "seed": 44,
+    "method": "rope_normal_uncertainty",
+    "condition": "rgb",
+    "closed_r1": 0.8908105492591858,
+    "visible_r1": 0.6352607011795044,
+    "visible_rejection_rate": 0.3076923191547394
+  },
+  {
+    "regime": "oracle_train",
+    "seed": 55,
+    "method": "rope3d",
+    "condition": "oracle",
+    "closed_r1": 0.9749418497085571,
+    "visible_r1": 0.9594420194625854,
+    "visible_rejection_rate": 0.02195814996957779
+  },
+  {
+    "regime": "oracle_train",
+    "seed": 55,
+    "method": "rope3d",
+    "condition": "normal_noise",
+    "closed_r1": 0.9749418497085571,
+    "visible_r1": 0.9594420194625854,
+    "visible_rejection_rate": 0.02195814996957779
+  },
+  {
+    "regime": "oracle_train",
+    "seed": 55,
+    "method": "rope3d",
+    "condition": "mixed",
+    "closed_r1": 0.9568586945533752,
+    "visible_r1": 0.9323172569274902,
+    "visible_rejection_rate": 0.04159132018685341
+  },
+  {
+    "regime": "oracle_train",
+    "seed": 55,
+    "method": "rope3d",
+    "condition": "rgb",
+    "closed_r1": 0.8899509310722351,
+    "visible_r1": 0.873676061630249,
+    "visible_rejection_rate": 0.02712477371096611
+  },
+  {
+    "regime": "oracle_train",
+    "seed": 55,
+    "method": "rope_normal",
+    "condition": "oracle",
+    "closed_r1": 0.9834668040275574,
+    "visible_r1": 0.9816584587097168,
+    "visible_rejection_rate": 0.0036166366189718246
+  },
+  {
+    "regime": "oracle_train",
+    "seed": 55,
+    "method": "rope_normal",
+    "condition": "normal_noise",
+    "closed_r1": 0.8940842151641846,
+    "visible_r1": 0.6357530355453491,
+    "visible_rejection_rate": 0.329630583524704
+  },
+  {
+    "regime": "oracle_train",
+    "seed": 55,
+    "method": "rope_normal",
+    "condition": "mixed",
+    "closed_r1": 0.9359338879585266,
+    "visible_r1": 0.8602428436279297,
+    "visible_rejection_rate": 0.09764918684959412
+  },
+  {
+    "regime": "oracle_train",
+    "seed": 55,
+    "method": "rope_normal",
+    "condition": "rgb",
+    "closed_r1": 0.8925342559814453,
+    "visible_r1": 0.892275869846344,
+    "visible_rejection_rate": 0.0005166623741388321
+  },
+  {
+    "regime": "oracle_train",
+    "seed": 55,
+    "method": "rope_covariance",
+    "condition": "oracle",
+    "closed_r1": 0.9808834791183472,
+    "visible_r1": 0.9757168889045715,
+    "visible_rejection_rate": 0.008783260360360146
+  },
+  {
+    "regime": "oracle_train",
+    "seed": 55,
+    "method": "rope_covariance",
+    "condition": "normal_noise",
+    "closed_r1": 0.18393179774284363,
+    "visible_r1": 0.06225781515240669,
+    "visible_rejection_rate": 0.9240506291389465
+  },
+  {
+    "regime": "oracle_train",
+    "seed": 55,
+    "method": "rope_covariance",
+    "condition": "mixed",
+    "closed_r1": 0.6481529474258423,
+    "visible_r1": 0.5060707926750183,
+    "visible_rejection_rate": 0.44071298837661743
+  },
+  {
+    "regime": "oracle_train",
+    "seed": 55,
+    "method": "rope_covariance",
+    "condition": "rgb",
+    "closed_r1": 0.8927925825119019,
+    "visible_r1": 0.8902092576026917,
+    "visible_rejection_rate": 0.006199948489665985
+  },
+  {
+    "regime": "oracle_train",
+    "seed": 55,
+    "method": "rope_normal_uncertainty",
+    "condition": "oracle",
+    "closed_r1": 0.9785585403442383,
+    "visible_r1": 0.9721002578735352,
+    "visible_rejection_rate": 0.010333247482776642
+  },
+  {
+    "regime": "oracle_train",
+    "seed": 55,
+    "method": "rope_normal_uncertainty",
+    "condition": "normal_noise",
+    "closed_r1": 0.8971841931343079,
+    "visible_r1": 0.6166365146636963,
+    "visible_rejection_rate": 0.355722039937973
+  },
+  {
+    "regime": "oracle_train",
+    "seed": 55,
+    "method": "rope_normal_uncertainty",
+    "condition": "mixed",
+    "closed_r1": 0.9354171752929688,
+    "visible_r1": 0.8408679962158203,
+    "visible_rejection_rate": 0.12632395327091217
+  },
+  {
+    "regime": "oracle_train",
+    "seed": 55,
+    "method": "rope_normal_uncertainty",
+    "condition": "rgb",
+    "closed_r1": 0.8925342559814453,
+    "visible_r1": 0.7365021705627441,
+    "visible_rejection_rate": 0.18419013917446136
+  },
+  {
+    "regime": "robust_train",
+    "seed": 55,
+    "method": "rope3d",
+    "condition": "oracle",
+    "closed_r1": 0.9757168889045715,
+    "visible_r1": 0.964091956615448,
+    "visible_rejection_rate": 0.01679152622818947
+  },
+  {
+    "regime": "robust_train",
+    "seed": 55,
+    "method": "rope3d",
+    "condition": "normal_noise",
+    "closed_r1": 0.9757168889045715,
+    "visible_r1": 0.964091956615448,
+    "visible_rejection_rate": 0.01679152622818947
+  },
+  {
+    "regime": "robust_train",
+    "seed": 55,
+    "method": "rope3d",
+    "condition": "mixed",
+    "closed_r1": 0.9599586725234985,
+    "visible_r1": 0.9392921924591064,
+    "visible_rejection_rate": 0.03254972770810127
+  },
+  {
+    "regime": "robust_train",
+    "seed": 55,
+    "method": "rope3d",
+    "condition": "rgb",
+    "closed_r1": 0.8907259106636047,
+    "visible_r1": 0.8865926265716553,
+    "visible_rejection_rate": 0.009041591547429562
+  },
+  {
+    "regime": "robust_train",
+    "seed": 55,
+    "method": "rope_normal",
+    "condition": "oracle",
+    "closed_r1": 0.9826918244361877,
+    "visible_r1": 0.9819168448448181,
+    "visible_rejection_rate": 0.0012916559353470802
+  },
+  {
+    "regime": "robust_train",
+    "seed": 55,
+    "method": "rope_normal",
+    "condition": "normal_noise",
+    "closed_r1": 0.9532420635223389,
+    "visible_r1": 0.8899509310722351,
+    "visible_rejection_rate": 0.08111599087715149
+  },
+  {
+    "regime": "robust_train",
+    "seed": 55,
+    "method": "rope_normal",
+    "condition": "mixed",
+    "closed_r1": 0.9560837149620056,
+    "visible_r1": 0.9338672161102295,
+    "visible_rejection_rate": 0.02944975532591343
+  },
+  {
+    "regime": "robust_train",
+    "seed": 55,
+    "method": "rope_normal",
+    "condition": "rgb",
+    "closed_r1": 0.8925342559814453,
+    "visible_r1": 0.8925342559814453,
+    "visible_rejection_rate": 0.00025833118706941605
+  },
+  {
+    "regime": "robust_train",
+    "seed": 55,
+    "method": "rope_covariance",
+    "condition": "oracle",
+    "closed_r1": 0.9834668040275574,
+    "visible_r1": 0.979850172996521,
+    "visible_rejection_rate": 0.005424954928457737
+  },
+  {
+    "regime": "robust_train",
+    "seed": 55,
+    "method": "rope_covariance",
+    "condition": "normal_noise",
+    "closed_r1": 0.9529837369918823,
+    "visible_r1": 0.8638594746589661,
+    "visible_rejection_rate": 0.11289072781801224
+  },
+  {
+    "regime": "robust_train",
+    "seed": 55,
+    "method": "rope_covariance",
+    "condition": "mixed",
+    "closed_r1": 0.9560837149620056,
+    "visible_r1": 0.9214673042297363,
+    "visible_rejection_rate": 0.04443296417593956
+  },
+  {
+    "regime": "robust_train",
+    "seed": 55,
+    "method": "rope_covariance",
+    "condition": "rgb",
+    "closed_r1": 0.8927925825119019,
+    "visible_r1": 0.8925342559814453,
+    "visible_rejection_rate": 0.00025833118706941605
+  },
+  {
+    "regime": "robust_train",
+    "seed": 55,
+    "method": "rope_normal_uncertainty",
+    "condition": "oracle",
+    "closed_r1": 0.9780418276786804,
+    "visible_r1": 0.9772668480873108,
+    "visible_rejection_rate": 0.0015499871224164963
+  },
+  {
+    "regime": "robust_train",
+    "seed": 55,
+    "method": "rope_normal_uncertainty",
+    "condition": "normal_noise",
+    "closed_r1": 0.955308735370636,
+    "visible_r1": 0.8860759735107422,
+    "visible_rejection_rate": 0.08395763486623764
+  },
+  {
+    "regime": "robust_train",
+    "seed": 55,
+    "method": "rope_normal_uncertainty",
+    "condition": "mixed",
+    "closed_r1": 0.9545336961746216,
+    "visible_r1": 0.9328339099884033,
+    "visible_rejection_rate": 0.028158098459243774
+  },
+  {
+    "regime": "robust_train",
+    "seed": 55,
+    "method": "rope_normal_uncertainty",
+    "condition": "rgb",
+    "closed_r1": 0.8920175433158875,
+    "visible_r1": 0.795918345451355,
+    "visible_rejection_rate": 0.11159907281398773
+  }
+]

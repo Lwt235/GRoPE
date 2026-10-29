@@ -1,0 +1,3852 @@
+{
+  "11": [
+    {
+      "unmatched_fraction": 0.10416666666666667,
+      "occlusion_or_outside_fraction": 0.041666666666666664,
+      "unrepresentable_visible_fraction": 0.0625,
+      "normal_error_degrees": 4.611290174737599,
+      "position_error": 1.0317969137261025,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.25,
+      "occlusion_or_outside_fraction": 0.25,
+      "unrepresentable_visible_fraction": 0.0,
+      "normal_error_degrees": 9.013557055268585,
+      "position_error": 0.7085392635606356,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.3333333333333333,
+      "occlusion_or_outside_fraction": 0.2708333333333333,
+      "unrepresentable_visible_fraction": 0.0625,
+      "normal_error_degrees": 5.99917376432937,
+      "position_error": 0.8451359996236171,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.10416666666666667,
+      "occlusion_or_outside_fraction": 0.020833333333333332,
+      "unrepresentable_visible_fraction": 0.08333333333333333,
+      "normal_error_degrees": 9.340335430026512,
+      "position_error": 1.0766323467372014,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.1875,
+      "occlusion_or_outside_fraction": 0.1875,
+      "unrepresentable_visible_fraction": 0.0,
+      "normal_error_degrees": 6.044280903687405,
+      "position_error": 0.6700453942519536,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.3125,
+      "occlusion_or_outside_fraction": 0.25,
+      "unrepresentable_visible_fraction": 0.0625,
+      "normal_error_degrees": 3.5951834283966977,
+      "position_error": 0.7904895307372125,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.25,
+      "occlusion_or_outside_fraction": 0.20833333333333334,
+      "unrepresentable_visible_fraction": 0.041666666666666664,
+      "normal_error_degrees": 5.3659564464983305,
+      "position_error": 0.7351155746295216,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.08333333333333333,
+      "occlusion_or_outside_fraction": 0.08333333333333333,
+      "unrepresentable_visible_fraction": 0.0,
+      "normal_error_degrees": 7.326384792857731,
+      "position_error": 0.6320855967042439,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.0625,
+      "occlusion_or_outside_fraction": 0.0625,
+      "unrepresentable_visible_fraction": 0.0,
+      "normal_error_degrees": 4.953757586130142,
+      "position_error": 0.795898118690166,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.10416666666666667,
+      "occlusion_or_outside_fraction": 0.041666666666666664,
+      "unrepresentable_visible_fraction": 0.0625,
+      "normal_error_degrees": 7.9461230708780795,
+      "position_error": 0.7597023403615369,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.0625,
+      "occlusion_or_outside_fraction": 0.020833333333333332,
+      "unrepresentable_visible_fraction": 0.041666666666666664,
+      "normal_error_degrees": 7.368245953892411,
+      "position_error": 0.5580070963791753,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.25,
+      "occlusion_or_outside_fraction": 0.14583333333333334,
+      "unrepresentable_visible_fraction": 0.10416666666666667,
+      "normal_error_degrees": 5.666652206024318,
+      "position_error": 0.7243220655145057,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.20833333333333334,
+      "occlusion_or_outside_fraction": 0.14583333333333334,
+      "unrepresentable_visible_fraction": 0.0625,
+      "normal_error_degrees": 8.042462782411398,
+      "position_error": 0.8997418816889144,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.0,
+      "occlusion_or_outside_fraction": 0.0,
+      "unrepresentable_visible_fraction": 0.0,
+      "normal_error_degrees": 4.444231069307658,
+      "position_error": 0.4843436672113685,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.1875,
+      "occlusion_or_outside_fraction": 0.16666666666666666,
+      "unrepresentable_visible_fraction": 0.020833333333333332,
+      "normal_error_degrees": 5.7630324071772945,
+      "position_error": 0.6779899483125112,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.20833333333333334,
+      "occlusion_or_outside_fraction": 0.16666666666666666,
+      "unrepresentable_visible_fraction": 0.041666666666666664,
+      "normal_error_degrees": 6.348303108469456,
+      "position_error": 0.6148244739093233,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.1875,
+      "occlusion_or_outside_fraction": 0.16666666666666666,
+      "unrepresentable_visible_fraction": 0.020833333333333332,
+      "normal_error_degrees": 7.127937251260679,
+      "position_error": 0.6153170765900695,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.16666666666666666,
+      "occlusion_or_outside_fraction": 0.0625,
+      "unrepresentable_visible_fraction": 0.10416666666666667,
+      "normal_error_degrees": 4.146581009209871,
+      "position_error": 0.9004819268769046,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.14583333333333334,
+      "occlusion_or_outside_fraction": 0.125,
+      "unrepresentable_visible_fraction": 0.020833333333333332,
+      "normal_error_degrees": 10.51884902010215,
+      "position_error": 0.6324016954456976,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.4166666666666667,
+      "occlusion_or_outside_fraction": 0.20833333333333334,
+      "unrepresentable_visible_fraction": 0.20833333333333334,
+      "normal_error_degrees": 11.98684847929112,
+      "position_error": 0.9742394504711737,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.3125,
+      "occlusion_or_outside_fraction": 0.20833333333333334,
+      "unrepresentable_visible_fraction": 0.10416666666666667,
+      "normal_error_degrees": 11.563278348092373,
+      "position_error": 1.0056602061667188,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.16666666666666666,
+      "occlusion_or_outside_fraction": 0.10416666666666667,
+      "unrepresentable_visible_fraction": 0.0625,
+      "normal_error_degrees": 16.058934710427142,
+      "position_error": 1.0435906648296387,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.10416666666666667,
+      "occlusion_or_outside_fraction": 0.10416666666666667,
+      "unrepresentable_visible_fraction": 0.0,
+      "normal_error_degrees": 12.32635671973839,
+      "position_error": 0.7985534678422069,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.16666666666666666,
+      "occlusion_or_outside_fraction": 0.041666666666666664,
+      "unrepresentable_visible_fraction": 0.125,
+      "normal_error_degrees": 7.298742539040428,
+      "position_error": 1.093979735388919,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.041666666666666664,
+      "occlusion_or_outside_fraction": 0.041666666666666664,
+      "unrepresentable_visible_fraction": 0.0,
+      "normal_error_degrees": 6.099733665483335,
+      "position_error": 0.7439664185754946,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.22916666666666666,
+      "occlusion_or_outside_fraction": 0.14583333333333334,
+      "unrepresentable_visible_fraction": 0.08333333333333333,
+      "normal_error_degrees": 7.017854714756072,
+      "position_error": 0.7393156365671402,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.08333333333333333,
+      "occlusion_or_outside_fraction": 0.08333333333333333,
+      "unrepresentable_visible_fraction": 0.0,
+      "normal_error_degrees": 8.274900522063582,
+      "position_error": 0.6407274962461499,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.2708333333333333,
+      "occlusion_or_outside_fraction": 0.1875,
+      "unrepresentable_visible_fraction": 0.08333333333333333,
+      "normal_error_degrees": 9.539498194986615,
+      "position_error": 1.010203967549146,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.16666666666666666,
+      "occlusion_or_outside_fraction": 0.16666666666666666,
+      "unrepresentable_visible_fraction": 0.0,
+      "normal_error_degrees": 6.867976334810454,
+      "position_error": 0.5517860408736369,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.08333333333333333,
+      "occlusion_or_outside_fraction": 0.0625,
+      "unrepresentable_visible_fraction": 0.020833333333333332,
+      "normal_error_degrees": 9.647083933270114,
+      "position_error": 0.7997650189428755,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.14583333333333334,
+      "occlusion_or_outside_fraction": 0.08333333333333333,
+      "unrepresentable_visible_fraction": 0.0625,
+      "normal_error_degrees": 10.46881553221965,
+      "position_error": 0.8712494769921575,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.16666666666666666,
+      "occlusion_or_outside_fraction": 0.125,
+      "unrepresentable_visible_fraction": 0.041666666666666664,
+      "normal_error_degrees": 7.518524461164286,
+      "position_error": 0.6428642569811468,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.125,
+      "occlusion_or_outside_fraction": 0.125,
+      "unrepresentable_visible_fraction": 0.0,
+      "normal_error_degrees": 3.540463798219035,
+      "position_error": 0.4701500390627687,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.16666666666666666,
+      "occlusion_or_outside_fraction": 0.16666666666666666,
+      "unrepresentable_visible_fraction": 0.0,
+      "normal_error_degrees": 10.015960401342136,
+      "position_error": 0.53510621260058,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.20833333333333334,
+      "occlusion_or_outside_fraction": 0.14583333333333334,
+      "unrepresentable_visible_fraction": 0.0625,
+      "normal_error_degrees": 8.311987777778755,
+      "position_error": 0.8501876981510916,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.25,
+      "occlusion_or_outside_fraction": 0.16666666666666666,
+      "unrepresentable_visible_fraction": 0.08333333333333333,
+      "normal_error_degrees": 6.754026597603461,
+      "position_error": 0.8827210692590506,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.16666666666666666,
+      "occlusion_or_outside_fraction": 0.10416666666666667,
+      "unrepresentable_visible_fraction": 0.0625,
+      "normal_error_degrees": 5.612110751100629,
+      "position_error": 0.702092133951762,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.041666666666666664,
+      "occlusion_or_outside_fraction": 0.041666666666666664,
+      "unrepresentable_visible_fraction": 0.0,
+      "normal_error_degrees": 12.604976750795808,
+      "position_error": 0.9656088775368565,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.1875,
+      "occlusion_or_outside_fraction": 0.10416666666666667,
+      "unrepresentable_visible_fraction": 0.08333333333333333,
+      "normal_error_degrees": 6.849320930046791,
+      "position_error": 0.7477904211443667,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.3333333333333333,
+      "occlusion_or_outside_fraction": 0.20833333333333334,
+      "unrepresentable_visible_fraction": 0.125,
+      "normal_error_degrees": 6.32385795162759,
+      "position_error": 1.025559912334047,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.3333333333333333,
+      "occlusion_or_outside_fraction": 0.1875,
+      "unrepresentable_visible_fraction": 0.14583333333333334,
+      "normal_error_degrees": 7.2519929196723965,
+      "position_error": 0.7715455170371786,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.2708333333333333,
+      "occlusion_or_outside_fraction": 0.16666666666666666,
+      "unrepresentable_visible_fraction": 0.10416666666666667,
+      "normal_error_degrees": 12.331066280274632,
+      "position_error": 1.1259467349424737,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.16666666666666666,
+      "occlusion_or_outside_fraction": 0.14583333333333334,
+      "unrepresentable_visible_fraction": 0.020833333333333332,
+      "normal_error_degrees": 9.173547755969262,
+      "position_error": 0.6127664807686813,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.08333333333333333,
+      "occlusion_or_outside_fraction": 0.0,
+      "unrepresentable_visible_fraction": 0.08333333333333333,
+      "normal_error_degrees": 7.243276061653623,
+      "position_error": 1.110528980777316,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.10416666666666667,
+      "occlusion_or_outside_fraction": 0.08333333333333333,
+      "unrepresentable_visible_fraction": 0.020833333333333332,
+      "normal_error_degrees": 6.963641008447683,
+      "position_error": 0.726249958641305,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.0,
+      "occlusion_or_outside_fraction": 0.0,
+      "unrepresentable_visible_fraction": 0.0,
+      "normal_error_degrees": 10.937128354372476,
+      "position_error": 0.7810405609020754,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.2708333333333333,
+      "occlusion_or_outside_fraction": 0.14583333333333334,
+      "unrepresentable_visible_fraction": 0.125,
+      "normal_error_degrees": 6.1996010539146456,
+      "position_error": 0.5778631303763703,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.10416666666666667,
+      "occlusion_or_outside_fraction": 0.0625,
+      "unrepresentable_visible_fraction": 0.041666666666666664,
+      "normal_error_degrees": 6.805336786680733,
+      "position_error": 0.6072205243698753,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.125,
+      "occlusion_or_outside_fraction": 0.08333333333333333,
+      "unrepresentable_visible_fraction": 0.041666666666666664,
+      "normal_error_degrees": 5.676170551154002,
+      "position_error": 0.7210549512789699,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.3125,
+      "occlusion_or_outside_fraction": 0.16666666666666666,
+      "unrepresentable_visible_fraction": 0.14583333333333334,
+      "normal_error_degrees": 5.279304252405786,
+      "position_error": 0.9371864010744373,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.2708333333333333,
+      "occlusion_or_outside_fraction": 0.20833333333333334,
+      "unrepresentable_visible_fraction": 0.0625,
+      "normal_error_degrees": 10.001247812547492,
+      "position_error": 0.6115180285121814,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.4166666666666667,
+      "occlusion_or_outside_fraction": 0.25,
+      "unrepresentable_visible_fraction": 0.16666666666666666,
+      "normal_error_degrees": 10.087863312477511,
+      "position_error": 1.4980709736325515,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.2916666666666667,
+      "occlusion_or_outside_fraction": 0.16666666666666666,
+      "unrepresentable_visible_fraction": 0.125,
+      "normal_error_degrees": 11.907624449051902,
+      "position_error": 1.242210101797714,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.1875,
+      "occlusion_or_outside_fraction": 0.1875,
+      "unrepresentable_visible_fraction": 0.0,
+      "normal_error_degrees": 9.141493115314566,
+      "position_error": 0.7062379961434297,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.125,
+      "occlusion_or_outside_fraction": 0.041666666666666664,
+      "unrepresentable_visible_fraction": 0.08333333333333333,
+      "normal_error_degrees": 10.444948211338762,
+      "position_error": 0.6517883058488599,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.14583333333333334,
+      "occlusion_or_outside_fraction": 0.0625,
+      "unrepresentable_visible_fraction": 0.08333333333333333,
+      "normal_error_degrees": 4.277631137433311,
+      "position_error": 0.7829028791467985,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.0625,
+      "occlusion_or_outside_fraction": 0.0625,
+      "unrepresentable_visible_fraction": 0.0,
+      "normal_error_degrees": 11.256553095645236,
+      "position_error": 0.596821747043028,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.2708333333333333,
+      "occlusion_or_outside_fraction": 0.16666666666666666,
+      "unrepresentable_visible_fraction": 0.10416666666666667,
+      "normal_error_degrees": 12.32336839298402,
+      "position_error": 1.1735477350062027,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.16666666666666666,
+      "occlusion_or_outside_fraction": 0.14583333333333334,
+      "unrepresentable_visible_fraction": 0.020833333333333332,
+      "normal_error_degrees": 5.055633746603011,
+      "position_error": 0.6319476404731867,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.16666666666666666,
+      "occlusion_or_outside_fraction": 0.125,
+      "unrepresentable_visible_fraction": 0.041666666666666664,
+      "normal_error_degrees": 6.206414013869499,
+      "position_error": 0.6564031815745928,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.25,
+      "occlusion_or_outside_fraction": 0.1875,
+      "unrepresentable_visible_fraction": 0.0625,
+      "normal_error_degrees": 9.377566111656288,
+      "position_error": 0.7296377157934977,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.3333333333333333,
+      "occlusion_or_outside_fraction": 0.20833333333333334,
+      "unrepresentable_visible_fraction": 0.125,
+      "normal_error_degrees": 9.27079112186702,
+      "position_error": 0.8141256706120057,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.125,
+      "occlusion_or_outside_fraction": 0.125,
+      "unrepresentable_visible_fraction": 0.0,
+      "normal_error_degrees": 9.244058197807783,
+      "position_error": 0.5751413527581996,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.22916666666666666,
+      "occlusion_or_outside_fraction": 0.20833333333333334,
+      "unrepresentable_visible_fraction": 0.020833333333333332,
+      "normal_error_degrees": 5.622682275883811,
+      "position_error": 0.7924989044559148,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.25,
+      "occlusion_or_outside_fraction": 0.16666666666666666,
+      "unrepresentable_visible_fraction": 0.08333333333333333,
+      "normal_error_degrees": 10.11812222036373,
+      "position_error": 1.0093873244384302,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.1875,
+      "occlusion_or_outside_fraction": 0.16666666666666666,
+      "unrepresentable_visible_fraction": 0.020833333333333332,
+      "normal_error_degrees": 7.837107447496261,
+      "position_error": 0.9543391291051991,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.14583333333333334,
+      "occlusion_or_outside_fraction": 0.125,
+      "unrepresentable_visible_fraction": 0.020833333333333332,
+      "normal_error_degrees": 7.764811562970487,
+      "position_error": 0.6708764417344263,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.0625,
+      "occlusion_or_outside_fraction": 0.041666666666666664,
+      "unrepresentable_visible_fraction": 0.020833333333333332,
+      "normal_error_degrees": 7.408197437264783,
+      "position_error": 0.6813019485370986,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.08333333333333333,
+      "occlusion_or_outside_fraction": 0.08333333333333333,
+      "unrepresentable_visible_fraction": 0.0,
+      "normal_error_degrees": 10.403134821192479,
+      "position_error": 0.9657557184173244,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.041666666666666664,
+      "occlusion_or_outside_fraction": 0.041666666666666664,
+      "unrepresentable_visible_fraction": 0.0,
+      "normal_error_degrees": 11.25519910119022,
+      "position_error": 0.6258852334347812,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.16666666666666666,
+      "occlusion_or_outside_fraction": 0.16666666666666666,
+      "unrepresentable_visible_fraction": 0.0,
+      "normal_error_degrees": 10.08754252594924,
+      "position_error": 0.7945404759580658,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.25,
+      "occlusion_or_outside_fraction": 0.1875,
+      "unrepresentable_visible_fraction": 0.0625,
+      "normal_error_degrees": 6.927726068777879,
+      "position_error": 0.5816765179204841,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.041666666666666664,
+      "occlusion_or_outside_fraction": 0.041666666666666664,
+      "unrepresentable_visible_fraction": 0.0,
+      "normal_error_degrees": 9.390397081853875,
+      "position_error": 0.4902482257227006,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.25,
+      "occlusion_or_outside_fraction": 0.1875,
+      "unrepresentable_visible_fraction": 0.0625,
+      "normal_error_degrees": 5.307965104325627,
+      "position_error": 0.7717882027429294,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.10416666666666667,
+      "occlusion_or_outside_fraction": 0.08333333333333333,
+      "unrepresentable_visible_fraction": 0.020833333333333332,
+      "normal_error_degrees": 8.8179260768766,
+      "position_error": 0.8724764992938937,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.1875,
+      "occlusion_or_outside_fraction": 0.16666666666666666,
+      "unrepresentable_visible_fraction": 0.020833333333333332,
+      "normal_error_degrees": 6.120036522777757,
+      "position_error": 0.7688569721064136,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.25,
+      "occlusion_or_outside_fraction": 0.1875,
+      "unrepresentable_visible_fraction": 0.0625,
+      "normal_error_degrees": 8.108594361092193,
+      "position_error": 0.7053753949502509,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.25,
+      "occlusion_or_outside_fraction": 0.22916666666666666,
+      "unrepresentable_visible_fraction": 0.020833333333333332,
+      "normal_error_degrees": 6.317353292183697,
+      "position_error": 0.6076884137186384,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.1875,
+      "occlusion_or_outside_fraction": 0.1875,
+      "unrepresentable_visible_fraction": 0.0,
+      "normal_error_degrees": 11.22257976676373,
+      "position_error": 0.832585163181449,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.22916666666666666,
+      "occlusion_or_outside_fraction": 0.22916666666666666,
+      "unrepresentable_visible_fraction": 0.0,
+      "normal_error_degrees": 5.397711655578299,
+      "position_error": 0.5697993384064438,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.125,
+      "occlusion_or_outside_fraction": 0.08333333333333333,
+      "unrepresentable_visible_fraction": 0.041666666666666664,
+      "normal_error_degrees": 8.2728808090953,
+      "position_error": 0.8635667396865893,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.16666666666666666,
+      "occlusion_or_outside_fraction": 0.0625,
+      "unrepresentable_visible_fraction": 0.10416666666666667,
+      "normal_error_degrees": 11.028568535060174,
+      "position_error": 1.062026543805075,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.125,
+      "occlusion_or_outside_fraction": 0.041666666666666664,
+      "unrepresentable_visible_fraction": 0.08333333333333333,
+      "normal_error_degrees": 11.991038507644546,
+      "position_error": 1.0882759311511065,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.14583333333333334,
+      "occlusion_or_outside_fraction": 0.041666666666666664,
+      "unrepresentable_visible_fraction": 0.10416666666666667,
+      "normal_error_degrees": 12.12813569697228,
+      "position_error": 0.9154801294901297,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.3333333333333333,
+      "occlusion_or_outside_fraction": 0.20833333333333334,
+      "unrepresentable_visible_fraction": 0.125,
+      "normal_error_degrees": 8.72106076015392,
+      "position_error": 0.986420867070919,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.0625,
+      "occlusion_or_outside_fraction": 0.0625,
+      "unrepresentable_visible_fraction": 0.0,
+      "normal_error_degrees": 10.236522179500433,
+      "position_error": 0.7166824067915342,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.041666666666666664,
+      "occlusion_or_outside_fraction": 0.041666666666666664,
+      "unrepresentable_visible_fraction": 0.0,
+      "normal_error_degrees": 8.01810475660558,
+      "position_error": 0.7486603466071576,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.0625,
+      "occlusion_or_outside_fraction": 0.041666666666666664,
+      "unrepresentable_visible_fraction": 0.020833333333333332,
+      "normal_error_degrees": 5.685546456944942,
+      "position_error": 0.6578911800655004,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.25,
+      "occlusion_or_outside_fraction": 0.1875,
+      "unrepresentable_visible_fraction": 0.0625,
+      "normal_error_degrees": 6.742665425958127,
+      "position_error": 0.8780509758709751,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.3541666666666667,
+      "occlusion_or_outside_fraction": 0.22916666666666666,
+      "unrepresentable_visible_fraction": 0.125,
+      "normal_error_degrees": 11.427415982989373,
+      "position_error": 1.142286595109582,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.3541666666666667,
+      "occlusion_or_outside_fraction": 0.20833333333333334,
+      "unrepresentable_visible_fraction": 0.14583333333333334,
+      "normal_error_degrees": 7.120005199164777,
+      "position_error": 0.9070648794549226,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.020833333333333332,
+      "occlusion_or_outside_fraction": 0.0,
+      "unrepresentable_visible_fraction": 0.020833333333333332,
+      "normal_error_degrees": 6.238265659140301,
+      "position_error": 0.9655934240639515,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.020833333333333332,
+      "occlusion_or_outside_fraction": 0.020833333333333332,
+      "unrepresentable_visible_fraction": 0.0,
+      "normal_error_degrees": 12.45447797387015,
+      "position_error": 0.8134217726276525,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.375,
+      "occlusion_or_outside_fraction": 0.25,
+      "unrepresentable_visible_fraction": 0.125,
+      "normal_error_degrees": 9.07886084691045,
+      "position_error": 0.9328281674767186,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.10416666666666667,
+      "occlusion_or_outside_fraction": 0.10416666666666667,
+      "unrepresentable_visible_fraction": 0.0,
+      "normal_error_degrees": 8.616758779486476,
+      "position_error": 0.6027822400822511,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.0,
+      "occlusion_or_outside_fraction": 0.0,
+      "unrepresentable_visible_fraction": 0.0,
+      "normal_error_degrees": 9.545994144852221,
+      "position_error": 0.7309649124026049,
+      "homography_fallback_fraction": 0.0
+    }
+  ],
+  "22": [
+    {
+      "unmatched_fraction": 0.1875,
+      "occlusion_or_outside_fraction": 0.1875,
+      "unrepresentable_visible_fraction": 0.0,
+      "normal_error_degrees": 3.6805448986859752,
+      "position_error": 0.8871075661310271,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.041666666666666664,
+      "occlusion_or_outside_fraction": 0.041666666666666664,
+      "unrepresentable_visible_fraction": 0.0,
+      "normal_error_degrees": 4.3532375623213815,
+      "position_error": 0.90693494352959,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.2916666666666667,
+      "occlusion_or_outside_fraction": 0.20833333333333334,
+      "unrepresentable_visible_fraction": 0.08333333333333333,
+      "normal_error_degrees": 12.286458095911401,
+      "position_error": 1.0091838199097427,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.3541666666666667,
+      "occlusion_or_outside_fraction": 0.1875,
+      "unrepresentable_visible_fraction": 0.16666666666666666,
+      "normal_error_degrees": 12.506340885338645,
+      "position_error": 0.9745617429219218,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.020833333333333332,
+      "occlusion_or_outside_fraction": 0.020833333333333332,
+      "unrepresentable_visible_fraction": 0.0,
+      "normal_error_degrees": 4.035728308024518,
+      "position_error": 0.639618934987307,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.20833333333333334,
+      "occlusion_or_outside_fraction": 0.16666666666666666,
+      "unrepresentable_visible_fraction": 0.041666666666666664,
+      "normal_error_degrees": 6.982869010993272,
+      "position_error": 0.8545482409048821,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.020833333333333332,
+      "occlusion_or_outside_fraction": 0.020833333333333332,
+      "unrepresentable_visible_fraction": 0.0,
+      "normal_error_degrees": 7.645825014273729,
+      "position_error": 0.7306626119345904,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.20833333333333334,
+      "occlusion_or_outside_fraction": 0.20833333333333334,
+      "unrepresentable_visible_fraction": 0.0,
+      "normal_error_degrees": 5.1542605514970665,
+      "position_error": 0.7290307478931984,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.10416666666666667,
+      "occlusion_or_outside_fraction": 0.10416666666666667,
+      "unrepresentable_visible_fraction": 0.0,
+      "normal_error_degrees": 5.428366677646569,
+      "position_error": 0.8131334860387983,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.1875,
+      "occlusion_or_outside_fraction": 0.14583333333333334,
+      "unrepresentable_visible_fraction": 0.041666666666666664,
+      "normal_error_degrees": 5.604699163585326,
+      "position_error": 0.8713915249212042,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.16666666666666666,
+      "occlusion_or_outside_fraction": 0.16666666666666666,
+      "unrepresentable_visible_fraction": 0.0,
+      "normal_error_degrees": 6.202750272856839,
+      "position_error": 0.8574397783709692,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.16666666666666666,
+      "occlusion_or_outside_fraction": 0.125,
+      "unrepresentable_visible_fraction": 0.041666666666666664,
+      "normal_error_degrees": 3.9946264989655376,
+      "position_error": 0.6140792990190522,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.0,
+      "occlusion_or_outside_fraction": 0.0,
+      "unrepresentable_visible_fraction": 0.0,
+      "normal_error_degrees": 7.25472780888515,
+      "position_error": 0.7213312008326599,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.22916666666666666,
+      "occlusion_or_outside_fraction": 0.16666666666666666,
+      "unrepresentable_visible_fraction": 0.0625,
+      "normal_error_degrees": 4.537379047903962,
+      "position_error": 0.9575142157054805,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.20833333333333334,
+      "occlusion_or_outside_fraction": 0.1875,
+      "unrepresentable_visible_fraction": 0.020833333333333332,
+      "normal_error_degrees": 5.939776721142579,
+      "position_error": 0.6866265295231581,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.0,
+      "occlusion_or_outside_fraction": 0.0,
+      "unrepresentable_visible_fraction": 0.0,
+      "normal_error_degrees": 7.934014710343251,
+      "position_error": 0.615041583662924,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.1875,
+      "occlusion_or_outside_fraction": 0.1875,
+      "unrepresentable_visible_fraction": 0.0,
+      "normal_error_degrees": 5.700199236650088,
+      "position_error": 0.6074291655930828,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.16666666666666666,
+      "occlusion_or_outside_fraction": 0.16666666666666666,
+      "unrepresentable_visible_fraction": 0.0,
+      "normal_error_degrees": 3.3020243999775256,
+      "position_error": 0.8688260093656499,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.1875,
+      "occlusion_or_outside_fraction": 0.10416666666666667,
+      "unrepresentable_visible_fraction": 0.08333333333333333,
+      "normal_error_degrees": 12.83009916464737,
+      "position_error": 1.0699459931756121,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.0625,
+      "occlusion_or_outside_fraction": 0.0625,
+      "unrepresentable_visible_fraction": 0.0,
+      "normal_error_degrees": 8.665189148752276,
+      "position_error": 0.6918211173838998,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.125,
+      "occlusion_or_outside_fraction": 0.125,
+      "unrepresentable_visible_fraction": 0.0,
+      "normal_error_degrees": 2.9927132737774933,
+      "position_error": 0.9327414847470852,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.0625,
+      "occlusion_or_outside_fraction": 0.020833333333333332,
+      "unrepresentable_visible_fraction": 0.041666666666666664,
+      "normal_error_degrees": 6.088243934888177,
+      "position_error": 1.219078433555336,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.22916666666666666,
+      "occlusion_or_outside_fraction": 0.16666666666666666,
+      "unrepresentable_visible_fraction": 0.0625,
+      "normal_error_degrees": 8.878149900081295,
+      "position_error": 1.0168068508551762,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.2708333333333333,
+      "occlusion_or_outside_fraction": 0.125,
+      "unrepresentable_visible_fraction": 0.14583333333333334,
+      "normal_error_degrees": 4.476097447758018,
+      "position_error": 0.917728350198761,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.16666666666666666,
+      "occlusion_or_outside_fraction": 0.10416666666666667,
+      "unrepresentable_visible_fraction": 0.0625,
+      "normal_error_degrees": 8.75805120083453,
+      "position_error": 0.9748333476325021,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.1875,
+      "occlusion_or_outside_fraction": 0.1875,
+      "unrepresentable_visible_fraction": 0.0,
+      "normal_error_degrees": 5.24050475065929,
+      "position_error": 0.7926627992213039,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.20833333333333334,
+      "occlusion_or_outside_fraction": 0.1875,
+      "unrepresentable_visible_fraction": 0.020833333333333332,
+      "normal_error_degrees": 4.920298282094426,
+      "position_error": 0.7677148243966115,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.10416666666666667,
+      "occlusion_or_outside_fraction": 0.10416666666666667,
+      "unrepresentable_visible_fraction": 0.0,
+      "normal_error_degrees": 5.776787329396004,
+      "position_error": 0.864137345056975,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.20833333333333334,
+      "occlusion_or_outside_fraction": 0.125,
+      "unrepresentable_visible_fraction": 0.08333333333333333,
+      "normal_error_degrees": 10.7968332444564,
+      "position_error": 0.754081889886533,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.16666666666666666,
+      "occlusion_or_outside_fraction": 0.14583333333333334,
+      "unrepresentable_visible_fraction": 0.020833333333333332,
+      "normal_error_degrees": 5.787508436096708,
+      "position_error": 0.6961557619882784,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.2708333333333333,
+      "occlusion_or_outside_fraction": 0.1875,
+      "unrepresentable_visible_fraction": 0.08333333333333333,
+      "normal_error_degrees": 11.39718497952937,
+      "position_error": 0.9489355736611191,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.2916666666666667,
+      "occlusion_or_outside_fraction": 0.20833333333333334,
+      "unrepresentable_visible_fraction": 0.08333333333333333,
+      "normal_error_degrees": 11.740171095919385,
+      "position_error": 1.0739701637642407,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.08333333333333333,
+      "occlusion_or_outside_fraction": 0.08333333333333333,
+      "unrepresentable_visible_fraction": 0.0,
+      "normal_error_degrees": 5.678331193748623,
+      "position_error": 0.7631430908458624,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.125,
+      "occlusion_or_outside_fraction": 0.0625,
+      "unrepresentable_visible_fraction": 0.0625,
+      "normal_error_degrees": 4.911357833687275,
+      "position_error": 0.9564458865057425,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.20833333333333334,
+      "occlusion_or_outside_fraction": 0.125,
+      "unrepresentable_visible_fraction": 0.08333333333333333,
+      "normal_error_degrees": 6.003057128841122,
+      "position_error": 0.8530060864225509,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.25,
+      "occlusion_or_outside_fraction": 0.1875,
+      "unrepresentable_visible_fraction": 0.0625,
+      "normal_error_degrees": 10.185725821030157,
+      "position_error": 0.9431837096281915,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.16666666666666666,
+      "occlusion_or_outside_fraction": 0.16666666666666666,
+      "unrepresentable_visible_fraction": 0.0,
+      "normal_error_degrees": 11.053808024202334,
+      "position_error": 0.9152079571744598,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.3333333333333333,
+      "occlusion_or_outside_fraction": 0.1875,
+      "unrepresentable_visible_fraction": 0.14583333333333334,
+      "normal_error_degrees": 7.5320663551688485,
+      "position_error": 1.04669915885908,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.041666666666666664,
+      "occlusion_or_outside_fraction": 0.041666666666666664,
+      "unrepresentable_visible_fraction": 0.0,
+      "normal_error_degrees": 6.623755405515862,
+      "position_error": 0.7779000653297977,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.2708333333333333,
+      "occlusion_or_outside_fraction": 0.125,
+      "unrepresentable_visible_fraction": 0.14583333333333334,
+      "normal_error_degrees": 13.639309657222228,
+      "position_error": 0.9852496421700246,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.020833333333333332,
+      "occlusion_or_outside_fraction": 0.020833333333333332,
+      "unrepresentable_visible_fraction": 0.0,
+      "normal_error_degrees": 6.928100461098576,
+      "position_error": 0.8175168193575398,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.25,
+      "occlusion_or_outside_fraction": 0.22916666666666666,
+      "unrepresentable_visible_fraction": 0.020833333333333332,
+      "normal_error_degrees": 6.722591329974367,
+      "position_error": 0.8474307649112007,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.1875,
+      "occlusion_or_outside_fraction": 0.08333333333333333,
+      "unrepresentable_visible_fraction": 0.10416666666666667,
+      "normal_error_degrees": 9.329522611580721,
+      "position_error": 1.1263633932617882,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.2916666666666667,
+      "occlusion_or_outside_fraction": 0.22916666666666666,
+      "unrepresentable_visible_fraction": 0.0625,
+      "normal_error_degrees": 5.6473080877859445,
+      "position_error": 0.9128350122997756,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.020833333333333332,
+      "occlusion_or_outside_fraction": 0.020833333333333332,
+      "unrepresentable_visible_fraction": 0.0,
+      "normal_error_degrees": 6.035875412596252,
+      "position_error": 0.7594719117162966,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.14583333333333334,
+      "occlusion_or_outside_fraction": 0.125,
+      "unrepresentable_visible_fraction": 0.020833333333333332,
+      "normal_error_degrees": 4.67239758802513,
+      "position_error": 0.6984093093921783,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.14583333333333334,
+      "occlusion_or_outside_fraction": 0.10416666666666667,
+      "unrepresentable_visible_fraction": 0.041666666666666664,
+      "normal_error_degrees": 6.208795864927237,
+      "position_error": 0.775082961092204,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.0625,
+      "occlusion_or_outside_fraction": 0.041666666666666664,
+      "unrepresentable_visible_fraction": 0.020833333333333332,
+      "normal_error_degrees": 7.7029180652538125,
+      "position_error": 1.2270434202688838,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.08333333333333333,
+      "occlusion_or_outside_fraction": 0.041666666666666664,
+      "unrepresentable_visible_fraction": 0.041666666666666664,
+      "normal_error_degrees": 5.013304573892438,
+      "position_error": 0.7785263862856824,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.3333333333333333,
+      "occlusion_or_outside_fraction": 0.14583333333333334,
+      "unrepresentable_visible_fraction": 0.1875,
+      "normal_error_degrees": 7.999539427348463,
+      "position_error": 1.01039081835361,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.10416666666666667,
+      "occlusion_or_outside_fraction": 0.10416666666666667,
+      "unrepresentable_visible_fraction": 0.0,
+      "normal_error_degrees": 4.755310875280039,
+      "position_error": 0.818123576812393,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.08333333333333333,
+      "occlusion_or_outside_fraction": 0.08333333333333333,
+      "unrepresentable_visible_fraction": 0.0,
+      "normal_error_degrees": 9.77727128578988,
+      "position_error": 0.847476530628518,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.2708333333333333,
+      "occlusion_or_outside_fraction": 0.16666666666666666,
+      "unrepresentable_visible_fraction": 0.10416666666666667,
+      "normal_error_degrees": 7.442709235349805,
+      "position_error": 0.9509887133979734,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.25,
+      "occlusion_or_outside_fraction": 0.125,
+      "unrepresentable_visible_fraction": 0.125,
+      "normal_error_degrees": 7.11433634926717,
+      "position_error": 1.3545494192968233,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.16666666666666666,
+      "occlusion_or_outside_fraction": 0.16666666666666666,
+      "unrepresentable_visible_fraction": 0.0,
+      "normal_error_degrees": 8.153288735199736,
+      "position_error": 0.8977541019910747,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.14583333333333334,
+      "occlusion_or_outside_fraction": 0.0,
+      "unrepresentable_visible_fraction": 0.14583333333333334,
+      "normal_error_degrees": 9.65788196649763,
+      "position_error": 0.9645534571365731,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.10416666666666667,
+      "occlusion_or_outside_fraction": 0.10416666666666667,
+      "unrepresentable_visible_fraction": 0.0,
+      "normal_error_degrees": 7.770781115717373,
+      "position_error": 0.9153228951491524,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.14583333333333334,
+      "occlusion_or_outside_fraction": 0.10416666666666667,
+      "unrepresentable_visible_fraction": 0.041666666666666664,
+      "normal_error_degrees": 8.897087993120332,
+      "position_error": 0.7181250321088278,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.1875,
+      "occlusion_or_outside_fraction": 0.125,
+      "unrepresentable_visible_fraction": 0.0625,
+      "normal_error_degrees": 4.758580060580049,
+      "position_error": 0.9537248374314329,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.125,
+      "occlusion_or_outside_fraction": 0.125,
+      "unrepresentable_visible_fraction": 0.0,
+      "normal_error_degrees": 6.155170080772695,
+      "position_error": 0.7884521628466473,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.041666666666666664,
+      "occlusion_or_outside_fraction": 0.041666666666666664,
+      "unrepresentable_visible_fraction": 0.0,
+      "normal_error_degrees": 6.505494258443402,
+      "position_error": 0.9677057697737911,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.20833333333333334,
+      "occlusion_or_outside_fraction": 0.16666666666666666,
+      "unrepresentable_visible_fraction": 0.041666666666666664,
+      "normal_error_degrees": 7.424115927564163,
+      "position_error": 0.6321366284034615,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.14583333333333334,
+      "occlusion_or_outside_fraction": 0.0625,
+      "unrepresentable_visible_fraction": 0.08333333333333333,
+      "normal_error_degrees": 12.87689816691109,
+      "position_error": 0.8712222182875392,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.08333333333333333,
+      "occlusion_or_outside_fraction": 0.020833333333333332,
+      "unrepresentable_visible_fraction": 0.0625,
+      "normal_error_degrees": 12.76077590656106,
+      "position_error": 0.7689509062130385,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.25,
+      "occlusion_or_outside_fraction": 0.22916666666666666,
+      "unrepresentable_visible_fraction": 0.020833333333333332,
+      "normal_error_degrees": 5.468454407506193,
+      "position_error": 0.787648906710445,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.25,
+      "occlusion_or_outside_fraction": 0.16666666666666666,
+      "unrepresentable_visible_fraction": 0.08333333333333333,
+      "normal_error_degrees": 5.787083020695758,
+      "position_error": 0.9713535554405858,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.041666666666666664,
+      "occlusion_or_outside_fraction": 0.041666666666666664,
+      "unrepresentable_visible_fraction": 0.0,
+      "normal_error_degrees": 7.898979737562473,
+      "position_error": 0.7281253804912016,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.125,
+      "occlusion_or_outside_fraction": 0.125,
+      "unrepresentable_visible_fraction": 0.0,
+      "normal_error_degrees": 6.8992998780279455,
+      "position_error": 0.8233982520415007,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.0625,
+      "occlusion_or_outside_fraction": 0.0625,
+      "unrepresentable_visible_fraction": 0.0,
+      "normal_error_degrees": 3.9460168530913364,
+      "position_error": 0.8962174488589051,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.25,
+      "occlusion_or_outside_fraction": 0.20833333333333334,
+      "unrepresentable_visible_fraction": 0.041666666666666664,
+      "normal_error_degrees": 9.976390749106253,
+      "position_error": 0.7221400432904975,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.22916666666666666,
+      "occlusion_or_outside_fraction": 0.16666666666666666,
+      "unrepresentable_visible_fraction": 0.0625,
+      "normal_error_degrees": 10.974569015492833,
+      "position_error": 0.8271440958186114,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.0625,
+      "occlusion_or_outside_fraction": 0.0625,
+      "unrepresentable_visible_fraction": 0.0,
+      "normal_error_degrees": 3.0297000929208373,
+      "position_error": 0.8722405577504683,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.08333333333333333,
+      "occlusion_or_outside_fraction": 0.020833333333333332,
+      "unrepresentable_visible_fraction": 0.0625,
+      "normal_error_degrees": 10.292382436110566,
+      "position_error": 0.7668732136086595,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.125,
+      "occlusion_or_outside_fraction": 0.08333333333333333,
+      "unrepresentable_visible_fraction": 0.041666666666666664,
+      "normal_error_degrees": 13.362724108285668,
+      "position_error": 1.0536534572386618,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.041666666666666664,
+      "occlusion_or_outside_fraction": 0.0,
+      "unrepresentable_visible_fraction": 0.041666666666666664,
+      "normal_error_degrees": 7.322741689448814,
+      "position_error": 0.5802271044291057,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.10416666666666667,
+      "occlusion_or_outside_fraction": 0.0625,
+      "unrepresentable_visible_fraction": 0.041666666666666664,
+      "normal_error_degrees": 10.436199500044221,
+      "position_error": 1.0265983725934031,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.1875,
+      "occlusion_or_outside_fraction": 0.08333333333333333,
+      "unrepresentable_visible_fraction": 0.10416666666666667,
+      "normal_error_degrees": 8.971960410606028,
+      "position_error": 1.0057495905079945,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.1875,
+      "occlusion_or_outside_fraction": 0.16666666666666666,
+      "unrepresentable_visible_fraction": 0.020833333333333332,
+      "normal_error_degrees": 7.107640874193169,
+      "position_error": 0.6947527345424506,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.20833333333333334,
+      "occlusion_or_outside_fraction": 0.16666666666666666,
+      "unrepresentable_visible_fraction": 0.041666666666666664,
+      "normal_error_degrees": 9.935263463095506,
+      "position_error": 0.932909775666016,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.1875,
+      "occlusion_or_outside_fraction": 0.1875,
+      "unrepresentable_visible_fraction": 0.0,
+      "normal_error_degrees": 11.518151909139135,
+      "position_error": 1.1739166543906983,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.22916666666666666,
+      "occlusion_or_outside_fraction": 0.16666666666666666,
+      "unrepresentable_visible_fraction": 0.0625,
+      "normal_error_degrees": 8.675504628937759,
+      "position_error": 0.9441608144634378,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.20833333333333334,
+      "occlusion_or_outside_fraction": 0.20833333333333334,
+      "unrepresentable_visible_fraction": 0.0,
+      "normal_error_degrees": 6.53190351996449,
+      "position_error": 0.7480125780322836,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.2708333333333333,
+      "occlusion_or_outside_fraction": 0.10416666666666667,
+      "unrepresentable_visible_fraction": 0.16666666666666666,
+      "normal_error_degrees": 7.575909337751571,
+      "position_error": 1.3631659687824538,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.08333333333333333,
+      "occlusion_or_outside_fraction": 0.041666666666666664,
+      "unrepresentable_visible_fraction": 0.041666666666666664,
+      "normal_error_degrees": 9.259533437534378,
+      "position_error": 0.7611657816836681,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.1875,
+      "occlusion_or_outside_fraction": 0.14583333333333334,
+      "unrepresentable_visible_fraction": 0.041666666666666664,
+      "normal_error_degrees": 5.170365516265821,
+      "position_error": 0.8257962056020275,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.0625,
+      "occlusion_or_outside_fraction": 0.0625,
+      "unrepresentable_visible_fraction": 0.0,
+      "normal_error_degrees": 4.121464076632636,
+      "position_error": 0.8474154498999011,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.20833333333333334,
+      "occlusion_or_outside_fraction": 0.16666666666666666,
+      "unrepresentable_visible_fraction": 0.041666666666666664,
+      "normal_error_degrees": 5.81087557302488,
+      "position_error": 0.9650445898544792,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.2916666666666667,
+      "occlusion_or_outside_fraction": 0.20833333333333334,
+      "unrepresentable_visible_fraction": 0.08333333333333333,
+      "normal_error_degrees": 7.033744551748783,
+      "position_error": 0.8215097176338967,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.22916666666666666,
+      "occlusion_or_outside_fraction": 0.1875,
+      "unrepresentable_visible_fraction": 0.041666666666666664,
+      "normal_error_degrees": 7.650763566571256,
+      "position_error": 1.0850593705096374,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.1875,
+      "occlusion_or_outside_fraction": 0.0625,
+      "unrepresentable_visible_fraction": 0.125,
+      "normal_error_degrees": 5.809625540770479,
+      "position_error": 1.015106290482028,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.3125,
+      "occlusion_or_outside_fraction": 0.22916666666666666,
+      "unrepresentable_visible_fraction": 0.08333333333333333,
+      "normal_error_degrees": 9.124943027808216,
+      "position_error": 1.113945656192793,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.22916666666666666,
+      "occlusion_or_outside_fraction": 0.20833333333333334,
+      "unrepresentable_visible_fraction": 0.020833333333333332,
+      "normal_error_degrees": 10.497709155090172,
+      "position_error": 0.9160247973280059,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.08333333333333333,
+      "occlusion_or_outside_fraction": 0.08333333333333333,
+      "unrepresentable_visible_fraction": 0.0,
+      "normal_error_degrees": 7.645438545027047,
+      "position_error": 0.9825389182602512,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.25,
+      "occlusion_or_outside_fraction": 0.1875,
+      "unrepresentable_visible_fraction": 0.0625,
+      "normal_error_degrees": 9.605240278587123,
+      "position_error": 1.0971377720668516,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.1875,
+      "occlusion_or_outside_fraction": 0.1875,
+      "unrepresentable_visible_fraction": 0.0,
+      "normal_error_degrees": 9.075393272860424,
+      "position_error": 1.0009562667049192,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.1875,
+      "occlusion_or_outside_fraction": 0.125,
+      "unrepresentable_visible_fraction": 0.0625,
+      "normal_error_degrees": 8.874355901629723,
+      "position_error": 0.9667548318294003,
+      "homography_fallback_fraction": 0.0
+    }
+  ],
+  "33": [
+    {
+      "unmatched_fraction": 0.22916666666666666,
+      "occlusion_or_outside_fraction": 0.22916666666666666,
+      "unrepresentable_visible_fraction": 0.0,
+      "normal_error_degrees": 6.699249567315216,
+      "position_error": 0.9060979714952304,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.1875,
+      "occlusion_or_outside_fraction": 0.14583333333333334,
+      "unrepresentable_visible_fraction": 0.041666666666666664,
+      "normal_error_degrees": 7.933330051064435,
+      "position_error": 0.7247024854541584,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.2708333333333333,
+      "occlusion_or_outside_fraction": 0.14583333333333334,
+      "unrepresentable_visible_fraction": 0.125,
+      "normal_error_degrees": 6.7492419690151335,
+      "position_error": 0.9814456684018656,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.14583333333333334,
+      "occlusion_or_outside_fraction": 0.041666666666666664,
+      "unrepresentable_visible_fraction": 0.10416666666666667,
+      "normal_error_degrees": 9.440947924909798,
+      "position_error": 0.8020113221269516,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.0625,
+      "occlusion_or_outside_fraction": 0.041666666666666664,
+      "unrepresentable_visible_fraction": 0.020833333333333332,
+      "normal_error_degrees": 9.979163956536887,
+      "position_error": 0.9508803402095306,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.3125,
+      "occlusion_or_outside_fraction": 0.16666666666666666,
+      "unrepresentable_visible_fraction": 0.14583333333333334,
+      "normal_error_degrees": 13.74360171354495,
+      "position_error": 1.0262651867158543,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.25,
+      "occlusion_or_outside_fraction": 0.1875,
+      "unrepresentable_visible_fraction": 0.0625,
+      "normal_error_degrees": 6.176790292080856,
+      "position_error": 0.779659108132523,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.1875,
+      "occlusion_or_outside_fraction": 0.125,
+      "unrepresentable_visible_fraction": 0.0625,
+      "normal_error_degrees": 4.419091290125137,
+      "position_error": 0.9506529195459853,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.020833333333333332,
+      "occlusion_or_outside_fraction": 0.020833333333333332,
+      "unrepresentable_visible_fraction": 0.0,
+      "normal_error_degrees": 5.705913553393624,
+      "position_error": 0.584153934934886,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.08333333333333333,
+      "occlusion_or_outside_fraction": 0.020833333333333332,
+      "unrepresentable_visible_fraction": 0.0625,
+      "normal_error_degrees": 9.743646734850328,
+      "position_error": 0.8931623612142662,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.375,
+      "occlusion_or_outside_fraction": 0.20833333333333334,
+      "unrepresentable_visible_fraction": 0.16666666666666666,
+      "normal_error_degrees": 8.359405081543292,
+      "position_error": 0.9833234093781297,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.125,
+      "occlusion_or_outside_fraction": 0.041666666666666664,
+      "unrepresentable_visible_fraction": 0.08333333333333333,
+      "normal_error_degrees": 8.00028452338578,
+      "position_error": 0.7003404167908784,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.0,
+      "occlusion_or_outside_fraction": 0.0,
+      "unrepresentable_visible_fraction": 0.0,
+      "normal_error_degrees": 5.47865482890612,
+      "position_error": 0.5947664633030265,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.125,
+      "occlusion_or_outside_fraction": 0.041666666666666664,
+      "unrepresentable_visible_fraction": 0.08333333333333333,
+      "normal_error_degrees": 5.515957982116768,
+      "position_error": 1.2423317075518387,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.2708333333333333,
+      "occlusion_or_outside_fraction": 0.22916666666666666,
+      "unrepresentable_visible_fraction": 0.041666666666666664,
+      "normal_error_degrees": 5.285580062748266,
+      "position_error": 1.147057841444636,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.2916666666666667,
+      "occlusion_or_outside_fraction": 0.14583333333333334,
+      "unrepresentable_visible_fraction": 0.14583333333333334,
+      "normal_error_degrees": 13.907072954644791,
+      "position_error": 1.3891061733831933,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.041666666666666664,
+      "occlusion_or_outside_fraction": 0.0,
+      "unrepresentable_visible_fraction": 0.041666666666666664,
+      "normal_error_degrees": 7.350856324579052,
+      "position_error": 0.6690477501359599,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.0625,
+      "occlusion_or_outside_fraction": 0.020833333333333332,
+      "unrepresentable_visible_fraction": 0.041666666666666664,
+      "normal_error_degrees": 6.103443729759033,
+      "position_error": 0.5374491928906139,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.25,
+      "occlusion_or_outside_fraction": 0.20833333333333334,
+      "unrepresentable_visible_fraction": 0.041666666666666664,
+      "normal_error_degrees": 9.18939361297017,
+      "position_error": 0.8794644849305189,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.20833333333333334,
+      "occlusion_or_outside_fraction": 0.1875,
+      "unrepresentable_visible_fraction": 0.020833333333333332,
+      "normal_error_degrees": 3.686188932495046,
+      "position_error": 0.44157470633180557,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.08333333333333333,
+      "occlusion_or_outside_fraction": 0.08333333333333333,
+      "unrepresentable_visible_fraction": 0.0,
+      "normal_error_degrees": 12.191969180896704,
+      "position_error": 0.6214698436506022,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.125,
+      "occlusion_or_outside_fraction": 0.0625,
+      "unrepresentable_visible_fraction": 0.0625,
+      "normal_error_degrees": 11.036890923163318,
+      "position_error": 0.8485954064534496,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.20833333333333334,
+      "occlusion_or_outside_fraction": 0.20833333333333334,
+      "unrepresentable_visible_fraction": 0.0,
+      "normal_error_degrees": 12.176059763743325,
+      "position_error": 1.1211746103276112,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.2916666666666667,
+      "occlusion_or_outside_fraction": 0.16666666666666666,
+      "unrepresentable_visible_fraction": 0.125,
+      "normal_error_degrees": 12.01234989948811,
+      "position_error": 0.7480306832368502,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.020833333333333332,
+      "occlusion_or_outside_fraction": 0.0,
+      "unrepresentable_visible_fraction": 0.020833333333333332,
+      "normal_error_degrees": 2.7593660256300176,
+      "position_error": 0.5785322838395769,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.041666666666666664,
+      "occlusion_or_outside_fraction": 0.0,
+      "unrepresentable_visible_fraction": 0.041666666666666664,
+      "normal_error_degrees": 10.236246218965704,
+      "position_error": 1.1567901943195589,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.08333333333333333,
+      "occlusion_or_outside_fraction": 0.020833333333333332,
+      "unrepresentable_visible_fraction": 0.0625,
+      "normal_error_degrees": 9.80702676633127,
+      "position_error": 0.7692688897163661,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.1875,
+      "occlusion_or_outside_fraction": 0.0625,
+      "unrepresentable_visible_fraction": 0.125,
+      "normal_error_degrees": 9.706496602518428,
+      "position_error": 0.7960963564372413,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.3125,
+      "occlusion_or_outside_fraction": 0.25,
+      "unrepresentable_visible_fraction": 0.0625,
+      "normal_error_degrees": 11.035743950867774,
+      "position_error": 1.2148707944345138,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.14583333333333334,
+      "occlusion_or_outside_fraction": 0.125,
+      "unrepresentable_visible_fraction": 0.020833333333333332,
+      "normal_error_degrees": 9.160321643450168,
+      "position_error": 0.662370849212982,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.2916666666666667,
+      "occlusion_or_outside_fraction": 0.1875,
+      "unrepresentable_visible_fraction": 0.10416666666666667,
+      "normal_error_degrees": 11.830056101164118,
+      "position_error": 1.0460477457859403,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.25,
+      "occlusion_or_outside_fraction": 0.14583333333333334,
+      "unrepresentable_visible_fraction": 0.10416666666666667,
+      "normal_error_degrees": 10.981728305167342,
+      "position_error": 0.9133495711087409,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.020833333333333332,
+      "occlusion_or_outside_fraction": 0.020833333333333332,
+      "unrepresentable_visible_fraction": 0.0,
+      "normal_error_degrees": 6.337208520770324,
+      "position_error": 0.6964474785047959,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.22916666666666666,
+      "occlusion_or_outside_fraction": 0.16666666666666666,
+      "unrepresentable_visible_fraction": 0.0625,
+      "normal_error_degrees": 7.106762004783474,
+      "position_error": 0.6331990360539085,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.08333333333333333,
+      "occlusion_or_outside_fraction": 0.0625,
+      "unrepresentable_visible_fraction": 0.020833333333333332,
+      "normal_error_degrees": 8.09794145862808,
+      "position_error": 0.6399976807869767,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.1875,
+      "occlusion_or_outside_fraction": 0.14583333333333334,
+      "unrepresentable_visible_fraction": 0.041666666666666664,
+      "normal_error_degrees": 8.851932465930696,
+      "position_error": 0.5943180966577137,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.14583333333333334,
+      "occlusion_or_outside_fraction": 0.041666666666666664,
+      "unrepresentable_visible_fraction": 0.10416666666666667,
+      "normal_error_degrees": 10.402374024619272,
+      "position_error": 1.2953177211816616,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.3125,
+      "occlusion_or_outside_fraction": 0.20833333333333334,
+      "unrepresentable_visible_fraction": 0.10416666666666667,
+      "normal_error_degrees": 6.3805319415250485,
+      "position_error": 0.8721363872659079,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.1875,
+      "occlusion_or_outside_fraction": 0.1875,
+      "unrepresentable_visible_fraction": 0.0,
+      "normal_error_degrees": 9.22772078444871,
+      "position_error": 0.5414940668809913,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.020833333333333332,
+      "occlusion_or_outside_fraction": 0.020833333333333332,
+      "unrepresentable_visible_fraction": 0.0,
+      "normal_error_degrees": 9.056974196576457,
+      "position_error": 0.5329418733228865,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.20833333333333334,
+      "occlusion_or_outside_fraction": 0.16666666666666666,
+      "unrepresentable_visible_fraction": 0.041666666666666664,
+      "normal_error_degrees": 7.66290326663627,
+      "position_error": 0.4682187279264362,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.1875,
+      "occlusion_or_outside_fraction": 0.14583333333333334,
+      "unrepresentable_visible_fraction": 0.041666666666666664,
+      "normal_error_degrees": 7.724438446112006,
+      "position_error": 0.5952246212468327,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.2708333333333333,
+      "occlusion_or_outside_fraction": 0.1875,
+      "unrepresentable_visible_fraction": 0.08333333333333333,
+      "normal_error_degrees": 5.189510989803502,
+      "position_error": 0.724215904722929,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.020833333333333332,
+      "occlusion_or_outside_fraction": 0.020833333333333332,
+      "unrepresentable_visible_fraction": 0.0,
+      "normal_error_degrees": 5.264707240579715,
+      "position_error": 0.8407458530809171,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.22916666666666666,
+      "occlusion_or_outside_fraction": 0.16666666666666666,
+      "unrepresentable_visible_fraction": 0.0625,
+      "normal_error_degrees": 5.059241562377458,
+      "position_error": 0.6526762392076044,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.10416666666666667,
+      "occlusion_or_outside_fraction": 0.020833333333333332,
+      "unrepresentable_visible_fraction": 0.08333333333333333,
+      "normal_error_degrees": 8.546881514331636,
+      "position_error": 0.6827107899916385,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.08333333333333333,
+      "occlusion_or_outside_fraction": 0.041666666666666664,
+      "unrepresentable_visible_fraction": 0.041666666666666664,
+      "normal_error_degrees": 7.703120742418849,
+      "position_error": 0.6755617699092701,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.25,
+      "occlusion_or_outside_fraction": 0.1875,
+      "unrepresentable_visible_fraction": 0.0625,
+      "normal_error_degrees": 8.005527699500606,
+      "position_error": 0.7319140477854894,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.25,
+      "occlusion_or_outside_fraction": 0.22916666666666666,
+      "unrepresentable_visible_fraction": 0.020833333333333332,
+      "normal_error_degrees": 5.941471113767368,
+      "position_error": 0.6307818992261985,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.22916666666666666,
+      "occlusion_or_outside_fraction": 0.1875,
+      "unrepresentable_visible_fraction": 0.041666666666666664,
+      "normal_error_degrees": 7.130863047396871,
+      "position_error": 0.7244912288127576,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.22916666666666666,
+      "occlusion_or_outside_fraction": 0.20833333333333334,
+      "unrepresentable_visible_fraction": 0.020833333333333332,
+      "normal_error_degrees": 7.864057986700575,
+      "position_error": 0.5765914601152191,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.14583333333333334,
+      "occlusion_or_outside_fraction": 0.14583333333333334,
+      "unrepresentable_visible_fraction": 0.0,
+      "normal_error_degrees": 10.444351683953274,
+      "position_error": 0.7147183952230399,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.10416666666666667,
+      "occlusion_or_outside_fraction": 0.10416666666666667,
+      "unrepresentable_visible_fraction": 0.0,
+      "normal_error_degrees": 8.473273398255602,
+      "position_error": 0.7711053876911702,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.20833333333333334,
+      "occlusion_or_outside_fraction": 0.16666666666666666,
+      "unrepresentable_visible_fraction": 0.041666666666666664,
+      "normal_error_degrees": 12.956253461369059,
+      "position_error": 0.8550160263658574,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.0,
+      "occlusion_or_outside_fraction": 0.0,
+      "unrepresentable_visible_fraction": 0.0,
+      "normal_error_degrees": 5.753789447337014,
+      "position_error": 0.6596052833628131,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.3541666666666667,
+      "occlusion_or_outside_fraction": 0.25,
+      "unrepresentable_visible_fraction": 0.10416666666666667,
+      "normal_error_degrees": 5.809592100594913,
+      "position_error": 1.0396043256619754,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.14583333333333334,
+      "occlusion_or_outside_fraction": 0.125,
+      "unrepresentable_visible_fraction": 0.020833333333333332,
+      "normal_error_degrees": 4.452070785498985,
+      "position_error": 0.5813273028717688,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.0625,
+      "occlusion_or_outside_fraction": 0.020833333333333332,
+      "unrepresentable_visible_fraction": 0.041666666666666664,
+      "normal_error_degrees": 6.657956404885525,
+      "position_error": 0.7186404736397299,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.25,
+      "occlusion_or_outside_fraction": 0.16666666666666666,
+      "unrepresentable_visible_fraction": 0.08333333333333333,
+      "normal_error_degrees": 11.018977668239826,
+      "position_error": 0.938632076041762,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.041666666666666664,
+      "occlusion_or_outside_fraction": 0.020833333333333332,
+      "unrepresentable_visible_fraction": 0.020833333333333332,
+      "normal_error_degrees": 4.226053349417223,
+      "position_error": 0.600211656549667,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.020833333333333332,
+      "occlusion_or_outside_fraction": 0.020833333333333332,
+      "unrepresentable_visible_fraction": 0.0,
+      "normal_error_degrees": 4.8956522607089195,
+      "position_error": 0.6819055584894649,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.14583333333333334,
+      "occlusion_or_outside_fraction": 0.08333333333333333,
+      "unrepresentable_visible_fraction": 0.0625,
+      "normal_error_degrees": 10.269109176493904,
+      "position_error": 0.905328814755802,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.3125,
+      "occlusion_or_outside_fraction": 0.22916666666666666,
+      "unrepresentable_visible_fraction": 0.08333333333333333,
+      "normal_error_degrees": 7.735797239119306,
+      "position_error": 1.0314115086920845,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.20833333333333334,
+      "occlusion_or_outside_fraction": 0.20833333333333334,
+      "unrepresentable_visible_fraction": 0.0,
+      "normal_error_degrees": 3.6774932140107865,
+      "position_error": 0.6476032685091885,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.0625,
+      "occlusion_or_outside_fraction": 0.0,
+      "unrepresentable_visible_fraction": 0.0625,
+      "normal_error_degrees": 9.059079017572282,
+      "position_error": 0.6906624031868985,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.041666666666666664,
+      "occlusion_or_outside_fraction": 0.020833333333333332,
+      "unrepresentable_visible_fraction": 0.020833333333333332,
+      "normal_error_degrees": 6.464432482874071,
+      "position_error": 0.5223949291981453,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.041666666666666664,
+      "occlusion_or_outside_fraction": 0.041666666666666664,
+      "unrepresentable_visible_fraction": 0.0,
+      "normal_error_degrees": 8.052181239399749,
+      "position_error": 0.8192985164286158,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.020833333333333332,
+      "occlusion_or_outside_fraction": 0.020833333333333332,
+      "unrepresentable_visible_fraction": 0.0,
+      "normal_error_degrees": 5.741183631440504,
+      "position_error": 0.9720387838407548,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.22916666666666666,
+      "occlusion_or_outside_fraction": 0.125,
+      "unrepresentable_visible_fraction": 0.10416666666666667,
+      "normal_error_degrees": 12.237844439018161,
+      "position_error": 1.340677780978818,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.1875,
+      "occlusion_or_outside_fraction": 0.1875,
+      "unrepresentable_visible_fraction": 0.0,
+      "normal_error_degrees": 10.829050120802075,
+      "position_error": 0.8374269096713616,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.125,
+      "occlusion_or_outside_fraction": 0.041666666666666664,
+      "unrepresentable_visible_fraction": 0.08333333333333333,
+      "normal_error_degrees": 11.339138201050716,
+      "position_error": 1.1268568393224843,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.10416666666666667,
+      "occlusion_or_outside_fraction": 0.041666666666666664,
+      "unrepresentable_visible_fraction": 0.0625,
+      "normal_error_degrees": 14.187659989640858,
+      "position_error": 1.1819715751571254,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.2708333333333333,
+      "occlusion_or_outside_fraction": 0.20833333333333334,
+      "unrepresentable_visible_fraction": 0.0625,
+      "normal_error_degrees": 9.630146091517863,
+      "position_error": 0.7646102194541028,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.20833333333333334,
+      "occlusion_or_outside_fraction": 0.16666666666666666,
+      "unrepresentable_visible_fraction": 0.041666666666666664,
+      "normal_error_degrees": 7.58236615520356,
+      "position_error": 0.6176250789316118,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.25,
+      "occlusion_or_outside_fraction": 0.1875,
+      "unrepresentable_visible_fraction": 0.0625,
+      "normal_error_degrees": 10.41911598815721,
+      "position_error": 0.8864850619293065,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.22916666666666666,
+      "occlusion_or_outside_fraction": 0.22916666666666666,
+      "unrepresentable_visible_fraction": 0.0,
+      "normal_error_degrees": 7.36273413506962,
+      "position_error": 0.807093173311484,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.4375,
+      "occlusion_or_outside_fraction": 0.20833333333333334,
+      "unrepresentable_visible_fraction": 0.22916666666666666,
+      "normal_error_degrees": 13.49424716628699,
+      "position_error": 0.9225214840324071,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.3125,
+      "occlusion_or_outside_fraction": 0.16666666666666666,
+      "unrepresentable_visible_fraction": 0.14583333333333334,
+      "normal_error_degrees": 8.091723177754053,
+      "position_error": 0.6978543461478478,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.08333333333333333,
+      "occlusion_or_outside_fraction": 0.0,
+      "unrepresentable_visible_fraction": 0.08333333333333333,
+      "normal_error_degrees": 5.2290492544592455,
+      "position_error": 1.025561986003089,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.041666666666666664,
+      "occlusion_or_outside_fraction": 0.020833333333333332,
+      "unrepresentable_visible_fraction": 0.020833333333333332,
+      "normal_error_degrees": 8.56644195332879,
+      "position_error": 0.6730976992541507,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.125,
+      "occlusion_or_outside_fraction": 0.0625,
+      "unrepresentable_visible_fraction": 0.0625,
+      "normal_error_degrees": 9.287840723500778,
+      "position_error": 0.879094151652482,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.16666666666666666,
+      "occlusion_or_outside_fraction": 0.125,
+      "unrepresentable_visible_fraction": 0.041666666666666664,
+      "normal_error_degrees": 8.230878786730448,
+      "position_error": 0.47337593139993367,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.041666666666666664,
+      "occlusion_or_outside_fraction": 0.0,
+      "unrepresentable_visible_fraction": 0.041666666666666664,
+      "normal_error_degrees": 4.498976924032179,
+      "position_error": 1.2046419263640642,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.020833333333333332,
+      "occlusion_or_outside_fraction": 0.0,
+      "unrepresentable_visible_fraction": 0.020833333333333332,
+      "normal_error_degrees": 10.32911880961232,
+      "position_error": 0.9047331906131668,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.0625,
+      "occlusion_or_outside_fraction": 0.0625,
+      "unrepresentable_visible_fraction": 0.0,
+      "normal_error_degrees": 12.32238321744775,
+      "position_error": 0.6492653632846627,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.20833333333333334,
+      "occlusion_or_outside_fraction": 0.16666666666666666,
+      "unrepresentable_visible_fraction": 0.041666666666666664,
+      "normal_error_degrees": 7.713583969349284,
+      "position_error": 0.5695740563594827,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.041666666666666664,
+      "occlusion_or_outside_fraction": 0.041666666666666664,
+      "unrepresentable_visible_fraction": 0.0,
+      "normal_error_degrees": 8.706973247195348,
+      "position_error": 0.5929239645888839,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.2916666666666667,
+      "occlusion_or_outside_fraction": 0.1875,
+      "unrepresentable_visible_fraction": 0.10416666666666667,
+      "normal_error_degrees": 10.288735490713274,
+      "position_error": 0.937008021892889,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.10416666666666667,
+      "occlusion_or_outside_fraction": 0.10416666666666667,
+      "unrepresentable_visible_fraction": 0.0,
+      "normal_error_degrees": 3.5095392000544994,
+      "position_error": 0.6769712950887937,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.08333333333333333,
+      "occlusion_or_outside_fraction": 0.0625,
+      "unrepresentable_visible_fraction": 0.020833333333333332,
+      "normal_error_degrees": 5.3557031733083065,
+      "position_error": 0.6501495122550992,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.25,
+      "occlusion_or_outside_fraction": 0.08333333333333333,
+      "unrepresentable_visible_fraction": 0.16666666666666666,
+      "normal_error_degrees": 6.600361846117988,
+      "position_error": 0.8456665441845619,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.2708333333333333,
+      "occlusion_or_outside_fraction": 0.20833333333333334,
+      "unrepresentable_visible_fraction": 0.0625,
+      "normal_error_degrees": 7.568941257303204,
+      "position_error": 0.8260746116984818,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.20833333333333334,
+      "occlusion_or_outside_fraction": 0.16666666666666666,
+      "unrepresentable_visible_fraction": 0.041666666666666664,
+      "normal_error_degrees": 5.399885457200631,
+      "position_error": 0.7296450384176224,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.1875,
+      "occlusion_or_outside_fraction": 0.16666666666666666,
+      "unrepresentable_visible_fraction": 0.020833333333333332,
+      "normal_error_degrees": 5.044637491745608,
+      "position_error": 0.5830519766327179,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.0625,
+      "occlusion_or_outside_fraction": 0.0625,
+      "unrepresentable_visible_fraction": 0.0,
+      "normal_error_degrees": 6.068722582971673,
+      "position_error": 0.6191934713968433,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.3541666666666667,
+      "occlusion_or_outside_fraction": 0.2916666666666667,
+      "unrepresentable_visible_fraction": 0.0625,
+      "normal_error_degrees": 11.882802425126448,
+      "position_error": 0.8783139445186389,
+      "homography_fallback_fraction": 0.0
+    }
+  ],
+  "44": [
+    {
+      "unmatched_fraction": 0.125,
+      "occlusion_or_outside_fraction": 0.125,
+      "unrepresentable_visible_fraction": 0.0,
+      "normal_error_degrees": 4.93017642611166,
+      "position_error": 0.6591710757635876,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.08333333333333333,
+      "occlusion_or_outside_fraction": 0.08333333333333333,
+      "unrepresentable_visible_fraction": 0.0,
+      "normal_error_degrees": 9.083186256144389,
+      "position_error": 0.9287656071556064,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.0,
+      "occlusion_or_outside_fraction": 0.0,
+      "unrepresentable_visible_fraction": 0.0,
+      "normal_error_degrees": 8.429762092152894,
+      "position_error": 0.7063306988911845,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.3125,
+      "occlusion_or_outside_fraction": 0.1875,
+      "unrepresentable_visible_fraction": 0.125,
+      "normal_error_degrees": 5.212515744778423,
+      "position_error": 1.0204825531482757,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.20833333333333334,
+      "occlusion_or_outside_fraction": 0.1875,
+      "unrepresentable_visible_fraction": 0.020833333333333332,
+      "normal_error_degrees": 9.815885901306016,
+      "position_error": 0.6830337172238359,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.020833333333333332,
+      "occlusion_or_outside_fraction": 0.0,
+      "unrepresentable_visible_fraction": 0.020833333333333332,
+      "normal_error_degrees": 4.232416466398437,
+      "position_error": 0.6493905781333354,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.041666666666666664,
+      "occlusion_or_outside_fraction": 0.041666666666666664,
+      "unrepresentable_visible_fraction": 0.0,
+      "normal_error_degrees": 6.007217356648247,
+      "position_error": 0.8136872189107516,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.16666666666666666,
+      "occlusion_or_outside_fraction": 0.16666666666666666,
+      "unrepresentable_visible_fraction": 0.0,
+      "normal_error_degrees": 6.429628455153622,
+      "position_error": 0.759670337125162,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.10416666666666667,
+      "occlusion_or_outside_fraction": 0.08333333333333333,
+      "unrepresentable_visible_fraction": 0.020833333333333332,
+      "normal_error_degrees": 7.447170293750312,
+      "position_error": 0.9011331223342642,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.3541666666666667,
+      "occlusion_or_outside_fraction": 0.1875,
+      "unrepresentable_visible_fraction": 0.16666666666666666,
+      "normal_error_degrees": 9.130748502751326,
+      "position_error": 1.1743175104974954,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.0,
+      "occlusion_or_outside_fraction": 0.0,
+      "unrepresentable_visible_fraction": 0.0,
+      "normal_error_degrees": 7.940406549826989,
+      "position_error": 0.6571345234191949,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.2708333333333333,
+      "occlusion_or_outside_fraction": 0.14583333333333334,
+      "unrepresentable_visible_fraction": 0.125,
+      "normal_error_degrees": 9.513872248009251,
+      "position_error": 0.9713912505485526,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.041666666666666664,
+      "occlusion_or_outside_fraction": 0.041666666666666664,
+      "unrepresentable_visible_fraction": 0.0,
+      "normal_error_degrees": 8.741409761613342,
+      "position_error": 0.6453037129104459,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.25,
+      "occlusion_or_outside_fraction": 0.1875,
+      "unrepresentable_visible_fraction": 0.0625,
+      "normal_error_degrees": 4.945780200807188,
+      "position_error": 1.0089943014327143,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.16666666666666666,
+      "occlusion_or_outside_fraction": 0.16666666666666666,
+      "unrepresentable_visible_fraction": 0.0,
+      "normal_error_degrees": 12.287820764946131,
+      "position_error": 0.6689632085893028,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.16666666666666666,
+      "occlusion_or_outside_fraction": 0.08333333333333333,
+      "unrepresentable_visible_fraction": 0.08333333333333333,
+      "normal_error_degrees": 6.388799686327283,
+      "position_error": 0.8943055638722793,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.2916666666666667,
+      "occlusion_or_outside_fraction": 0.16666666666666666,
+      "unrepresentable_visible_fraction": 0.125,
+      "normal_error_degrees": 9.529989130214226,
+      "position_error": 0.8108013701024749,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.2916666666666667,
+      "occlusion_or_outside_fraction": 0.16666666666666666,
+      "unrepresentable_visible_fraction": 0.125,
+      "normal_error_degrees": 9.032943964632386,
+      "position_error": 1.0198225606630382,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.25,
+      "occlusion_or_outside_fraction": 0.1875,
+      "unrepresentable_visible_fraction": 0.0625,
+      "normal_error_degrees": 7.980742843236473,
+      "position_error": 0.744868740725073,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.2708333333333333,
+      "occlusion_or_outside_fraction": 0.2708333333333333,
+      "unrepresentable_visible_fraction": 0.0,
+      "normal_error_degrees": 7.711251257481524,
+      "position_error": 0.9540106667014446,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.3125,
+      "occlusion_or_outside_fraction": 0.22916666666666666,
+      "unrepresentable_visible_fraction": 0.08333333333333333,
+      "normal_error_degrees": 13.44988303188957,
+      "position_error": 0.819178047302259,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.375,
+      "occlusion_or_outside_fraction": 0.1875,
+      "unrepresentable_visible_fraction": 0.1875,
+      "normal_error_degrees": 5.3194910979443515,
+      "position_error": 1.0197580688822778,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.0625,
+      "occlusion_or_outside_fraction": 0.0625,
+      "unrepresentable_visible_fraction": 0.0,
+      "normal_error_degrees": 6.420665198118367,
+      "position_error": 0.749076572857637,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.0625,
+      "occlusion_or_outside_fraction": 0.020833333333333332,
+      "unrepresentable_visible_fraction": 0.041666666666666664,
+      "normal_error_degrees": 4.731389553942875,
+      "position_error": 0.9210830654969794,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.10416666666666667,
+      "occlusion_or_outside_fraction": 0.0625,
+      "unrepresentable_visible_fraction": 0.041666666666666664,
+      "normal_error_degrees": 6.93570339247547,
+      "position_error": 0.7142452186300146,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.041666666666666664,
+      "occlusion_or_outside_fraction": 0.041666666666666664,
+      "unrepresentable_visible_fraction": 0.0,
+      "normal_error_degrees": 3.3673809531061436,
+      "position_error": 0.6335437273403581,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.08333333333333333,
+      "occlusion_or_outside_fraction": 0.041666666666666664,
+      "unrepresentable_visible_fraction": 0.041666666666666664,
+      "normal_error_degrees": 7.445533454878906,
+      "position_error": 0.6777216137685187,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.125,
+      "occlusion_or_outside_fraction": 0.08333333333333333,
+      "unrepresentable_visible_fraction": 0.041666666666666664,
+      "normal_error_degrees": 7.798342354800553,
+      "position_error": 0.6727635274665902,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.08333333333333333,
+      "occlusion_or_outside_fraction": 0.0,
+      "unrepresentable_visible_fraction": 0.08333333333333333,
+      "normal_error_degrees": 6.914441598193214,
+      "position_error": 0.8294123510711146,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.16666666666666666,
+      "occlusion_or_outside_fraction": 0.14583333333333334,
+      "unrepresentable_visible_fraction": 0.020833333333333332,
+      "normal_error_degrees": 6.707929345933079,
+      "position_error": 0.46196444899666833,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.08333333333333333,
+      "occlusion_or_outside_fraction": 0.041666666666666664,
+      "unrepresentable_visible_fraction": 0.041666666666666664,
+      "normal_error_degrees": 5.602623606159959,
+      "position_error": 0.7575607088984396,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.0,
+      "occlusion_or_outside_fraction": 0.0,
+      "unrepresentable_visible_fraction": 0.0,
+      "normal_error_degrees": 6.953722669749791,
+      "position_error": 0.5396229876663613,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.041666666666666664,
+      "occlusion_or_outside_fraction": 0.041666666666666664,
+      "unrepresentable_visible_fraction": 0.0,
+      "normal_error_degrees": 5.411432083456391,
+      "position_error": 0.8451766393621485,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.020833333333333332,
+      "occlusion_or_outside_fraction": 0.0,
+      "unrepresentable_visible_fraction": 0.020833333333333332,
+      "normal_error_degrees": 5.388946551550332,
+      "position_error": 0.5862336605405539,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.020833333333333332,
+      "occlusion_or_outside_fraction": 0.020833333333333332,
+      "unrepresentable_visible_fraction": 0.0,
+      "normal_error_degrees": 5.72873508536977,
+      "position_error": 0.6531379178684332,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.2708333333333333,
+      "occlusion_or_outside_fraction": 0.20833333333333334,
+      "unrepresentable_visible_fraction": 0.0625,
+      "normal_error_degrees": 4.703226069748171,
+      "position_error": 0.9124290183657378,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.10416666666666667,
+      "occlusion_or_outside_fraction": 0.020833333333333332,
+      "unrepresentable_visible_fraction": 0.08333333333333333,
+      "normal_error_degrees": 8.180452220289702,
+      "position_error": 1.1564186313968092,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.22916666666666666,
+      "occlusion_or_outside_fraction": 0.1875,
+      "unrepresentable_visible_fraction": 0.041666666666666664,
+      "normal_error_degrees": 7.960704089505222,
+      "position_error": 0.8017114584079068,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.10416666666666667,
+      "occlusion_or_outside_fraction": 0.0625,
+      "unrepresentable_visible_fraction": 0.041666666666666664,
+      "normal_error_degrees": 10.594164544949715,
+      "position_error": 0.8055112412928921,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.1875,
+      "occlusion_or_outside_fraction": 0.125,
+      "unrepresentable_visible_fraction": 0.0625,
+      "normal_error_degrees": 5.6595406919140165,
+      "position_error": 0.5592297056148414,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.041666666666666664,
+      "occlusion_or_outside_fraction": 0.041666666666666664,
+      "unrepresentable_visible_fraction": 0.0,
+      "normal_error_degrees": 7.601930718666263,
+      "position_error": 1.0254820460037644,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.041666666666666664,
+      "occlusion_or_outside_fraction": 0.020833333333333332,
+      "unrepresentable_visible_fraction": 0.020833333333333332,
+      "normal_error_degrees": 8.209573942101516,
+      "position_error": 0.6088838620370307,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.10416666666666667,
+      "occlusion_or_outside_fraction": 0.041666666666666664,
+      "unrepresentable_visible_fraction": 0.0625,
+      "normal_error_degrees": 8.260132596187548,
+      "position_error": 0.6303654363261272,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.2916666666666667,
+      "occlusion_or_outside_fraction": 0.14583333333333334,
+      "unrepresentable_visible_fraction": 0.14583333333333334,
+      "normal_error_degrees": 7.8808783139325795,
+      "position_error": 1.0233755229400219,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.1875,
+      "occlusion_or_outside_fraction": 0.16666666666666666,
+      "unrepresentable_visible_fraction": 0.020833333333333332,
+      "normal_error_degrees": 8.036954490482488,
+      "position_error": 0.7986604615279872,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.041666666666666664,
+      "occlusion_or_outside_fraction": 0.041666666666666664,
+      "unrepresentable_visible_fraction": 0.0,
+      "normal_error_degrees": 14.137185393517925,
+      "position_error": 0.8732589305921619,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.2916666666666667,
+      "occlusion_or_outside_fraction": 0.1875,
+      "unrepresentable_visible_fraction": 0.10416666666666667,
+      "normal_error_degrees": 14.097284202382918,
+      "position_error": 0.8712777588631354,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.22916666666666666,
+      "occlusion_or_outside_fraction": 0.22916666666666666,
+      "unrepresentable_visible_fraction": 0.0,
+      "normal_error_degrees": 8.765838347145426,
+      "position_error": 0.786532394377891,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.08333333333333333,
+      "occlusion_or_outside_fraction": 0.08333333333333333,
+      "unrepresentable_visible_fraction": 0.0,
+      "normal_error_degrees": 4.549842637980277,
+      "position_error": 0.7555505865441324,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.0625,
+      "occlusion_or_outside_fraction": 0.0625,
+      "unrepresentable_visible_fraction": 0.0,
+      "normal_error_degrees": 10.9450350743737,
+      "position_error": 0.8335468146617293,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.125,
+      "occlusion_or_outside_fraction": 0.125,
+      "unrepresentable_visible_fraction": 0.0,
+      "normal_error_degrees": 7.7775118514345145,
+      "position_error": 0.6347748520512576,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.25,
+      "occlusion_or_outside_fraction": 0.20833333333333334,
+      "unrepresentable_visible_fraction": 0.041666666666666664,
+      "normal_error_degrees": 9.00157457092619,
+      "position_error": 0.8291975276745568,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.20833333333333334,
+      "occlusion_or_outside_fraction": 0.20833333333333334,
+      "unrepresentable_visible_fraction": 0.0,
+      "normal_error_degrees": 6.975855924867703,
+      "position_error": 0.8835307938191219,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.3125,
+      "occlusion_or_outside_fraction": 0.2708333333333333,
+      "unrepresentable_visible_fraction": 0.041666666666666664,
+      "normal_error_degrees": 8.93142461555066,
+      "position_error": 0.9519384474681156,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.20833333333333334,
+      "occlusion_or_outside_fraction": 0.1875,
+      "unrepresentable_visible_fraction": 0.020833333333333332,
+      "normal_error_degrees": 5.787246192572316,
+      "position_error": 0.798718284762545,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.25,
+      "occlusion_or_outside_fraction": 0.16666666666666666,
+      "unrepresentable_visible_fraction": 0.08333333333333333,
+      "normal_error_degrees": 6.570386900227472,
+      "position_error": 0.6787488320509913,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.2708333333333333,
+      "occlusion_or_outside_fraction": 0.1875,
+      "unrepresentable_visible_fraction": 0.08333333333333333,
+      "normal_error_degrees": 7.028555005794376,
+      "position_error": 1.0454338203498175,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.25,
+      "occlusion_or_outside_fraction": 0.20833333333333334,
+      "unrepresentable_visible_fraction": 0.041666666666666664,
+      "normal_error_degrees": 7.476786270368205,
+      "position_error": 0.768077243341336,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.3541666666666667,
+      "occlusion_or_outside_fraction": 0.20833333333333334,
+      "unrepresentable_visible_fraction": 0.14583333333333334,
+      "normal_error_degrees": 8.836246567012743,
+      "position_error": 0.8928489290097081,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.25,
+      "occlusion_or_outside_fraction": 0.20833333333333334,
+      "unrepresentable_visible_fraction": 0.041666666666666664,
+      "normal_error_degrees": 9.981067798203277,
+      "position_error": 0.8335163333011221,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.3125,
+      "occlusion_or_outside_fraction": 0.20833333333333334,
+      "unrepresentable_visible_fraction": 0.10416666666666667,
+      "normal_error_degrees": 6.720981316203395,
+      "position_error": 0.9754649304470272,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.20833333333333334,
+      "occlusion_or_outside_fraction": 0.20833333333333334,
+      "unrepresentable_visible_fraction": 0.0,
+      "normal_error_degrees": 8.624283343758384,
+      "position_error": 0.9460864604893277,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.20833333333333334,
+      "occlusion_or_outside_fraction": 0.1875,
+      "unrepresentable_visible_fraction": 0.020833333333333332,
+      "normal_error_degrees": 5.22894763487105,
+      "position_error": 0.8310943859683366,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.020833333333333332,
+      "occlusion_or_outside_fraction": 0.020833333333333332,
+      "unrepresentable_visible_fraction": 0.0,
+      "normal_error_degrees": 7.51428516578634,
+      "position_error": 0.7123566277507746,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.1875,
+      "occlusion_or_outside_fraction": 0.125,
+      "unrepresentable_visible_fraction": 0.0625,
+      "normal_error_degrees": 7.24362718244623,
+      "position_error": 0.836144143572971,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.2708333333333333,
+      "occlusion_or_outside_fraction": 0.14583333333333334,
+      "unrepresentable_visible_fraction": 0.125,
+      "normal_error_degrees": 10.363650477680357,
+      "position_error": 0.7659703336338008,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.3958333333333333,
+      "occlusion_or_outside_fraction": 0.25,
+      "unrepresentable_visible_fraction": 0.14583333333333334,
+      "normal_error_degrees": 13.194700741522874,
+      "position_error": 1.1866622621458307,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.14583333333333334,
+      "occlusion_or_outside_fraction": 0.14583333333333334,
+      "unrepresentable_visible_fraction": 0.0,
+      "normal_error_degrees": 7.94198379866496,
+      "position_error": 0.6783665665707602,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.0,
+      "occlusion_or_outside_fraction": 0.0,
+      "unrepresentable_visible_fraction": 0.0,
+      "normal_error_degrees": 9.627486869006786,
+      "position_error": 0.7160831789680296,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.041666666666666664,
+      "occlusion_or_outside_fraction": 0.041666666666666664,
+      "unrepresentable_visible_fraction": 0.0,
+      "normal_error_degrees": 12.23118473323782,
+      "position_error": 0.7141788353545158,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.14583333333333334,
+      "occlusion_or_outside_fraction": 0.14583333333333334,
+      "unrepresentable_visible_fraction": 0.0,
+      "normal_error_degrees": 10.764237766189533,
+      "position_error": 0.6972227495088005,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.16666666666666666,
+      "occlusion_or_outside_fraction": 0.16666666666666666,
+      "unrepresentable_visible_fraction": 0.0,
+      "normal_error_degrees": 7.96603391826265,
+      "position_error": 0.84600249619157,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.22916666666666666,
+      "occlusion_or_outside_fraction": 0.16666666666666666,
+      "unrepresentable_visible_fraction": 0.0625,
+      "normal_error_degrees": 6.257711794352478,
+      "position_error": 0.7516472538109659,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.041666666666666664,
+      "occlusion_or_outside_fraction": 0.020833333333333332,
+      "unrepresentable_visible_fraction": 0.020833333333333332,
+      "normal_error_degrees": 7.682448957422378,
+      "position_error": 0.7605298494815468,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.08333333333333333,
+      "occlusion_or_outside_fraction": 0.020833333333333332,
+      "unrepresentable_visible_fraction": 0.0625,
+      "normal_error_degrees": 4.85951093824534,
+      "position_error": 1.060913412392072,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.25,
+      "occlusion_or_outside_fraction": 0.20833333333333334,
+      "unrepresentable_visible_fraction": 0.041666666666666664,
+      "normal_error_degrees": 7.006790039586797,
+      "position_error": 1.0110441862952613,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.10416666666666667,
+      "occlusion_or_outside_fraction": 0.041666666666666664,
+      "unrepresentable_visible_fraction": 0.0625,
+      "normal_error_degrees": 9.322263614670215,
+      "position_error": 0.6188519219520227,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.0,
+      "occlusion_or_outside_fraction": 0.0,
+      "unrepresentable_visible_fraction": 0.0,
+      "normal_error_degrees": 3.8163790794548724,
+      "position_error": 0.77690240249526,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.041666666666666664,
+      "occlusion_or_outside_fraction": 0.0,
+      "unrepresentable_visible_fraction": 0.041666666666666664,
+      "normal_error_degrees": 6.672965389720024,
+      "position_error": 0.715330783377406,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.3125,
+      "occlusion_or_outside_fraction": 0.20833333333333334,
+      "unrepresentable_visible_fraction": 0.10416666666666667,
+      "normal_error_degrees": 9.675074975233885,
+      "position_error": 0.9495275696855096,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.020833333333333332,
+      "occlusion_or_outside_fraction": 0.0,
+      "unrepresentable_visible_fraction": 0.020833333333333332,
+      "normal_error_degrees": 9.807277155297863,
+      "position_error": 0.7740968118474681,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.0625,
+      "occlusion_or_outside_fraction": 0.0,
+      "unrepresentable_visible_fraction": 0.0625,
+      "normal_error_degrees": 9.223426505171094,
+      "position_error": 1.0933413599089807,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.2708333333333333,
+      "occlusion_or_outside_fraction": 0.20833333333333334,
+      "unrepresentable_visible_fraction": 0.0625,
+      "normal_error_degrees": 5.262519917248318,
+      "position_error": 0.6476936272961346,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.10416666666666667,
+      "occlusion_or_outside_fraction": 0.08333333333333333,
+      "unrepresentable_visible_fraction": 0.020833333333333332,
+      "normal_error_degrees": 4.339654526916743,
+      "position_error": 0.8697317080160651,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.16666666666666666,
+      "occlusion_or_outside_fraction": 0.08333333333333333,
+      "unrepresentable_visible_fraction": 0.08333333333333333,
+      "normal_error_degrees": 4.944746902086804,
+      "position_error": 1.0106443577501245,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.25,
+      "occlusion_or_outside_fraction": 0.20833333333333334,
+      "unrepresentable_visible_fraction": 0.041666666666666664,
+      "normal_error_degrees": 5.767218607836597,
+      "position_error": 0.8994034648742665,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.041666666666666664,
+      "occlusion_or_outside_fraction": 0.020833333333333332,
+      "unrepresentable_visible_fraction": 0.020833333333333332,
+      "normal_error_degrees": 9.601386525853398,
+      "position_error": 0.8392123220280614,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.041666666666666664,
+      "occlusion_or_outside_fraction": 0.041666666666666664,
+      "unrepresentable_visible_fraction": 0.0,
+      "normal_error_degrees": 7.328683763879874,
+      "position_error": 0.7192338153384471,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.16666666666666666,
+      "occlusion_or_outside_fraction": 0.125,
+      "unrepresentable_visible_fraction": 0.041666666666666664,
+      "normal_error_degrees": 6.656257144343205,
+      "position_error": 0.5348337212488157,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.0625,
+      "occlusion_or_outside_fraction": 0.0,
+      "unrepresentable_visible_fraction": 0.0625,
+      "normal_error_degrees": 10.022502363967462,
+      "position_error": 0.5821186950480678,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.25,
+      "occlusion_or_outside_fraction": 0.14583333333333334,
+      "unrepresentable_visible_fraction": 0.10416666666666667,
+      "normal_error_degrees": 9.766015596776578,
+      "position_error": 0.6762056608817423,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.22916666666666666,
+      "occlusion_or_outside_fraction": 0.125,
+      "unrepresentable_visible_fraction": 0.10416666666666667,
+      "normal_error_degrees": 4.046589104461166,
+      "position_error": 0.8250305163599349,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.10416666666666667,
+      "occlusion_or_outside_fraction": 0.0,
+      "unrepresentable_visible_fraction": 0.10416666666666667,
+      "normal_error_degrees": 12.21379998324621,
+      "position_error": 0.6941295353456535,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.020833333333333332,
+      "occlusion_or_outside_fraction": 0.020833333333333332,
+      "unrepresentable_visible_fraction": 0.0,
+      "normal_error_degrees": 5.478345093412304,
+      "position_error": 0.7566240201902095,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.2916666666666667,
+      "occlusion_or_outside_fraction": 0.22916666666666666,
+      "unrepresentable_visible_fraction": 0.0625,
+      "normal_error_degrees": 7.651281018011083,
+      "position_error": 0.8381668460436832,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.2916666666666667,
+      "occlusion_or_outside_fraction": 0.1875,
+      "unrepresentable_visible_fraction": 0.10416666666666667,
+      "normal_error_degrees": 10.108538451253516,
+      "position_error": 0.867177882959298,
+      "homography_fallback_fraction": 0.0
+    }
+  ],
+  "55": [
+    {
+      "unmatched_fraction": 0.125,
+      "occlusion_or_outside_fraction": 0.10416666666666667,
+      "unrepresentable_visible_fraction": 0.020833333333333332,
+      "normal_error_degrees": 7.294867019625921,
+      "position_error": 0.8808165373355004,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.16666666666666666,
+      "occlusion_or_outside_fraction": 0.16666666666666666,
+      "unrepresentable_visible_fraction": 0.0,
+      "normal_error_degrees": 6.0652658472992345,
+      "position_error": 0.7251316728144547,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.25,
+      "occlusion_or_outside_fraction": 0.22916666666666666,
+      "unrepresentable_visible_fraction": 0.020833333333333332,
+      "normal_error_degrees": 5.999823743448554,
+      "position_error": 0.9451180675530205,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.16666666666666666,
+      "occlusion_or_outside_fraction": 0.125,
+      "unrepresentable_visible_fraction": 0.041666666666666664,
+      "normal_error_degrees": 8.748038523951589,
+      "position_error": 0.8125301929213994,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.14583333333333334,
+      "occlusion_or_outside_fraction": 0.0625,
+      "unrepresentable_visible_fraction": 0.08333333333333333,
+      "normal_error_degrees": 10.565611001577503,
+      "position_error": 0.905581193494835,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.3333333333333333,
+      "occlusion_or_outside_fraction": 0.16666666666666666,
+      "unrepresentable_visible_fraction": 0.16666666666666666,
+      "normal_error_degrees": 11.172815534294955,
+      "position_error": 1.0434159318184715,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.08333333333333333,
+      "occlusion_or_outside_fraction": 0.041666666666666664,
+      "unrepresentable_visible_fraction": 0.041666666666666664,
+      "normal_error_degrees": 6.110629472094879,
+      "position_error": 0.6567676770357679,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.1875,
+      "occlusion_or_outside_fraction": 0.125,
+      "unrepresentable_visible_fraction": 0.0625,
+      "normal_error_degrees": 9.302487023827004,
+      "position_error": 0.5796115072822664,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.14583333333333334,
+      "occlusion_or_outside_fraction": 0.14583333333333334,
+      "unrepresentable_visible_fraction": 0.0,
+      "normal_error_degrees": 8.156583778630567,
+      "position_error": 0.7043305434726598,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.16666666666666666,
+      "occlusion_or_outside_fraction": 0.16666666666666666,
+      "unrepresentable_visible_fraction": 0.0,
+      "normal_error_degrees": 6.730655620916598,
+      "position_error": 0.8060972534732396,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.10416666666666667,
+      "occlusion_or_outside_fraction": 0.041666666666666664,
+      "unrepresentable_visible_fraction": 0.0625,
+      "normal_error_degrees": 7.672864279194378,
+      "position_error": 0.6573766275657192,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.2708333333333333,
+      "occlusion_or_outside_fraction": 0.2708333333333333,
+      "unrepresentable_visible_fraction": 0.0,
+      "normal_error_degrees": 9.922578450052525,
+      "position_error": 0.76488799600332,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.0625,
+      "occlusion_or_outside_fraction": 0.041666666666666664,
+      "unrepresentable_visible_fraction": 0.020833333333333332,
+      "normal_error_degrees": 5.4266951579335325,
+      "position_error": 0.8128424019212789,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.22916666666666666,
+      "occlusion_or_outside_fraction": 0.1875,
+      "unrepresentable_visible_fraction": 0.041666666666666664,
+      "normal_error_degrees": 8.108620231004064,
+      "position_error": 0.5717638151805301,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.1875,
+      "occlusion_or_outside_fraction": 0.14583333333333334,
+      "unrepresentable_visible_fraction": 0.041666666666666664,
+      "normal_error_degrees": 6.304595286336739,
+      "position_error": 1.2684427997876209,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.1875,
+      "occlusion_or_outside_fraction": 0.14583333333333334,
+      "unrepresentable_visible_fraction": 0.041666666666666664,
+      "normal_error_degrees": 5.301584950244937,
+      "position_error": 0.758412630771485,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.10416666666666667,
+      "occlusion_or_outside_fraction": 0.041666666666666664,
+      "unrepresentable_visible_fraction": 0.0625,
+      "normal_error_degrees": 8.202427211378366,
+      "position_error": 0.7114507735721504,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.1875,
+      "occlusion_or_outside_fraction": 0.125,
+      "unrepresentable_visible_fraction": 0.0625,
+      "normal_error_degrees": 5.301863949432966,
+      "position_error": 0.7125007223391068,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.2916666666666667,
+      "occlusion_or_outside_fraction": 0.125,
+      "unrepresentable_visible_fraction": 0.16666666666666666,
+      "normal_error_degrees": 10.455022531220822,
+      "position_error": 1.147523826439763,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.0625,
+      "occlusion_or_outside_fraction": 0.0,
+      "unrepresentable_visible_fraction": 0.0625,
+      "normal_error_degrees": 5.43531608298052,
+      "position_error": 0.6978958706559452,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.2708333333333333,
+      "occlusion_or_outside_fraction": 0.16666666666666666,
+      "unrepresentable_visible_fraction": 0.10416666666666667,
+      "normal_error_degrees": 9.235645402685044,
+      "position_error": 0.9072331465329379,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.25,
+      "occlusion_or_outside_fraction": 0.16666666666666666,
+      "unrepresentable_visible_fraction": 0.08333333333333333,
+      "normal_error_degrees": 6.428831605825476,
+      "position_error": 1.0112022630668422,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.041666666666666664,
+      "occlusion_or_outside_fraction": 0.041666666666666664,
+      "unrepresentable_visible_fraction": 0.0,
+      "normal_error_degrees": 7.7479854739228315,
+      "position_error": 0.7777013415562591,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.16666666666666666,
+      "occlusion_or_outside_fraction": 0.0625,
+      "unrepresentable_visible_fraction": 0.10416666666666667,
+      "normal_error_degrees": 5.889495918591122,
+      "position_error": 0.5722659469508345,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.10416666666666667,
+      "occlusion_or_outside_fraction": 0.020833333333333332,
+      "unrepresentable_visible_fraction": 0.08333333333333333,
+      "normal_error_degrees": 8.48569036018487,
+      "position_error": 0.77870140853776,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.0625,
+      "occlusion_or_outside_fraction": 0.020833333333333332,
+      "unrepresentable_visible_fraction": 0.041666666666666664,
+      "normal_error_degrees": 5.422149157432816,
+      "position_error": 1.0283080024205227,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.041666666666666664,
+      "occlusion_or_outside_fraction": 0.041666666666666664,
+      "unrepresentable_visible_fraction": 0.0,
+      "normal_error_degrees": 6.86978869366748,
+      "position_error": 0.5042414233318371,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.3125,
+      "occlusion_or_outside_fraction": 0.22916666666666666,
+      "unrepresentable_visible_fraction": 0.08333333333333333,
+      "normal_error_degrees": 9.458581819628305,
+      "position_error": 0.8926322441552039,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.16666666666666666,
+      "occlusion_or_outside_fraction": 0.16666666666666666,
+      "unrepresentable_visible_fraction": 0.0,
+      "normal_error_degrees": 7.442651927299056,
+      "position_error": 0.5855546487124914,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.10416666666666667,
+      "occlusion_or_outside_fraction": 0.10416666666666667,
+      "unrepresentable_visible_fraction": 0.0,
+      "normal_error_degrees": 6.039116621302006,
+      "position_error": 0.6260400908519071,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.020833333333333332,
+      "occlusion_or_outside_fraction": 0.020833333333333332,
+      "unrepresentable_visible_fraction": 0.0,
+      "normal_error_degrees": 4.46102669344111,
+      "position_error": 0.5927629523236813,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.14583333333333334,
+      "occlusion_or_outside_fraction": 0.10416666666666667,
+      "unrepresentable_visible_fraction": 0.041666666666666664,
+      "normal_error_degrees": 9.463389110851303,
+      "position_error": 0.7579435052507758,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.10416666666666667,
+      "occlusion_or_outside_fraction": 0.0625,
+      "unrepresentable_visible_fraction": 0.041666666666666664,
+      "normal_error_degrees": 8.098053347203694,
+      "position_error": 0.6049215609405406,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.10416666666666667,
+      "occlusion_or_outside_fraction": 0.08333333333333333,
+      "unrepresentable_visible_fraction": 0.020833333333333332,
+      "normal_error_degrees": 7.920633278805258,
+      "position_error": 0.8666392918902862,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.14583333333333334,
+      "occlusion_or_outside_fraction": 0.020833333333333332,
+      "unrepresentable_visible_fraction": 0.125,
+      "normal_error_degrees": 6.683969683946084,
+      "position_error": 1.1933726686251542,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.0,
+      "occlusion_or_outside_fraction": 0.0,
+      "unrepresentable_visible_fraction": 0.0,
+      "normal_error_degrees": 2.9797629493180025,
+      "position_error": 0.632155473819877,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.22916666666666666,
+      "occlusion_or_outside_fraction": 0.22916666666666666,
+      "unrepresentable_visible_fraction": 0.0,
+      "normal_error_degrees": 9.582094717537556,
+      "position_error": 0.8000143772977327,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.08333333333333333,
+      "occlusion_or_outside_fraction": 0.0625,
+      "unrepresentable_visible_fraction": 0.020833333333333332,
+      "normal_error_degrees": 9.292845989028452,
+      "position_error": 0.920008561788617,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.20833333333333334,
+      "occlusion_or_outside_fraction": 0.041666666666666664,
+      "unrepresentable_visible_fraction": 0.16666666666666666,
+      "normal_error_degrees": 6.684074509041352,
+      "position_error": 0.9948009707663793,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.2708333333333333,
+      "occlusion_or_outside_fraction": 0.22916666666666666,
+      "unrepresentable_visible_fraction": 0.041666666666666664,
+      "normal_error_degrees": 8.347787985286578,
+      "position_error": 0.9342503264767194,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.22916666666666666,
+      "occlusion_or_outside_fraction": 0.1875,
+      "unrepresentable_visible_fraction": 0.041666666666666664,
+      "normal_error_degrees": 5.606743027190288,
+      "position_error": 0.8062747882774777,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.16666666666666666,
+      "occlusion_or_outside_fraction": 0.16666666666666666,
+      "unrepresentable_visible_fraction": 0.0,
+      "normal_error_degrees": 8.607343778001818,
+      "position_error": 0.7887513441200215,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.25,
+      "occlusion_or_outside_fraction": 0.1875,
+      "unrepresentable_visible_fraction": 0.0625,
+      "normal_error_degrees": 8.336282638533964,
+      "position_error": 0.6940850728678769,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.14583333333333334,
+      "occlusion_or_outside_fraction": 0.10416666666666667,
+      "unrepresentable_visible_fraction": 0.041666666666666664,
+      "normal_error_degrees": 11.123981857512875,
+      "position_error": 1.0135259255949476,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.16666666666666666,
+      "occlusion_or_outside_fraction": 0.08333333333333333,
+      "unrepresentable_visible_fraction": 0.08333333333333333,
+      "normal_error_degrees": 12.474629586200917,
+      "position_error": 0.9548057997874878,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.041666666666666664,
+      "occlusion_or_outside_fraction": 0.0,
+      "unrepresentable_visible_fraction": 0.041666666666666664,
+      "normal_error_degrees": 4.800479612811324,
+      "position_error": 0.689633134366268,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.2916666666666667,
+      "occlusion_or_outside_fraction": 0.1875,
+      "unrepresentable_visible_fraction": 0.10416666666666667,
+      "normal_error_degrees": 10.48597951771634,
+      "position_error": 0.8087711467804795,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.2708333333333333,
+      "occlusion_or_outside_fraction": 0.14583333333333334,
+      "unrepresentable_visible_fraction": 0.125,
+      "normal_error_degrees": 13.34749801758232,
+      "position_error": 1.0108263709491199,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.3333333333333333,
+      "occlusion_or_outside_fraction": 0.20833333333333334,
+      "unrepresentable_visible_fraction": 0.125,
+      "normal_error_degrees": 4.275397881522514,
+      "position_error": 0.9927934922034348,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.041666666666666664,
+      "occlusion_or_outside_fraction": 0.041666666666666664,
+      "unrepresentable_visible_fraction": 0.0,
+      "normal_error_degrees": 8.615783103202725,
+      "position_error": 0.6730336506283144,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.20833333333333334,
+      "occlusion_or_outside_fraction": 0.125,
+      "unrepresentable_visible_fraction": 0.08333333333333333,
+      "normal_error_degrees": 10.231027874480736,
+      "position_error": 0.9416362053771867,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.20833333333333334,
+      "occlusion_or_outside_fraction": 0.1875,
+      "unrepresentable_visible_fraction": 0.020833333333333332,
+      "normal_error_degrees": 5.3846108590391575,
+      "position_error": 0.847315426991889,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.08333333333333333,
+      "occlusion_or_outside_fraction": 0.08333333333333333,
+      "unrepresentable_visible_fraction": 0.0,
+      "normal_error_degrees": 7.971701781870365,
+      "position_error": 0.6140848856165385,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.1875,
+      "occlusion_or_outside_fraction": 0.1875,
+      "unrepresentable_visible_fraction": 0.0,
+      "normal_error_degrees": 6.685518008088672,
+      "position_error": 0.663354831788816,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.16666666666666666,
+      "occlusion_or_outside_fraction": 0.0625,
+      "unrepresentable_visible_fraction": 0.10416666666666667,
+      "normal_error_degrees": 8.33978466431457,
+      "position_error": 1.01044565816986,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.125,
+      "occlusion_or_outside_fraction": 0.0625,
+      "unrepresentable_visible_fraction": 0.0625,
+      "normal_error_degrees": 7.608361099682438,
+      "position_error": 0.7473516062712404,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.25,
+      "occlusion_or_outside_fraction": 0.1875,
+      "unrepresentable_visible_fraction": 0.0625,
+      "normal_error_degrees": 5.445607370024483,
+      "position_error": 0.6914399810016628,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.22916666666666666,
+      "occlusion_or_outside_fraction": 0.22916666666666666,
+      "unrepresentable_visible_fraction": 0.0,
+      "normal_error_degrees": 5.229047331329157,
+      "position_error": 1.0510923025754415,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.16666666666666666,
+      "occlusion_or_outside_fraction": 0.14583333333333334,
+      "unrepresentable_visible_fraction": 0.020833333333333332,
+      "normal_error_degrees": 8.242265846650199,
+      "position_error": 0.5464294082127914,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.0,
+      "occlusion_or_outside_fraction": 0.0,
+      "unrepresentable_visible_fraction": 0.0,
+      "normal_error_degrees": 6.30709055607399,
+      "position_error": 0.5269248683702189,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.125,
+      "occlusion_or_outside_fraction": 0.041666666666666664,
+      "unrepresentable_visible_fraction": 0.08333333333333333,
+      "normal_error_degrees": 10.366091734822175,
+      "position_error": 1.079218559332526,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.3541666666666667,
+      "occlusion_or_outside_fraction": 0.20833333333333334,
+      "unrepresentable_visible_fraction": 0.14583333333333334,
+      "normal_error_degrees": 9.462970734678297,
+      "position_error": 0.7617849669133431,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.22916666666666666,
+      "occlusion_or_outside_fraction": 0.1875,
+      "unrepresentable_visible_fraction": 0.041666666666666664,
+      "normal_error_degrees": 5.05138833047426,
+      "position_error": 0.5916808076513452,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.2708333333333333,
+      "occlusion_or_outside_fraction": 0.25,
+      "unrepresentable_visible_fraction": 0.020833333333333332,
+      "normal_error_degrees": 13.38114991157253,
+      "position_error": 1.0238186160078444,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.125,
+      "occlusion_or_outside_fraction": 0.08333333333333333,
+      "unrepresentable_visible_fraction": 0.041666666666666664,
+      "normal_error_degrees": 5.727663375250539,
+      "position_error": 0.659795939923534,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.20833333333333334,
+      "occlusion_or_outside_fraction": 0.125,
+      "unrepresentable_visible_fraction": 0.08333333333333333,
+      "normal_error_degrees": 5.5086638431066275,
+      "position_error": 0.5835115065061693,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.125,
+      "occlusion_or_outside_fraction": 0.125,
+      "unrepresentable_visible_fraction": 0.0,
+      "normal_error_degrees": 4.881388992315931,
+      "position_error": 0.6471332603481584,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.2916666666666667,
+      "occlusion_or_outside_fraction": 0.1875,
+      "unrepresentable_visible_fraction": 0.10416666666666667,
+      "normal_error_degrees": 12.093938352673085,
+      "position_error": 1.005936601496756,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.0,
+      "occlusion_or_outside_fraction": 0.0,
+      "unrepresentable_visible_fraction": 0.0,
+      "normal_error_degrees": 4.403962202150961,
+      "position_error": 0.6100527673836869,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.0625,
+      "occlusion_or_outside_fraction": 0.0625,
+      "unrepresentable_visible_fraction": 0.0,
+      "normal_error_degrees": 5.280176502459639,
+      "position_error": 0.6589194502325219,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.0625,
+      "occlusion_or_outside_fraction": 0.0625,
+      "unrepresentable_visible_fraction": 0.0,
+      "normal_error_degrees": 5.248383816858913,
+      "position_error": 0.6176978890103153,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.0,
+      "occlusion_or_outside_fraction": 0.0,
+      "unrepresentable_visible_fraction": 0.0,
+      "normal_error_degrees": 8.039623534380846,
+      "position_error": 0.6728366923948222,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.3958333333333333,
+      "occlusion_or_outside_fraction": 0.22916666666666666,
+      "unrepresentable_visible_fraction": 0.16666666666666666,
+      "normal_error_degrees": 10.530815773198576,
+      "position_error": 0.8497235033715561,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.25,
+      "occlusion_or_outside_fraction": 0.20833333333333334,
+      "unrepresentable_visible_fraction": 0.041666666666666664,
+      "normal_error_degrees": 6.890828482606917,
+      "position_error": 0.8649377459630282,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.22916666666666666,
+      "occlusion_or_outside_fraction": 0.22916666666666666,
+      "unrepresentable_visible_fraction": 0.0,
+      "normal_error_degrees": 8.03334988790151,
+      "position_error": 0.6616286530927002,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.25,
+      "occlusion_or_outside_fraction": 0.20833333333333334,
+      "unrepresentable_visible_fraction": 0.041666666666666664,
+      "normal_error_degrees": 9.006383041784153,
+      "position_error": 0.6660045436862336,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.22916666666666666,
+      "occlusion_or_outside_fraction": 0.1875,
+      "unrepresentable_visible_fraction": 0.041666666666666664,
+      "normal_error_degrees": 7.184238449946115,
+      "position_error": 0.637409538809246,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.08333333333333333,
+      "occlusion_or_outside_fraction": 0.041666666666666664,
+      "unrepresentable_visible_fraction": 0.041666666666666664,
+      "normal_error_degrees": 7.650544731463491,
+      "position_error": 0.6593636984976632,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.3333333333333333,
+      "occlusion_or_outside_fraction": 0.1875,
+      "unrepresentable_visible_fraction": 0.14583333333333334,
+      "normal_error_degrees": 9.246462666781099,
+      "position_error": 0.7795573652847425,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.14583333333333334,
+      "occlusion_or_outside_fraction": 0.08333333333333333,
+      "unrepresentable_visible_fraction": 0.0625,
+      "normal_error_degrees": 12.805531830154644,
+      "position_error": 0.9140351964964543,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.22916666666666666,
+      "occlusion_or_outside_fraction": 0.08333333333333333,
+      "unrepresentable_visible_fraction": 0.14583333333333334,
+      "normal_error_degrees": 11.748639456208394,
+      "position_error": 0.831534010349087,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.08333333333333333,
+      "occlusion_or_outside_fraction": 0.0,
+      "unrepresentable_visible_fraction": 0.08333333333333333,
+      "normal_error_degrees": 6.908895744998326,
+      "position_error": 0.8698835975289657,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.0625,
+      "occlusion_or_outside_fraction": 0.0625,
+      "unrepresentable_visible_fraction": 0.0,
+      "normal_error_degrees": 7.013006936761902,
+      "position_error": 0.5818852586453467,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.041666666666666664,
+      "occlusion_or_outside_fraction": 0.020833333333333332,
+      "unrepresentable_visible_fraction": 0.020833333333333332,
+      "normal_error_degrees": 9.110248102874195,
+      "position_error": 0.7112155001374886,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.16666666666666666,
+      "occlusion_or_outside_fraction": 0.14583333333333334,
+      "unrepresentable_visible_fraction": 0.020833333333333332,
+      "normal_error_degrees": 6.270077248636919,
+      "position_error": 0.6656023917952977,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.14583333333333334,
+      "occlusion_or_outside_fraction": 0.08333333333333333,
+      "unrepresentable_visible_fraction": 0.0625,
+      "normal_error_degrees": 8.787843253958325,
+      "position_error": 0.8525485958772019,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.020833333333333332,
+      "occlusion_or_outside_fraction": 0.020833333333333332,
+      "unrepresentable_visible_fraction": 0.0,
+      "normal_error_degrees": 5.436332123995096,
+      "position_error": 0.5675935653694566,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.22916666666666666,
+      "occlusion_or_outside_fraction": 0.1875,
+      "unrepresentable_visible_fraction": 0.041666666666666664,
+      "normal_error_degrees": 8.769392592711542,
+      "position_error": 0.6514027230852779,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.10416666666666667,
+      "occlusion_or_outside_fraction": 0.10416666666666667,
+      "unrepresentable_visible_fraction": 0.0,
+      "normal_error_degrees": 8.25854007798467,
+      "position_error": 0.7266176974603212,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.041666666666666664,
+      "occlusion_or_outside_fraction": 0.020833333333333332,
+      "unrepresentable_visible_fraction": 0.020833333333333332,
+      "normal_error_degrees": 7.759330176944658,
+      "position_error": 0.8175204236903971,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.0,
+      "occlusion_or_outside_fraction": 0.0,
+      "unrepresentable_visible_fraction": 0.0,
+      "normal_error_degrees": 6.670428190005747,
+      "position_error": 0.6997894185263598,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.0,
+      "occlusion_or_outside_fraction": 0.0,
+      "unrepresentable_visible_fraction": 0.0,
+      "normal_error_degrees": 6.838286408599719,
+      "position_error": 0.6855367135078781,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.2708333333333333,
+      "occlusion_or_outside_fraction": 0.14583333333333334,
+      "unrepresentable_visible_fraction": 0.125,
+      "normal_error_degrees": 8.02203642514546,
+      "position_error": 0.833306859292426,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.041666666666666664,
+      "occlusion_or_outside_fraction": 0.041666666666666664,
+      "unrepresentable_visible_fraction": 0.0,
+      "normal_error_degrees": 7.982815373453968,
+      "position_error": 0.7760092903527918,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.20833333333333334,
+      "occlusion_or_outside_fraction": 0.10416666666666667,
+      "unrepresentable_visible_fraction": 0.10416666666666667,
+      "normal_error_degrees": 4.194890666912508,
+      "position_error": 0.6820269558314944,
+      "homography_fallback_fraction": 0.0
+    },
+    {
+      "unmatched_fraction": 0.08333333333333333,
+      "occlusion_or_outside_fraction": 0.020833333333333332,
+      "unrepresentable_visible_fraction": 0.0625,
+      "normal_error_degrees": 8.841247958888971,
+      "position_error": 0.7191755508770749,
+      "homography_fallback_fraction": 0.0
+    }
+  ]
+}

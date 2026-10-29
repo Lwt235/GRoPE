@@ -52,6 +52,10 @@ def make_dataset(seed, scenes, tokens=32, scenario='id'):
     if cfg.get('shared_normal'):
         # Common complete frame is a stronger normal-sharing negative control.
         rot = torch.eye(3).expand_as(rot).clone()
+    if cfg.get('region_shared'):
+        # Distinct physical regions, four nearby tokens per common surface.
+        rot = rot[:, ::4].repeat_interleave(4, 1)
+        logs = logs[:, ::4].repeat_interleave(4, 1)
 
     camera_q = torch.eye(3).repeat(scenes, 1, 1)
     a = torch.deg2rad(torch.tensor(cfg['angle']))

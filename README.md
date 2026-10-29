@@ -1,8 +1,34 @@
 # GRoPE：高斯几何与多视角 Attention 的初步验证
 
+**最新：第二轮计划已执行。** [第二轮报告](round2_report.md) 包含共享随机身份对照、真实投影关系的渲染 RGB 匹配、独立误差消融、条件门控以及共用 RGB 几何预测器。具体协议见 [ROUND2_PROTOCOL.md](ROUND2_PROTOCOL.md)。第一轮报告仍保留，结论应结合第二轮更新阅读。
+
 本仓库验证高斯中心、方向、尺度与位置不确定性对匹配的作用。现有实现是**数学检查与合成场景机制实验**，不是 WorldRoPE / HRoPE 的完整复现，也没有真实图像或新视角合成结果。
 
 实验结论与方案调整见 [research_report.md](research_report.md)。原始逐场景结果、验证集选择、训练曲线与运行环境保存在 `results/`；每轮包含当时源代码快照及 SHA-256。
+
+## 第二轮复现
+
+```bash
+python -m unittest discover -s tests -v
+python -m experiments.launch_gpu --module experiments.identity_probe --out results/reproduced_identity
+python -m experiments.launch_gpu --module experiments.rendered_probe --out results/reproduced_rendered
+python -m experiments.launch_gpu --module experiments.rgb_geometry_probe --train-only --out results/reproduced_rgb_geometry
+python -m experiments.rgb_geometry_probe --eval-only --out results/reproduced_rgb_geometry --matching results/reproduced_rendered
+```
+
+GPU 启动器会重新检查空闲设备；CPU 运行可直接调用各模块并传 `--device cpu`。完整默认配置为五种子、每匹配器 600 步，门控按验证集规则有条件运行。第一阶段身份探针沿用每模型 400 步。
+
+现有结果的报告与审计命令：
+
+```bash
+python -m experiments.uncertainty_calibration
+python -m experiments.round2_audit
+python -m experiments.round2_summary
+```
+
+校准、审计及报告模块默认读取交付时的 `results/round2_*` 目录。重放与重新生成审计需要本地 checkpoint；这些 checkpoint 和大体积概率数组保留在本机并由 `.gitignore` 排除。逐场景指标、CSV、manifest、源代码快照及预览图已保存在结果目录。
+
+本轮训练了一个**小型合成域 RGB 几何预测器**，不是预训练几何模型。HRoPE/WorldRoPE 只实现了注明范围的 Q/K 分数算子，未复现 V/输出处理、完整预测头或 NVS 训练。
 
 ## 环境与运行
 

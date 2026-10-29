@@ -1,0 +1,439 @@
+{
+  "config": {
+    "device": "cuda",
+    "out": "results/round2_identity",
+    "seeds": "11,22,33,44,55",
+    "steps": 400,
+    "methods": "center,rope3d_axis,rope3d_axis_normal,rope3d_axis_logcov,rope3d_axis_paired_random,rope3d_axis_independent_random",
+    "batch": 16,
+    "val_every": 50,
+    "train_scenes": 512,
+    "val_scenes": 96,
+    "test_scenes": 192
+  },
+  "methods": [
+    "center",
+    "rope3d_axis",
+    "rope3d_axis_normal",
+    "rope3d_axis_logcov",
+    "rope3d_axis_paired_random",
+    "rope3d_axis_independent_random"
+  ],
+  "scenarios": {
+    "id": {},
+    "repeated_geometry": {
+      "region_shared": true
+    },
+    "planar_geometry": {
+      "shared_normal": true,
+      "shared_scale": true
+    }
+  },
+  "torch": "2.6.0+cu124",
+  "numpy": "1.26.4",
+  "python": "3.11.7",
+  "cuda_available": true,
+  "device": "cuda",
+  "cuda_visible_devices": "3",
+  "gpu_name": "NVIDIA RTX A6000",
+  "source_hashes": {
+    "models/__init__.py": "687fe9cb12175c9dc5c64db7cbb8ed6bb306b9dd6624739e2a5e32164edb6242",
+    "models/geometry.py": "173dbb8a58c00a41fabe5918cf4cc5422809e829aa492a8601747dbc4c4f8e20",
+    "experiments/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "experiments/audit_results.py": "b061d1b2fe7c2c126b97dfe3c47cac9147318cbe5f3ad0d37c97f29a21a7b7db",
+    "experiments/calibrate_probe.py": "c6b15e655dcbdd9030f0cd53d7996d6a7c33d06584f4bfdb4d8b746d50170f12",
+    "experiments/identity_probe.py": "d710ada08600393e225d44f4d8b9f376f3a3fadaacdd3c615a757e09bc8abe6a",
+    "experiments/launch_gpu.py": "0d48e9923165d14bb657aea942f11ed454bdcaac0a7d2f0aa2fd75074bc0d91c",
+    "experiments/matching_probe.py": "b0bb36b9ebffab77307b9048d3ba27c816c85fc0d1e3b7b09d5009f3e58ddeaf",
+    "experiments/math_probe.py": "07df28e74a1efcd987efdda6a14173c89c052a6311130fd2317a4ed3713903bc",
+    "experiments/stability_probe.py": "ba216e5726da0fbabf88bc763386c301e95e43fed0fbacacca9ba2d8de46b80a",
+    "experiments/summarize.py": "ce308a159effca2686549353400b547a2e07465f8720ea22fc234910a1449c83",
+    "experiments/synthetic.py": "fcf7f9eb6cb8f5dfa5c706a270521aca05dec033cebc39f482f5e6496ba2bbab"
+  },
+  "dataset_hashes": {
+    "11": {
+      "train": "b1494b58b0f0c3317278daa5e2a5ca1927bca50d2855dad8a179fffd55a3668f",
+      "val": "ca4611d2008d95b5616b1d7cefbcb2d0fbfcf86f8ca42cacecea9c023f4dca0e",
+      "test": {
+        "id": "609e0c3f5f8c81033c3bcc2b77e339626ba67d958bce455ea270df75c144f9cd",
+        "repeated_geometry": "a0130ee69d6ab711360065aaba5199734debddf398efd5becb611a6235893f0f",
+        "planar_geometry": "9e6930c9668efc0e8e82117c2240ffa32c213d2596655f9ba9b26f7f607aad76"
+      }
+    },
+    "22": {
+      "train": "1b1222a2816f8c3a53e300224baf37e8bc2ba5e5a8c07f419800a051369d9a90",
+      "val": "de33b1112c01052606db7329994c372abe038d36fa3bb695943ce4233d9cf444",
+      "test": {
+        "id": "ffad00c8f08c228b81a81cdb2ae888f52203111a25ef83934ffd45f1f9289c40",
+        "repeated_geometry": "bc9d62e22de82480aa7b17978575c48d063dcd3da386e1f6edb07045128b600b",
+        "planar_geometry": "85cccd5434e467afa02925741e336fe3154780e9a94be1a99d7a307e9e5e1331"
+      }
+    },
+    "33": {
+      "train": "a56f5eda9f724d646aa486b56f357ac3344018de10c9eba1f73da0bd53e3d3ee",
+      "val": "a7ebba03e9b185dd969015b21c1f5e8031612a01d8d71bff47a5be2c53139a0e",
+      "test": {
+        "id": "3c0a85800bf1e9b6f24f52d5ba26e425dca4e4405dfcce747481972b94c3d698",
+        "repeated_geometry": "8dc1472cd5af8860b69c1fbf488e58cf6856868c428781f830b8abd52f81039c",
+        "planar_geometry": "e172ec6b36872238106c7b4d225700626c53229310067c314fcaea6337370d7a"
+      }
+    },
+    "44": {
+      "train": "273397bc0d5f5ad67b2715bcef8d53a2ce6e0bf0c2c080f595f8bda4403584cd",
+      "val": "9f1c1f608bd0af0420e06cd794119257db97f427f711ca663057e027906532e2",
+      "test": {
+        "id": "0f9485fe43b0c7219c94e372e5a73c4a4d0732729f65b9af76b251ac6cc82b2a",
+        "repeated_geometry": "e887cb81b3b1cf22ebd59d9a996a8a90e792813d51c2a69985b618bad9c29765",
+        "planar_geometry": "0a4465eb0063490021f629282ffb7c14bb350c7f644b39ad4cadb3ba7f644322"
+      }
+    },
+    "55": {
+      "train": "587d107c99f32805542d04c611ae65b8ba63c02a0ccc938a3913baf7595a768f",
+      "val": "c29cb0bfcfb2465dd29795cec3fe59a7e4732d955bd77ed224a33d92e0181d30",
+      "test": {
+        "id": "9ed758251dc9681bcb3eab5367f0462c4d71d71a22655262d9fcc1a478cd3f8a",
+        "repeated_geometry": "cd646901eb76b27cd74c00d7b17a07e3248bb11472c300ba00b2ad2e4fd407ae",
+        "planar_geometry": "f24ad4a52728449f2062e057ac8d14477172e9136f06bde80eb47deb0d8ea97d"
+      }
+    }
+  },
+  "selection": [
+    {
+      "seed": 11,
+      "method": "center",
+      "step": 100,
+      "val_r1": 0.8014323115348816,
+      "center_weight": 0.3664087951183319,
+      "shape_weight": 0.3132616877555847,
+      "parameters": 2387,
+      "train_and_eval_seconds": 3.0075788497924805,
+      "peak_cuda_allocated_mb": 123.7431640625
+    },
+    {
+      "seed": 11,
+      "method": "rope3d_axis",
+      "step": 400,
+      "val_r1": 0.9251301884651184,
+      "center_weight": 0.3132616877555847,
+      "shape_weight": 0.3132616877555847,
+      "parameters": 2387,
+      "train_and_eval_seconds": 3.0967044830322266,
+      "peak_cuda_allocated_mb": 123.74169921875
+    },
+    {
+      "seed": 11,
+      "method": "rope3d_axis_normal",
+      "step": 400,
+      "val_r1": 0.9680989384651184,
+      "center_weight": 0.3132616877555847,
+      "shape_weight": 0.5352250337600708,
+      "parameters": 2387,
+      "train_and_eval_seconds": 3.2240915298461914,
+      "peak_cuda_allocated_mb": 123.7431640625
+    },
+    {
+      "seed": 11,
+      "method": "rope3d_axis_logcov",
+      "step": 350,
+      "val_r1": 0.9899088740348816,
+      "center_weight": 0.3132616877555847,
+      "shape_weight": 0.47799086570739746,
+      "parameters": 2387,
+      "train_and_eval_seconds": 3.195880174636841,
+      "peak_cuda_allocated_mb": 123.7431640625
+    },
+    {
+      "seed": 11,
+      "method": "rope3d_axis_paired_random",
+      "step": 400,
+      "val_r1": 0.990234375,
+      "center_weight": 0.3132616877555847,
+      "shape_weight": 0.5038179159164429,
+      "parameters": 2387,
+      "train_and_eval_seconds": 3.2050464153289795,
+      "peak_cuda_allocated_mb": 123.7431640625
+    },
+    {
+      "seed": 11,
+      "method": "rope3d_axis_independent_random",
+      "step": 400,
+      "val_r1": 0.9010416865348816,
+      "center_weight": 0.3132616877555847,
+      "shape_weight": 0.2011963278055191,
+      "parameters": 2387,
+      "train_and_eval_seconds": 3.2043073177337646,
+      "peak_cuda_allocated_mb": 123.7431640625
+    },
+    {
+      "seed": 22,
+      "method": "center",
+      "step": 150,
+      "val_r1": 0.8050130009651184,
+      "center_weight": 0.39190900325775146,
+      "shape_weight": 0.3132616877555847,
+      "parameters": 2387,
+      "train_and_eval_seconds": 2.691514492034912,
+      "peak_cuda_allocated_mb": 133.0244140625
+    },
+    {
+      "seed": 22,
+      "method": "rope3d_axis",
+      "step": 400,
+      "val_r1": 0.9306640625,
+      "center_weight": 0.3132616877555847,
+      "shape_weight": 0.3132616877555847,
+      "parameters": 2387,
+      "train_and_eval_seconds": 3.0871148109436035,
+      "peak_cuda_allocated_mb": 123.74169921875
+    },
+    {
+      "seed": 22,
+      "method": "rope3d_axis_normal",
+      "step": 400,
+      "val_r1": 0.9684244990348816,
+      "center_weight": 0.3132616877555847,
+      "shape_weight": 0.5347710251808167,
+      "parameters": 2387,
+      "train_and_eval_seconds": 3.1956982612609863,
+      "peak_cuda_allocated_mb": 123.7431640625
+    },
+    {
+      "seed": 22,
+      "method": "rope3d_axis_logcov",
+      "step": 200,
+      "val_r1": 0.9915364384651184,
+      "center_weight": 0.3132616877555847,
+      "shape_weight": 0.40713226795196533,
+      "parameters": 2387,
+      "train_and_eval_seconds": 3.1886096000671387,
+      "peak_cuda_allocated_mb": 123.7431640625
+    },
+    {
+      "seed": 22,
+      "method": "rope3d_axis_paired_random",
+      "step": 300,
+      "val_r1": 0.9912109375,
+      "center_weight": 0.3132616877555847,
+      "shape_weight": 0.4543348550796509,
+      "parameters": 2387,
+      "train_and_eval_seconds": 3.179501533508301,
+      "peak_cuda_allocated_mb": 123.7431640625
+    },
+    {
+      "seed": 22,
+      "method": "rope3d_axis_independent_random",
+      "step": 400,
+      "val_r1": 0.9137369990348816,
+      "center_weight": 0.3132616877555847,
+      "shape_weight": 0.20017339289188385,
+      "parameters": 2387,
+      "train_and_eval_seconds": 3.184011936187744,
+      "peak_cuda_allocated_mb": 123.7431640625
+    },
+    {
+      "seed": 33,
+      "method": "center",
+      "step": 100,
+      "val_r1": 0.8033854365348816,
+      "center_weight": 0.3663811683654785,
+      "shape_weight": 0.3132616877555847,
+      "parameters": 2387,
+      "train_and_eval_seconds": 2.6797683238983154,
+      "peak_cuda_allocated_mb": 133.0244140625
+    },
+    {
+      "seed": 33,
+      "method": "rope3d_axis",
+      "step": 400,
+      "val_r1": 0.9306640625,
+      "center_weight": 0.3132616877555847,
+      "shape_weight": 0.3132616877555847,
+      "parameters": 2387,
+      "train_and_eval_seconds": 3.0325446128845215,
+      "peak_cuda_allocated_mb": 123.74169921875
+    },
+    {
+      "seed": 33,
+      "method": "rope3d_axis_normal",
+      "step": 400,
+      "val_r1": 0.9716796875,
+      "center_weight": 0.3132616877555847,
+      "shape_weight": 0.5391430854797363,
+      "parameters": 2387,
+      "train_and_eval_seconds": 2.951258420944214,
+      "peak_cuda_allocated_mb": 123.7431640625
+    },
+    {
+      "seed": 33,
+      "method": "rope3d_axis_logcov",
+      "step": 300,
+      "val_r1": 0.9889323115348816,
+      "center_weight": 0.3132616877555847,
+      "shape_weight": 0.45876485109329224,
+      "parameters": 2387,
+      "train_and_eval_seconds": 3.15934419631958,
+      "peak_cuda_allocated_mb": 123.7431640625
+    },
+    {
+      "seed": 33,
+      "method": "rope3d_axis_paired_random",
+      "step": 350,
+      "val_r1": 0.9876301884651184,
+      "center_weight": 0.3132616877555847,
+      "shape_weight": 0.484000563621521,
+      "parameters": 2387,
+      "train_and_eval_seconds": 3.132031202316284,
+      "peak_cuda_allocated_mb": 123.7431640625
+    },
+    {
+      "seed": 33,
+      "method": "rope3d_axis_independent_random",
+      "step": 400,
+      "val_r1": 0.9111328125,
+      "center_weight": 0.3132616877555847,
+      "shape_weight": 0.1993837058544159,
+      "parameters": 2387,
+      "train_and_eval_seconds": 3.148228883743286,
+      "peak_cuda_allocated_mb": 123.7431640625
+    },
+    {
+      "seed": 44,
+      "method": "center",
+      "step": 150,
+      "val_r1": 0.7893880009651184,
+      "center_weight": 0.3919001519680023,
+      "shape_weight": 0.3132616877555847,
+      "parameters": 2387,
+      "train_and_eval_seconds": 2.729698657989502,
+      "peak_cuda_allocated_mb": 133.0244140625
+    },
+    {
+      "seed": 44,
+      "method": "rope3d_axis",
+      "step": 400,
+      "val_r1": 0.9322916865348816,
+      "center_weight": 0.3132616877555847,
+      "shape_weight": 0.3132616877555847,
+      "parameters": 2387,
+      "train_and_eval_seconds": 3.1118078231811523,
+      "peak_cuda_allocated_mb": 123.74169921875
+    },
+    {
+      "seed": 44,
+      "method": "rope3d_axis_normal",
+      "step": 400,
+      "val_r1": 0.9713541865348816,
+      "center_weight": 0.3132616877555847,
+      "shape_weight": 0.5340407490730286,
+      "parameters": 2387,
+      "train_and_eval_seconds": 3.21341609954834,
+      "peak_cuda_allocated_mb": 123.7431640625
+    },
+    {
+      "seed": 44,
+      "method": "rope3d_axis_logcov",
+      "step": 400,
+      "val_r1": 0.9928385615348816,
+      "center_weight": 0.3132616877555847,
+      "shape_weight": 0.4991855323314667,
+      "parameters": 2387,
+      "train_and_eval_seconds": 3.2212600708007812,
+      "peak_cuda_allocated_mb": 123.7431640625
+    },
+    {
+      "seed": 44,
+      "method": "rope3d_axis_paired_random",
+      "step": 250,
+      "val_r1": 0.98828125,
+      "center_weight": 0.3132616877555847,
+      "shape_weight": 0.4312729835510254,
+      "parameters": 2387,
+      "train_and_eval_seconds": 3.1338438987731934,
+      "peak_cuda_allocated_mb": 123.7431640625
+    },
+    {
+      "seed": 44,
+      "method": "rope3d_axis_independent_random",
+      "step": 400,
+      "val_r1": 0.9095051884651184,
+      "center_weight": 0.3132616877555847,
+      "shape_weight": 0.20054125785827637,
+      "parameters": 2387,
+      "train_and_eval_seconds": 3.014625072479248,
+      "peak_cuda_allocated_mb": 123.7431640625
+    },
+    {
+      "seed": 55,
+      "method": "center",
+      "step": 250,
+      "val_r1": 0.7991536259651184,
+      "center_weight": 0.4364764392375946,
+      "shape_weight": 0.3132616877555847,
+      "parameters": 2387,
+      "train_and_eval_seconds": 2.499722719192505,
+      "peak_cuda_allocated_mb": 133.0244140625
+    },
+    {
+      "seed": 55,
+      "method": "rope3d_axis",
+      "step": 400,
+      "val_r1": 0.9293619990348816,
+      "center_weight": 0.3132616877555847,
+      "shape_weight": 0.3132616877555847,
+      "parameters": 2387,
+      "train_and_eval_seconds": 2.9228057861328125,
+      "peak_cuda_allocated_mb": 123.74169921875
+    },
+    {
+      "seed": 55,
+      "method": "rope3d_axis_normal",
+      "step": 400,
+      "val_r1": 0.970703125,
+      "center_weight": 0.3132616877555847,
+      "shape_weight": 0.5395848155021667,
+      "parameters": 2387,
+      "train_and_eval_seconds": 3.0110254287719727,
+      "peak_cuda_allocated_mb": 123.7431640625
+    },
+    {
+      "seed": 55,
+      "method": "rope3d_axis_logcov",
+      "step": 400,
+      "val_r1": 0.9899088740348816,
+      "center_weight": 0.3132616877555847,
+      "shape_weight": 0.504910409450531,
+      "parameters": 2387,
+      "train_and_eval_seconds": 3.018416166305542,
+      "peak_cuda_allocated_mb": 123.7431640625
+    },
+    {
+      "seed": 55,
+      "method": "rope3d_axis_paired_random",
+      "step": 400,
+      "val_r1": 0.98828125,
+      "center_weight": 0.3132616877555847,
+      "shape_weight": 0.5067362189292908,
+      "parameters": 2387,
+      "train_and_eval_seconds": 2.9906039237976074,
+      "peak_cuda_allocated_mb": 123.7431640625
+    },
+    {
+      "seed": 55,
+      "method": "rope3d_axis_independent_random",
+      "step": 400,
+      "val_r1": 0.9088541865348816,
+      "center_weight": 0.3132616877555847,
+      "shape_weight": 0.19900019466876984,
+      "parameters": 2387,
+      "train_and_eval_seconds": 2.9722673892974854,
+      "peak_cuda_allocated_mb": 123.7431640625
+    }
+  ],
+  "limitations": [
+    "Synthetic paired support, no real images or geometry predictor.",
+    "No official HRoPE or WorldRoPE implementation in this experiment.",
+    "Uncertainty oracle receives injected position error covariance.",
+    "No multiple-comparison correction; bootstrap intervals exploratory."
+  ],
+  "elapsed_seconds": 97.39627170562744
+}

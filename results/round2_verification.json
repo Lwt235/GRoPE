@@ -1,0 +1,50 @@
+{
+  "unit_tests": 16,
+  "source_snapshots": {
+    "round2_identity": 12,
+    "round2_rendered": 19,
+    "round2_rgb_geometry": 20,
+    "round2_calibration": 24
+  },
+  "finite_per_scene": {
+    "round2_identity": 270,
+    "round2_rendered": 700,
+    "round2_rgb_geometry": 100,
+    "round2_calibration": 60
+  },
+  "checkpoint_replay": [
+    {
+      "method": "rope3d",
+      "max_probability_difference_vs_float16_archive": 0.00024437904357910156
+    },
+    {
+      "method": "rope_normal",
+      "max_probability_difference_vs_float16_archive": 0.0002440810203552246
+    },
+    {
+      "method": "rope_covariance",
+      "max_probability_difference_vs_float16_archive": 0.00024437904357910156
+    },
+    {
+      "method": "rope_normal_uncertainty",
+      "max_probability_difference_vs_float16_archive": 0.000244140625
+    }
+  ],
+  "diagnostic": "Closed-set R1 ranks the 48 real candidates before softmax; visible R1 also counts mistaken dustbin rejection.",
+  "identity_position_invariance": true,
+  "rendered_position_invariance": true,
+  "training_runs": {
+    "identity": 30,
+    "rendered": 100,
+    "rgb_predictors": 5
+  },
+  "gate_rule_uses_validation_only": "mean oracle-validation normal gain >= 0.5 percentage points and positive in at least 80% of seeds; test results do not trigger gates",
+  "passed": true,
+  "fresh_calibration": {
+    "models_frozen": true,
+    "selection": "validation CE only; recorded grid minima checked",
+    "test_seed_rule": "900+seed",
+    "ap_invariance_checked": true,
+    "records": 30
+  }
+}
