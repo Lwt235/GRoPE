@@ -1,0 +1,4322 @@
+[
+  {
+    "seed": 11,
+    "method": "center",
+    "step": 50,
+    "train_loss": 0.4800318777561188,
+    "grad_norm": 0.1615932285785675,
+    "val_r1": 0.7985026240348816,
+    "val_loss": 0.4878452718257904
+  },
+  {
+    "seed": 11,
+    "method": "center",
+    "step": 100,
+    "train_loss": 0.47682270407676697,
+    "grad_norm": 0.16091115772724152,
+    "val_r1": 0.8014323115348816,
+    "val_loss": 0.47811493277549744
+  },
+  {
+    "seed": 11,
+    "method": "center",
+    "step": 150,
+    "train_loss": 0.4996241629123688,
+    "grad_norm": 0.16254563629627228,
+    "val_r1": 0.7994791865348816,
+    "val_loss": 0.47551238536834717
+  },
+  {
+    "seed": 11,
+    "method": "center",
+    "step": 200,
+    "train_loss": 0.47818443179130554,
+    "grad_norm": 0.1710757464170456,
+    "val_r1": 0.7998046875,
+    "val_loss": 0.471271276473999
+  },
+  {
+    "seed": 11,
+    "method": "center",
+    "step": 250,
+    "train_loss": 0.4285435378551483,
+    "grad_norm": 0.17426715791225433,
+    "val_r1": 0.794921875,
+    "val_loss": 0.4699256420135498
+  },
+  {
+    "seed": 11,
+    "method": "center",
+    "step": 300,
+    "train_loss": 0.4577595591545105,
+    "grad_norm": 0.20426343381404877,
+    "val_r1": 0.7955729365348816,
+    "val_loss": 0.46927180886268616
+  },
+  {
+    "seed": 11,
+    "method": "center",
+    "step": 350,
+    "train_loss": 0.36995381116867065,
+    "grad_norm": 0.19385215640068054,
+    "val_r1": 0.7962239384651184,
+    "val_loss": 0.46681416034698486
+  },
+  {
+    "seed": 11,
+    "method": "center",
+    "step": 400,
+    "train_loss": 0.41635459661483765,
+    "grad_norm": 0.20320135354995728,
+    "val_r1": 0.7952473759651184,
+    "val_loss": 0.4729067385196686
+  },
+  {
+    "seed": 11,
+    "method": "rope3d_axis",
+    "step": 50,
+    "train_loss": 0.4502697288990021,
+    "grad_norm": 0.617950439453125,
+    "val_r1": 0.8880208134651184,
+    "val_loss": 0.480145663022995
+  },
+  {
+    "seed": 11,
+    "method": "rope3d_axis",
+    "step": 100,
+    "train_loss": 0.36436864733695984,
+    "grad_norm": 0.4885666072368622,
+    "val_r1": 0.9108073115348816,
+    "val_loss": 0.39926961064338684
+  },
+  {
+    "seed": 11,
+    "method": "rope3d_axis",
+    "step": 150,
+    "train_loss": 0.3746095895767212,
+    "grad_norm": 0.4256138205528259,
+    "val_r1": 0.91796875,
+    "val_loss": 0.3562606871128082
+  },
+  {
+    "seed": 11,
+    "method": "rope3d_axis",
+    "step": 200,
+    "train_loss": 0.31704530119895935,
+    "grad_norm": 0.3987202048301697,
+    "val_r1": 0.9212239384651184,
+    "val_loss": 0.3238288164138794
+  },
+  {
+    "seed": 11,
+    "method": "rope3d_axis",
+    "step": 250,
+    "train_loss": 0.2732205390930176,
+    "grad_norm": 0.3184194564819336,
+    "val_r1": 0.9248046875,
+    "val_loss": 0.29982730746269226
+  },
+  {
+    "seed": 11,
+    "method": "rope3d_axis",
+    "step": 300,
+    "train_loss": 0.23844362795352936,
+    "grad_norm": 0.27343451976776123,
+    "val_r1": 0.9248046875,
+    "val_loss": 0.2803572416305542
+  },
+  {
+    "seed": 11,
+    "method": "rope3d_axis",
+    "step": 350,
+    "train_loss": 0.2095308005809784,
+    "grad_norm": 0.27177149057388306,
+    "val_r1": 0.9244791865348816,
+    "val_loss": 0.26476263999938965
+  },
+  {
+    "seed": 11,
+    "method": "rope3d_axis",
+    "step": 400,
+    "train_loss": 0.23281478881835938,
+    "grad_norm": 0.2266097217798233,
+    "val_r1": 0.9251301884651184,
+    "val_loss": 0.2512975037097931
+  },
+  {
+    "seed": 11,
+    "method": "rope3d_oblique",
+    "step": 50,
+    "train_loss": 0.44830322265625,
+    "grad_norm": 0.6102442741394043,
+    "val_r1": 0.8815104365348816,
+    "val_loss": 0.48902130126953125
+  },
+  {
+    "seed": 11,
+    "method": "rope3d_oblique",
+    "step": 100,
+    "train_loss": 0.38279595971107483,
+    "grad_norm": 0.48423582315444946,
+    "val_r1": 0.900390625,
+    "val_loss": 0.4037559926509857
+  },
+  {
+    "seed": 11,
+    "method": "rope3d_oblique",
+    "step": 150,
+    "train_loss": 0.3680003881454468,
+    "grad_norm": 0.4082075357437134,
+    "val_r1": 0.9026692509651184,
+    "val_loss": 0.3603649139404297
+  },
+  {
+    "seed": 11,
+    "method": "rope3d_oblique",
+    "step": 200,
+    "train_loss": 0.29846879839897156,
+    "grad_norm": 0.3601597249507904,
+    "val_r1": 0.904296875,
+    "val_loss": 0.33172544836997986
+  },
+  {
+    "seed": 11,
+    "method": "rope3d_oblique",
+    "step": 250,
+    "train_loss": 0.27594083547592163,
+    "grad_norm": 0.29488682746887207,
+    "val_r1": 0.9095051884651184,
+    "val_loss": 0.3110908269882202
+  },
+  {
+    "seed": 11,
+    "method": "rope3d_oblique",
+    "step": 300,
+    "train_loss": 0.24501359462738037,
+    "grad_norm": 0.25149020552635193,
+    "val_r1": 0.9095051884651184,
+    "val_loss": 0.297573447227478
+  },
+  {
+    "seed": 11,
+    "method": "rope3d_oblique",
+    "step": 350,
+    "train_loss": 0.22787675261497498,
+    "grad_norm": 0.24276258051395416,
+    "val_r1": 0.9085286259651184,
+    "val_loss": 0.2851548492908478
+  },
+  {
+    "seed": 11,
+    "method": "rope3d_oblique",
+    "step": 400,
+    "train_loss": 0.24119560420513153,
+    "grad_norm": 0.20977374911308289,
+    "val_r1": 0.912109375,
+    "val_loss": 0.2756021022796631
+  },
+  {
+    "seed": 11,
+    "method": "expected_oblique_support",
+    "step": 50,
+    "train_loss": 0.7347054481506348,
+    "grad_norm": 0.7650178074836731,
+    "val_r1": 0.7880859375,
+    "val_loss": 0.7575429081916809
+  },
+  {
+    "seed": 11,
+    "method": "expected_oblique_support",
+    "step": 100,
+    "train_loss": 0.6431190967559814,
+    "grad_norm": 0.605370044708252,
+    "val_r1": 0.7945963740348816,
+    "val_loss": 0.673647403717041
+  },
+  {
+    "seed": 11,
+    "method": "expected_oblique_support",
+    "step": 150,
+    "train_loss": 0.6303750872612,
+    "grad_norm": 0.5573343634605408,
+    "val_r1": 0.8033854365348816,
+    "val_loss": 0.6173954606056213
+  },
+  {
+    "seed": 11,
+    "method": "expected_oblique_support",
+    "step": 200,
+    "train_loss": 0.5503939986228943,
+    "grad_norm": 0.5012915134429932,
+    "val_r1": 0.8121744990348816,
+    "val_loss": 0.5774804949760437
+  },
+  {
+    "seed": 11,
+    "method": "expected_oblique_support",
+    "step": 250,
+    "train_loss": 0.5058707594871521,
+    "grad_norm": 0.44694453477859497,
+    "val_r1": 0.8199869990348816,
+    "val_loss": 0.5397605299949646
+  },
+  {
+    "seed": 11,
+    "method": "expected_oblique_support",
+    "step": 300,
+    "train_loss": 0.473257839679718,
+    "grad_norm": 0.413556307554245,
+    "val_r1": 0.82421875,
+    "val_loss": 0.5092423558235168
+  },
+  {
+    "seed": 11,
+    "method": "expected_oblique_support",
+    "step": 350,
+    "train_loss": 0.4130396842956543,
+    "grad_norm": 0.4031316339969635,
+    "val_r1": 0.828125,
+    "val_loss": 0.482800155878067
+  },
+  {
+    "seed": 11,
+    "method": "expected_oblique_support",
+    "step": 400,
+    "train_loss": 0.4325733184814453,
+    "grad_norm": 0.3508767783641815,
+    "val_r1": 0.8333333134651184,
+    "val_loss": 0.4597569704055786
+  },
+  {
+    "seed": 11,
+    "method": "rope3d_axis_normal",
+    "step": 50,
+    "train_loss": 0.34416618943214417,
+    "grad_norm": 0.4857489764690399,
+    "val_r1": 0.9430338740348816,
+    "val_loss": 0.36656150221824646
+  },
+  {
+    "seed": 11,
+    "method": "rope3d_axis_normal",
+    "step": 100,
+    "train_loss": 0.2676313519477844,
+    "grad_norm": 0.37300923466682434,
+    "val_r1": 0.9606119990348816,
+    "val_loss": 0.297823429107666
+  },
+  {
+    "seed": 11,
+    "method": "rope3d_axis_normal",
+    "step": 150,
+    "train_loss": 0.27568694949150085,
+    "grad_norm": 0.3227490782737732,
+    "val_r1": 0.9619140625,
+    "val_loss": 0.26056399941444397
+  },
+  {
+    "seed": 11,
+    "method": "rope3d_axis_normal",
+    "step": 200,
+    "train_loss": 0.22036893665790558,
+    "grad_norm": 0.29624271392822266,
+    "val_r1": 0.9645182490348816,
+    "val_loss": 0.23260082304477692
+  },
+  {
+    "seed": 11,
+    "method": "rope3d_axis_normal",
+    "step": 250,
+    "train_loss": 0.19250892102718353,
+    "grad_norm": 0.23324063420295715,
+    "val_r1": 0.9671223759651184,
+    "val_loss": 0.2115468531847
+  },
+  {
+    "seed": 11,
+    "method": "rope3d_axis_normal",
+    "step": 300,
+    "train_loss": 0.16771000623703003,
+    "grad_norm": 0.19573551416397095,
+    "val_r1": 0.9658203125,
+    "val_loss": 0.1940935254096985
+  },
+  {
+    "seed": 11,
+    "method": "rope3d_axis_normal",
+    "step": 350,
+    "train_loss": 0.1376272290945053,
+    "grad_norm": 0.19205141067504883,
+    "val_r1": 0.9674479365348816,
+    "val_loss": 0.18015968799591064
+  },
+  {
+    "seed": 11,
+    "method": "rope3d_axis_normal",
+    "step": 400,
+    "train_loss": 0.15156960487365723,
+    "grad_norm": 0.16541282832622528,
+    "val_r1": 0.9680989384651184,
+    "val_loss": 0.16776752471923828
+  },
+  {
+    "seed": 11,
+    "method": "rope3d_axis_scale",
+    "step": 50,
+    "train_loss": 0.37181955575942993,
+    "grad_norm": 0.5200251340866089,
+    "val_r1": 0.9319661259651184,
+    "val_loss": 0.3905723989009857
+  },
+  {
+    "seed": 11,
+    "method": "rope3d_axis_scale",
+    "step": 100,
+    "train_loss": 0.2898821234703064,
+    "grad_norm": 0.40007179975509644,
+    "val_r1": 0.9469401240348816,
+    "val_loss": 0.3187897503376007
+  },
+  {
+    "seed": 11,
+    "method": "rope3d_axis_scale",
+    "step": 150,
+    "train_loss": 0.3099307417869568,
+    "grad_norm": 0.35300397872924805,
+    "val_r1": 0.9527994990348816,
+    "val_loss": 0.2802838981151581
+  },
+  {
+    "seed": 11,
+    "method": "rope3d_axis_scale",
+    "step": 200,
+    "train_loss": 0.25102630257606506,
+    "grad_norm": 0.3212895095348358,
+    "val_r1": 0.9534505009651184,
+    "val_loss": 0.2514159381389618
+  },
+  {
+    "seed": 11,
+    "method": "rope3d_axis_scale",
+    "step": 250,
+    "train_loss": 0.20706680417060852,
+    "grad_norm": 0.24544650316238403,
+    "val_r1": 0.9567057490348816,
+    "val_loss": 0.22946321964263916
+  },
+  {
+    "seed": 11,
+    "method": "rope3d_axis_scale",
+    "step": 300,
+    "train_loss": 0.1822536140680313,
+    "grad_norm": 0.21359658241271973,
+    "val_r1": 0.9563801884651184,
+    "val_loss": 0.21219474077224731
+  },
+  {
+    "seed": 11,
+    "method": "rope3d_axis_scale",
+    "step": 350,
+    "train_loss": 0.15672869980335236,
+    "grad_norm": 0.21220248937606812,
+    "val_r1": 0.9560546875,
+    "val_loss": 0.19775409996509552
+  },
+  {
+    "seed": 11,
+    "method": "rope3d_axis_scale",
+    "step": 400,
+    "train_loss": 0.18353505432605743,
+    "grad_norm": 0.17993110418319702,
+    "val_r1": 0.9567057490348816,
+    "val_loss": 0.18527881801128387
+  },
+  {
+    "seed": 11,
+    "method": "rope3d_axis_logcov",
+    "step": 50,
+    "train_loss": 0.1964811533689499,
+    "grad_norm": 0.3065674304962158,
+    "val_r1": 0.982421875,
+    "val_loss": 0.20914621651172638
+  },
+  {
+    "seed": 11,
+    "method": "rope3d_axis_logcov",
+    "step": 100,
+    "train_loss": 0.14637167751789093,
+    "grad_norm": 0.22643381357192993,
+    "val_r1": 0.9869791865348816,
+    "val_loss": 0.1646258383989334
+  },
+  {
+    "seed": 11,
+    "method": "rope3d_axis_logcov",
+    "step": 150,
+    "train_loss": 0.15359000861644745,
+    "grad_norm": 0.202571302652359,
+    "val_r1": 0.986328125,
+    "val_loss": 0.14039494097232819
+  },
+  {
+    "seed": 11,
+    "method": "rope3d_axis_logcov",
+    "step": 200,
+    "train_loss": 0.11161123961210251,
+    "grad_norm": 0.1815670132637024,
+    "val_r1": 0.9873046875,
+    "val_loss": 0.12316787242889404
+  },
+  {
+    "seed": 11,
+    "method": "rope3d_axis_logcov",
+    "step": 250,
+    "train_loss": 0.09537488967180252,
+    "grad_norm": 0.1378568559885025,
+    "val_r1": 0.9879557490348816,
+    "val_loss": 0.10977611690759659
+  },
+  {
+    "seed": 11,
+    "method": "rope3d_axis_logcov",
+    "step": 300,
+    "train_loss": 0.08580327033996582,
+    "grad_norm": 0.11493591964244843,
+    "val_r1": 0.9886067509651184,
+    "val_loss": 0.09962260723114014
+  },
+  {
+    "seed": 11,
+    "method": "rope3d_axis_logcov",
+    "step": 350,
+    "train_loss": 0.06814281642436981,
+    "grad_norm": 0.11265895515680313,
+    "val_r1": 0.9899088740348816,
+    "val_loss": 0.09159281104803085
+  },
+  {
+    "seed": 11,
+    "method": "rope3d_axis_logcov",
+    "step": 400,
+    "train_loss": 0.07143877446651459,
+    "grad_norm": 0.09991588443517685,
+    "val_r1": 0.9889323115348816,
+    "val_loss": 0.08440385013818741
+  },
+  {
+    "seed": 11,
+    "method": "rope3d_axis_projected_logcov",
+    "step": 50,
+    "train_loss": 0.27899765968322754,
+    "grad_norm": 0.41138362884521484,
+    "val_r1": 0.9524739384651184,
+    "val_loss": 0.29573526978492737
+  },
+  {
+    "seed": 11,
+    "method": "rope3d_axis_projected_logcov",
+    "step": 100,
+    "train_loss": 0.20227225124835968,
+    "grad_norm": 0.2961362898349762,
+    "val_r1": 0.96484375,
+    "val_loss": 0.23963725566864014
+  },
+  {
+    "seed": 11,
+    "method": "rope3d_axis_projected_logcov",
+    "step": 150,
+    "train_loss": 0.21812398731708527,
+    "grad_norm": 0.26834914088249207,
+    "val_r1": 0.9645182490348816,
+    "val_loss": 0.20914733409881592
+  },
+  {
+    "seed": 11,
+    "method": "rope3d_axis_projected_logcov",
+    "step": 200,
+    "train_loss": 0.18849150836467743,
+    "grad_norm": 0.24808530509471893,
+    "val_r1": 0.9674479365348816,
+    "val_loss": 0.18654806911945343
+  },
+  {
+    "seed": 11,
+    "method": "rope3d_axis_projected_logcov",
+    "step": 250,
+    "train_loss": 0.1496238261461258,
+    "grad_norm": 0.18729284405708313,
+    "val_r1": 0.9690755009651184,
+    "val_loss": 0.16940338909626007
+  },
+  {
+    "seed": 11,
+    "method": "rope3d_axis_projected_logcov",
+    "step": 300,
+    "train_loss": 0.1358414739370346,
+    "grad_norm": 0.16124804317951202,
+    "val_r1": 0.9680989384651184,
+    "val_loss": 0.1562439650297165
+  },
+  {
+    "seed": 11,
+    "method": "rope3d_axis_projected_logcov",
+    "step": 350,
+    "train_loss": 0.10251396149396896,
+    "grad_norm": 0.1578359454870224,
+    "val_r1": 0.9697265625,
+    "val_loss": 0.14593590795993805
+  },
+  {
+    "seed": 11,
+    "method": "rope3d_axis_projected_logcov",
+    "step": 400,
+    "train_loss": 0.10613320767879486,
+    "grad_norm": 0.13072215020656586,
+    "val_r1": 0.9703776240348816,
+    "val_loss": 0.1371511071920395
+  },
+  {
+    "seed": 11,
+    "method": "rope3d_axis_bounded_logcov",
+    "step": 50,
+    "train_loss": 0.33303993940353394,
+    "grad_norm": 0.4697478711605072,
+    "val_r1": 0.9498698115348816,
+    "val_loss": 0.35187339782714844
+  },
+  {
+    "seed": 11,
+    "method": "rope3d_axis_bounded_logcov",
+    "step": 100,
+    "train_loss": 0.25445473194122314,
+    "grad_norm": 0.3576163947582245,
+    "val_r1": 0.9664713740348816,
+    "val_loss": 0.28480449318885803
+  },
+  {
+    "seed": 11,
+    "method": "rope3d_axis_bounded_logcov",
+    "step": 150,
+    "train_loss": 0.26294395327568054,
+    "grad_norm": 0.313271701335907,
+    "val_r1": 0.96875,
+    "val_loss": 0.24825803935527802
+  },
+  {
+    "seed": 11,
+    "method": "rope3d_axis_bounded_logcov",
+    "step": 200,
+    "train_loss": 0.21286985278129578,
+    "grad_norm": 0.2817944586277008,
+    "val_r1": 0.96875,
+    "val_loss": 0.22110669314861298
+  },
+  {
+    "seed": 11,
+    "method": "rope3d_axis_bounded_logcov",
+    "step": 250,
+    "train_loss": 0.18593193590641022,
+    "grad_norm": 0.22578224539756775,
+    "val_r1": 0.96875,
+    "val_loss": 0.20038366317749023
+  },
+  {
+    "seed": 11,
+    "method": "rope3d_axis_bounded_logcov",
+    "step": 300,
+    "train_loss": 0.15964524447917938,
+    "grad_norm": 0.18650765717029572,
+    "val_r1": 0.9690755009651184,
+    "val_loss": 0.18369068205356598
+  },
+  {
+    "seed": 11,
+    "method": "rope3d_axis_bounded_logcov",
+    "step": 350,
+    "train_loss": 0.12939020991325378,
+    "grad_norm": 0.18465164303779602,
+    "val_r1": 0.9703776240348816,
+    "val_loss": 0.1699763536453247
+  },
+  {
+    "seed": 11,
+    "method": "rope3d_axis_bounded_logcov",
+    "step": 400,
+    "train_loss": 0.14255881309509277,
+    "grad_norm": 0.15935400128364563,
+    "val_r1": 0.9729817509651184,
+    "val_loss": 0.15794582664966583
+  },
+  {
+    "seed": 11,
+    "method": "rope3d_axis_moments",
+    "step": 50,
+    "train_loss": 0.3646349012851715,
+    "grad_norm": 0.5146040916442871,
+    "val_r1": 0.9342448115348816,
+    "val_loss": 0.38763704895973206
+  },
+  {
+    "seed": 11,
+    "method": "rope3d_axis_moments",
+    "step": 100,
+    "train_loss": 0.28658169507980347,
+    "grad_norm": 0.3920273184776306,
+    "val_r1": 0.9524739384651184,
+    "val_loss": 0.3165754973888397
+  },
+  {
+    "seed": 11,
+    "method": "rope3d_axis_moments",
+    "step": 150,
+    "train_loss": 0.2957499027252197,
+    "grad_norm": 0.34117284417152405,
+    "val_r1": 0.9560546875,
+    "val_loss": 0.2780975103378296
+  },
+  {
+    "seed": 11,
+    "method": "rope3d_axis_moments",
+    "step": 200,
+    "train_loss": 0.2407197505235672,
+    "grad_norm": 0.31319206953048706,
+    "val_r1": 0.9563801884651184,
+    "val_loss": 0.24911832809448242
+  },
+  {
+    "seed": 11,
+    "method": "rope3d_axis_moments",
+    "step": 250,
+    "train_loss": 0.2052387297153473,
+    "grad_norm": 0.2444123923778534,
+    "val_r1": 0.9583333134651184,
+    "val_loss": 0.22713112831115723
+  },
+  {
+    "seed": 11,
+    "method": "rope3d_axis_moments",
+    "step": 300,
+    "train_loss": 0.1763153076171875,
+    "grad_norm": 0.20910345017910004,
+    "val_r1": 0.95703125,
+    "val_loss": 0.20933474600315094
+  },
+  {
+    "seed": 11,
+    "method": "rope3d_axis_moments",
+    "step": 350,
+    "train_loss": 0.15078632533550262,
+    "grad_norm": 0.20595596730709076,
+    "val_r1": 0.9596354365348816,
+    "val_loss": 0.1947871446609497
+  },
+  {
+    "seed": 11,
+    "method": "rope3d_axis_moments",
+    "step": 400,
+    "train_loss": 0.16133859753608704,
+    "grad_norm": 0.17053784430027008,
+    "val_r1": 0.9615885615348816,
+    "val_loss": 0.18208356201648712
+  },
+  {
+    "seed": 11,
+    "method": "rope3d_axis_random_control",
+    "step": 50,
+    "train_loss": 0.46455544233322144,
+    "grad_norm": 0.6481194496154785,
+    "val_r1": 0.8662109375,
+    "val_loss": 0.49533939361572266
+  },
+  {
+    "seed": 11,
+    "method": "rope3d_axis_random_control",
+    "step": 100,
+    "train_loss": 0.3749426305294037,
+    "grad_norm": 0.5030596852302551,
+    "val_r1": 0.8932291865348816,
+    "val_loss": 0.41119131445884705
+  },
+  {
+    "seed": 11,
+    "method": "rope3d_axis_random_control",
+    "step": 150,
+    "train_loss": 0.3883835971355438,
+    "grad_norm": 0.4401496350765228,
+    "val_r1": 0.9036458134651184,
+    "val_loss": 0.36571574211120605
+  },
+  {
+    "seed": 11,
+    "method": "rope3d_axis_random_control",
+    "step": 200,
+    "train_loss": 0.3248693346977234,
+    "grad_norm": 0.40702930092811584,
+    "val_r1": 0.9124348759651184,
+    "val_loss": 0.33162808418273926
+  },
+  {
+    "seed": 11,
+    "method": "rope3d_axis_random_control",
+    "step": 250,
+    "train_loss": 0.2790515720844269,
+    "grad_norm": 0.3324759900569916,
+    "val_r1": 0.9143880009651184,
+    "val_loss": 0.30642953515052795
+  },
+  {
+    "seed": 11,
+    "method": "rope3d_axis_random_control",
+    "step": 300,
+    "train_loss": 0.23968768119812012,
+    "grad_norm": 0.2765843868255615,
+    "val_r1": 0.916015625,
+    "val_loss": 0.28604933619499207
+  },
+  {
+    "seed": 11,
+    "method": "rope3d_axis_random_control",
+    "step": 350,
+    "train_loss": 0.2166491597890854,
+    "grad_norm": 0.27871987223625183,
+    "val_r1": 0.916015625,
+    "val_loss": 0.26923561096191406
+  },
+  {
+    "seed": 11,
+    "method": "rope3d_axis_random_control",
+    "step": 400,
+    "train_loss": 0.2359129935503006,
+    "grad_norm": 0.22882823646068573,
+    "val_r1": 0.9235026240348816,
+    "val_loss": 0.25546732544898987
+  },
+  {
+    "seed": 11,
+    "method": "expected_axis_uncertainty_oracle_logcov",
+    "step": 50,
+    "train_loss": 0.20322246849536896,
+    "grad_norm": 0.33026012778282166,
+    "val_r1": 0.986328125,
+    "val_loss": 0.21708214282989502
+  },
+  {
+    "seed": 11,
+    "method": "expected_axis_uncertainty_oracle_logcov",
+    "step": 100,
+    "train_loss": 0.1557263731956482,
+    "grad_norm": 0.2449987828731537,
+    "val_r1": 0.98828125,
+    "val_loss": 0.1718376725912094
+  },
+  {
+    "seed": 11,
+    "method": "expected_axis_uncertainty_oracle_logcov",
+    "step": 150,
+    "train_loss": 0.15824495255947113,
+    "grad_norm": 0.21765431761741638,
+    "val_r1": 0.9879557490348816,
+    "val_loss": 0.14686232805252075
+  },
+  {
+    "seed": 11,
+    "method": "expected_axis_uncertainty_oracle_logcov",
+    "step": 200,
+    "train_loss": 0.11809993535280228,
+    "grad_norm": 0.19570262730121613,
+    "val_r1": 0.9889323115348816,
+    "val_loss": 0.12843506038188934
+  },
+  {
+    "seed": 11,
+    "method": "expected_axis_uncertainty_oracle_logcov",
+    "step": 250,
+    "train_loss": 0.0995883047580719,
+    "grad_norm": 0.1510017067193985,
+    "val_r1": 0.9892578125,
+    "val_loss": 0.11397361755371094
+  },
+  {
+    "seed": 11,
+    "method": "expected_axis_uncertainty_oracle_logcov",
+    "step": 300,
+    "train_loss": 0.08920709788799286,
+    "grad_norm": 0.12209240347146988,
+    "val_r1": 0.9912109375,
+    "val_loss": 0.10294497758150101
+  },
+  {
+    "seed": 11,
+    "method": "expected_axis_uncertainty_oracle_logcov",
+    "step": 350,
+    "train_loss": 0.07198737561702728,
+    "grad_norm": 0.12011482566595078,
+    "val_r1": 0.9905598759651184,
+    "val_loss": 0.09429196268320084
+  },
+  {
+    "seed": 11,
+    "method": "expected_axis_uncertainty_oracle_logcov",
+    "step": 400,
+    "train_loss": 0.07368073612451553,
+    "grad_norm": 0.10203592479228973,
+    "val_r1": 0.9899088740348816,
+    "val_loss": 0.08635580539703369
+  },
+  {
+    "seed": 22,
+    "method": "center",
+    "step": 50,
+    "train_loss": 0.5218140482902527,
+    "grad_norm": 0.17936626076698303,
+    "val_r1": 0.802734375,
+    "val_loss": 0.48782822489738464
+  },
+  {
+    "seed": 22,
+    "method": "center",
+    "step": 100,
+    "train_loss": 0.4833277761936188,
+    "grad_norm": 0.16790485382080078,
+    "val_r1": 0.8030598759651184,
+    "val_loss": 0.47730645537376404
+  },
+  {
+    "seed": 22,
+    "method": "center",
+    "step": 150,
+    "train_loss": 0.5601788759231567,
+    "grad_norm": 0.15782108902931213,
+    "val_r1": 0.8050130009651184,
+    "val_loss": 0.4709078371524811
+  },
+  {
+    "seed": 22,
+    "method": "center",
+    "step": 200,
+    "train_loss": 0.4014231264591217,
+    "grad_norm": 0.17061039805412292,
+    "val_r1": 0.8043619990348816,
+    "val_loss": 0.4660770893096924
+  },
+  {
+    "seed": 22,
+    "method": "center",
+    "step": 250,
+    "train_loss": 0.3991335928440094,
+    "grad_norm": 0.17955796420574188,
+    "val_r1": 0.8014323115348816,
+    "val_loss": 0.4656887352466583
+  },
+  {
+    "seed": 22,
+    "method": "center",
+    "step": 300,
+    "train_loss": 0.44203683733940125,
+    "grad_norm": 0.192246213555336,
+    "val_r1": 0.7994791865348816,
+    "val_loss": 0.4685586988925934
+  },
+  {
+    "seed": 22,
+    "method": "center",
+    "step": 350,
+    "train_loss": 0.419034481048584,
+    "grad_norm": 0.19841553270816803,
+    "val_r1": 0.796875,
+    "val_loss": 0.4655434191226959
+  },
+  {
+    "seed": 22,
+    "method": "center",
+    "step": 400,
+    "train_loss": 0.41484954953193665,
+    "grad_norm": 0.22130021452903748,
+    "val_r1": 0.8011067509651184,
+    "val_loss": 0.46474042534828186
+  },
+  {
+    "seed": 22,
+    "method": "rope3d_axis",
+    "step": 50,
+    "train_loss": 0.4635470509529114,
+    "grad_norm": 0.6098427176475525,
+    "val_r1": 0.9069010615348816,
+    "val_loss": 0.44152164459228516
+  },
+  {
+    "seed": 22,
+    "method": "rope3d_axis",
+    "step": 100,
+    "train_loss": 0.3814581334590912,
+    "grad_norm": 0.539680540561676,
+    "val_r1": 0.9215494990348816,
+    "val_loss": 0.37447670102119446
+  },
+  {
+    "seed": 22,
+    "method": "rope3d_axis",
+    "step": 150,
+    "train_loss": 0.37720972299575806,
+    "grad_norm": 0.44329437613487244,
+    "val_r1": 0.9244791865348816,
+    "val_loss": 0.33377811312675476
+  },
+  {
+    "seed": 22,
+    "method": "rope3d_axis",
+    "step": 200,
+    "train_loss": 0.26102346181869507,
+    "grad_norm": 0.3741903603076935,
+    "val_r1": 0.9235026240348816,
+    "val_loss": 0.30615636706352234
+  },
+  {
+    "seed": 22,
+    "method": "rope3d_axis",
+    "step": 250,
+    "train_loss": 0.22488902509212494,
+    "grad_norm": 0.3051069378852844,
+    "val_r1": 0.9293619990348816,
+    "val_loss": 0.2819789946079254
+  },
+  {
+    "seed": 22,
+    "method": "rope3d_axis",
+    "step": 300,
+    "train_loss": 0.2662971019744873,
+    "grad_norm": 0.2944278120994568,
+    "val_r1": 0.9261067509651184,
+    "val_loss": 0.2642213702201843
+  },
+  {
+    "seed": 22,
+    "method": "rope3d_axis",
+    "step": 350,
+    "train_loss": 0.21443593502044678,
+    "grad_norm": 0.259199321269989,
+    "val_r1": 0.9290364384651184,
+    "val_loss": 0.24894064664840698
+  },
+  {
+    "seed": 22,
+    "method": "rope3d_axis",
+    "step": 400,
+    "train_loss": 0.21730908751487732,
+    "grad_norm": 0.2492770552635193,
+    "val_r1": 0.9306640625,
+    "val_loss": 0.23648087680339813
+  },
+  {
+    "seed": 22,
+    "method": "rope3d_oblique",
+    "step": 50,
+    "train_loss": 0.4561712443828583,
+    "grad_norm": 0.5841918587684631,
+    "val_r1": 0.90234375,
+    "val_loss": 0.4462409019470215
+  },
+  {
+    "seed": 22,
+    "method": "rope3d_oblique",
+    "step": 100,
+    "train_loss": 0.36382052302360535,
+    "grad_norm": 0.49769827723503113,
+    "val_r1": 0.9150390625,
+    "val_loss": 0.38174280524253845
+  },
+  {
+    "seed": 22,
+    "method": "rope3d_oblique",
+    "step": 150,
+    "train_loss": 0.3691031038761139,
+    "grad_norm": 0.4319145083427429,
+    "val_r1": 0.9215494990348816,
+    "val_loss": 0.3396542966365814
+  },
+  {
+    "seed": 22,
+    "method": "rope3d_oblique",
+    "step": 200,
+    "train_loss": 0.2514912188053131,
+    "grad_norm": 0.35581862926483154,
+    "val_r1": 0.91796875,
+    "val_loss": 0.31076693534851074
+  },
+  {
+    "seed": 22,
+    "method": "rope3d_oblique",
+    "step": 250,
+    "train_loss": 0.25360891222953796,
+    "grad_norm": 0.2907397747039795,
+    "val_r1": 0.9235026240348816,
+    "val_loss": 0.2879253029823303
+  },
+  {
+    "seed": 22,
+    "method": "rope3d_oblique",
+    "step": 300,
+    "train_loss": 0.26947569847106934,
+    "grad_norm": 0.28870561718940735,
+    "val_r1": 0.923828125,
+    "val_loss": 0.27010294795036316
+  },
+  {
+    "seed": 22,
+    "method": "rope3d_oblique",
+    "step": 350,
+    "train_loss": 0.2244165688753128,
+    "grad_norm": 0.23877649009227753,
+    "val_r1": 0.9215494990348816,
+    "val_loss": 0.2588741183280945
+  },
+  {
+    "seed": 22,
+    "method": "rope3d_oblique",
+    "step": 400,
+    "train_loss": 0.2193993628025055,
+    "grad_norm": 0.2279253602027893,
+    "val_r1": 0.923828125,
+    "val_loss": 0.24852240085601807
+  },
+  {
+    "seed": 22,
+    "method": "expected_oblique_support",
+    "step": 50,
+    "train_loss": 0.7768827080726624,
+    "grad_norm": 0.7381070852279663,
+    "val_r1": 0.794921875,
+    "val_loss": 0.7557618618011475
+  },
+  {
+    "seed": 22,
+    "method": "expected_oblique_support",
+    "step": 100,
+    "train_loss": 0.6600825190544128,
+    "grad_norm": 0.6178830862045288,
+    "val_r1": 0.8024088740348816,
+    "val_loss": 0.6696383953094482
+  },
+  {
+    "seed": 22,
+    "method": "expected_oblique_support",
+    "step": 150,
+    "train_loss": 0.6366422772407532,
+    "grad_norm": 0.545373797416687,
+    "val_r1": 0.8095703125,
+    "val_loss": 0.6123731732368469
+  },
+  {
+    "seed": 22,
+    "method": "expected_oblique_support",
+    "step": 200,
+    "train_loss": 0.5078988671302795,
+    "grad_norm": 0.49887263774871826,
+    "val_r1": 0.8141276240348816,
+    "val_loss": 0.570014238357544
+  },
+  {
+    "seed": 22,
+    "method": "expected_oblique_support",
+    "step": 250,
+    "train_loss": 0.4853110909461975,
+    "grad_norm": 0.4683816134929657,
+    "val_r1": 0.8271484375,
+    "val_loss": 0.5317797064781189
+  },
+  {
+    "seed": 22,
+    "method": "expected_oblique_support",
+    "step": 300,
+    "train_loss": 0.4695460796356201,
+    "grad_norm": 0.42954021692276,
+    "val_r1": 0.8317057490348816,
+    "val_loss": 0.4988166391849518
+  },
+  {
+    "seed": 22,
+    "method": "expected_oblique_support",
+    "step": 350,
+    "train_loss": 0.4468979239463806,
+    "grad_norm": 0.3856685161590576,
+    "val_r1": 0.837890625,
+    "val_loss": 0.4727230966091156
+  },
+  {
+    "seed": 22,
+    "method": "expected_oblique_support",
+    "step": 400,
+    "train_loss": 0.41449758410453796,
+    "grad_norm": 0.3656068742275238,
+    "val_r1": 0.8411458134651184,
+    "val_loss": 0.4496649205684662
+  },
+  {
+    "seed": 22,
+    "method": "rope3d_axis_normal",
+    "step": 50,
+    "train_loss": 0.3490421175956726,
+    "grad_norm": 0.4816582500934601,
+    "val_r1": 0.9560546875,
+    "val_loss": 0.332895964384079
+  },
+  {
+    "seed": 22,
+    "method": "rope3d_axis_normal",
+    "step": 100,
+    "train_loss": 0.2830677032470703,
+    "grad_norm": 0.41814732551574707,
+    "val_r1": 0.9632161259651184,
+    "val_loss": 0.2749577462673187
+  },
+  {
+    "seed": 22,
+    "method": "rope3d_axis_normal",
+    "step": 150,
+    "train_loss": 0.274442583322525,
+    "grad_norm": 0.3418183922767639,
+    "val_r1": 0.9638671875,
+    "val_loss": 0.23958317935466766
+  },
+  {
+    "seed": 22,
+    "method": "rope3d_axis_normal",
+    "step": 200,
+    "train_loss": 0.1887381672859192,
+    "grad_norm": 0.2777564823627472,
+    "val_r1": 0.9635416865348816,
+    "val_loss": 0.21521538496017456
+  },
+  {
+    "seed": 22,
+    "method": "rope3d_axis_normal",
+    "step": 250,
+    "train_loss": 0.15911336243152618,
+    "grad_norm": 0.2206834852695465,
+    "val_r1": 0.966796875,
+    "val_loss": 0.19437389075756073
+  },
+  {
+    "seed": 22,
+    "method": "rope3d_axis_normal",
+    "step": 300,
+    "train_loss": 0.18480415642261505,
+    "grad_norm": 0.21724161505699158,
+    "val_r1": 0.9661458134651184,
+    "val_loss": 0.17858636379241943
+  },
+  {
+    "seed": 22,
+    "method": "rope3d_axis_normal",
+    "step": 350,
+    "train_loss": 0.14416436851024628,
+    "grad_norm": 0.18129722774028778,
+    "val_r1": 0.9671223759651184,
+    "val_loss": 0.16478948295116425
+  },
+  {
+    "seed": 22,
+    "method": "rope3d_axis_normal",
+    "step": 400,
+    "train_loss": 0.14275865256786346,
+    "grad_norm": 0.17471519112586975,
+    "val_r1": 0.9684244990348816,
+    "val_loss": 0.15293298661708832
+  },
+  {
+    "seed": 22,
+    "method": "rope3d_axis_scale",
+    "step": 50,
+    "train_loss": 0.37959209084510803,
+    "grad_norm": 0.5103998184204102,
+    "val_r1": 0.9423828125,
+    "val_loss": 0.35760757327079773
+  },
+  {
+    "seed": 22,
+    "method": "rope3d_axis_scale",
+    "step": 100,
+    "train_loss": 0.31038206815719604,
+    "grad_norm": 0.447653591632843,
+    "val_r1": 0.9560546875,
+    "val_loss": 0.29796290397644043
+  },
+  {
+    "seed": 22,
+    "method": "rope3d_axis_scale",
+    "step": 150,
+    "train_loss": 0.2995378375053406,
+    "grad_norm": 0.3693400025367737,
+    "val_r1": 0.9537760615348816,
+    "val_loss": 0.2613637149333954
+  },
+  {
+    "seed": 22,
+    "method": "rope3d_axis_scale",
+    "step": 200,
+    "train_loss": 0.1982683390378952,
+    "grad_norm": 0.30148884654045105,
+    "val_r1": 0.9541015625,
+    "val_loss": 0.23627249896526337
+  },
+  {
+    "seed": 22,
+    "method": "rope3d_axis_scale",
+    "step": 250,
+    "train_loss": 0.16486886143684387,
+    "grad_norm": 0.24035924673080444,
+    "val_r1": 0.9580078125,
+    "val_loss": 0.2147645205259323
+  },
+  {
+    "seed": 22,
+    "method": "rope3d_axis_scale",
+    "step": 300,
+    "train_loss": 0.19965629279613495,
+    "grad_norm": 0.23343677818775177,
+    "val_r1": 0.9586588740348816,
+    "val_loss": 0.19836366176605225
+  },
+  {
+    "seed": 22,
+    "method": "rope3d_axis_scale",
+    "step": 350,
+    "train_loss": 0.16081534326076508,
+    "grad_norm": 0.199808269739151,
+    "val_r1": 0.9599609375,
+    "val_loss": 0.18463778495788574
+  },
+  {
+    "seed": 22,
+    "method": "rope3d_axis_scale",
+    "step": 400,
+    "train_loss": 0.16210192441940308,
+    "grad_norm": 0.19810721278190613,
+    "val_r1": 0.9606119990348816,
+    "val_loss": 0.17259669303894043
+  },
+  {
+    "seed": 22,
+    "method": "rope3d_axis_logcov",
+    "step": 50,
+    "train_loss": 0.19213658571243286,
+    "grad_norm": 0.30848753452301025,
+    "val_r1": 0.9873046875,
+    "val_loss": 0.18387673795223236
+  },
+  {
+    "seed": 22,
+    "method": "rope3d_axis_logcov",
+    "step": 100,
+    "train_loss": 0.1619778573513031,
+    "grad_norm": 0.2678408622741699,
+    "val_r1": 0.9899088740348816,
+    "val_loss": 0.14601105451583862
+  },
+  {
+    "seed": 22,
+    "method": "rope3d_axis_logcov",
+    "step": 150,
+    "train_loss": 0.14647042751312256,
+    "grad_norm": 0.21611590683460236,
+    "val_r1": 0.9908854365348816,
+    "val_loss": 0.12325184792280197
+  },
+  {
+    "seed": 22,
+    "method": "rope3d_axis_logcov",
+    "step": 200,
+    "train_loss": 0.09712585806846619,
+    "grad_norm": 0.16083893179893494,
+    "val_r1": 0.9915364384651184,
+    "val_loss": 0.10777345299720764
+  },
+  {
+    "seed": 22,
+    "method": "rope3d_axis_logcov",
+    "step": 250,
+    "train_loss": 0.08379842340946198,
+    "grad_norm": 0.13172559440135956,
+    "val_r1": 0.9908854365348816,
+    "val_loss": 0.09539511799812317
+  },
+  {
+    "seed": 22,
+    "method": "rope3d_axis_logcov",
+    "step": 300,
+    "train_loss": 0.09573802351951599,
+    "grad_norm": 0.13529136776924133,
+    "val_r1": 0.9912109375,
+    "val_loss": 0.08607593923807144
+  },
+  {
+    "seed": 22,
+    "method": "rope3d_axis_logcov",
+    "step": 350,
+    "train_loss": 0.07443509250879288,
+    "grad_norm": 0.10588660091161728,
+    "val_r1": 0.9915364384651184,
+    "val_loss": 0.07776886969804764
+  },
+  {
+    "seed": 22,
+    "method": "rope3d_axis_logcov",
+    "step": 400,
+    "train_loss": 0.06735305488109589,
+    "grad_norm": 0.10042829811573029,
+    "val_r1": 0.9905598759651184,
+    "val_loss": 0.07080117613077164
+  },
+  {
+    "seed": 22,
+    "method": "rope3d_axis_projected_logcov",
+    "step": 50,
+    "train_loss": 0.2972051203250885,
+    "grad_norm": 0.4056958854198456,
+    "val_r1": 0.96484375,
+    "val_loss": 0.2650645077228546
+  },
+  {
+    "seed": 22,
+    "method": "rope3d_axis_projected_logcov",
+    "step": 100,
+    "train_loss": 0.2256152182817459,
+    "grad_norm": 0.3410617709159851,
+    "val_r1": 0.9697265625,
+    "val_loss": 0.21739323437213898
+  },
+  {
+    "seed": 22,
+    "method": "rope3d_axis_projected_logcov",
+    "step": 150,
+    "train_loss": 0.2222464233636856,
+    "grad_norm": 0.2886621057987213,
+    "val_r1": 0.9710286259651184,
+    "val_loss": 0.18879230320453644
+  },
+  {
+    "seed": 22,
+    "method": "rope3d_axis_projected_logcov",
+    "step": 200,
+    "train_loss": 0.15770727396011353,
+    "grad_norm": 0.23030535876750946,
+    "val_r1": 0.9694010615348816,
+    "val_loss": 0.16923010349273682
+  },
+  {
+    "seed": 22,
+    "method": "rope3d_axis_projected_logcov",
+    "step": 250,
+    "train_loss": 0.12594690918922424,
+    "grad_norm": 0.18421205878257751,
+    "val_r1": 0.9733073115348816,
+    "val_loss": 0.15302278101444244
+  },
+  {
+    "seed": 22,
+    "method": "rope3d_axis_projected_logcov",
+    "step": 300,
+    "train_loss": 0.14642181992530823,
+    "grad_norm": 0.1836971491575241,
+    "val_r1": 0.9720051884651184,
+    "val_loss": 0.14065268635749817
+  },
+  {
+    "seed": 22,
+    "method": "rope3d_axis_projected_logcov",
+    "step": 350,
+    "train_loss": 0.10847656428813934,
+    "grad_norm": 0.14958466589450836,
+    "val_r1": 0.9729817509651184,
+    "val_loss": 0.13017742335796356
+  },
+  {
+    "seed": 22,
+    "method": "rope3d_axis_projected_logcov",
+    "step": 400,
+    "train_loss": 0.12132780253887177,
+    "grad_norm": 0.1456713229417801,
+    "val_r1": 0.9742838740348816,
+    "val_loss": 0.121304452419281
+  },
+  {
+    "seed": 22,
+    "method": "rope3d_axis_bounded_logcov",
+    "step": 50,
+    "train_loss": 0.34200194478034973,
+    "grad_norm": 0.4676979184150696,
+    "val_r1": 0.958984375,
+    "val_loss": 0.3204057514667511
+  },
+  {
+    "seed": 22,
+    "method": "rope3d_axis_bounded_logcov",
+    "step": 100,
+    "train_loss": 0.2686632573604584,
+    "grad_norm": 0.39976662397384644,
+    "val_r1": 0.9664713740348816,
+    "val_loss": 0.26423850655555725
+  },
+  {
+    "seed": 22,
+    "method": "rope3d_axis_bounded_logcov",
+    "step": 150,
+    "train_loss": 0.2667257785797119,
+    "grad_norm": 0.33012688159942627,
+    "val_r1": 0.9671223759651184,
+    "val_loss": 0.22998984158039093
+  },
+  {
+    "seed": 22,
+    "method": "rope3d_axis_bounded_logcov",
+    "step": 200,
+    "train_loss": 0.18308037519454956,
+    "grad_norm": 0.26602599024772644,
+    "val_r1": 0.966796875,
+    "val_loss": 0.20609450340270996
+  },
+  {
+    "seed": 22,
+    "method": "rope3d_axis_bounded_logcov",
+    "step": 250,
+    "train_loss": 0.15041016042232513,
+    "grad_norm": 0.21315284073352814,
+    "val_r1": 0.9700520634651184,
+    "val_loss": 0.18588359653949738
+  },
+  {
+    "seed": 22,
+    "method": "rope3d_axis_bounded_logcov",
+    "step": 300,
+    "train_loss": 0.171513170003891,
+    "grad_norm": 0.20673531293869019,
+    "val_r1": 0.9729817509651184,
+    "val_loss": 0.17030923068523407
+  },
+  {
+    "seed": 22,
+    "method": "rope3d_axis_bounded_logcov",
+    "step": 350,
+    "train_loss": 0.13774701952934265,
+    "grad_norm": 0.17461620271205902,
+    "val_r1": 0.9736328125,
+    "val_loss": 0.15665775537490845
+  },
+  {
+    "seed": 22,
+    "method": "rope3d_axis_bounded_logcov",
+    "step": 400,
+    "train_loss": 0.1348283886909485,
+    "grad_norm": 0.16828316450119019,
+    "val_r1": 0.9755859375,
+    "val_loss": 0.14522936940193176
+  },
+  {
+    "seed": 22,
+    "method": "rope3d_axis_moments",
+    "step": 50,
+    "train_loss": 0.37204259634017944,
+    "grad_norm": 0.5076267719268799,
+    "val_r1": 0.9485676884651184,
+    "val_loss": 0.35416778922080994
+  },
+  {
+    "seed": 22,
+    "method": "rope3d_axis_moments",
+    "step": 100,
+    "train_loss": 0.3038719892501831,
+    "grad_norm": 0.43809565901756287,
+    "val_r1": 0.9563801884651184,
+    "val_loss": 0.294587641954422
+  },
+  {
+    "seed": 22,
+    "method": "rope3d_axis_moments",
+    "step": 150,
+    "train_loss": 0.29707014560699463,
+    "grad_norm": 0.35946857929229736,
+    "val_r1": 0.9573567509651184,
+    "val_loss": 0.25819578766822815
+  },
+  {
+    "seed": 22,
+    "method": "rope3d_axis_moments",
+    "step": 200,
+    "train_loss": 0.2004477083683014,
+    "grad_norm": 0.2923778295516968,
+    "val_r1": 0.9580078125,
+    "val_loss": 0.23317702114582062
+  },
+  {
+    "seed": 22,
+    "method": "rope3d_axis_moments",
+    "step": 250,
+    "train_loss": 0.17030318081378937,
+    "grad_norm": 0.23636415600776672,
+    "val_r1": 0.9635416865348816,
+    "val_loss": 0.21157319843769073
+  },
+  {
+    "seed": 22,
+    "method": "rope3d_axis_moments",
+    "step": 300,
+    "train_loss": 0.19872161746025085,
+    "grad_norm": 0.2293083369731903,
+    "val_r1": 0.9612630009651184,
+    "val_loss": 0.195384219288826
+  },
+  {
+    "seed": 22,
+    "method": "rope3d_axis_moments",
+    "step": 350,
+    "train_loss": 0.15592670440673828,
+    "grad_norm": 0.1941109150648117,
+    "val_r1": 0.9622395634651184,
+    "val_loss": 0.18102335929870605
+  },
+  {
+    "seed": 22,
+    "method": "rope3d_axis_moments",
+    "step": 400,
+    "train_loss": 0.1586274355649948,
+    "grad_norm": 0.19017603993415833,
+    "val_r1": 0.96484375,
+    "val_loss": 0.1689712256193161
+  },
+  {
+    "seed": 22,
+    "method": "rope3d_axis_random_control",
+    "step": 50,
+    "train_loss": 0.47324952483177185,
+    "grad_norm": 0.6223022937774658,
+    "val_r1": 0.8893229365348816,
+    "val_loss": 0.4629179537296295
+  },
+  {
+    "seed": 22,
+    "method": "rope3d_axis_random_control",
+    "step": 100,
+    "train_loss": 0.3910110592842102,
+    "grad_norm": 0.5596411824226379,
+    "val_r1": 0.900390625,
+    "val_loss": 0.39143458008766174
+  },
+  {
+    "seed": 22,
+    "method": "rope3d_axis_random_control",
+    "step": 150,
+    "train_loss": 0.39407044649124146,
+    "grad_norm": 0.4636026918888092,
+    "val_r1": 0.9075520634651184,
+    "val_loss": 0.34813788533210754
+  },
+  {
+    "seed": 22,
+    "method": "rope3d_axis_random_control",
+    "step": 200,
+    "train_loss": 0.2774747610092163,
+    "grad_norm": 0.3901098370552063,
+    "val_r1": 0.9127604365348816,
+    "val_loss": 0.3185339570045471
+  },
+  {
+    "seed": 22,
+    "method": "rope3d_axis_random_control",
+    "step": 250,
+    "train_loss": 0.22737851738929749,
+    "grad_norm": 0.31102892756462097,
+    "val_r1": 0.9202473759651184,
+    "val_loss": 0.29252341389656067
+  },
+  {
+    "seed": 22,
+    "method": "rope3d_axis_random_control",
+    "step": 300,
+    "train_loss": 0.27496030926704407,
+    "grad_norm": 0.3043259382247925,
+    "val_r1": 0.9205729365348816,
+    "val_loss": 0.2737606465816498
+  },
+  {
+    "seed": 22,
+    "method": "rope3d_axis_random_control",
+    "step": 350,
+    "train_loss": 0.21922273933887482,
+    "grad_norm": 0.2668285071849823,
+    "val_r1": 0.9212239384651184,
+    "val_loss": 0.25776007771492004
+  },
+  {
+    "seed": 22,
+    "method": "rope3d_axis_random_control",
+    "step": 400,
+    "train_loss": 0.22366675734519958,
+    "grad_norm": 0.2550564408302307,
+    "val_r1": 0.9274088740348816,
+    "val_loss": 0.244523286819458
+  },
+  {
+    "seed": 22,
+    "method": "expected_axis_uncertainty_oracle_logcov",
+    "step": 50,
+    "train_loss": 0.19994883239269257,
+    "grad_norm": 0.3294949531555176,
+    "val_r1": 0.9899088740348816,
+    "val_loss": 0.1920890361070633
+  },
+  {
+    "seed": 22,
+    "method": "expected_axis_uncertainty_oracle_logcov",
+    "step": 100,
+    "train_loss": 0.16821178793907166,
+    "grad_norm": 0.2877664864063263,
+    "val_r1": 0.9928385615348816,
+    "val_loss": 0.1539115458726883
+  },
+  {
+    "seed": 22,
+    "method": "expected_axis_uncertainty_oracle_logcov",
+    "step": 150,
+    "train_loss": 0.15229910612106323,
+    "grad_norm": 0.22972553968429565,
+    "val_r1": 0.9931640625,
+    "val_loss": 0.1304108053445816
+  },
+  {
+    "seed": 22,
+    "method": "expected_axis_uncertainty_oracle_logcov",
+    "step": 200,
+    "train_loss": 0.10258613526821136,
+    "grad_norm": 0.17535239458084106,
+    "val_r1": 0.9931640625,
+    "val_loss": 0.11358816176652908
+  },
+  {
+    "seed": 22,
+    "method": "expected_axis_uncertainty_oracle_logcov",
+    "step": 250,
+    "train_loss": 0.08778201043605804,
+    "grad_norm": 0.14017735421657562,
+    "val_r1": 0.9938151240348816,
+    "val_loss": 0.10007846355438232
+  },
+  {
+    "seed": 22,
+    "method": "expected_axis_uncertainty_oracle_logcov",
+    "step": 300,
+    "train_loss": 0.09963352978229523,
+    "grad_norm": 0.143850177526474,
+    "val_r1": 0.9934895634651184,
+    "val_loss": 0.08974814414978027
+  },
+  {
+    "seed": 22,
+    "method": "expected_axis_uncertainty_oracle_logcov",
+    "step": 350,
+    "train_loss": 0.07896368205547333,
+    "grad_norm": 0.11135099083185196,
+    "val_r1": 0.9938151240348816,
+    "val_loss": 0.08050179481506348
+  },
+  {
+    "seed": 22,
+    "method": "expected_axis_uncertainty_oracle_logcov",
+    "step": 400,
+    "train_loss": 0.07049395143985748,
+    "grad_norm": 0.10602694749832153,
+    "val_r1": 0.9947916865348816,
+    "val_loss": 0.07310792803764343
+  },
+  {
+    "seed": 33,
+    "method": "center",
+    "step": 50,
+    "train_loss": 0.4865662157535553,
+    "grad_norm": 0.16702714562416077,
+    "val_r1": 0.8024088740348816,
+    "val_loss": 0.4900526702404022
+  },
+  {
+    "seed": 33,
+    "method": "center",
+    "step": 100,
+    "train_loss": 0.4412667155265808,
+    "grad_norm": 0.15481100976467133,
+    "val_r1": 0.8033854365348816,
+    "val_loss": 0.4816805124282837
+  },
+  {
+    "seed": 33,
+    "method": "center",
+    "step": 150,
+    "train_loss": 0.42480751872062683,
+    "grad_norm": 0.15627141296863556,
+    "val_r1": 0.7958984375,
+    "val_loss": 0.4738032817840576
+  },
+  {
+    "seed": 33,
+    "method": "center",
+    "step": 200,
+    "train_loss": 0.4833013117313385,
+    "grad_norm": 0.18858881294727325,
+    "val_r1": 0.7939453125,
+    "val_loss": 0.4735313951969147
+  },
+  {
+    "seed": 33,
+    "method": "center",
+    "step": 250,
+    "train_loss": 0.36458367109298706,
+    "grad_norm": 0.17775867879390717,
+    "val_r1": 0.7952473759651184,
+    "val_loss": 0.47245338559150696
+  },
+  {
+    "seed": 33,
+    "method": "center",
+    "step": 300,
+    "train_loss": 0.4152534604072571,
+    "grad_norm": 0.17432831227779388,
+    "val_r1": 0.8024088740348816,
+    "val_loss": 0.47067126631736755
+  },
+  {
+    "seed": 33,
+    "method": "center",
+    "step": 350,
+    "train_loss": 0.4404623508453369,
+    "grad_norm": 0.1852451115846634,
+    "val_r1": 0.794921875,
+    "val_loss": 0.47419247031211853
+  },
+  {
+    "seed": 33,
+    "method": "center",
+    "step": 400,
+    "train_loss": 0.4256749451160431,
+    "grad_norm": 0.2200917750597,
+    "val_r1": 0.794921875,
+    "val_loss": 0.47475263476371765
+  },
+  {
+    "seed": 33,
+    "method": "rope3d_axis",
+    "step": 50,
+    "train_loss": 0.4695426821708679,
+    "grad_norm": 0.6373383402824402,
+    "val_r1": 0.9029948115348816,
+    "val_loss": 0.4558681547641754
+  },
+  {
+    "seed": 33,
+    "method": "rope3d_axis",
+    "step": 100,
+    "train_loss": 0.3403569459915161,
+    "grad_norm": 0.4979662597179413,
+    "val_r1": 0.9186198115348816,
+    "val_loss": 0.3811841905117035
+  },
+  {
+    "seed": 33,
+    "method": "rope3d_axis",
+    "step": 150,
+    "train_loss": 0.29794833064079285,
+    "grad_norm": 0.4090834856033325,
+    "val_r1": 0.9215494990348816,
+    "val_loss": 0.33905017375946045
+  },
+  {
+    "seed": 33,
+    "method": "rope3d_axis",
+    "step": 200,
+    "train_loss": 0.2987181842327118,
+    "grad_norm": 0.3612304925918579,
+    "val_r1": 0.9248046875,
+    "val_loss": 0.3090956509113312
+  },
+  {
+    "seed": 33,
+    "method": "rope3d_axis",
+    "step": 250,
+    "train_loss": 0.24141274392604828,
+    "grad_norm": 0.29690688848495483,
+    "val_r1": 0.9267578125,
+    "val_loss": 0.2851175367832184
+  },
+  {
+    "seed": 33,
+    "method": "rope3d_axis",
+    "step": 300,
+    "train_loss": 0.2493174523115158,
+    "grad_norm": 0.2918805181980133,
+    "val_r1": 0.9244791865348816,
+    "val_loss": 0.26714029908180237
+  },
+  {
+    "seed": 33,
+    "method": "rope3d_axis",
+    "step": 350,
+    "train_loss": 0.22111588716506958,
+    "grad_norm": 0.25847128033638,
+    "val_r1": 0.9293619990348816,
+    "val_loss": 0.25256145000457764
+  },
+  {
+    "seed": 33,
+    "method": "rope3d_axis",
+    "step": 400,
+    "train_loss": 0.22121146321296692,
+    "grad_norm": 0.23710772395133972,
+    "val_r1": 0.9306640625,
+    "val_loss": 0.2413143664598465
+  },
+  {
+    "seed": 33,
+    "method": "rope3d_oblique",
+    "step": 50,
+    "train_loss": 0.45116788148880005,
+    "grad_norm": 0.5846235752105713,
+    "val_r1": 0.9026692509651184,
+    "val_loss": 0.44172075390815735
+  },
+  {
+    "seed": 33,
+    "method": "rope3d_oblique",
+    "step": 100,
+    "train_loss": 0.33397164940834045,
+    "grad_norm": 0.46051692962646484,
+    "val_r1": 0.9111328125,
+    "val_loss": 0.3805568218231201
+  },
+  {
+    "seed": 33,
+    "method": "rope3d_oblique",
+    "step": 150,
+    "train_loss": 0.3021838665008545,
+    "grad_norm": 0.3732602298259735,
+    "val_r1": 0.9173176884651184,
+    "val_loss": 0.3410525619983673
+  },
+  {
+    "seed": 33,
+    "method": "rope3d_oblique",
+    "step": 200,
+    "train_loss": 0.3144344687461853,
+    "grad_norm": 0.36115896701812744,
+    "val_r1": 0.9195963740348816,
+    "val_loss": 0.3131762742996216
+  },
+  {
+    "seed": 33,
+    "method": "rope3d_oblique",
+    "step": 250,
+    "train_loss": 0.2862413227558136,
+    "grad_norm": 0.2892383337020874,
+    "val_r1": 0.919921875,
+    "val_loss": 0.2940230667591095
+  },
+  {
+    "seed": 33,
+    "method": "rope3d_oblique",
+    "step": 300,
+    "train_loss": 0.2514566481113434,
+    "grad_norm": 0.28346219658851624,
+    "val_r1": 0.9222005009651184,
+    "val_loss": 0.2776848375797272
+  },
+  {
+    "seed": 33,
+    "method": "rope3d_oblique",
+    "step": 350,
+    "train_loss": 0.2676469385623932,
+    "grad_norm": 0.22718693315982819,
+    "val_r1": 0.9215494990348816,
+    "val_loss": 0.2655220329761505
+  },
+  {
+    "seed": 33,
+    "method": "rope3d_oblique",
+    "step": 400,
+    "train_loss": 0.24383234977722168,
+    "grad_norm": 0.21356472373008728,
+    "val_r1": 0.9195963740348816,
+    "val_loss": 0.25653764605522156
+  },
+  {
+    "seed": 33,
+    "method": "expected_oblique_support",
+    "step": 50,
+    "train_loss": 0.7291970252990723,
+    "grad_norm": 0.7520347237586975,
+    "val_r1": 0.7958984375,
+    "val_loss": 0.7410824298858643
+  },
+  {
+    "seed": 33,
+    "method": "expected_oblique_support",
+    "step": 100,
+    "train_loss": 0.6011086702346802,
+    "grad_norm": 0.6308165192604065,
+    "val_r1": 0.8030598759651184,
+    "val_loss": 0.6692631840705872
+  },
+  {
+    "seed": 33,
+    "method": "expected_oblique_support",
+    "step": 150,
+    "train_loss": 0.5396732091903687,
+    "grad_norm": 0.529093861579895,
+    "val_r1": 0.8040364384651184,
+    "val_loss": 0.6155681014060974
+  },
+  {
+    "seed": 33,
+    "method": "expected_oblique_support",
+    "step": 200,
+    "train_loss": 0.586491584777832,
+    "grad_norm": 0.5213915705680847,
+    "val_r1": 0.80859375,
+    "val_loss": 0.574409544467926
+  },
+  {
+    "seed": 33,
+    "method": "expected_oblique_support",
+    "step": 250,
+    "train_loss": 0.46616804599761963,
+    "grad_norm": 0.46063828468322754,
+    "val_r1": 0.8193359375,
+    "val_loss": 0.536581814289093
+  },
+  {
+    "seed": 33,
+    "method": "expected_oblique_support",
+    "step": 300,
+    "train_loss": 0.48385488986968994,
+    "grad_norm": 0.44313758611679077,
+    "val_r1": 0.8274739384651184,
+    "val_loss": 0.5051693320274353
+  },
+  {
+    "seed": 33,
+    "method": "expected_oblique_support",
+    "step": 350,
+    "train_loss": 0.45690834522247314,
+    "grad_norm": 0.3791593611240387,
+    "val_r1": 0.830078125,
+    "val_loss": 0.4789310693740845
+  },
+  {
+    "seed": 33,
+    "method": "expected_oblique_support",
+    "step": 400,
+    "train_loss": 0.41197890043258667,
+    "grad_norm": 0.3595121204853058,
+    "val_r1": 0.837890625,
+    "val_loss": 0.4545493423938751
+  },
+  {
+    "seed": 33,
+    "method": "rope3d_axis_normal",
+    "step": 50,
+    "train_loss": 0.36006879806518555,
+    "grad_norm": 0.5065144896507263,
+    "val_r1": 0.9541015625,
+    "val_loss": 0.3468129634857178
+  },
+  {
+    "seed": 33,
+    "method": "rope3d_axis_normal",
+    "step": 100,
+    "train_loss": 0.2530152499675751,
+    "grad_norm": 0.3737545907497406,
+    "val_r1": 0.9625651240348816,
+    "val_loss": 0.2837320864200592
+  },
+  {
+    "seed": 33,
+    "method": "rope3d_axis_normal",
+    "step": 150,
+    "train_loss": 0.21413834393024445,
+    "grad_norm": 0.30390533804893494,
+    "val_r1": 0.9658203125,
+    "val_loss": 0.24761085212230682
+  },
+  {
+    "seed": 33,
+    "method": "rope3d_axis_normal",
+    "step": 200,
+    "train_loss": 0.21294844150543213,
+    "grad_norm": 0.2675325870513916,
+    "val_r1": 0.9645182490348816,
+    "val_loss": 0.22156751155853271
+  },
+  {
+    "seed": 33,
+    "method": "rope3d_axis_normal",
+    "step": 250,
+    "train_loss": 0.16615992784500122,
+    "grad_norm": 0.21539515256881714,
+    "val_r1": 0.9674479365348816,
+    "val_loss": 0.20121681690216064
+  },
+  {
+    "seed": 33,
+    "method": "rope3d_axis_normal",
+    "step": 300,
+    "train_loss": 0.1742875725030899,
+    "grad_norm": 0.20823688805103302,
+    "val_r1": 0.9680989384651184,
+    "val_loss": 0.1848543882369995
+  },
+  {
+    "seed": 33,
+    "method": "rope3d_axis_normal",
+    "step": 350,
+    "train_loss": 0.14712625741958618,
+    "grad_norm": 0.1835649311542511,
+    "val_r1": 0.9710286259651184,
+    "val_loss": 0.1720951795578003
+  },
+  {
+    "seed": 33,
+    "method": "rope3d_axis_normal",
+    "step": 400,
+    "train_loss": 0.13908909261226654,
+    "grad_norm": 0.16731704771518707,
+    "val_r1": 0.9716796875,
+    "val_loss": 0.1610860526561737
+  },
+  {
+    "seed": 33,
+    "method": "rope3d_axis_scale",
+    "step": 50,
+    "train_loss": 0.3864685893058777,
+    "grad_norm": 0.5382277369499207,
+    "val_r1": 0.9401041865348816,
+    "val_loss": 0.36806514859199524
+  },
+  {
+    "seed": 33,
+    "method": "rope3d_axis_scale",
+    "step": 100,
+    "train_loss": 0.28582534193992615,
+    "grad_norm": 0.41839784383773804,
+    "val_r1": 0.9527994990348816,
+    "val_loss": 0.3020564615726471
+  },
+  {
+    "seed": 33,
+    "method": "rope3d_axis_scale",
+    "step": 150,
+    "train_loss": 0.23601692914962769,
+    "grad_norm": 0.3293345272541046,
+    "val_r1": 0.953125,
+    "val_loss": 0.26458701491355896
+  },
+  {
+    "seed": 33,
+    "method": "rope3d_axis_scale",
+    "step": 200,
+    "train_loss": 0.23306068778038025,
+    "grad_norm": 0.28945592045783997,
+    "val_r1": 0.9547526240348816,
+    "val_loss": 0.23783183097839355
+  },
+  {
+    "seed": 33,
+    "method": "rope3d_axis_scale",
+    "step": 250,
+    "train_loss": 0.17974549531936646,
+    "grad_norm": 0.23589208722114563,
+    "val_r1": 0.9554036259651184,
+    "val_loss": 0.21614228188991547
+  },
+  {
+    "seed": 33,
+    "method": "rope3d_axis_scale",
+    "step": 300,
+    "train_loss": 0.191926971077919,
+    "grad_norm": 0.2246004045009613,
+    "val_r1": 0.9557291865348816,
+    "val_loss": 0.19991923868656158
+  },
+  {
+    "seed": 33,
+    "method": "rope3d_axis_scale",
+    "step": 350,
+    "train_loss": 0.1653262972831726,
+    "grad_norm": 0.20088402926921844,
+    "val_r1": 0.9560546875,
+    "val_loss": 0.18651728332042694
+  },
+  {
+    "seed": 33,
+    "method": "rope3d_axis_scale",
+    "step": 400,
+    "train_loss": 0.16478672623634338,
+    "grad_norm": 0.18454386293888092,
+    "val_r1": 0.9580078125,
+    "val_loss": 0.17547525465488434
+  },
+  {
+    "seed": 33,
+    "method": "rope3d_axis_logcov",
+    "step": 50,
+    "train_loss": 0.20715472102165222,
+    "grad_norm": 0.33258453011512756,
+    "val_r1": 0.9807942509651184,
+    "val_loss": 0.19734160602092743
+  },
+  {
+    "seed": 33,
+    "method": "rope3d_axis_logcov",
+    "step": 100,
+    "train_loss": 0.14579589664936066,
+    "grad_norm": 0.22569935023784637,
+    "val_r1": 0.9860026240348816,
+    "val_loss": 0.15514469146728516
+  },
+  {
+    "seed": 33,
+    "method": "rope3d_axis_logcov",
+    "step": 150,
+    "train_loss": 0.11209606379270554,
+    "grad_norm": 0.17957451939582825,
+    "val_r1": 0.9873046875,
+    "val_loss": 0.13156592845916748
+  },
+  {
+    "seed": 33,
+    "method": "rope3d_axis_logcov",
+    "step": 200,
+    "train_loss": 0.11013827472925186,
+    "grad_norm": 0.1584247350692749,
+    "val_r1": 0.9873046875,
+    "val_loss": 0.11506380885839462
+  },
+  {
+    "seed": 33,
+    "method": "rope3d_axis_logcov",
+    "step": 250,
+    "train_loss": 0.07964948564767838,
+    "grad_norm": 0.12416774779558182,
+    "val_r1": 0.9886067509651184,
+    "val_loss": 0.10227680951356888
+  },
+  {
+    "seed": 33,
+    "method": "rope3d_axis_logcov",
+    "step": 300,
+    "train_loss": 0.09174396097660065,
+    "grad_norm": 0.12364116311073303,
+    "val_r1": 0.9889323115348816,
+    "val_loss": 0.09234198927879333
+  },
+  {
+    "seed": 33,
+    "method": "rope3d_axis_logcov",
+    "step": 350,
+    "train_loss": 0.06908495724201202,
+    "grad_norm": 0.10763545334339142,
+    "val_r1": 0.9889323115348816,
+    "val_loss": 0.08480899780988693
+  },
+  {
+    "seed": 33,
+    "method": "rope3d_axis_logcov",
+    "step": 400,
+    "train_loss": 0.058678604662418365,
+    "grad_norm": 0.09460826963186264,
+    "val_r1": 0.9889323115348816,
+    "val_loss": 0.07782358676195145
+  },
+  {
+    "seed": 33,
+    "method": "rope3d_axis_projected_logcov",
+    "step": 50,
+    "train_loss": 0.2884550988674164,
+    "grad_norm": 0.42496049404144287,
+    "val_r1": 0.9573567509651184,
+    "val_loss": 0.27951207756996155
+  },
+  {
+    "seed": 33,
+    "method": "rope3d_axis_projected_logcov",
+    "step": 100,
+    "train_loss": 0.2099989801645279,
+    "grad_norm": 0.314797043800354,
+    "val_r1": 0.9638671875,
+    "val_loss": 0.22677813470363617
+  },
+  {
+    "seed": 33,
+    "method": "rope3d_axis_projected_logcov",
+    "step": 150,
+    "train_loss": 0.17323651909828186,
+    "grad_norm": 0.2511600852012634,
+    "val_r1": 0.966796875,
+    "val_loss": 0.1970127671957016
+  },
+  {
+    "seed": 33,
+    "method": "rope3d_axis_projected_logcov",
+    "step": 200,
+    "train_loss": 0.16597901284694672,
+    "grad_norm": 0.2236180156469345,
+    "val_r1": 0.9674479365348816,
+    "val_loss": 0.17575998604297638
+  },
+  {
+    "seed": 33,
+    "method": "rope3d_axis_projected_logcov",
+    "step": 250,
+    "train_loss": 0.13241791725158691,
+    "grad_norm": 0.1826120764017105,
+    "val_r1": 0.9684244990348816,
+    "val_loss": 0.15929357707500458
+  },
+  {
+    "seed": 33,
+    "method": "rope3d_axis_projected_logcov",
+    "step": 300,
+    "train_loss": 0.13994470238685608,
+    "grad_norm": 0.17732121050357819,
+    "val_r1": 0.9694010615348816,
+    "val_loss": 0.14630956947803497
+  },
+  {
+    "seed": 33,
+    "method": "rope3d_axis_projected_logcov",
+    "step": 350,
+    "train_loss": 0.12470807880163193,
+    "grad_norm": 0.1605871617794037,
+    "val_r1": 0.970703125,
+    "val_loss": 0.13657675683498383
+  },
+  {
+    "seed": 33,
+    "method": "rope3d_axis_projected_logcov",
+    "step": 400,
+    "train_loss": 0.11265389621257782,
+    "grad_norm": 0.1441933959722519,
+    "val_r1": 0.9697265625,
+    "val_loss": 0.12816359102725983
+  },
+  {
+    "seed": 33,
+    "method": "rope3d_axis_bounded_logcov",
+    "step": 50,
+    "train_loss": 0.34863004088401794,
+    "grad_norm": 0.48924949765205383,
+    "val_r1": 0.9580078125,
+    "val_loss": 0.33334091305732727
+  },
+  {
+    "seed": 33,
+    "method": "rope3d_axis_bounded_logcov",
+    "step": 100,
+    "train_loss": 0.2396475374698639,
+    "grad_norm": 0.3585314452648163,
+    "val_r1": 0.9677734375,
+    "val_loss": 0.2716861069202423
+  },
+  {
+    "seed": 33,
+    "method": "rope3d_axis_bounded_logcov",
+    "step": 150,
+    "train_loss": 0.20341843366622925,
+    "grad_norm": 0.291348934173584,
+    "val_r1": 0.970703125,
+    "val_loss": 0.23641367256641388
+  },
+  {
+    "seed": 33,
+    "method": "rope3d_axis_bounded_logcov",
+    "step": 200,
+    "train_loss": 0.1992042064666748,
+    "grad_norm": 0.25568482279777527,
+    "val_r1": 0.97265625,
+    "val_loss": 0.21088026463985443
+  },
+  {
+    "seed": 33,
+    "method": "rope3d_axis_bounded_logcov",
+    "step": 250,
+    "train_loss": 0.1587298959493637,
+    "grad_norm": 0.20748116075992584,
+    "val_r1": 0.97265625,
+    "val_loss": 0.19054031372070312
+  },
+  {
+    "seed": 33,
+    "method": "rope3d_axis_bounded_logcov",
+    "step": 300,
+    "train_loss": 0.1608039289712906,
+    "grad_norm": 0.19624044001102448,
+    "val_r1": 0.9720051884651184,
+    "val_loss": 0.17474956810474396
+  },
+  {
+    "seed": 33,
+    "method": "rope3d_axis_bounded_logcov",
+    "step": 350,
+    "train_loss": 0.1373797208070755,
+    "grad_norm": 0.17519710958003998,
+    "val_r1": 0.97265625,
+    "val_loss": 0.16179655492305756
+  },
+  {
+    "seed": 33,
+    "method": "rope3d_axis_bounded_logcov",
+    "step": 400,
+    "train_loss": 0.13294558227062225,
+    "grad_norm": 0.1605357676744461,
+    "val_r1": 0.9749348759651184,
+    "val_loss": 0.15114286541938782
+  },
+  {
+    "seed": 33,
+    "method": "rope3d_axis_moments",
+    "step": 50,
+    "train_loss": 0.3825574219226837,
+    "grad_norm": 0.5299469232559204,
+    "val_r1": 0.9449869990348816,
+    "val_loss": 0.3666897714138031
+  },
+  {
+    "seed": 33,
+    "method": "rope3d_axis_moments",
+    "step": 100,
+    "train_loss": 0.27231264114379883,
+    "grad_norm": 0.39934828877449036,
+    "val_r1": 0.9557291865348816,
+    "val_loss": 0.30068859457969666
+  },
+  {
+    "seed": 33,
+    "method": "rope3d_axis_moments",
+    "step": 150,
+    "train_loss": 0.23281744122505188,
+    "grad_norm": 0.3247394859790802,
+    "val_r1": 0.9560546875,
+    "val_loss": 0.2631671726703644
+  },
+  {
+    "seed": 33,
+    "method": "rope3d_axis_moments",
+    "step": 200,
+    "train_loss": 0.22842279076576233,
+    "grad_norm": 0.2842649221420288,
+    "val_r1": 0.9599609375,
+    "val_loss": 0.23619647324085236
+  },
+  {
+    "seed": 33,
+    "method": "rope3d_axis_moments",
+    "step": 250,
+    "train_loss": 0.1812814325094223,
+    "grad_norm": 0.22971796989440918,
+    "val_r1": 0.9576823115348816,
+    "val_loss": 0.21478547155857086
+  },
+  {
+    "seed": 33,
+    "method": "rope3d_axis_moments",
+    "step": 300,
+    "train_loss": 0.1834183633327484,
+    "grad_norm": 0.22332732379436493,
+    "val_r1": 0.9599609375,
+    "val_loss": 0.1983027309179306
+  },
+  {
+    "seed": 33,
+    "method": "rope3d_axis_moments",
+    "step": 350,
+    "train_loss": 0.1584329605102539,
+    "grad_norm": 0.19667944312095642,
+    "val_r1": 0.9599609375,
+    "val_loss": 0.1846761554479599
+  },
+  {
+    "seed": 33,
+    "method": "rope3d_axis_moments",
+    "step": 400,
+    "train_loss": 0.1546633094549179,
+    "grad_norm": 0.17787286639213562,
+    "val_r1": 0.9615885615348816,
+    "val_loss": 0.17369697988033295
+  },
+  {
+    "seed": 33,
+    "method": "rope3d_axis_random_control",
+    "step": 50,
+    "train_loss": 0.49687284231185913,
+    "grad_norm": 0.6675127148628235,
+    "val_r1": 0.8889973759651184,
+    "val_loss": 0.4727694094181061
+  },
+  {
+    "seed": 33,
+    "method": "rope3d_axis_random_control",
+    "step": 100,
+    "train_loss": 0.35530194640159607,
+    "grad_norm": 0.5183680057525635,
+    "val_r1": 0.9075520634651184,
+    "val_loss": 0.3945196568965912
+  },
+  {
+    "seed": 33,
+    "method": "rope3d_axis_random_control",
+    "step": 150,
+    "train_loss": 0.3089810013771057,
+    "grad_norm": 0.423496276140213,
+    "val_r1": 0.9150390625,
+    "val_loss": 0.3496449291706085
+  },
+  {
+    "seed": 33,
+    "method": "rope3d_axis_random_control",
+    "step": 200,
+    "train_loss": 0.3013603985309601,
+    "grad_norm": 0.3705110549926758,
+    "val_r1": 0.9205729365348816,
+    "val_loss": 0.31760168075561523
+  },
+  {
+    "seed": 33,
+    "method": "rope3d_axis_random_control",
+    "step": 250,
+    "train_loss": 0.24611864984035492,
+    "grad_norm": 0.3046051561832428,
+    "val_r1": 0.9215494990348816,
+    "val_loss": 0.29232317209243774
+  },
+  {
+    "seed": 33,
+    "method": "rope3d_axis_random_control",
+    "step": 300,
+    "train_loss": 0.25300508737564087,
+    "grad_norm": 0.29855793714523315,
+    "val_r1": 0.9228515625,
+    "val_loss": 0.2738623321056366
+  },
+  {
+    "seed": 33,
+    "method": "rope3d_axis_random_control",
+    "step": 350,
+    "train_loss": 0.22289292514324188,
+    "grad_norm": 0.26299452781677246,
+    "val_r1": 0.9267578125,
+    "val_loss": 0.25826966762542725
+  },
+  {
+    "seed": 33,
+    "method": "rope3d_axis_random_control",
+    "step": 400,
+    "train_loss": 0.2239963263273239,
+    "grad_norm": 0.24343913793563843,
+    "val_r1": 0.9274088740348816,
+    "val_loss": 0.246278777718544
+  },
+  {
+    "seed": 33,
+    "method": "expected_axis_uncertainty_oracle_logcov",
+    "step": 50,
+    "train_loss": 0.21324452757835388,
+    "grad_norm": 0.35242488980293274,
+    "val_r1": 0.9850260615348816,
+    "val_loss": 0.20488904416561127
+  },
+  {
+    "seed": 33,
+    "method": "expected_axis_uncertainty_oracle_logcov",
+    "step": 100,
+    "train_loss": 0.1512344777584076,
+    "grad_norm": 0.2475568801164627,
+    "val_r1": 0.9876301884651184,
+    "val_loss": 0.16259883344173431
+  },
+  {
+    "seed": 33,
+    "method": "expected_axis_uncertainty_oracle_logcov",
+    "step": 150,
+    "train_loss": 0.1179080680012703,
+    "grad_norm": 0.19677689671516418,
+    "val_r1": 0.9889323115348816,
+    "val_loss": 0.13806253671646118
+  },
+  {
+    "seed": 33,
+    "method": "expected_axis_uncertainty_oracle_logcov",
+    "step": 200,
+    "train_loss": 0.11409126222133636,
+    "grad_norm": 0.16942651569843292,
+    "val_r1": 0.9895833134651184,
+    "val_loss": 0.12033083289861679
+  },
+  {
+    "seed": 33,
+    "method": "expected_axis_uncertainty_oracle_logcov",
+    "step": 250,
+    "train_loss": 0.0830773115158081,
+    "grad_norm": 0.1334718018770218,
+    "val_r1": 0.990234375,
+    "val_loss": 0.10652995109558105
+  },
+  {
+    "seed": 33,
+    "method": "expected_axis_uncertainty_oracle_logcov",
+    "step": 300,
+    "train_loss": 0.09428204596042633,
+    "grad_norm": 0.13058792054653168,
+    "val_r1": 0.990234375,
+    "val_loss": 0.09574684500694275
+  },
+  {
+    "seed": 33,
+    "method": "expected_axis_uncertainty_oracle_logcov",
+    "step": 350,
+    "train_loss": 0.07292820513248444,
+    "grad_norm": 0.11254266649484634,
+    "val_r1": 0.9889323115348816,
+    "val_loss": 0.08731193095445633
+  },
+  {
+    "seed": 33,
+    "method": "expected_axis_uncertainty_oracle_logcov",
+    "step": 400,
+    "train_loss": 0.061445318162441254,
+    "grad_norm": 0.09900049865245819,
+    "val_r1": 0.9889323115348816,
+    "val_loss": 0.07980473339557648
+  },
+  {
+    "seed": 44,
+    "method": "center",
+    "step": 50,
+    "train_loss": 0.478985995054245,
+    "grad_norm": 0.16291949152946472,
+    "val_r1": 0.783203125,
+    "val_loss": 0.5041539072990417
+  },
+  {
+    "seed": 44,
+    "method": "center",
+    "step": 100,
+    "train_loss": 0.4985073506832123,
+    "grad_norm": 0.145340234041214,
+    "val_r1": 0.7848307490348816,
+    "val_loss": 0.4942179024219513
+  },
+  {
+    "seed": 44,
+    "method": "center",
+    "step": 150,
+    "train_loss": 0.5235046148300171,
+    "grad_norm": 0.17579121887683868,
+    "val_r1": 0.7893880009651184,
+    "val_loss": 0.4897482395172119
+  },
+  {
+    "seed": 44,
+    "method": "center",
+    "step": 200,
+    "train_loss": 0.4555692970752716,
+    "grad_norm": 0.167007714509964,
+    "val_r1": 0.7822265625,
+    "val_loss": 0.48513367772102356
+  },
+  {
+    "seed": 44,
+    "method": "center",
+    "step": 250,
+    "train_loss": 0.44123023748397827,
+    "grad_norm": 0.1655827760696411,
+    "val_r1": 0.7848307490348816,
+    "val_loss": 0.48548758029937744
+  },
+  {
+    "seed": 44,
+    "method": "center",
+    "step": 300,
+    "train_loss": 0.4558200240135193,
+    "grad_norm": 0.20281708240509033,
+    "val_r1": 0.7841796875,
+    "val_loss": 0.48094454407691956
+  },
+  {
+    "seed": 44,
+    "method": "center",
+    "step": 350,
+    "train_loss": 0.4620340168476105,
+    "grad_norm": 0.2072666436433792,
+    "val_r1": 0.7828776240348816,
+    "val_loss": 0.4878733456134796
+  },
+  {
+    "seed": 44,
+    "method": "center",
+    "step": 400,
+    "train_loss": 0.42709654569625854,
+    "grad_norm": 0.23187118768692017,
+    "val_r1": 0.7825520634651184,
+    "val_loss": 0.4851861298084259
+  },
+  {
+    "seed": 44,
+    "method": "rope3d_axis",
+    "step": 50,
+    "train_loss": 0.43933552503585815,
+    "grad_norm": 0.600297749042511,
+    "val_r1": 0.896484375,
+    "val_loss": 0.4725419580936432
+  },
+  {
+    "seed": 44,
+    "method": "rope3d_axis",
+    "step": 100,
+    "train_loss": 0.37424078583717346,
+    "grad_norm": 0.5023229718208313,
+    "val_r1": 0.9143880009651184,
+    "val_loss": 0.39060187339782715
+  },
+  {
+    "seed": 44,
+    "method": "rope3d_axis",
+    "step": 150,
+    "train_loss": 0.3608286380767822,
+    "grad_norm": 0.4202243387699127,
+    "val_r1": 0.919921875,
+    "val_loss": 0.3452419936656952
+  },
+  {
+    "seed": 44,
+    "method": "rope3d_axis",
+    "step": 200,
+    "train_loss": 0.2988733649253845,
+    "grad_norm": 0.3807944655418396,
+    "val_r1": 0.9231770634651184,
+    "val_loss": 0.3119066655635834
+  },
+  {
+    "seed": 44,
+    "method": "rope3d_axis",
+    "step": 250,
+    "train_loss": 0.2816774547100067,
+    "grad_norm": 0.327992707490921,
+    "val_r1": 0.9280598759651184,
+    "val_loss": 0.2882414758205414
+  },
+  {
+    "seed": 44,
+    "method": "rope3d_axis",
+    "step": 300,
+    "train_loss": 0.24953879415988922,
+    "grad_norm": 0.28364261984825134,
+    "val_r1": 0.927734375,
+    "val_loss": 0.26943010091781616
+  },
+  {
+    "seed": 44,
+    "method": "rope3d_axis",
+    "step": 350,
+    "train_loss": 0.2534692585468292,
+    "grad_norm": 0.2734568119049072,
+    "val_r1": 0.927734375,
+    "val_loss": 0.2541542947292328
+  },
+  {
+    "seed": 44,
+    "method": "rope3d_axis",
+    "step": 400,
+    "train_loss": 0.2365167737007141,
+    "grad_norm": 0.2558487057685852,
+    "val_r1": 0.9322916865348816,
+    "val_loss": 0.24085663259029388
+  },
+  {
+    "seed": 44,
+    "method": "rope3d_oblique",
+    "step": 50,
+    "train_loss": 0.43058323860168457,
+    "grad_norm": 0.6038423180580139,
+    "val_r1": 0.9029948115348816,
+    "val_loss": 0.4436233937740326
+  },
+  {
+    "seed": 44,
+    "method": "rope3d_oblique",
+    "step": 100,
+    "train_loss": 0.3879844546318054,
+    "grad_norm": 0.4606178402900696,
+    "val_r1": 0.9140625,
+    "val_loss": 0.38528457283973694
+  },
+  {
+    "seed": 44,
+    "method": "rope3d_oblique",
+    "step": 150,
+    "train_loss": 0.34798663854599,
+    "grad_norm": 0.3862592279911041,
+    "val_r1": 0.9163411259651184,
+    "val_loss": 0.3481745719909668
+  },
+  {
+    "seed": 44,
+    "method": "rope3d_oblique",
+    "step": 200,
+    "train_loss": 0.2898629307746887,
+    "grad_norm": 0.3586360216140747,
+    "val_r1": 0.9186198115348816,
+    "val_loss": 0.3208489716053009
+  },
+  {
+    "seed": 44,
+    "method": "rope3d_oblique",
+    "step": 250,
+    "train_loss": 0.29358553886413574,
+    "grad_norm": 0.29915398359298706,
+    "val_r1": 0.9169921875,
+    "val_loss": 0.3016781806945801
+  },
+  {
+    "seed": 44,
+    "method": "rope3d_oblique",
+    "step": 300,
+    "train_loss": 0.2536430060863495,
+    "grad_norm": 0.278237909078598,
+    "val_r1": 0.9186198115348816,
+    "val_loss": 0.28657767176628113
+  },
+  {
+    "seed": 44,
+    "method": "rope3d_oblique",
+    "step": 350,
+    "train_loss": 0.2569085657596588,
+    "grad_norm": 0.25332215428352356,
+    "val_r1": 0.9202473759651184,
+    "val_loss": 0.27474072575569153
+  },
+  {
+    "seed": 44,
+    "method": "rope3d_oblique",
+    "step": 400,
+    "train_loss": 0.23821638524532318,
+    "grad_norm": 0.22397446632385254,
+    "val_r1": 0.9192708134651184,
+    "val_loss": 0.26455119252204895
+  },
+  {
+    "seed": 44,
+    "method": "expected_oblique_support",
+    "step": 50,
+    "train_loss": 0.7130085825920105,
+    "grad_norm": 0.7511801719665527,
+    "val_r1": 0.77734375,
+    "val_loss": 0.7512946128845215
+  },
+  {
+    "seed": 44,
+    "method": "expected_oblique_support",
+    "step": 100,
+    "train_loss": 0.6621420979499817,
+    "grad_norm": 0.6306460499763489,
+    "val_r1": 0.7858073115348816,
+    "val_loss": 0.6782217025756836
+  },
+  {
+    "seed": 44,
+    "method": "expected_oblique_support",
+    "step": 150,
+    "train_loss": 0.6358303427696228,
+    "grad_norm": 0.5080264806747437,
+    "val_r1": 0.7884114384651184,
+    "val_loss": 0.6280957460403442
+  },
+  {
+    "seed": 44,
+    "method": "expected_oblique_support",
+    "step": 200,
+    "train_loss": 0.546900749206543,
+    "grad_norm": 0.48254600167274475,
+    "val_r1": 0.7985026240348816,
+    "val_loss": 0.5860574245452881
+  },
+  {
+    "seed": 44,
+    "method": "expected_oblique_support",
+    "step": 250,
+    "train_loss": 0.5276997089385986,
+    "grad_norm": 0.4416036903858185,
+    "val_r1": 0.8079426884651184,
+    "val_loss": 0.5516304969787598
+  },
+  {
+    "seed": 44,
+    "method": "expected_oblique_support",
+    "step": 300,
+    "train_loss": 0.499483585357666,
+    "grad_norm": 0.4048343896865845,
+    "val_r1": 0.8177083134651184,
+    "val_loss": 0.5192041993141174
+  },
+  {
+    "seed": 44,
+    "method": "expected_oblique_support",
+    "step": 350,
+    "train_loss": 0.4426869750022888,
+    "grad_norm": 0.3953748643398285,
+    "val_r1": 0.8274739384651184,
+    "val_loss": 0.4932287633419037
+  },
+  {
+    "seed": 44,
+    "method": "expected_oblique_support",
+    "step": 400,
+    "train_loss": 0.4375026822090149,
+    "grad_norm": 0.3429711163043976,
+    "val_r1": 0.8356119990348816,
+    "val_loss": 0.47001418471336365
+  },
+  {
+    "seed": 44,
+    "method": "rope3d_axis_normal",
+    "step": 50,
+    "train_loss": 0.33350661396980286,
+    "grad_norm": 0.47142523527145386,
+    "val_r1": 0.9482421875,
+    "val_loss": 0.36068782210350037
+  },
+  {
+    "seed": 44,
+    "method": "rope3d_axis_normal",
+    "step": 100,
+    "train_loss": 0.2801654636859894,
+    "grad_norm": 0.38778388500213623,
+    "val_r1": 0.9576823115348816,
+    "val_loss": 0.2912274897098541
+  },
+  {
+    "seed": 44,
+    "method": "rope3d_axis_normal",
+    "step": 150,
+    "train_loss": 0.2621578574180603,
+    "grad_norm": 0.31885960698127747,
+    "val_r1": 0.9615885615348816,
+    "val_loss": 0.25245729088783264
+  },
+  {
+    "seed": 44,
+    "method": "rope3d_axis_normal",
+    "step": 200,
+    "train_loss": 0.21076363325119019,
+    "grad_norm": 0.28633344173431396,
+    "val_r1": 0.9654948115348816,
+    "val_loss": 0.22386986017227173
+  },
+  {
+    "seed": 44,
+    "method": "rope3d_axis_normal",
+    "step": 250,
+    "train_loss": 0.1937102973461151,
+    "grad_norm": 0.24191105365753174,
+    "val_r1": 0.9674479365348816,
+    "val_loss": 0.20299232006072998
+  },
+  {
+    "seed": 44,
+    "method": "rope3d_axis_normal",
+    "step": 300,
+    "train_loss": 0.17346113920211792,
+    "grad_norm": 0.21060310304164886,
+    "val_r1": 0.966796875,
+    "val_loss": 0.18610335886478424
+  },
+  {
+    "seed": 44,
+    "method": "rope3d_axis_normal",
+    "step": 350,
+    "train_loss": 0.1699705421924591,
+    "grad_norm": 0.1979198306798935,
+    "val_r1": 0.9690755009651184,
+    "val_loss": 0.17184722423553467
+  },
+  {
+    "seed": 44,
+    "method": "rope3d_axis_normal",
+    "step": 400,
+    "train_loss": 0.15672063827514648,
+    "grad_norm": 0.18238933384418488,
+    "val_r1": 0.9713541865348816,
+    "val_loss": 0.15978863835334778
+  },
+  {
+    "seed": 44,
+    "method": "rope3d_axis_scale",
+    "step": 50,
+    "train_loss": 0.36050429940223694,
+    "grad_norm": 0.5096489787101746,
+    "val_r1": 0.9381510615348816,
+    "val_loss": 0.3836685121059418
+  },
+  {
+    "seed": 44,
+    "method": "rope3d_axis_scale",
+    "step": 100,
+    "train_loss": 0.3109215795993805,
+    "grad_norm": 0.4141160547733307,
+    "val_r1": 0.9508463740348816,
+    "val_loss": 0.3112421929836273
+  },
+  {
+    "seed": 44,
+    "method": "rope3d_axis_scale",
+    "step": 150,
+    "train_loss": 0.2860164940357208,
+    "grad_norm": 0.33892473578453064,
+    "val_r1": 0.955078125,
+    "val_loss": 0.27115243673324585
+  },
+  {
+    "seed": 44,
+    "method": "rope3d_axis_scale",
+    "step": 200,
+    "train_loss": 0.23608234524726868,
+    "grad_norm": 0.3103300929069519,
+    "val_r1": 0.9606119990348816,
+    "val_loss": 0.24099938571453094
+  },
+  {
+    "seed": 44,
+    "method": "rope3d_axis_scale",
+    "step": 250,
+    "train_loss": 0.2055864930152893,
+    "grad_norm": 0.2567465603351593,
+    "val_r1": 0.9622395634651184,
+    "val_loss": 0.21941213309764862
+  },
+  {
+    "seed": 44,
+    "method": "rope3d_axis_scale",
+    "step": 300,
+    "train_loss": 0.19043926894664764,
+    "grad_norm": 0.2256627082824707,
+    "val_r1": 0.9619140625,
+    "val_loss": 0.2023191899061203
+  },
+  {
+    "seed": 44,
+    "method": "rope3d_axis_scale",
+    "step": 350,
+    "train_loss": 0.19718916714191437,
+    "grad_norm": 0.2165086716413498,
+    "val_r1": 0.9622395634651184,
+    "val_loss": 0.18806244432926178
+  },
+  {
+    "seed": 44,
+    "method": "rope3d_axis_scale",
+    "step": 400,
+    "train_loss": 0.17137214541435242,
+    "grad_norm": 0.19988134503364563,
+    "val_r1": 0.9661458134651184,
+    "val_loss": 0.1754395216703415
+  },
+  {
+    "seed": 44,
+    "method": "rope3d_axis_logcov",
+    "step": 50,
+    "train_loss": 0.19217908382415771,
+    "grad_norm": 0.30685436725616455,
+    "val_r1": 0.9817708134651184,
+    "val_loss": 0.20404618978500366
+  },
+  {
+    "seed": 44,
+    "method": "rope3d_axis_logcov",
+    "step": 100,
+    "train_loss": 0.15414220094680786,
+    "grad_norm": 0.23752997815608978,
+    "val_r1": 0.9886067509651184,
+    "val_loss": 0.1585422158241272
+  },
+  {
+    "seed": 44,
+    "method": "rope3d_axis_logcov",
+    "step": 150,
+    "train_loss": 0.14324846863746643,
+    "grad_norm": 0.1973811686038971,
+    "val_r1": 0.9895833134651184,
+    "val_loss": 0.13327229022979736
+  },
+  {
+    "seed": 44,
+    "method": "rope3d_axis_logcov",
+    "step": 200,
+    "train_loss": 0.10422221571207047,
+    "grad_norm": 0.17058449983596802,
+    "val_r1": 0.990234375,
+    "val_loss": 0.11524009704589844
+  },
+  {
+    "seed": 44,
+    "method": "rope3d_axis_logcov",
+    "step": 250,
+    "train_loss": 0.09311524033546448,
+    "grad_norm": 0.14489039778709412,
+    "val_r1": 0.9918619990348816,
+    "val_loss": 0.10221431404352188
+  },
+  {
+    "seed": 44,
+    "method": "rope3d_axis_logcov",
+    "step": 300,
+    "train_loss": 0.08966974169015884,
+    "grad_norm": 0.12972022593021393,
+    "val_r1": 0.9908854365348816,
+    "val_loss": 0.09121641516685486
+  },
+  {
+    "seed": 44,
+    "method": "rope3d_axis_logcov",
+    "step": 350,
+    "train_loss": 0.0817607119679451,
+    "grad_norm": 0.12210425734519958,
+    "val_r1": 0.9921875,
+    "val_loss": 0.08299989253282547
+  },
+  {
+    "seed": 44,
+    "method": "rope3d_axis_logcov",
+    "step": 400,
+    "train_loss": 0.07255914062261581,
+    "grad_norm": 0.10494738817214966,
+    "val_r1": 0.9928385615348816,
+    "val_loss": 0.07564393430948257
+  },
+  {
+    "seed": 44,
+    "method": "rope3d_axis_projected_logcov",
+    "step": 50,
+    "train_loss": 0.2768537402153015,
+    "grad_norm": 0.39699462056159973,
+    "val_r1": 0.9567057490348816,
+    "val_loss": 0.2909258306026459
+  },
+  {
+    "seed": 44,
+    "method": "rope3d_axis_projected_logcov",
+    "step": 100,
+    "train_loss": 0.22485683858394623,
+    "grad_norm": 0.31315112113952637,
+    "val_r1": 0.9690755009651184,
+    "val_loss": 0.23330135643482208
+  },
+  {
+    "seed": 44,
+    "method": "rope3d_axis_projected_logcov",
+    "step": 150,
+    "train_loss": 0.21488864719867706,
+    "grad_norm": 0.2626204192638397,
+    "val_r1": 0.970703125,
+    "val_loss": 0.20140226185321808
+  },
+  {
+    "seed": 44,
+    "method": "rope3d_axis_projected_logcov",
+    "step": 200,
+    "train_loss": 0.16237220168113708,
+    "grad_norm": 0.24130123853683472,
+    "val_r1": 0.970703125,
+    "val_loss": 0.17932946979999542
+  },
+  {
+    "seed": 44,
+    "method": "rope3d_axis_projected_logcov",
+    "step": 250,
+    "train_loss": 0.15099579095840454,
+    "grad_norm": 0.19664862751960754,
+    "val_r1": 0.9710286259651184,
+    "val_loss": 0.16266395151615143
+  },
+  {
+    "seed": 44,
+    "method": "rope3d_axis_projected_logcov",
+    "step": 300,
+    "train_loss": 0.14053386449813843,
+    "grad_norm": 0.17566581070423126,
+    "val_r1": 0.9697265625,
+    "val_loss": 0.14922699332237244
+  },
+  {
+    "seed": 44,
+    "method": "rope3d_axis_projected_logcov",
+    "step": 350,
+    "train_loss": 0.14102807641029358,
+    "grad_norm": 0.17421771585941315,
+    "val_r1": 0.9720051884651184,
+    "val_loss": 0.13856352865695953
+  },
+  {
+    "seed": 44,
+    "method": "rope3d_axis_projected_logcov",
+    "step": 400,
+    "train_loss": 0.11625291407108307,
+    "grad_norm": 0.15549194812774658,
+    "val_r1": 0.970703125,
+    "val_loss": 0.13005363941192627
+  },
+  {
+    "seed": 44,
+    "method": "rope3d_axis_bounded_logcov",
+    "step": 50,
+    "train_loss": 0.32195186614990234,
+    "grad_norm": 0.45797809958457947,
+    "val_r1": 0.9544270634651184,
+    "val_loss": 0.34551510214805603
+  },
+  {
+    "seed": 44,
+    "method": "rope3d_axis_bounded_logcov",
+    "step": 100,
+    "train_loss": 0.26668643951416016,
+    "grad_norm": 0.3708508610725403,
+    "val_r1": 0.9661458134651184,
+    "val_loss": 0.2775827944278717
+  },
+  {
+    "seed": 44,
+    "method": "rope3d_axis_bounded_logcov",
+    "step": 150,
+    "train_loss": 0.25299131870269775,
+    "grad_norm": 0.30904439091682434,
+    "val_r1": 0.9684244990348816,
+    "val_loss": 0.23958981037139893
+  },
+  {
+    "seed": 44,
+    "method": "rope3d_axis_bounded_logcov",
+    "step": 200,
+    "train_loss": 0.20183514058589935,
+    "grad_norm": 0.2759636342525482,
+    "val_r1": 0.9716796875,
+    "val_loss": 0.21162760257720947
+  },
+  {
+    "seed": 44,
+    "method": "rope3d_axis_bounded_logcov",
+    "step": 250,
+    "train_loss": 0.19008289277553558,
+    "grad_norm": 0.2336176037788391,
+    "val_r1": 0.9723307490348816,
+    "val_loss": 0.19125694036483765
+  },
+  {
+    "seed": 44,
+    "method": "rope3d_axis_bounded_logcov",
+    "step": 300,
+    "train_loss": 0.1591443121433258,
+    "grad_norm": 0.20024079084396362,
+    "val_r1": 0.9733073115348816,
+    "val_loss": 0.1748160868883133
+  },
+  {
+    "seed": 44,
+    "method": "rope3d_axis_bounded_logcov",
+    "step": 350,
+    "train_loss": 0.1663033664226532,
+    "grad_norm": 0.19297479093074799,
+    "val_r1": 0.9733073115348816,
+    "val_loss": 0.16086386144161224
+  },
+  {
+    "seed": 44,
+    "method": "rope3d_axis_bounded_logcov",
+    "step": 400,
+    "train_loss": 0.14580659568309784,
+    "grad_norm": 0.17438820004463196,
+    "val_r1": 0.9752604365348816,
+    "val_loss": 0.14894917607307434
+  },
+  {
+    "seed": 44,
+    "method": "rope3d_axis_moments",
+    "step": 50,
+    "train_loss": 0.35382023453712463,
+    "grad_norm": 0.49768656492233276,
+    "val_r1": 0.9381510615348816,
+    "val_loss": 0.3814108073711395
+  },
+  {
+    "seed": 44,
+    "method": "rope3d_axis_moments",
+    "step": 100,
+    "train_loss": 0.298266738653183,
+    "grad_norm": 0.4065147340297699,
+    "val_r1": 0.9554036259651184,
+    "val_loss": 0.30910858511924744
+  },
+  {
+    "seed": 44,
+    "method": "rope3d_axis_moments",
+    "step": 150,
+    "train_loss": 0.28304028511047363,
+    "grad_norm": 0.3361804187297821,
+    "val_r1": 0.9602864384651184,
+    "val_loss": 0.2689903676509857
+  },
+  {
+    "seed": 44,
+    "method": "rope3d_axis_moments",
+    "step": 200,
+    "train_loss": 0.22775386273860931,
+    "grad_norm": 0.30387693643569946,
+    "val_r1": 0.96484375,
+    "val_loss": 0.23935943841934204
+  },
+  {
+    "seed": 44,
+    "method": "rope3d_axis_moments",
+    "step": 250,
+    "train_loss": 0.2113848477602005,
+    "grad_norm": 0.2561701536178589,
+    "val_r1": 0.9661458134651184,
+    "val_loss": 0.2179204225540161
+  },
+  {
+    "seed": 44,
+    "method": "rope3d_axis_moments",
+    "step": 300,
+    "train_loss": 0.18781983852386475,
+    "grad_norm": 0.22065182030200958,
+    "val_r1": 0.9654948115348816,
+    "val_loss": 0.20051904022693634
+  },
+  {
+    "seed": 44,
+    "method": "rope3d_axis_moments",
+    "step": 350,
+    "train_loss": 0.18800050020217896,
+    "grad_norm": 0.21381878852844238,
+    "val_r1": 0.9664713740348816,
+    "val_loss": 0.18588308990001678
+  },
+  {
+    "seed": 44,
+    "method": "rope3d_axis_moments",
+    "step": 400,
+    "train_loss": 0.16796278953552246,
+    "grad_norm": 0.19292135536670685,
+    "val_r1": 0.9697265625,
+    "val_loss": 0.1732083112001419
+  },
+  {
+    "seed": 44,
+    "method": "rope3d_axis_random_control",
+    "step": 50,
+    "train_loss": 0.45958417654037476,
+    "grad_norm": 0.6348859667778015,
+    "val_r1": 0.8746744990348816,
+    "val_loss": 0.4918332099914551
+  },
+  {
+    "seed": 44,
+    "method": "rope3d_axis_random_control",
+    "step": 100,
+    "train_loss": 0.38191601634025574,
+    "grad_norm": 0.5153109431266785,
+    "val_r1": 0.90234375,
+    "val_loss": 0.40571796894073486
+  },
+  {
+    "seed": 44,
+    "method": "rope3d_axis_random_control",
+    "step": 150,
+    "train_loss": 0.370905339717865,
+    "grad_norm": 0.43297868967056274,
+    "val_r1": 0.9095051884651184,
+    "val_loss": 0.3572992980480194
+  },
+  {
+    "seed": 44,
+    "method": "rope3d_axis_random_control",
+    "step": 200,
+    "train_loss": 0.3066612482070923,
+    "grad_norm": 0.3898470997810364,
+    "val_r1": 0.916015625,
+    "val_loss": 0.3217342793941498
+  },
+  {
+    "seed": 44,
+    "method": "rope3d_axis_random_control",
+    "step": 250,
+    "train_loss": 0.2867313325405121,
+    "grad_norm": 0.33560407161712646,
+    "val_r1": 0.91796875,
+    "val_loss": 0.2968811094760895
+  },
+  {
+    "seed": 44,
+    "method": "rope3d_axis_random_control",
+    "step": 300,
+    "train_loss": 0.2566622197628021,
+    "grad_norm": 0.29149097204208374,
+    "val_r1": 0.9205729365348816,
+    "val_loss": 0.2771713435649872
+  },
+  {
+    "seed": 44,
+    "method": "rope3d_axis_random_control",
+    "step": 350,
+    "train_loss": 0.2567307949066162,
+    "grad_norm": 0.2748703360557556,
+    "val_r1": 0.9251301884651184,
+    "val_loss": 0.26061445474624634
+  },
+  {
+    "seed": 44,
+    "method": "rope3d_axis_random_control",
+    "step": 400,
+    "train_loss": 0.24612361192703247,
+    "grad_norm": 0.2684110701084137,
+    "val_r1": 0.9283854365348816,
+    "val_loss": 0.24692630767822266
+  },
+  {
+    "seed": 44,
+    "method": "expected_axis_uncertainty_oracle_logcov",
+    "step": 50,
+    "train_loss": 0.19929254055023193,
+    "grad_norm": 0.3301272392272949,
+    "val_r1": 0.9860026240348816,
+    "val_loss": 0.21194027364253998
+  },
+  {
+    "seed": 44,
+    "method": "expected_axis_uncertainty_oracle_logcov",
+    "step": 100,
+    "train_loss": 0.1577560156583786,
+    "grad_norm": 0.2534606456756592,
+    "val_r1": 0.990234375,
+    "val_loss": 0.16575609147548676
+  },
+  {
+    "seed": 44,
+    "method": "expected_axis_uncertainty_oracle_logcov",
+    "step": 150,
+    "train_loss": 0.14705677330493927,
+    "grad_norm": 0.21210318803787231,
+    "val_r1": 0.9925130009651184,
+    "val_loss": 0.14002075791358948
+  },
+  {
+    "seed": 44,
+    "method": "expected_axis_uncertainty_oracle_logcov",
+    "step": 200,
+    "train_loss": 0.10988850891590118,
+    "grad_norm": 0.1822701394557953,
+    "val_r1": 0.9938151240348816,
+    "val_loss": 0.1206459030508995
+  },
+  {
+    "seed": 44,
+    "method": "expected_axis_uncertainty_oracle_logcov",
+    "step": 250,
+    "train_loss": 0.09820429235696793,
+    "grad_norm": 0.15532195568084717,
+    "val_r1": 0.9938151240348816,
+    "val_loss": 0.10698497295379639
+  },
+  {
+    "seed": 44,
+    "method": "expected_axis_uncertainty_oracle_logcov",
+    "step": 300,
+    "train_loss": 0.09519429504871368,
+    "grad_norm": 0.13960158824920654,
+    "val_r1": 0.9947916865348816,
+    "val_loss": 0.09529251605272293
+  },
+  {
+    "seed": 44,
+    "method": "expected_axis_uncertainty_oracle_logcov",
+    "step": 350,
+    "train_loss": 0.08404906839132309,
+    "grad_norm": 0.12780362367630005,
+    "val_r1": 0.9944661259651184,
+    "val_loss": 0.08642179518938065
+  },
+  {
+    "seed": 44,
+    "method": "expected_axis_uncertainty_oracle_logcov",
+    "step": 400,
+    "train_loss": 0.07475455850362778,
+    "grad_norm": 0.10925544798374176,
+    "val_r1": 0.9944661259651184,
+    "val_loss": 0.07845430821180344
+  },
+  {
+    "seed": 55,
+    "method": "center",
+    "step": 50,
+    "train_loss": 0.5214555263519287,
+    "grad_norm": 0.21224725246429443,
+    "val_r1": 0.7981770634651184,
+    "val_loss": 0.49266743659973145
+  },
+  {
+    "seed": 55,
+    "method": "center",
+    "step": 100,
+    "train_loss": 0.4328674376010895,
+    "grad_norm": 0.17790785431861877,
+    "val_r1": 0.7981770634651184,
+    "val_loss": 0.48188337683677673
+  },
+  {
+    "seed": 55,
+    "method": "center",
+    "step": 150,
+    "train_loss": 0.4346543550491333,
+    "grad_norm": 0.1638401597738266,
+    "val_r1": 0.7972005009651184,
+    "val_loss": 0.4744744300842285
+  },
+  {
+    "seed": 55,
+    "method": "center",
+    "step": 200,
+    "train_loss": 0.47994130849838257,
+    "grad_norm": 0.19933591783046722,
+    "val_r1": 0.7972005009651184,
+    "val_loss": 0.4710361659526825
+  },
+  {
+    "seed": 55,
+    "method": "center",
+    "step": 250,
+    "train_loss": 0.46023696660995483,
+    "grad_norm": 0.17502640187740326,
+    "val_r1": 0.7991536259651184,
+    "val_loss": 0.4690115451812744
+  },
+  {
+    "seed": 55,
+    "method": "center",
+    "step": 300,
+    "train_loss": 0.4904480278491974,
+    "grad_norm": 0.20669162273406982,
+    "val_r1": 0.7985026240348816,
+    "val_loss": 0.46508124470710754
+  },
+  {
+    "seed": 55,
+    "method": "center",
+    "step": 350,
+    "train_loss": 0.44907987117767334,
+    "grad_norm": 0.2017868161201477,
+    "val_r1": 0.7978515625,
+    "val_loss": 0.4659072458744049
+  },
+  {
+    "seed": 55,
+    "method": "center",
+    "step": 400,
+    "train_loss": 0.48650047183036804,
+    "grad_norm": 0.243925079703331,
+    "val_r1": 0.7939453125,
+    "val_loss": 0.4659132957458496
+  },
+  {
+    "seed": 55,
+    "method": "rope3d_axis",
+    "step": 50,
+    "train_loss": 0.4646691679954529,
+    "grad_norm": 0.6206789612770081,
+    "val_r1": 0.9052734375,
+    "val_loss": 0.43767133355140686
+  },
+  {
+    "seed": 55,
+    "method": "rope3d_axis",
+    "step": 100,
+    "train_loss": 0.3548864722251892,
+    "grad_norm": 0.5111089944839478,
+    "val_r1": 0.9108073115348816,
+    "val_loss": 0.3734588325023651
+  },
+  {
+    "seed": 55,
+    "method": "rope3d_axis",
+    "step": 150,
+    "train_loss": 0.3163929879665375,
+    "grad_norm": 0.4382602870464325,
+    "val_r1": 0.9169921875,
+    "val_loss": 0.33086439967155457
+  },
+  {
+    "seed": 55,
+    "method": "rope3d_axis",
+    "step": 200,
+    "train_loss": 0.3082618713378906,
+    "grad_norm": 0.3434089124202728,
+    "val_r1": 0.91796875,
+    "val_loss": 0.30374065041542053
+  },
+  {
+    "seed": 55,
+    "method": "rope3d_axis",
+    "step": 250,
+    "train_loss": 0.29206499457359314,
+    "grad_norm": 0.3394821286201477,
+    "val_r1": 0.9182942509651184,
+    "val_loss": 0.28088974952697754
+  },
+  {
+    "seed": 55,
+    "method": "rope3d_axis",
+    "step": 300,
+    "train_loss": 0.27288612723350525,
+    "grad_norm": 0.2854899764060974,
+    "val_r1": 0.923828125,
+    "val_loss": 0.26162824034690857
+  },
+  {
+    "seed": 55,
+    "method": "rope3d_axis",
+    "step": 350,
+    "train_loss": 0.2322346717119217,
+    "grad_norm": 0.2671046257019043,
+    "val_r1": 0.9244791865348816,
+    "val_loss": 0.24617111682891846
+  },
+  {
+    "seed": 55,
+    "method": "rope3d_axis",
+    "step": 400,
+    "train_loss": 0.25763458013534546,
+    "grad_norm": 0.23328518867492676,
+    "val_r1": 0.9293619990348816,
+    "val_loss": 0.23299680650234222
+  },
+  {
+    "seed": 55,
+    "method": "rope3d_oblique",
+    "step": 50,
+    "train_loss": 0.4605845808982849,
+    "grad_norm": 0.584532618522644,
+    "val_r1": 0.90625,
+    "val_loss": 0.4292322099208832
+  },
+  {
+    "seed": 55,
+    "method": "rope3d_oblique",
+    "step": 100,
+    "train_loss": 0.3534678518772125,
+    "grad_norm": 0.48454540967941284,
+    "val_r1": 0.9108073115348816,
+    "val_loss": 0.36890149116516113
+  },
+  {
+    "seed": 55,
+    "method": "rope3d_oblique",
+    "step": 150,
+    "train_loss": 0.3268115222454071,
+    "grad_norm": 0.3984919786453247,
+    "val_r1": 0.9130859375,
+    "val_loss": 0.33019527792930603
+  },
+  {
+    "seed": 55,
+    "method": "rope3d_oblique",
+    "step": 200,
+    "train_loss": 0.3302134573459625,
+    "grad_norm": 0.35788846015930176,
+    "val_r1": 0.9150390625,
+    "val_loss": 0.3039443790912628
+  },
+  {
+    "seed": 55,
+    "method": "rope3d_oblique",
+    "step": 250,
+    "train_loss": 0.29019927978515625,
+    "grad_norm": 0.30855390429496765,
+    "val_r1": 0.9150390625,
+    "val_loss": 0.2833806574344635
+  },
+  {
+    "seed": 55,
+    "method": "rope3d_oblique",
+    "step": 300,
+    "train_loss": 0.288175493478775,
+    "grad_norm": 0.26579731702804565,
+    "val_r1": 0.9156901240348816,
+    "val_loss": 0.26793938875198364
+  },
+  {
+    "seed": 55,
+    "method": "rope3d_oblique",
+    "step": 350,
+    "train_loss": 0.2515818178653717,
+    "grad_norm": 0.2503982484340668,
+    "val_r1": 0.9153645634651184,
+    "val_loss": 0.25607720017433167
+  },
+  {
+    "seed": 55,
+    "method": "rope3d_oblique",
+    "step": 400,
+    "train_loss": 0.2858249843120575,
+    "grad_norm": 0.21798239648342133,
+    "val_r1": 0.9169921875,
+    "val_loss": 0.244803786277771
+  },
+  {
+    "seed": 55,
+    "method": "expected_oblique_support",
+    "step": 50,
+    "train_loss": 0.7558022737503052,
+    "grad_norm": 0.7440365552902222,
+    "val_r1": 0.8072916865348816,
+    "val_loss": 0.7333728671073914
+  },
+  {
+    "seed": 55,
+    "method": "expected_oblique_support",
+    "step": 100,
+    "train_loss": 0.6340795755386353,
+    "grad_norm": 0.6309744119644165,
+    "val_r1": 0.8108723759651184,
+    "val_loss": 0.6564540266990662
+  },
+  {
+    "seed": 55,
+    "method": "expected_oblique_support",
+    "step": 150,
+    "train_loss": 0.5811216235160828,
+    "grad_norm": 0.5488701462745667,
+    "val_r1": 0.8216145634651184,
+    "val_loss": 0.6033284664154053
+  },
+  {
+    "seed": 55,
+    "method": "expected_oblique_support",
+    "step": 200,
+    "train_loss": 0.5856950879096985,
+    "grad_norm": 0.49535271525382996,
+    "val_r1": 0.8203125,
+    "val_loss": 0.5630626082420349
+  },
+  {
+    "seed": 55,
+    "method": "expected_oblique_support",
+    "step": 250,
+    "train_loss": 0.5254579782485962,
+    "grad_norm": 0.4470615088939667,
+    "val_r1": 0.8294270634651184,
+    "val_loss": 0.52761310338974
+  },
+  {
+    "seed": 55,
+    "method": "expected_oblique_support",
+    "step": 300,
+    "train_loss": 0.5121403932571411,
+    "grad_norm": 0.4189017713069916,
+    "val_r1": 0.8414713740348816,
+    "val_loss": 0.49500831961631775
+  },
+  {
+    "seed": 55,
+    "method": "expected_oblique_support",
+    "step": 350,
+    "train_loss": 0.47508957982063293,
+    "grad_norm": 0.40264999866485596,
+    "val_r1": 0.84765625,
+    "val_loss": 0.466421514749527
+  },
+  {
+    "seed": 55,
+    "method": "expected_oblique_support",
+    "step": 400,
+    "train_loss": 0.45651066303253174,
+    "grad_norm": 0.3790345788002014,
+    "val_r1": 0.8502604365348816,
+    "val_loss": 0.44440674781799316
+  },
+  {
+    "seed": 55,
+    "method": "rope3d_axis_normal",
+    "step": 50,
+    "train_loss": 0.35347267985343933,
+    "grad_norm": 0.4891042411327362,
+    "val_r1": 0.947265625,
+    "val_loss": 0.3328193724155426
+  },
+  {
+    "seed": 55,
+    "method": "rope3d_axis_normal",
+    "step": 100,
+    "train_loss": 0.2647917568683624,
+    "grad_norm": 0.3913206160068512,
+    "val_r1": 0.9537760615348816,
+    "val_loss": 0.2771155834197998
+  },
+  {
+    "seed": 55,
+    "method": "rope3d_axis_normal",
+    "step": 150,
+    "train_loss": 0.22915421426296234,
+    "grad_norm": 0.33045220375061035,
+    "val_r1": 0.9625651240348816,
+    "val_loss": 0.24042554199695587
+  },
+  {
+    "seed": 55,
+    "method": "rope3d_axis_normal",
+    "step": 200,
+    "train_loss": 0.21614021062850952,
+    "grad_norm": 0.25484606623649597,
+    "val_r1": 0.9625651240348816,
+    "val_loss": 0.2165061980485916
+  },
+  {
+    "seed": 55,
+    "method": "rope3d_axis_normal",
+    "step": 250,
+    "train_loss": 0.2031135857105255,
+    "grad_norm": 0.2517310678958893,
+    "val_r1": 0.9645182490348816,
+    "val_loss": 0.1962096095085144
+  },
+  {
+    "seed": 55,
+    "method": "rope3d_axis_normal",
+    "step": 300,
+    "train_loss": 0.18967744708061218,
+    "grad_norm": 0.20864839851856232,
+    "val_r1": 0.966796875,
+    "val_loss": 0.1796412467956543
+  },
+  {
+    "seed": 55,
+    "method": "rope3d_axis_normal",
+    "step": 350,
+    "train_loss": 0.1584514081478119,
+    "grad_norm": 0.19116301834583282,
+    "val_r1": 0.966796875,
+    "val_loss": 0.1654892861843109
+  },
+  {
+    "seed": 55,
+    "method": "rope3d_axis_normal",
+    "step": 400,
+    "train_loss": 0.1657407134771347,
+    "grad_norm": 0.16787883639335632,
+    "val_r1": 0.970703125,
+    "val_loss": 0.1534956842660904
+  },
+  {
+    "seed": 55,
+    "method": "rope3d_axis_scale",
+    "step": 50,
+    "train_loss": 0.3837384283542633,
+    "grad_norm": 0.5218374729156494,
+    "val_r1": 0.9430338740348816,
+    "val_loss": 0.3566097319126129
+  },
+  {
+    "seed": 55,
+    "method": "rope3d_axis_scale",
+    "step": 100,
+    "train_loss": 0.27918705344200134,
+    "grad_norm": 0.41028010845184326,
+    "val_r1": 0.9456380009651184,
+    "val_loss": 0.2990476191043854
+  },
+  {
+    "seed": 55,
+    "method": "rope3d_axis_scale",
+    "step": 150,
+    "train_loss": 0.25049200654029846,
+    "grad_norm": 0.3598327338695526,
+    "val_r1": 0.9488932490348816,
+    "val_loss": 0.2614354193210602
+  },
+  {
+    "seed": 55,
+    "method": "rope3d_axis_scale",
+    "step": 200,
+    "train_loss": 0.24770255386829376,
+    "grad_norm": 0.2809908092021942,
+    "val_r1": 0.94921875,
+    "val_loss": 0.2366759181022644
+  },
+  {
+    "seed": 55,
+    "method": "rope3d_axis_scale",
+    "step": 250,
+    "train_loss": 0.22989724576473236,
+    "grad_norm": 0.2731070816516876,
+    "val_r1": 0.9508463740348816,
+    "val_loss": 0.2156633585691452
+  },
+  {
+    "seed": 55,
+    "method": "rope3d_axis_scale",
+    "step": 300,
+    "train_loss": 0.2053411900997162,
+    "grad_norm": 0.22149722278118134,
+    "val_r1": 0.9521484375,
+    "val_loss": 0.19887955486774445
+  },
+  {
+    "seed": 55,
+    "method": "rope3d_axis_scale",
+    "step": 350,
+    "train_loss": 0.17085707187652588,
+    "grad_norm": 0.21018505096435547,
+    "val_r1": 0.9560546875,
+    "val_loss": 0.1847219616174698
+  },
+  {
+    "seed": 55,
+    "method": "rope3d_axis_scale",
+    "step": 400,
+    "train_loss": 0.19092077016830444,
+    "grad_norm": 0.18210186064243317,
+    "val_r1": 0.9580078125,
+    "val_loss": 0.1725349873304367
+  },
+  {
+    "seed": 55,
+    "method": "rope3d_axis_logcov",
+    "step": 50,
+    "train_loss": 0.20235837996006012,
+    "grad_norm": 0.31526312232017517,
+    "val_r1": 0.9840494990348816,
+    "val_loss": 0.19149775803089142
+  },
+  {
+    "seed": 55,
+    "method": "rope3d_axis_logcov",
+    "step": 100,
+    "train_loss": 0.14965108036994934,
+    "grad_norm": 0.24420517683029175,
+    "val_r1": 0.986328125,
+    "val_loss": 0.15398147702217102
+  },
+  {
+    "seed": 55,
+    "method": "rope3d_axis_logcov",
+    "step": 150,
+    "train_loss": 0.11695538461208344,
+    "grad_norm": 0.20103076100349426,
+    "val_r1": 0.9886067509651184,
+    "val_loss": 0.13015881180763245
+  },
+  {
+    "seed": 55,
+    "method": "rope3d_axis_logcov",
+    "step": 200,
+    "train_loss": 0.11413248628377914,
+    "grad_norm": 0.15797477960586548,
+    "val_r1": 0.9892578125,
+    "val_loss": 0.11455663293600082
+  },
+  {
+    "seed": 55,
+    "method": "rope3d_axis_logcov",
+    "step": 250,
+    "train_loss": 0.09735965728759766,
+    "grad_norm": 0.15127995610237122,
+    "val_r1": 0.9895833134651184,
+    "val_loss": 0.10142958909273148
+  },
+  {
+    "seed": 55,
+    "method": "rope3d_axis_logcov",
+    "step": 300,
+    "train_loss": 0.09547289460897446,
+    "grad_norm": 0.12771128118038177,
+    "val_r1": 0.9892578125,
+    "val_loss": 0.09181154519319534
+  },
+  {
+    "seed": 55,
+    "method": "rope3d_axis_logcov",
+    "step": 350,
+    "train_loss": 0.08015746623277664,
+    "grad_norm": 0.11625398695468903,
+    "val_r1": 0.9889323115348816,
+    "val_loss": 0.08349905163049698
+  },
+  {
+    "seed": 55,
+    "method": "rope3d_axis_logcov",
+    "step": 400,
+    "train_loss": 0.07536589354276657,
+    "grad_norm": 0.10546202212572098,
+    "val_r1": 0.9899088740348816,
+    "val_loss": 0.07648351788520813
+  },
+  {
+    "seed": 55,
+    "method": "rope3d_axis_projected_logcov",
+    "step": 50,
+    "train_loss": 0.2816813886165619,
+    "grad_norm": 0.3962351083755493,
+    "val_r1": 0.9651692509651184,
+    "val_loss": 0.26550331711769104
+  },
+  {
+    "seed": 55,
+    "method": "rope3d_axis_projected_logcov",
+    "step": 100,
+    "train_loss": 0.20996476709842682,
+    "grad_norm": 0.31808722019195557,
+    "val_r1": 0.9635416865348816,
+    "val_loss": 0.220644012093544
+  },
+  {
+    "seed": 55,
+    "method": "rope3d_axis_projected_logcov",
+    "step": 150,
+    "train_loss": 0.1832069605588913,
+    "grad_norm": 0.2623690962791443,
+    "val_r1": 0.9651692509651184,
+    "val_loss": 0.19104433059692383
+  },
+  {
+    "seed": 55,
+    "method": "rope3d_axis_projected_logcov",
+    "step": 200,
+    "train_loss": 0.17091210186481476,
+    "grad_norm": 0.2068587988615036,
+    "val_r1": 0.9645182490348816,
+    "val_loss": 0.17205685377120972
+  },
+  {
+    "seed": 55,
+    "method": "rope3d_axis_projected_logcov",
+    "step": 250,
+    "train_loss": 0.14116564393043518,
+    "grad_norm": 0.19450713694095612,
+    "val_r1": 0.9674479365348816,
+    "val_loss": 0.1556321382522583
+  },
+  {
+    "seed": 55,
+    "method": "rope3d_axis_projected_logcov",
+    "step": 300,
+    "train_loss": 0.14723558723926544,
+    "grad_norm": 0.166883647441864,
+    "val_r1": 0.9671223759651184,
+    "val_loss": 0.14351515471935272
+  },
+  {
+    "seed": 55,
+    "method": "rope3d_axis_projected_logcov",
+    "step": 350,
+    "train_loss": 0.12455019354820251,
+    "grad_norm": 0.16035552322864532,
+    "val_r1": 0.9713541865348816,
+    "val_loss": 0.13274121284484863
+  },
+  {
+    "seed": 55,
+    "method": "rope3d_axis_projected_logcov",
+    "step": 400,
+    "train_loss": 0.13238637149333954,
+    "grad_norm": 0.14776334166526794,
+    "val_r1": 0.97265625,
+    "val_loss": 0.12425917387008667
+  },
+  {
+    "seed": 55,
+    "method": "rope3d_axis_bounded_logcov",
+    "step": 50,
+    "train_loss": 0.33925995230674744,
+    "grad_norm": 0.47299838066101074,
+    "val_r1": 0.9563801884651184,
+    "val_loss": 0.31833577156066895
+  },
+  {
+    "seed": 55,
+    "method": "rope3d_axis_bounded_logcov",
+    "step": 100,
+    "train_loss": 0.25178489089012146,
+    "grad_norm": 0.37506991624832153,
+    "val_r1": 0.9606119990348816,
+    "val_loss": 0.2642723023891449
+  },
+  {
+    "seed": 55,
+    "method": "rope3d_axis_bounded_logcov",
+    "step": 150,
+    "train_loss": 0.2156354933977127,
+    "grad_norm": 0.3163025677204132,
+    "val_r1": 0.9664713740348816,
+    "val_loss": 0.22851626574993134
+  },
+  {
+    "seed": 55,
+    "method": "rope3d_axis_bounded_logcov",
+    "step": 200,
+    "train_loss": 0.20751583576202393,
+    "grad_norm": 0.2454976588487625,
+    "val_r1": 0.9684244990348816,
+    "val_loss": 0.20505857467651367
+  },
+  {
+    "seed": 55,
+    "method": "rope3d_axis_bounded_logcov",
+    "step": 250,
+    "train_loss": 0.192430317401886,
+    "grad_norm": 0.23813237249851227,
+    "val_r1": 0.96875,
+    "val_loss": 0.18519997596740723
+  },
+  {
+    "seed": 55,
+    "method": "rope3d_axis_bounded_logcov",
+    "step": 300,
+    "train_loss": 0.17892764508724213,
+    "grad_norm": 0.20051440596580505,
+    "val_r1": 0.9710286259651184,
+    "val_loss": 0.1689082831144333
+  },
+  {
+    "seed": 55,
+    "method": "rope3d_axis_bounded_logcov",
+    "step": 350,
+    "train_loss": 0.14686334133148193,
+    "grad_norm": 0.1828109174966812,
+    "val_r1": 0.9733073115348816,
+    "val_loss": 0.1555054932832718
+  },
+  {
+    "seed": 55,
+    "method": "rope3d_axis_bounded_logcov",
+    "step": 400,
+    "train_loss": 0.15648749470710754,
+    "grad_norm": 0.16039352118968964,
+    "val_r1": 0.9759114384651184,
+    "val_loss": 0.14389236271381378
+  },
+  {
+    "seed": 55,
+    "method": "rope3d_axis_moments",
+    "step": 50,
+    "train_loss": 0.37727564573287964,
+    "grad_norm": 0.5151763558387756,
+    "val_r1": 0.9407551884651184,
+    "val_loss": 0.3522763252258301
+  },
+  {
+    "seed": 55,
+    "method": "rope3d_axis_moments",
+    "step": 100,
+    "train_loss": 0.2812168002128601,
+    "grad_norm": 0.41445037722587585,
+    "val_r1": 0.9495442509651184,
+    "val_loss": 0.29491937160491943
+  },
+  {
+    "seed": 55,
+    "method": "rope3d_axis_moments",
+    "step": 150,
+    "train_loss": 0.24378660321235657,
+    "grad_norm": 0.3504215180873871,
+    "val_r1": 0.9544270634651184,
+    "val_loss": 0.2570541501045227
+  },
+  {
+    "seed": 55,
+    "method": "rope3d_axis_moments",
+    "step": 200,
+    "train_loss": 0.23447352647781372,
+    "grad_norm": 0.2709423303604126,
+    "val_r1": 0.9554036259651184,
+    "val_loss": 0.23242051899433136
+  },
+  {
+    "seed": 55,
+    "method": "rope3d_axis_moments",
+    "step": 250,
+    "train_loss": 0.2166690230369568,
+    "grad_norm": 0.2660768926143646,
+    "val_r1": 0.9567057490348816,
+    "val_loss": 0.21148037910461426
+  },
+  {
+    "seed": 55,
+    "method": "rope3d_axis_moments",
+    "step": 300,
+    "train_loss": 0.20511536300182343,
+    "grad_norm": 0.2207697331905365,
+    "val_r1": 0.958984375,
+    "val_loss": 0.19427335262298584
+  },
+  {
+    "seed": 55,
+    "method": "rope3d_axis_moments",
+    "step": 350,
+    "train_loss": 0.17109309136867523,
+    "grad_norm": 0.20458771288394928,
+    "val_r1": 0.9599609375,
+    "val_loss": 0.18014280498027802
+  },
+  {
+    "seed": 55,
+    "method": "rope3d_axis_moments",
+    "step": 400,
+    "train_loss": 0.18495917320251465,
+    "grad_norm": 0.17625613510608673,
+    "val_r1": 0.9615885615348816,
+    "val_loss": 0.16784901916980743
+  },
+  {
+    "seed": 55,
+    "method": "rope3d_axis_random_control",
+    "step": 50,
+    "train_loss": 0.48226478695869446,
+    "grad_norm": 0.6391624808311462,
+    "val_r1": 0.8870442509651184,
+    "val_loss": 0.4552830159664154
+  },
+  {
+    "seed": 55,
+    "method": "rope3d_axis_random_control",
+    "step": 100,
+    "train_loss": 0.3706083595752716,
+    "grad_norm": 0.5275278687477112,
+    "val_r1": 0.8977864384651184,
+    "val_loss": 0.38709521293640137
+  },
+  {
+    "seed": 55,
+    "method": "rope3d_axis_random_control",
+    "step": 150,
+    "train_loss": 0.33284902572631836,
+    "grad_norm": 0.4537518322467804,
+    "val_r1": 0.9055989384651184,
+    "val_loss": 0.3420598804950714
+  },
+  {
+    "seed": 55,
+    "method": "rope3d_axis_random_control",
+    "step": 200,
+    "train_loss": 0.31260859966278076,
+    "grad_norm": 0.35212990641593933,
+    "val_r1": 0.9075520634651184,
+    "val_loss": 0.3130764067173004
+  },
+  {
+    "seed": 55,
+    "method": "rope3d_axis_random_control",
+    "step": 250,
+    "train_loss": 0.30167171359062195,
+    "grad_norm": 0.3492445945739746,
+    "val_r1": 0.9117838740348816,
+    "val_loss": 0.288984090089798
+  },
+  {
+    "seed": 55,
+    "method": "rope3d_axis_random_control",
+    "step": 300,
+    "train_loss": 0.27837660908699036,
+    "grad_norm": 0.2927069365978241,
+    "val_r1": 0.916015625,
+    "val_loss": 0.26870736479759216
+  },
+  {
+    "seed": 55,
+    "method": "rope3d_axis_random_control",
+    "step": 350,
+    "train_loss": 0.23656170070171356,
+    "grad_norm": 0.2751111090183258,
+    "val_r1": 0.9186198115348816,
+    "val_loss": 0.252398282289505
+  },
+  {
+    "seed": 55,
+    "method": "rope3d_axis_random_control",
+    "step": 400,
+    "train_loss": 0.263093501329422,
+    "grad_norm": 0.24201847612857819,
+    "val_r1": 0.923828125,
+    "val_loss": 0.23905718326568604
+  },
+  {
+    "seed": 55,
+    "method": "expected_axis_uncertainty_oracle_logcov",
+    "step": 50,
+    "train_loss": 0.20775291323661804,
+    "grad_norm": 0.33417394757270813,
+    "val_r1": 0.9892578125,
+    "val_loss": 0.19850242137908936
+  },
+  {
+    "seed": 55,
+    "method": "expected_axis_uncertainty_oracle_logcov",
+    "step": 100,
+    "train_loss": 0.15961022675037384,
+    "grad_norm": 0.2650895416736603,
+    "val_r1": 0.9879557490348816,
+    "val_loss": 0.16103123128414154
+  },
+  {
+    "seed": 55,
+    "method": "expected_axis_uncertainty_oracle_logcov",
+    "step": 150,
+    "train_loss": 0.1232750341296196,
+    "grad_norm": 0.21562115848064423,
+    "val_r1": 0.9899088740348816,
+    "val_loss": 0.13617144525051117
+  },
+  {
+    "seed": 55,
+    "method": "expected_axis_uncertainty_oracle_logcov",
+    "step": 200,
+    "train_loss": 0.11757359653711319,
+    "grad_norm": 0.1666998267173767,
+    "val_r1": 0.9892578125,
+    "val_loss": 0.11934687942266464
+  },
+  {
+    "seed": 55,
+    "method": "expected_axis_uncertainty_oracle_logcov",
+    "step": 250,
+    "train_loss": 0.10195954144001007,
+    "grad_norm": 0.15993060171604156,
+    "val_r1": 0.9908854365348816,
+    "val_loss": 0.10564669221639633
+  },
+  {
+    "seed": 55,
+    "method": "expected_axis_uncertainty_oracle_logcov",
+    "step": 300,
+    "train_loss": 0.09954255819320679,
+    "grad_norm": 0.13582170009613037,
+    "val_r1": 0.9908854365348816,
+    "val_loss": 0.09486078470945358
+  },
+  {
+    "seed": 55,
+    "method": "expected_axis_uncertainty_oracle_logcov",
+    "step": 350,
+    "train_loss": 0.08369115740060806,
+    "grad_norm": 0.12185826152563095,
+    "val_r1": 0.9915364384651184,
+    "val_loss": 0.08616156131029129
+  },
+  {
+    "seed": 55,
+    "method": "expected_axis_uncertainty_oracle_logcov",
+    "step": 400,
+    "train_loss": 0.07687349617481232,
+    "grad_norm": 0.10821836441755295,
+    "val_r1": 0.9912109375,
+    "val_loss": 0.07864618301391602
+  }
+]

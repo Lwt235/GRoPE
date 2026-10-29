@@ -1,0 +1,68 @@
+{
+  "pilot": {
+    "reason": "floor eigenvalues before scalar logarithm; float32 extreme anisotropy can produce small negative eigenvalues",
+    "training_changed": false,
+    "checkpoint_selection_changed": false,
+    "all_metrics_finite_after_audit": true,
+    "nonfinite_before": {
+      "22/center_scale/shape_noise/loss": 1
+    },
+    "r1_changes": [
+      {
+        "key": "22/center_scale/shape_noise/r1",
+        "changed_scenes": 1,
+        "mean_r1_before": 0.7166340947151184,
+        "mean_r1_after": 0.72021484375
+      },
+      {
+        "key": "55/center_logcov/shape_shuffled/r1",
+        "changed_scenes": 1,
+        "mean_r1_before": 0.7063801884651184,
+        "mean_r1_after": 0.7062174677848816
+      }
+    ],
+    "evaluation_source_hashes": {
+      "models/__init__.py": "687fe9cb12175c9dc5c64db7cbb8ed6bb306b9dd6624739e2a5e32164edb6242",
+      "models/geometry.py": "173dbb8a58c00a41fabe5918cf4cc5422809e829aa492a8601747dbc4c4f8e20",
+      "experiments/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "experiments/audit_results.py": "b061d1b2fe7c2c126b97dfe3c47cac9147318cbe5f3ad0d37c97f29a21a7b7db",
+      "experiments/calibrate_probe.py": "c6b15e655dcbdd9030f0cd53d7996d6a7c33d06584f4bfdb4d8b746d50170f12",
+      "experiments/launch_gpu.py": "12fbb76c6ad4b436c14c050144f1019d599a2d9669ba9ca20c4b95dcad028353",
+      "experiments/matching_probe.py": "b0bb36b9ebffab77307b9048d3ba27c816c85fc0d1e3b7b09d5009f3e58ddeaf",
+      "experiments/math_probe.py": "07df28e74a1efcd987efdda6a14173c89c052a6311130fd2317a4ed3713903bc",
+      "experiments/stability_probe.py": "ba216e5726da0fbabf88bc763386c301e95e43fed0fbacacca9ba2d8de46b80a",
+      "experiments/summarize.py": "eaa60acbe86b0cc254a4dd858974cc423e296cd38ec82eb23c8c216a91e87b34",
+      "experiments/synthetic.py": "5efbaa21f872ddc4f7a13eecf5267f04945432ec3965c0ade4317b7a4a6abb48"
+    }
+  },
+  "revision": {
+    "reason": "floor eigenvalues before scalar logarithm; float32 extreme anisotropy can produce small negative eigenvalues",
+    "training_changed": false,
+    "checkpoint_selection_changed": false,
+    "all_metrics_finite_after_audit": true,
+    "nonfinite_before": {
+      "22/rope3d_axis_scale/shape_noise/loss": 1
+    },
+    "r1_changes": [
+      {
+        "key": "22/rope3d_axis_scale/shape_noise/r1",
+        "changed_scenes": 1,
+        "mean_r1_before": 0.8059895634651184,
+        "mean_r1_after": 0.8098958134651184
+      }
+    ],
+    "evaluation_source_hashes": {
+      "models/__init__.py": "687fe9cb12175c9dc5c64db7cbb8ed6bb306b9dd6624739e2a5e32164edb6242",
+      "models/geometry.py": "173dbb8a58c00a41fabe5918cf4cc5422809e829aa492a8601747dbc4c4f8e20",
+      "experiments/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "experiments/audit_results.py": "b061d1b2fe7c2c126b97dfe3c47cac9147318cbe5f3ad0d37c97f29a21a7b7db",
+      "experiments/calibrate_probe.py": "c6b15e655dcbdd9030f0cd53d7996d6a7c33d06584f4bfdb4d8b746d50170f12",
+      "experiments/launch_gpu.py": "12fbb76c6ad4b436c14c050144f1019d599a2d9669ba9ca20c4b95dcad028353",
+      "experiments/matching_probe.py": "b0bb36b9ebffab77307b9048d3ba27c816c85fc0d1e3b7b09d5009f3e58ddeaf",
+      "experiments/math_probe.py": "07df28e74a1efcd987efdda6a14173c89c052a6311130fd2317a4ed3713903bc",
+      "experiments/stability_probe.py": "ba216e5726da0fbabf88bc763386c301e95e43fed0fbacacca9ba2d8de46b80a",
+      "experiments/summarize.py": "ce308a159effca2686549353400b547a2e07465f8720ea22fc234910a1449c83",
+      "experiments/synthetic.py": "5efbaa21f872ddc4f7a13eecf5267f04945432ec3965c0ade4317b7a4a6abb48"
+    }
+  }
+}

@@ -1,0 +1,115 @@
+{
+  "seed": 20261029,
+  "dtype": "float64",
+  "checks": {
+    "affine_global_rigid": true,
+    "gauge_counterexample": true,
+    "covariance_gauge_safe": true,
+    "tangent_scale_cancellation": true,
+    "characteristic_function_mc": true,
+    "axis_blind_spot": true
+  },
+  "affine_gauge": {
+    "same_covariance_max_abs": 0.0,
+    "relative_matrix_gauge_change_median_fro": 29.773645772662363,
+    "fixed_features_logit_gauge_change_median_abs": 8.789441016119456,
+    "global_rigid_relative_max_abs": 5.684341886080802e-14,
+    "logcov_descriptor_gauge_max_abs": 0.0
+  },
+  "tangent": {
+    "scale_cancellation_max_relative": 1.6857846586852475e-14,
+    "projected_covariance_change_median_relative": 2.1727483177233533,
+    "random_tangent_condition_max": 270.2510567964497,
+    "grazing_sweep": [
+      {
+        "degrees": 0,
+        "condition": 1.0
+      },
+      {
+        "degrees": 60,
+        "condition": 1.9999999999999996
+      },
+      {
+        "degrees": 80,
+        "condition": 5.758770483143631
+      },
+      {
+        "degrees": 89,
+        "condition": 57.2986884985499
+      },
+      {
+        "degrees": 89.9,
+        "condition": 572.9580860191508
+      },
+      {
+        "degrees": 89.99,
+        "condition": 5729.5779803954
+      }
+    ]
+  },
+  "probability": {
+    "monte_carlo_n": 200000,
+    "expected_phase_mc_max_error": 0.0033072880080029657,
+    "axis_frequency_offdiagonal_difference": 0.0,
+    "oblique_frequency_offdiagonal_difference": 0.13759388534024095,
+    "shape_as_uncertainty_attenuation": [
+      {
+        "sigma": 0.01,
+        "frequency": 20,
+        "amplitude": 0.9801986733067553
+      },
+      {
+        "sigma": 0.05,
+        "frequency": 20,
+        "amplitude": 0.6065306597126334
+      },
+      {
+        "sigma": 0.1,
+        "frequency": 20,
+        "amplitude": 0.1353352832366127
+      },
+      {
+        "sigma": 0.2,
+        "frequency": 20,
+        "amplitude": 0.00033546262790251185
+      },
+      {
+        "sigma": 0.4,
+        "frequency": 20,
+        "amplitude": 1.2664165549094176e-14
+      }
+    ]
+  },
+  "projection": [
+    {
+      "sigma_over_depth": 0.01,
+      "nonpositive_depth_fraction": 0.0,
+      "z_le_0_5_fraction": 0.0,
+      "conditional_cov_relative_error": 0.0028924584878199915
+    },
+    {
+      "sigma_over_depth": 0.05,
+      "nonpositive_depth_fraction": 0.0,
+      "z_le_0_5_fraction": 0.0,
+      "conditional_cov_relative_error": 0.010736586420671552
+    },
+    {
+      "sigma_over_depth": 0.1,
+      "nonpositive_depth_fraction": 0.0,
+      "z_le_0_5_fraction": 0.0,
+      "conditional_cov_relative_error": 0.028425606562023458
+    },
+    {
+      "sigma_over_depth": 0.2,
+      "nonpositive_depth_fraction": 0.0,
+      "z_le_0_5_fraction": 0.0,
+      "conditional_cov_relative_error": 0.13913077608990052
+    },
+    {
+      "sigma_over_depth": 0.35,
+      "nonpositive_depth_fraction": 0.00213,
+      "z_le_0_5_fraction": 0.00512,
+      "conditional_cov_relative_error": 0.46968030079808115
+    }
+  ]
+}

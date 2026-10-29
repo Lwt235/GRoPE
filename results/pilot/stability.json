@@ -1,0 +1,26 @@
+{
+  "eigendecomposition_gradient": [
+    {
+      "eigenvalue_gap": 0.0,
+      "eigh_log_gradient_finite": false
+    },
+    {
+      "eigenvalue_gap": 1e-12,
+      "eigh_log_gradient_finite": true
+    },
+    {
+      "eigenvalue_gap": 1e-08,
+      "eigh_log_gradient_finite": true
+    },
+    {
+      "eigenvalue_gap": 0.0001,
+      "eigh_log_gradient_finite": true
+    },
+    {
+      "eigenvalue_gap": 0.1,
+      "eigh_log_gradient_finite": true
+    }
+  ],
+  "trace_normalized_covariance_isotropic_gradient_finite": true,
+  "interpretation": "PyTorch eigh backward is singular at repeated eigenvalues. Log-SPD as a mathematical function is smooth there; this is an implementation issue. Pilot descriptors are precomputed and not differentiated. Use a stable spectral Frechet derivative or a smooth covariance descriptor before end-to-end prediction."
+}

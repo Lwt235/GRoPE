@@ -1,0 +1,26 @@
+{
+  "source_snapshots": {
+    "pilot": 7,
+    "revision": 8,
+    "fresh_calibrated": 9
+  },
+  "checkpoint_replay": {
+    "pilot/rope3d_axis": "CPU replay matches audited per-scene R1 exactly",
+    "pilot/center_logcov": "CPU replay matches audited per-scene R1 exactly",
+    "revision/rope3d_axis": "CPU replay matches audited per-scene R1 exactly",
+    "revision/rope3d_axis_bounded_logcov": "CPU replay matches audited per-scene R1 exactly"
+  },
+  "finite_metrics": {
+    "pilot": 1560,
+    "revision": 1620,
+    "fresh_calibrated": 1215
+  },
+  "negative_controls": {
+    "pilot": "shape-only perturbations leave position baseline predictions exactly fixed",
+    "revision": "shape-only perturbations leave position baseline predictions exactly fixed",
+    "fresh_calibrated": "shape-only perturbations leave position baseline predictions exactly fixed"
+  },
+  "unit_tests": "6 passed",
+  "math_checks": "6 passed; expected eigendecomposition-gradient limitation recorded separately",
+  "numerical_audit": "All 125 trained checkpoints re-evaluated; all current metrics finite. Original metrics and source snapshots preserved."
+}

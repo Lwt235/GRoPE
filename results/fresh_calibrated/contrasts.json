@@ -1,0 +1,98 @@
+[
+  {
+    "scenario": "id",
+    "a": "rope3d_axis_logcov",
+    "b": "rope3d_axis",
+    "delta_percentage_points": 6.419270485639572,
+    "paired_hierarchical_95_low_pp": 6.061116438359022,
+    "paired_hierarchical_95_high_pp": 6.757893580943346
+  },
+  {
+    "scenario": "id",
+    "a": "rope3d_axis_logcov",
+    "b": "rope3d_axis_normal",
+    "delta_percentage_points": 0.634765625,
+    "paired_hierarchical_95_low_pp": 0.4459635354578495,
+    "paired_hierarchical_95_high_pp": 0.839843787252903
+  },
+  {
+    "scenario": "id",
+    "a": "rope3d_axis_moments",
+    "b": "rope3d_axis",
+    "delta_percentage_points": 6.448567658662796,
+    "paired_hierarchical_95_low_pp": 6.100179087370634,
+    "paired_hierarchical_95_high_pp": 6.787109375
+  },
+  {
+    "scenario": "id",
+    "a": "rope3d_axis_bounded_logcov",
+    "b": "rope3d_axis",
+    "delta_percentage_points": 6.129557266831398,
+    "paired_hierarchical_95_low_pp": 5.791015550494194,
+    "paired_hierarchical_95_high_pp": 6.4681800082325935
+  },
+  {
+    "scenario": "shape_shuffled",
+    "a": "rope3d_axis_logcov",
+    "b": "rope3d_axis",
+    "delta_percentage_points": -28.138020634651184,
+    "paired_hierarchical_95_low_pp": -38.12280289828777,
+    "paired_hierarchical_95_high_pp": -22.54231721162796
+  },
+  {
+    "scenario": "shape_shuffled",
+    "a": "rope3d_axis_logcov",
+    "b": "rope3d_axis_normal",
+    "delta_percentage_points": -12.447916716337204,
+    "paired_hierarchical_95_low_pp": -26.71582169830799,
+    "paired_hierarchical_95_high_pp": 1.823160746134816
+  },
+  {
+    "scenario": "shape_shuffled",
+    "a": "rope3d_axis_moments",
+    "b": "rope3d_axis",
+    "delta_percentage_points": -22.389322519302368,
+    "paired_hierarchical_95_low_pp": -23.102213442325592,
+    "paired_hierarchical_95_high_pp": -21.64705451577902
+  },
+  {
+    "scenario": "shape_shuffled",
+    "a": "rope3d_axis_bounded_logcov",
+    "b": "rope3d_axis",
+    "delta_percentage_points": -4.433593899011612,
+    "paired_hierarchical_95_low_pp": -4.736328125,
+    "paired_hierarchical_95_high_pp": -4.143717540428043
+  },
+  {
+    "scenario": "view_support",
+    "a": "rope3d_axis_logcov",
+    "b": "rope3d_axis",
+    "delta_percentage_points": 5.335286632180214,
+    "paired_hierarchical_95_low_pp": 4.5764972269535065,
+    "paired_hierarchical_95_high_pp": 5.970133636146784
+  },
+  {
+    "scenario": "view_support",
+    "a": "rope3d_axis_logcov",
+    "b": "rope3d_axis_normal",
+    "delta_percentage_points": -0.5403645802289248,
+    "paired_hierarchical_95_low_pp": -1.1165364645421505,
+    "paired_hierarchical_95_high_pp": -0.15625000232830644
+  },
+  {
+    "scenario": "view_support",
+    "a": "rope3d_axis_moments",
+    "b": "rope3d_axis",
+    "delta_percentage_points": 3.102213516831398,
+    "paired_hierarchical_95_low_pp": 2.714843675494194,
+    "paired_hierarchical_95_high_pp": 3.463541716337204
+  },
+  {
+    "scenario": "view_support",
+    "a": "rope3d_axis_bounded_logcov",
+    "b": "rope3d_axis",
+    "delta_percentage_points": 4.586588591337204,
+    "paired_hierarchical_95_low_pp": 4.19921875,
+    "paired_hierarchical_95_high_pp": 4.954589866101741
+  }
+]

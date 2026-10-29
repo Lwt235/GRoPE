@@ -1,0 +1,1648 @@
+{
+  "test_seed_rule": "900000 + training_seed",
+  "validation_seed_rule": "200000 + training_seed",
+  "scenes_per_seed_per_scenario": 192,
+  "seeds": [
+    11,
+    22,
+    33,
+    44,
+    55
+  ],
+  "grid": [
+    0.0,
+    0.25,
+    0.5,
+    1.0,
+    2.0,
+    4.0,
+    8.0,
+    16.0
+  ],
+  "selection": [
+    {
+      "seed": 11,
+      "method": "center",
+      "chosen_multiplier": 1.0,
+      "effective_shape_weight": 0.3132616877555847,
+      "val_r1": 0.8014323115348816,
+      "grid": [
+        {
+          "multiplier": 1.0,
+          "val_r1": 0.8014323115348816
+        }
+      ]
+    },
+    {
+      "seed": 11,
+      "method": "rope3d_axis",
+      "chosen_multiplier": 1.0,
+      "effective_shape_weight": 0.3132616877555847,
+      "val_r1": 0.9251301884651184,
+      "grid": [
+        {
+          "multiplier": 1.0,
+          "val_r1": 0.9251301884651184
+        }
+      ]
+    },
+    {
+      "seed": 11,
+      "method": "rope3d_axis_normal",
+      "chosen_multiplier": 4.0,
+      "effective_shape_weight": 2.140900135040283,
+      "val_r1": 0.9889323115348816,
+      "grid": [
+        {
+          "multiplier": 0.0,
+          "val_r1": 0.9251301884651184
+        },
+        {
+          "multiplier": 0.25,
+          "val_r1": 0.9430338740348816
+        },
+        {
+          "multiplier": 0.5,
+          "val_r1": 0.9514973759651184
+        },
+        {
+          "multiplier": 1.0,
+          "val_r1": 0.9680989384651184
+        },
+        {
+          "multiplier": 2.0,
+          "val_r1": 0.9820963740348816
+        },
+        {
+          "multiplier": 4.0,
+          "val_r1": 0.9889323115348816
+        },
+        {
+          "multiplier": 8.0,
+          "val_r1": 0.9873046875
+        },
+        {
+          "multiplier": 16.0,
+          "val_r1": 0.9768880009651184
+        }
+      ]
+    },
+    {
+      "seed": 11,
+      "method": "rope3d_axis_scale",
+      "chosen_multiplier": 8.0,
+      "effective_shape_weight": 3.5683555603027344,
+      "val_r1": 0.9759114384651184,
+      "grid": [
+        {
+          "multiplier": 0.0,
+          "val_r1": 0.9248046875
+        },
+        {
+          "multiplier": 0.25,
+          "val_r1": 0.9368489384651184
+        },
+        {
+          "multiplier": 0.5,
+          "val_r1": 0.9475911259651184
+        },
+        {
+          "multiplier": 1.0,
+          "val_r1": 0.9567057490348816
+        },
+        {
+          "multiplier": 2.0,
+          "val_r1": 0.9664713740348816
+        },
+        {
+          "multiplier": 4.0,
+          "val_r1": 0.974609375
+        },
+        {
+          "multiplier": 8.0,
+          "val_r1": 0.9759114384651184
+        },
+        {
+          "multiplier": 16.0,
+          "val_r1": 0.9684244990348816
+        }
+      ]
+    },
+    {
+      "seed": 11,
+      "method": "rope3d_axis_logcov",
+      "chosen_multiplier": 2.0,
+      "effective_shape_weight": 0.9559817314147949,
+      "val_r1": 0.9938151240348816,
+      "grid": [
+        {
+          "multiplier": 0.0,
+          "val_r1": 0.9205729365348816
+        },
+        {
+          "multiplier": 0.25,
+          "val_r1": 0.9599609375
+        },
+        {
+          "multiplier": 0.5,
+          "val_r1": 0.9752604365348816
+        },
+        {
+          "multiplier": 1.0,
+          "val_r1": 0.9899088740348816
+        },
+        {
+          "multiplier": 2.0,
+          "val_r1": 0.9938151240348816
+        },
+        {
+          "multiplier": 4.0,
+          "val_r1": 0.9908854365348816
+        },
+        {
+          "multiplier": 8.0,
+          "val_r1": 0.9840494990348816
+        },
+        {
+          "multiplier": 16.0,
+          "val_r1": 0.9567057490348816
+        }
+      ]
+    },
+    {
+      "seed": 11,
+      "method": "rope3d_axis_projected_logcov",
+      "chosen_multiplier": 2.0,
+      "effective_shape_weight": 1.010448932647705,
+      "val_r1": 0.9720051884651184,
+      "grid": [
+        {
+          "multiplier": 0.0,
+          "val_r1": 0.9254557490348816
+        },
+        {
+          "multiplier": 0.25,
+          "val_r1": 0.9482421875
+        },
+        {
+          "multiplier": 0.5,
+          "val_r1": 0.9606119990348816
+        },
+        {
+          "multiplier": 1.0,
+          "val_r1": 0.9703776240348816
+        },
+        {
+          "multiplier": 2.0,
+          "val_r1": 0.9720051884651184
+        },
+        {
+          "multiplier": 4.0,
+          "val_r1": 0.9651692509651184
+        },
+        {
+          "multiplier": 8.0,
+          "val_r1": 0.9427083134651184
+        },
+        {
+          "multiplier": 16.0,
+          "val_r1": 0.892578125
+        }
+      ]
+    },
+    {
+      "seed": 11,
+      "method": "rope3d_axis_bounded_logcov",
+      "chosen_multiplier": 4.0,
+      "effective_shape_weight": 2.132931709289551,
+      "val_r1": 0.9895833134651184,
+      "grid": [
+        {
+          "multiplier": 0.0,
+          "val_r1": 0.9248046875
+        },
+        {
+          "multiplier": 0.25,
+          "val_r1": 0.9427083134651184
+        },
+        {
+          "multiplier": 0.5,
+          "val_r1": 0.9557291865348816
+        },
+        {
+          "multiplier": 1.0,
+          "val_r1": 0.9729817509651184
+        },
+        {
+          "multiplier": 2.0,
+          "val_r1": 0.9860026240348816
+        },
+        {
+          "multiplier": 4.0,
+          "val_r1": 0.9895833134651184
+        },
+        {
+          "multiplier": 8.0,
+          "val_r1": 0.9876301884651184
+        },
+        {
+          "multiplier": 16.0,
+          "val_r1": 0.9635416865348816
+        }
+      ]
+    },
+    {
+      "seed": 11,
+      "method": "rope3d_axis_moments",
+      "chosen_multiplier": 8.0,
+      "effective_shape_weight": 4.31082820892334,
+      "val_r1": 0.9931640625,
+      "grid": [
+        {
+          "multiplier": 0.0,
+          "val_r1": 0.923828125
+        },
+        {
+          "multiplier": 0.25,
+          "val_r1": 0.9388020634651184
+        },
+        {
+          "multiplier": 0.5,
+          "val_r1": 0.94921875
+        },
+        {
+          "multiplier": 1.0,
+          "val_r1": 0.9615885615348816
+        },
+        {
+          "multiplier": 2.0,
+          "val_r1": 0.9775390625
+        },
+        {
+          "multiplier": 4.0,
+          "val_r1": 0.9873046875
+        },
+        {
+          "multiplier": 8.0,
+          "val_r1": 0.9931640625
+        },
+        {
+          "multiplier": 16.0,
+          "val_r1": 0.9925130009651184
+        }
+      ]
+    },
+    {
+      "seed": 11,
+      "method": "rope3d_axis_random_control",
+      "chosen_multiplier": 0.25,
+      "effective_shape_weight": 0.050451017916202545,
+      "val_r1": 0.92578125,
+      "grid": [
+        {
+          "multiplier": 0.0,
+          "val_r1": 0.9241536259651184
+        },
+        {
+          "multiplier": 0.25,
+          "val_r1": 0.92578125
+        },
+        {
+          "multiplier": 0.5,
+          "val_r1": 0.92578125
+        },
+        {
+          "multiplier": 1.0,
+          "val_r1": 0.9235026240348816
+        },
+        {
+          "multiplier": 2.0,
+          "val_r1": 0.908203125
+        },
+        {
+          "multiplier": 4.0,
+          "val_r1": 0.8792317509651184
+        },
+        {
+          "multiplier": 8.0,
+          "val_r1": 0.8115234375
+        },
+        {
+          "multiplier": 16.0,
+          "val_r1": 0.6539713740348816
+        }
+      ]
+    },
+    {
+      "seed": 22,
+      "method": "center",
+      "chosen_multiplier": 1.0,
+      "effective_shape_weight": 0.3132616877555847,
+      "val_r1": 0.8050130009651184,
+      "grid": [
+        {
+          "multiplier": 1.0,
+          "val_r1": 0.8050130009651184
+        }
+      ]
+    },
+    {
+      "seed": 22,
+      "method": "rope3d_axis",
+      "chosen_multiplier": 1.0,
+      "effective_shape_weight": 0.3132616877555847,
+      "val_r1": 0.9306640625,
+      "grid": [
+        {
+          "multiplier": 1.0,
+          "val_r1": 0.9306640625
+        }
+      ]
+    },
+    {
+      "seed": 22,
+      "method": "rope3d_axis_normal",
+      "chosen_multiplier": 4.0,
+      "effective_shape_weight": 2.1390841007232666,
+      "val_r1": 0.9879557490348816,
+      "grid": [
+        {
+          "multiplier": 0.0,
+          "val_r1": 0.9319661259651184
+        },
+        {
+          "multiplier": 0.25,
+          "val_r1": 0.9449869990348816
+        },
+        {
+          "multiplier": 0.5,
+          "val_r1": 0.9554036259651184
+        },
+        {
+          "multiplier": 1.0,
+          "val_r1": 0.9684244990348816
+        },
+        {
+          "multiplier": 2.0,
+          "val_r1": 0.984375
+        },
+        {
+          "multiplier": 4.0,
+          "val_r1": 0.9879557490348816
+        },
+        {
+          "multiplier": 8.0,
+          "val_r1": 0.9869791865348816
+        },
+        {
+          "multiplier": 16.0,
+          "val_r1": 0.9788411259651184
+        }
+      ]
+    },
+    {
+      "seed": 22,
+      "method": "rope3d_axis_scale",
+      "chosen_multiplier": 4.0,
+      "effective_shape_weight": 2.134138345718384,
+      "val_r1": 0.9820963740348816,
+      "grid": [
+        {
+          "multiplier": 0.0,
+          "val_r1": 0.931640625
+        },
+        {
+          "multiplier": 0.25,
+          "val_r1": 0.9420573115348816
+        },
+        {
+          "multiplier": 0.5,
+          "val_r1": 0.9505208134651184
+        },
+        {
+          "multiplier": 1.0,
+          "val_r1": 0.9606119990348816
+        },
+        {
+          "multiplier": 2.0,
+          "val_r1": 0.97265625
+        },
+        {
+          "multiplier": 4.0,
+          "val_r1": 0.9820963740348816
+        },
+        {
+          "multiplier": 8.0,
+          "val_r1": 0.9814453125
+        },
+        {
+          "multiplier": 16.0,
+          "val_r1": 0.9729817509651184
+        }
+      ]
+    },
+    {
+      "seed": 22,
+      "method": "rope3d_axis_logcov",
+      "chosen_multiplier": 4.0,
+      "effective_shape_weight": 1.6285290718078613,
+      "val_r1": 0.9944661259651184,
+      "grid": [
+        {
+          "multiplier": 0.0,
+          "val_r1": 0.9283854365348816
+        },
+        {
+          "multiplier": 0.25,
+          "val_r1": 0.9612630009651184
+        },
+        {
+          "multiplier": 0.5,
+          "val_r1": 0.9775390625
+        },
+        {
+          "multiplier": 1.0,
+          "val_r1": 0.9915364384651184
+        },
+        {
+          "multiplier": 2.0,
+          "val_r1": 0.994140625
+        },
+        {
+          "multiplier": 4.0,
+          "val_r1": 0.9944661259651184
+        },
+        {
+          "multiplier": 8.0,
+          "val_r1": 0.9886067509651184
+        },
+        {
+          "multiplier": 16.0,
+          "val_r1": 0.9632161259651184
+        }
+      ]
+    },
+    {
+      "seed": 22,
+      "method": "rope3d_axis_projected_logcov",
+      "chosen_multiplier": 2.0,
+      "effective_shape_weight": 1.007910132408142,
+      "val_r1": 0.9798176884651184,
+      "grid": [
+        {
+          "multiplier": 0.0,
+          "val_r1": 0.9283854365348816
+        },
+        {
+          "multiplier": 0.25,
+          "val_r1": 0.9541015625
+        },
+        {
+          "multiplier": 0.5,
+          "val_r1": 0.9645182490348816
+        },
+        {
+          "multiplier": 1.0,
+          "val_r1": 0.9742838740348816
+        },
+        {
+          "multiplier": 2.0,
+          "val_r1": 0.9798176884651184
+        },
+        {
+          "multiplier": 4.0,
+          "val_r1": 0.9720051884651184
+        },
+        {
+          "multiplier": 8.0,
+          "val_r1": 0.9495442509651184
+        },
+        {
+          "multiplier": 16.0,
+          "val_r1": 0.8942057490348816
+        }
+      ]
+    },
+    {
+      "seed": 22,
+      "method": "rope3d_axis_bounded_logcov",
+      "chosen_multiplier": 4.0,
+      "effective_shape_weight": 2.131598949432373,
+      "val_r1": 0.9928385615348816,
+      "grid": [
+        {
+          "multiplier": 0.0,
+          "val_r1": 0.9300130009651184
+        },
+        {
+          "multiplier": 0.25,
+          "val_r1": 0.9449869990348816
+        },
+        {
+          "multiplier": 0.5,
+          "val_r1": 0.9583333134651184
+        },
+        {
+          "multiplier": 1.0,
+          "val_r1": 0.9755859375
+        },
+        {
+          "multiplier": 2.0,
+          "val_r1": 0.9866536259651184
+        },
+        {
+          "multiplier": 4.0,
+          "val_r1": 0.9928385615348816
+        },
+        {
+          "multiplier": 8.0,
+          "val_r1": 0.9918619990348816
+        },
+        {
+          "multiplier": 16.0,
+          "val_r1": 0.9703776240348816
+        }
+      ]
+    },
+    {
+      "seed": 22,
+      "method": "rope3d_axis_moments",
+      "chosen_multiplier": 8.0,
+      "effective_shape_weight": 4.3116774559021,
+      "val_r1": 0.9947916865348816,
+      "grid": [
+        {
+          "multiplier": 0.0,
+          "val_r1": 0.9313151240348816
+        },
+        {
+          "multiplier": 0.25,
+          "val_r1": 0.9420573115348816
+        },
+        {
+          "multiplier": 0.5,
+          "val_r1": 0.9518229365348816
+        },
+        {
+          "multiplier": 1.0,
+          "val_r1": 0.96484375
+        },
+        {
+          "multiplier": 2.0,
+          "val_r1": 0.9801432490348816
+        },
+        {
+          "multiplier": 4.0,
+          "val_r1": 0.9918619990348816
+        },
+        {
+          "multiplier": 8.0,
+          "val_r1": 0.9947916865348816
+        },
+        {
+          "multiplier": 16.0,
+          "val_r1": 0.9925130009651184
+        }
+      ]
+    },
+    {
+      "seed": 22,
+      "method": "rope3d_axis_random_control",
+      "chosen_multiplier": 0.0,
+      "effective_shape_weight": 0.0,
+      "val_r1": 0.9303385615348816,
+      "grid": [
+        {
+          "multiplier": 0.0,
+          "val_r1": 0.9303385615348816
+        },
+        {
+          "multiplier": 0.25,
+          "val_r1": 0.9293619990348816
+        },
+        {
+          "multiplier": 0.5,
+          "val_r1": 0.9287109375
+        },
+        {
+          "multiplier": 1.0,
+          "val_r1": 0.9274088740348816
+        },
+        {
+          "multiplier": 2.0,
+          "val_r1": 0.916015625
+        },
+        {
+          "multiplier": 4.0,
+          "val_r1": 0.8785807490348816
+        },
+        {
+          "multiplier": 8.0,
+          "val_r1": 0.8056640625
+        },
+        {
+          "multiplier": 16.0,
+          "val_r1": 0.6468098759651184
+        }
+      ]
+    },
+    {
+      "seed": 33,
+      "method": "center",
+      "chosen_multiplier": 1.0,
+      "effective_shape_weight": 0.3132616877555847,
+      "val_r1": 0.8033854365348816,
+      "grid": [
+        {
+          "multiplier": 1.0,
+          "val_r1": 0.8033854365348816
+        }
+      ]
+    },
+    {
+      "seed": 33,
+      "method": "rope3d_axis",
+      "chosen_multiplier": 1.0,
+      "effective_shape_weight": 0.3132616877555847,
+      "val_r1": 0.9306640625,
+      "grid": [
+        {
+          "multiplier": 1.0,
+          "val_r1": 0.9306640625
+        }
+      ]
+    },
+    {
+      "seed": 33,
+      "method": "rope3d_axis_normal",
+      "chosen_multiplier": 4.0,
+      "effective_shape_weight": 2.1565723419189453,
+      "val_r1": 0.984375,
+      "grid": [
+        {
+          "multiplier": 0.0,
+          "val_r1": 0.9329426884651184
+        },
+        {
+          "multiplier": 0.25,
+          "val_r1": 0.9443359375
+        },
+        {
+          "multiplier": 0.5,
+          "val_r1": 0.9573567509651184
+        },
+        {
+          "multiplier": 1.0,
+          "val_r1": 0.9716796875
+        },
+        {
+          "multiplier": 2.0,
+          "val_r1": 0.9811198115348816
+        },
+        {
+          "multiplier": 4.0,
+          "val_r1": 0.984375
+        },
+        {
+          "multiplier": 8.0,
+          "val_r1": 0.9833984375
+        },
+        {
+          "multiplier": 16.0,
+          "val_r1": 0.9759114384651184
+        }
+      ]
+    },
+    {
+      "seed": 33,
+      "method": "rope3d_axis_scale",
+      "chosen_multiplier": 8.0,
+      "effective_shape_weight": 4.313271522521973,
+      "val_r1": 0.9811198115348816,
+      "grid": [
+        {
+          "multiplier": 0.0,
+          "val_r1": 0.9309895634651184
+        },
+        {
+          "multiplier": 0.25,
+          "val_r1": 0.9401041865348816
+        },
+        {
+          "multiplier": 0.5,
+          "val_r1": 0.9488932490348816
+        },
+        {
+          "multiplier": 1.0,
+          "val_r1": 0.9580078125
+        },
+        {
+          "multiplier": 2.0,
+          "val_r1": 0.9710286259651184
+        },
+        {
+          "multiplier": 4.0,
+          "val_r1": 0.9794921875
+        },
+        {
+          "multiplier": 8.0,
+          "val_r1": 0.9811198115348816
+        },
+        {
+          "multiplier": 16.0,
+          "val_r1": 0.9742838740348816
+        }
+      ]
+    },
+    {
+      "seed": 33,
+      "method": "rope3d_axis_logcov",
+      "chosen_multiplier": 2.0,
+      "effective_shape_weight": 0.917529821395874,
+      "val_r1": 0.9921875,
+      "grid": [
+        {
+          "multiplier": 0.0,
+          "val_r1": 0.9309895634651184
+        },
+        {
+          "multiplier": 0.25,
+          "val_r1": 0.9641926884651184
+        },
+        {
+          "multiplier": 0.5,
+          "val_r1": 0.98046875
+        },
+        {
+          "multiplier": 1.0,
+          "val_r1": 0.9889323115348816
+        },
+        {
+          "multiplier": 2.0,
+          "val_r1": 0.9921875
+        },
+        {
+          "multiplier": 4.0,
+          "val_r1": 0.9905598759651184
+        },
+        {
+          "multiplier": 8.0,
+          "val_r1": 0.9807942509651184
+        },
+        {
+          "multiplier": 16.0,
+          "val_r1": 0.9514973759651184
+        }
+      ]
+    },
+    {
+      "seed": 33,
+      "method": "rope3d_axis_projected_logcov",
+      "chosen_multiplier": 2.0,
+      "effective_shape_weight": 0.9766067266464233,
+      "val_r1": 0.9723307490348816,
+      "grid": [
+        {
+          "multiplier": 0.0,
+          "val_r1": 0.9296875
+        },
+        {
+          "multiplier": 0.25,
+          "val_r1": 0.9514973759651184
+        },
+        {
+          "multiplier": 0.5,
+          "val_r1": 0.9612630009651184
+        },
+        {
+          "multiplier": 1.0,
+          "val_r1": 0.970703125
+        },
+        {
+          "multiplier": 2.0,
+          "val_r1": 0.9723307490348816
+        },
+        {
+          "multiplier": 4.0,
+          "val_r1": 0.9674479365348816
+        },
+        {
+          "multiplier": 8.0,
+          "val_r1": 0.9397786259651184
+        },
+        {
+          "multiplier": 16.0,
+          "val_r1": 0.8837890625
+        }
+      ]
+    },
+    {
+      "seed": 33,
+      "method": "rope3d_axis_bounded_logcov",
+      "chosen_multiplier": 4.0,
+      "effective_shape_weight": 2.1491012573242188,
+      "val_r1": 0.98828125,
+      "grid": [
+        {
+          "multiplier": 0.0,
+          "val_r1": 0.9342448115348816
+        },
+        {
+          "multiplier": 0.25,
+          "val_r1": 0.9462890625
+        },
+        {
+          "multiplier": 0.5,
+          "val_r1": 0.9596354365348816
+        },
+        {
+          "multiplier": 1.0,
+          "val_r1": 0.9749348759651184
+        },
+        {
+          "multiplier": 2.0,
+          "val_r1": 0.9853515625
+        },
+        {
+          "multiplier": 4.0,
+          "val_r1": 0.98828125
+        },
+        {
+          "multiplier": 8.0,
+          "val_r1": 0.9847005009651184
+        },
+        {
+          "multiplier": 16.0,
+          "val_r1": 0.9612630009651184
+        }
+      ]
+    },
+    {
+      "seed": 33,
+      "method": "rope3d_axis_moments",
+      "chosen_multiplier": 8.0,
+      "effective_shape_weight": 4.3511576652526855,
+      "val_r1": 0.9954426884651184,
+      "grid": [
+        {
+          "multiplier": 0.0,
+          "val_r1": 0.93359375
+        },
+        {
+          "multiplier": 0.25,
+          "val_r1": 0.9417317509651184
+        },
+        {
+          "multiplier": 0.5,
+          "val_r1": 0.9479166865348816
+        },
+        {
+          "multiplier": 1.0,
+          "val_r1": 0.9615885615348816
+        },
+        {
+          "multiplier": 2.0,
+          "val_r1": 0.9788411259651184
+        },
+        {
+          "multiplier": 4.0,
+          "val_r1": 0.9905598759651184
+        },
+        {
+          "multiplier": 8.0,
+          "val_r1": 0.9954426884651184
+        },
+        {
+          "multiplier": 16.0,
+          "val_r1": 0.990234375
+        }
+      ]
+    },
+    {
+      "seed": 33,
+      "method": "rope3d_axis_random_control",
+      "chosen_multiplier": 0.0,
+      "effective_shape_weight": 0.0,
+      "val_r1": 0.9303385615348816,
+      "grid": [
+        {
+          "multiplier": 0.0,
+          "val_r1": 0.9303385615348816
+        },
+        {
+          "multiplier": 0.25,
+          "val_r1": 0.9300130009651184
+        },
+        {
+          "multiplier": 0.5,
+          "val_r1": 0.9280598759651184
+        },
+        {
+          "multiplier": 1.0,
+          "val_r1": 0.9274088740348816
+        },
+        {
+          "multiplier": 2.0,
+          "val_r1": 0.9186198115348816
+        },
+        {
+          "multiplier": 4.0,
+          "val_r1": 0.8893229365348816
+        },
+        {
+          "multiplier": 8.0,
+          "val_r1": 0.8092448115348816
+        },
+        {
+          "multiplier": 16.0,
+          "val_r1": 0.6416015625
+        }
+      ]
+    },
+    {
+      "seed": 44,
+      "method": "center",
+      "chosen_multiplier": 1.0,
+      "effective_shape_weight": 0.3132616877555847,
+      "val_r1": 0.7893880009651184,
+      "grid": [
+        {
+          "multiplier": 1.0,
+          "val_r1": 0.7893880009651184
+        }
+      ]
+    },
+    {
+      "seed": 44,
+      "method": "rope3d_axis",
+      "chosen_multiplier": 1.0,
+      "effective_shape_weight": 0.3132616877555847,
+      "val_r1": 0.9322916865348816,
+      "grid": [
+        {
+          "multiplier": 1.0,
+          "val_r1": 0.9322916865348816
+        }
+      ]
+    },
+    {
+      "seed": 44,
+      "method": "rope3d_axis_normal",
+      "chosen_multiplier": 8.0,
+      "effective_shape_weight": 4.2723259925842285,
+      "val_r1": 0.9899088740348816,
+      "grid": [
+        {
+          "multiplier": 0.0,
+          "val_r1": 0.9326171875
+        },
+        {
+          "multiplier": 0.25,
+          "val_r1": 0.9488932490348816
+        },
+        {
+          "multiplier": 0.5,
+          "val_r1": 0.9602864384651184
+        },
+        {
+          "multiplier": 1.0,
+          "val_r1": 0.9713541865348816
+        },
+        {
+          "multiplier": 2.0,
+          "val_r1": 0.9814453125
+        },
+        {
+          "multiplier": 4.0,
+          "val_r1": 0.9889323115348816
+        },
+        {
+          "multiplier": 8.0,
+          "val_r1": 0.9899088740348816
+        },
+        {
+          "multiplier": 16.0,
+          "val_r1": 0.978515625
+        }
+      ]
+    },
+    {
+      "seed": 44,
+      "method": "rope3d_axis_scale",
+      "chosen_multiplier": 4.0,
+      "effective_shape_weight": 2.134598731994629,
+      "val_r1": 0.9807942509651184,
+      "grid": [
+        {
+          "multiplier": 0.0,
+          "val_r1": 0.9332682490348816
+        },
+        {
+          "multiplier": 0.25,
+          "val_r1": 0.9469401240348816
+        },
+        {
+          "multiplier": 0.5,
+          "val_r1": 0.9567057490348816
+        },
+        {
+          "multiplier": 1.0,
+          "val_r1": 0.9661458134651184
+        },
+        {
+          "multiplier": 2.0,
+          "val_r1": 0.9739583134651184
+        },
+        {
+          "multiplier": 4.0,
+          "val_r1": 0.9807942509651184
+        },
+        {
+          "multiplier": 8.0,
+          "val_r1": 0.9798176884651184
+        },
+        {
+          "multiplier": 16.0,
+          "val_r1": 0.9703776240348816
+        }
+      ]
+    },
+    {
+      "seed": 44,
+      "method": "rope3d_axis_logcov",
+      "chosen_multiplier": 2.0,
+      "effective_shape_weight": 0.9983710646629333,
+      "val_r1": 0.9944661259651184,
+      "grid": [
+        {
+          "multiplier": 0.0,
+          "val_r1": 0.9313151240348816
+        },
+        {
+          "multiplier": 0.25,
+          "val_r1": 0.9680989384651184
+        },
+        {
+          "multiplier": 0.5,
+          "val_r1": 0.9801432490348816
+        },
+        {
+          "multiplier": 1.0,
+          "val_r1": 0.9928385615348816
+        },
+        {
+          "multiplier": 2.0,
+          "val_r1": 0.9944661259651184
+        },
+        {
+          "multiplier": 4.0,
+          "val_r1": 0.9931640625
+        },
+        {
+          "multiplier": 8.0,
+          "val_r1": 0.984375
+        },
+        {
+          "multiplier": 16.0,
+          "val_r1": 0.9567057490348816
+        }
+      ]
+    },
+    {
+      "seed": 44,
+      "method": "rope3d_axis_projected_logcov",
+      "chosen_multiplier": 2.0,
+      "effective_shape_weight": 0.9597233533859253,
+      "val_r1": 0.9762369990348816,
+      "grid": [
+        {
+          "multiplier": 0.0,
+          "val_r1": 0.9332682490348816
+        },
+        {
+          "multiplier": 0.25,
+          "val_r1": 0.955078125
+        },
+        {
+          "multiplier": 0.5,
+          "val_r1": 0.9651692509651184
+        },
+        {
+          "multiplier": 1.0,
+          "val_r1": 0.9720051884651184
+        },
+        {
+          "multiplier": 2.0,
+          "val_r1": 0.9762369990348816
+        },
+        {
+          "multiplier": 4.0,
+          "val_r1": 0.9703776240348816
+        },
+        {
+          "multiplier": 8.0,
+          "val_r1": 0.9430338740348816
+        },
+        {
+          "multiplier": 16.0,
+          "val_r1": 0.88671875
+        }
+      ]
+    },
+    {
+      "seed": 44,
+      "method": "rope3d_axis_bounded_logcov",
+      "chosen_multiplier": 4.0,
+      "effective_shape_weight": 2.129549503326416,
+      "val_r1": 0.9915364384651184,
+      "grid": [
+        {
+          "multiplier": 0.0,
+          "val_r1": 0.9322916865348816
+        },
+        {
+          "multiplier": 0.25,
+          "val_r1": 0.9501953125
+        },
+        {
+          "multiplier": 0.5,
+          "val_r1": 0.9632161259651184
+        },
+        {
+          "multiplier": 1.0,
+          "val_r1": 0.9752604365348816
+        },
+        {
+          "multiplier": 2.0,
+          "val_r1": 0.9860026240348816
+        },
+        {
+          "multiplier": 4.0,
+          "val_r1": 0.9915364384651184
+        },
+        {
+          "multiplier": 8.0,
+          "val_r1": 0.9892578125
+        },
+        {
+          "multiplier": 16.0,
+          "val_r1": 0.9645182490348816
+        }
+      ]
+    },
+    {
+      "seed": 44,
+      "method": "rope3d_axis_moments",
+      "chosen_multiplier": 8.0,
+      "effective_shape_weight": 4.309247970581055,
+      "val_r1": 0.9934895634651184,
+      "grid": [
+        {
+          "multiplier": 0.0,
+          "val_r1": 0.9339192509651184
+        },
+        {
+          "multiplier": 0.25,
+          "val_r1": 0.9459635615348816
+        },
+        {
+          "multiplier": 0.5,
+          "val_r1": 0.95703125
+        },
+        {
+          "multiplier": 1.0,
+          "val_r1": 0.9697265625
+        },
+        {
+          "multiplier": 2.0,
+          "val_r1": 0.9817708134651184
+        },
+        {
+          "multiplier": 4.0,
+          "val_r1": 0.9892578125
+        },
+        {
+          "multiplier": 8.0,
+          "val_r1": 0.9934895634651184
+        },
+        {
+          "multiplier": 16.0,
+          "val_r1": 0.9912109375
+        }
+      ]
+    },
+    {
+      "seed": 44,
+      "method": "rope3d_axis_random_control",
+      "chosen_multiplier": 0.25,
+      "effective_shape_weight": 0.05121405050158501,
+      "val_r1": 0.93359375,
+      "grid": [
+        {
+          "multiplier": 0.0,
+          "val_r1": 0.9326171875
+        },
+        {
+          "multiplier": 0.25,
+          "val_r1": 0.93359375
+        },
+        {
+          "multiplier": 0.5,
+          "val_r1": 0.9309895634651184
+        },
+        {
+          "multiplier": 1.0,
+          "val_r1": 0.9283854365348816
+        },
+        {
+          "multiplier": 2.0,
+          "val_r1": 0.9143880009651184
+        },
+        {
+          "multiplier": 4.0,
+          "val_r1": 0.8821614384651184
+        },
+        {
+          "multiplier": 8.0,
+          "val_r1": 0.802734375
+        },
+        {
+          "multiplier": 16.0,
+          "val_r1": 0.640625
+        }
+      ]
+    },
+    {
+      "seed": 55,
+      "method": "center",
+      "chosen_multiplier": 1.0,
+      "effective_shape_weight": 0.3132616877555847,
+      "val_r1": 0.7991536259651184,
+      "grid": [
+        {
+          "multiplier": 1.0,
+          "val_r1": 0.7991536259651184
+        }
+      ]
+    },
+    {
+      "seed": 55,
+      "method": "rope3d_axis",
+      "chosen_multiplier": 1.0,
+      "effective_shape_weight": 0.3132616877555847,
+      "val_r1": 0.9293619990348816,
+      "grid": [
+        {
+          "multiplier": 1.0,
+          "val_r1": 0.9293619990348816
+        }
+      ]
+    },
+    {
+      "seed": 55,
+      "method": "rope3d_axis_normal",
+      "chosen_multiplier": 4.0,
+      "effective_shape_weight": 2.158339023590088,
+      "val_r1": 0.9869791865348816,
+      "grid": [
+        {
+          "multiplier": 0.0,
+          "val_r1": 0.9283854365348816
+        },
+        {
+          "multiplier": 0.25,
+          "val_r1": 0.9423828125
+        },
+        {
+          "multiplier": 0.5,
+          "val_r1": 0.9534505009651184
+        },
+        {
+          "multiplier": 1.0,
+          "val_r1": 0.970703125
+        },
+        {
+          "multiplier": 2.0,
+          "val_r1": 0.9820963740348816
+        },
+        {
+          "multiplier": 4.0,
+          "val_r1": 0.9869791865348816
+        },
+        {
+          "multiplier": 8.0,
+          "val_r1": 0.9860026240348816
+        },
+        {
+          "multiplier": 16.0,
+          "val_r1": 0.9768880009651184
+        }
+      ]
+    },
+    {
+      "seed": 55,
+      "method": "rope3d_axis_scale",
+      "chosen_multiplier": 8.0,
+      "effective_shape_weight": 4.320638179779053,
+      "val_r1": 0.9811198115348816,
+      "grid": [
+        {
+          "multiplier": 0.0,
+          "val_r1": 0.9290364384651184
+        },
+        {
+          "multiplier": 0.25,
+          "val_r1": 0.9375
+        },
+        {
+          "multiplier": 0.5,
+          "val_r1": 0.9453125
+        },
+        {
+          "multiplier": 1.0,
+          "val_r1": 0.9580078125
+        },
+        {
+          "multiplier": 2.0,
+          "val_r1": 0.9694010615348816
+        },
+        {
+          "multiplier": 4.0,
+          "val_r1": 0.9775390625
+        },
+        {
+          "multiplier": 8.0,
+          "val_r1": 0.9811198115348816
+        },
+        {
+          "multiplier": 16.0,
+          "val_r1": 0.9720051884651184
+        }
+      ]
+    },
+    {
+      "seed": 55,
+      "method": "rope3d_axis_logcov",
+      "chosen_multiplier": 2.0,
+      "effective_shape_weight": 1.0098209381103516,
+      "val_r1": 0.9938151240348816,
+      "grid": [
+        {
+          "multiplier": 0.0,
+          "val_r1": 0.9283854365348816
+        },
+        {
+          "multiplier": 0.25,
+          "val_r1": 0.9635416865348816
+        },
+        {
+          "multiplier": 0.5,
+          "val_r1": 0.9768880009651184
+        },
+        {
+          "multiplier": 1.0,
+          "val_r1": 0.9899088740348816
+        },
+        {
+          "multiplier": 2.0,
+          "val_r1": 0.9938151240348816
+        },
+        {
+          "multiplier": 4.0,
+          "val_r1": 0.9925130009651184
+        },
+        {
+          "multiplier": 8.0,
+          "val_r1": 0.9807942509651184
+        },
+        {
+          "multiplier": 16.0,
+          "val_r1": 0.9482421875
+        }
+      ]
+    },
+    {
+      "seed": 55,
+      "method": "rope3d_axis_projected_logcov",
+      "chosen_multiplier": 2.0,
+      "effective_shape_weight": 1.0250533819198608,
+      "val_r1": 0.974609375,
+      "grid": [
+        {
+          "multiplier": 0.0,
+          "val_r1": 0.9290364384651184
+        },
+        {
+          "multiplier": 0.25,
+          "val_r1": 0.9534505009651184
+        },
+        {
+          "multiplier": 0.5,
+          "val_r1": 0.9622395634651184
+        },
+        {
+          "multiplier": 1.0,
+          "val_r1": 0.97265625
+        },
+        {
+          "multiplier": 2.0,
+          "val_r1": 0.974609375
+        },
+        {
+          "multiplier": 4.0,
+          "val_r1": 0.9638671875
+        },
+        {
+          "multiplier": 8.0,
+          "val_r1": 0.9358723759651184
+        },
+        {
+          "multiplier": 16.0,
+          "val_r1": 0.8854166865348816
+        }
+      ]
+    },
+    {
+      "seed": 55,
+      "method": "rope3d_axis_bounded_logcov",
+      "chosen_multiplier": 4.0,
+      "effective_shape_weight": 2.1533007621765137,
+      "val_r1": 0.9915364384651184,
+      "grid": [
+        {
+          "multiplier": 0.0,
+          "val_r1": 0.9274088740348816
+        },
+        {
+          "multiplier": 0.25,
+          "val_r1": 0.9440104365348816
+        },
+        {
+          "multiplier": 0.5,
+          "val_r1": 0.9560546875
+        },
+        {
+          "multiplier": 1.0,
+          "val_r1": 0.9759114384651184
+        },
+        {
+          "multiplier": 2.0,
+          "val_r1": 0.9869791865348816
+        },
+        {
+          "multiplier": 4.0,
+          "val_r1": 0.9915364384651184
+        },
+        {
+          "multiplier": 8.0,
+          "val_r1": 0.986328125
+        },
+        {
+          "multiplier": 16.0,
+          "val_r1": 0.9596354365348816
+        }
+      ]
+    },
+    {
+      "seed": 55,
+      "method": "rope3d_axis_moments",
+      "chosen_multiplier": 8.0,
+      "effective_shape_weight": 4.353800296783447,
+      "val_r1": 0.9918619990348816,
+      "grid": [
+        {
+          "multiplier": 0.0,
+          "val_r1": 0.9280598759651184
+        },
+        {
+          "multiplier": 0.25,
+          "val_r1": 0.9375
+        },
+        {
+          "multiplier": 0.5,
+          "val_r1": 0.9485676884651184
+        },
+        {
+          "multiplier": 1.0,
+          "val_r1": 0.9615885615348816
+        },
+        {
+          "multiplier": 2.0,
+          "val_r1": 0.974609375
+        },
+        {
+          "multiplier": 4.0,
+          "val_r1": 0.990234375
+        },
+        {
+          "multiplier": 8.0,
+          "val_r1": 0.9918619990348816
+        },
+        {
+          "multiplier": 16.0,
+          "val_r1": 0.9915364384651184
+        }
+      ]
+    },
+    {
+      "seed": 55,
+      "method": "rope3d_axis_random_control",
+      "chosen_multiplier": 0.0,
+      "effective_shape_weight": 0.0,
+      "val_r1": 0.9296875,
+      "grid": [
+        {
+          "multiplier": 0.0,
+          "val_r1": 0.9296875
+        },
+        {
+          "multiplier": 0.25,
+          "val_r1": 0.9293619990348816
+        },
+        {
+          "multiplier": 0.5,
+          "val_r1": 0.9264323115348816
+        },
+        {
+          "multiplier": 1.0,
+          "val_r1": 0.923828125
+        },
+        {
+          "multiplier": 2.0,
+          "val_r1": 0.9153645634651184
+        },
+        {
+          "multiplier": 4.0,
+          "val_r1": 0.8870442509651184
+        },
+        {
+          "multiplier": 8.0,
+          "val_r1": 0.8076171875
+        },
+        {
+          "multiplier": 16.0,
+          "val_r1": 0.6575520634651184
+        }
+      ]
+    }
+  ],
+  "checkpoint_hashes": {
+    "results/revision/checkpoints/11-center.pt": "0f17b46a61e237f670316cc47c265e4d3678542bdef2b48549fe3c80be933938",
+    "results/revision/checkpoints/11-rope3d_axis.pt": "9d17d5631c8b60382ca957d2ffc144bc6c4b15f95fbf32c7b7cefcfa0d4db10a",
+    "results/revision/checkpoints/11-rope3d_axis_normal.pt": "40c497b01ad5d60535ccc64aa0ae0565a51e9aa482dc956a556b828b3151e9ed",
+    "results/revision/checkpoints/11-rope3d_axis_scale.pt": "a037597b40a94ecc3a6037df630fd6cf179d44cef7d17322177863fad3aaacb3",
+    "results/revision/checkpoints/11-rope3d_axis_logcov.pt": "d25853580b9d6392dbb6ceb8d7cb06f7406598e829bef83945d7df5bc8fb3caa",
+    "results/revision/checkpoints/11-rope3d_axis_projected_logcov.pt": "e5a260e582a2e12a6c6ea8f05c93731fe5bb459cc2c25b7de059b154f54a5927",
+    "results/revision/checkpoints/11-rope3d_axis_bounded_logcov.pt": "46b043b695dffbd38cd97116bc9bd5eed359f2b6c6d64e9e334b8a98132d9c71",
+    "results/revision/checkpoints/11-rope3d_axis_moments.pt": "4579a664b391e83311add1a49f1a5c314c8b4c90c9c44efea554da97d4249537",
+    "results/revision/checkpoints/11-rope3d_axis_random_control.pt": "eccdf93e98e739d866162aeb157512f31bab7e7d264f8d5e68ee71d984766154",
+    "results/revision/checkpoints/22-center.pt": "98adee8267e23823f0b18f6005aa5c93ba765d2f60f1b25d6a541a298e8d0d0d",
+    "results/revision/checkpoints/22-rope3d_axis.pt": "1d71e4af9b172f86f539edb8707375ed6446788b01379f75b2be7a7a8e0470d3",
+    "results/revision/checkpoints/22-rope3d_axis_normal.pt": "94bdc5e4bb922cc698650bd401bfe9138d06fb0fe1169a512ec34ac30031148b",
+    "results/revision/checkpoints/22-rope3d_axis_scale.pt": "8c1ba02f7e0288cabef4307a8aee90ccbbbfa0a638d9b92c4f0d26bff17c6197",
+    "results/revision/checkpoints/22-rope3d_axis_logcov.pt": "cbee73b8bdae0a72807d8ab8778ee3dca165bd36fc0ecf4ad0ca837056f20895",
+    "results/revision/checkpoints/22-rope3d_axis_projected_logcov.pt": "1caf84700f85d9bdbc532ad75ff9ea5f97ae9a1113b724b1b32c77b4b115654b",
+    "results/revision/checkpoints/22-rope3d_axis_bounded_logcov.pt": "a74b7d7962c9d398ec6aae6a089d9991e91765a1be67efbac0788b3c82e80ee5",
+    "results/revision/checkpoints/22-rope3d_axis_moments.pt": "d3fa0df71d0d53b961a0585f12aaa53a78e4de258a64e219f062235b12412511",
+    "results/revision/checkpoints/22-rope3d_axis_random_control.pt": "b6cbd5ea287a87b7a34263d09183fc68c1577f3945ce65518328ffada1cf9eb5",
+    "results/revision/checkpoints/33-center.pt": "3f13a43749e943c5bf9e6f406f4a16d61ba3d52fedaedede1793c133f4fc4623",
+    "results/revision/checkpoints/33-rope3d_axis.pt": "782be05d138d268d0e5bda5a79e8c93f92c228752d4681807e5ccf17e181a9e5",
+    "results/revision/checkpoints/33-rope3d_axis_normal.pt": "0d129544a843900751972e04f2efbdd153d30835fe7bd8119797a7d7a5864765",
+    "results/revision/checkpoints/33-rope3d_axis_scale.pt": "3b141450ff4867407a8f61fed9099b757af6cea49885350b3ebfac3d5b6823ca",
+    "results/revision/checkpoints/33-rope3d_axis_logcov.pt": "ce567d9d8961350050087ff60c159e4e6ff9bacde3f733236dff2daf0f04433b",
+    "results/revision/checkpoints/33-rope3d_axis_projected_logcov.pt": "fc1a93778172f819ac60916fd41fa978a15c5bb571cb8b73b676fa577c984238",
+    "results/revision/checkpoints/33-rope3d_axis_bounded_logcov.pt": "43f5dc661cb4bd905ad91923ef1e1a3e8cc49e1d0568925e7b412ba685a801d4",
+    "results/revision/checkpoints/33-rope3d_axis_moments.pt": "3c37a0f1c3ca78388555d60c68fb242b351c2d3cd0cc12d3fd98e183fb59912c",
+    "results/revision/checkpoints/33-rope3d_axis_random_control.pt": "9a77d55362f986c36372f21679b3d1351a2fc32e51c78c46d53bf557d59ef87b",
+    "results/revision/checkpoints/44-center.pt": "5221875138eae317cca71a7f4521bdf98a6d5205fd68fe41e61587afc1571770",
+    "results/revision/checkpoints/44-rope3d_axis.pt": "99683343c8ace9c5da63685ad8c946a88934068db4b46654fe9f0862764b0626",
+    "results/revision/checkpoints/44-rope3d_axis_normal.pt": "f6ef9395d629babd769f8cbc34a24b31ae36530736350760c03230dd991682c2",
+    "results/revision/checkpoints/44-rope3d_axis_scale.pt": "7ba023d93673a2202339b851cfe72833ce4b814ada000037ca674375c635c8ee",
+    "results/revision/checkpoints/44-rope3d_axis_logcov.pt": "d455d99d709b4eda377ad714f8b604a7ce8330aff783faaaeee39c2f1e65b9dd",
+    "results/revision/checkpoints/44-rope3d_axis_projected_logcov.pt": "cdb6c51887133ec714fd7ab563f2b2fe53a15a6724c6dde60d11041be6e9a658",
+    "results/revision/checkpoints/44-rope3d_axis_bounded_logcov.pt": "abac9d8e17d1bd0aab6798026a4f14129cbee508eafd5ed2ee396938101fc534",
+    "results/revision/checkpoints/44-rope3d_axis_moments.pt": "8caecb354503e308b7ffdded7dc731805239cb21211974f6d59f3f9e1e9fb95d",
+    "results/revision/checkpoints/44-rope3d_axis_random_control.pt": "e3bb50b4723b0e2b3d64bfce6e188f82f6ad35ca65274f27ffd049e429f845da",
+    "results/revision/checkpoints/55-center.pt": "ce3eac765c6152734ad7a46ce7d5f99acd089d3f64aede82fc724f7ef3d0896b",
+    "results/revision/checkpoints/55-rope3d_axis.pt": "1369211187370d0e62bcabefbe78337118500c7f91d2c1e5971717a7ab30e8ee",
+    "results/revision/checkpoints/55-rope3d_axis_normal.pt": "0a75248dd8803e8fde7eb6e04cfeb0cbdcb96c7ed99d7f43eec9305ad686c000",
+    "results/revision/checkpoints/55-rope3d_axis_scale.pt": "f3c0e574ab7d39e2e71075c1cce7a35b77b4628337a18e1cde579f9418cbfc49",
+    "results/revision/checkpoints/55-rope3d_axis_logcov.pt": "04f151ce81d45d4224d7ec7680631f68cad50dfb1de2799a888a2f912e1d81fb",
+    "results/revision/checkpoints/55-rope3d_axis_projected_logcov.pt": "c08112f968915b9404c96ae32b47444d91080ad9635a7dcc2b0d1e9a8a16f1f7",
+    "results/revision/checkpoints/55-rope3d_axis_bounded_logcov.pt": "25d3648094ae9dc09374b3ba76d14f9c57f514e8208aa0cef62689a36dd907b4",
+    "results/revision/checkpoints/55-rope3d_axis_moments.pt": "100e974ddc695dc41769a1e0f3b7b1caedb8dc74cddca1ac1bd5badc5b2e7c88",
+    "results/revision/checkpoints/55-rope3d_axis_random_control.pt": "6a8e891ff83f09ac1a870ebff5027901f1c4380beb05c1e3aac20d0328d38f2a"
+  },
+  "torch": "2.6.0+cu124",
+  "source_hashes": {
+    "models/__init__.py": "687fe9cb12175c9dc5c64db7cbb8ed6bb306b9dd6624739e2a5e32164edb6242",
+    "models/geometry.py": "173dbb8a58c00a41fabe5918cf4cc5422809e829aa492a8601747dbc4c4f8e20",
+    "experiments/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "experiments/calibrate_probe.py": "c6b15e655dcbdd9030f0cd53d7996d6a7c33d06584f4bfdb4d8b746d50170f12",
+    "experiments/launch_gpu.py": "12fbb76c6ad4b436c14c050144f1019d599a2d9669ba9ca20c4b95dcad028353",
+    "experiments/matching_probe.py": "b0bb36b9ebffab77307b9048d3ba27c816c85fc0d1e3b7b09d5009f3e58ddeaf",
+    "experiments/math_probe.py": "07df28e74a1efcd987efdda6a14173c89c052a6311130fd2317a4ed3713903bc",
+    "experiments/stability_probe.py": "ba216e5726da0fbabf88bc763386c301e95e43fed0fbacacca9ba2d8de46b80a",
+    "experiments/synthetic.py": "ed010be7b7a074232b923d031bcaa6f2ad5bc2bee6f88900ff3e6bff404c3abd"
+  }
+}
