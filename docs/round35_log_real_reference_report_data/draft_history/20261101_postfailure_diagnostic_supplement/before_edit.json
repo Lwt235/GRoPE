@@ -1,0 +1,9 @@
+{
+  "backup": "report_before_supplement.md",
+  "created_unix": 1793466431.6533945,
+  "diagnostic_receipt_path": "results/round35_roundoff_postfailure_diagnostic_20261101/execution_receipt.json",
+  "diagnostic_receipt_sha256": "6463eb9f6bb2d3782f12eccd508fb48d3af7db9dd3f04eb82914a4b2ad133d4f",
+  "old_report_path": "docs/round35_log_real_reference_report.md",
+  "old_report_sha256": "95d0ad945f257fd54aa553c2ab30defa1f09df5527f4a33e4064cab3609e0962",
+  "purpose": "dated disclosure of one separate post-failure diagnostic replay; formal R35 records unchanged"
+}

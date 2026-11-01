@@ -1,0 +1,7 @@
+{
+  "created_unix": 1793468999.7263048,
+  "path": "docs/rms_anchor_train_screen_unselected.md",
+  "reason": "Add unselected no-label cost-screen boundary; clarify zero means unperturbed state, not zero content. No data, integration, or timing.",
+  "sha256_before": "344a5814019f8efeb0a10082879bfc684a0515af1627fedabbf29fa0ddd9eb18",
+  "snapshot": "v1.md"
+}

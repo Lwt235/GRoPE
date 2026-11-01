@@ -1,0 +1,6 @@
+{
+  "created_unix": 1793464890.0631144,
+  "exit_code": 1,
+  "reason": "Report-only diagnostic max attempted to compare structural-zero None entries. No source/result changes, NPZ decode or integrations.",
+  "generator_snapshot": "source_snapshot/grope_round34_report_extract.py"
+}

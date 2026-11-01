@@ -1,0 +1,7 @@
+{
+  "created_unix": 1793465709.4431527,
+  "generator_sha256": "09a1319b36d812c2836fb03ea24e1e09b5912e7ab4ff1d1ce486f93d3c9df12e",
+  "snapshot": "docs/round35_log_real_reference_report_data/source_snapshot/grope_round35_report_extract.py",
+  "command": "python /tmp/grope_round35_report_extract.py",
+  "scope": "Post-acceptance sealed JSON/hash only; zero NPZ decoding/integrations/label reads."
+}

@@ -1,0 +1,8 @@
+{
+  "created_unix": 1793463797.9873126,
+  "source_sha256": "fef0a125f72e0b973240e50268d7a2b9fac0e5f7cd53be6fcb5f7de36d2ba0e1",
+  "snapshot_path": "docs/round33_log_real_reference_report_data/source_snapshot/grope_round33_report_extract.py",
+  "json_and_file_hash_only": true,
+  "npz_decode_allowed": false,
+  "integrator_calls_allowed": false
+}

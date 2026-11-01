@@ -1,0 +1,13 @@
+{
+  "changed_scope": "development snapshot coverage wording and versioned correction provenance only",
+  "csv_or_statistics_changes": false,
+  "finished_unix": 1793467568.323533,
+  "integrator_calls": 0,
+  "new_report_sha256": "0565d4114e26320c8bcca8711a1e3827620ec587cc3a82cecf3685d087bd83ee",
+  "npz_decodes": 0,
+  "old_report_sha256": "4e0e660dd6dbb8d0f561724a39c378cfe27cab240e5af506ae9d3980c9508416",
+  "original_completion_sha256": "7e9cb233ea682b5082b38dc0aa904f4d4738ef6bfcd4bafe66da317ccce7a9e5",
+  "original_completion_unchanged": true,
+  "scientific_source_changes": false,
+  "test_runs": 0
+}

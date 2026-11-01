@@ -20,6 +20,13 @@ class AuditTests(unittest.TestCase):
         checked=A.pair_check(self.o,self.c,self.b)
         self.assertTrue(checked['passed']);self.assertLess(checked['maximum_normalized_error'],1e-12)
 
+    def test_extra_prepared_fields_and_factor_rows_rejected(self):
+        b=dict(self.b);b['unreviewed_extra']=np.ones(1)
+        with self.assertRaisesRegex(ValueError,'pair fields'):A.pair_check(self.o,self.c,b)
+        for name in ('source_factor','target_factor','factor_homogeneous','anchored_factor'):
+            b=dict(self.b);b[name]=np.concatenate((b[name],b[name][:1]))
+            with self.assertRaisesRegex(ValueError,'factor population'):A.pair_check(self.o,self.c,b)
+
     def test_center_ray_depth_differs_from_patch_average(self):
         self.o['q_predicted_depth'][11:13,11:13]=3.
         b=I.prepare_inputs(self.o,self.c);checked=A.pair_check(self.o,self.c,b)
@@ -70,6 +77,43 @@ class AuditTests(unittest.TestCase):
         raw=np.array([-900.,-901.])
         self.assertTrue(np.isfinite(AR.validate_logs(raw,False)).all())
         with self.assertRaises(ValueError):AR.validate_logs(np.array([-np.inf,-900.]),False)
+
+
+class PhaseEvidenceTests(unittest.TestCase):
+    def evidence(self,wall=1.):
+        rows=[dict(attempted=True,passed=True,work_unavailable=False) for _ in range(2304)]
+        forward=dict(wall_seconds=wall,charged_cell_node_evaluations=0,stop_trigger=None,
+            phase_wall_passed=wall<=7200,phase_node_budget_passed=True,work_unavailable=False,
+            all_production_completed=True,complete_case_inventory=True)
+        seal=dict(phase_wall_seconds=wall,charged_cell_node_evaluations=0,stop_trigger=None,
+            phase_wall_passed=wall<=7200,phase_node_budget_passed=True,all_production_completed=True,
+            case_count=2304,actual_calls=2304,completed_calls=2304)
+        return rows,seal,forward
+
+    def test_complete_synthetic_population_resource_evidence(self):
+        self.assertEqual(A.phase_check(*self.evidence(),0,None),
+            dict(ledger_passed=True,all_production_completed=True))
+
+    def test_matching_failed_wall_flags_cannot_approve_complete_claim(self):
+        rows,seal,forward=self.evidence(wall=7201.)
+        checked=A.phase_check(rows,seal,forward,0,None)
+        self.assertFalse(checked['ledger_passed']);self.assertFalse(checked['all_production_completed'])
+        seal['all_production_completed']=forward['all_production_completed']=False
+        checked=A.phase_check(rows,seal,forward,0,None)
+        self.assertTrue(checked['ledger_passed']);self.assertFalse(checked['all_production_completed'])
+
+    def test_unknown_work_and_forged_call_count_rejected(self):
+        rows,seal,forward=self.evidence();rows[0]['work_unavailable']=True
+        self.assertFalse(A.phase_check(rows,seal,forward,0,None)['ledger_passed'])
+        rows,seal,forward=self.evidence();seal['actual_calls']-=1
+        self.assertFalse(A.phase_check(rows,seal,forward,0,None)['ledger_passed'])
+
+    def test_chronology_rejects_production_before_input_audit_and_nonfinite(self):
+        A.check_chronology(1.,2.,3.,4.,5.,6.,7.,8.,9.,10.,11.,12.)
+        # Input-audit completion at 8, followed by falsely declared production at 7.
+        with self.assertRaisesRegex(ValueError,'chronology'):A.check_chronology(1.,2.,3.,4.,5.,6.,7.,8.,7.,10.,11.,12.)
+        for invalid in (float('nan'),float('inf'),None,True):
+            with self.assertRaisesRegex(ValueError,'chronology'):A.check_chronology(1.,invalid,3.)
 
 
 if __name__=='__main__':unittest.main()

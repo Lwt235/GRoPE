@@ -1,0 +1,31 @@
+{
+  "created_unix": 1793467568.3342254,
+  "delivery_manifest_is_draft": true,
+  "files": {
+    "docs/round36_component_round_reference_report_data/before_execution.json": "de676fea94b9beea90098d80777c0d023400b7e5ddc14dd175f2f05e15246a01",
+    "docs/round36_component_round_reference_report_data/cases23.csv": "eaad22868b8762062ba2a7d18adf4fda9b5534b832fac47ab9c8910b67ae2d4b",
+    "docs/round36_component_round_reference_report_data/comparisons339.csv": "da7d7debce3a55171b6483c260da775fe864683d466c412d69f08a61637b30ec",
+    "docs/round36_component_round_reference_report_data/completion.json": "7e9cb233ea682b5082b38dc0aa904f4d4738ef6bfcd4bafe66da317ccce7a9e5",
+    "docs/round36_component_round_reference_report_data/delivery_manifest_draft_v1.json": "42d9cf708c2c2e95fea8ac9533b7900036e12899398b5ce2e7c9640115f23186",
+    "docs/round36_component_round_reference_report_data/draft_history/20261101_source_snapshot_scope_v2/before_edit.json": "9babd1371a45d17515795fa7112c00d5d216e4cf1035dc0cbd96c395ba4b2089",
+    "docs/round36_component_round_reference_report_data/draft_history/20261101_source_snapshot_scope_v2/edit_receipt.json": "e58b0fc6d62f54236f72827f791b1f3fb35359f3fa35021555b73a580e0436db",
+    "docs/round36_component_round_reference_report_data/draft_history/20261101_source_snapshot_scope_v2/report_v1.md": "4e0e660dd6dbb8d0f561724a39c378cfe27cab240e5af506ae9d3980c9508416",
+    "docs/round36_component_round_reference_report_data/extraction.log": "340ea7789f17d685250fa34dfae97108d40fe7aabf784895504f9ac80fa42bde",
+    "docs/round36_component_round_reference_report_data/oracles135.csv": "6f184b8352ca21d2c4e6c684c49bb8ce8bf5e2b6954b02271b314eb3ef94e4ef",
+    "docs/round36_component_round_reference_report_data/outer_trace_summaries.csv": "a1bef1d07f4f1c3582f305f7c0579b2b8074b71d18c206693dbaf654253d6e06",
+    "docs/round36_component_round_reference_report_data/reference_calls46.csv": "cd7a22f2df68555e019c6c87bf71349830b89d59c697a62d816ec1ff6b893909",
+    "docs/round36_component_round_reference_report_data/source_snapshot/grope_round36_report_extract.py": "d5067bd0b075d6d137e4c4161d01fe9306b846ab7d7b16091a017f7d53aba642",
+    "docs/round36_component_round_reference_report_data/statistics.json": "f6884849e2b0e6543ca984efba05262c5d6129b993d97990018f8bf270af0f83"
+  },
+  "integrator_calls": 0,
+  "npz_decodes": 0,
+  "old_report_sha256": "4e0e660dd6dbb8d0f561724a39c378cfe27cab240e5af506ae9d3980c9508416",
+  "original_extracted_outputs_unchanged": true,
+  "previous_completion_path": "docs/round36_component_round_reference_report_data/completion.json",
+  "previous_completion_sha256": "7e9cb233ea682b5082b38dc0aa904f4d4738ef6bfcd4bafe66da317ccce7a9e5",
+  "report_path": "docs/round36_component_round_reference_report.md",
+  "report_sha256": "0565d4114e26320c8bcca8711a1e3827620ec587cc3a82cecf3685d087bd83ee",
+  "scope": "Report wording correction and delivery draft; snapshot of report-data tree at this revision, excluding this inventory itself",
+  "test_runs": 0,
+  "version": 2
+}

@@ -1,0 +1,1745 @@
+{
+  "arithmetic_maxima": {
+    "log_floored_mass": 1.4210854715202004e-14,
+    "log_probability": 1.4210854715202004e-14,
+    "probability": 2.498001805406602e-16
+  },
+  "attempted_call_maxima": {
+    "charged_cell_node_evaluations": {
+      "id": "harvard_c5__hv_c5_1__g8__q0184",
+      "new_order": null,
+      "old_order": null,
+      "old_reference_kind": null,
+      "order": 48,
+      "value": 249980432
+    },
+    "peak_rss_kib_process": {
+      "id": "harvard_c3__hv_c3_1__g16__q0076",
+      "new_order": null,
+      "old_order": null,
+      "old_reference_kind": null,
+      "order": 48,
+      "value": 107568
+    },
+    "wall_seconds": {
+      "id": "harvard_c3__hv_c3_1__g24__q0020",
+      "new_order": null,
+      "old_order": null,
+      "old_reference_kind": null,
+      "order": 48,
+      "value": 44.752763325348496
+    }
+  },
+  "attempted_reference_reported_seconds": 1055.0716943070292,
+  "case_outcomes": {
+    "both_orders_complete": 27,
+    "neither_order_attempted": 44,
+    "one_order_complete": 1
+  },
+  "coalescing": [
+    {
+      "dropped": [],
+      "dropped_count": 0,
+      "id": "harvard_c3__hv_c3_1__g8__q0000",
+      "order": 32,
+      "original_interior_count": 39,
+      "retained_interior_count": 39,
+      "rule": "left_to_right_strict_midpoint_then_upper_backtrack"
+    },
+    {
+      "dropped": [],
+      "dropped_count": 0,
+      "id": "harvard_c3__hv_c3_1__g8__q0000",
+      "order": 48,
+      "original_interior_count": 39,
+      "retained_interior_count": 39,
+      "rule": "left_to_right_strict_midpoint_then_upper_backtrack"
+    },
+    {
+      "dropped": [],
+      "dropped_count": 0,
+      "id": "harvard_c3__hv_c3_1__g8__q0061",
+      "order": 32,
+      "original_interior_count": 64,
+      "retained_interior_count": 64,
+      "rule": "left_to_right_strict_midpoint_then_upper_backtrack"
+    },
+    {
+      "dropped": [],
+      "dropped_count": 0,
+      "id": "harvard_c3__hv_c3_1__g8__q0061",
+      "order": 48,
+      "original_interior_count": 64,
+      "retained_interior_count": 64,
+      "rule": "left_to_right_strict_midpoint_then_upper_backtrack"
+    },
+    {
+      "dropped": [],
+      "dropped_count": 0,
+      "id": "harvard_c3__hv_c3_1__g8__q0123",
+      "order": 32,
+      "original_interior_count": 55,
+      "retained_interior_count": 55,
+      "rule": "left_to_right_strict_midpoint_then_upper_backtrack"
+    },
+    {
+      "dropped": [],
+      "dropped_count": 0,
+      "id": "harvard_c3__hv_c3_1__g8__q0123",
+      "order": 48,
+      "original_interior_count": 55,
+      "retained_interior_count": 55,
+      "rule": "left_to_right_strict_midpoint_then_upper_backtrack"
+    },
+    {
+      "dropped": [],
+      "dropped_count": 0,
+      "id": "harvard_c3__hv_c3_1__g8__q0184",
+      "order": 32,
+      "original_interior_count": 60,
+      "retained_interior_count": 60,
+      "rule": "left_to_right_strict_midpoint_then_upper_backtrack"
+    },
+    {
+      "dropped": [],
+      "dropped_count": 0,
+      "id": "harvard_c3__hv_c3_1__g8__q0184",
+      "order": 48,
+      "original_interior_count": 60,
+      "retained_interior_count": 60,
+      "rule": "left_to_right_strict_midpoint_then_upper_backtrack"
+    },
+    {
+      "dropped": [],
+      "dropped_count": 0,
+      "id": "harvard_c3__hv_c3_1__g8__q0246",
+      "order": 32,
+      "original_interior_count": 123,
+      "retained_interior_count": 123,
+      "rule": "left_to_right_strict_midpoint_then_upper_backtrack"
+    },
+    {
+      "dropped": [],
+      "dropped_count": 0,
+      "id": "harvard_c3__hv_c3_1__g8__q0246",
+      "order": 48,
+      "original_interior_count": 123,
+      "retained_interior_count": 123,
+      "rule": "left_to_right_strict_midpoint_then_upper_backtrack"
+    },
+    {
+      "dropped": [],
+      "dropped_count": 0,
+      "id": "harvard_c3__hv_c3_1__g8__q0307",
+      "order": 32,
+      "original_interior_count": 65,
+      "retained_interior_count": 65,
+      "rule": "left_to_right_strict_midpoint_then_upper_backtrack"
+    },
+    {
+      "dropped": [],
+      "dropped_count": 0,
+      "id": "harvard_c3__hv_c3_1__g8__q0307",
+      "order": 48,
+      "original_interior_count": 65,
+      "retained_interior_count": 65,
+      "rule": "left_to_right_strict_midpoint_then_upper_backtrack"
+    },
+    {
+      "dropped": [],
+      "dropped_count": 0,
+      "id": "harvard_c3__hv_c3_1__g8__q0369",
+      "order": 32,
+      "original_interior_count": 100,
+      "retained_interior_count": 100,
+      "rule": "left_to_right_strict_midpoint_then_upper_backtrack"
+    },
+    {
+      "dropped": [],
+      "dropped_count": 0,
+      "id": "harvard_c3__hv_c3_1__g8__q0369",
+      "order": 48,
+      "original_interior_count": 100,
+      "retained_interior_count": 100,
+      "rule": "left_to_right_strict_midpoint_then_upper_backtrack"
+    },
+    {
+      "dropped": [],
+      "dropped_count": 0,
+      "id": "harvard_c3__hv_c3_1__g8__q0431",
+      "order": 32,
+      "original_interior_count": 49,
+      "retained_interior_count": 49,
+      "rule": "left_to_right_strict_midpoint_then_upper_backtrack"
+    },
+    {
+      "dropped": [],
+      "dropped_count": 0,
+      "id": "harvard_c3__hv_c3_1__g8__q0431",
+      "order": 48,
+      "original_interior_count": 49,
+      "retained_interior_count": 49,
+      "rule": "left_to_right_strict_midpoint_then_upper_backtrack"
+    },
+    {
+      "dropped": [],
+      "dropped_count": 0,
+      "id": "harvard_c3__hv_c3_1__g16__q0000",
+      "order": 32,
+      "original_interior_count": 53,
+      "retained_interior_count": 53,
+      "rule": "left_to_right_strict_midpoint_then_upper_backtrack"
+    },
+    {
+      "dropped": [],
+      "dropped_count": 0,
+      "id": "harvard_c3__hv_c3_1__g16__q0000",
+      "order": 48,
+      "original_interior_count": 53,
+      "retained_interior_count": 53,
+      "rule": "left_to_right_strict_midpoint_then_upper_backtrack"
+    },
+    {
+      "dropped": [],
+      "dropped_count": 0,
+      "id": "harvard_c3__hv_c3_1__g16__q0015",
+      "order": 32,
+      "original_interior_count": 164,
+      "retained_interior_count": 164,
+      "rule": "left_to_right_strict_midpoint_then_upper_backtrack"
+    },
+    {
+      "dropped": [],
+      "dropped_count": 0,
+      "id": "harvard_c3__hv_c3_1__g16__q0015",
+      "order": 48,
+      "original_interior_count": 164,
+      "retained_interior_count": 164,
+      "rule": "left_to_right_strict_midpoint_then_upper_backtrack"
+    },
+    {
+      "dropped": [],
+      "dropped_count": 0,
+      "id": "harvard_c3__hv_c3_1__g16__q0030",
+      "order": 32,
+      "original_interior_count": 114,
+      "retained_interior_count": 114,
+      "rule": "left_to_right_strict_midpoint_then_upper_backtrack"
+    },
+    {
+      "dropped": [],
+      "dropped_count": 0,
+      "id": "harvard_c3__hv_c3_1__g16__q0030",
+      "order": 48,
+      "original_interior_count": 114,
+      "retained_interior_count": 114,
+      "rule": "left_to_right_strict_midpoint_then_upper_backtrack"
+    },
+    {
+      "dropped": [],
+      "dropped_count": 0,
+      "id": "harvard_c3__hv_c3_1__g16__q0045",
+      "order": 32,
+      "original_interior_count": 75,
+      "retained_interior_count": 75,
+      "rule": "left_to_right_strict_midpoint_then_upper_backtrack"
+    },
+    {
+      "dropped": [],
+      "dropped_count": 0,
+      "id": "harvard_c3__hv_c3_1__g16__q0045",
+      "order": 48,
+      "original_interior_count": 75,
+      "retained_interior_count": 75,
+      "rule": "left_to_right_strict_midpoint_then_upper_backtrack"
+    },
+    {
+      "dropped": [],
+      "dropped_count": 0,
+      "id": "harvard_c3__hv_c3_1__g16__q0061",
+      "order": 32,
+      "original_interior_count": 88,
+      "retained_interior_count": 88,
+      "rule": "left_to_right_strict_midpoint_then_upper_backtrack"
+    },
+    {
+      "dropped": [],
+      "dropped_count": 0,
+      "id": "harvard_c3__hv_c3_1__g16__q0061",
+      "order": 48,
+      "original_interior_count": 88,
+      "retained_interior_count": 88,
+      "rule": "left_to_right_strict_midpoint_then_upper_backtrack"
+    },
+    {
+      "dropped": [],
+      "dropped_count": 0,
+      "id": "harvard_c3__hv_c3_1__g16__q0076",
+      "order": 32,
+      "original_interior_count": 94,
+      "retained_interior_count": 94,
+      "rule": "left_to_right_strict_midpoint_then_upper_backtrack"
+    },
+    {
+      "dropped": [],
+      "dropped_count": 0,
+      "id": "harvard_c3__hv_c3_1__g16__q0076",
+      "order": 48,
+      "original_interior_count": 94,
+      "retained_interior_count": 94,
+      "rule": "left_to_right_strict_midpoint_then_upper_backtrack"
+    },
+    {
+      "dropped": [],
+      "dropped_count": 0,
+      "id": "harvard_c3__hv_c3_1__g16__q0091",
+      "order": 32,
+      "original_interior_count": 127,
+      "retained_interior_count": 127,
+      "rule": "left_to_right_strict_midpoint_then_upper_backtrack"
+    },
+    {
+      "dropped": [],
+      "dropped_count": 0,
+      "id": "harvard_c3__hv_c3_1__g16__q0091",
+      "order": 48,
+      "original_interior_count": 127,
+      "retained_interior_count": 127,
+      "rule": "left_to_right_strict_midpoint_then_upper_backtrack"
+    },
+    {
+      "dropped": [],
+      "dropped_count": 0,
+      "id": "harvard_c3__hv_c3_1__g16__q0107",
+      "order": 32,
+      "original_interior_count": 53,
+      "retained_interior_count": 53,
+      "rule": "left_to_right_strict_midpoint_then_upper_backtrack"
+    },
+    {
+      "dropped": [],
+      "dropped_count": 0,
+      "id": "harvard_c3__hv_c3_1__g16__q0107",
+      "order": 48,
+      "original_interior_count": 53,
+      "retained_interior_count": 53,
+      "rule": "left_to_right_strict_midpoint_then_upper_backtrack"
+    },
+    {
+      "dropped": [],
+      "dropped_count": 0,
+      "id": "harvard_c3__hv_c3_1__g24__q0000",
+      "order": 32,
+      "original_interior_count": 63,
+      "retained_interior_count": 63,
+      "rule": "left_to_right_strict_midpoint_then_upper_backtrack"
+    },
+    {
+      "dropped": [],
+      "dropped_count": 0,
+      "id": "harvard_c3__hv_c3_1__g24__q0000",
+      "order": 48,
+      "original_interior_count": 63,
+      "retained_interior_count": 63,
+      "rule": "left_to_right_strict_midpoint_then_upper_backtrack"
+    },
+    {
+      "dropped": [],
+      "dropped_count": 0,
+      "id": "harvard_c3__hv_c3_1__g24__q0006",
+      "order": 32,
+      "original_interior_count": 84,
+      "retained_interior_count": 84,
+      "rule": "left_to_right_strict_midpoint_then_upper_backtrack"
+    },
+    {
+      "dropped": [],
+      "dropped_count": 0,
+      "id": "harvard_c3__hv_c3_1__g24__q0006",
+      "order": 48,
+      "original_interior_count": 84,
+      "retained_interior_count": 84,
+      "rule": "left_to_right_strict_midpoint_then_upper_backtrack"
+    },
+    {
+      "dropped": [],
+      "dropped_count": 0,
+      "id": "harvard_c3__hv_c3_1__g24__q0013",
+      "order": 32,
+      "original_interior_count": 108,
+      "retained_interior_count": 108,
+      "rule": "left_to_right_strict_midpoint_then_upper_backtrack"
+    },
+    {
+      "dropped": [],
+      "dropped_count": 0,
+      "id": "harvard_c3__hv_c3_1__g24__q0013",
+      "order": 48,
+      "original_interior_count": 108,
+      "retained_interior_count": 108,
+      "rule": "left_to_right_strict_midpoint_then_upper_backtrack"
+    },
+    {
+      "dropped": [],
+      "dropped_count": 0,
+      "id": "harvard_c3__hv_c3_1__g24__q0020",
+      "order": 32,
+      "original_interior_count": 123,
+      "retained_interior_count": 123,
+      "rule": "left_to_right_strict_midpoint_then_upper_backtrack"
+    },
+    {
+      "dropped": [],
+      "dropped_count": 0,
+      "id": "harvard_c3__hv_c3_1__g24__q0020",
+      "order": 48,
+      "original_interior_count": 123,
+      "retained_interior_count": 123,
+      "rule": "left_to_right_strict_midpoint_then_upper_backtrack"
+    },
+    {
+      "dropped": [],
+      "dropped_count": 0,
+      "id": "harvard_c3__hv_c3_1__g24__q0026",
+      "order": 32,
+      "original_interior_count": 104,
+      "retained_interior_count": 104,
+      "rule": "left_to_right_strict_midpoint_then_upper_backtrack"
+    },
+    {
+      "dropped": [],
+      "dropped_count": 0,
+      "id": "harvard_c3__hv_c3_1__g24__q0026",
+      "order": 48,
+      "original_interior_count": 104,
+      "retained_interior_count": 104,
+      "rule": "left_to_right_strict_midpoint_then_upper_backtrack"
+    },
+    {
+      "dropped": [],
+      "dropped_count": 0,
+      "id": "harvard_c3__hv_c3_1__g24__q0033",
+      "order": 32,
+      "original_interior_count": 87,
+      "retained_interior_count": 87,
+      "rule": "left_to_right_strict_midpoint_then_upper_backtrack"
+    },
+    {
+      "dropped": [],
+      "dropped_count": 0,
+      "id": "harvard_c3__hv_c3_1__g24__q0033",
+      "order": 48,
+      "original_interior_count": 87,
+      "retained_interior_count": 87,
+      "rule": "left_to_right_strict_midpoint_then_upper_backtrack"
+    },
+    {
+      "dropped": [],
+      "dropped_count": 0,
+      "id": "harvard_c3__hv_c3_1__g24__q0040",
+      "order": 32,
+      "original_interior_count": 91,
+      "retained_interior_count": 91,
+      "rule": "left_to_right_strict_midpoint_then_upper_backtrack"
+    },
+    {
+      "dropped": [],
+      "dropped_count": 0,
+      "id": "harvard_c3__hv_c3_1__g24__q0040",
+      "order": 48,
+      "original_interior_count": 91,
+      "retained_interior_count": 91,
+      "rule": "left_to_right_strict_midpoint_then_upper_backtrack"
+    },
+    {
+      "dropped": [],
+      "dropped_count": 0,
+      "id": "harvard_c3__hv_c3_1__g24__q0047",
+      "order": 32,
+      "original_interior_count": 51,
+      "retained_interior_count": 51,
+      "rule": "left_to_right_strict_midpoint_then_upper_backtrack"
+    },
+    {
+      "dropped": [],
+      "dropped_count": 0,
+      "id": "harvard_c3__hv_c3_1__g24__q0047",
+      "order": 48,
+      "original_interior_count": 51,
+      "retained_interior_count": 51,
+      "rule": "left_to_right_strict_midpoint_then_upper_backtrack"
+    },
+    {
+      "dropped": [],
+      "dropped_count": 0,
+      "id": "harvard_c5__hv_c5_1__g8__q0000",
+      "order": 32,
+      "original_interior_count": 58,
+      "retained_interior_count": 58,
+      "rule": "left_to_right_strict_midpoint_then_upper_backtrack"
+    },
+    {
+      "dropped": [],
+      "dropped_count": 0,
+      "id": "harvard_c5__hv_c5_1__g8__q0000",
+      "order": 48,
+      "original_interior_count": 58,
+      "retained_interior_count": 58,
+      "rule": "left_to_right_strict_midpoint_then_upper_backtrack"
+    },
+    {
+      "dropped": [],
+      "dropped_count": 0,
+      "id": "harvard_c5__hv_c5_1__g8__q0061",
+      "order": 32,
+      "original_interior_count": 59,
+      "retained_interior_count": 59,
+      "rule": "left_to_right_strict_midpoint_then_upper_backtrack"
+    },
+    {
+      "dropped": [],
+      "dropped_count": 0,
+      "id": "harvard_c5__hv_c5_1__g8__q0061",
+      "order": 48,
+      "original_interior_count": 59,
+      "retained_interior_count": 59,
+      "rule": "left_to_right_strict_midpoint_then_upper_backtrack"
+    },
+    {
+      "dropped": [],
+      "dropped_count": 0,
+      "id": "harvard_c5__hv_c5_1__g8__q0123",
+      "order": 32,
+      "original_interior_count": 9,
+      "retained_interior_count": 9,
+      "rule": "left_to_right_strict_midpoint_then_upper_backtrack"
+    },
+    {
+      "dropped": [],
+      "dropped_count": 0,
+      "id": "harvard_c5__hv_c5_1__g8__q0123",
+      "order": 48,
+      "original_interior_count": 9,
+      "retained_interior_count": 9,
+      "rule": "left_to_right_strict_midpoint_then_upper_backtrack"
+    },
+    {
+      "dropped": [],
+      "dropped_count": 0,
+      "id": "harvard_c5__hv_c5_1__g8__q0184",
+      "order": 32,
+      "original_interior_count": 132,
+      "retained_interior_count": 132,
+      "rule": "left_to_right_strict_midpoint_then_upper_backtrack"
+    },
+    {
+      "dropped": [],
+      "dropped_count": 0,
+      "id": "harvard_c5__hv_c5_1__g8__q0184",
+      "order": 48,
+      "original_interior_count": 132,
+      "retained_interior_count": 132,
+      "rule": "left_to_right_strict_midpoint_then_upper_backtrack"
+    }
+  ],
+  "comparison_failure_reasons": {
+    "KeyError: 'log_raw_mass'": 134
+  },
+  "comparisons": {
+    "new_orders": {
+      "argmax_changes": 0,
+      "exact_tie_comparisons": 0,
+      "failures": 45,
+      "maxima": {
+        "maximum_probability_error": {
+          "id": "harvard_c5__hv_c5_1__g8__q0123",
+          "new_order": null,
+          "old_order": null,
+          "old_reference_kind": null,
+          "order": null,
+          "value": 6.661338147750939e-16
+        },
+        "raw_fov_relative": {
+          "id": "harvard_c3__hv_c3_1__g8__q0431",
+          "new_order": null,
+          "old_order": null,
+          "old_reference_kind": null,
+          "order": null,
+          "value": 4.4408920985006143e-16
+        },
+        "raw_l1_over_reference_fov": {
+          "id": "harvard_c5__hv_c5_1__g8__q0123",
+          "new_order": null,
+          "old_order": null,
+          "old_reference_kind": null,
+          "order": null,
+          "value": 1.1586784303660796e-15
+        }
+      },
+      "near_tie_comparisons": 0,
+      "numeric_count": 27,
+      "passes": 27,
+      "scheduled": 72
+    },
+    "new_vs_old_r33_log_conditional": {
+      "argmax_changes": 0,
+      "exact_tie_comparisons": 0,
+      "failures": 0,
+      "maxima": {
+        "maximum_probability_error": {
+          "id": "harvard_c3__hv_c3_1__g8__q0184",
+          "new_order": 32,
+          "old_order": 48,
+          "old_reference_kind": "r33_log_conditional",
+          "order": null,
+          "value": 3.3306690738754696e-16
+        },
+        "raw_fov_relative": {
+          "id": "harvard_c3__hv_c3_1__g8__q0431",
+          "new_order": 32,
+          "old_order": 48,
+          "old_reference_kind": "r33_log_conditional",
+          "order": null,
+          "value": 1.3322676295501906e-15
+        },
+        "raw_l1_over_reference_fov": {
+          "id": "harvard_c3__hv_c3_1__g8__q0431",
+          "new_order": 32,
+          "old_order": 48,
+          "old_reference_kind": "r33_log_conditional",
+          "order": null,
+          "value": 1.3347964072528512e-15
+        }
+      },
+      "near_tie_comparisons": 0,
+      "numeric_count": 38,
+      "passes": 38,
+      "scheduled": 38
+    },
+    "new_vs_old_r35_log_real": {
+      "argmax_changes": 0,
+      "exact_tie_comparisons": 0,
+      "failures": 0,
+      "maxima": {
+        "maximum_probability_error": {
+          "id": "harvard_c3__hv_c3_1__g8__q0184",
+          "new_order": 32,
+          "old_order": 48,
+          "old_reference_kind": "r35_log_real",
+          "order": null,
+          "value": 3.3306690738754696e-16
+        },
+        "raw_fov_relative": {
+          "id": "harvard_c3__hv_c3_1__g8__q0431",
+          "new_order": 32,
+          "old_order": 48,
+          "old_reference_kind": "r35_log_real",
+          "order": null,
+          "value": 1.3322676295501906e-15
+        },
+        "raw_l1_over_reference_fov": {
+          "id": "harvard_c3__hv_c3_1__g8__q0431",
+          "new_order": 32,
+          "old_order": 48,
+          "old_reference_kind": "r35_log_real",
+          "order": null,
+          "value": 1.3347964072528512e-15
+        }
+      },
+      "near_tie_comparisons": 0,
+      "numeric_count": 42,
+      "passes": 42,
+      "scheduled": 42
+    },
+    "old_production_vs_new": {
+      "argmax_changes": 0,
+      "exact_tie_comparisons": 0,
+      "failures": 89,
+      "maxima": {
+        "maximum_probability_error": {
+          "id": "harvard_c3__hv_c3_1__g24__q0047",
+          "new_order": 32,
+          "old_order": null,
+          "old_reference_kind": null,
+          "order": null,
+          "value": 1.4710455076283324e-15
+        },
+        "raw_fov_relative": {
+          "id": "harvard_c3__hv_c3_1__g8__q0431",
+          "new_order": 48,
+          "old_order": null,
+          "old_reference_kind": null,
+          "order": null,
+          "value": 1.1102230246251518e-14
+        },
+        "raw_l1_over_reference_fov": {
+          "id": "harvard_c3__hv_c3_1__g8__q0431",
+          "new_order": 48,
+          "old_order": null,
+          "old_reference_kind": null,
+          "order": null,
+          "value": 1.068987544391774e-14
+        }
+      },
+      "near_tie_comparisons": 0,
+      "numeric_count": 55,
+      "passes": 55,
+      "scheduled": 144
+    }
+  },
+  "failures": [
+    {
+      "archive_path": "forward/arrays/harvard_c5__hv_c5_1__g8__q0184__order48.npz",
+      "archive_sha256": "c58ef1a7f20f5beed1ed513d9a4dd78e2fef2ded6ddc2b373c6ca90c812327c3",
+      "attempted": true,
+      "available_arrays": [
+        "dropped_depth_edge_indices",
+        "dropped_depth_edge_values",
+        "initial_depth_edges",
+        "input__bounds",
+        "input__content_bias",
+        "input__factor",
+        "input__mu",
+        "last_conditional_log_mass",
+        "original_depth_edges",
+        "outer_active_interval_indices",
+        "outer_interval_bounds",
+        "outer_interval_integrals",
+        "outer_interval_roundoff",
+        "outer_interval_truncation_error",
+        "outer_log_scale",
+        "outer_max_dropped_log_shift",
+        "outer_max_log_shift",
+        "outer_underflow_counts",
+        "partial_log_raw_fov_mass",
+        "partial_log_raw_mass",
+        "partial_raw_computed",
+        "pilot_completed",
+        "pilot_log_integrand",
+        "pilot_zeta"
+      ],
+      "budget_used_after": 4931562096,
+      "budget_used_before": 4681581664,
+      "call_id": "harvard_c5__hv_c5_1__g8__q0184__order48",
+      "call_index": 55,
+      "charged_cell_node_evaluations": 249980432,
+      "depth_edge_coalescing": {
+        "dropped": [],
+        "dropped_count": 0,
+        "original_interior_count": 132,
+        "retained_interior_count": 132,
+        "rule": "left_to_right_strict_midpoint_then_upper_backtrack"
+      },
+      "direct_fov_absolute_error_materialized_diagnostic": null,
+      "failure_reason": "ReferenceFailure: RuntimeError: full-X partition exceeds remaining fixed inner-node budget before allocation",
+      "failure_stage": "reference",
+      "front_mass": 0.9999999999999989,
+      "id": "harvard_c5__hv_c5_1__g8__q0184",
+      "independent_real_reference": true,
+      "log_front_mass": -1.1637854260916736e-15,
+      "log_raw_mass_sum": null,
+      "log_total_area_floor": null,
+      "lse_diagnostics": {
+        "by_scope": {
+          "content_normalization": {
+            "maximum_log_absolute_omitted_bound": null,
+            "maximum_log_relative_omitted_bound": null,
+            "maximum_log_scaled_omitted_bound": null,
+            "sum_count": 0,
+            "underflow_sum_count": 0,
+            "underflow_term_count": 0
+          },
+          "floor": {
+            "maximum_log_absolute_omitted_bound": null,
+            "maximum_log_relative_omitted_bound": null,
+            "maximum_log_scaled_omitted_bound": null,
+            "sum_count": 0,
+            "underflow_sum_count": 0,
+            "underflow_term_count": 0
+          },
+          "floor_total": {
+            "maximum_log_absolute_omitted_bound": null,
+            "maximum_log_relative_omitted_bound": null,
+            "maximum_log_scaled_omitted_bound": null,
+            "sum_count": 0,
+            "underflow_sum_count": 0,
+            "underflow_term_count": 0
+          },
+          "floored_total": {
+            "maximum_log_absolute_omitted_bound": null,
+            "maximum_log_relative_omitted_bound": null,
+            "maximum_log_scaled_omitted_bound": null,
+            "sum_count": 0,
+            "underflow_sum_count": 0,
+            "underflow_term_count": 0
+          },
+          "inner_panel_nodes": {
+            "maximum_log_absolute_omitted_bound": null,
+            "maximum_log_relative_omitted_bound": null,
+            "maximum_log_scaled_omitted_bound": null,
+            "sum_count": 671469,
+            "underflow_sum_count": 0,
+            "underflow_term_count": 0
+          },
+          "narrow_normal_nodes": {
+            "maximum_log_absolute_omitted_bound": null,
+            "maximum_log_relative_omitted_bound": null,
+            "maximum_log_scaled_omitted_bound": null,
+            "sum_count": 27218740,
+            "underflow_sum_count": 0,
+            "underflow_term_count": 0
+          },
+          "native_total": {
+            "maximum_log_absolute_omitted_bound": null,
+            "maximum_log_relative_omitted_bound": null,
+            "maximum_log_scaled_omitted_bound": null,
+            "sum_count": 0,
+            "underflow_sum_count": 0,
+            "underflow_term_count": 0
+          },
+          "rectangle_panels": {
+            "maximum_log_absolute_omitted_bound": -800.1896014059571,
+            "maximum_log_relative_omitted_bound": -745.2332976147205,
+            "maximum_log_scaled_omitted_bound": -745.2332975917188,
+            "sum_count": 569828,
+            "underflow_sum_count": 351,
+            "underflow_term_count": 1030
+          }
+        },
+        "exact_arithmetic_local_omission_only": true,
+        "excludes_addition_absorption_density_quadrature_and_roundoff": true,
+        "is_pipeline_error_bound": false
+      },
+      "narrow_normal_quadrature_bound": {
+        "branch_exponent_span": 0.25,
+        "computed_relative_remainder": 1.8779378947512938e-13,
+        "conservative_relative_remainder_bound": 1.88e-13,
+        "exact_arithmetic_only": true,
+        "includes_floating_point_error": false,
+        "is_pipeline_error_bound": false,
+        "order": 8,
+        "proof_envelope": 0.5
+      },
+      "normal_logcdf_scalar_evaluations": 9192238,
+      "normalization_error": null,
+      "not_attempted_reason": null,
+      "order": 48,
+      "outer_component_roundoff": {
+        "callback_evaluations": 1184,
+        "complete": false,
+        "completed_interval_evaluations": 56,
+        "error_estimate_is_not_true_error_certificate": true,
+        "estimated_error": 6.043334846392533e-15,
+        "initial_checked_before_split": false,
+        "initial_interval_count": 133,
+        "maximum_historical_roundoff": 6.03922215888319e-15,
+        "pending_interval_bounds": [
+          -6.970043193627319,
+          -6.959142391112373
+        ],
+        "roundoff_epsilon": 2.220446049250313e-16,
+        "roundoff_factor": 50.0,
+        "split_count": 0,
+        "status": "exception",
+        "success": false,
+        "sum_active_truncation_error": 4.112687509342934e-18,
+        "target": 6.799559666088495e-14
+      },
+      "outer_convergence_success": null,
+      "outer_exp_diagnostics": {
+        "component_evaluations": 512239,
+        "evaluation_vectors": 1183,
+        "is_continuous_integral_or_pipeline_error_bound": false,
+        "local_node_omission_only": true,
+        "scale_is_certified_upper_bound": false,
+        "scale_reselected": false,
+        "total_underflow_terms": 0
+      },
+      "pair": [
+        30,
+        45
+      ],
+      "pair_name": "000_0000030_0000045",
+      "passed": false,
+      "peak_rss_kib_process": 107568,
+      "query_bounds": [
+        128,
+        56,
+        136,
+        64
+      ],
+      "query_index": 184,
+      "query_size": 8,
+      "real_inputs_read": true,
+      "reference_reported_wall_seconds": null,
+      "reference_work_consistent": true,
+      "scaled_outer_error_estimate": null,
+      "scene": "harvard_c5/hv_c5_1",
+      "status": "failed",
+      "stop_trigger": null,
+      "structural_branch": "stochastic_depth",
+      "structural_zero": false,
+      "truncation_bounds": null,
+      "wall_seconds": 20.46411619335413,
+      "work": {
+        "cell_node_evaluations": 249980432,
+        "depth_evaluations": 1317,
+        "elementary_inner_nodes": 249980432,
+        "inner_panels": 671469,
+        "inner_x_nodes": 32230512,
+        "narrow_y_pdf_nodes": 217749920,
+        "outer_geometry_breakpoints": 132,
+        "outer_intervals": 56,
+        "pilot_depth_evaluations": 133,
+        "quadrature_depth_evaluations": 1184
+      }
+    }
+  ],
+  "forward_started": {
+    "audit_lock_sha256": "3fbe5a004143e9b490c3a456fcdc2a538fcc7a92df9ea8660d2fe7234f0eecdf",
+    "candidate_selected": false,
+    "efficacy_tested": false,
+    "general_numerical_accuracy_established": false,
+    "goal_complete": false,
+    "independent_real_reference": false,
+    "independent_synthetic_reference": false,
+    "input_verification_sha256": "0a29388327523f936e89f01e701169ec1a8c748fe0ee5b2eca6709c525b97820",
+    "labels_read": false,
+    "producer_lock_sha256": "a0f1beb718427614c41ee1557b44d25e4510e554fc423fe85a24be27099a4671",
+    "real_inputs_read": false,
+    "scientific_gate_passed": false,
+    "started_unix": 1793468180.660653,
+    "synthetic_inputs_read": false
+  },
+  "histories": {
+    "results/round37_audit_development_history_20261101.json": "2545e6e7aef8c3b5af72c3c90350c8700f86696acbd13146acec0a893e37f425",
+    "results/round37_joint_preflight_development_history_20261101.json": "9a7d9162c67eed3049b6fb689102328ba05e3f60806857156d9e839f529c34b4",
+    "results/round37_preflight_development_history_20261101.json": "3deb253dfa6ee69d29ca1c26dc41f3a72fc39c029701f46bad97c6c93904ea30"
+  },
+  "input_audit_finished_unix": 1793468179.4686203,
+  "inventories": {
+    "results/round37_component_round_real_reference": 250,
+    "results/round37_component_round_real_reference/forward": 149,
+    "results/round37_component_round_real_reference/prepared": 75,
+    "results/round37_component_round_real_reference_independent_audit": 34,
+    "results/round37_component_round_real_reference_independent_audit/input_audit": 3,
+    "results/round37_controllers": 7
+  },
+  "lse": {
+    "content_normalization": {
+      "max_log_relative_omitted_bound": null,
+      "underflow_term_count": 0
+    },
+    "floor": {
+      "max_log_relative_omitted_bound": -745.7194124065979,
+      "underflow_term_count": 2458
+    },
+    "floor_total": {
+      "max_log_relative_omitted_bound": null,
+      "underflow_term_count": 0
+    },
+    "floored_total": {
+      "max_log_relative_omitted_bound": null,
+      "underflow_term_count": 0
+    },
+    "inner_panel_nodes": {
+      "max_log_relative_omitted_bound": null,
+      "underflow_term_count": 0
+    },
+    "narrow_normal_nodes": {
+      "max_log_relative_omitted_bound": null,
+      "underflow_term_count": 0
+    },
+    "native_total": {
+      "max_log_relative_omitted_bound": -741.6982953729706,
+      "underflow_term_count": 2736
+    },
+    "rectangle_panels": {
+      "max_log_relative_omitted_bound": -741.763509787297,
+      "underflow_term_count": 881635
+    }
+  },
+  "matched_historical_costs": [
+    {
+      "id": "harvard_c3__hv_c3_1__g8__q0000",
+      "new_completed": true,
+      "new_nodes": 27941216,
+      "new_reference_reported_seconds": 7.4489758517593145,
+      "node_delta": 0,
+      "old_nodes": 27941216,
+      "old_oracle_id": "r33_log_conditional__order32",
+      "old_reference_kind": "r33_log_conditional",
+      "old_reference_reported_seconds": 8.012297689914703,
+      "order": 32
+    },
+    {
+      "id": "harvard_c3__hv_c3_1__g8__q0000",
+      "new_completed": true,
+      "new_nodes": 42937968,
+      "new_reference_reported_seconds": 10.998681582510471,
+      "node_delta": -1682256,
+      "old_nodes": 44620224,
+      "old_oracle_id": "r33_log_conditional__order48",
+      "old_reference_kind": "r33_log_conditional",
+      "old_reference_reported_seconds": 11.71545741148293,
+      "order": 48
+    },
+    {
+      "id": "harvard_c3__hv_c3_1__g8__q0061",
+      "new_completed": true,
+      "new_nodes": 57976384,
+      "new_reference_reported_seconds": 15.349089503288269,
+      "node_delta": -2042016,
+      "old_nodes": 60018400,
+      "old_oracle_id": "r33_log_conditional__order32",
+      "old_reference_kind": "r33_log_conditional",
+      "old_reference_reported_seconds": 16.30011961236596,
+      "order": 32
+    },
+    {
+      "id": "harvard_c3__hv_c3_1__g8__q0061",
+      "new_completed": true,
+      "new_nodes": 86964576,
+      "new_reference_reported_seconds": 22.401275116950274,
+      "node_delta": -3063024,
+      "old_nodes": 90027600,
+      "old_oracle_id": "r33_log_conditional__order48",
+      "old_reference_kind": "r33_log_conditional",
+      "old_reference_reported_seconds": 23.28123803064227,
+      "order": 48
+    },
+    {
+      "id": "harvard_c3__hv_c3_1__g8__q0123",
+      "new_completed": true,
+      "new_nodes": 53631936,
+      "new_reference_reported_seconds": 13.879216710105538,
+      "node_delta": 0,
+      "old_nodes": 53631936,
+      "old_oracle_id": "r33_log_conditional__order32",
+      "old_reference_kind": "r33_log_conditional",
+      "old_reference_reported_seconds": 14.301397943869233,
+      "order": 32
+    },
+    {
+      "id": "harvard_c3__hv_c3_1__g8__q0123",
+      "new_completed": true,
+      "new_nodes": 80447904,
+      "new_reference_reported_seconds": 20.401187444105744,
+      "node_delta": 0,
+      "old_nodes": 80447904,
+      "old_oracle_id": "r33_log_conditional__order48",
+      "old_reference_kind": "r33_log_conditional",
+      "old_reference_reported_seconds": 20.36900159716606,
+      "order": 48
+    },
+    {
+      "id": "harvard_c3__hv_c3_1__g8__q0184",
+      "new_completed": true,
+      "new_nodes": 56221984,
+      "new_reference_reported_seconds": 15.001048462465405,
+      "node_delta": -1961888,
+      "old_nodes": 58183872,
+      "old_oracle_id": "r33_log_conditional__order32",
+      "old_reference_kind": "r33_log_conditional",
+      "old_reference_reported_seconds": 16.081457985565066,
+      "order": 32
+    },
+    {
+      "id": "harvard_c3__hv_c3_1__g8__q0184",
+      "new_completed": true,
+      "new_nodes": 84332976,
+      "new_reference_reported_seconds": 21.807719703763723,
+      "node_delta": -2942832,
+      "old_nodes": 87275808,
+      "old_oracle_id": "r33_log_conditional__order48",
+      "old_reference_kind": "r33_log_conditional",
+      "old_reference_reported_seconds": 22.873925929889083,
+      "order": 48
+    },
+    {
+      "id": "harvard_c3__hv_c3_1__g8__q0246",
+      "new_completed": true,
+      "new_nodes": 97483520,
+      "new_reference_reported_seconds": 20.785613300278783,
+      "node_delta": -31317264,
+      "old_nodes": 128800784,
+      "old_oracle_id": "r33_log_conditional__order32",
+      "old_reference_kind": "r33_log_conditional",
+      "old_reference_reported_seconds": 22.79347507469356,
+      "order": 32
+    },
+    {
+      "id": "harvard_c3__hv_c3_1__g8__q0246",
+      "new_completed": true,
+      "new_nodes": 151945752,
+      "new_reference_reported_seconds": 29.85817859135568,
+      "node_delta": -41255256,
+      "old_nodes": 193201008,
+      "old_oracle_id": "r33_log_conditional__order48",
+      "old_reference_kind": "r33_log_conditional",
+      "old_reference_reported_seconds": 31.126196291297674,
+      "order": 48
+    },
+    {
+      "id": "harvard_c3__hv_c3_1__g8__q0307",
+      "new_completed": true,
+      "new_nodes": 51393792,
+      "new_reference_reported_seconds": 12.493511628359556,
+      "node_delta": -1588096,
+      "old_nodes": 52981888,
+      "old_oracle_id": "r33_log_conditional__order32",
+      "old_reference_kind": "r33_log_conditional",
+      "old_reference_reported_seconds": 12.776057930663228,
+      "order": 32
+    },
+    {
+      "id": "harvard_c3__hv_c3_1__g8__q0307",
+      "new_completed": true,
+      "new_nodes": 77090688,
+      "new_reference_reported_seconds": 19.13348402455449,
+      "node_delta": -2382144,
+      "old_nodes": 79472832,
+      "old_oracle_id": "r33_log_conditional__order48",
+      "old_reference_kind": "r33_log_conditional",
+      "old_reference_reported_seconds": 18.3712839782238,
+      "order": 48
+    },
+    {
+      "id": "harvard_c3__hv_c3_1__g8__q0369",
+      "new_completed": true,
+      "new_nodes": 74499224,
+      "new_reference_reported_seconds": 17.578894635662436,
+      "node_delta": -11606392,
+      "old_nodes": 86105616,
+      "old_oracle_id": "r33_log_conditional__order32",
+      "old_reference_kind": "r33_log_conditional",
+      "old_reference_reported_seconds": 18.17164747044444,
+      "order": 32
+    },
+    {
+      "id": "harvard_c3__hv_c3_1__g8__q0369",
+      "new_completed": true,
+      "new_nodes": 111748504,
+      "new_reference_reported_seconds": 25.17654605023563,
+      "node_delta": -17409256,
+      "old_nodes": 129157760,
+      "old_oracle_id": "r33_log_conditional__order48",
+      "old_reference_kind": "r33_log_conditional",
+      "old_reference_reported_seconds": 25.498580815270543,
+      "order": 48
+    },
+    {
+      "id": "harvard_c3__hv_c3_1__g8__q0431",
+      "new_completed": true,
+      "new_nodes": 52800216,
+      "new_reference_reported_seconds": 8.180214308202267,
+      "node_delta": -27424248,
+      "old_nodes": 80224464,
+      "old_oracle_id": "r33_log_conditional__order32",
+      "old_reference_kind": "r33_log_conditional",
+      "old_reference_reported_seconds": 9.880088629201055,
+      "order": 32
+    },
+    {
+      "id": "harvard_c3__hv_c3_1__g8__q0431",
+      "new_completed": true,
+      "new_nodes": 79200328,
+      "new_reference_reported_seconds": 12.075183924287558,
+      "node_delta": -41136376,
+      "old_nodes": 120336704,
+      "old_oracle_id": "r33_log_conditional__order48",
+      "old_reference_kind": "r33_log_conditional",
+      "old_reference_reported_seconds": 14.714517129585147,
+      "order": 48
+    },
+    {
+      "id": "harvard_c3__hv_c3_1__g16__q0000",
+      "new_completed": true,
+      "new_nodes": 32565104,
+      "new_reference_reported_seconds": 8.196867492049932,
+      "node_delta": -2779056,
+      "old_nodes": 35344160,
+      "old_oracle_id": "r33_log_conditional__order32",
+      "old_reference_kind": "r33_log_conditional",
+      "old_reference_reported_seconds": 8.25544635951519,
+      "order": 32
+    },
+    {
+      "id": "harvard_c3__hv_c3_1__g16__q0000",
+      "new_completed": true,
+      "new_nodes": 48847656,
+      "new_reference_reported_seconds": 11.83338120020926,
+      "node_delta": -4168584,
+      "old_nodes": 53016240,
+      "old_oracle_id": "r33_log_conditional__order48",
+      "old_reference_kind": "r33_log_conditional",
+      "old_reference_reported_seconds": 11.50158304348588,
+      "order": 48
+    },
+    {
+      "id": "harvard_c3__hv_c3_1__g16__q0015",
+      "new_completed": true,
+      "new_nodes": 148257616,
+      "new_reference_reported_seconds": 30.247939893975854,
+      "node_delta": -44786128,
+      "old_nodes": 193043744,
+      "old_oracle_id": "r33_log_conditional__order32",
+      "old_reference_kind": "r33_log_conditional",
+      "old_reference_reported_seconds": 32.030258662998676,
+      "order": 32
+    },
+    {
+      "id": "harvard_c3__hv_c3_1__g8__q0000",
+      "new_completed": true,
+      "new_nodes": 27941216,
+      "new_reference_reported_seconds": 7.4489758517593145,
+      "node_delta": 0,
+      "old_nodes": 27941216,
+      "old_oracle_id": "r35_log_real__order32",
+      "old_reference_kind": "r35_log_real",
+      "old_reference_reported_seconds": 7.94497593306005,
+      "order": 32
+    },
+    {
+      "id": "harvard_c3__hv_c3_1__g8__q0000",
+      "new_completed": true,
+      "new_nodes": 42937968,
+      "new_reference_reported_seconds": 10.998681582510471,
+      "node_delta": -1682256,
+      "old_nodes": 44620224,
+      "old_oracle_id": "r35_log_real__order48",
+      "old_reference_kind": "r35_log_real",
+      "old_reference_reported_seconds": 11.759301912039518,
+      "order": 48
+    },
+    {
+      "id": "harvard_c3__hv_c3_1__g8__q0061",
+      "new_completed": true,
+      "new_nodes": 57976384,
+      "new_reference_reported_seconds": 15.349089503288269,
+      "node_delta": -2042016,
+      "old_nodes": 60018400,
+      "old_oracle_id": "r35_log_real__order32",
+      "old_reference_kind": "r35_log_real",
+      "old_reference_reported_seconds": 16.327908566221595,
+      "order": 32
+    },
+    {
+      "id": "harvard_c3__hv_c3_1__g8__q0061",
+      "new_completed": true,
+      "new_nodes": 86964576,
+      "new_reference_reported_seconds": 22.401275116950274,
+      "node_delta": -3063024,
+      "old_nodes": 90027600,
+      "old_oracle_id": "r35_log_real__order48",
+      "old_reference_kind": "r35_log_real",
+      "old_reference_reported_seconds": 23.005949959158897,
+      "order": 48
+    },
+    {
+      "id": "harvard_c3__hv_c3_1__g8__q0123",
+      "new_completed": true,
+      "new_nodes": 53631936,
+      "new_reference_reported_seconds": 13.879216710105538,
+      "node_delta": 0,
+      "old_nodes": 53631936,
+      "old_oracle_id": "r35_log_real__order32",
+      "old_reference_kind": "r35_log_real",
+      "old_reference_reported_seconds": 14.400282753631473,
+      "order": 32
+    },
+    {
+      "id": "harvard_c3__hv_c3_1__g8__q0123",
+      "new_completed": true,
+      "new_nodes": 80447904,
+      "new_reference_reported_seconds": 20.401187444105744,
+      "node_delta": 0,
+      "old_nodes": 80447904,
+      "old_oracle_id": "r35_log_real__order48",
+      "old_reference_kind": "r35_log_real",
+      "old_reference_reported_seconds": 20.055707409977913,
+      "order": 48
+    },
+    {
+      "id": "harvard_c3__hv_c3_1__g8__q0184",
+      "new_completed": true,
+      "new_nodes": 56221984,
+      "new_reference_reported_seconds": 15.001048462465405,
+      "node_delta": -1961888,
+      "old_nodes": 58183872,
+      "old_oracle_id": "r35_log_real__order32",
+      "old_reference_kind": "r35_log_real",
+      "old_reference_reported_seconds": 15.929900648072362,
+      "order": 32
+    },
+    {
+      "id": "harvard_c3__hv_c3_1__g8__q0184",
+      "new_completed": true,
+      "new_nodes": 84332976,
+      "new_reference_reported_seconds": 21.807719703763723,
+      "node_delta": -2942832,
+      "old_nodes": 87275808,
+      "old_oracle_id": "r35_log_real__order48",
+      "old_reference_kind": "r35_log_real",
+      "old_reference_reported_seconds": 22.50251696817577,
+      "order": 48
+    },
+    {
+      "id": "harvard_c3__hv_c3_1__g8__q0246",
+      "new_completed": true,
+      "new_nodes": 97483520,
+      "new_reference_reported_seconds": 20.785613300278783,
+      "node_delta": -3813704,
+      "old_nodes": 101297224,
+      "old_oracle_id": "r35_log_real__order32",
+      "old_reference_kind": "r35_log_real",
+      "old_reference_reported_seconds": 22.31939429230988,
+      "order": 32
+    },
+    {
+      "id": "harvard_c3__hv_c3_1__g8__q0246",
+      "new_completed": true,
+      "new_nodes": 151945752,
+      "new_reference_reported_seconds": 29.85817859135568,
+      "node_delta": 0,
+      "old_nodes": 151945752,
+      "old_oracle_id": "r35_log_real__order48",
+      "old_reference_kind": "r35_log_real",
+      "old_reference_reported_seconds": 30.56743318028748,
+      "order": 48
+    },
+    {
+      "id": "harvard_c3__hv_c3_1__g8__q0307",
+      "new_completed": true,
+      "new_nodes": 51393792,
+      "new_reference_reported_seconds": 12.493511628359556,
+      "node_delta": -1588096,
+      "old_nodes": 52981888,
+      "old_oracle_id": "r35_log_real__order32",
+      "old_reference_kind": "r35_log_real",
+      "old_reference_reported_seconds": 13.742179408669472,
+      "order": 32
+    },
+    {
+      "id": "harvard_c3__hv_c3_1__g8__q0307",
+      "new_completed": true,
+      "new_nodes": 77090688,
+      "new_reference_reported_seconds": 19.13348402455449,
+      "node_delta": -2382144,
+      "old_nodes": 79472832,
+      "old_oracle_id": "r35_log_real__order48",
+      "old_reference_kind": "r35_log_real",
+      "old_reference_reported_seconds": 19.766685970127583,
+      "order": 48
+    },
+    {
+      "id": "harvard_c3__hv_c3_1__g8__q0369",
+      "new_completed": true,
+      "new_nodes": 74499224,
+      "new_reference_reported_seconds": 17.578894635662436,
+      "node_delta": 0,
+      "old_nodes": 74499224,
+      "old_oracle_id": "r35_log_real__order32",
+      "old_reference_kind": "r35_log_real",
+      "old_reference_reported_seconds": 17.674500469118357,
+      "order": 32
+    },
+    {
+      "id": "harvard_c3__hv_c3_1__g8__q0369",
+      "new_completed": true,
+      "new_nodes": 111748504,
+      "new_reference_reported_seconds": 25.17654605023563,
+      "node_delta": 0,
+      "old_nodes": 111748504,
+      "old_oracle_id": "r35_log_real__order48",
+      "old_reference_kind": "r35_log_real",
+      "old_reference_reported_seconds": 25.816321149468422,
+      "order": 48
+    },
+    {
+      "id": "harvard_c3__hv_c3_1__g8__q0431",
+      "new_completed": true,
+      "new_nodes": 52800216,
+      "new_reference_reported_seconds": 8.180214308202267,
+      "node_delta": -1249696,
+      "old_nodes": 54049912,
+      "old_oracle_id": "r35_log_real__order32",
+      "old_reference_kind": "r35_log_real",
+      "old_reference_reported_seconds": 8.576016442850232,
+      "order": 32
+    },
+    {
+      "id": "harvard_c3__hv_c3_1__g8__q0431",
+      "new_completed": true,
+      "new_nodes": 79200328,
+      "new_reference_reported_seconds": 12.075183924287558,
+      "node_delta": -1874544,
+      "old_nodes": 81074872,
+      "old_oracle_id": "r35_log_real__order48",
+      "old_reference_kind": "r35_log_real",
+      "old_reference_reported_seconds": 12.505935655906796,
+      "order": 48
+    },
+    {
+      "id": "harvard_c3__hv_c3_1__g16__q0000",
+      "new_completed": true,
+      "new_nodes": 32565104,
+      "new_reference_reported_seconds": 8.196867492049932,
+      "node_delta": 0,
+      "old_nodes": 32565104,
+      "old_oracle_id": "r35_log_real__order32",
+      "old_reference_kind": "r35_log_real",
+      "old_reference_reported_seconds": 8.36186146363616,
+      "order": 32
+    },
+    {
+      "id": "harvard_c3__hv_c3_1__g16__q0000",
+      "new_completed": true,
+      "new_nodes": 48847656,
+      "new_reference_reported_seconds": 11.83338120020926,
+      "node_delta": 0,
+      "old_nodes": 48847656,
+      "old_oracle_id": "r35_log_real__order48",
+      "old_reference_kind": "r35_log_real",
+      "old_reference_reported_seconds": 12.043005872517824,
+      "order": 48
+    },
+    {
+      "id": "harvard_c3__hv_c3_1__g16__q0015",
+      "new_completed": true,
+      "new_nodes": 148257616,
+      "new_reference_reported_seconds": 30.247939893975854,
+      "node_delta": -2043840,
+      "old_nodes": 150301456,
+      "old_oracle_id": "r35_log_real__order32",
+      "old_reference_kind": "r35_log_real",
+      "old_reference_reported_seconds": 30.857588969171047,
+      "order": 32
+    },
+    {
+      "id": "harvard_c3__hv_c3_1__g16__q0015",
+      "new_completed": true,
+      "new_nodes": 222383856,
+      "new_reference_reported_seconds": 43.89268878288567,
+      "node_delta": -3065760,
+      "old_nodes": 225449616,
+      "old_oracle_id": "r35_log_real__order48",
+      "old_reference_kind": "r35_log_real",
+      "old_reference_reported_seconds": 44.55881245620549,
+      "order": 48
+    },
+    {
+      "id": "harvard_c3__hv_c3_1__g16__q0030",
+      "new_completed": true,
+      "new_nodes": 102069408,
+      "new_reference_reported_seconds": 26.29125851392746,
+      "node_delta": -2165152,
+      "old_nodes": 104234560,
+      "old_oracle_id": "r35_log_real__order32",
+      "old_reference_kind": "r35_log_real",
+      "old_reference_reported_seconds": 28.100753132253885,
+      "order": 32
+    }
+  ],
+  "maximum_scale_restoration": 0.0,
+  "outer_trace": {
+    "call_count": 56,
+    "complete_count": 55,
+    "converged_count": 55,
+    "failed_trace": [
+      {
+        "active_interval_count": 56,
+        "applicable": true,
+        "callback_evaluations": 1184,
+        "completed_interval_evaluations": 56,
+        "continuous_or_floating_point_error_certificate": false,
+        "estimated_error": 6.043334846392533e-15,
+        "estimated_error_over_target": 0.08887832658535981,
+        "history_includes_discarded_parents": true,
+        "id": "harvard_c5__hv_c5_1__g8__q0184",
+        "initial_interval_count": 133,
+        "maximum_historical_roundoff": 6.03922215888319e-15,
+        "maximum_historical_roundoff_over_target": 0.08881784197001252,
+        "order": 48,
+        "passed": true,
+        "pending_interval_bounds": [
+          -6.970043193627319,
+          -6.959142391112373
+        ],
+        "reference_passed": false,
+        "split_count": 0,
+        "strict_convergence": false,
+        "sum_active_truncation_error": 4.112687509342934e-18,
+        "sum_active_truncation_error_over_target": 6.048461534728752e-05,
+        "target": 6.799559666088495e-14,
+        "trace_complete": false,
+        "trace_status": "exception"
+      }
+    ],
+    "incomplete_count": 1,
+    "initial_partition_only_completed_calls": 26,
+    "maxima": {
+      "completed_interval_evaluations": {
+        "id": "harvard_c3__hv_c3_1__g16__q0015",
+        "new_order": null,
+        "old_order": null,
+        "old_reference_kind": null,
+        "order": 32,
+        "value": 165
+      },
+      "estimated_error_over_target": {
+        "id": "harvard_c3__hv_c3_1__g8__q0000",
+        "new_order": null,
+        "old_order": null,
+        "old_reference_kind": null,
+        "order": 48,
+        "value": 0.9412054443203355
+      },
+      "maximum_historical_roundoff_over_target": {
+        "id": "harvard_c3__hv_c3_1__g24__q0033",
+        "new_order": null,
+        "old_order": null,
+        "old_reference_kind": null,
+        "order": 48,
+        "value": 0.35515959355799104
+      },
+      "split_count": {
+        "id": "harvard_c5__hv_c5_1__g8__q0123",
+        "new_order": null,
+        "old_order": null,
+        "old_reference_kind": null,
+        "order": 48,
+        "value": 6
+      },
+      "sum_active_truncation_error_over_target": {
+        "id": "harvard_c3__hv_c3_1__g8__q0000",
+        "new_order": null,
+        "old_order": null,
+        "old_reference_kind": null,
+        "order": 48,
+        "value": 0.7746834323874776
+      }
+    },
+    "totals": {
+      "active_interval_count": 4624,
+      "callback_evaluations": 98393,
+      "completed_interval_evaluations": 4685,
+      "initial_interval_count": 4640,
+      "split_count": 61
+    }
+  },
+  "outer_underflow_events": 3929219,
+  "receipt_file_bindings": 34,
+  "receipt_sha256": "0f7552a673de1422b215972c105eccddeb0fc5119b8716fa1168aded5570caf5",
+  "reference_reported_seconds_present_attempts": 55,
+  "row_counts": {
+    "cases72": 72,
+    "comparisons296": 296,
+    "oracles40": 40,
+    "outer_trace_summaries": 56,
+    "reference_calls144": 144
+  },
+  "scene_size": [
+    {
+      "actual_failure": 0,
+      "attempted": 16,
+      "complete": 16,
+      "query_size": 8,
+      "scene": "harvard_c3/hv_c3_1",
+      "scheduled": 16,
+      "skipped": 0
+    },
+    {
+      "actual_failure": 0,
+      "attempted": 16,
+      "complete": 16,
+      "query_size": 16,
+      "scene": "harvard_c3/hv_c3_1",
+      "scheduled": 16,
+      "skipped": 0
+    },
+    {
+      "actual_failure": 0,
+      "attempted": 16,
+      "complete": 16,
+      "query_size": 24,
+      "scene": "harvard_c3/hv_c3_1",
+      "scheduled": 16,
+      "skipped": 0
+    },
+    {
+      "actual_failure": 1,
+      "attempted": 8,
+      "complete": 7,
+      "query_size": 8,
+      "scene": "harvard_c5/hv_c5_1",
+      "scheduled": 16,
+      "skipped": 8
+    },
+    {
+      "actual_failure": 0,
+      "attempted": 0,
+      "complete": 0,
+      "query_size": 16,
+      "scene": "harvard_c5/hv_c5_1",
+      "scheduled": 16,
+      "skipped": 16
+    },
+    {
+      "actual_failure": 0,
+      "attempted": 0,
+      "complete": 0,
+      "query_size": 24,
+      "scene": "harvard_c5/hv_c5_1",
+      "scheduled": 16,
+      "skipped": 16
+    },
+    {
+      "actual_failure": 0,
+      "attempted": 0,
+      "complete": 0,
+      "query_size": 8,
+      "scene": "harvard_c6/hv_c6_1",
+      "scheduled": 16,
+      "skipped": 16
+    },
+    {
+      "actual_failure": 0,
+      "attempted": 0,
+      "complete": 0,
+      "query_size": 16,
+      "scene": "harvard_c6/hv_c6_1",
+      "scheduled": 16,
+      "skipped": 16
+    },
+    {
+      "actual_failure": 0,
+      "attempted": 0,
+      "complete": 0,
+      "query_size": 24,
+      "scene": "harvard_c6/hv_c6_1",
+      "scheduled": 16,
+      "skipped": 16
+    }
+  ],
+  "source_count": 19,
+  "stop_trigger": {
+    "archive_sha256": "c58ef1a7f20f5beed1ed513d9a4dd78e2fef2ded6ddc2b373c6ca90c812327c3",
+    "call_id": "harvard_c5__hv_c5_1__g8__q0184__order48",
+    "index": 55,
+    "reason": "ReferenceFailure: RuntimeError: full-X partition exceeds remaining fixed inner-node budget before allocation",
+    "stage": "reference"
+  },
+  "successful_call_maxima": {
+    "direct_fov_absolute_error_materialized_diagnostic": {
+      "id": "harvard_c3__hv_c3_1__g16__q0076",
+      "new_order": null,
+      "old_order": null,
+      "old_reference_kind": null,
+      "order": 48,
+      "value": 9.98478362648844e-16
+    },
+    "normalization_error": {
+      "id": "harvard_c3__hv_c3_1__g16__q0015",
+      "new_order": null,
+      "old_order": null,
+      "old_reference_kind": null,
+      "order": 32,
+      "value": 8.881784197001252e-16
+    },
+    "scaled_outer_error_estimate": {
+      "id": "harvard_c3__hv_c3_1__g8__q0123",
+      "new_order": null,
+      "old_order": null,
+      "old_reference_kind": null,
+      "order": 32,
+      "value": 3.62144516424314e-08
+    }
+  },
+  "successful_log_raw_native_range": [
+    -2.581914726936637,
+    5.551115123125783e-16
+  ],
+  "successful_tail_maxima": {
+    "depth_omitted_mass": 1.9481897837873628e-72,
+    "probability_max_absolute": 9.019397147163708e-45,
+    "raw_l1_over_reference_fov": 1.2879902770760522e-71
+  },
+  "sum_row_wall_seconds": 1077.8661440387368,
+  "sum_success_reference_reported_seconds": 1055.0716943070292,
+  "summary": {
+    "actual_reference_calls": 56,
+    "calls_not_attempted": 88,
+    "candidate_selected": false,
+    "comparison_count": 296,
+    "comparison_failures": 134,
+    "delivery_integrity_passed": true,
+    "efficacy_tested": false,
+    "executed_failed_calls": 1,
+    "fail_fast_skipped_calls": 88,
+    "finished_unix": 1793469303.5436783,
+    "general_numerical_accuracy_established": false,
+    "goal_complete": false,
+    "independent_real_reference": true,
+    "independent_synthetic_reference": false,
+    "inherited_identity_count": 6,
+    "inherited_near_constant_only": true,
+    "inherited_real_reference_count": 40,
+    "input_delivery_failure_count": 0,
+    "labels_read": false,
+    "new_old_reference_comparisons": 80,
+    "new_order_comparisons": 72,
+    "numerical_preflight_passed": false,
+    "old_production_new_reference_comparisons": 144,
+    "old_reference_comparisons_by_source": {
+      "r33_log_conditional": 38,
+      "r35_log_real": 42
+    },
+    "phase_node_budget_passed": true,
+    "phase_wall_passed": true,
+    "primary_comparison_count": 216,
+    "real_case_count": 72,
+    "real_inputs_read": true,
+    "reference_call_count": 144,
+    "reference_cell_node_evaluations": 4931562096,
+    "reference_check_failures": 89,
+    "reference_completed_calls": 55,
+    "reference_integrations_executed_by_auditor": 0,
+    "reference_phase_wall_seconds": 1080.166745269671,
+    "scientific_gate_passed": false,
+    "started_unix": 1793469262.0393977,
+    "stop_trigger": {
+      "archive_sha256": "c58ef1a7f20f5beed1ed513d9a4dd78e2fef2ded6ddc2b373c6ca90c812327c3",
+      "call_id": "harvard_c5__hv_c5_1__g8__q0184__order48",
+      "index": 55,
+      "reason": "ReferenceFailure: RuntimeError: full-X partition exceeds remaining fixed inner-node budget before allocation",
+      "stage": "reference"
+    },
+    "synthetic_inputs_read": false,
+    "unattempted_failure_calls": 0
+  },
+  "work_maxima": {
+    "cell_node_evaluations": 249980432,
+    "depth_evaluations": 3630,
+    "elementary_inner_nodes": 249980432,
+    "inner_panels": 3658197,
+    "inner_x_nodes": 175593456,
+    "narrow_y_pdf_nodes": 217749920,
+    "outer_geometry_breakpoints": 164,
+    "outer_intervals": 165,
+    "pilot_depth_evaluations": 165,
+    "quadrature_depth_evaluations": 3465
+  },
+  "work_totals": {
+    "cell_node_evaluations": 4931562096,
+    "depth_evaluations": 103033,
+    "elementary_inner_nodes": 4931562096,
+    "inner_panels": 99189437,
+    "inner_x_nodes": 3957924704,
+    "narrow_y_pdf_nodes": 973637392,
+    "outer_geometry_breakpoints": 4584,
+    "outer_intervals": 4624,
+    "pilot_depth_evaluations": 4640,
+    "quadrature_depth_evaluations": 98393
+  }
+}

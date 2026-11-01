@@ -9,6 +9,41 @@ import torch
 from experiments import round38_rms_anchor_contract as C
 from experiments import round38_rms_anchor_arithmetic as AR
 
+PAIR_FIELDS=('query_bounds_px','source_pixel_count','source_within_basis','source_mean',
+    'source_factor','source_covariance','source_covariance_direct','target_mean','target_factor',
+    'target_covariance','homogeneous_transform','mean_homogeneous','factor_homogeneous',
+    'covariance_homogeneous','anchor_query_xy','anchor_depth','anchor_source','anchor_target',
+    'anchor_homogeneous','anchor_strict_front','anchor_delta','anchor_covariance','anchored_factor',
+    'camera_rotation_diagnostics','old_a2','old_anchor_covariance2','old_covariance_asymmetry_normalized',
+    'tau32','q_features32','k_features32','key_bounds_px','key_bounds','content32','bias32','content_bias64')
+
+
+def check_chronology(*timestamps):
+    if (any(type(t) not in (int,float) or not math.isfinite(t) for t in timestamps)
+            or any(a>b for a,b in zip(timestamps,timestamps[1:]))):
+        raise ValueError('frozen preparation/audit/production chronology differs')
+
+
+def phase_check(rows,seal,forward,total,trigger):
+    """Derive success independently; agreement on failed flags is not success."""
+    wall=forward['wall_seconds']
+    time_ok=math.isfinite(wall) and 0<=wall<=C.GATES['production_max_phase_wall_seconds']
+    unknown=any(r['work_unavailable'] for r in rows)
+    node_ok=not unknown and 0<=total<=C.GATES['production_max_phase_cell_node_evaluations']
+    complete=len(rows)==C.CASE_COUNT and all(r['passed'] for r in rows) and time_ok and node_ok
+    consistent=(total==seal['charged_cell_node_evaluations']==forward['charged_cell_node_evaluations']
+        and trigger==seal['stop_trigger']==forward['stop_trigger']
+        and seal['phase_wall_seconds']==wall
+        and seal['phase_wall_passed']==forward['phase_wall_passed']==time_ok
+        and seal['phase_node_budget_passed']==forward['phase_node_budget_passed']==node_ok
+        and forward['work_unavailable']==unknown
+        and seal['all_production_completed']==forward['all_production_completed']==complete
+        and forward['complete_case_inventory']==(len(rows)==C.CASE_COUNT)
+        and seal['case_count']==len(rows)
+        and seal['actual_calls']==sum(r['attempted'] for r in rows)
+        and seal['completed_calls']==sum(r['passed'] for r in rows))
+    return dict(ledger_passed=bool(consistent),all_production_completed=bool(complete))
+
 
 def normalized_error(actual,expected):
     actual,expected=np.asarray(actual),np.asarray(expected)
@@ -26,6 +61,10 @@ def pair_check(observations,cache,bank,tolerance=1e-10):
     """Direct moments and per-center solves, independent of producer QR code."""
     if set(observations)!=set(C.OBSERVATION_FIELDS) or set(cache)!=set(C.CACHE_FIELDS):
         raise ValueError('exact input/cache field boundaries required')
+    if set(bank)!=set(PAIR_FIELDS):raise ValueError('exact prepared pair fields required')
+    for name in ('source_factor','target_factor','factor_homogeneous','anchored_factor'):
+        if bank[name].shape!=(48,3,3) or bank[name].dtype!=np.float64:
+            raise ValueError('complete prepared factor population required')
     for name,dtype,shape in (('g24__a',np.float64,(48,2)),('g24__anchor_cov',np.float64,(48,2,2)),
         ('g24__tau32',np.float32,(48,)),('g24__q_features',np.float32,(48,128)),
         ('g8__k_features',np.float32,(432,128)),('g8__bounds_px',np.int64,(432,4))):
@@ -133,7 +172,7 @@ def complete_inventory(directory):
 
 
 def input_audit(run,out):
-    run,out=Path(run),Path(out);lock,_=C.joint_locks(run,out);prepared=complete_inventory(run/'prepared')
+    run,out=Path(run),Path(out);lock,alock=C.joint_locks(run,out);prepared=complete_inventory(run/'prepared')
     seal=C.read(run/'prepared_complete.json')
     if (seal['prepared_completion_sha256']!=C.sha(run/'prepared/completion.json') or not prepared['all_inputs_prepared']
         or not seal['all_inputs_prepared'] or seal['records_sha256']!=C.sha(run/'prepared/records.json')
@@ -145,7 +184,13 @@ def input_audit(run,out):
         raise ValueError('complete ordered input population required')
     directory=out/'input_audit'
     if directory.exists():raise ValueError('preserve prior input audit')
-    directory.mkdir();started=time.time();clock=time.perf_counter();deadline=clock+C.GATES['input_audit_max_phase_wall_seconds']
+    started=time.time();start=C.read(run/'prepared/started.json')
+    check_chronology(lock['created_unix'],alock['created_unix'],prepared['started_unix'],
+        prepared['finished_unix'],seal['finished_unix'],started)
+    if (start['started_unix']!=prepared['started_unix']
+        or start['producer_lock_sha256']!=C.sha(run/'lock.json')
+        or start['audit_lock_sha256']!=C.sha(out/'lock.json')):raise ValueError('preparation start binding differs')
+    directory.mkdir();clock=time.perf_counter();deadline=clock+C.GATES['input_audit_max_phase_wall_seconds']
     C.write(directory/'started.json',dict(started_unix=started,**C.SCOPE));checks=[];pair_checks=[]
     for entry,pair in zip(lock['entries'],pairs):
         bank=None;reason=None
@@ -178,8 +223,8 @@ def input_audit(run,out):
 
 
 def audit(run,out):
-    run,out=Path(run),Path(out);lock,_=C.joint_locks(run,out)
-    complete_inventory(run/'prepared');forward=complete_inventory(run/'forward');input_complete=complete_inventory(out/'input_audit')
+    run,out=Path(run),Path(out);lock,alock=C.joint_locks(run,out)
+    prepared=complete_inventory(run/'prepared');forward=complete_inventory(run/'forward');input_complete=complete_inventory(out/'input_audit')
     input_v=C.read(out/'input_verification.json')
     if (input_complete['verification_sha256']!=C.sha(out/'input_verification.json')
         or not input_v['passed'] or input_v['checked_pairs']!=48 or input_v['checked_queries']!=2304
@@ -193,9 +238,22 @@ def audit(run,out):
         raise ValueError('global production seal changed')
     if [r['id'] for r in rows]!=[s['id'] for s in specs] or len(rows)!=2304:raise ValueError('full production population required')
     if (out/'completion.json').exists() or (out/'checks.json').exists():raise ValueError('retain prior output audit')
-    started=time.time();clock=time.perf_counter();deadline=clock+C.GATES['arithmetic_audit_max_phase_wall_seconds']
+    started=time.time();prep_seal=C.read(run/'prepared_complete.json')
+    prep_start=C.read(run/'prepared/started.json');input_start=C.read(out/'input_audit/started.json')
+    forward_start=C.read(run/'forward/started.json')
+    check_chronology(lock['created_unix'],alock['created_unix'],prepared['started_unix'],
+        prepared['finished_unix'],prep_seal['finished_unix'],input_v['started_unix'],input_v['finished_unix'],
+        input_complete['finished_unix'],forward['started_unix'],forward['finished_unix'],seal['finished_unix'],started)
+    if (prep_start['started_unix']!=prepared['started_unix'] or input_start['started_unix']!=input_v['started_unix']
+        or forward_start['started_unix']!=forward['started_unix']
+        or forward_start['input_verification_sha256']!=C.sha(out/'input_verification.json')
+        or any(s['producer_lock_sha256']!=C.sha(run/'lock.json') or s['audit_lock_sha256']!=C.sha(out/'lock.json')
+               for s in (prep_start,forward_start))
+        or input_v['producer_lock_sha256']!=C.sha(run/'lock.json')
+        or input_v['audit_lock_sha256']!=C.sha(out/'lock.json')):raise ValueError('stage start/lock binding differs')
+    clock=time.perf_counter();deadline=clock+C.GATES['arithmetic_audit_max_phase_wall_seconds']
     C.write(out/'audit_started.json',dict(started_unix=started,**C.SCOPE));checks=[];total=0;trigger=None
-    preps={r['id']:r for r in C.read(run/'prepared/records.json')}
+    preps={r['id']:r for r in C.read(run/'prepared/records.json')};previous_finish=forward['started_unix']
     for index,(row,spec) in enumerate(zip(rows,specs)):
         try:
             if time.perf_counter()>=deadline:raise TimeoutError('arithmetic audit deadline')
@@ -209,6 +267,8 @@ def audit(run,out):
                     raise ValueError('fail-fast suffix fabricated work or outputs')
                 arithmetic=dict(passed=False,status='not_attempted')
             else:
+                check_chronology(previous_finish,row['started_unix'],row['finished_unix'],forward['finished_unix'])
+                previous_finish=row['finished_unix']
                 prep=preps[row['id']]
                 if row['input_path']!=prep['archive_path'] or row['input_sha256']!=prep['archive_sha256']:raise ValueError('prepared binding differs')
                 if row['attempted']:
@@ -236,13 +296,8 @@ def audit(run,out):
         checks.append(dict(id=spec['id'],**result))
     wall=time.perf_counter()-clock
     integrity=all(c['delivery_integrity_passed'] for c in checks)
-    ledger_ok=(total==seal['charged_cell_node_evaluations']==forward['charged_cell_node_evaluations']
-        and total<=C.GATES['production_max_phase_cell_node_evaluations']
-        and trigger==seal['stop_trigger']==forward['stop_trigger']
-        and seal['phase_wall_seconds']==forward['wall_seconds']
-        and seal['phase_wall_passed']==forward['phase_wall_passed']==(0<=forward['wall_seconds']<=C.GATES['production_max_phase_wall_seconds'])
-        and seal['phase_node_budget_passed']==forward['phase_node_budget_passed']==(not forward['work_unavailable'] and total<=C.GATES['production_max_phase_cell_node_evaluations']))
-    passed=bool(integrity and ledger_ok and input_v['passed'] and seal['all_production_completed']
+    phase=phase_check(rows,seal,forward,total,trigger);ledger_ok=phase['ledger_passed']
+    passed=bool(integrity and ledger_ok and input_v['passed'] and phase['all_production_completed']
         and all(c['arithmetic_passed'] for c in checks) and wall<=C.GATES['arithmetic_audit_max_phase_wall_seconds'])
     C.write(out/'checks.json',checks)
     C.write(out/'forward_verification.json',dict(all_input_and_output_arithmetic_passed=passed,

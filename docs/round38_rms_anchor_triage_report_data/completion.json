@@ -1,0 +1,30 @@
+{
+  "created_unix": 1793496486.812483,
+  "exploratory_screen_passed": false,
+  "files": {
+    "docs/round38_rms_anchor_triage_report.md": "07c3b282b89eb4fd4a570a861e4f69de589c2527fde692de1fa80ee1a62fed5e",
+    "docs/round38_rms_anchor_triage_report_data/per_scene.csv": "9269e0de19666ddcf21be4969a323a99b4eccd649483c8c59f94fa54b6b511cb",
+    "docs/round38_rms_anchor_triage_report_data/report_source.py": "279992bed10325fce33ae40ccf53a2f1d3645f5de2ca349007ecadd496b7b65c",
+    "results/round20_anchor_fixed/summary.json": "67d6b81b1f63bef26389d2d77de67583cc6f54245dee0ded98a1204b360c66e2",
+    "results/round38_report_tools/report.py": "279992bed10325fce33ae40ccf53a2f1d3645f5de2ca349007ecadd496b7b65c",
+    "results/round38_rms_anchor_independent_audit/completion.json": "b6439b1164fe0dcb94560b757b977dc25ac367f7750d63fef9acfb274a451bae",
+    "results/round38_rms_anchor_independent_audit/forward_verification.json": "23d7b235ab54da57929c84a99660249ebefabce3e4d8fb7c3c536b776a3f108c",
+    "results/round38_rms_anchor_prelabel_root_acceptance_20261101.json": "4dd73e8f6f42973ceace7d61a98dd1cbdd65209f48c0ef0745e8ec1c18b5fc4d",
+    "results/round38_rms_anchor_screen/evaluation/completion.json": "5c6bc154f746b52411143eaee176e269409766fa2d125f6d60e6286d6751ba15",
+    "results/round38_rms_anchor_screen/evaluation/screen.json": "286899afcd284529af43dcd639c9fbbfc15778f5a71abcd1beffea67edb124d2",
+    "results/round38_rms_anchor_screen/evaluation/summary.json": "8618d5c18adfebc27d76d39adf1dc3e1f3871156dd0ebdb8f6f493ff6d3e436f",
+    "results/round38_rms_anchor_screen/forward/completion.json": "7de458607a11120d14d0bae0f7b116e4bb589ab4d5f86d78616c67cd3d688147",
+    "results/round38_rms_anchor_screen/forward_complete.json": "a8333e48c995ecdfc80221bdffeefe2849d8be3c67940cb332c3fbe527fd25e2",
+    "results/round38_rms_anchor_screen/metrics_audit/completion.json": "8f6e7906c9f286f9bf7932abd6401c4b924d103f6646d7c14bb2d4e39c68911d",
+    "results/round38_rms_anchor_screen/metrics_audit/verification.json": "36b0a0b5a73addd6859b5a127f5abf5ba53ad5f2f5329ccd23ea2f7abbafe34a"
+  },
+  "goal_complete": false,
+  "independent_probability_reference": false,
+  "new_array_decodes": 0,
+  "new_model_calls": 0,
+  "numerical_preflight_passed": false,
+  "passed_checks": 0,
+  "scientific_gate_passed": false,
+  "source_capture_scope": "Report-only extraction source copied at invocation; formal model/input/metric freezes are separately retained.",
+  "total_checks": 8
+}

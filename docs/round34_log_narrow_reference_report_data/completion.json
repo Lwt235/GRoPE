@@ -1,0 +1,23 @@
+{
+  "counts": {
+    "cases23": 23,
+    "comparisons247": 247,
+    "oracles89": 89,
+    "reference_calls46": 46
+  },
+  "finished_unix": 1793464890.7377343,
+  "generator_sha256": "3461d254183992fc41b396d51a0f1dea521b84823b11a2689812fbcdc3df1ce6",
+  "integrator_calls": 0,
+  "labels_read": false,
+  "npz_decodes": 0,
+  "outputs": {
+    "cases23.csv": "3442d595bf581431196ae9caa63ef70bea11ec5f3de970748349f7069fee430c",
+    "comparisons247.csv": "02c629bc4f8226c37904cf3ca5bd22cad4fa01222c5fd061bca48c55ecb7f6cd",
+    "oracles89.csv": "82fee0ae5795632c6dbe97137142898045ea53162eca6c9e8f8c837ff53688ab",
+    "reference_calls46.csv": "a81894b148018786c265fd28e9e908326cfaf87b1cadb648b1860c29abe14b42",
+    "statistics.json": "21b68cfc7b5efc6aff2e4110f9d7b37e2a6005cd2b73b6525eb8a9349e3be7cd"
+  },
+  "real_inputs_read": false,
+  "receipt_sha256": "edeffc6490aecadebba70b4a773ecb2d2fb150911e78ad7fe4c131f8050870b1",
+  "started_unix": 1793464890.6653883
+}

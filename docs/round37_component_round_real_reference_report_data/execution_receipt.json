@@ -1,0 +1,88 @@
+{
+  "all_extraction_sources_commands_and_input_hashes_captured_before_execution": true,
+  "attempts": [
+    {
+      "command": [
+        "/home/liwt/miniColmap/.venv/bin/python",
+        "/tmp/grope_round37_report_extract.py",
+        "--receipt-sha",
+        "0f7552a673de1422b215972c105eccddeb0fc5119b8716fa1168aded5570caf5"
+      ],
+      "exit_code": 1,
+      "finished_unix": 1793469753.0761516,
+      "log_path": "docs/round37_component_round_real_reference_report_data/extraction.log",
+      "log_sha256": "01ba4bbacfc1f7666b8714c6ee33a9d24c1eab86e05fdefd8f1a76f51b59ba71",
+      "source_snapshot_hashes": {
+        "docs/round37_component_round_real_reference_report_data/source_snapshot/grope_round37_report_execute.py": "69c68df294a1a80afef930e9e68097fc50124a70dc4ca882724a0d968ca99f79",
+        "docs/round37_component_round_real_reference_report_data/source_snapshot/grope_round37_report_extract.py": "1bbbd54ea66637f79ba7ed0f87b5539f0be01f7839daab4762369904cb68bbdb"
+      },
+      "started_unix": 1793469752.8990605
+    },
+    {
+      "command": [
+        "/home/liwt/miniColmap/.venv/bin/python",
+        "/tmp/grope_round37_report_extract.py",
+        "--receipt-sha",
+        "0f7552a673de1422b215972c105eccddeb0fc5119b8716fa1168aded5570caf5"
+      ],
+      "exit_code": 0,
+      "finished_unix": 1793469785.2953773,
+      "log_path": "docs/round37_component_round_real_reference_report_data/extraction_attempt2.log",
+      "log_sha256": "36a95dcfd6d8eff1b59ef5e1fe00fa1d62c0ae59309a46423af793b6092ee0b4",
+      "source_snapshot_hashes": {
+        "docs/round37_component_round_real_reference_report_data/source_snapshot_attempt2/grope_round37_report_execute_attempt2.py": "f4f7441874c1e6ca3c683279855d460919241f3f1aa2ff2389e0f81d7c516ab8",
+        "docs/round37_component_round_real_reference_report_data/source_snapshot_attempt2/grope_round37_report_extract.py": "9d56d664520d58561b60d7b1f52ae762147e51790845bec06fa766249c29bb6d"
+      },
+      "started_unix": 1793469785.0044186
+    }
+  ],
+  "controller_completion_sha256": "16680dde4419213e9fbdfcf543d52269004c6441c56f3fdd7f86c8b773c55122",
+  "created_unix": 1793469950.730802,
+  "delivery_integrity_passed": true,
+  "extractor_sha256": "9d56d664520d58561b60d7b1f52ae762147e51790845bec06fa766249c29bb6d",
+  "files": {
+    "docs/round37_component_round_real_reference_report.md": "3f32ad4513f359aeca2e115c160a53bd1f2a5b98fe5f5e3682a373b7d8f78640",
+    "docs/round37_component_round_real_reference_report_data/cases72.csv": "04ed18b22f3b9dd43b073551e4396faf5febf63bb38679ed510e2509eaae33e8",
+    "docs/round37_component_round_real_reference_report_data/comparisons296.csv": "bc773c6782333ccef8e419c8596cbb19b6bf377ac127a53a82a334ae7a278dfa",
+    "docs/round37_component_round_real_reference_report_data/completion.json": "c1970f1fdcf76f29c07b832993906655f67c6908b81788d5e6c5a7f8f259f35a",
+    "docs/round37_component_round_real_reference_report_data/extraction.log": "01ba4bbacfc1f7666b8714c6ee33a9d24c1eab86e05fdefd8f1a76f51b59ba71",
+    "docs/round37_component_round_real_reference_report_data/extraction_attempt2.log": "36a95dcfd6d8eff1b59ef5e1fe00fa1d62c0ae59309a46423af793b6092ee0b4",
+    "docs/round37_component_round_real_reference_report_data/extraction_execution.json": "6b73d148ff03663268907afde9e1a5f068a012c8b05c795f80066a3552f0cb7c",
+    "docs/round37_component_round_real_reference_report_data/extraction_execution_attempt2.json": "35b3291e0abe3619c2c82f5116f0cdb0a31e5679a3daadaf45b97bf8368fb2c0",
+    "docs/round37_component_round_real_reference_report_data/extraction_invocation.json": "1d33456196395aa5788d324247d81d0a47fe6995fe0fe4f48db06b4c5ed9f6ec",
+    "docs/round37_component_round_real_reference_report_data/extraction_invocation_attempt2.json": "74e22a47d6251fd07d24d7822da5015efad654bfb221339b470a01d8fb15ec3f",
+    "docs/round37_component_round_real_reference_report_data/matched_historical_costs40.csv": "43c7e9f8d19e06928d2cd78a16ecf6055df9fa773b50cbc1a33a9586baad1dba",
+    "docs/round37_component_round_real_reference_report_data/oracles40.csv": "aa16ce0b1fcc98de36ac847764e287bcb6f65016de19d2f649dcf7da603e32c1",
+    "docs/round37_component_round_real_reference_report_data/outer_trace_summaries.csv": "2fc3afaf765d16baa38d7ffc56040f69f9a5cf81d9b474f69b8de4524232c022",
+    "docs/round37_component_round_real_reference_report_data/reference_calls144.csv": "ce45389750e3f7996830b95c6c28814e1b1c7885dd5a147541d406cb2656c645",
+    "docs/round37_component_round_real_reference_report_data/source_snapshot/grope_round37_report_execute.py": "69c68df294a1a80afef930e9e68097fc50124a70dc4ca882724a0d968ca99f79",
+    "docs/round37_component_round_real_reference_report_data/source_snapshot/grope_round37_report_extract.py": "1bbbd54ea66637f79ba7ed0f87b5539f0be01f7839daab4762369904cb68bbdb",
+    "docs/round37_component_round_real_reference_report_data/source_snapshot_attempt2/grope_round37_report_execute_attempt2.py": "f4f7441874c1e6ca3c683279855d460919241f3f1aa2ff2389e0f81d7c516ab8",
+    "docs/round37_component_round_real_reference_report_data/source_snapshot_attempt2/grope_round37_report_extract.py": "9d56d664520d58561b60d7b1f52ae762147e51790845bec06fa766249c29bb6d",
+    "docs/round37_component_round_real_reference_report_data/statistics.json": "ea9efe46da73ad2774623f6d0c9e54a5de622b9f578e345b4060ac3b7ca90b69",
+    "docs/round37_component_round_real_reference_report_data/verify_report_delivery.py": "d6ab4b58e4d64edd2ee3a2ccb73ed8b12acb4099763bf149d0c65d9702179202"
+  },
+  "first_attempt_failure": "Old report extractor assumed the R35 controller manifest schema; failed before creating CSV outputs. Only postprocessing manifest fields changed for attempt2.",
+  "goal_complete": false,
+  "integrator_calls": 0,
+  "labels_read": false,
+  "new_tests_executed": 0,
+  "npz_decodes": 0,
+  "numerical_preflight_passed": false,
+  "output_completion_sha256": "c1970f1fdcf76f29c07b832993906655f67c6908b81788d5e6c5a7f8f259f35a",
+  "real_inputs_read": false,
+  "report_complete": true,
+  "report_sha256": "3f32ad4513f359aeca2e115c160a53bd1f2a5b98fe5f5e3682a373b7d8f78640",
+  "root_acceptance_path": "results/round37_component_round_real_root_acceptance_20261101.json",
+  "root_acceptance_sha256": "0f7552a673de1422b215972c105eccddeb0fc5119b8716fa1168aded5570caf5",
+  "row_counts": {
+    "cases72.csv": 72,
+    "comparisons296.csv": 296,
+    "matched_historical_costs40.csv": 40,
+    "oracles40.csv": 40,
+    "outer_trace_summaries.csv": 56,
+    "reference_calls144.csv": 144
+  },
+  "scientific_gate_passed": false,
+  "scope": "Report extraction and verification only. Original R37 real-input flags remain unchanged. No postfailure numerical or cost diagnostic included."
+}

@@ -1,0 +1,368 @@
+{
+  "status": "conditional_preparation_draft",
+  "frozen": false,
+  "execution_authorized": false,
+  "main_validation_effects_read": false,
+  "main_audit_results_read": false,
+  "real_data_or_labels_read": false,
+  "candidate_selected_by_this_draft": false,
+  "upstream_requirement": "accepted full R17 old-VAL audit AND all scientific gates before any actual-V export/training",
+  "source_hashes": {
+    "ROUND12_DEPTH_PROTOCOL.md": "9c5915e33c2ac42c56f77a6f044fa0d6ad38052a1f44bf7cbb0d1c2d5a198938",
+    "ROUND17_VALIDATION_PROTOCOL.md": "8fa6d8cb9acd9c0004b983de6e0eeda3a7a58d850f183286144f2360b6af53a5",
+    "experiments/round12_depth_geometry.py": "49b94cff865e4baee9bf67790b633ff626097a192e01aa4c374c695412ddb7a0",
+    "experiments/round12_depth_analysis.py": "221082cb4619190d55029026fd4f58500e1ffafcfdec9bbe41698cad4472e177",
+    "models/round17_depth_attention.py": "d9b589d484f5b283a4fe33b9139c3a33233427c60ed9e15ff08c4f8ca710ea75",
+    "models/round17_validation_pe.py": "3d883058b9476b177e5322132d5e2514201b4158d9dc07834a7c0760b8226c13",
+    "models/round15_validation_pe.py": "2f16bd2eab91924144da4e569b3f0a6897e916595950bc38ef68c2de9abdb465",
+    "models/round11_stratum_pe.py": "3fb8e2ee1c4ecedd343c2c287b7044e3e0258ef2d7b69ea7a5add12788e0c1bb",
+    "models/round10_partition_pe.py": "e8c1c1683fc791a18dd2d00b4c4ac224d5c62e41127759f3f7e91f68ecc73630",
+    "results/round17_regional/selection.json": "eadfd5071378c7239676ce58a0364ec2cb44c80ea3f198be800819691a700054"
+  },
+  "operators": [
+    {
+      "id": "v00",
+      "family": "trace_full",
+      "interface_mode": "trace",
+      "h": 0.25,
+      "temperature": 10.0,
+      "tau_covariance": "original_full_C32",
+      "geometry_id": "g00",
+      "precision": "r17_fusion_geometry64_content32_softmax64_attention_cast32_before_V",
+      "configuration_source": "ROUND17_VALIDATION_PROTOCOL.md:o00",
+      "semantic_aliases": [
+        "primary"
+      ]
+    },
+    {
+      "id": "v01",
+      "family": "quartic_point",
+      "interface_mode": "constant",
+      "h": 1.0,
+      "temperature": 5.0,
+      "tau_covariance": null,
+      "geometry_id": "g01",
+      "precision": "r17_fusion_geometry64_content32_softmax64_attention_cast32_before_V",
+      "configuration_source": "ROUND17_VALIDATION_PROTOCOL.md:o01",
+      "semantic_aliases": [
+        "regional_quartic_point"
+      ]
+    },
+    {
+      "id": "v02",
+      "family": "gaussian_point",
+      "interface_mode": "constant",
+      "h": 1.0,
+      "temperature": 5.0,
+      "tau_covariance": null,
+      "geometry_id": "g02",
+      "precision": "r17_fusion_geometry64_content32_softmax64_attention_cast32_before_V",
+      "configuration_source": "ROUND17_VALIDATION_PROTOCOL.md:o02",
+      "semantic_aliases": [
+        "regional_gaussian_point",
+        "legacy_point",
+        "r12_point"
+      ]
+    },
+    {
+      "id": "v03",
+      "family": "gaussian_fixed",
+      "interface_mode": "constant",
+      "h": 0.5,
+      "temperature": 5.0,
+      "tau_covariance": null,
+      "geometry_id": "g03",
+      "precision": "r17_fusion_geometry64_content32_softmax64_attention_cast32_before_V",
+      "configuration_source": "ROUND17_VALIDATION_PROTOCOL.md:o03",
+      "semantic_aliases": [
+        "regional_gaussian_fixed",
+        "legacy_fixed",
+        "r12_fixed"
+      ]
+    },
+    {
+      "id": "v04",
+      "family": "gaussian_full1",
+      "interface_mode": "constant",
+      "h": 0.25,
+      "temperature": 0.0,
+      "tau_covariance": null,
+      "geometry_id": "g00",
+      "precision": "r17_fusion_geometry64_content32_softmax64_attention_cast32_before_V",
+      "configuration_source": "ROUND17_VALIDATION_PROTOCOL.md:o04",
+      "semantic_aliases": [
+        "regional_gaussian_full1",
+        "legacy_full1",
+        "r12_full1"
+      ]
+    },
+    {
+      "id": "v05",
+      "family": "gaussian_full4",
+      "interface_mode": "constant",
+      "h": 0.25,
+      "temperature": 0.0,
+      "tau_covariance": null,
+      "geometry_id": "g04",
+      "precision": "r17_fusion_geometry64_content32_softmax64_attention_cast32_before_V",
+      "configuration_source": "ROUND17_VALIDATION_PROTOCOL.md:o05",
+      "semantic_aliases": [
+        "regional_gaussian_full4"
+      ]
+    },
+    {
+      "id": "v06",
+      "family": "gaussian_quad4",
+      "interface_mode": "constant",
+      "h": 0.5,
+      "temperature": 0.0,
+      "tau_covariance": null,
+      "geometry_id": "g05",
+      "precision": "r17_fusion_geometry64_content32_softmax64_attention_cast32_before_V",
+      "configuration_source": "ROUND17_VALIDATION_PROTOCOL.md:o06",
+      "semantic_aliases": [
+        "regional_gaussian_quad4"
+      ]
+    },
+    {
+      "id": "v07",
+      "family": "gaussian_quad16",
+      "interface_mode": "constant",
+      "h": 0.5,
+      "temperature": 5.0,
+      "tau_covariance": null,
+      "geometry_id": "g06",
+      "precision": "r17_fusion_geometry64_content32_softmax64_attention_cast32_before_V",
+      "configuration_source": "ROUND17_VALIDATION_PROTOCOL.md:o07",
+      "semantic_aliases": [
+        "regional_gaussian_quad16",
+        "legacy_quad16",
+        "r12_quad16"
+      ]
+    },
+    {
+      "id": "v08",
+      "family": "gaussian_point",
+      "interface_mode": "constant",
+      "h": 0.25,
+      "temperature": 5.0,
+      "tau_covariance": null,
+      "geometry_id": "g07",
+      "precision": "r17_fusion_geometry64_content32_softmax64_attention_cast32_before_V",
+      "configuration_source": "ROUND17_VALIDATION_PROTOCOL.md:o08",
+      "semantic_aliases": [
+        "localizer_gaussian_point"
+      ]
+    },
+    {
+      "id": "v09",
+      "family": "quartic_point",
+      "interface_mode": "constant",
+      "h": 0.25,
+      "temperature": 5.0,
+      "tau_covariance": null,
+      "geometry_id": "g08",
+      "precision": "r17_fusion_geometry64_content32_softmax64_attention_cast32_before_V",
+      "configuration_source": "ROUND17_VALIDATION_PROTOCOL.md:o09",
+      "semantic_aliases": [
+        "localizer_quartic_point"
+      ]
+    },
+    {
+      "id": "v10",
+      "family": "gaussian_point",
+      "interface_mode": "constant",
+      "h": 0.5,
+      "temperature": 5.0,
+      "tau_covariance": null,
+      "geometry_id": "g09",
+      "precision": "r17_fusion_geometry64_content32_softmax64_attention_cast32_before_V",
+      "configuration_source": "ROUND17_VALIDATION_PROTOCOL.md:o10",
+      "semantic_aliases": [
+        "legacy_point_pck",
+        "r12_point_pck"
+      ]
+    },
+    {
+      "id": "v11",
+      "family": "gaussian_full4",
+      "interface_mode": "constant",
+      "h": 0.5,
+      "temperature": 5.0,
+      "tau_covariance": null,
+      "geometry_id": "g10",
+      "precision": "r17_fusion_geometry64_content32_softmax64_attention_cast32_before_V",
+      "configuration_source": "ROUND17_VALIDATION_PROTOCOL.md:o11",
+      "semantic_aliases": [
+        "legacy_full4",
+        "r12_full4"
+      ]
+    },
+    {
+      "id": "v12",
+      "family": "gaussian_quad4",
+      "interface_mode": "constant",
+      "h": 0.5,
+      "temperature": 5.0,
+      "tau_covariance": null,
+      "geometry_id": "g05",
+      "precision": "r17_fusion_geometry64_content32_softmax64_attention_cast32_before_V",
+      "configuration_source": "ROUND17_VALIDATION_PROTOCOL.md:o12",
+      "semantic_aliases": [
+        "legacy_quad4",
+        "r12_quad4"
+      ]
+    },
+    {
+      "id": "v13",
+      "family": "gaussian_full1",
+      "interface_mode": "constant",
+      "h": 0.25,
+      "temperature": 10.0,
+      "tau_covariance": null,
+      "geometry_id": "g00",
+      "precision": "r17_fusion_geometry64_content32_softmax64_attention_cast32_before_V",
+      "configuration_source": "ROUND17_VALIDATION_PROTOCOL.md:o13",
+      "semantic_aliases": [
+        "matched_constant_temperature"
+      ]
+    },
+    {
+      "id": "v14",
+      "family": "trace_isotropic_matched",
+      "interface_mode": "trace",
+      "h": 0.25,
+      "temperature": 10.0,
+      "tau_covariance": "original_full_C32_not_isotropic_geometry_C",
+      "geometry_id": "g11",
+      "precision": "r17_fusion_geometry64_content32_softmax64_attention_cast32_before_V",
+      "configuration_source": "ROUND17_VALIDATION_PROTOCOL.md:o14",
+      "semantic_aliases": [
+        "matched_isotropic"
+      ]
+    },
+    {
+      "id": "v15",
+      "family": "gaussian_iso4_matched",
+      "interface_mode": "constant",
+      "h": 0.5,
+      "temperature": 5.0,
+      "tau_covariance": null,
+      "geometry_id": "g12",
+      "precision": "r17_fusion_geometry64_content32_softmax64_attention_cast32_before_V",
+      "configuration_source": "experiments/round12_depth_geometry.py:CONFIGS.iso4_matched",
+      "semantic_aliases": [
+        "r12_iso4_matched"
+      ]
+    },
+    {
+      "id": "v16",
+      "family": "original_quadratic_self",
+      "interface_mode": "singleview",
+      "h": 0.5,
+      "temperature": 5.0,
+      "tau_covariance": null,
+      "geometry_id": "self",
+      "precision": "r7_original_float32_self",
+      "configuration_source": "ROUND12_DEPTH_PROTOCOL.md:singleview",
+      "semantic_aliases": [
+        "r12_singleview"
+      ]
+    }
+  ],
+  "counts": {
+    "semantic_aliases": 28,
+    "independent_training_operators": 17,
+    "fusion_training_operators": 16,
+    "independent_cross_source_geometry": 13,
+    "singleview_own_geometry": 1,
+    "conditional_five_seed_runs": 85
+  },
+  "geometry_groups": {
+    "g00": [
+      "v00",
+      "v04",
+      "v13"
+    ],
+    "g01": [
+      "v01"
+    ],
+    "g02": [
+      "v02"
+    ],
+    "g03": [
+      "v03"
+    ],
+    "g04": [
+      "v05"
+    ],
+    "g05": [
+      "v06",
+      "v12"
+    ],
+    "g06": [
+      "v07"
+    ],
+    "g07": [
+      "v08"
+    ],
+    "g08": [
+      "v09"
+    ],
+    "g09": [
+      "v10"
+    ],
+    "g10": [
+      "v11"
+    ],
+    "g11": [
+      "v14"
+    ],
+    "g12": [
+      "v15"
+    ],
+    "self": [
+      "v16"
+    ]
+  },
+  "required_original_exact_tie_orders": {
+    "position": [
+      "r12_point",
+      "r12_point_pck",
+      "r12_fixed"
+    ],
+    "compression": [
+      "r12_full1",
+      "r12_quad4",
+      "r12_quad16"
+    ]
+  },
+  "proposed_unfrozen_exact_tie_orders": {
+    "position": [
+      "r12_point",
+      "r12_point_pck",
+      "r12_fixed",
+      "regional_quartic_point",
+      "localizer_gaussian_point",
+      "localizer_quartic_point"
+    ],
+    "compression": [
+      "r12_full1",
+      "r12_quad4",
+      "r12_quad16",
+      "regional_gaussian_full4",
+      "regional_gaussian_quad4",
+      "r12_full4"
+    ]
+  },
+  "attribution_only_proposed": [
+    "matched_constant_temperature",
+    "matched_isotropic",
+    "r12_iso4_matched"
+  ],
+  "singleview_comparison": "independently trained same-capacity; standalone strict utility comparison",
+  "raw_baseline": "original frozen query depth; no training or artificial seed replication",
+  "alias_scope": "Only within a future shared complete new numerical/data/training contract; no historic float32 results/cache/checkpoint reuse",
+  "geometry_scope": "Pure position logits only; sharing geometry never merges different T/tau training or substitutes complete paired cost",
+  "numerical_scope": "Synthetic adapter validated; real cache provenance/operator regeneration and trained-task evidence pending"
+}

@@ -1,0 +1,19 @@
+{
+  "created_unix": 1793470097.7108977,
+  "files": {
+    "docs/round37_narrow_order_bound_analysis.md": "8ea8188dcc3264f5c8e62ef3bbbaf71c6f03744671a33e9c3e89646470dd42f7",
+    "docs/round37_narrow_order_bound_analysis_data/archive_receipt.json": "6a72835e044099b1e2595b4150a460e0b56d904195aa82c66e27d7a3228d9dee",
+    "docs/round37_narrow_order_bound_analysis_data/before_execution.json": "0d9c5b8f9181d0c4e36d293720eb1a7d79626a2564be21831492ef640f6008e0",
+    "docs/round37_narrow_order_bound_analysis_data/before_execution_v2.json": "ed475c5e2a8fb5090d9aa05a3ec3dda301ebcf4ab075d25a6efec899394417c3",
+    "docs/round37_narrow_order_bound_analysis_data/bounds.py": "18b7279d9d4c27cdaedf3656e29721123b37a59a4a91816174c640f88c4fa137",
+    "docs/round37_narrow_order_bound_analysis_data/bounds_v2.py": "319925cf666cebcc167d88ea41e83f34a3b0ccdd14379c4323b485aa2b8b8d19",
+    "docs/round37_narrow_order_bound_analysis_data/results.json": "c1873302d004bcdf0f93348099b71170dd8ae50da115b509d15517cae5c8214b",
+    "docs/round37_narrow_order_bound_analysis_data/stdout.log": "794c718899beea897cd5ccf6268bf1b09787643110111ceee5e06a525d34f4ef"
+  },
+  "formal_fixture_calls": 0,
+  "integrator_calls": 0,
+  "npz_decodes": 0,
+  "report_sha256": "8ea8188dcc3264f5c8e62ef3bbbaf71c6f03744671a33e9c3e89646470dd42f7",
+  "scientific_gate_passed": false,
+  "scope": "Scalar mathematical bounds only; reference algorithm remains unselected"
+}

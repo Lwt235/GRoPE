@@ -1,0 +1,20 @@
+{
+  "counts": {
+    "cases72": 72,
+    "comparisons216": 216,
+    "reference_calls144": 144
+  },
+  "finished_unix": 1793463798.1220613,
+  "generator_sha256": "fef0a125f72e0b973240e50268d7a2b9fac0e5f7cd53be6fcb5f7de36d2ba0e1",
+  "integrator_calls": 0,
+  "labels_read": false,
+  "npz_decodes": 0,
+  "outputs": {
+    "cases72.csv": "d84b5f79a8b8280426178e55b205a150cb1e7818ff5184db76b0962c234bb968",
+    "comparisons216.csv": "35921c2e7c96f48729d2384f822e02e7f5839ea5fc6477a666c8ec1a94598198",
+    "reference_calls144.csv": "2da7078d8784d86218e73192748137771158f5ad2facbf6018b755c2ddd2838f",
+    "statistics.json": "3389424fd5f93cee8594acdaa4c153f96d0c65e3389d1184f7cca6b76d71b22c"
+  },
+  "receipt_sha256": "d6fd1ba1387d7f20061cb4585de6e4c78b04ac24825c294116d1ab8461bee9cf",
+  "started_unix": 1793463798.0319023
+}

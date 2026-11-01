@@ -1,0 +1,12 @@
+{
+  "command": [
+    "python",
+    "/tmp/grope_round36_report_extract.py",
+    "--receipt-sha",
+    "e12d0e38dbbc9bf4381239eb319d9da0b7ffbfc9bc931e6deeeb21dbfed80fa8"
+  ],
+  "created_unix": 1793467055.3047056,
+  "generator_sha256": "d5067bd0b075d6d137e4c4161d01fe9306b846ab7d7b16091a017f7d53aba642",
+  "scope": "stdlib sealed JSON/byte-hash extraction; no NPZ decode or integrator call",
+  "snapshot": "docs/round36_component_round_reference_report_data/source_snapshot/grope_round36_report_extract.py"
+}

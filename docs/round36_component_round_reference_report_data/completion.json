@@ -1,0 +1,25 @@
+{
+  "counts": {
+    "cases23": 23,
+    "comparisons339": 339,
+    "oracles135": 135,
+    "outer_trace_summaries": 24,
+    "reference_calls46": 46
+  },
+  "finished_unix": 1793467055.4584932,
+  "generator_sha256": "d5067bd0b075d6d137e4c4161d01fe9306b846ab7d7b16091a017f7d53aba642",
+  "integrator_calls": 0,
+  "labels_read": false,
+  "npz_decodes": 0,
+  "outputs": {
+    "cases23.csv": "eaad22868b8762062ba2a7d18adf4fda9b5534b832fac47ab9c8910b67ae2d4b",
+    "comparisons339.csv": "da7d7debce3a55171b6483c260da775fe864683d466c412d69f08a61637b30ec",
+    "oracles135.csv": "6f184b8352ca21d2c4e6c684c49bb8ce8bf5e2b6954b02271b314eb3ef94e4ef",
+    "outer_trace_summaries.csv": "a1bef1d07f4f1c3582f305f7c0579b2b8074b71d18c206693dbaf654253d6e06",
+    "reference_calls46.csv": "cd7a22f2df68555e019c6c87bf71349830b89d59c697a62d816ec1ff6b893909",
+    "statistics.json": "f6884849e2b0e6543ca984efba05262c5d6129b993d97990018f8bf270af0f83"
+  },
+  "real_inputs_read": false,
+  "receipt_sha256": "e12d0e38dbbc9bf4381239eb319d9da0b7ffbfc9bc931e6deeeb21dbfed80fa8",
+  "started_unix": 1793467055.356648
+}

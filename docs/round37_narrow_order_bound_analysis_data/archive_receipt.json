@@ -1,0 +1,34 @@
+{
+  "attempts": [
+    {
+      "attempt": 1,
+      "output": "stdout.log",
+      "pre_execution": "before_execution.json",
+      "reason": "One long rows.append expression had an unmatched parenthesis.",
+      "source": "bounds.py",
+      "status": "SyntaxError before any bound calculation"
+    },
+    {
+      "attempt": 2,
+      "output": "results.json",
+      "pre_execution": "before_execution_v2.json",
+      "revision": "Split malformed append expression into two statements; mathematical formulas unchanged.",
+      "source": "bounds_v2.py",
+      "status": "success"
+    }
+  ],
+  "copy_scope": "Post-execution byte-exact archive of pre-execution scratch source/command records and results; not a claim that repository copies existed before scratch execution.",
+  "created_unix": 1793469977.149293,
+  "files": {
+    "before_execution.json": "0d9c5b8f9181d0c4e36d293720eb1a7d79626a2564be21831492ef640f6008e0",
+    "before_execution_v2.json": "ed475c5e2a8fb5090d9aa05a3ec3dda301ebcf4ab075d25a6efec899394417c3",
+    "bounds.py": "18b7279d9d4c27cdaedf3656e29721123b37a59a4a91816174c640f88c4fa137",
+    "bounds_v2.py": "319925cf666cebcc167d88ea41e83f34a3b0ccdd14379c4323b485aa2b8b8d19",
+    "results.json": "c1873302d004bcdf0f93348099b71170dd8ae50da115b509d15517cae5c8214b",
+    "stdout.log": "794c718899beea897cd5ccf6268bf1b09787643110111ceee5e06a525d34f4ef"
+  },
+  "formal_fixture_calls": 0,
+  "integrator_calls": 0,
+  "npz_decodes": 0,
+  "original_directory": "/tmp/grope_rms_narrow_analytic_20261101"
+}

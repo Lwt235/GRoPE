@@ -1,0 +1,7 @@
+{
+  "created_unix": 1793464873.1433098,
+  "generator_sha256": "aca0f290c29dea227710ac826ef048a04ad33b4498f525cd5e417641264c2fe2",
+  "snapshot": "docs/round34_log_narrow_reference_report_data/source_snapshot/grope_round34_report_extract.py",
+  "command": "python /tmp/grope_round34_report_extract.py",
+  "scope": "stdlib sealed JSON/hash extraction only; no NPZ decode or integration"
+}

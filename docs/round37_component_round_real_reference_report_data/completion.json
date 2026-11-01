@@ -1,0 +1,26 @@
+{
+  "counts": {
+    "cases72": 72,
+    "comparisons296": 296,
+    "oracles40": 40,
+    "outer_trace_summaries": 56,
+    "reference_calls144": 144
+  },
+  "finished_unix": 1793469785.2800348,
+  "generator_sha256": "9d56d664520d58561b60d7b1f52ae762147e51790845bec06fa766249c29bb6d",
+  "integrator_calls": 0,
+  "labels_read": false,
+  "npz_decodes": 0,
+  "outputs": {
+    "cases72.csv": "04ed18b22f3b9dd43b073551e4396faf5febf63bb38679ed510e2509eaae33e8",
+    "comparisons296.csv": "bc773c6782333ccef8e419c8596cbb19b6bf377ac127a53a82a334ae7a278dfa",
+    "matched_historical_costs40.csv": "43c7e9f8d19e06928d2cd78a16ecf6055df9fa773b50cbc1a33a9586baad1dba",
+    "oracles40.csv": "aa16ce0b1fcc98de36ac847764e287bcb6f65016de19d2f649dcf7da603e32c1",
+    "outer_trace_summaries.csv": "2fc3afaf765d16baa38d7ffc56040f69f9a5cf81d9b474f69b8de4524232c022",
+    "reference_calls144.csv": "ce45389750e3f7996830b95c6c28814e1b1c7885dd5a147541d406cb2656c645",
+    "statistics.json": "ea9efe46da73ad2774623f6d0c9e54a5de622b9f578e345b4060ac3b7ca90b69"
+  },
+  "real_inputs_read": false,
+  "receipt_sha256": "0f7552a673de1422b215972c105eccddeb0fc5119b8716fa1168aded5570caf5",
+  "started_unix": 1793469785.0504904
+}

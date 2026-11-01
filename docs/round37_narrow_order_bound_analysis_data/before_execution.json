@@ -1,0 +1,11 @@
+{
+  "command": [
+    "python",
+    "/tmp/grope_rms_narrow_analytic_20261101/bounds.py"
+  ],
+  "created_unix": 1793469857.9165924,
+  "no_array_read": true,
+  "no_integration": true,
+  "sha256": "18b7279d9d4c27cdaedf3656e29721123b37a59a4a91816174c640f88c4fa137",
+  "source": "/tmp/grope_rms_narrow_analytic_20261101/bounds.py"
+}

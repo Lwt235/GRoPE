@@ -1,0 +1,7 @@
+{
+  "created_unix": 1793464890.456048,
+  "generator_sha256": "3461d254183992fc41b396d51a0f1dea521b84823b11a2689812fbcdc3df1ce6",
+  "snapshot": "docs/round34_log_narrow_reference_report_data/source_snapshot_attempt2/grope_round34_report_extract.py",
+  "command": "python /tmp/grope_round34_report_extract.py",
+  "change": "Exclude None structural-zero per-cell diagnostics only; no numerical logic or frozen sources changed."
+}

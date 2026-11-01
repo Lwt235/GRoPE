@@ -1,0 +1,14 @@
+{
+  "command": [
+    "python",
+    "/tmp/grope_rms_narrow_analytic_20261101/bounds_v2.py"
+  ],
+  "created_unix": 1793469869.2252665,
+  "no_array_read": true,
+  "no_integration": true,
+  "prior_attempt_source": "/tmp/grope_rms_narrow_analytic_20261101/bounds.py",
+  "prior_error": "SyntaxError in one long rows.append expression before any arithmetic; original source and stdout.log retained.",
+  "revision": "Split the malformed append expression into two statements; no mathematical change.",
+  "sha256": "319925cf666cebcc167d88ea41e83f34a3b0ccdd14379c4323b485aa2b8b8d19",
+  "source": "/tmp/grope_rms_narrow_analytic_20261101/bounds_v2.py"
+}

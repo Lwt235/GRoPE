@@ -1,0 +1,8 @@
+{
+  "backup_path": "docs/round36_component_round_reference_report_data/draft_history/20261101_source_snapshot_scope_v2/report_v1.md",
+  "created_unix": 1793467568.322446,
+  "old_report_sha256": "4e0e660dd6dbb8d0f561724a39c378cfe27cab240e5af506ae9d3980c9508416",
+  "original_completion_sha256": "7e9cb233ea682b5082b38dc0aa904f4d4738ef6bfcd4bafe66da317ccce7a9e5",
+  "reason": "Correct overly broad development source coverage claim; audit first toy snapshot captured four direct sources, unlike reference/runner available closure",
+  "report_path": "docs/round36_component_round_reference_report.md"
+}
