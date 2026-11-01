@@ -1,0 +1,5 @@
+Terminal transcription from the first report-extraction attempt; not original redirected stderr.
+Traceback (most recent call last):
+  File "/tmp/grope_round34_report_extract.py", line 66, in <module>
+    out['maximum_individual_cell_relative_error_diagnostic']=max(c.get('per_cell_relative_error',[]),default=None);cc.append(out)
+TypeError: '>' not supported between instances of 'NoneType' and 'NoneType'

@@ -1,0 +1,4 @@
+Transcribed from the recorded exec tool output; the original helper ran through python stdin and stderr was not redirected.
+Traceback (most recent call last):
+  File "<stdin>", line 10, in <module>
+KeyError: 'returncode'

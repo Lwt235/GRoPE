@@ -1,0 +1,5 @@
+Transcribed from observed terminal output; original stderr was not redirected.
+Traceback (most recent call last):
+  File "/tmp/grope_round32_log_root_accept_20261031.py", line 16, in <module>
+    assert exe['joint_preflight_sha256']==C.sha(prepath) and exe['all_stages_completed']
+KeyError: 'all_stages_completed'

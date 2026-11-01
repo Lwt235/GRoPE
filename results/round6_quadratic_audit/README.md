@@ -1,0 +1,13 @@
+# Round6 quadratic implementation audit
+
+CPU only. All pairs from the two already inspected validation places; no fresh held-out scene was read. The actual five-channel model is compared with the actual pair kernel and an independent float64 solve/slogdet reference. Model/source/data digests and exact denominators are in audit.json. This verifies implementation equivalence, not novelty, confirmation performance, or independent seed replication.
+
+The exhaustive audit covers 512 scene/grid pair instances (128 different physical camera pairs), five configurations and 691,200 query rows before validity filtering. It computes each implementation's logits at its declared precision, then uses float64 softmax/log-softmax to isolate errors introduced by the score calculation. The actual model class, not an independent replacement for its lift, is executed.
+
+Across all configurations, lift64 versus the independent solve/slogdet reference differs by at most 1.58e-12 in probability. At the selected full setting, lift32 versus reference64 differs by at most 3.63e-5 in probability; its visible-pixel-mass-weighted mean absolute CE difference is 7.21e-7. At selected point h=1,T=10, these values are 4.67e-5 and 5.53e-7. No comparison changed the top key on any GT-valid row. One point h=.5 lift32/pair32 disagreement was an exact tie on an invalid row. Arbitrary raw logits need not agree because the lift deliberately drops query-row constants.
+
+The fixed first pair in each scene/grid/configuration also checks reverse-direction probabilities, first-13-token V/content/geometry/bandwidth gradients and a coordinate-unit rescale plus translation. Maximum gradient difference was 1.89e-12, maximum V-gradient difference 4.11e-15 and maximum transformed probability difference 2.56e-15. These are restricted gradient diagnostics, not an optimizer trajectory comparison.
+
+`native_precision_subset.json` supplements this with actual native float32 softmax/log_softmax on the fixed first and last pairs of each scene/grid (16 pair instances, five configurations). These pairs are selected by archive position, without inspecting scores; all probabilities, CE differences and source/data links are recorded. This separates the exhaustive score-precision audit from the smaller production-arithmetic check.
+
+The exact five-channel claim requires common native key covariance and constant key area within a bank. It is a known quadratic Gaussian-attention lift; input-derived projected support is the empirical hypothesis. This audit supplies no evidence about fresh scenes or learned primitive internal R/S.
