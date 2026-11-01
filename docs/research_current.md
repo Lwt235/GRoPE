@@ -10,7 +10,7 @@ untouched confirmation. No candidate has met the complete objective.
 Latest scope clarification: R41/R42 rendering readout/loss results are task-specific
 evidence. R43/R44 test PE inside the full two-block Transformer, but still only
 in projected 2D coordinates. Rendering is optional downstream evidence; native
-3D and cross-task PE utility remain unproven. The unfrozen R45 draft records
+3D and cross-task PE utility remain unproven. The R45 protocol/report record
 this boundary and the need to distinguish generic Gaussian/RBF effects from
 benefits of learned orientation/scale. No historical result or criterion changed.
 
@@ -297,7 +297,7 @@ Required strong controls: ordinary affine/free-frequency and MLP/Fourier maps,
 all sharing point initialization, plus Gaussian shape/center simplifications.
 Review direct prior work before freezing. First-step zero geometry gradients
 are expected at v=0; verify nonzero v gradient and subsequent geometry gradient.
-No task result yet supports this candidate, and it does not waive3D/cross-task, robustness,
+R45 is now complete with no stable gain (details below), and it does not waive3D/cross-task, robustness,
 cost or untouched confirmation requirements.
 
 Training-time theoretical scope review is in `docs/round43_scope_note.md`.
@@ -327,7 +327,7 @@ The old `round40_half_ray_pe.py` and its numeric auditor are unexecuted reserves
 they are not the active R40 definition. R38/R39 failures remain unchanged. Do not
 edit README or other historical bound artifacts just to update current status.
 
-R45 is now FROZEN and RUNNING: `ROUND45_PHASE_WARP_PROTOCOL.md`,
+R45 is now COMPLETE: `ROUND45_PHASE_WARP_PROTOCOL.md`,
 `models/round45_phase_warp.py`, `experiments/round45_phase_warp_{train,audit}.py`.
 This goal turn implements the preceding scope clarification rather than
 repeating a status-only plan. The scientific question is Gaussian coordinate
@@ -350,10 +350,49 @@ record retained. Attempt2 preflight62083 TERMINAL exit0, all6 tests passed,
 including exact full-network identity for all40 role/seed combinations, nonzero
 independent phase formulas, unit norms, mapped relative phase, gradient flow,
 affine-frequency equivalence and input scope. CUDA smoke also exited0.
-Active evidence `results/round45_phase_warp/attempt2`, lock SHA256
+Completed evidence `results/round45_phase_warp/attempt2`, lock SHA256
 f1276ec5e145fbcda1f19dba5979329e1c619a0db9c57ae6e74d50cc61c5426c.
-Bounded queue tool handle54656, host PID11281, source and actual child exits in
-queue_source.py/queue_status.json/queue.log. Re-poll THIS handle before any
-conclusion/restart. All further stages are ordered by the same controller:
-training -> checkpoint seal -> old_eval export -> full metric replay.
-The full goal remains ACTIVE and unmet; no R45 task outcome is asserted yet.
+Bounded queue tool handle54656 TERMINAL exit0, historical host PID11281.
+All13 child exits0: smoke,5train,training-audit,5export,metrics. Active list is
+empty; source and actual exits remain in queue_source.py/queue_status.json/
+queue.log. Full40new/30reused model sealing and old_eval replay are complete.
+Do NOT restart any of these historical handles/PIDs. CUDA toy max P error
+1.589e-7 and all8 initial full-network differences0. Main independent sampled
+P error3.224e-7,0winner changes/no warnings. Full67200 frame rows replayed,
+zero PCK4/PCK8/valid-count discrepancies; maxCE frame-sum difference1.826e-4.
+All40 selected shared and active positional parameters changed. Best-step
+counts700:2,800:13,900:12,1000:13; no convergence claim. Peak677.77MiB,
+summed training/selection1886.26s, not a throughput benchmark.
+
+R45 primary PCK8=.923574821 vs point=.923507882 (+.006694pp),2/5winning seeds,
+3/5winning scenes; CE+0.1990%,PCK4slightly lower. Paired point deltas in pp:
++.151354,-.005151,-.134141,+.070238,-.048831. The lack of stable useful gain
+does not hinge on the1pp criterion or numerical auditing. Full-minus-Fourier/
+MLP/affine/free-frequency differences +.041519/+.044458/+.042344/+.021440pp.
+All new roles are within.04446pp. Components full-minus-fixed/iso/fixed-centers
+are +.034240/+.031838/+.026562pp,4/5positive seeds each and5/4/4positive rooms;
+report these small positive tendencies without substituting them for utility.
+Primary zero-V PCK8=.596677892 versus normal.923574821.
+
+Before old_eval exports, a bounded old-VAL phase-reset diagnostic was frozen
+in results/round45_phase_warp/diagnostic1/plan.json, source
+experiments/round45_phase_diagnostic.py. Freeze handle8735 and run30200 both
+TERMINAL exit0. Six roles x5seeds x2conditions=60forward conditions on64VAL
+pairs,3840frame rows. No training/tuning/new data. Normal replay CE and count
+differences0. Restoring original point phases at fixed content weights gives
+primary PCK8 .942610837 versus normal.943065555: learned-phase effect+.045472pp,
+3/5positive seeds. Corresponding fixed/Fourier/MLP/affine/free effects in pp:
++.064418/+.159151/+.405457/+.164835/-.009473. Fixed-weight dependence is not a
+retrained ablation, independent confirmation or evidence of baseline superiority.
+NO R45 job remains active. Terminal record execution_completion.json and full
+report docs/round45_phase_warp_report.md are authoritative. Fresh cohort untouched.
+
+NEXT review: docs/round46_native3d_design.md, UNFROZEN/unimplemented. Stop
+promotion/tuning of R45's 2D candidate. Cover native3D coordinates inside a full
+Transformer with matched point/non-Gaussian controls; do not substitute a
+rendering task. Source inspection found R5 mean3 is a patch centroid whereas
+native2D positions are exact token centers. A native3D experiment must control
+center-lifting geometry separately (e.g. same center geometry with2D and3D
+point controls); the code difference does not prove a cause of old failures.
+No new arrays opened for this review. It also does not establish a second task,
+general geometry/robustness/cost or untouched confirmation. Full goal ACTIVE/unmet.

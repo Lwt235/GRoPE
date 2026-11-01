@@ -1,8 +1,9 @@
 # R45 待审查草稿：高斯场参数化位置坐标，再旋转 Q/K
 
 2026-11-01。本页保留设计草稿；现已形成并冻结
-[R45 实验协议](../ROUND45_PHASE_WARP_PROTOCOL.md)，实现与 CPU/CUDA 预检完成，
-执行状态见 [当前研究记录](research_current.md)。R43/R44 的负结果保持原结论。
+[R45 实验协议](../ROUND45_PHASE_WARP_PROTOCOL.md)，实验及诊断已完成，结果见
+[R45 报告](round45_phase_warp_report.md)。该候选没有稳定超过点 RoPE；
+R43/R44 的负结果保持原结论。
 
 研究对象是由高斯中心、旋转和轴尺度参数化的 Transformer 位置算子。
 匹配、识别或渲染均只能作为测量其效用的任务；渲染质量不是通用 PE 成功的
