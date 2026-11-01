@@ -47,3 +47,16 @@ results/round17_preflight/**/*.npz
 results/round17_feasibility/**/*.npz
 results/round17_regional/**/*.npz
 results/round17_validation/**/*.npz
+
+# 验证产出数据（兜底通配）
+*.npz
+*.npy
+*.csv
+*.log
+*.pid
+*.patch
+*.sha256
+
+# 结果目录下的 JSON 产出
+results/**/*.json
+results/**/*.jsonl
