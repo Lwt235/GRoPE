@@ -49,6 +49,7 @@ results/round17_regional/**/*.npz
 results/round17_validation/**/*.npz
 
 # 验证产出数据（兜底通配）
+*.pt
 *.npz
 *.npy
 *.csv
