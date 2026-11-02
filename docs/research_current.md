@@ -1,46 +1,487 @@
 # Current research state
 
-Latest 2026-11-02 R56 update: implement the plan clarified after reading PRoPE
-discussion branches (3) and (4). The preceding discussion narrowed the mechanism
-claim but did not execute a new experiment. This continuation makes concrete
-progress: a prospective native3D protocol, model/controls, exact-reference
-registry, resumable optimizer/sampler, bounded tests and GPU controller exist.
-Full objective remains active and unachieved; no confirmation data accessed.
+Latest 2026-11-02: user resumed the full research goal; ACTIVE and UNACHIEVED.
+R61 is COMPLETE, including all fits, metrics, actual visual review and Chinese
+interpretation. Read docs/round61_normal_relation_report.md and its completion
+record. Previous experimental goal turn was PROGRESS (R61 terminal evaluation);
+the intervening discussion was planning only. Current turn is PROGRESS (R61
+closure and preparation of the explicitly chosen RGB bridge). Do not restart
+any R61 or earlier controller. No R62 experiment has been launched yet.
 
-Read ROUND56_NATIVE_JOINT_PROTOCOL.md. New primary joint_conditional combines
-center RoPE and a conditional spatial preference. It does not claim homography
-alignment, physical covariance recovery or arbitrary rotation invariance.
-joint_fixed and joint_free_quadratic are the two new matched controls. Three
-paired seeds11/22/33, nine new120epoch fits;30 exact R48 reference models at
-those same seeds are reused, not independent repeats. Same input, backbone,
-optimizer, augmentation stream and selection; no mixing five/three-seed means.
-Only after all39 selections are sealed, evaluate seven old R48 conditions and
-two predeclared fixed-checkpoint shape interventions (trace-preserving sphere,
-fixed90degree Z rotation at unchanged center), for full joint/Gaussian-only.
-These are diagnostics, not physical geometry or general-effectiveness evidence.
+R61 root: results/round61_normal_relations/attempt1; 32 unchanged sources; lock
+ de370b0d994d7d045b26eeb9d21fc38b4a524c411623337ba141130b2cb02027.
+Controller92910/PID6062 exited0 at ab71da; watcher10962 exited0 at2d3b33.
+All20children exit0. Six new source fits and six new real adaptations;15source
+and15target models reused.48new independently recomputed prediction groups plus
+120exact reused groups.12new selections precede all new evaluation exports.
+Five implementation tests passed;metric maxerror1.78e-15;both report1 PNGs viewed.
 
-Frozen26scientific sources at
-269ca1e9530ea4707fc0bc2850b40ea1b5a232e3b0b4883ccca7b1c9534898c4,
-results/round56_native_joint/attempt1. Four bounded tests passed13659 exit0
-(4bf509); freeze80642 exit0(d46ef1). Real-input/reference preflight58148 is
-TERMINAL exit0(e1072d):30 exact reference functions,three real-input gradient
-checks and all nine new shared initializations match. CUDA smoke passed.
-GPU controller35361(pid5539) is LIVE per poll666a72, first six training workers
-6566..6571 launched on GPU0..5 after two idle observations; three more pending.
-See attempt1/execution_handles.json and queue_status.json. No completed R56
-result/promotion yet. Inspect the same live tool/OS handles before resuming;
-do not restart based on an observation timeout or this note alone.
+R61 decision: retain the exact compact11->96->96 relation MLP. Real-adapted
+region improvements over normal+spectra are+1.334/+2.572pp(base/sparse),3/3seeds
+and5/5scene means positive. Versus axial:+.791/+1.174pp,only2/3seeds each.
+Synthetic low-overlap vsnormal/axial:+1.457/+.947pp,3/3region seeds positive.
+Synthetic sparse vsaxial:region-.419pp;center-.466pp withall3seeds worse.
+All three full/normal/axial source-direct real averages remain belowdistanceMLP.
+No universal triaxial necessity,source-transfer,actualGS or fresh-confirmation claim.
+Target models start from own source weights; sparse eligibility populations change.
 
-Follow-up read-only observation92f11d confirms controller35361 still LIVE;
-host ps/nvidia-smi(ad29ce) confirms all six actual child processes, GPU0..5
-utilization78--90%, first selected-validation entries at epochs5--10. No complete
-fit yet at that observation. The postprocessing-only round56_report.py is ready
-but unexecuted; it is not part of or imported by the frozen scientific sources.
-Diagnostic interpretation:input anchors remain fixed; each layer's coefficient
-intervention preserves its currently predicted mean. Earlier interventions can
-change later features/means, so this is not a clamp of all baseline trajectory
-centers. Shape sensitivity must be interpreted with trained controls, not as an
-isolated proof of useful physical shape. No training/selection source changed.
+NEXT: user explicitly chose to reconnect the candidate to RGB before prioritizing
+actualGS object classification. Test identical RGB matching task/features/cameras:
+direct learned PE,RGB-predicted Gaussian relations,and matched PRoPE/calibrated
+HRoPE controls. Observed geometry is PRIVILEGED diagnostic input,not a fair RGB
+competitor. Preserve known camera relations equally in the relevant comparisons.
+If observed works but predicted fails,investigate prediction/interface adaptation;
+do not infer RGB prediction quality from cross-task scores. Do not expand local
+point-cloud attribution indefinitely. Fix hypothesis,competing explanations,input
+contracts,controls,budget and decisions before launching suitable idle GPUs.
+Full original geometry,robustness,generality,actual-task/primitive and untouched
+confirmation requirements remain. R55/R57/R58/R59/R60 negatives remain authoritative.
+The following entries are HISTORICAL and do not supersede this latest status.
+
+R60 completed background (authoritative outcomes retained):
+Latest2026-11-02:R60 is COMPLETE; the full research goal remains ACTIVE and
+UNACHIEVED. Read docs/round60_real_scene_report.md and the completion record in
+results/round60_real_scene/attempt1. Current turn was PROGRESS:all30 target fits,
+120evaluations,independent metrics,actual visual review and scientific interpretation
+completed. PRoPE branches(3)/(4) were re-read;their latest messages do not undo
+the completed R54/R55 comparison. Do not restart any completed controller.
+
+R60 lock:fb24317caebd29419e117b6f248cd3b1e7eb3d7aab53ab070569ff2873ea0639;
+24 scientific sources unchanged. Controller69037/hostPID10878 exited0 at46fc26;
+report watcher4685 exited0 at14eb25. All38 child jobs exited0. Four implementation
+tests and bounded pose/input/stream/selection checks passed. Independent metric
+maxerror1.33e-15. Both report1 PNGs actually viewed during this review.
+
+Same10 R59 roles x seeds11/22/33.30 exact source models plus30 NEW target fits;
+60epochs,1080updates each. Target starts from each role's OWN source checkpoint;
+initial target backbones differ across roles. Compare complete source-plus-target
+pipelines,not a target-only PE reset. New target fitting/selection cumulative
+1323.42seconds on shared host,not a controlled speed benchmark.
+Old native SUN3D3/1/5scene split,576/64/480pairs. Sensor depth is PUBLIC INPUT
+for this task;pose only supplies labels/scoring. No RGB-only/optimized3DGS/full
+registration claim. Pose-independent centering/shared RMS scale;64regions/32NN.
+
+## R60 evidence and immediate next step
+
+Both source transfer and fixed target adaptation were planned before outcomes.
+All30 target selections precede all exports.120groups,all5/5scenes evaluable.
+Scene-macro regionR@1 by source-base/source-sparse/adapted-base/adapted-sparse:
+candidate35.629/40.852/46.280/48.782;
+distanceMLP36.742/42.545/44.469/46.700;
+descriptorMLP33.384/39.290/42.583/45.853;
+angleDescriptor33.511/39.348/42.737/46.022;
+matrixMLP33.215/39.799/40.329/45.002.
+
+Source candidate versus distanceMLP:-1.113pp base,-1.693pp sparse;all3sparse
+region/softEPE/CE comparisons worse. Retain this transfer limitation.
+Adapted base versus distanceMLP:+1.810pp,paired+4.172/-.254/+1.512;5/5scene means
+positive. Center+1.135pp,2/3seeds;softEPE-.020704/CE-.068383,3/3seeds and5/5scenes.
+Versus descriptor/angleDescriptor/matrix region+3.696/+3.542/+5.951pp;all4metrics
+3/3seeds and5/5scenes better. Adapted sparse versus distanceMLP:+2.081pp,paired
++2.359/+.907/+2.978;5/5scene means better,center+.451pp. Sparse region versus all
+three descriptor/matrix controls also3/3seeds and5/5scenes better;other metrics
+have some scene/seed exceptions documented in the report.
+
+Eligible queries:base20422/61440=33.239%,25/480zero-validpairs;
+sparse8811/61440=14.341%,117/480zero-validpairs. No native-input exclusions.
+Sparse changes supports/query populations;higher absolute sparse recall does
+not establish fixed-query robustness. Units are normalized scene units,not metres
+or pixels. Old scenes and reused candidate models are not fresh confirmation.
+
+DECISION:retain exact11->96->96 invariantMLP as promising DEVELOPMENT candidate;
+no general transfer/uniqueGaussian/novelty/global success claim. Current controls
+do not isolate known normal-PPF relations. Read docs/round60_relation_literature_note.md
+and docs/round61_normal_relation_plan.md. RoITr already uses normal point-pair
+features;the current center-triplet angle control is not that control.
+
+Next plan adds only two same-backbone controls:distance+spectrum+unsigned normal
+PPF,and original spectrum with axisymmetrized directional covariance relations.
+Six new source fits plus six fixed real-target adaptations;reuse existing exact
+references. Keep source direct transfer separate from adaptation. No new module
+stack,no additional pose input,no post-result budget rescue. R61 is NOT yet
+implemented/frozen/launched. Fix concrete sources before launching on idle GPUs.
+Original cross-task/actual-primitive/generalization/robustness/fresh-confirmation
+objective and R55/R57/R58/R59 negatives remain. No reserved data access.
+
+R59 completed background (authoritative findings retained):
+R59 is COMPLETE. Read docs/round59_relation_attribution_report.md
+and results/round59_relation_attribution/attempt1/completion.json. The full
+research goal is ACTIVE and UNACHIEVED. Previous goal turn was PROGRESS (report
+watcher/execution metadata and live queue); this turn is PROGRESS (remaining
+fits,30 selections,120 main+30 diagnostic groups,independent metrics,actual
+visual review and scientific interpretation). Do not restart completed jobs.
+
+Controller40218/hostPID56148 exited0 atf5d1f6;report watcher42158 exited0 atbb31a1.
+All18children exited0.15 frozen scientific sources unchanged;lock:
+260319452a918ebbbd1ffff96df63e0a5c54eb9cf24fb773691168bead9706cf.
+Both PNGs actually viewed in tool call containing74d7be. New fitting/selection
+cumulative7590.89seconds; shared-host timing is not a controlled speed benchmark.
+
+## R59 evidence and next scope
+
+Primary is EXACT R58 invariant_mlp,adaptively selected AFTER development results.
+Reuse18 R58 fits/72predictions;12NEW fits are distance_mlp,descriptor_mlp,
+angle_descriptor_mlp,matrix_mlp x11/22/33. Same7caches,60epochs/14880updates,
+backbone,common initialization and actual stream.78NEW prediction sets include
+30base-reframe diagnostics. No official test/reserved confirmation access.
+All30 selected before new predictions. Independent metric maxerror1.33e-15.
+
+Base regionR@1/centerPCK/softEPE/CE means:
+candidate38.499/22.504/.316488/3.352861;
+distanceMLP35.078/19.996/.330808/3.443439;
+descriptorMLP37.108/21.437/.323537/3.387721;
+angleDescriptorMLP37.247/21.358/.323636/3.380668;
+matrixMLP34.278/19.368/.332969/3.464639.
+Candidate improves base region/center/softEPE for ALL3seeds against ALL4new
+controls. Versus angle region+1.252pp,paired+2.767/+.585/+.404;object-conditional
+CI[+.721,+1.813]pp. Versus descriptor+1.391pp,CI[+.870,+1.944]. CE versus angle
+only2/3better. Old data/reused candidate and conditional object intervals are
+not fresh confirmation or an estimate of training-seed uncertainty.
+
+Low-overlap versus descriptor/angle region+2.680/+2.374pp,all3seeds positive;
+center/softEPE alsoall3;angleCE only2/3. Noise versus descriptor/angle means
++.958/+1.130pp butonly2/3regionbetter;seed33-.595/-.024pp. Center3/3better,
+softEPE/CE mixed. Sparse versus descriptor/angle region+.366/+.198pp,intervals
+crosszero;angleonly1/3wins,centermean-.012pp. No stable sparse strong-control
+advantage. Candidate versus pure distance/full matrix improves region andcenter
+onall4conditions x3seeds. Keep these distinctions;no blanket robustness claim.
+
+Fixed reframe: candidate region/center unchanged all3,maximum probability1.34e-6,
+but446A-to-B winner-index changes overALLqueries including ineligible ones.
+Do not claim every winner unchanged. MatrixmaxP.200,62306winnerchanges;mean
+region+.043pp/center-.112pp/CE+.00110. Declared frame sensitivity is behavior,
+not an implementation error;its causal contribution to baseline gap unisolated.
+Angle controls have some local probability changes(.057/.113max) despite bounded
+val checks;region mean changes+.002/-.006pp. Retain the full diagnostic,do not
+convert small aggregate effects into new numerical gates or retroactively fix
+the frozen comparison. No confirmed cause of those local changes is claimed.
+
+DECISION:promising DEVELOPMENT candidate,not a generally validated method and
+not promoted to untouched confirmation. A single11->96->96 map of Gaussian
+invariant relations has useful base/low-overlap evidence beyond learned distance,
+direct local descriptors,angles and raw complete matrices. No new module stack.
+Sparse uncertainty remains. R58 scalar-form failure and R57 classification
+limitations are retained. This is observed-support parameterization,not optimized
+3DGS or a recovered texture-transport map; no novelty claim.
+
+Next keep this exact structure and prepare one real-scene native3D correspondence
+development experiment with matched strong controls and explicit density scope.
+Read docs/round60_real_scene_plan.md. Metadata/file availability is now checked:
+9 old SUN3D scenes,576fit/64val/480old_eval pairs,1605required sensor depth files
+present. Saved results/round60_real_scene_preparation/availability.json;no new
+numeric arrays/model outputs read. The plan declares sensor-depth point-cloud
+input,a pose-independent shared normalization,and unchanged R59 candidate/all9
+controls. Both fixed source transfer and60epoch target adaptation are planned
+BEFORE any target outcome;512/256density conditions and per-scene reporting.
+Pose belongs only in labels/scoring,not model input. Implement and freeze concrete
+sources/data/configuration before launch. No next source lock/job exists yet.
+No post-result budget/temperature/width rescue.
+Base/low-overlap evidence justifies this development step without requiring all
+old conditions to be wins. Generalization,cross-task evidence and untouched
+confirmation remain necessary before the full research objective can be achieved.
+
+R58 completed background (authoritative outcomes retained):
+R58 is COMPLETE. Read docs/round58_observed_support_report.md
+and results/round58_observed_support/attempt1/completion.json. The full research
+goal remains ACTIVE and UNACHIEVED. The R58 primary is NOT promoted. Previous
+goal turn was PROGRESS (repeatability diagnostic and completed fits); this turn
+is PROGRESS (remaining fits,18 selections,72 evaluations,independent metrics,
+actual visual review,scientific interpretation and completion record).
+
+All R58 jobs are terminal. Controller93987/hostPID17782 exited0 atc39775; report
+watcher73520 exited0 atc8766a. All26children exited0. Completion record created
+at1bd93e. Do not restart any R58 worker/controller/watcher or historical R57 jobs.
+Eight frozen scientific sources unchanged;lock:
+0f843169bf465bb3202084cfd4f7f56d5846cba6ed34958152be3b128d4f993a.
+
+## R58 evidence and decision
+
+Observed Gaussian supports from32 input neighbors at64tokens/view,not latent
+covariance predictions or optimized splats. Disjoint raw point-ID sampling,
+independent partial views/noise/SE(3),no ground-truth pose in forward. Two
+self/cross Transformer pairs;Gaussian sqrt(2J) sinusoidal relative embedding
+inside self-attention only. Cross/final matching use content. Region labels
+come from actual point-set overlap. No overlap-detection/full-registration claim.
+
+Six roles x seeds11/22/33,18new fits.60epochs/14880updates each; common backbone,
+shared initialization,actual order and validation-CE selection. Old official-
+train-only ModelNet7910fit/965val/965old_dev_eval. All18 selections precede new
+exports. Official test and reserved scenes remain untouched. Old objects do not
+become fresh through a new task. Source/config:ROUND58_OBSERVED_SUPPORT_PROTOCOL.md.
+
+Base means (regionR@1%,centerPCK%,softEPE,CE):
+fullGaussian34.458/19.374/.331958/3.465510;
+Gaussian-distance34.274/19.221/.331812/3.470909;
+Euclidean35.135/19.970/.330620/3.450592;
+distance+angle34.951/19.808/.332029/3.455356;
+invariantMLP38.499/22.504/.316488/3.352861;
+NoPE17.683/8.789/.416250/3.940711.
+Full versus MLP region-4.041pp,paired-4.762/-3.926/-3.435;center-3.129pp.
+Object-bootstrap region interval[-4.614,-3.450]pp is conditional on these three
+fits,not seed uncertainty/independent confirmation. Full versus Euclidean-.677pp
+and versus distance+angle-.493pp,all3seeds lower. Full versus metric-only+.184pp,
+only1/3seeds better. No stable trace-component benefit.
+
+Full/MLP regionR@1 by base,noise02,sparse256,low_overlap:
+34.458/38.499;32.343/36.546;35.065/39.140;33.052/35.692.
+Across all4conditions x3seeds,full loses to MLP in region,center,softEPE andCE.
+Sparse full versus Euclidean/angle-2.161/-2.539pp,all3negative. Preserve the
+limited positive:low-overlap full versus Euclidean+.365pp/angle+.563pp,all3
+region signs positive,but object intervals cross zero,center signs mix,and
+full remains below MLP and below metric-only. No cherry-picked promotion.
+
+The MLP control has positive evidence worth following:versus both Euclidean and
+angle,all4conditions x3seeds improve regionR@1,centerPCK andCE. This control
+ALREADY consumes Gaussian-related invariant statistics,so its success is not
+proof that Gaussian parameters are useless. Nor does it isolate their benefit:
+nonlinear distance encoding or extra pairwise local-feature comparison could
+explain gains. The original primary has failed;retain that fact when choosing
+the successful development control for follow-up.
+
+Effective query fractions across conditions63.49/62.99/45.71/48.61%;zero-valid
+pairs58/59/161/58 of965. Sparse absolute recall increases do not prove robustness
+on an unchanged population. All comparisons within each condition are matched.
+Validation oracle diagnostic:4.407%eligible queries cannot both maximize overlap
+and satisfy.1center threshold,even allowing all overlap ties,although another
+available center satisfies it. This limited conflict does not explain away the
+simultaneous region/center improvements of MLP. Base nearest-centerPCK bound82.34%.
+
+A prespecified old-val repeatability diagnostic completed atfe9d19:
+107710 relations,893analyzable objects. Mean symmetric relative changes:
+Euclidean.094429,Gaussian metric.179075,full.174191. On99.44%of objects Gaussian
+forms change more. This mixes support,center,sampling and nonlinear sensitivity;
+not isolated covariance noise or a task-performance bound. Full is slightly
+less variable than metric-only,so trace is not uniquely implicated. No new gate.
+See docs/round58_development_diagnostics.md and results/.../diagnostics/repeatability.
+One missing-bracket parse error occurred before data access;fixed/source-retained
+in diagnostics/preparation_failure1. Main frozen experiment was unaffected.
+
+Checks:18validation CE replays<=8.89e-16;72metric groups<=8.89e-16;actual direct
+Gaussian scalar3.55e-15;trained rigid probability<=8.20e-7,zero winner changes;
+permutation logit<=1.15e-5. Same-author independent arithmetic,not second-lab
+replication. Both PNGs viewed in tool call containing341ffc. New fit/selection
+cumulative10077.99seconds,not controlled speed benchmark. Full selected45/39/33,
+MLP45/57/45;no global convergence claim,no budget/frequency/temperature rescue.
+
+## Next authorized research scope
+
+Stop this scalar Jeffreys/sinusoidal candidate;do not open fresh confirmation.
+Continue from the successful R58 invariantMLP as a DEVELOPMENT discovery. It is
+one two-layer map of11Gaussian-related invariants,not an added module stack.
+Question:does its benefit require directional Gaussian relations,or are generic
+learned distance and local-content comparisons sufficient?
+
+R58 completion authorized one matched attribution comparison on the same task/data/backbone/
+budget/seeds,exactly reuse R58 references,add distance-MLP,distance+local-descriptor
+MLP,and distance/angle+local-descriptor MLP controls. Explicitly state features,
+parameter counts,initialization,how angle neighbors are aggregated,and decisions
+before launch. Common local descriptors are the same11input features all R58
+models already received;geometry/pose labels must never enter forward. Reuse is
+not a new independent fit or fresh confirmation. R59 above now implements that
+scope,including a complete matrix-input control. If generic controls match,do not claim Gaussian-specific
+utility. A reliable directional-shape gain would motivate separately frozen
+real-scene and cross-task validation before untouched confirmation.
+
+The full original objective remains:compact general PE with reliable strong-
+control gains,appropriate geometry/robustness/generalization/actual-task evidence,
+and untouched confirmation. R57 classification negatives remain part of evidence;
+a local learned-control win cannot establish the full objective or novelty.
+
+R57 completed background (its outcome remains authoritative):
+R57 is COMPLETE. Read docs/round57_gaussian_pair_report.md
+and results/round57_gaussian_pair/attempt1/completion.json. The full research
+goal remains ACTIVE and UNACHIEVED; the candidate is NOT promoted. This turn
+made PROGRESS: all remaining fits, selection checks, exports, metrics, reports,
+visual inspection and the experiment-completion record finished.
+
+All R57 jobs are terminal. Controller77259 exited0 at a2dd48; report watcher87784
+exited0 at2eb30b; completion62192 exited0 at1416fa. All15children exited0.
+Do not restart these sessions, completed workers or historical controllers.
+
+## R57 result and interpretation
+
+Nine new120epoch/29760update fits: pair_full, pair_distance, pair_center x
+seeds11/22/33. Same R48 ModelNet official-train-only7910fit/965val/965old_dev_eval,
+backbone, initial shared weights, actual sampling/augmentation stream and
+validation-CE selection.39 exact R56/R48 references at the SAME seeds reused;
+not39new independent runs. All48 selections preceded new dev_eval exports.
+29 frozen scientific sources unchanged; lock:
+3e1f37a49b82a07d48a5ac0432b9c803d84bf4563ba2b928aa94a5ec0507de0a.
+Official ModelNet test and the reserved cross-scene confirmation data remain unused.
+
+Full Gaussian-pair OA89.292%,mCA84.486%,CE.434493. Same-capacity distance:
+89.223/83.683/.445731; center-only88.877/84.019/.433895; MLP89.154/84.457/.437119;
+free quadratic joint89.154/84.192/.434653; R56 single-query joint89.223/83.749/.431164.
+Full versus distance OA+.069pp, paired -1.658/+1.036/+.829; mCA/CE also2wins1loss.
+Full versus MLP OA+.138pp, paired -.415/+1.554/-.725; mCA+.029pp, CE only1/3better.
+Versus free quadratic OA+.138pp,1/3wins. These are not stable strong-control gains.
+Full versus center-only OA+.415pp,mCA+.467pp and versus fixed distance OA+.484pp,
+mCA+.902pp:all3seeds positive. Preserve this limited component evidence.
+
+Prespecified positives: jitter02 versus MLP+.553pp,all3seeds;1024points versus
+adaptive distance+.794pp,all3seeds;Y90 versus R56 joint+.933pp,all3seeds.
+Limits: jitter02 remains-.173pp versus free quadratic;256points is-.484pp versus
+center-only,all3seeds worse,and also below MLP/free quadratic. Tilted rotation
+still catastrophically low at6.425%; no whole-network SO3/affine-invariance claim.
+Removing only the trace compatibility term at fixed full checkpoints changes
+OA-.242pp on average (two losses/one gain);CE increases in all3seeds. This is
+component dependence,not recovered physical covariance or unique task utility.
+The adaptive-distance term still uses shape during this intervention.
+
+All48 formula samples:maxP6.93e-6,new9max7.35e-7,winner changes0,warnings0.
+Saved validationCE replay<=1.33e-8;336metric correct counts and3diagnostic correct
+counts exact,CE errors small. Same-author independent arithmetic,not a second
+lab/full-network rewrite.39 reference prediction copies exact. Both result PNGs
+viewed. New fitting/selection cumulative24645.52sec; not a formal speed benchmark.
+The19 positional Q/K channels use FP64 geometric products; no fused-kernel claim.
+Full selections100/95/100;distance100/115/120;center80/105/120. No convergence claim.
+
+## Scope recorded at R57 completion (now concretized by R58 above)
+
+Do not promote this classification candidate or open fresh confirmation. Do not
+rescue it by temperature/frequency/budget scans. The conditional ordinary-shape
+similarity reserve in docs/round57_attribution_note.md remains UNEXECUTED; its
+stable-utility trigger was not met. Original scientific objective is unchanged.
+
+Next make one native3D local-correspondence development experiment concrete:
+state whether a Gaussian is learned comparison geometry or observed region
+support, how its center/shape transforms, what relationship is being predicted,
+and which competing explanation each matched control removes. Use the same
+information/backbone for all controls, including appropriate generic and geometric
+strong controls; preserve center-localization and region-correspondence measures.
+Known-frame matching and unknown-pose registration are distinct tasks. For the
+latter, ground-truth relative pose belongs only in supervision/scoring; it cannot
+be used to pre-align forward inputs. Specify data/configuration/decisions before
+training. At R57 completion no next-round candidate or budget was frozen; the
+R58 state at the top of this document supersedes that execution status.
+
+A classification tie does not prohibit a separately motivated geometry diagnostic;
+a local-task pass does not erase the classification and rotation limitations.
+General utility,appropriate geometry/robustness,cross-task evidence and untouched
+confirmation are still required. Do not substitute one convenient task for them.
+
+PRoPE branches(3)/(4) were read. Their same-camera calibrated comparison and
+bounded budget diagnosis are already completed in R54/R55:plane and PRoPE are
+near ties at5000steps,while full Gaussian lacks stable extra utility over point/
+affine. For future calibrated multi-view studies preserve known camera operators
+and feature inputs across PRoPE,plane and Gaussian variants. R57 latent Gaussian
+similarity is not a texture-transport transform. Its mathematical construction
+alone does not establish usefulness or novelty.
+
+The attribution note also records the R46/R5/R41/R57 input semantics and checked
+GeoTransformer/REGTR primary methods as task/control references. They have NOT
+been implemented or reproduced. The following entries are historical background;
+latest execution state and next scope are given above.
+
+The following R56 findings remain authoritative background and negative evidence.
+
+R56 completion state (its jobs are terminal; R57 jobs are listed above): read
+[the R56 report](/home/liwt/GRoPE/docs/round56_native_joint_report.md) and
+results/round56_native_joint/attempt1/completion.json. R52--R55 also complete.
+The full research goal remains ACTIVE and UNACHIEVED. All R56 jobs are terminal.
+Do not restart any completed queue or historical PID.
+This goal turn made concrete progress: all nine fits,39 selected-model checks,
+39 exports/273 condition groups,12 diagnostics,analysis and visual review finished.
+Previous goal turn was a verified wait on the original live35361/18034 handles.
+No confirmation dataset or official ModelNet test was accessed.
+
+## R56 outcome and decision
+
+Same old ModelNet official-train-only split7910fit/965val/965dev_eval; same
+120epochs/29760updates,backbone,initial shared weights,sampling/augmentation,
+optimizer and validation-CE selection. Nine new fits (three joint roles x seeds
+11/22/33),30 exact R48 references reused at the SAME seeds. Do not mix these
+three-seed means with the old five-seed summary or count reused fits as new data.
+All39 selections preceded new evaluation. Sources26 unchanged at lock
+269ca1e9530ea4707fc0bc2850b40ea1b5a232e3b0b4883ccca7b1c9534898c4.
+
+Base OA:joint_conditional89.223%,joint_fixed88.808%,joint_free_quadratic89.154%,
+conditional-alone88.325%,diagonal-alone89.223%,centerRoPE88.774%,MLP+RoPE89.154%.
+Joint full vs Gaussian-alone +.898pp,3/3 seeds; CE improves in all3. This supports
+center-phase complementarity. Free quadratic/fixed distance also improve when
+center phase is added; the effect is not unique to Gaussian parameterization.
+Full joint vs free joint only+.069pp,1/3 seeds,mCA-.444pp; versus MLP only+.069pp,
+2/3 seeds,mCA-.709pp. Mean CE slightly better but only2/3 seeds in each comparison.
+These strong-control results are near ties,not a Gaussian-specific gain.
+Y90 and jitter02 OA are .898pp/.760pp lower than free joint,ALL3 seeds worse.
+Tilted rotation remains catastrophic (full joint5.803%); no SO3 robustness claim.
+Point reversal changes no class winner in any39models; tiny logit differences
+(max1.93e-5) do not change the outcome.
+
+Fixed-checkpoint shape interventions on full joint decrease OA21.071pp for
+trace-preserving isotropization and53.610pp for fixed Z90 covariance rotation.
+The models DO depend on shape parameters; lack of unique utility is not evidence
+that the predictor is ignored. These interventions shift learned attention and
+are not proof of recovered physical covariance. Each layer retains its mean
+predicted from its CURRENT input; early changes can alter later features/means.
+They do not clamp all baseline-trajectory centers. All12 diagnostics retained.
+
+DECISION:no promotion,no fresh confirmation,no diagonal/isotropic joint sweep,
+no budget/temperature/frequency rescue. Preserve positive component effects and
+negative strong-control/robustness results. Full objective remains intact.
+
+## R57 rationale, recorded at R56 completion
+
+Current R56 Gaussian defines a query-conditioned region over point keys. Consider
+whether Gaussian parameters of BOTH tokens should define their relative relation.
+The existing compact_gaussian_dual_pe_reserve_20261101.md derives Gaussian
+Jeffreys similarity with19position Q/K channels. Its width/additivity
+counterexamples remain valid for use as probability mass; they do not reject
+all learned token-similarity uses. Neither closed form nor invariance establishes
+actual task usefulness. Do not restart its old static-integrator gates.
+
+Before training, formulate one prospective comparison:full Gaussian-pair score,
+same adaptive-center distance with the covariance-compatibility term removed,
+and learned centers with fixed covariance; retain RoPE/MLP/free-quadratic strong
+controls. The same-capacity removal control separates shape compatibility from
+generic adaptive distance; the center-only control separates moving both centers.
+Use one positional relation,not extra branches/losses/rendering. Explicitly assess
+whether this is a meaningful structural change rather than another parameter
+scan. The prospective R57 plan is now implemented and frozen as recorded above;
+no R57 task results are available yet.
+R56 does not prove this next hypothesis. Old development evidence first;
+strong controls,appropriate robustness/cross-task and fresh confirmation still
+required for any eventual generally useful compact scheme.
+
+## Execution evidence and scope
+
+Controller35361 TERMINAL exit0(fb7c88),all15children exit0. Report watcher18034
+TERMINAL exit0(f7032b). Completion47178 TERMINAL exit0(80467b). Both result PNGs
+actually viewed. Four bounded tests,30 reference-function checks and real-input
+gradient checks passed before fitting. All actual sample streams equal originals.
+39 independent first-layer formula samples:maxP6.93e-6,winner changes0,warnings0;
+saved validation CE replay<=1.33e-8. All273 metric correct counts exact,CE error
+<=1.13e-7. Same-author independent arithmetic,not another lab/full-network rewrite.
+New fitting/selection cost16492.57sec with checkpoint overhead; shared-host
+wall time is not a formal throughput benchmark. Common338508params; full/free
+PE1746,full model340254. Some selected models at120epochs; no convergence proof.
+Two transient host NVIDIA cleanup/NVML waits resolved without restarts,kills,
+driver edits or source changes; retained in operational_delay1/2.json. The first
+report-watcher sandbox invocation could not see hostPID5539; its preserved
+watch_attempt0_failure.json predates the successful unchanged host invocation.
+
+## Literature and interpretation retained
+
+PRoPE branch(3),01a199fa-0796-7a40-9ba5-c084c53d3891,and branch(4),
+01a19a69-896a-7423-8fff-3f54c97288d0,were read. Camera-relative structure is not
+our invention; covariance shape alone does not specify internal texture transport.
+PRoPE https://arxiv.org/html/2507.10496v2#S3.SS4 ;
+HRoPE https://arxiv.org/html/2610.28284v1#S3.SS3 .
+R56 weights spatial preference without attenuating unit-amplitude rotary content;
+it does not perform homography alignment or measure real GS support covariance.
+
+Riva et al., https://arxiv.org/html/2409.13291v1 ,sections4/5.2,combine separate
+Gaussian and RoPE heads; clean/noise tradeoffs prevent a general robustness
+inference. Publisher:https://doi.org/10.2312/stag.20241345 . No reproduction.
+MoPE https://arxiv.org/html/2606.01258v1 ,definition1/section3.1,uses Gaussian
+amplitude around an absolute origin and discusses its origin prior; this differs
+from R56's conditional relative quadratic. No novelty claim for our combination.
+He et al., https://arxiv.org/html/2601.02339v1 ,sections3.1.1/3.1.2,use measured
+Gaussian covariance in regularized graph metrics,spectral shape descriptors and
+center PE. That multi-component pipeline does not validate R56's learned region.
+Point-GN https://arxiv.org/html/2412.03056v1 ,section3.2,uses fixed axiswise
+Gaussian coordinate features in a non-parametric classifier,not full anisotropic
+Gaussian Transformer PE. No paper scores are compared with our different split.
 
 The following R55/R54/R53/R52 status entries precede R56.
 
