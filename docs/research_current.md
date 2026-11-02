@@ -22,9 +22,25 @@ These are diagnostics, not physical geometry or general-effectiveness evidence.
 Frozen26scientific sources at
 269ca1e9530ea4707fc0bc2850b40ea1b5a232e3b0b4883ccca7b1c9534898c4,
 results/round56_native_joint/attempt1. Four bounded tests passed13659 exit0
-(4bf509); freeze80642 exit0(d46ef1). Real-input/reference preflight58148 launched;
-GPU training not yet launched at this entry. Inspect actual tool/queue handles
-before resuming; do not infer completion from this note.
+(4bf509); freeze80642 exit0(d46ef1). Real-input/reference preflight58148 is
+TERMINAL exit0(e1072d):30 exact reference functions,three real-input gradient
+checks and all nine new shared initializations match. CUDA smoke passed.
+GPU controller35361(pid5539) is LIVE per poll666a72, first six training workers
+6566..6571 launched on GPU0..5 after two idle observations; three more pending.
+See attempt1/execution_handles.json and queue_status.json. No completed R56
+result/promotion yet. Inspect the same live tool/OS handles before resuming;
+do not restart based on an observation timeout or this note alone.
+
+Follow-up read-only observation92f11d confirms controller35361 still LIVE;
+host ps/nvidia-smi(ad29ce) confirms all six actual child processes, GPU0..5
+utilization78--90%, first selected-validation entries at epochs5--10. No complete
+fit yet at that observation. The postprocessing-only round56_report.py is ready
+but unexecuted; it is not part of or imported by the frozen scientific sources.
+Diagnostic interpretation:input anchors remain fixed; each layer's coefficient
+intervention preserves its currently predicted mean. Earlier interventions can
+change later features/means, so this is not a clamp of all baseline trajectory
+centers. Shape sensitivity must be interpreted with trained controls, not as an
+isolated proof of useful physical shape. No training/selection source changed.
 
 The following R55/R54/R53/R52 status entries precede R56.
 

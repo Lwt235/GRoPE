@@ -57,6 +57,7 @@ results/round17_validation/**/*.npz
 *.pid
 *.patch
 *.sha256
+*.zip
 
 # 结果目录下的 JSON 产出
 results/**/*.json
