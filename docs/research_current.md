@@ -1,18 +1,340 @@
 # Current research state
 
-Updated 2026-11-01 after the user resumed the existing research goal following
-the review of rendering-task drift.
+Latest 2026-11-02 R56 update: implement the plan clarified after reading PRoPE
+discussion branches (3) and (4). The preceding discussion narrowed the mechanism
+claim but did not execute a new experiment. This continuation makes concrete
+progress: a prospective native3D protocol, model/controls, exact-reference
+registry, resumable optimizer/sampler, bounded tests and GPU controller exist.
+Full objective remains active and unachieved; no confirmation data accessed.
+
+Read ROUND56_NATIVE_JOINT_PROTOCOL.md. New primary joint_conditional combines
+center RoPE and a conditional spatial preference. It does not claim homography
+alignment, physical covariance recovery or arbitrary rotation invariance.
+joint_fixed and joint_free_quadratic are the two new matched controls. Three
+paired seeds11/22/33, nine new120epoch fits;30 exact R48 reference models at
+those same seeds are reused, not independent repeats. Same input, backbone,
+optimizer, augmentation stream and selection; no mixing five/three-seed means.
+Only after all39 selections are sealed, evaluate seven old R48 conditions and
+two predeclared fixed-checkpoint shape interventions (trace-preserving sphere,
+fixed90degree Z rotation at unchanged center), for full joint/Gaussian-only.
+These are diagnostics, not physical geometry or general-effectiveness evidence.
+
+Frozen26scientific sources at
+269ca1e9530ea4707fc0bc2850b40ea1b5a232e3b0b4883ccca7b1c9534898c4,
+results/round56_native_joint/attempt1. Four bounded tests passed13659 exit0
+(4bf509); freeze80642 exit0(d46ef1). Real-input/reference preflight58148 launched;
+GPU training not yet launched at this entry. Inspect actual tool/queue handles
+before resuming; do not infer completion from this note.
+
+The following R55/R54/R53/R52 status entries precede R56.
+
+Updated 2026-11-02: R55,R54,R53 and R52 are COMPLETE.
+Full goal remains active and unachieved. No owned research job remains live.
+Do not restart these completed rounds. Next scope:native3D center/region encoding.
+R51 real visual matching COMPLETE, including the explicitly requested HRoPE
+versus MLP comparison. The user explicitly resumed after the PRoPE discussion
+and approved the previously described next plan through the active goal.
+Full goal remains unachieved. The earlier pause entries below are historical.
+
+Previous goal work made progress:16 R53 fits, matched references, bounded checks,
+and the PRoPE/calibrated-plane comparison gap are retained. All old interrupted
+processes were authoritatively terminal before resumption. R53 resume14324 is
+now TERMINAL exit0(4f37e3):18 new fits,12 reused references,60 exports,30 checked
+models complete. Analysis/plot/reference27272 TERMINAL exit0(bf4ada). No R53 job
+is live; do not restart. Interrupted history is archived, no completed run replaced.
+Read docs/round53_ray_frame_report.md and completion.json. SoftEPE:PRoPE4.2069,
+ray-point4.0813,ray-iso4.1042,ray-full4.0611,ray-affine4.0635,hybrid4.1675.
+Full vs PRoPE improves3.464%,3/3seeds/5scene means (two scenes nearly tied).
+Full vs point only-.0201px,2/3seed and2/5scene wins; versus affine-.00236px.
+No unique Gaussian benefit/promotion. All30 checks/60 metric replays passed
+bounded impact review; warnings0, no winners changed. Unused confirmation remains untouched.
+
+R54 sources: ROUND54_CALIBRATED_PLANE_PROTOCOL.md, models/round54_calibrated_plane.py,
+tests/test_round54_calibrated_plane.py. Three bounded tests passed45786 exit0
+(b0a308), including official PRoPE arithmetic with explicit chart/phase adapters.
+This is a matched implementation, not an official training-pipeline reproduction.
+Two new plane/offset roles x3seeds;21 identity-checked R52 references reused.
+Nine real-input checks and21 reference identities verified88928 exit0(cf29ac).
+Lock f0c936b2c16b80305c1e6ee7ecefe7997f80d51e41d6654d1a13d4bda869f94a.
+GPU queue86598 is TERMINAL exit0(8105a9), all7 children exited0; CPU checker30710
+is TERMINAL exit0(f0e9c3). Analysis/plot/reference84445 TERMINAL exit0(a28002).
+All21 scientific sources,27 selected model identities and54 prediction exports
+verified;42 reused reference exports equal R52 exactly. Read
+docs/round54_calibrated_plane_report.md and completion.json. SoftEPE:P4.2069,
+offset4.2781,plane4.5467,iso4.3951,GS4.4012,affine4.4123. Plane is worse than P
+by8.079%,3/3 seeds and5/5 scene means; GS is worse by4.619%,also3/3 and5/5.
+Filling the known-camera comparison gap did not reveal local-shape utility.
+This does not establish PRoPE's universal superiority over HRoPE; the pipeline
+and task differ from the original paper. All27 operator/CPU-validation checks
+and54 metric replays passed bounded impact review,warnings0,winner changes0.
+New6 fits/selection cost387.54sec. Source/data/model comparisons remain frozen.
+
+R55 is COMPLETE under ROUND55_BUDGET_DIAGNOSTIC_PROTOCOL.md. Read
+ docs/round55_budget_diagnostic_report.md and
+ results/round55_budget_diagnostic/attempt1/completion.json.
+Previous goal turn made progress:implemented/froze the fixed budget intervention
+and launched GPU fits. This turn verified the live handles,completed24 fits/48
+exports/24 selected-model checks,analyzed results,and closed the experiment.
+No fresh confirmation accessed. The full research objective remains unachieved.
+
+One matched extension only:eight unchanged R52/R53/R54 roles x3 paired seeds,
+5000steps. The original1000-step init,batches,schedule,selected weights/functions
+and validation histories reproduced exactly for all24 models. Subsequent4000
+updates used constantlr.0002 with continuous optimizer state. All24 selections
+preceded evaluation;shared initialization and complete sampling hashes matched.
+34 scientific sources unchanged at lock
+6bb56fc73932ef32b058c08612381008247f06759c84a3dd194d1701b1a84e7c.
+All selected steps were2600..4900;none at5000,without claiming global convergence.
+No5000-step NoPE/MLP run was performed;their old1000-step scores are not a fair
+ranking comparator for this diagnostic. These are correlated development runs.
+
+SoftEPE/PCK8%:P3.8636/87.3356,offset3.9148/87.0646,plane3.8789/87.3371,
+forwardGS3.9185/87.4501,ray-point3.7065/88.0617,ray-iso3.7482/87.8231,
+ray-full3.7344/88.0644,ray-affine3.6669/88.3119. Ray-full vs point changes
+from-.0201px at1000 steps to+.0279px at5000;1/3 seed wins and0/5 scene wins.
+PCK8+.00272pp is a tie. Full vs affine+.06748px,1/3 seed wins,0/5 scenes;
+soft-tail+.12694pp is worse inall3 seeds. Full vs iso retains+.2413pp PCK8
+(3/3seeds,4/5scenes),but point/affine prevent a unique-shape claim.
+Full vs P retains-.1292px/+ .7288pp,3/3seeds,4/5scenes;point/affine also gain.
+Do not assign the cross-route gain solely to Gaussian shape or inverse frames.
+
+Plane vs P gap shrinks from+.3399px to+.0153px:the large short-budget penalty
+mostly disappears;these are now near ties,not universal PRoPE superiority.
+Plane beats offset by.0360px/+.2725pp PCK8 in3/3seeds,but not P consistently.
+ForwardGS vs P gap shrinks to+.0549px,still0/3 softEPE seed wins.
+RGB-permuted PCK8 rises with longer training:P75.605%,ray-point74.399%,
+ray-full74.413%,affine75.149%. Full still loses13.652pp under permutation;
+local appearance matters,but the test cannot distinguish stronger geometry,
+retained image-level features or development-scene statistical memory.
+
+Queue64824 TERMINAL exit0(d1c8f4),all16children exit0;CPU checker98385 TERMINAL
+exit0(879491). All24 operator checks:maxP5.28e-8,maxV2.76e-6,winner changes0,
+full CPU valCE error<=1.51e-7. All48 metric replays:PCK/tails exact,EPE<=2.22e-9,
+warnings0. Same-author independent arithmetic,not another lab/full-network rewrite.
+New training/selection cost7676.82sec,including checkpoint/prefix-check overhead.
+Initial analysis87058 exited1(7cf399) due to stale MLP scene index;failed source
+and record retained in postprocessing/attempt0. Corrected analysis91461 exit0
+(63a9f6),final plot96297 exit0(1dbc45);both plots visually inspected. No science
+source,selection,prediction or training changed. Completion72758 exit0.
+
+DECISION:end tuning rescue of this local-frame route;do not scan more budgets,
+features or matrix factorizations to manufacture a winner. Preserve its positive
+center/generic-frame signals and negative full-shape result. No candidate promoted.
+Next structural hypothesis:in native3D,retain center RoPE on content and express
+conditional Gaussian region preference as extra positional Q/K channels in the
+same dot product. No physical covariance attenuation of the center phase.
+Use the R48 native point-cloud setting to remove camera/predicted-depth dependence;
+compare each part alone,joint full/simpler/fixed-distance/free-quadratic forms,and
+RoPE/MLP strong controls with identical data/backbone/budget. Only exact unchanged
+references may be reused. R48's severe tilted-rotation failure remains a limitation.
+The unexecuted R49 draft is background,not permission to resume its older projected
+matching setup,60-fit plan or1pp guide. A new native3D protocol and identity checks
+must precede training. No next-round code/protocol has yet been frozen or launched.
 
 Objective: a compact, generally useful position encoding derived from 3DGS
 parameterization, supported by matched strong controls, actual tasks and
 untouched confirmation. No candidate has met the complete objective.
 
+2026-11-02 archival PAUSED planning update (superseded by completed R54 above):
+user requested reading the PRoPE discussion
+in the branch titled "检索3DGS与RoPE结合进展 (3)" (thread
+01a199fa-0796-7a40-9ba5-c084c53d3891). Read its latest two exchanges and checked
+PRoPE arxiv2507.10496v2, official prope/torch.py (blob
+1c450ccc05bca91a6b9ddbd19971437896ef83b5), and HRoPE arxiv2610.28284v1
+sections3.3/4.2.2. No research job was resumed.
+
+R52 camera_only is a PRoPE-style adaptation, not a new project contribution or
+an exact reproduction of the official pipeline. Current HRoPE predicts its
+R/t/plane transform; unlike camera_only, it does not explicitly insert the known
+camera extrinsics into that transform. Identical available metadata does not
+isolate the incremental benefit of local surface geometry. The missing matched
+control is calibrated HRoPE: H=P F, F=[R_n,z*n;0,1], with known P retained.
+The paper reports this P*F comparison separately from predicted3x3 HRoPE.
+Common F cancellation is explicitly its reduction to PRoPE; R52's common-L
+cancellation limits the whitening interpretation, not a proof of implementation
+failure or a sufficient reason to prefer inverse frames.
+
+The priority then proposed for resumption was to align/document the PRoPE camera chart,
+units, rotary conventions and Q/K/V/output transport; fill the calibrated-plane
+control under the same inputs, predictor feature source and training budget.
+Compare P, P*plane (plus offset-only control), P*Gaussian (isotropic/full), and
+P*affine; retain NoPE/MLP references. Reuse old checkpoints only if scientific
+configuration and functions are unchanged. First question: can local plane or
+Gaussian geometry add utility beyond the same known camera operator? HRoPE
+winning is a mechanism reference, not a universal prerequisite or new gate.
+Use paired seeds/scenes, continuous localization and tails; geometry strata must
+be fixed independently of model errors. If needed, permit one bounded matched
+budget/feature-source diagnosis rather than indefinite tuning. R53 partial fits
+remain an independent frozen candidate for eventual original-protocol closure;
+do not splice new controls into its frozen sources or let it dictate the route.
+Native3D/cross-task utility and untouched confirmation remain required for the
+general claim. This paragraph is a plan, not an executed experiment or approval
+to resume the paused goal.
+
 Latest scope clarification: R41/R42 rendering readout/loss results are task-specific
-evidence. R43/R44 test PE inside the full two-block Transformer, but still only
-in projected 2D coordinates. Rendering is optional downstream evidence; native
-3D and cross-task PE utility remain unproven. The R45 protocol/report record
-this boundary and the need to distinguish generic Gaussian/RBF effects from
-benefits of learned orientation/scale. No historical result or criterion changed.
+evidence and cannot establish general Transformer PE utility. R43--R45 test PE
+inside the full two-block Transformer in projected 2D coordinates; R46/R47
+test native 3D coordinates with matched anchor-geometry controls and no renderer.
+The main question is whether the GS-form positional parameterization improves
+the same Transformer against strong PE controls at a matched training budget.
+Rendering is optional downstream evidence, never a prerequisite or substitute.
+Cross-view matching is also one task, not proof of generality. Distinguish
+generic Gaussian/RBF effects, learned center/orientation/scale benefits, and
+effects of changed input geometry. Learning a PE covariance does not require
+using a physical rendering covariance. Native 3D utility and cross-task utility
+are not established as general Gaussian advantages; R46/R47's completed evidence
+is recorded below. No historical result or criterion changed.
+
+R48 is COMPLETE and NEGATIVE for its fixed primary development claim. Native
+point-cloud classification OA:conditional88.622%,RoPE88.518%,MLP88.891%,free
+quadratic88.642%; only the comparison with NoPE gives>=1pp and5/5seed wins.
+No unique full-Gaussian benefit or promotion. The severe shared tilted-rotation
+failure was checked with a bounded independent input/replay path; see
+docs/round48_native_point_report.md. Controller24005 is TERMINAL exit0; do not
+restart R48 training/export. All official-test/confirmation data remain unused.
+R49 joint center-RoPE/Gaussian-prior code/protocol/tests exist as UNEXECUTED
+drafts. They were not frozen, unit-tested or trained. Historical statements
+below that say no R49 files exist predate those drafts and are superseded.
+
+R50 local-frame mechanism experiment COMPLETE, ROUND50_LOCAL_FRAME_PROTOCOL.md.
+The user discussed HRoPE's surface-deformation explanation and resumed the goal.
+Test identical-input compact GS-frame, HRoPE operator adaptation, MLP, affine,
+RoPE, isotropic/identity frames and Gaussian-bias controls inside the same
+Transformer. Procedural multi-plane correspondence is a bounded development
+test, not a renderer objective, real-data result or fresh confirmation. Both
+exact and identically corrupted geometry are supplied to all methods; corruption
+is a synthetic proxy, not a trained predictor. Full goal ACTIVE/unachieved.
+
+R50 four bounded CPU tests passed: physical homography/differential labels,
+independent nonzero matrix/transport path, shared initialization/label exclusion/
+permutation, and shape gauge/finite-difference gradients. Generated fixed data
+512fit/64val/128paired scenes for each of4 development conditions. Sources frozen
+at lock SHA1c86fb2db11f38963441e23c3e8b162f6b986fdedb8a63cc8bf3922e45f7807a.
+All48 trainings/384 evaluation groups complete; controller75996 TERMINAL exit0
+(d95300), all6train+3eval children exit0. No owned live research jobs remain.
+Postcheck49758,neighborhood30940,plot30171,zoom diagnostic21607 all exit0.
+GPU devices are not exposed inside the sandbox; use host execution for CUDA,
+observe current occupancy rather than reserving fixed device numbers, and never
+modify drivers or interfere with another user's processes.
+
+Read docs/round50_local_frame_report.md before continuing. R50 oracle AUC
+four-condition means:GS57.311%,MLP59.561%,affine57.494%,HRoPE59.343%,
+isotropic57.309%,identity56.811%,RoPE58.982%. Exact values in summary.json.
+No unique full-GS advantage; zoom is a material weakness. Fine localization and
+the39-scene/166-query severe-deformation subset do show local frame advantages,
+but these are not general GS success. Base PCK8 is~100%; grid AUC ceiling77.998%
+versusMLP77.510% makes the proposed+1pp base guide unattainable. Preserve the
+old guide, explicitly stop treating it as a valid scientific rejection rule.
+
+Fixed-checkpoint diagnostics changed the next decision: RGB token permutation
+hardly changes metrics, while changing phase units/removing rotary V transport
+damages fixed models. Exact centers+cameras let the task be solved geometrically;
+R50 cannot independently verify appearance alignment. No trained operator bug:
+all48 independent formula samples maxP3.28e-7,maxV1.57e-6,zero winners changed;
+CPU validationCE max1.05e-7. GS axes did differentiate (mean ratio1.074-1.398),
+so spherical-init zero orientation derivative is not proof of training failure.
+
+R51 is COMPLETE: ROUND51_VISUAL_ALIGNMENT_PROTOCOL.md.
+Ten methods x three seeds; 1000 updates each. Original SUN3D576fit/64val/480old
+evaluation pairs; same RGB ResNet features/native positions/cameras for all,
+without per-token3D centers/depth/normals/covariances. Full GS remains primary;
+requested HRoPE/MLP comparison is explicitly reported. Two HRoPE forms: inherited
+R50 adaptation and paper-form hard bounds/rotary convention. Official repository
+still says Coming soon; these are our operator implementations, not the official
+LVSM/VGGT pipeline or its reported benchmark. Shared backbone/features/frequencies
+and QK normalization are declared adaptations. Full goal unachieved.
+
+R51 lock812c939ec3d824f5e17da5bf1ec08147f08a782d40e2d6f332ed591beecac0df,
+results/round51_visual_alignment/attempt1. All30 fits/60 exports complete; queue
+9626 TERMINAL exit0 (9ee31b), all10child tasks exit0 on initially-only-idle GPU5.
+CPU postcheck9616 TERMINAL exit0 (9fad4e); analysis/plot12476 exit0 (96081c).
+No owned live research jobs. Do not restart these or any terminal R50 jobs.
+Three bounded unit tests, all10real-input CPU checks and GPU smokes passed.
+All30 selected operator samples: maxP1.63e-7,maxV9.01e-7,zero winners changed;
+CPU validationCE max1.50e-7; all60 metrics replayed, largest EPE difference8.53e-9.
+Shared initial states and actual batches matched; all learned PE tensors changed.
+No fresh confirmation accessed; full scientific goal remains unachieved.
+
+Read docs/round51_visual_alignment_report.md. PCK8 / softEPE: MLP79.331%/6.192,
+HRoPE adaptation80.758%/5.993, paper-form79.996%/6.239, fullGS80.292%/6.107,
+affine80.225%/6.108, iso80.210%/6.128, identity80.270%/6.079,
+NoPE80.564%/5.845. HRoPE adaptation beats MLP in3/3seeds and5/5scene means
+on both metrics (+1.427pp PCK8,-3.218%softEPE), with small extra gains over
+identity; paper-form is unstable, and NoPE has better mean continuous error.
+FullGS is near-tied with generic/simple controls, not a unique shape success.
+RGB permutation reduces PCK8 by~63--72pp: genuine visual dependence in this
+limited sense, not proof of physical plane/covariance recovery. HRoPE's gain is
+mostly at15frame gap; at60frames softEPE10.253 versusMLP10.235,NoPE9.714.
+All focal ratios1; no zoom test. Three seeds/five reused rooms are developmental.
+
+R52 is COMPLETE under ROUND52_CAMERA_FRAME_PROTOCOL.md. The earlier
+docs/round52_camera_frame_plan.md draft is superseded by that executable protocol.
+P=diag(K,1) T^-1 retains camera depth in a homogeneous4D lift, with a fixed3m
+unit; A=P G with canonical Gaussian root G. It is not an inverse2D projection.
+Eight roles x three seeds: NoPE,MLP,smoothHRoPE,localGS(A=G),camera-only,
+camera-isotropic,camera-fullGS(primary),camera-affine. The localGS control
+isolates adding P; R51 used A=G^-1, so comparison to R51 alone would confound
+the convention. Same R51 cached inputs/labels, common initialization/batches,
+1000updates; no unused confirmation opened. Three bounded tests and all eight
+real-input CPU gradient checks passed. Lock:
+a92cb1b3d86db8e9a49bd7b78c136a64cfef8258fea9f09759c591ac256fe5ed.
+Evidence results/round52_camera_frame/attempt1. All24 fits/48 exports complete;
+controller16683 TERMINAL exit0(ba832b), all10child tasks exit0; CPU postcheck5902
+TERMINAL exit0(1929cd), analysis/plot89375 exit0(a233fa), reference replay51439
+exit0(17e7df). Do not restart these terminal jobs. No owned live research jobs.
+Training used initially-only-idle GPU5; eval used later-idle GPU3/5. Future GPU
+selection must inspect current occupancy. All24 selections sealed before export.
+All24 independent NumPy operator samples: maxP1.63e-7,maxV2.23e-6,zero winner
+changes; CPU validationCE error<=1.39e-7. All48 metric groups replayed; EPE error
+<=7.58e-9px, PCK/tails exact, warnings0. All PE tensors changed. Nine repeated
+NoPE/MLP/HRoPE checkpoints equal R51 tensor-for-tensor; not new independent trials.
+
+Read docs/round52_camera_frame_report.md. PCK8/softEPE: camera_only87.841%/4.2069,
+cameraGS87.457%/4.4012, cameraIso87.298%/4.3951, cameraAffine87.218%/4.4123,
+localGS80.352%/6.0824, NoPE80.564%/5.8445, MLP79.331%/6.1923,
+HRoPE80.758%/5.9931. Camera-only beats NoPE by7.277pp and28.021%softEPE,
+with3/3seeds and5/5scenes positive. FullGS is worse than camera-only in3/3seeds
+and all5scene softEPE means (+4.619%); iso/affine differences are small ties.
+Do not rename camera-only as a Gaussian success. Camera benefit extends to60gap:
+softEPE7.009 versusNoPE9.714,GS7.334. RGB permutation drops camera-only32.439pp,
+GS36.244pp; visual dependence plus a strong camera prior, not physical-GS recovery.
+No unused confirmation accessed; full goal remains unachieved.
+Data-free algebra witness13930 TERMINAL exit0 (55ea94) records that common L
+cancels from G_i G_j^-1 (max1.67e-16), whereas inverse-frame translation retains
+whitening. Read docs/round52_operator_scope_note.md; this limits physical claims,
+does not alter the frozen trial and is not a proven cause of task performance.
+R51 already shows the task/metrics can register a
+limited HRoPE adaptation benefit, but not difficult-geometry superiority or GS
+generality. The SPD-frame pure-rotation limitation is a mathematical observation
+(docs/round51_operator_scope_note.md), not an established cause of task errors.
+Do not discard NoPE, inflate tiny ties into failures, or return to static repair.
+
+R53 archival execution notes (completion above supersedes the pause state):
+docs/round53_ray_frame_draft.md records the design origin; the executable
+ROUND53_RAY_FRAME_PROTOCOL.md is now FROZEN and GPU training has started.
+Three bounded tests passed again (48127 exit0,839afb); ten real-input checks
+and twelve immutable reference-function/initialization/batch checks passed
+(38056 exit0,058a77). Lock c19be86d01aae2f0928299da65b9414bca8ec40e5d4c322e6e9dbe9a31c46b5c.
+User subsequently PAUSED the goal. Queue51887 TERMINAL exit143(4c5f73) and CPU
+postcheck36170 TERMINAL exit143(dcd3c7) were intentionally stopped with SIGTERM,
+along with owned training child65399. All three process exits were verified.
+At that pause16/18 new fits and12 references were saved, without complete evaluation.
+The subsequent authorized closure is recorded above. Preserve the interruption
+history and do not restart completed jobs.
+See results/round53_ray_frame/attempt1/user_pause.json; queue_status_before_pause.json
+preserves the interrupted queue state. This is user interruption, not model failure.
+Only currently idle GPUs0/1/3/5/7 were used at launch; future launches recheck.
+A=(C G)^-1,mu=d*camera_ray,6D
+Cholesky covariance+one depth; full-head4D transport primary, half-head native
+rotary hybrid as a fixed control. This retains shared-scale whitening of center
+differences and uses one main operator, but no utility is established. Include
+the newly strong frozen R52 camera projection operator, not just NoPE/MLP/HRoPE.
+The model factory has10roles:18new fits (pose-only,ray-point,ray-iso,
+ray-full,ray-affine,ray-hybrid)x3seeds and12 explicitly reused reference models
+from R52. Original training locks and records are retained; reuse is not new
+confirmation. Scientific inputs/comparisons and bounded postcheck are frozen.
+Preserve unused confirmation and the native3D/cross-task goal. The completion
+report above supersedes these historical execution details and the former pause.
 
 The user's route review exposed an unsupported dependency: success of an
 untrained static region kernel had become a prerequisite to learning/GS tasks.
@@ -387,7 +709,8 @@ retrained ablation, independent confirmation or evidence of baseline superiority
 NO R45 job remains active. Terminal record execution_completion.json and full
 report docs/round45_phase_warp_report.md are authoritative. Fresh cohort untouched.
 
-NEXT review: docs/round46_native3d_design.md, UNFROZEN/unimplemented. Stop
+The review in docs/round46_native3d_design.md has become frozen R46 (status
+below). Stop
 promotion/tuning of R45's 2D candidate. Cover native3D coordinates inside a full
 Transformer with matched point/non-Gaussian controls; do not substitute a
 rendering task. Source inspection found R5 mean3 is a patch centroid whereas
@@ -396,3 +719,490 @@ center-lifting geometry separately (e.g. same center geometry with2D and3D
 point controls); the code difference does not prove a cause of old failures.
 No new arrays opened for this review. It also does not establish a second task,
 general geometry/robustness/cost or untouched confirmation. Full goal ACTIVE/unmet.
+
+R46 COMPLETE: ROUND46_NATIVE3D_PROTOCOL.md,
+models/round46_native3d_pe.py, experiments/round46_native3d_{data,train,audit}.py.
+The preceding turn made concrete progress: R45's40new trainings and60diagnostic
+conditions completed and rejected its promotion; no R45 process remains live.
+R46 tests native3D positions in the same complete Transformer, with center2d
+and gaussian2d roles on the SAME newly center-lifted geometry. These isolate
+the changed position anchor from the PE effects. The old point2D result remains
+as a historical geometry control, not a falsely matched new-input baseline.
+
+Center rays use existing RGB-predicted depth, sanitized/clamped before averaging
+the four half-pixel-center samples. All864 points are expressed in the query
+camera frame, centered and isotropically RMS-normalized, then multiplied by12.
+Both attention directions share those3D coordinates. Input-only normalization
+and no covariance/label mask in forward. Known cameras remain supplied metadata.
+Same visual feature bytes, old labels,432keys and query population. 1605old
+scene/frame records frozen; no unused cohort access. The3D PE's covariance is
+a learned field parameter, not physical optimized-GS R/S.
+
+55new trainings=11roles x5seeds plus5 identity-checked historical point controls.
+Primary64Gaussian centers,full3D precision,zero64x3 coordinate mixture then
+original-form unitary RoPE;768added parameters. Iso448/fixed192/fixed-centers576/
+Fourier320/MLP448/affine9/free-frequency72/point3d0/center2d0/gaussian2d252.
+All3D roles start exactly at a common3D point function;2D controls start at the
+common2D point function. Shared neural initialization and1000sampled batches
+match the prior baseline identities. Same1000updates/batch8/selection budget.
+Primary criteria and continuous component reporting are prospective in protocol;
+full3D/cross-task robustness/cost and untouched confirmation are still outstanding.
+
+Freeze+preflight tool25108 TERMINAL exit0, all6tests passed. Frozen lock SHA256
+45cdfe3e5d81792573a2c87964e78067a013e136bd1bf8ad539236ae1c382a69.
+Current evidence results/round46_native3d/attempt1. Bounded controller tool
+handle82629 is now TERMINAL exit0; exact historical host PID and launch identities
+are in execution_handles.json. Do not restart it. It ran data construction/independent
+geometry audit -> CUDA smoke ->5seed training shards -> checkpoint seal ->
+old_eval geometry construction/audit ->5exports -> full-query metric replay.
+Actual state/exits are in queue_status.json/queue.log and execution_completion.json.
+All stages completed; scientific results are recorded below. Full goal ACTIVE/unmet.
+
+R46 update: data child61213 exited0 and all576train/64val pairs' coordinate
+arrays passed independent geometry reconstruction; maximum coordinate error
+3.815e-6, visual input bytes identical. All11 CUDA smoke roles passed, maxP
+1.681e-7,zero winner changes and exact same-dimensional point initialization.
+Training launched on verified idle GPUs1..5: seeds11/22/33/44/55, child host
+PIDs108770/108771/108772/108788/108789, respectively. These are historical controller
+children, not tool handles; all have exited0. Parent handle82629 is also terminal.
+Training launch records and UUIDs also saved in execution_handles.json.
+
+R46 terminal result: all55new trainings+5historical controls sealed and exported,
+all480old_eval pairs' new geometry passed, all57600frame metric rows replayed.
+PCK4/PCK8/valid count discrepancies0; maximum CE frame-sum difference1.612e-4.
+New sampled NumPy P error max3.669e-7,0winner changes/no warnings. All55 shared
+and existing active positional parameters updated. Best steps500:7,600:6,700:6,
+800:15,900:14,1000:7; no convergence claim. Peak774.835MiB, summed per-run
+training/selection2417.218s, not a formal throughput comparison. Controller
+handle82629 directly returned exit0;15children all exit0,active[]; no R46 jobs live.
+
+Primary gaussian3d PCK8=.879149725 vs point3d .851576467 (+2.757326pp),5/5
+positive seeds/scenes and CE-7.4948%. However mlp3d=.882505583: primary loses
+.335586pp,0/5winning seeds,1/5winning scenes. Gaussian-minus-Fourier is only
++.060967pp,3/5seeds and2/5scenes. Thus the nonlinear-coordinate-map benefit
+is real on old data but is not a Gaussian-specific advantage. Strong same-input
+center2d=.924121336, so primary is4.497161pp lower,0/5seeds/scenes. No promotion;
+this does not depend on the1pp margin or a numerical audit veto.
+
+Center2d-minus-legacy anchor change +.061345pp,4/5seeds3/5scenes;
+gaussian2d-minus-center2d +.006720pp,3/5seeds3/5scenes. Point3d-minus-center2d
+-7.254487pp combines dimension/normalization/frequency configuration, not pure
+dimension. Full-minus-fixed3d/iso3d/fixed-centers3d +.196522/-.076409/+.116501pp;
+no stable full-ellipsoid advantage over isotropy. The center-lifting change does
+not supply evidence that anchor/region conflict explains all prior failures.
+Primary zero-V PCK8=.651677441; V-path dependency is not PE-shape attribution.
+
+Report docs/round46_native3d_report.md. Stop promotion of this frozen global
+Gaussian warp; no R47 candidate is frozen or launched. Subsequent design must
+address what Gaussian centers/orientations/scales add beyond ordinary nonlinear
+position maps inside a complete Transformer. Rendering remains optional; matching
+is one task, not generality. Full geometry/robustness/cost, a second task and unused
+joint confirmation remain outstanding. Fresh cohort untouched; goal ACTIVE/unmet.
+
+R47 COMPLETE: ROUND47_CONDITIONAL_GAUSSIAN_PROTOCOL.md,
+models/round47_conditional_gaussian.py and experiments/round47_conditional_*.py.
+The preceding goal turn was progress: R46 completed all55 new trainings/old_eval,
+independent metric replay and a terminal report, rejecting its promotion. No R46
+process is live. R47 changes global Gaussian warps to query-conditioned Gaussian
+positional channels inside the complete Transformer. One shared linear predictor
+from the current normalized token outputs head-specific relative means and SPD
+precisions; an exact quadratic Q/K lift uses5/9 positional channels in2D/3D.
+No renderer, physical input covariance, rotary hybrid or final geometric shortcut.
+
+This has direct Gaussian-attention/PE precedents (EMNLP2018 localness, ICLR2020
+appendixE generalized quadratic PE, ICCV2021 SMCA); no novelty theorem is claimed.
+The new question is whether conditional Gaussian constraints improve on ordinary
+dynamic quadratic PE at the same capacity and initial first derivative. Six
+families in2D/3D (conditional/diagonal/isotropic/static/fixed/free-quadratic) plus
+NoPE give65new runs. Reuse30 fully checked R46 point/warp/MLP/Fourier controls.
+Primary conditional3d remains fixed; secondary2D cannot replace a failing primary.
+Same old data bytes, shared initialization,1000updates/batches and selection.
+Separate full-vs-component attribution remains continuous; no new static gates.
+
+Freeze/preflight handle73320 TERMINAL exit0, all6CPU tests passed, including65
+paired initial full-network Gaussian functions, independent nonzero pair energies,
+SPD/shape gradients, free-quadratic first-derivative match, input scope and
+translation/permutation plus joint coordinate/precision identities. These are
+implementation checks, not end-to-end generalization. Evidence
+results/round47_conditional/attempt1, lock SHA256
+0f1c841699d8f3f6b9df3f606ee4782c6aac6ebbe0e45bc1fe4d2886a438ab0a.
+Controller tool handle13639 is TERMINAL exit0; historical parent/child identities
+are in execution_handles.json and queue_status.json. Do not restart historical PIDs.
+All controller stages completed: CUDA smoke ->5seed training shards ->seal ->
+5exports ->metrics. Results below. No unused cohort access; full goal ACTIVE/unmet.
+
+R47 CUDA smoke completed exit0 for all13roles: maxP1.563e-7,0winner changes,
+all initial full-network fixed-Gaussian/NoPE reference differences0. Five training
+children launched on verified idle GPUs1..5: seeds11/22/33/44/55,
+PIDs40608/40609/40610/40612/40613. Controller host PID40250/tool13639 is the
+historical handle; the children are not separate tool sessions. All65new runs
+and the controller have now exited0; do not restart historical PIDs.
+
+Bounded old-VAL input-geometry diagnosis was separately frozen before execution:
+experiments/round47_geometry_diagnostic.py, evidence
+results/round47_conditional/geometry_diagnostic1. Handle89911 TERMINAL exit0.
+All64oldVAL pairs/10556valid queries/432keys, no fitting or R47 changes. Untrained
+nearest-key PCK8: projected2d93.4255%,native3d55.3050%,native3d_XY54.8030%.
+Dropping Z does not recover the loss. Label-weighted predicted-anchor residual
+Z variance fraction87.70%,covariance condition25.70; these are not true3D errors.
+Single old VAL scene, not general confirmation or a trained-model comparison.
+docs/round47_scope_note.md records exact scope, direct Gaussian-attention priors,
+and the algebraic fact that centered3D coordinates do not retain a fixed camera
+origin's perspective projection. Same-input3D comparisons remain valid and all
+frozen R47 rules remain unchanged. Native point-cloud classification is a possible
+second task; only official metadata/literature reviewed, no data downloaded/read.
+
+R47 terminal result: all65new+30reused models sealed/exported, all91200 metric
+frame rows replayed with0 PCK4/PCK8/valid-count discrepancies; maxCE frame-sum
+difference2.693e-4. New independent sampled P error3.309e-6,0winner changes,
+no warnings. All65shared weights changed, all50models with learned position
+parameters changed every positional tensor. Best steps400:1,500:1,600:3,700:6,
+800:6,900:19,1000:29; no convergence claim. Peak655.376MiB, summed per-run
+training/selection2597.096s. Tool13639 directly returned exit0,13children all0,
+active[]. No main R47 job remains live; execution_completion.json is authoritative.
+
+Primary conditional3d PCK8=.834798111 versus rope3d .851576467 (-1.677836pp),
+0/5positive seeds/scenes; versus mlp3d .882505583 (-4.770747pp),also0/5 each.
+No promotion. Full-minus-fixed/static/isotropic/diagonal3d +7.659334/+3.948869/
++3.437183/+.734369pp; all5/5seeds,scenes5/5 except diagonal4/5. Full-minus-free
+quadratic3d +.744784pp,5/5seeds4/5scenes. Conditional ellipsoid structure has a
+local effect, but does not beat the stronger methods. The failure is not a
+floating-point audit veto or solely the1pp utility criterion.
+
+Prespecified secondary conditional2d PCK8=.923258078 vs rope2d .924121336:
+-.086326pp,2/5seeds2/5scenes,CE+.7915%. PCK4 improves+.850468pp,4/5seeds5/5
+scenes; EPE improves-.168147px(-3.5837%),5/5seeds5/5scenes,with larger effect in
+Harvard. These recorded metrics show a tradeoff, not blanket failure or a renamed
+successful primary. Full2D beats free_quadratic2d by2.290998pp,5/5seeds/scenes.
+Versus isotropic/diagonal2d effects only+.045777/+.022268pp. Full/free comparison
+changes SPD plus parameter coupling; it does not isolate SPD as the sole cause.
+
+Prospective synthetic CUDA cost probe source experiments/round47_cost_probe.py,
+results/round47_conditional/cost_probe1. Freeze9095 and run44250 TERMINAL exit0,
+GPU1 verified idle. Batch4,N432/1024,six selected models,five warmups+20rotating
+repeats per condition. Conditional2d inference14.277/14.324ms vs rope2d9.581/
+9.682ms (about1.48--1.49x); forward/backward38.744/38.596ms vs31.297/30.653ms.
+N1024 inference incremental allocated244.5MiB vs90.5MiB; forward/backward
+505.32vs468.38MiB. Small parameter count is not free runtime/memory. Shared-host
+probe, not production throughput/task-length generalization. No probe jobs live.
+
+Full report docs/round47_conditional_gaussian_report.md. Retire promotion of this
+frozen primary; keep its genuine component and secondary fine-localization
+signals. Next research direction: independent native3D Transformer point-cloud
+classification, provisionally ModelNet40, with official train-only development
+and official test reserved; no R48 spec frozen or data downloaded yet. Do not
+keep patching matching frequencies/widths or let another task erase matching
+limitations. Cost evidence is recorded above; applicable geometry/robustness,
+cross-task utility and unused joint confirmation remain unmet. All existing
+unused confirmation scenes untouched, goal ACTIVE.
+
+R48 STARTED: ROUND48_NATIVE_POINT_PE_PROTOCOL.md and
+models/round48_point_transformer.py. The user's concern about rendering-task
+drift remains controlling: GS center/scale/orientation parameterization must
+be tested inside actual Transformer positional channels against matched strong
+controls. R41/R42 rendering results never establish that claim. R43--R47 returned
+to that question; their negative results are preserved, not erased by a new task.
+
+This turn made concrete progress: pinned public ModelNet40 HDF5 acquisition,
+new paired four-block self-attention classifier, data/train/audit/controller
+implementations, frozen prospective protocol and six passing synthetic tests.
+The unchanged R47 conditional3D Gaussian positional form is primary; diagonal,
+isotropic, static, fixed, equal-capacity free quadratic, RoPE, Fourier/MLP warp
+and NoPE give ten roles x five seeds. XYZ content and all non-PE weights/training
+streams are shared. NoPE still receives XYZ. No renderer or task-specific loss.
+This global scalar-attention model is not a canonical Point Transformer replica.
+
+Acquisition tool40422 TERMINAL exit0 (chunk28a56c), archive435335111bytes,
+SHA256 f01b8189281fae5790e39deb9f3eca86e446b771bdc665c6ad05f28d039b20e7,
+HF revision d5dc795541800feeb7a4b3bd3142729a0d2adf7a. The original Stanford
+server timed out; pinned mirror is referenced by NVlabs research code. Published
+mirror hash verified, no independent original-server digest. Acquisition opened
+only ZIP metadata. Main freeze occurred before HDF5 decoding. Preparation opened
+only five official TRAIN HDF5 files; official TEST members remain unopened.
+Stratified declared split:7910 fit/965 val/965 dev_eval, all40classes, no byte-
+identical clouds across partitions. All selected models must be sealed before
+model dev_eval; its raw arrays were automatically partitioned during preparation.
+Neither this development split nor five seeds constitutes fresh joint confirmation.
+
+Main lock af09505eb0db1ea8becbe50da9857298b898f619637772a9737b63ea5a0d546f,
+19 frozen sources; evidence results/round48_modelnet/attempt1. Freeze/preflight
+tool46527 TERMINAL exit0 (chunk3bd625), six CPU tests passed. CUDA smoke child9316
+and data child9549 exited0. All ten CUDA roles passed direct NumPy positional
+checks: max probability error2.0628e-7,zero winner changes. Synthetic batch32,
+N512 training-step medians:RoPE35.524ms,conditional61.894ms (5warmups/10repeats),
+not task utility or production throughput. No scientific setting changed afterward.
+
+Controller tool handle24005 is LIVE, parent hostPID9006; do not restart it.
+Its actual child state is in queue_status.json and tool output; initial handles
+are saved in execution_handles.json. Currently four seed shards were launched:
+seed11/PID9725/GPU1,seed22/PID9726/GPU2,seed33/PID9727/GPU4,
+seed44/PID9728/GPU5;seed55 pending. GPU3 was occupied by another job and skipped.
+These child PIDs are not separate tool handles. Each role runs120epochs,batch32,
+512points,common AdamW/warmup/cosine/augmentation/selection; eight GPU-hours per
+seed shard maximum. Controller will seal50models,export prescribed development
+variants and replay metrics. Read the LIVE handle rather than starting duplicates.
+No R48 utility conclusion yet; all existing confirmation scenes and official
+ModelNet test remain unused. Full research goal ACTIVE/unmet.
+
+R48 continuation: controller24005 re-polled live (tool returned the same active
+session, not a restart). Four seed shards are progressing through the first of
+ten roles each, approximately epoch45/120 at the latest observation; seed55 is
+still pending. No role-level comparison is valid from these unmatched partial
+seed results. Main frozen sources/configuration remain unchanged.
+
+Bounded literature/source check completed while training. At author commit
+3e08aa732a81033f1c07c0b0533c334fe448e0d3, GaussianMamba3D replaces the patch
+encoder, but retains a separate3->128->trans_dim MLP positional encoder
+(Mamba3D/models/Mamba3D.py:590,604,717). Therefore its Gaussian encoder results
+are not a direct test of Gaussian Transformer PE. The stored-mean covariance
+gradient hook (PointNet/encoder.py:1058) also cannot simply be called the natural
+gradient of our shared conditional predictor. Sources and limits are recorded
+in results/round48_modelnet/preconditioning_scope1/result.json.
+
+A data-free analytic counterexample was fixed and executed in
+experiments/round48_preconditioning_scope.py (exit0,chunk8120bf). For3 scalar
+Gaussian means sharing2 weights, pullback Fisher J^T F J=[[3,2],[2,6]], weight
+loss gradient[3,1]. The true natural-gradient direction is[8/7,-3/14], whereas
+preconditioning outputs before backprop gives[2,.75], not even collinear. At
+equal exact KL1e-4, linear loss decreases are.0253546vs.0206474. This only
+rejects an unjustified optimizer equivalence; it does not show that the output
+hook is useless, explain R47/R48 failures, or require a new optimization gate.
+No task data read, no R48 change, no new candidate or result promotion.
+
+R48 progress: the first4/50 trainings are COMPLETE:conditional/11,diagonal/22,
+isotropic/33,static/44. Each executed120epochs/29760updates; selected epochs
+115/105/95/60 respectively under the frozen minimum-val-CE rule. All shared
+weights and positional parameter tensors changed. Per-run training/selection
+times1945--1982seconds, peak allocated1.490--1.509GB (decimal bytes), not a formal
+inference benchmark. A first-completion check (tool5464 TERMINAL exit0,chunkd64b80)
+verified output hashes, budget/selection and frozen19sources, then replayed the
+selected validation CE and sampled first-layer positional probabilities. Maximum
+probability difference1.9632e-6,zero winner changes; max val CE difference9.30e-9.
+Snapshot:results/round48_modelnet/attempt1/early_training_check.json. This covers
+four runs only, does not seal the full experiment or access dev_eval, and does
+not rank methods across different seeds. The full planned audit is still pending.
+
+Controller24005 remains LIVE with the same four training child PIDs; it has
+automatically started diagonal/11,isotropic/22,static/33,fixed/44. Seed55 is
+still pending. No R48 source/configuration change, no fresh confirmation access,
+no method utility conclusion. Continue the existing handle rather than relaunch.
+
+R48 reporting preparation COMPLETE while training continues: new standalone
+experiments/round48_report.py renders all10roles, all5seed differences, all7
+prespecified conditions, parameter counts and training/selection cost. Whiskers
+are seed ranges, not confidence intervals; robustness plots use each method's
+own base and accompany absolute OA tables. The reporter preserves the frozen
+decision and requires all50sealed models plus terminal successful controller
+state. It is not imported by the training pipeline and does not change any of
+the19frozen scientific sources or the candidate/selection rules.
+
+Synthetic-only rendering smoke10349 exited0 (chunkc18dd8), plots inspected;
+small reporting refinements preserved that source/output and smoke21787 exited0
+(chunk988fe1). results/round48_modelnet/reporting_smoke1 and reporting_smoke2
+contain ARTIFICIAL FIXTURES, NOT task results; never cite their numbers as
+experimental evidence. A direct incomplete-run guard check (tool25116) rejected
+production reporting while queue24005 is live, before reading task metrics or
+prediction arrays; report1 does not exist. When the main controller completes,
+run the reporter with the existing Python and MPLCONFIGDIR=/tmp/grope-round48-matplotlib,
+then inspect real plots and write the scientific interpretation. Goal ACTIVE.
+
+R48 live progress: fifth complete run fixed/44 executed120epochs/29760updates,
+selected epoch85, shared weights changed, zero learned PE parameters by design;
+training/selection1305.58seconds. Total5/50 complete. Controller24005 was directly
+polled live (chunkcbe4d0); seed44 now trains free_quadratic, and other shards
+continue their second roles. Same four owned GPUs/PIDs,seed55 pending. No new
+audit gate or model comparison from selection data; dev_eval and confirmation
+remain unopened by the evaluator. Continue existing controller.
+
+R48 data-identity check COMPLETE: experiments/round48_source_identity.py and
+results/round48_modelnet/source_identity1. Prospective metadata-only plan,
+exit0(chunk34b65e),0.54seconds: all9840 original mesh filename-stem IDs unique;
+fit7910/val965/dev_eval965 have zero cross-partition shared IDs. All40class
+counts match the declared manifest in every partition. Only five official-train
+ID-list JSONs and shape_names.txt were decoded; no HDF5/prediction/test members
+opened. This checks source-object names, not geometric near-duplicates with
+different names, and does not change the split or add a model-promotion gate.
+
+R48 progress:8/50 trainings complete. Four paired seed groups are now available:
+11 conditional/diagonal,22 diagonal/isotropic,33 isotropic/static,44 static/fixed.
+Actual initial shared-weight digests and full sampling/augmentation stream
+digests agree within every group, and differ across seeds. All completed runs
+used120epochs/29760updates; all19frozen scientific sources unchanged. Metadata
+snapshot pairing_snapshot1.json (exit0,chunkc2656e); no predictions or dev_eval
+read and no cross-method ranking. Full50-run audit remains pending.
+
+GPU3 became genuinely idle; controller24005 observed two free samples and
+automatically launched seed55,hostPID104142,UUID
+GPU-bed502d0-6c7a-c66d-42b6-8aa08676eec7. The launch was directly returned by
+the existing live handle (chunkc0b694); fixed/55 has started training. All5seed
+shards are now active on GPUs1/2/4/5/3, pending[]. Other four child PIDs remain
+9725/9726/9727/9728. Latest parent poll chunk1cf300 confirms live; do not restart.
+Seeds11/22/33 now train isotropic/static/fixed,seed44 free_quadratic. Full goal
+ACTIVE/unmet; no task utility claim or fresh confirmation access.
+
+R48 verified-wait continuation: controller24005 directly returned LIVE again
+(chunk87650a). Now10/50 trainings are complete; new free_quadratic/44 and
+fixed/55 both executed120epochs/29760updates, with selected epochs110/70.
+Their shared weights changed; free_quadratic/44 positional tensors changed.
+All five owned seed shards remain active. Seeds11/22/33 continue isotropic/
+static/fixed; seed44 now trains RoPE,seed55 free_quadratic. No restart, changed
+scientific setting, development-evaluation ranking, or confirmation access.
+Continue the existing controller through all50 runs and its planned audit/export;
+the research objective remains ACTIVE and unachieved.
+
+R48 interpretation clarification COMPLETE, before dev_eval: data-free
+experiments/round48_control_scope.py, results/round48_modelnet/control_scope1,
+tool57502 TERMINAL exit0(chunk6feaff). The equal-capacity free quadratic control
+has precision diagonal in(-5/16,7/16) and linear coefficients in(-1/4,1/4).
+Finite Gaussian raw outputs realize P=exp(2)/16 I=.461816I, outside the free
+diagonal bound; free outputs realize P=-I/16, impossible for Gaussian SPD.
+At a precision feasible for both, P=e/16 I, Gaussian mean(2,0,0) gives
+b=(e/8,0,0)=.339785 on x, beyond the free linear range. Thus the bounded
+coefficient families are not nested. The comparison changes nonlinear maps
+and attainable ranges as well as SPD and center-precision coupling; parameter
+count/initial-tangent matching does not isolate SPD. No trained coefficients,
+task data or checkpoints were inspected. This does not show a bound is active
+in practice, diagnose R47/R48 utility, change R48, or create an additional gate.
+All19frozen sources unchanged. The standalone reporter now states this limit;
+its calculation/plotting/selection code and earlier synthetic smoke artifacts
+are unchanged. Controller24005 remains LIVE;11/50 trainings complete, seed33
+has moved from fixed to free_quadratic. Full objective ACTIVE/unachieved.
+
+R48 verified wait: live controller24005 polled repeatedly, latest chunk12187d;
+14/50 trainings now complete. Additional fixed/33,isotropic/11,static/22,rope/44
+all ran120epochs/29760updates and changed shared weights (metadata read chunk
+cb1e90); selected epochs85/55/65/90. Current five live shards train static/11,
+fixed/22,free_quadratic/33,fourier/44,free_quadratic/55. Original owned PIDs and
+parent9006 unchanged. No utility ranking or additional gate; all50-model audit
+and dev_eval remain pending, confirmation remains unused. Continue handle24005.
+
+R48 verified-wait continuation: same controller24005 still LIVE (chunke1f441),
+16/50 trainings complete. New free_quadratic/33 and /55 completed120epochs/
+29760updates, selected epochs120/90, shared and all positional tensors changed
+(metadata chunkbb01e6). A selected final epoch is not a convergence claim.
+Current roles:static/11,fixed/22,rope/33,fourier/44,rope/55; five shards continue.
+No model/configuration changes this turn, no dev_eval exports yet, no additional
+audit or confirmation access. Keep waiting on24005; objective ACTIVE/unmet.
+
+R48 verified wait: controller24005 directly returned LIVE (chunk3d5586), now
+20/50 trainings complete. New fixed/22,fourier/44,static/11,rope/55 all completed
+120epochs/29760updates, selected epochs65/85/75/90; all shared weights changed,
+and learned positional tensors changed where present (metadata chunke6a0b1).
+All19frozen sources still match. Current roles:fixed/11,free_quadratic/22,
+rope/33,mlp/44,fourier/55. Five shards active, no dev_eval exports, no setting
+change or fresh confirmation access. Full audit/evaluation and goal remain unmet.
+
+R48 coverage review COMPLETE during training: source/report hashes and findings
+in results/round48_modelnet/coverage_review1.json (chunkbe3302). R40 decoupled
+AbsRel .164532846 versus point .161017277 is +2.1833% WORSE, not an improvement.
+R40 already combined center3D RoPE with physical shape-descriptor distance, and
+its center_rbf role combined RoPE with a learned scalar center-distance penalty.
+That residual-depth model and its reverse-V anomaly do not establish full
+Transformer utility. R44 replaced RoPE by normalize(content+Gaussian vector);
+R45/R46 warped RoPE coordinates; R47/R48 Gaussian roles use unrotated content
+plus conditional quadratic channels. These inspected roles do not directly test
+unwarped center RoPE together with the conditional Gaussian spatial prior.
+
+This leaves an UNIMPLEMENTED candidate question: tau*<R(x_i)q_i,R(x_j)k_j>
+-.5*(delta-m_i)^T P_i*(delta-m_i), with the existing quadratic positional lift.
+It could test complementary phase/content interaction and adaptive locality,
+against each part alone, fixed/isotropic priors, free quadratic plus RoPE and
+retained strong coordinate-map controls. A coverage gap is not positive evidence
+or novelty; R40's simpler combination and all negatives remain. This is not a
+frozen next round, new gate, or license to modify R48. Decide whether it is worth
+testing only after the full current result. No new task arrays/checkpoints or
+confirmation were read for the review; existing aggregate reports were read.
+
+R48 live controller24005 confirmed again (chunk7e4838);26/50 trainings complete.
+Additional rope/33,mlp/44,free_quadratic/22,fixed/11,fourier/55,fourier/33 all
+ran120epochs/29760updates; selected epochs120/85/70/75/100/85. Shared weights and
+learned PE tensors changed where present (metadata chunks3d531b/3ba163).
+All19frozen sources still match. Current roles:free_quadratic/11,rope/22,mlp/33,
+nope/44,mlp/55. Same five shards active, no dev_eval exports or confirmation
+access. Full audit/evaluation and full research objective remain unfinished.
+
+Focused primary-source literature review COMPLETE during R48 training:
+results/round48_modelnet/literature_scope1.json (chunkf057bb). Four inspected
+sources: BAM arXiv2505.22842v4, MoPE2606.01258v1, HeatTok2608.22485v1, and
+Localized Gaussians for Point Clouds Correspondence2409.13291v2/STAG2024.
+BAM already uses a generalized-Gaussian relative-index log-prior. MoPE's actual
+experiment uses absolute-origin Gaussian-envelope positional vectors; Section7
+explicitly leaves its proposed Morlet-RoPE validation for future work. Its small
+single-seed EGA combination is not evidence for our conditional3D joint score.
+HeatTok directly encodes Gaussian center/scale/orientation using blended phase
+coefficients; our algebra C^2+S^2=1-2a(1-a)(1-cos(u-v)) shows this blend is not
+generally unit modulus. This is not a measurement of its trained attenuation or
+a rejection of its task results. The STAG paper mixes Gaussian-only geometry
+heads with RoPE dot-product heads, and reports substantial noisy-data weakness;
+it does not test the same-head conditional anisotropic joint prior here.
+Do not claim novelty from our repository coverage gap, import these task claims
+as our evidence, or conflate amplitude modulation with additive log-priors. The
+review is bounded, not exhaustive; no external implementation was reproduced,
+no new gate was added, and no task arrays/checkpoints/confirmation were read.
+All19R48frozen sources remain unchanged. Finish R48 before choosing a new round.
+
+R48 COMPLETE: controller24005 TERMINAL exit0 (chunkeb4af0), all50trainings and
+all50exports finished; queue state complete/active[]. All14child stages exited0.
+All training/export PIDs, including final train55/104142 and export55/76953,
+are terminal. Observation cells1619/1623/1626/1630/1633/1636/1639/1642/1646 are
+also terminal. Do not restart any old job. Report39867 exited0(chunkee8538),
+plots inspected; results/round48_modelnet/attempt1/report1/report.md and
+new docs/round48_native_point_report.md contain results/interpretation.
+
+All50models ran120epochs/29760updates. Within-seed shared initialization and
+actual sampling/augmentation digests matched; frozen selection rule held.
+Shared weights changed50/50; all positional tensors changed in35/35learned-PE
+models. Max sampled P error6.92553e-6,zero winner changes/zero warnings; max
+validation CE replay error1.32635e-8. Full dev_eval replay50models*965objects*
+7conditions gives350metric rows,zero count discrepancies,max CE error1.15086e-7.
+Permutation max logits1.56164e-5,zero class flips. Independent formula paths,
+not an independently authored complete network/lab reproduction. All19frozen
+sources still match. Sum training+selection77257.650seconds; peak1615664640B;
+shared-host timings, not a throughput benchmark. Two models selected epoch120,
+so no universal convergence claim. Officialtest and old confirmation untouched.
+
+R48 primary conditional OA88.6217617/MCA83.6360874/CE.443558689.
+Means OA:diagonal89.0777202,isotropic88.5388601,static87.9378238,fixed87.9585492,
+free_quadratic88.6424870,rope88.5181347,fourier88.4352332,mlp88.8911917,
+nope87.4196891 (OA/MCA in percent). Conditional OA differences in pp:
+vsrope+.103626943(3/5seeds),fourier+.186528497(2/5plus2ties),
+mlp-.269430052(1/5),free-.020725389(1/5plus1tie),nope+1.202072539(5/5).
+Vsdiagonal-.455958549(2/5),isotropic+.082901554(3/5),static+.683937824(3/5),
+fixed+.663212435(4/5). No primary promotion or renamed component winner.
+Near ties are not material failures, but no stable strong-control advantage
+emerges even without treating the1pp development margin as a binary theorem.
+Conditional mean train+selection32.78min vsRoPE19.28/MLP22.26. Generality unmet;
+R47's same-3D-input matching negative remains and cannot be erased by this task.
+
+R48 robustness:conditional OA Y90=88.725389,jitter02=88.476684,
+points256=87.958549,points1024=89.139896,permuted=base. All roles collapse under
+the prescribed Rz45@Rx30 condition to OA4.4974--8.0000%;conditional6.549223.
+OnlyY-axis rotations were trained; no SO3 invariance claim. A large shared
+failure warranted one bounded check, not a new gate or an angle/temperature
+sweep. New experiments/round48_rotation_check.py and results/round48_modelnet/
+rotation_check1 saved plan/source before checking task arrays or replaying models.
+Tool64394 TERMINAL exit0(chunke96756),4.29seconds. All965olddev inputs match an
+independent coordinate-wise rotation within1.06130e-7; orthogonality5.45877e-8,
+det.9999999924, inverse error1.31837e-7, checked distance error1.63651e-7.
+Up-axis tilt52.23875deg. Identity-hash-selected32objects,seed11,conditional/
+rope/nope CPU replay matches saved base/SO3 predictions within6.91414e-6 logits,
+zero class flips; inverse rotation restores base predictions in this sample.
+No observed transform/replay defect; retain common orientation failure without
+claiming its causal training explanation. No retraining,new task estimate,
+fresh data or original-result replacement. Diagnostic checked the frozen inputs
+and19scientific sources again; all unchanged.
+
+NEXT: decide/freeze a bounded joint-phase/locality experiment on existing
+matching development data, keeping the full objective and original negatives.
+The exact question is whether center RoPE's content-relative phase and a learned
+Gaussian spatial preference complement each other inside one Q/K score. The
+existing quadratic lift supplies9extra channels in3D. It is a hypothesis, not
+an implemented/proven method or novelty claim. Compare both parts alone,
+RoPE+fixed/compact Gaussian priors,RoPE+equal-capacity free quadratic and the
+strong MLP/Fourier/NoPE controls with matched budgets/initialization/data.
+The full-Gaussian/free comparison includes nonlinear/range differences, not
+isolated SPD. A gain shared by a fixed prior is not evidence for adaptive GS
+shape. If there is a stable matched result, validate the same formula on native
+point clouds and then untouched confirmation; do not relabel old dev as fresh.
+No R49 protocol/model/training exists yet. No new module/loss/renderer is needed
+for this proposed score change. Goal ACTIVE/unachieved, no active R48 jobs.
