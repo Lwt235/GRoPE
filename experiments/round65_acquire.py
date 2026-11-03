@@ -23,6 +23,7 @@ RAW = Path('/mnt/f70f6709-366e-49a0-861f-497645d98975/users/liwt/data/GSModel60'
 REPO = 'zxAi/GSModel60'
 REVISION = 'e6407400f768fc7c0d8f8d1b2ed112739b38e9dc'
 RESERVE = 50*2**30
+NETWORK_ATTEMPTS = 6
 
 
 def sha(path):
@@ -159,7 +160,7 @@ def download_one(row):
 
 
 def download_with_retry(row,attempt):
-    for retry in range(3):
+    for retry in range(NETWORK_ATTEMPTS):
         try:
             return download_one(row)
         except (urllib.error.URLError,TimeoutError,http.client.IncompleteRead) as error:
@@ -167,9 +168,9 @@ def download_with_retry(row,attempt):
             write(attempt/f'network_{key}_{retry}.json',dict(path=row['file_path'],retry=retry,
                 error_type=type(error).__name__,message=str(error),unix=time.time()))
             print('NETWORK_RETRY',row['file_path'],retry,type(error).__name__,flush=True)
-            if retry==2:
+            if retry==NETWORK_ATTEMPTS-1:
                 raise
-            time.sleep(2**retry)
+            time.sleep(min(30,2**(retry+1)))
 
 
 def acquire():

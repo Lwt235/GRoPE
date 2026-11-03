@@ -1,11 +1,442 @@
 # Current research state
 
-Latest 2026-11-02: R65 native optimized-GS preparation has made PROGRESS.
-The preceding reply clarified priorities and corrected stale status; it did
-not run a new experiment. This continuation verified public train provenance,
-implemented the native-GS classifier/preprocessor/acquisition, passed nine
-synthetic/transport checks, and started actual data acquisition. The full
-research goal remains ACTIVE and UNACHIEVED. R64 is COMPLETE as recorded below.
+Latest 2026-11-03: pilot3 is COMPLETE and scientifically reviewed. All15 fits
+finished120epochs/16200steps; all18owned children exited0, all90 fixed
+method/seed/condition evaluations completed. Selected validation replay max
+error is0; source/cache/checkpoint identities, matched initialization and all
+120 actual input streams were checked. The actual cohort_summary.png was
+viewed. All15 permutation checks preserve predictions; maximum logit difference
+6.914e-6 is harmless rounding, not a reason to repair the method.
+Records:results/round65_actual_gs/pilot3/{report.md,result.json,review.json}.
+Both actual_plot_review_pending and scientific_review_pending are false.
+Controller103783 has exited normally; do not restart it or duplicate its fits.
+
+This remains the fixed25-class MACGS development cohort:2157fit/264val/264eval,
+seeds11/22/33,120epochs, six fixed conditions, same13D common token content.
+Base mean-class accuracy:Gaussian74.73%,directMLP72.75%,distanceMLP76.48%,
+centerRoPE64.63%,NoPE56.91%. Gaussian-direct paired gains are+1.06/+2.25/+2.63pp,
+mean+1.98pp, paired-class95% interval[-1.23,+5.10]. Gaussian-distance gains
+are-0.76/+3.94/-8.43pp, mean-1.75pp, interval[-4.58,+1.18]. Clear gains over
+RoPE/NoPE do not establish special Gaussian structure over strong controls.
+The failure is substantive, not a numerical-audit threshold artifact.
+
+Sparse256:Gaussian72.16%,distance70.70%,mean difference+1.45pp but signs(-,+,-)
+and interval includes0. Dense1024:Gaussian75.71%,distance79.00%; allthree seeds
+favor distance. No stable sampling advantage. Training curves show learning;
+Gaussian's earlier loss descent is only descriptive. Selected Gaussian
+epochs80/90/70 and distance85/85/80 precede the endpoint; do not launch another
+longer-budget rescue merely because the desired outcome was absent.
+All methods still receive covariance through common content. This tests the
+additional value of shape in relational PE, not whether shape has any value.
+No fresh confirmation, full60class/two-source result or global success claim.
+Keep prior RGB/transfer negatives and pilot1/2 seed/density instability.
+
+The user-restored global research goal remains ACTIVE and unachieved. A bounded
+content-routing ablation is now RUNNING on this already-used development cohort:
+remove the six covariance channels from common token content for Gaussian,
+directMLP and distanceMLP; retrain allthree seeds with the same data/budget and
+compare with their completed full-content counterparts. Preserve covariance
+unchanged in each explicit PE. This distinguishes shape-information routing
+from unique Gaussian relational structure. It is a diagnostic, not a new
+architecture or fresh confirmation. The shape-free distance model deliberately
+has less geometry information; beating it alone cannot support special Gaussian
+structure. DirectMLP retains the same shape information in its PE.
+
+Code:models/round65_content_route.py,experiments/round65_content_route.py.
+Retain the original seven center/appearance stem columns at initialization;
+all other shared/PE weights and RNG state match each original seed/role. All
+three reduced models have576 fewer active parameters, no unused padding.
+Same existing2157/264/264 arrays,120epochs/16200steps, optimizer, SO3/jitter,
+sampling, minimum validation CE selection, allsix conditions. Nine new fits,
+54 new evaluation groups, paired with nine completed pilot3 fits/54 groups.
+All original scientific sources and baseline artifacts remain unchanged.
+
+Four meaningful CPU unit tests passed at80ec53:initialization/RNG pairing,
+equivalence to masking only covariance content, covariance retained in PE with
+finite active gradients, and factorial-contrast direction/complete coverage.
+Synthetic CUDA forward/backward on twice-observed-idle GPU5 passed atd21305,
+zero task optimizer updates. Plan session34409 exited0 atf01f44, before fits.
+Plan SHA555d6d236ecd22ae0cf026a147aa282f37808a4cdd482922cf10401ccd3235b5.
+Records:results/round65_actual_gs/content_route1. Detached controller112181,
+start_ticks1399151612 launched atcf0784;launch.json/queue_status.json are
+authoritative. Latest live check8d551f (2026-11-04):eight fits completed120epochs/16200steps,
+all exit0:Gaussian11/22/33,directMLP11/22/33,distanceMLP11/22. Those worker
+handles are terminal, not jobs to restart. Only distanceMLP33 remains active
+onGPU4(PID28708),100epochs;none pending. All recorded values are finite; no
+failure. Completed-fit budgets and normal exits were checked; final paired
+comparison still awaits allnine fits. Allnine jobs have now started.
+Queue requires two idle observations and at most4owned jobs; preserve external
+jobs. Subsequent turns have been verified waits on actual live handles.
+
+Health observation47d7ba:the then-active directMLP33/distanceMLP11/22 had lower
+recent training loss than their first five epochs (about3.3 to.9-1.0),with lower
+validation CE;new distanceMLP33 also showed learning. This is process health,
+not a method ranking. Resource snapshotsbedbdd/b239de show additional compute
+jobs subsequently sharing the four training GPUs,about29GiB total memory and
+100% utilization. Existing fits remained finite and advancing;preserve these
+jobs and do not turn shared-host elapsed times into a method speed comparison.
+
+One completed-fit health checka4c8b5 passed:Gaussian11 has complete budget,
+unchanged plan/cache/artifact hashes, all120 input streams identical to pilot3,
+expected original/reduced initialization hashes and changed trainable tensors.
+Selected epoch90 by validation CE.861142577; independently recomputed saved CE
+agrees to1.11e-16. Record:content_route1/completed_fit_health_gaussian_11.json.
+This is one fit's health/selection evidence, not the final comparison or a GPU
+logit replay. Allnine sealing,54 new evaluations and scientific review remain
+pending. The earlier launch_health.json covers only the first four epochs.
+Do not duplicate this queue. Continue through allnine fits, selection/input
+pairing, three export jobs, report and actual plot interpretation.
+
+Historical design cross-check during this wait (75aceb/a33273/3e3c17):R56 already
+tested unit-amplitude centerRoPE plus a separate learned Gaussian quadratic
+preference;R57 tested a two-Gaussian Jeffreys relation. Neither established
+stable gains over its strong controls. Do not present either combination as an
+untried repair. Those used learned latent covariance on point clouds, whereas
+the running ablation uses observed native optimized-GS covariance. Their
+negative results are relevant history, not universal rejection of every native
+support encoder. Finish this information-routing comparison before choosing
+another descriptor. No new variant, tuning or confirmation access was added.
+
+Mirror download PID99977,start_ticks1396096550 remains live. Latest check8d551f:
+7101/7757files,112.740/116.419GB verified, no failure/completion record. Acquisition:
+results/round65_actual_gs/preparation/acquisition_1793682705671116425.
+Keep hf-mirror.com direct routing, four workers and shared server cooldowns;
+do not consume proxy quota or restart an advancing download. The original
+full60class R65 controller remains stopped. Do not automatically resume it
+or change the completed pilot3 cohort as newly downloaded files arrive.
+The read-only helper python -m experiments.round65_monitor --experiment
+content_route1 observes the active ablation and download; omit the option to
+inspect completed pilot3. It never launches/stops work. Growing .part files can explain
+unchanged verified-file counts. Use live PID/start_ticks checks on the host.
+
+Training-catalog availability snapshot924b4d (metadata/file sizes only):all3246
+MACGS files across30categories are present with catalog-matching sizes;ModelNet
+has2153/4511 such files and12/30 complete categories(30..41). Record:
+preparation/availability_snapshot_1793718659569131672.json. This does not replace
+the downloader's SHA256 checks; its concurrent verified count was5398/7757.
+No PLY payload, prediction or test split was read for this snapshot, and no
+running cohort was changed. Extra availability supports later study planning,
+not an automatic full-controller restart or a fresh-confirmation claim.
+
+The bounded ModelNet native-input preflight also completed:16 already-declared
+fit objects, all class30 glass_box, same16x512 inputs/common seed11 initialization,
+allfive unchanged models, random-initialization squared-logit backward,
+zero optimizer updates. Records:attempt1/native_modelnet_preflight1; wrapper:
+experiments/round65_modelnet_preflight.py. GPU1 was idle in two observations;
+owned diagnostic22299 exited0. All forward/backward values finite, no entirely
+zero parameter-gradient tensors; peak11.147GiB. This supports these16 inputs'
+arithmetic only, not source-wide task effectiveness. Floor trace median6.53e-6;
+1.036% of axes receive over50% variance from the fixed floor. Comparison with
+the earlier16-object MACGS class0 batch confounds source and class; do not tune
+the floor or infer a domain law. All16 original scientific sources unchanged.
+
+Earlier operational snapshots and scientific history follow. Paused/running
+statuses below are historical; current state above takes precedence.
+
+Pilot2 is now COMPLETE: all15fits,45evaluation groups and all18owned child
+exits succeeded. All selected checkpoint hashes match and selected validation
+replay max error is0. The actual final plot and scientific result were reviewed;
+records:results/round65_actual_gs/pilot2/{result,review}.json and report.md.
+Base mCA means:Gaussian63.33%, directMLP62.22%, distanceMLP63.89%, centerRoPE
+57.22%, NoPE56.67%. Gaussian-minus-direct across11/22/33 is-10/+6.67/+6.67pp;
+Gaussian-minus-distance is-11.67/+3.33/+6.67pp. Longer training improves all
+methods, but does not establish stable special Gaussian-structure value.
+Sparse256 means:55.56/54.44/57.78/54.44/56.11% in the same role order. Keep
+the instability and lack of density advantage alongside gains over RoPE/NoPE.
+The earlier four-completed snapshots below are historical.
+
+Latest 2026-11-03: user requested a training-health and interpretation check.
+Pilot2 has completed4/15 fits: Gaussian11/22/33 and directMLP11, each120epochs
+and1800steps, all exited0. The remaining11fits are waiting for free GPUs;
+there are currently no active pilot children. Original controller PID101352
+and start_ticks match and its heartbeat is live (host check499bc7). Continue
+this same controller; do not duplicate completed fits or occupy other users'
+devices. Full selection, development evaluation and sparse/tilt results are
+still pending. The full scientific objective remains unachieved.
+
+Completed-fit diagnostics passed atab8d97: finite losses/gradient norms,
+complete budgets, changed trainable parameters, source/cache/artifact hashes,
+selection rule, independently recomputed validation metrics, same-seed input
+streams and shared initialization. Original20epoch inputs match the first20
+epochs of each corresponding longer run. The actual partial curves were viewed.
+Records:results/round65_actual_gs/pilot2/status_review_1793684772098202094/
+review.json and curves.png. This check changes no experiment setting or fit.
+
+On checkpoint-selection VALIDATION data, Gaussian11/22 improves from
+33.33/36.67% mCA at the20epoch budget to55/65% at120epochs; Gaussian33 is63.33%.
+DirectMLP11 improves from33.33% to63.33%. Thus the longer budget/schedule
+helps learning but does not yet establish special Gaussian structure value:
+the only completed matched control comparison favors directMLP by8.33pp.
+Gaussian11/22 select epochs65/95; directMLP11 selects70, with small later CE
+rebounds. Gaussian33 selects120, so convergence is not uniform. These are
+partial validation diagnostics, not independent task-evaluation results or
+fresh confirmation. Complete the planned controls and evaluations before
+ranking methods or attributing sampling robustness to longer training.
+
+Previously the user requested one further verification. Pilot2 keeps the exact
+five-class240/60/60 cohort and allfive models, train from scratch for120epochs
+with seeds11/22/33. The20-to120epoch comparison uses only shared seeds11/22;
+three-seed control comparisons are reported separately. The cosine schedule
+also spans120epochs, so this is a joint budget/schedule intervention. No
+architecture, data or other training hyperparameter was tuned. The original
+full R65 controller remains stopped and the global goal remains unachieved.
+
+New driver: experiments/round65_budget_pilot.py. Records:
+results/round65_actual_gs/pilot2/plan.json, launch.json, queue_status.json and
+controller.log. The source/plan/cache identities are fixed; all16 original
+sources and the completed pilot1 source remain unchanged. Reuses the exact
+pilot1 cache arrays; no additional raw-data decoding/download is needed.
+Evaluation objects were already used in pilot1 and remain development data.
+Plan session44670 exited0 atd08403. Synthetic report/schedule checks passed
+atfac4a4, including preserving a third-seed regression and paired-budget
+comparison rather than comparing unequal seed averages.
+
+Detached controller PID101352, start_ticks1395829105, launched by session76227
+(terminal0 ateb6bb6). Snapshot64083a: waiting_for_gpu,15pending fits,0active,
+0completed; all8GPUs have other users' live tasks. The controller checks live
+occupancy and requires two free observations before launch, up to4owned jobs.
+It will train15models, check selections, evaluate45groups and generate the
+report/plots automatically. Do not duplicate the queue or take occupied GPUs.
+That zero-completed snapshot is historical; the latest four-completed status
+and partial interpretation are above. Final interpretation and actual complete
+result-plot review remain pending. Continue this handle when checking
+progress; the existing mirror download is independent and remains untouched.
+
+Latest 2026-11-03: the user authorized a small experiment using currently
+downloaded data. The separate pilot is COMPLETE; the original full R65 controller
+and reporter remain stopped. The global goal is still unachieved and its saved
+status remains paused; this request authorizes the bounded pilot only.
+
+Pilot result: Gaussian base mean-class accuracy40.83%, directMLP38.33%,
+distanceMLP38.33%, centerRoPE36.67%, NoPE39.17% (two-seed means). The primary
+Gaussian-minus-direct comparison changes sign: +8.33/-3.33percentage points.
+Sparse256 Gaussian mCA33.33% is below every control, including NoPE45.83%.
+Thus there is a small average base-condition lead but no stable strong-control
+advantage or density robustness. Nine of ten selections are at the final
+epoch20; convergence is not established by this short budget. Do not label
+the idea generally effective or infeasible on this pilot alone. Keep the full
+R65 specification fixed; its complete cohort/budget remains the next broader
+comparison when authorized. No fresh confirmation was accessed.
+
+Allten fits completed300steps each. Alltwelve owned children exited0, the
+controller session89626 exited0 atcf630e, and no pilot children remain active.
+Matched common initialization, actual per-epoch streams, source/data identities,
+validation selection, exact selected GPU-logit replay and independent metrics
+passed. The actual plot was viewed and scientific review completed. Records:
+results/round65_actual_gs/pilot1/{result,review}.json, report.md, pilot_summary.png.
+Measured shared-host end-to-end controller duration was162.83seconds; this is
+not a controlled model-speed comparison. Concurrent mirror acquisition was
+observed running separately atbac39c, PID92476, acquisition_1793675993308119664;
+do not restart an older download handle from the historical notes below.
+
+Pilot: experiments/round65_pilot.py, results/round65_actual_gs/pilot1.
+Plan session65140 exited0 atacae9c before new decoding or task training.
+Classes0/1/2/3/5 (bag/bottle/train/telephone/pistol) were selected by availability
+only, preserving the original R65 partitions and order:48fit/12val/12dev_eval
+per class, total240/60/60. Allfive unchanged models, seeds11/22,20epochs,
+512tokens,2048 cached native primitives. AdamW and five-epoch warmup unchanged;
+cosine schedule ends at20epochs. The classifier still has60outputs. Baseline,
+sparse256 and tilt evaluation are fixed; allten validation-based checkpoint
+selections must finish before pilot evaluation decoding. This is development
+evidence from one source/five classes, not fresh confirmation or full R65.
+
+Selection/partition and schedule checks passed at8a7cba; all16 original frozen
+sources still match. Pilot controller session89626 launched at83a05c; its
+queue_status.json, child logs and result.json are authoritative.
+Derived data goes to the user's data disk under
+GRoPE/round65_actual_gs_cache/pilot1, separate from full attempt1. Preserve
+earlier native diagnostic, RGB, transfer and other negative evidence.
+
+Latest 2026-11-03: DATA DOWNLOAD RESUMED THROUGH HF-MIRROR at the user's
+subsequent request; the research goal, controller and reporter remain PAUSED.
+No R65 task training has started. R65 is implemented and frozen; the full
+research objective remains UNACHIEVED. R64 is complete as recorded below.
+
+Active download: detached nohup PID99977, start_ticks1396096550, launched
+ata10e6e with the server-aware rate-limit fix, using
+experiments.round65_mirror_acquire acquire. Transport record:
+results/round65_actual_gs/preparation/mirror_transport_1793682705565592808.
+The user-requested hfd comparison is COMPLETE with a negative deployment
+decision: keep this SAME Python download PID99977, now resumed and verified
+not suspended atcae329. No hfd production download was started. Snapshot:
+1686verified files/49,624,730,923bytes. Summary:
+preparation/hfd_download_comparison1.json. Existing complete files and legacy
+.part files were preserved; four SHA-verified benchmark files/63,489,162bytes
+were hardlinked into RAW for future reuse, with no vertex/TEST decoding.
+
+Benchmark driver: experiments/round65_hfd_transfer.py, user tool
+/home/liwt/hfd.sh unmodified. Local hfd metadata/allowlist was seeded from the
+fixed TRAIN catalog; proxy environment and aria2 user configuration disabled.
+Four offline preparation/reuse checks passed. Only the identity-checked
+download PID was temporarily SIGSTOP'ed during each test and SIGCONT'ed in
+finally, including on errors. Allthree benchmark sessions11816/42074/24181
+terminated1 after native hfd failures; their failure records are preserved.
+Research processes were untouched. No benchmark process remains active.
+
+Records: preparation/hfd_benchmark_1793689787538151457 (4threads/2jobs),
+hfd_benchmark_1793690466136248666 (4threads/1job), and
+hfd_benchmark_1793690805957730527 (4threads/1job,4MiB min split).
+The fixed comparison planned alternating orders on two batches, each mixing
+MACGS and ModelNet TRAIN files. It could NOT complete: allthree configurations
+failed their first hfd batch with HTTP429 (4,2,4 failed file requests).
+The Python first batch fully verified63.49MB in125.52seconds/0.506MB/s.
+In the second hfd attempt, two large files totaling51.96MB passed full SHA256
+after about27.62seconds, but both smaller files failed429. This partial
+throughput is not a paired complete-batch speedup. Single-connection hfd
+diagnostic5.41MB/20.21seconds succeeded; its success alone does not establish
+an accelerated replacement. The prespecified deployment criterion (both
+batches faster, >=1.25x aggregate) was not established, so no switch.
+Acquisition record: preparation/acquisition_1793682705671116425 under the
+same R65 results directory. Continue this download rather than starting a
+duplicate; use its progress.json and live process state for current progress.
+The existing complete files and partial downloads are reused on the user's
+specified data disk. Other research processes were left untouched.
+Persistent output: preparation/mirror_background_1793682705338693458.log;
+replacement/launch identity: mirror_rate_fix_1793682705338693458.json in that
+same preparation folder. The old download PID92476 was identity-checked and
+intentionally stopped with SIGTERM to install this transport fix. Its last
+record was1283files,35,534,082,082bytes. Startup rechecks those cached files;
+an initially smaller new progress counter does not mean data was removed.
+The old acquisition_1793675993308119664 and background log are historical.
+
+Rate-limit fix: obey Retry-After seconds/HTTP-date and Hugging Face RateLimit
+exhausted-bucket reset timers; share cooldown across allfour workers, with
+exponential60-300second fallback plus jitter when no timer is supplied. A
+server-specified longer delay is never shortened. Pace initial/redirect
+request starts by0.25seconds. Record only response host, status and allowlisted
+rate headers, never signed URLs/credentials. Keep direct-only mirror/CDN
+transport and the unchanged downloader's retry bound, Range, hashes and
+population checks. No frozen scientific source changed. Fifteen offline
+transport/acquisition checks passed at3f42a5; cooldown-monitor display and ETA
+suppression passed at02e3bc. Restart running monitors to load the new display.
+Sources: https://huggingface.co/docs/hub/rate-limits and
+https://www.rfc-editor.org/rfc/rfc9110.html#name-retry-after .
+The prior six429events lacked response headers; their enforcing origin is
+UNKNOWN. The old logs do not establish continuous bandwidth throttling.
+This corrects early retries; it is not evidence of an increased download rate.
+Live post-fix check4559df:1287verified files/35,672,086,565bytes, eight direct
+CDN responses and zero new429/network failures; new data has passed the
+unchanged full-file hashes. Startup cache rechecks are complete. This brief
+observation verifies continued acquisition, not long-term absence of limits.
+
+Previous download session69833/PID24332 was found absent at ee664f/766fdf;
+the tool session was also unavailable. Its last progress was677files and
+18,132,901,176bytes with neither failure.json nor completion.json. The exact
+exit cause is UNKNOWN; do not attribute it to a terminal disconnect, OOM,
+user action or DNS without evidence. Earlier DNS retries were recorded but
+the current mirror/CDN DNS checks passed; disk free space was322GiB. Record:
+preparation/mirror_interruption_1793675993077485750.json. Host check766fdf
+found no other acquisition or research process before restoration. The old
+acquisition_1793672768213940263 progress file is now historical. The live
+monitor follows the latest attempt automatically; hardcoded watch commands
+targeting the old progress file must be updated.
+
+Read-only live download monitor: run
+/home/liwt/miniColmap/.venv/bin/python /home/liwt/GRoPE/experiments/round65_download_monitor.py.
+It follows the latest acquisition by default, refreshes every5seconds, and
+estimates ETA from new verified bytes over a rolling300second window after
+30seconds of observation. Initial cached bytes are excluded from the rate.
+In-flight partial files are not counted; short-window estimates may fluctuate.
+Completion/failure, stopped process and120seconds without completed files are
+reported, with ETA suppressed for stopped/failed/stale work. Ctrl+C exits only
+the monitor. --once shows a snapshot; --attempt pins a specific acquisition.
+This monitoring utility does not change frozen sources or resume research.
+Monitor correction on2026-11-03: the initial implementation excluded the first
+observed byte count but could count subsequent cached-file revalidation after
+an acquisition restart as throughput. It now snapshots complete file sizes
+from the fixed catalog at monitor/attempt startup and waits for the verified
+counter to reach that baseline before sampling speed. Partial files are not
+included in the cache baseline. Synthetic restart/reuse checks passed at39d127;
+live snapshot925c0a succeeded. Restart a running monitor to load this correction.
+Read-only speed diagnostic2ac94d measured164,370,164new bytes over48.63seconds
+including partial-file growth:3.38MB/s. The restarted download's longer average
+was3.22MB/s after subtracting its prior verified18.13GB. Current attempt logs
+contain6earlier HTTP429 responses and1later read timeout, not proof of a
+continuous rate limit. No downloader settings, frozen sources or data changed.
+
+The mirror rules exist in /home/liwt/.bashrc (not /.bashrc), but its early
+noninteractive return means this download environment did not inherit them.
+The new transport adapter disables all proxies within its own process and
+uses an explicitly empty urllib ProxyHandler for both hf-mirror.com and CDN
+redirects. The observed large-file redirect is cas-bridge.xethub.hf.co.
+It does not modify the user's shell configuration or use a proxy fallback.
+The original downloader still enforces the same pinned revision, TRAIN
+allowlist, full SHA256 identities, resume checks and storage reserve. All16
+frozen sources remain unchanged; only the download transport is adapted.
+
+Direct mirror probes completed with full published SHA256 matches:
+59/radio_0016.ply (4,348,474bytes; session75090 exited0 atca2a08) and resumed
+1/0000d545.ply (43,945,147bytes, reusing34,603,008bytes; session68002 exited0
+at468875). The latter returned exact HTTP206 Content-Range
+bytes34603008-43945146/43945147. Records: preparation/
+mirror_transport_1793672661753170448 and mirror_transport_1793672699513503386.
+These validate acquisition only; no vertex arrays were decoded. Host check
+df8109 found no duplicate acquisition or research processes before launch.
+
+Earlier pause: the user initially elected to download through a mirror
+themselves and requested all download/research execution to stop. The later
+mirror-download request supersedes that pause for data acquisition only.
+
+The exact original acquisition PID97208/session82596, controller PID99999 and
+reporter PID108323/session7520 were identity-checked and stopped with SIGTERM
+at the user's explicit request. Host checke9e0af confirmed none remained live.
+Record:results/round65_actual_gs/attempt1/user_pause_1793669755645691268.json.
+The last download record had203verified files,6,313,833,208bytes. Complete and
+partial files are preserved at the user's data directory; no files were deleted.
+The proposed supplementary download pilot was not started. Controller state
+stopped/SystemExit143 is user-directed cessation, not a scientific failure.
+The reporter status file may retain its last waiting snapshot; its process has
+been stopped. All earlier live-process snapshots below are historical.
+
+Latest continuation is PROGRESS after verified waiting: a prospectively recorded
+native-input diagnostic has completed. New experiments/round65_native_preflight.py
+uses the first16 lexicographically complete frozen-fit objects selected before
+decoding. All are class0/MACGS; this availability-selected batch does not cover
+all60classes or the ModelNet source. The full R65 population remains7757objects.
+Plan session77550 exited0 atca950a before any diagnostic numerical decoding.
+
+Native diagnostic session49318 exited0 atd0bebe on twice-observed idle GPU4,
+RTX A6000. Allfive frozen models completed B16/N512 forward/backward with finite,
+nonzero parameter gradients and matched common initialization. The objective was
+mean squared initialization logits; no labels, optimizer update, task training,
+validation, development evaluation or confirmation data were used. Relation
+models needed10.9-11.1GiB peak allocation, centerRoPE/NoPE about0.4GiB. Shared-host
+first-call timings are not controlled speed comparisons. This supports native
+input feasibility for these16objects only, not task efficacy or generality.
+
+The sampled98304physical axes span variances2.455e-13 to0.4093 after the frozen
+object normalization. Median floor share peraxis is0.0311%;153axes(0.1556%) have
+floor share above50%,69axes(0.0702%) above90%. Median of per-object median trace
+shares is0.0167%; the largest sampled trace share is1.30%. Trace contribution
+alone therefore does not bound thin-axis distortion. This is descriptive;
+there is no new threshold, post-hoc floor tuning or measured task-effect claim.
+Decision: continue full R65 unchanged and retain this interpretation limit.
+
+Records:results/round65_actual_gs/attempt1/native_preflight1/{plan,conversion,result}.json.
+Derived diagnostic inputs are on the user data disk under
+GRoPE/round65_actual_gs_cache/native_preflight1/inputs.npz, separate from the
+future full attempt1 cache. All16frozen sources still match at9a2459. Original
+download82596 remains live at66423d; snapshot140/7757,4,872,487,023verified bytes.
+The existing controller99999 and reporter108323 are retained. Actual task fits,
+complete result review and the full research objective remain unfinished.
+
+Previous progress: executable report generation and an attached
+watcher for the original controller. The preceding directory/status continuation
+was a VERIFIED WAIT on the original download and controller. New scripts are
+experiments/round65_report.py and round65_report_watch.py; no frozen scientific
+source changed. Six synthetic report checks passed (ca950d), including refusal
+to report incomplete work, legitimate training-shard handling, full90-group
+coverage and preservation of a losing primary result. All four synthetic plots
+were actually viewed. These are report checks, not new scientific results.
+
+Reporter session7520/PID108323, start_ticks1394570782, launched8aa5a3 and
+confirmed live on the host atf8e066 with the SAME download97208/controller99999.
+Its controller attachment records the exact command/start_ticks. It will generate
+report1 only after the original controller finishes successfully, then leave
+scientific and actual result-plot review pending. Do not duplicate this watcher.
+Record:results/round65_actual_gs/attempt1/report_preparation/attachment.json.
+Latest download snapshot87/7757,3,228,099,440verified bytes atf8e066.
+Continue existing processes; the full research goal remains unachieved.
 
 User explicitly moved data storage to
 /mnt/f70f6709-366e-49a0-861f-497645d98975/users/liwt/data.
@@ -15,13 +446,25 @@ bytes) were copied and hash-verified before removing old copies. The old
 download89929/PID46265 was intentionally terminated143 for this user-directed
 relocation, not an observation timeout. Record:data_relocation.json inR65prep.
 
-Current acquisition is session79822/PID117360, started67942f and directly
-confirmed live88584f/8d8129, then observed advancing beyond33 verified files.
-Use this SAME handle and its actual process identity; do not restart from a
-stale snapshot. Its records are in results/round65_actual_gs/preparation/
-acquisition_1793634576671296813; preparation/progress.json includes start_ticks.
-The download is incomplete. It resumes partial bytes, validates published LFS
-hashes and preserves a50GiB free-space reserve on the target disk.
+Current acquisition is session82596/PID97208, start_ticks1394467239, attempt
+results/round65_actual_gs/preparation/acquisition_1793666412509915562.
+Original controller PID99999, start_ticks1394489062, is also live. Both exact
+commands and identities were checked on the host at8e941c; download pollf65c39
+remained live. The snapshot had68/7757 verified files (2,359,869,723 bytes).
+Continue these SAME processes; queue_status.json and the current acquisition's
+progress.json are authoritative. Do not launch a duplicate from an old snapshot.
+The controller waits for complete verified acquisition, then preprocesses,
+trains15models on observed idle GPUs, audits selections, exports and evaluates.
+Report preparation is complete and the watcher is attached as above; actual
+report generation and scientific/visual review await the completed experiment.
+
+Retired external download79822/PID117360 exited1 after a truncated HTTP body;
+59014/PID121135 exited1 after bounded connection timeouts. Short-body resumption
+and bounded network retries were fixed and tested before the freeze. The formerly
+short file was completed and matched its published SHA256. Preserve failure
+records short_response_recovery1.json and connection_timeout_diagnostic1.json.
+The download remains incomplete. It resumes partial bytes, verifies full LFS
+hashes and preserves50GiB free space on the target disk (375.93GiB free at8e941c).
 
 Pinned GSModel60 revision:e6407400f768fc7c0d8f8d1b2ed112739b38e9dc.
 All7,757 official TRAIN objects/all60classes:3,246MACGS and4,511ModelNet derived.
@@ -30,24 +473,35 @@ all7,757source byte hashes are distinct. Catalog SHA256:
 b0ffc82bbe846ccde0e0db07ba457194046e1d8bc9810d17081e52b4627f0333.
 Expected bytes116,419,005,518. Internal prospective split6227/765/765;
 the whole selected TRAIN population is development, never fresh confirmation.
-No test split content or real numerical vertex arrays have been decoded.
+No test split content has been decoded. The16 fitting-only native diagnostic
+objects above are now numerically decoded; full cohort preprocessing is pending.
 Binary PLY headers from both sources retain scales/quaternion/opacity/DC.
 Nonidentical MACGS physical-instance grouping is not independently established.
 
-Read ROUND65_ACTUAL_GS_PROTOCOL.md. This is still a PROSPECTIVE plan, not frozen.
+Read ROUND65_ACTUAL_GS_PROTOCOL.md. The experiment is now frozen at
+results/round65_actual_gs/attempt1/lock.json, SHA256
+45a9ac9ee02ff1bd7c8a8b19f937eed13f3f923fe9ddf0b43d5e8179253eb6fe.
+All16frozen sources were rechecked unchanged at8e941c. Freeze session66477
+exited0 at517c00;16tests passed. Training runner, audit, GPU controller and
+resume support are implemented. No frozen scientific setting has changed.
 models/round65_actual_gs.py retains the exact11-dimensional Gaussian relation
 and compares direct16D relationMLP, distanceMLP, centerRoPE andNoPE. All roles
 receive the same13D center/log-covariance/opacity/DC content. Five roles x
-three seeds,120epochs planned. Nine tests passed(ffe038): independent native
-conversion and relation arithmetic, direct-control information preservation,
-matched inputs/initialization/gradients/permutation, split guards and download
-resume/hash behavior. Tests do not show task efficacy or CUDA feasibility.
-Records:preparation/implementation_checks1. Training runner, independent audit,
-GPU controller and CUDA preflight remain UNIMPLEMENTED/UNEXECUTED. Next build
-those, finish/freeze implementations, decode verified training bytes and run
-the matched task experiment when acquisition permits. No R65 task fits have
-started. Retain RGB, transfer, classification and earlier negative evidence;
-actual-GS success alone cannot establish the complete goal.
+three seeds,120epochs planned. Tests cover native conversion, independent relation
+arithmetic, matched inputs/initialization/permutation/gradients, split guards,
+training execution helpers, and download resumption/hash/retry behavior.
+
+CUDA preflight session72068 exited0 at0d151b on an observed idle RTX A6000.
+All5roles completed a synthetic full-batch B16/N512 forward/backward/update,
+with finite gradients and changed learned positional parameters. Common initial
+weights match. Peak allocated memory was about10.9-11.1GiB for relation models
+and0.4GiB for centerRoPE/NoPE; this is feasibility/cost evidence, not a controlled
+speed benchmark or a task result. Records:attempt1/units.json and
+attempt1/cuda_preflight.json (also preparation/cuda_preflight1/result.json).
+No real numerical vertex arrays were decoded by the synthetic checks; the later
+native fitting-only diagnostic is recorded above. Retain RGB,
+transfer, classification and earlier negative evidence; actual-GS success alone
+cannot establish the complete goal. Confirmation data remains untouched.
 
 Latest 2026-11-02: R64 is COMPLETE. The nine new fits, selection checks,
 66 metric groups, scientific interpretation and actual plot review are done.
@@ -63,11 +517,10 @@ and CE improves 0.05998 across all three seeds and five scene means. Retain
 this partial benefit alongside the failure against strong RGB controls.
 Implementation checks passed; no fresh confirmation was accessed or warranted.
 
-Next proposed experiment: directly supply optimized 3DGS parameters to a
+R65 experiment: directly supply optimized 3DGS parameters to a
 Transformer and compare the current relation PE with strong controls receiving
 the same attributes. This tests the core parameter-to-PE claim separately from
-RGB parameter prediction. R65 currently has metadata preparation only; no
-frozen experiment or training is established by that preparation. R62/R64 RGB
+RGB parameter prediction. See the current execution state above. R62/R64 RGB
 negatives, earlier transfer failures, and the complete generality/robustness/
 fresh-confirmation objective remain in force. The full goal is UNACHIEVED.
 

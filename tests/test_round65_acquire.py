@@ -68,5 +68,13 @@ class AcquisitionTests(unittest.TestCase):
             self.assertEqual(ranges,[9,18]);self.assertEqual((root/'0/example.ply').read_bytes(),payload)
             self.assertTrue((Path(folder)/'network_0_example.ply_0.json').exists())
 
+    def test_network_retry_has_a_finite_limit(self):
+        with tempfile.TemporaryDirectory() as folder:
+            with patch.object(acquire,'download_one',side_effect=urllib.error.URLError('synthetic outage')) as request,patch.object(acquire.time,'sleep'):
+                with self.assertRaises(urllib.error.URLError):
+                    acquire.download_with_retry({'file_path':'0/a.ply'},Path(folder))
+            self.assertEqual(request.call_count,acquire.NETWORK_ATTEMPTS)
+            self.assertEqual(len(list(Path(folder).glob('network_*.json'))),acquire.NETWORK_ATTEMPTS)
+
 
 if __name__=='__main__':unittest.main()

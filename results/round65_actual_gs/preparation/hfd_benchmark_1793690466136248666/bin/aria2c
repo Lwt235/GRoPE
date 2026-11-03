@@ -1,0 +1,2 @@
+#!/bin/sh
+exec /usr/bin/aria2c --no-conf=true --all-proxy= --http-proxy= --https-proxy= --auto-file-renaming=false --connect-timeout=30 --timeout=60 --max-tries=6 --retry-wait=60 "$@"
