@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+title: "GSModel60"
+message: "If you use GSModel60, please cite the GAPrompt++ paper."
+type: dataset
+authors:
+  - given-names: Zixiang
+    family-names: Ai
+  - given-names: Zhenyu
+    family-names: Cui
+  - given-names: Yufei
+    family-names: Guo
+  - given-names: Wenwen
+    family-names: Qiang
+  - given-names: Lei
+    family-names: Chen
+  - given-names: Jiwen
+    family-names: Lu
+  - given-names: Jiahuan
+    family-names: Zhou

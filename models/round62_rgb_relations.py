@@ -6,10 +6,10 @@ import torch.nn.functional as F
 from models.round5_cross_attention import _temperature
 from models.round51_visual_alignment import INPUT_FIELDS
 from models.round52_camera_frame import CameraFrameMatcher, camera_lift
-from models.round53_ray_frame import center_rays
+from models.round53_ray_frame import center_rays, RayFrameMatcher
 from models.round54_calibrated_plane import CalibratedPlaneMatcher
 
-REFERENCE_ROLES = ('camera_only', 'camera_plane')
+REFERENCE_ROLES = ('camera_only', 'camera_plane', 'ray_point', 'ray_affine')
 NEW_ROLES = ('camera_mlp', 'free_relation', 'predicted_full', 'predicted_point',
              'observed_full', 'observed_point')
 ROLES = REFERENCE_ROLES + NEW_ROLES
@@ -171,4 +171,6 @@ def make_model(role):
         return CameraFrameMatcher(role)
     if role == 'camera_plane':
         return CalibratedPlaneMatcher(role)
+    if role in ('ray_point', 'ray_affine'):
+        return RayFrameMatcher(role)
     return RGBRelationMatcher(role)

@@ -1,5 +1,382 @@
 # Current research state
 
+Latest 2026-11-02: R65 native optimized-GS preparation has made PROGRESS.
+The preceding reply clarified priorities and corrected stale status; it did
+not run a new experiment. This continuation verified public train provenance,
+implemented the native-GS classifier/preprocessor/acquisition, passed nine
+synthetic/transport checks, and started actual data acquisition. The full
+research goal remains ACTIVE and UNACHIEVED. R64 is COMPLETE as recorded below.
+
+User explicitly moved data storage to
+/mnt/f70f6709-366e-49a0-861f-497645d98975/users/liwt/data.
+Raw files now go to its GSModel60 subdirectory; future caches go to
+GRoPE/round65_actual_gs_cache. All29 old complete/partial files (1,042,916,310
+bytes) were copied and hash-verified before removing old copies. The old
+download89929/PID46265 was intentionally terminated143 for this user-directed
+relocation, not an observation timeout. Record:data_relocation.json inR65prep.
+
+Current acquisition is session79822/PID117360, started67942f and directly
+confirmed live88584f/8d8129, then observed advancing beyond33 verified files.
+Use this SAME handle and its actual process identity; do not restart from a
+stale snapshot. Its records are in results/round65_actual_gs/preparation/
+acquisition_1793634576671296813; preparation/progress.json includes start_ticks.
+The download is incomplete. It resumes partial bytes, validates published LFS
+hashes and preserves a50GiB free-space reserve on the target disk.
+
+Pinned GSModel60 revision:e6407400f768fc7c0d8f8d1b2ed112739b38e9dc.
+All7,757 official TRAIN objects/all60classes:3,246MACGS and4,511ModelNet derived.
+All4,511ModelNet IDs belong to ShapeSplat's published original training list;
+all7,757source byte hashes are distinct. Catalog SHA256:
+b0ffc82bbe846ccde0e0db07ba457194046e1d8bc9810d17081e52b4627f0333.
+Expected bytes116,419,005,518. Internal prospective split6227/765/765;
+the whole selected TRAIN population is development, never fresh confirmation.
+No test split content or real numerical vertex arrays have been decoded.
+Binary PLY headers from both sources retain scales/quaternion/opacity/DC.
+Nonidentical MACGS physical-instance grouping is not independently established.
+
+Read ROUND65_ACTUAL_GS_PROTOCOL.md. This is still a PROSPECTIVE plan, not frozen.
+models/round65_actual_gs.py retains the exact11-dimensional Gaussian relation
+and compares direct16D relationMLP, distanceMLP, centerRoPE andNoPE. All roles
+receive the same13D center/log-covariance/opacity/DC content. Five roles x
+three seeds,120epochs planned. Nine tests passed(ffe038): independent native
+conversion and relation arithmetic, direct-control information preservation,
+matched inputs/initialization/gradients/permutation, split guards and download
+resume/hash behavior. Tests do not show task efficacy or CUDA feasibility.
+Records:preparation/implementation_checks1. Training runner, independent audit,
+GPU controller and CUDA preflight remain UNIMPLEMENTED/UNEXECUTED. Next build
+those, finish/freeze implementations, decode verified training bytes and run
+the matched task experiment when acquisition permits. No R65 task fits have
+started. Retain RGB, transfer, classification and earlier negative evidence;
+actual-GS success alone cannot establish the complete goal.
+
+Latest 2026-11-02: R64 is COMPLETE. The nine new fits, selection checks,
+66 metric groups, scientific interpretation and actual plot review are done.
+See docs/round64_depth_field_report.md and
+results/round64_depth_field/attempt1/completion.json. Original controller
+79308/PID122444 and reporter 51872/PID75260 both exited 0; all 15 controller
+children exited 0. Do not restart them. Earlier live snapshots below are historical.
+
+R64 depth_surface EPE is 3.94646 versus ray_affine 3.66693: 7.62% worse,
+with all three paired seeds and all five scene means worse. Relative to the
+no-depth-derivative footprint control, PCK8 improves 0.434 percentage points
+and CE improves 0.05998 across all three seeds and five scene means. Retain
+this partial benefit alongside the failure against strong RGB controls.
+Implementation checks passed; no fresh confirmation was accessed or warranted.
+
+Next proposed experiment: directly supply optimized 3DGS parameters to a
+Transformer and compare the current relation PE with strong controls receiving
+the same attributes. This tests the core parameter-to-PE claim separately from
+RGB parameter prediction. R65 currently has metadata preparation only; no
+frozen experiment or training is established by that preparation. R62/R64 RGB
+negatives, earlier transfer failures, and the complete generality/robustness/
+fresh-confirmation objective remain in force. The full goal is UNACHIEVED.
+
+R64 progress:all9fits COMPLETE andall9selection/operator checks PASSED.
+Original controller79308/PID122444 LIVEat0ee58c. Lastfitfootprint/33 exited0
+ata5fabc;selectionchild45503 exited0at0ee58c. Newold_evalexports startedONLY
+AFTER selected.json wassealed. Exportchildren11/22/33 PID75507/75508/75509
+onverifiedidleGPU0/1/3. No restart/no settingschange/no freshconfirmation.
+Reporterwatcher51872/PID75260 LIVEat03655d;itwillrunreportafterterminalmetrics.
+Selectionlogfa642e:9checks,CEmax4.78e-8,CPUlogitmax5.86e-5. This istechnical
+validation,not efficacy. Nextfinish18newexports+48reused independent metrics,
+automaticreport,actualimage/scientificreview. FullgoalACTIVE/unachieved.
+Read R64control_scope_note.md beforeattributinganyperformancegain. Earlier
+statussnapshotsbelowarehistorical;useexistinghandlesandcurrentqueuestate.
+
+R64 live progress:8/9fits COMPLETE,all completedchildren exited0. Allthree
+primarysurface andallthree localMLP seeds aredone;lastfootprint/33 PID88212
+onGPU0 continues(step3700 ata1e4e6). No pendingunlaunchedfits. Original
+controller79308/PID122444 LIVE(bd56b6),reportwatcher51872/PID75260 LIVE(0d22c7).
+Continue SAMEhandles;do not restart. Selectionseal/oldevalexports/66metrics
+andreport remainpending. Currentturnhasactualtrainingprogress,notutility
+results. FullgoalACTIVE/unachieved;confirmationunused. Retain the R64 control
+scope note when interpreting results;no frozen setting/gate changes.
+Earlier snapshots below arehistorical.
+
+R64 progress:3/9newfits COMPLETE;allnine fits have nowbeenlaunched. New
+localMLP/33 child58297 exited0(fd3124);thelastpendingfootprint/33 launched
+PID88212 onGPU0. Sixremainingactive;no pendingjobs. GPU2/3 hadpreviously
+becomeidle andlaunchedlocalMLP/11 PID17513 andsurface/22 PID17514 at1551a1.
+Original controller79308/PID122444 LIVE(fd3124);reportwatcher51872/PID75260
+LIVE(9778e6). Do not restart. Snapshot56c6b5:footprint/11 step3100,
+localMLP/22 step4600,surface/33 step2200,localMLP/11 step3500,surface/22step2000;
+newfootprint/33 loading. Allnine-selectionaudit/evaluation stillpending.
+
+Data-free interpretation check completed8c6bba;52frozen sources unchanged.
+Read docs/round64_control_scope_note.md andR64control_scope_check.json.
+The directMLP hasthesamefullnetworkRGB/cameraaccess andlocalfield source,but
+its10Dpairdescriptors donotexplicitlycarryallfocal/relativeposecalculations
+usedbyGaussiancommon-frame relations. Constructed examples:zero-gradient
+z1/ray(0,0,1),fx100vs200 givesidentical[1,0,0,0,0]localdescriptor butdifferent
+covariance;relativecamera tx0vs.1changesGaussiandistance0to.5. This doesNOT
+show thefullMLP hasno calibrationaccess orcannotlearntheserelations,andisNOT
+a measured cause of future performance. IfGaussianwins,reportwholepipeline
+benefit;don'tuniquelycreditSPD/covariancefromthiscontrastalone. Surfacevs
+footprintremainsamorefocused matchedcomparison. No newuniversalprerequisite,
+experimentchange,tasknumericarrays/checkpoint/predictionaccess orfreshdata.
+Reportsource/watcher remainunchanged;include thisnoteinfinalinterpretation.
+
+CurrentturnPROGRESS:bounded source/algebra interpretation plusnewactualfits.
+Metadata:results/round64_depth_field/attempt1/training_and_scope_progress.json.
+NEXT:continueSAMEcontroller/watcher;finishremainingfits,allnine selectionaudit,
+66groups andautomaticreport,thenactualimage/scientificreview. Completegoal
+remainsACTIVE/unachieved;earliernegativesandactualGS/cross-task/generalization/
+robustness/freshconfirmation requirements retained. Below entries historical.
+
+R64 progress:2/9newfits COMPLETE. New primary depth_surface/11 finished
+5000steps,selected step3300,51validation records;child27485 exited0
+e0d5b2. New artifact/initialization/actualstream/selection-metadata checks
+passed;sharedweights/allPEtensors changed;52frozen sources unchanged. Record:
+results/round64_depth_field/attempt1/second_completed_fit_check.json.
+This checks one new completed fit's metadata,not whole-network replay orutility.
+Fullnine-modelselectionaudit/evaluation remainpending;no task-effect ranking.
+
+Original controller79308/PID122444 LIVE,e0d5b2;reportwatcher51872/PID75260 LIVE,
+cfa9b4. Primary/33 newlylaunched PID130141 onGPU6;localMLP/33 PID58297 GPU0,
+footprint/11 PID58298 GPU1,localMLP/22 PID92175 GPU7 continue. At49ace2their
+stepswere100/1400/900/800,respectively. Fouractive/threepending/twocomplete.
+Continue SAME handles;do not restart oldwork. Automaticreportingafterterminal
+metrics remainsattached;actualscientific/image review stillrequired. Previous
+turnPROGRESS;thisturnPROGRESS:newcompletedfit andnextseedactualexecution.
+FullgoalACTIVE/unachieved;confirmationunused. Oldsnapshotsbelowarehistorical.
+
+R64 progress: first of9newfits COMPLETE. depth_footprint/22 ran5000steps,
+selected step4000 by the frozen earliest-minimum-valCE rule,
+51validation records. Original child32611 exited0 (a10504). Artifact hashes,
+matchedcommoninit/actualstream andchangedcommon/allPEweights checked;52frozen
+sources unchanged. This is a bounded one-fit metadata check,not full selection
+replay or task-effect evidence. Record:first_completed_fit_check.json inR64root.
+No old_eval exports orfreshconfirmation. The complete research goal isACTIVE.
+
+Original controller79308/PID122444 LIVE (18e64f). GPU0/1 becameidle andtwo new
+fits launched at ebb351:localMLP/33 PID58297 onGPU0;footprint/11 PID58298 onGPU1.
+GPU7 next launchedlocalMLP/22 PID92175 at18e64f;surface/11 PID27485 continues
+onGPU6(step4600 atsnapshot3caefd). Fouractive/fourpending/onecomplete; use
+currentqueue/historyfortransientprogress. Do not restart anyexistingprocess.
+Reporterwatcher51872/PID75260 LIVE at98584d,awaitingoriginalcontroller completion.
+NEXT:finishremainingfits,allnine selections,66metricgroups,thenautomaticreport
+plusactualimage/scientificreview. No change to frozen settings orsuccesscriteria.
+PreviousgoalturnwasVERIFIED WAIT;thisturnisPROGRESS:firstfullfit/metadata check
+andadditionalactualtraininglaunches. Earlier status snapshots below arehistorical.
+
+R64 continuation: previous goal turn VERIFIED WAIT; this turn adds an
+executing postprocessing watcher and verifies the original live training.
+Controller79308/PID122444 still LIVE (1efdc6);do not restart. Reporter watcher
+51872/PID75260 is also LIVE (50bed9),attached after checking original process
+start_ticks1390571297 andcommand. New experiments/round64_report_watch.py
+only observes the existing controller;after successful terminal completion it
+runs the already-prepared report. No training/evaluation/settings changes.
+Watcher will leave scientific/image review pending,not mark the goal complete.
+Attachment metadata:results/round64_depth_field/attempt1/report_watch_attachment.json.
+52scientific sources unchanged. Snapshotc90fe9:surface/11 step1000 and
+footprint/22 step1400;use latestqueue/historyforcurrentprogress. Full9fits,
+selection,66metricgroups,actualreport review andfullgoal remain unfinished.
+No fresh confirmation access. Continue SAME controller andwatcher handles.
+
+R64 verified-wait continuation: the previous goal turn was PROGRESS. This
+turn directly confirmed original controller79308/PID122444 alive (9d4dd1)
+and both child processes present (9379a6). Snapshot819bba:surface/11 step700,
+footprint/22 step900;twoactive/sevenpending/zero complete fits.52frozen sources
+still match (568102). No change/restart/new gate/evaluation/confirmation.
+Latest transient snapshot:results/round64_depth_field/attempt1/wait_snapshot1.json.
+Continue the SAME controller through all9fits and frozen evaluation;the full
+objective remains ACTIVE and UNACHIEVED. Training duration is not a blocker.
+
+Latest 2026-11-02: R64 is IMPLEMENTED, FROZEN and RUNNING. The full goal
+remains ACTIVE and UNACHIEVED. Previous goal turn was PROGRESS (R63 closure
+and R64 preparation); this turn is PROGRESS (model/runner/audit/controller,
+four implementation tests,52-source freeze,CUDA preflight and actual fits).
+Read ROUND64_DEPTH_FIELD_PROTOCOL.md and docs/round64_depth_field_plan.md.
+The plan's unimplemented sentence and preparation flags are historical.
+
+R64 root:results/round64_depth_field/attempt1. Lock SHA256:
+cddd4c260d1a0b567754c69fdd7bcb5c62629a4eb474129e2ecd9f6ad1b28cfe.
+All52scientific sources match. Freeze session33111 exited0 at1bd0d4;
+freeze/tests outputc4c2d6. Four tests passed in22.822seconds;standalone first
+pass52f9ce took20.762seconds. Tests cover analytic surface/differences/boundaries,
+full-grid contract,positive floor,finite geometry and network gradients,
+independent q/k permutations,exact initial surface/footprint equality,
+input exclusions and shared common weights. Equal-focal initial eigvalsh
+backward is finite; no arbitrary anisotropy/old static-integrator gate added.
+Independent NumPy synthetic operator f9b74f: max relation errors3.20e-6,
+1.48e-6,6.59e-7 for surface/footprint/localMLP;new geometry max1.74e-7.
+This is implementation evidence,not task utility or independent lab replication.
+
+Original LIVE controller:session79308,hostPID122444,launched52a982.
+Direct poll2ddae0 and hostprocesscheckb75517 confirm live;do not restart.
+At launch all8GPUs were occupied;controller waited,then twice-observed idle
+GPU6 andGPU7 before launching owned tasks. It never stops other users' jobs.
+Preflight child16971 exited0 onGPU6,RTXA6000;all3roles had finite gradients,
+losses and changed PEweights. Peakallocated8.997/8.997/8.289GiB,respectively;
+shared-host timing/memory are not a speed benchmark. Actual PEparams10465/
+10465/10369. Main training now running onavailable GPUs,up to6ownedworkers.
+Snapshot4ad5bb:surface/11 PID27485 step100 onGPU6;footprint/22 PID32611 step0
+onGPU7. These are transientprogress values,not selected task results.
+Original preflight/fit processes and fresh queue_status are authoritative.
+
+The frozen experiment:one scalar depth pertoken/layer;center=z*r;
+Sigma=5.25*(J_uJ_u^T+J_vJ_v^T)+(1/300)^2I;pixel derivatives use canonical
+18x24 grid reconstruction frompositions. Retain original11->96->96relation
+andcalibratedcrossattention. depth_surface primary,depth_footprint without
+J's depthgradients,depth_local_mlp same localfield information via10->96->96.
+No newbackbone,depthsupervision,pretraining,renderingloss or physical-recovery
+perfection gate. Gaussian coupling and attainable range change together.
+
+Nine new fits,three roles x11/22/33;exact5000steps andold576/64/480RGBpairs.
+Allnine selected beforeanynewoldevalexports.24exactR55/R62RGBreference models
+and48predictions reused byidentity,notnewindependent evidence.18new+48reused
+=66independently recomputed metricgroups;retainallnegative outcomes. No fresh
+confirmation or actualGSdata accessed. Strongestcontrols/sameinformationMLP
+mustbe beaten; beatingfailedR62alone isinsufficient. OriginalRGBfeatureextractor
+remainsfrozen;head/PE/matcher learnjointly.
+
+Postprocessingexperiments/round64_report.py prepared,notpartoffrozen training.
+It covers33models,66groups,16pairedcontrasts,15/60gaps,validationcurves andcost.
+Incomplete-run guard passed00f214 before reading taskmetrics;no report1exists.
+It still needs actual completed outputs,rendering,visual/scientific review.
+Executionmetadata:results/round64_depth_field/attempt1/execution.json.
+NEXT:continueoriginalsession79308;inspectpreflight/fitfailures ifany,otherwise
+finishallninefits,selectionaudit,exports,independentmetrics,thenactualreport
+andinterpretation. Do not rank methods fromshortpreflight or unfinished fits.
+ActualGS,cross-task,applicablegeometry/robustness/generality andunusedconfirmation
+remain required bythefullgoal. R62/R63andearliernegativeevidence remainvalid.
+The following entries are HISTORICAL and do not supersede this status.
+
+Latest 2026-11-02: R63 fixed-weight RGB diagnostic is COMPLETE. The full goal
+remains ACTIVE and UNACHIEVED. Previous goal turn was PROGRESS (R62 closure
+and R63 preparation). This turn is PROGRESS: R63 implementation,four tests,
+freeze,CUDA execution,54diagnostic groups,independent metrics,actual image
+review and interpretation;then primary-source review and concrete R64 plan.
+Read docs/round63_rgb_diagnostic_report.md and docs/round64_depth_field_plan.md.
+
+R63 root:results/round63_rgb_diagnostic/attempt1;50frozen sources unchanged;
+lock1243ba05673b6ab3a208542a35d31424fa678e696868e3c2f76a11cb50158e70.
+Original controller session13530/PID93526 exited0 at89af48;all6children0.
+Session13530 was REUSED after R62 terminal;do not confuse it with R62PID105183.
+Report session12307 exited0 ate5c0a4. No R63 process remains to restart.
+Completionafc0a5 SHA256:
+36d49da4802b31d36ef44970ab99dfb36c7ac4d670c6e97b06248b9877fcc0e6.
+Chinese report SHA256:
+2100a4a3d8ea4f2689a6dd56d4863b72fdca839d22616562673f39969c05e7d2.
+Both PNGs ACTUALLY VIEWED in call containing3ce45e/e9ff9b. Generated pending
+flags are historical;completion records actual scientific/visual review.
+
+R63 scope:48oldfitpairs(16per3scenes),64oldvalpairs(1scene),9selectedR62models,
+54fixed-weight groups,no fitting,no old_eval/confirmation numeric access.
+Nine original val replays are BIT-IDENTICAL toR62 logits andCE;allweights
+unchanged.Independent metric maxerror3.42e-8.CUDAA6000passedprobe;forward
+cumulative42.89seconds(sharedhost,notbenchmark).Four unit tests passed.
+
+R63 main result: all six forward interventions worsen EPE/CE on fit andval,
+all3seeds andeachscene mean. ValEPE original3.08519;observedcenter26.44074;
+observedshape10.37488;both25.23301;initialshape3.98137;sphere4.24490;
+zerorelation28.43777. Independently trained observed_full baseline2.67133.
+Fit original1.41782,both19.93356,zero18.99084,observedbaseline1.25153.
+Evidence supports investigating co-adaptation/interface distribution,not an
+instant oracle replacement remedy. Interventions shift distributions andlater
+features,so no unique-cause claim;zeroingPE is not retraining aNoPE/PRoPEcontrol.
+
+Native-center distance medians averaged overseeds:fullfitL1/L2 .82068/.71939m;
+val1.07465/.85293m. ValL2predicteddepthmedian2.49103m vsobserved3.178m.
+Shape log-error medians valL1/L2 3.89996/3.39413;fixedsphere3.49128.
+Sensor supports are references,not trueGS. LearnedPE neednot recover physical
+parameters exactly;do not add geometry-reconstruction perfection as a gate.
+All declared strata have0fraction above95%tanhcoordinate saturation.
+Observedpatch16covariances outsidecoordinatebounds:fit46.730%,val34.616%;
+clippingrelativeFrobeniusmedian~1.27e-8/5.45e-9,p90 .85659/.75746.
+Retain tailrange limitations,but no broad prediction saturation diagnosed;
+clippingis notoptimalprojection. Masks onlystratifyanalysis,notmodel/evaluation.
+
+NEXT R64: test a compact tied depth-field Gaussian generator while retaining
+R62's11->96->96relation andcalibratedcrossattention. Predict one depth pertoken;
+mu=z*r;Sigma=5.25*(J_uJ_u^T+J_vJ_v^T)+(1/300)^2I,whereJ includesdepthgradients.
+Fixed8pxcentral/one-sided derivatives;reconstructgridbypixelcoordinates to
+preserve token permutation behavior. RGB frontend assumes acompletegrid.
+Three newroles:depth_surface(primary),depth_footprint(no depthderivative),
+depth_local_mlp(samez/derivative/rayinformation via10->96->96directrelation).
+No addedbackbone,geometrysupervision,pretrainedfeatures orrenderingobjective.
+Same5000steps/3seeds,data/selection asR62;9newfits,24exactR55/R62RGBreference
+models,66predictiongroups(18new/48reused). Allnewselectedbeforeoldevalexports.
+Mustbeatstrongcontrols,notmerelythefailedR62fullmodel. Preserveallnegatives.
+
+R64 preparationd8bf89:results/round64_depth_field/preparation/availability.json
+SHA256 a5df491afd5ebc53f6d9ca07acff5b574bbd074a3a127fc8b654376cf7413dde.
+Allreferencecommoninit/samplingidentitiesmatchwithinseed;metadataonlyread.
+R64 is NOT implemented,frozen orlaunched. Implement/check/freeze concrete
+sources andrun onverifiedidleGPUs. The primary-source references inR64plan
+boundclaims:Gaussianregionalencoding andsurface-awarePEarepriorart;no novelty
+claim,physicalparametersneednotbeexact. Ournewgenerator remainsuntested.
+ActualGS,cross-task,applicablegeometry/robustness/generality andfreshconfirmation
+remain required bythe full objective. The following entries are HISTORICAL.
+
+R62 completed background:
+
+Latest 2026-11-02: R62 RGB relation bridge is COMPLETE. The full research goal
+remains ACTIVE and UNACHIEVED. Previous goal turn made bounded fit-ray input
+checks and waited on live jobs. This turn is PROGRESS: remaining fits,18 model
+selections,60-group evaluation,independent metrics,actual image review,Chinese
+interpretation and formal R62 completion. R63 diagnostic samples are prepared.
+Read docs/round62_rgb_relation_report.md and docs/round63_rgb_diagnostic_plan.md.
+
+R62 root: results/round62_rgb_relations/attempt1. All27 child jobs exited0.
+Original controller13530/PID105183 exited0 atfe74d2; observer17714/PID6934
+exited0 atd37989. Do not restart any R62 process.44 scientific sources unchanged;
+lock d5c7319b0aafb3f8b4d81ee442d7244d549cabdea353561229bce92381af5aa9.
+Completion4d13a7 SHA256:
+4ef41adad9bca5363d60612ad343ec0f9be86df4d5b284a10601e83f29c26bb9.
+Chinese report SHA256:
+28bd3e404f4d441d1fd9a196517dc05881cb9b4ea9d466d75a39bcfdb5c3393d.
+Both report1 PNGs actually viewed in call containing69abfa/e9ecc9. Generated
+pending flags are historical;completion.json records completed review.
+
+R62 scope:18new fits,sixroles x11/22/33;12exactR55 camera/plane/ray-point/ray-affine
+models reused.5000updates,identical common initialization and actual streams.
+All18new selections preceded new old_eval exports.60 independent metric
+recomputations:36new and24reused prediction groups. Old development scenes;
+no fresh confirmation. New fit/selection cumulative16438.75seconds on shared host.
+Metric maxerror1.98e-9;selectionCE3.99e-8;CPU replay4.98e-5;operator2.53e-6.
+
+R62 decision: RGB PRIMARY FAILS STRONG CONTROLS. Scene-macro softEPE:
+predicted_full3.99521,predicted_point4.09188,free_relation3.86734,
+camera_mlp3.92554,PRoPE3.86360,calibrated-plane3.87887,ray_point3.70651,
+ray_affine3.66693. Full is worse than all camera/plane/ray/phase controls for
+all3seeds;versusfree_relation only1/3wins. Versusray_affine +.32829px,all3seeds
+and5/5scene means worse. Do not promote this RGB candidate to confirmation.
+
+Full versusits own point control: -.09667px,+.483ppPCK8,3/3seeds5/5scenes,
+butCEmean+.00370worse. Initial full covariance is anisotropic and point is a
+fixed sphere;this does not alone isolate learnedshape. See interpretation note.
+Observed_full3.12407 versusobserved_point3.38778: -.26372px,+1.089ppPCK8,
+CE-.05181;all3metrics3/3seeds5/5scenes better. These are PRIVILEGED measured
+geometry diagnostics,not fair RGB competitors. They show this center-matching
+task can expose shape value;the failure cannot simply be blamed on its metric.
+The .87115px observed/predicted gap does not alone diagnose prediction quality.
+
+Gaussian maps retain the R58 eleven relations,but move from within-view
+selfattention to camera-calibrated crossattention. RGB extractor frozen;
+parameter head/PE/matcher jointly trained,no depth supervision. Observed
+covariance is patch second moment,not optimized3DGS. RGB permutation helps
+locate dependence but is not a real-world robustness pass.15/60gaps bothretain
+RGB failure. Preserve all R55/R57/R58/R59/R60/R61 negatives.
+
+NEXT: R63 bounded frozen-weight diagnostic on old fit/val. Seven fixed
+predicted_full interventions (baseline,observedcenter,observedshape,both,
+initialshape,sphere,zero relation),plus predicted_point/observed_full baselines.
+Three seeds;48fitpairs (16/3scenes) and64valpairs;54summary groups;no newfitting.
+Inspect center/shape differences,parameter saturation and practical range limits;
+retain fallback/depth-coverage strata. Interventions are distribution shifts,
+not standalone causal proof or a replacement for matched retraining.
+R63 metadata preparation22b239:192unique rawframes,9selected checkpoints,
+results/round63_rgb_diagnostic/preparation/availability.json SHA256
+891989e6b18eaa158d5a5d705aea8dee7357a495f10d3cd8bb261fa77541c295.
+Onlymetadata/checkpoint identities read. R63 is NOT implemented,frozen orlaunched.
+Implement,check the declared interventions,freeze exact sources/identities,and
+run short forward diagnostics on verified idle GPUs. Do not retune R62 or read
+old_eval/fresh confirmation for this diagnostic. ActualGS,cross-task,applicable
+robustness/generality and unused confirmation remain in the full objective.
+
+R61 closure background (the current R62 execution state above supersedes the
+old no-R62-launch sentence below):
 Latest 2026-11-02: user resumed the full research goal; ACTIVE and UNACHIEVED.
 R61 is COMPLETE, including all fits, metrics, actual visual review and Chinese
 interpretation. Read docs/round61_normal_relation_report.md and its completion

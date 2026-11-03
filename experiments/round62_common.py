@@ -7,7 +7,7 @@ OUT = ROOT/'results/round62_rgb_relations/attempt1'
 SEEDS = (11, 22, 33)
 CONFIG = dict(steps=5000,batch=8,lr=.001,tail_lr=.0002,weight_decay=.0001,
               validation_every=100,gradient_clip=1.,primary='predicted_full',
-              primary_metric='epe_soft',new_fits=18,reused_fits=6,
+              primary_metric='epe_soft',new_fits=18,reused_fits=12,
               observed_floor_m=.01,observed_depth_clip_m=[.1,20.],
               observed_missing_depth_m=3.,units_m=3.,confirmation_access=False)
 METRICS = ('ce','pck4','pck8','auc8','epe_argmax','epe_soft','tail16','soft_tail16')

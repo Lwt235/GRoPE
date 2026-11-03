@@ -33,9 +33,12 @@ contains RGB features, pixel coordinates, intrinsics and relative cameras.
 Sensor depth and label-derived validity/visibility are excluded from all RGB
 methods. No token is filtered or masked using target labels.
 
-Eight roles, seeds11/22/33:
+Ten roles, seeds11/22/33:
 - camera_only and camera_plane: exact R55 PRoPE-style and calibrated-HRoPE
   implementations/models/predictions reused by identity; six existing fits.
+- ray_point and ray_affine: retain R55's stronger ray-based references, six
+  further existing fits. Their geometry/channel operators differ from P and
+  serve as strong whole-PE references, not an isolated shape attribution.
 - camera_mlp: same P and V/output transport, learn a2D pixel-phase offset from
   RGB/camera features using96->16->2 MLP, bounded as the earlier directMLP.
 - free_relation: seven unconstrained learned token coordinates, concatenate
@@ -47,7 +50,7 @@ Eight roles, seeds11/22/33:
 - observed_full and observed_point: PRIVILEGED geometry diagnostics, with the
   same relation map and backbone, measured or fixed covariance respectively.
 
-Six new roles x3seeds=18new fits;24models total. Same common initialization,
+Six new roles x3seeds=18new fits;12exact reference fits,30models total. Same common initialization,
 actual sample stream, optimization, loss and validation rule. PE parameters
 are recorded, not asserted equal. In particular free_relation has a larger
 first map than full, and observed groups omit the learned Gaussian head.
@@ -102,8 +105,8 @@ All18new selections precede any new old_eval predictions/observed caches.
 Primary: five-scene-macro continuous pixel EPE of the probability expectation.
 Secondary: PCK4/PCK8,CE,argmaxEPE,AUC8,continuous/argmax>16px tails and per-scene
 and paired-seed effects. Retain15/60frame-gap strata, not isolated surface/zoom
-claims. Baseline and fixed within-image RGB permutation diagnostics;48groups
-total including12exact reference groups. Predicted heads see permuted RGB;
+claims. Baseline and fixed within-image RGB permutation diagnostics;60groups
+total including24exact reference groups. Predicted heads see permuted RGB;
 observed geometry stays fixed. That diagnoses RGB dependence, not its unique
 causal mechanism. Use original label populations/denominators in all roles.
 

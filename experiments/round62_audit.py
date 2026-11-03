@@ -112,7 +112,7 @@ def selections():
             rows.append(dict(role=role,seed=seed,run_sha256=sha(path/'run.json'),checkpoint_sha256=sha(path/'model.pt'),
                 validation_ce_error=ce_error,replay_logit_error=replay_error,operator=op))
             print('CHECKED',role,seed,ce_error,replay_error,flush=True)
-    write(OUT/'selected.json',dict(runs=rows,reused_models=6,sealed_unix=time.time(),
+    write(OUT/'selected.json',dict(runs=rows,reused_models=12,sealed_unix=time.time(),
         lock_sha256=sha(OUT/'lock.json'),fresh_confirmation=False,goal_complete=False))
 
 
@@ -166,8 +166,8 @@ def metrics():
                     reused=role in REFERENCE_ROLES,privileged_diagnostic=role.startswith('observed_'),
                     rows=rows,checkpoint_sha256=meta['checkpoint_sha256']))
                 print('METRICS',role,seed,variant,error,flush=True)
-    if len(records)!=48:raise ValueError('metric scope')
-    write(OUT/'metrics/summary.json',dict(records=records,groups=48,new_groups=36,reused_groups=12,
+    if len(records)!=60:raise ValueError('metric scope')
+    write(OUT/'metrics/summary.json',dict(records=records,groups=60,new_groups=36,reused_groups=24,
         max_metric_error=max_error,all_groups_independently_recomputed=True,
         fresh_confirmation=False,goal_complete=False))
 
