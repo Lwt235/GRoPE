@@ -1,18 +1,20 @@
 # GRoPE：将高斯参数化转为 Transformer 位置编码
 
-更新：2026-11-04（Asia/Shanghai）。本文是当前设计、证据链、分析与结论的统一入口。历史原文及草案见[归档索引](archive/2026-11-04/INDEX.md)；原始结果仍位于 `results/`。归档不表示删除负结果，也不表示历史草案已执行。
+更新：2026-11-05（Asia/Shanghai）。本文是当前设计、证据链、分析与结论的统一入口。历史原文及草案见[归档索引](archive/2026-11-04/INDEX.md)；原始结果仍位于 `results/`。归档不表示删除负结果，也不表示历史草案已执行。
 
 ## 1. 当前判断
 
-**我们已得到一个结构较精炼、在观测区域匹配与给定参考几何的图像任务上有正面开发证据的候选，但还没有得到经验证的一般性方案。** 当前候选叫 `relative5`：由两个高斯区域的中心和协方差构造五个相对量，经一个小型 MLP 生成 Transformer 的相对位置项。
+**我们已得到一个结构较精炼、在观测区域匹配上有新场景确认、在部分原生基元对照及给定参考几何的图像任务上有正面开发证据的候选，但还没有得到经验证的一般性方案。** 当前候选叫 `relative5`：由两个高斯区域的中心和协方差构造五个相对量，经一个小型 MLP 生成 Transformer 的相对位置项。
 
-最可靠的正面证据来自 R68–R69：给所有方法相同的完整几何信息，并固定稀疏前后的查询与标签后，候选仍优于距离 MLP、直接几何 MLP 和法向/尺度对照，区域匹配与中心定位共同改善。它支持“**如何组织已有几何信息会影响有限预算下的学习效果**”。
+最可靠的正面证据来自区域匹配：R68–R69 给各方法相同的完整几何信息，固定稀疏前后的查询与标签；补充几何控制和固定球形归因后，既有模型又在九个可用的未用场景上保留优势。新场景基础 R@1 为 **41.389%**，对 Distance / GeoTransformer / 固定球形分别 **+2.988 / +3.362 / +1.782 pp**，三个配对种子均正，中心定位也改善。它支持“**如何组织已有区域几何信息会影响学习与迁移效果**”。预定十个场景中一个缺标定，不称完整十场景确认，也不据此覆盖其他任务的负结果。[新场景确认与审阅](../results/region_confirmation/attempt1/report.md)
 
-限制同样明确：此前 RGB 匹配和真实优化 3DGS 分类没有建立相对强 MLP 的稳定优势；直接跨域迁移也失败过。当前五维的 R73 原生分类已开始拟合。五个未使用场景的投影任务确认已完成，但对投影 Distance 的 PSNR 差为 +0.224/+0.505/−0.471 dB，未通过完整稳定用途标准；不能继承其他版本的成功，更不能消除它们的失败。
+**R73 原生分类已完整完成并审阅：五维 mCA 为 80.029%，对 Direct / 旧十一维分别高 +3.254 / +2.938 pp，三个种子均正。** 对最强 Distance 平均高 +1.603 pp，但三个配对差为 +3.394/−0.951/+2.367 pp，类别区间跨零；有明显改进，完整稳定用途条件仍未通过。此前 RGB 匹配、直接跨域迁移的失败也保留。五个新场景投影确认对 Distance 的 PSNR 差为 +0.224/+0.505/−0.471 dB，同样未通过完整稳定用途标准。不能把局部改善或其他版本的成功推广成一般有效。[R73 完整结果与审阅](../results/round73_native_relative5/attempt1/report.md)
 
 **R70 的参考—参考接法没有稳定收益；R71 改为目标 query→参考 key 的投影关系后，给定参考几何组通过了固定用途标准。** R71 五维 PSNR 为 18.581 dB，对同投影 Distance / Direct 分别 +0.205 / +0.265 dB，对 URoPE +0.440 dB，三个种子主指标均改善，LPIPS 也改善。大部分相对 R70 的增益来自投影交互方式，不能全部归给高斯形状。R72 的 RGB 版本已四卡完成：18.236 dB，对 Distance / Direct 平均 +0.127 / +0.172 dB，但各有一个种子更差；对 URoPE 仅 +0.044 dB。LPIPS 一致改善，PSNR 尚未稳定胜出，故仅推进 R71 给定几何组的新场景确认。[R70 负结果](../results/round70_nvs/attempt1/report.md) · [R71 完整结果与审阅](../results/round71_target_projection/attempt1/report.md) · [R72 结果与审阅](../results/round72_rgb_projection/attempt1/report.md)
 
 **新场景确认保留了投影交互收益，但没有稳定确认五维形状关系的额外优势。** 五维在新场景对 Direct / URoPE / PRoPE 的基础 PSNR 分别 +0.186 / +0.333 / +0.599 dB，三个种子均正；对 Distance 仅平均 +0.086 dB，种子 33 在五个场景均更差。外推与变焦也存在对 Distance 的退步。这是已完成的混合确认结果，不是数值核查未完成。[确认报告与审阅](../results/projection_confirmation/attempt1/report.md)
+
+**固定参考形状的旧数据诊断已完成，进一步收窄了图像收益的归因。** 将 PE 中的参考协方差固定为目标 patch 协方差 Q 后，大部分收益仍保留：给定几何组的原五维仅平均高 +0.024 dB，种子方向混合，SSIM/LPIPS 反而略差；RGB 组原五维有 +0.055 dB 的小幅一致基础收益，但外推近似持平。不能再把五维相对 Distance 的全部图像增益解释为变化的参考协方差贡献。完整形状仍在共同内容中，这也不证明形状整体无用。[诊断结果与审阅](../results/projected_shape_attribution/attempt1/report.md)
 
 ## 2. 要解决的问题，以及为什么考虑高斯参数
 
@@ -71,7 +73,17 @@ r_{ij}=\operatorname{MLP}(\phi_{ij}).
 
 实现：[R69 候选](../models/round69_compact_relation.py)、[R70 适配](../models/round70_nvs.py)、[R71 投影接法](../models/round71_target_projection.py)。当前版本属于可学习相对 PE，不能称为新 RoPE 公式、新高斯距离定理或首次提出高斯 attention。
 
-另有一次独立的小型 CPU 代数检查：末层无偏置时，\(q_h^\top W_h z_{ij}=(W_h^\top q_h)^\top z_{ij}\)，可避免显式存储完整关系向量。按 R70 张量形状，一个 bf16 中间量约为 432 MiB；但隐藏成对量仍约 216 MiB，反向和临时内存仍存在。检查未更改本轮训练，bf16 重排有舍入差异，尚无实测 GPU 峰值/速度收益。[检查结果](../results/round70_nvs/attempt1/cost_diagnostic1/result.json) · [代价说明](../results/round70_nvs/attempt1/cost_diagnostic1/interpretation.json)
+这四个形状相关分量与经典高斯 KL 直接相关：双向 KL 之和 `J=(mi+mj+ti+tj−6)/2`。R58 已使用 `sqrt(J)`，但其固定 sin/cos 加线性读出失败，不能单独说明“先合成标量”就是病因。新增一个旧数据控制，以普通距离加 `log1p(J)` 的重复槽输入同样 MLP，保留完整初始化和训练预算，检查分量分别组织是否仍有额外价值。它只有两个独立输入，不宣称五维必然最小或已经测得二输入实现效率；当前候选不变。[公式来源与比较缺口](../results/research_related_work/gaussian_relation_20261105/notes.md) · [固定控制计划](../results/region_jeffreys_control/preparation/plan.json)
+
+末层无偏置时，\(q_h^\top W_h z_{ij}=(W_h^\top q_h)^\top z_{ij}\)，可以先投影 query，避免显式存储完整关系向量，保留相同参数和数学公式。早期 R70 小型 CPU 检查估算一个 bf16 中间量约为 432 MiB，但隐藏成对量仍约 216 MiB，反向和临时内存仍存在。该检查有 bf16 舍入差异，未改动训练，也没有测量 R70 图像模型的 GPU 收益；下述新增实测只覆盖原生/区域 FP32 模型。[早期检查](../results/round70_nvs/attempt1/cost_diagnostic1/result.json) · [代价说明](../results/round70_nvs/attempt1/cost_diagnostic1/interpretation.json)
+
+首先完成了**原实现**的同卡整模型 GPU 成本测量。旧验证输入、batch16 下，原生 512 tokens 的五维前向/前向＋反向中位耗时为 84.50/186.63 ms，Distance 为 65.97/167.23 ms，旧 full11 为 104.08/206.06 ms。五维对 Distance 分别慢约 28.1%/11.6%，对 full11 快约 18.8%/9.4%；原生前向＋反向峰值约 10.981 GiB，与 Distance 的 10.918 GiB 接近。区域 64 tokens 的五维为 9.45/31.58 ms，Distance 为 8.17/29.98 ms，反向差距与块间波动重叠。这次测量只含原实现，八模型原批量 GPU 回放均完全一致，模型状态未更新。[原实现成本](../results/pe_runtime_diagnostic/attempt1/report.md)
+
+**随后对上述重排进行了同卡配对 GPU 实测：原生五维前向＋反向由 188.60 降至 123.81 ms（−34.35%），峰值由 10.986 降至 7.888 GiB（−28.20%）。** 前向由 86.09 降至 48.42 ms（−43.76%），但前向峰值仍为 3.155 GiB。Distance、Direct 和 full11 同样应用重排；公平比较下，五维前向/前向＋反向仍比优化后的 Distance 慢约 56.36%/16.34%。区域小输入没有加速，五维前向＋反向约 30.14→30.90 ms、峰值 0.359→0.277 GiB。两次独立测量的原实现时延略有差别，所有重排比值均使用后一次同卡配对结果。这是兼容关系 MLP 的共同执行优化，不是高斯专属效益。
+
+CPU 独立收缩及完整模型梯度检查通过；GPU 八模型旧验证原版回放完全一致，重排后的全参数梯度检查也通过。原定零索引变化检查为 7/8：区域 Direct 的两个方向共 13 处变化都属于原规则下无有效匹配的查询，实际区域召回、PCK、hard EPE 不变，Soft EPE/CE 差约 4e−9/2e−8。保留原检查结果和补查记录，不把无关紧要的差异变成科学门禁。[重排实测、数值解释与审阅](../results/factored_relation_runtime/attempt1/report.md)
+
+上述成本实验均不含数据加载、优化器步骤和常驻整套训练缓存，几何输入不求导，仅覆盖一个旧 batch、一张 A6000 及既有种子 11 checkpoint；不能替代完整训练吞吐或 RGB/NVS/BF16 测量。重排适配器没有新增模块，也未更改正在运行的原生拟合或已冻结种子复现。后续采用时需明确实现版本、对强对照一同应用；数学等价不保证长训练的 FP32 轨迹完全相同，二次关系开销仍在。
 
 ## 4. 证据链如何走到这里
 
@@ -153,6 +165,70 @@ R68 15 次训练、R69 9 次新训练均完成，选模/输入流/源身份已�
 
 完整依据：[R68 报告](../results/round68_fixed_region/attempt1/report.md)、[R68 审阅](../results/round68_fixed_region/attempt1/review.json)、[R69 报告](../results/round69_compact_relation/attempt1/report.md)、[R69 审阅](../results/round69_compact_relation/attempt1/review.json)。
 
+### 5.4 补充几何编码对照：优势并非只建立在距离基线上
+
+**GeoTransformer 位置算子与角度＋描述符 MLP 的六次拟合、统一选模、12 组新预测及实际审阅均已完成。** 五维候选及原模型不变；两项新增控制沿用完整 20 维共同内容、R68 缓存与固定查询、60 epochs/1,080 updates、三个配对种子。此前 R58–R60 的结果不能代替这次当前设置下的直接比较。
+
+| 对照 | 基础 R@1 % | 五维减对照：三种子 pp | 平均差 pp | 稀疏 R@1 % | 五维减对照平均 pp |
+| --- | ---: | --- | ---: | ---: | ---: |
+| GeoTransformer 位置算子 | 36.5252 | +2.424 / +2.389 / +7.496 | +4.103 | 33.0553 | +4.521 |
+| 角度＋描述符 MLP | 36.4677 | +5.684 / +0.814 / +5.984 | +4.161 | 32.9085 | +4.668 |
+| 五维候选 | 40.6283 | — | — | 37.5762 | — |
+
+基础和稀疏的三个配对召回差均为正，五个场景均值也均为正；中心 PCK 分别平均高 +1.561/+1.577 pp 与 +1.744/+1.774 pp，三个种子均改善。基础召回的场景区间分别为 [+3.563,+4.615] / [+2.847,+5.254] pp，条件于既定三个种子。四个预定义分组的平均召回也改善，没有据此证明收益专属于某一组。
+
+这些结果扩大了**旧开发数据下的有效比较范围**，支持学习区域关系的价值超出本次既有点配置控制。它仍不是每个指标或种子×场景全面胜出：对 GeoTransformer，种子 11 的 Soft EPE 基础/稀疏分别差 +0.01145/+0.00291，虽然总体平均 EPE 与 CE 更好；角度描述符基础分组 0、种子 22 的召回近似持平，PCK 反而更差。稀疏仍固定原区域成员和查询，不代表完整区域发现流程。
+
+GeoTransformer 固定到 `e7a135af4c318ff3b8d7f6c963df094d7e4ea540`：保留原距离/三点角度嵌入、max 聚合、带偏置投影及两层独立位置投影，适配宽度 96、距离单位 .2、角度单位 15°、三个邻居。它是同骨干的算子比较，未复现完整 KPConv、配准损失、原论文成绩或后来的共享 LeakyReLU 版本。新控制 PE 参数分别 37,248 / 11,616，候选为 9,792，不称严格等容量或已测得整体加速。[官方来源](../third_party/region_geotransformer_reference/SOURCE.json)
+
+全部训练流与共同初始化配对一致，六模型 GPU 选模回放误差为零；60 组汇总含 48 组按身份复用的旧预测，独立指标最大差 8.88e−16，两张比较图已实际查看。额外 CPU 只读评分存在跨设备预测差异，但最大召回/PCK 差仅 0.01734/0.02009 pp，不改变约 4 pp 的结论；正式结果沿用原 GPU 路径，不为此修改模型。剩余 GPU 导出通过显存余量与进程限额完成，旧等待调度器在无子任务时受控退出，完整记录保留。[事前计划](../results/region_geometry_controls/preparation/plan.json) · [完整结果](../results/region_geometry_controls/attempt1/report.md) · [审阅记录](../results/region_geometry_controls/attempt1/review.json) · [调度记录](../results/region_geometry_controls/attempt1/evaluation_resource_update_02/plan.json)
+
+### 5.5 固定球形归因：区域收益需要变化的协方差
+
+投影固定形状诊断保留多数图像收益，提示需要排除“更丰富的径向距离输入已经足够”的解释。区域侧的**三个配对固定球形拟合现已完成并审阅**：只把 PE 中两端协方差设为既有距离单位的 `.2²I`，五个输入成为 `[d, log1p(d²), log1p(d²), log(4), log(4)]`。共同内容仍包含完整真实几何，保持相同五输入 MLP、全部初始参数及 9,792 个 PE 参数。
+
+| 条件 | Distance R@1 % | 固定球形 R@1 % | 原五维 R@1 % | 五维减固定球形：三种子 pp | 平均差 pp |
+| --- | ---: | ---: | ---: | --- | ---: |
+| 基础 | 36.6698 | 37.2878 | 40.6283 | +2.714 / +1.939 / +5.369 | +3.340 |
+| 固定查询稀疏 | 32.8734 | 34.2135 | 37.5762 | +3.078 / +1.939 / +5.071 | +3.363 |
+
+五维的中心 PCK 平均高 +1.413/+1.528 pp；两条件下，三个种子的区域召回、中心 PCK、Soft EPE 与 CE 都更好。召回场景区间分别为 [+2.855,+4.163] / [+2.352,+4.445] pp，条件于三个种子。五个场景均值与四个预定义分组均值改善，但稀疏和更细种子×场景分组仍有负项。没有另设最低效应大小门槛或要求所有微小分组同号。
+
+固定球形相对 Distance 平均只高 +0.618/+1.340 pp，种子 11 在两条件都更差。说明径向输入组织可能有部分作用，却没有重现变化协方差的完整区域收益；不把差值比解释为因果贡献百分比。这是在完整共同内容之上，**变化协方差参与 PE 仍有额外用途**的开发证据，不是协方差所有分量都必要、只有高斯数学形式能做到或普遍有效的证明。
+
+三次拟合沿用 60 epochs/1,080 updates，选中 epoch 33/27/30，所有初始化及 60 条采样流与原五维配对一致；GPU2/7/5 并行完成，峰值均约 0.64 GiB。全部模型统一选定后导出六组新预测、复用 12 组旧预测。GPU 选模回放误差为零，独立指标最大差 4.44e−16，比较图与配对指标图已实际查看。[事前计划](../results/region_shape_attribution/preparation/plan.json) · [结果与分析](../results/region_shape_attribution/attempt1/report.md) · [审阅记录](../results/region_shape_attribution/attempt1/review.json)
+
+这与投影图像固定形状结果不同，两类任务的几何来源、交互方式及学习问题也不同，不能相互覆盖结论。下一步把同一个控制用于真实优化 3DGS 基元，确认原生收益是否也需要变化协方差，并据此确定后续种子复现的强对照范围；区域侧 §5.6 的冻结场景确认现已完成并审阅九个可用场景。[原生归因计划](../results/native_shape_attribution/preparation/plan.json)
+
+### 5.6 区域未用场景确认：九个可用场景完成并审阅
+
+**既有模型在新的观测区域上保留了用途优势及变化协方差的额外收益。** 本次不训练、不适配、不重选 checkpoint；八方法、种子 11/22/33，共 24 个旧验证集选定模型，基础与固定查询 sparse256 两条件的 48 组预测全部完成。沿用 R68 数据构造、完整 20 维内容、指标和旧 fit 分组阈值；源码、模型及场景身份在新深度像素读取前固定。
+
+| 方法 | 新场景基础 R@1 % | 新场景固定查询稀疏 R@1 % |
+| --- | ---: | ---: |
+| **relative5** | **41.3894** | **38.4525** |
+| Distance MLP | 38.4018 | 35.0102 |
+| Direct MLP | 37.5841 | 34.4703 |
+| 法向/尺度 | 37.5746 | 34.7198 |
+| full11 高斯关系 | 41.4381 | 38.4889 |
+| GeoTransformer 位置算子 | 38.0275 | 35.0465 |
+| 角度＋描述符 MLP | 38.2650 | 34.7150 |
+| 固定球形五输入 | 39.6070 | 36.2003 |
+
+对 Distance / Direct / 法向尺度 / GeoTransformer / 角度描述符，基础平均召回分别 **+2.988/+3.805/+3.815/+3.362/+3.124 pp**，各比较的三个种子均正，达到事前基础用途规则。对 Distance 的配对差为 +2.895/+1.650/+4.418 pp，场景区间 [2.209,3.772] pp。稀疏下对 Distance 为 +3.442 pp；所有用途控制的两条件三个种子中心 PCK 也改善。总体 Soft EPE/CE 改善，但对 GeoTransformer，种子 11 基础 Soft EPE 差 +0.00153，保留此例外。
+
+**五维减固定球形：** 基础配对差 +1.569/+0.691/+3.088 pp，平均 **+1.782 pp**，场景区间 [1.142,2.384] pp，种子×场景重采样区间 [0.493,3.206] pp；稀疏平均 **+2.252 pp**，三个种子均正。两条件下，对固定球形的三个种子在召回、中心 PCK、Soft EPE 和 CE 上均改善；PCK 平均 +0.877/+0.847 pp。额外协方差作用由旧数据开发证据推进到这组固定模型的新场景确认，但不是所有形状分量必要或数学形式唯一有效的证明。
+
+固定球形本身相对 Distance 的基础/稀疏平均召回 +1.205/+1.190 pp，三个种子均正。因此径向输入组织与变化形状关系都有证据，不能把全部差距归给协方差，也不将差值比解释为因果贡献百分比。新场景的协方差增益小于旧五场景的 +3.340/+3.363 pp，保留这种幅度变化。
+
+五项用途控制及固定球形的九个场景均值、四个预定分组均值召回差都正；细分单元仍有负项。对固定球形，基础 6/27、稀疏 3/27 个种子×场景单元为负；`mit_36_ti_lab2` 基础场景均值仅 +0.024 pp，近似持平。full11 与五维基本持平：五维基础/稀疏召回均值 −0.049/−0.036 pp，PCK +0.118/−0.046 pp；达到均值工程容差，不能称正式非劣性或全面胜出，种子 11 稀疏召回为 −1.188 pp。
+
+场景规则在像素读取前固定：排除历史 21 个及已用投影确认五个 place 后，按固定哈希规则从 brown、harvard、home、hotel、mit 各取两个，共十个，每场景机械取 96 对。**`home_han` 的官方内参缺失，三次请求为 404；官方目录无文件，另一官方镜像无法解析，官方读取代码没有默认标定。** 此场景保留缺失，不替换地点或猜测内参；其余九场景 864 对、1,287 个深度文件完成，无额外配对排除。基础与稀疏共享 35,859/110,592 个有效查询（约 32.42%）。本结果仅覆盖可用部分，不称完整十场景确认。场景区间条件于既定三个训练种子，交叉重采样仍不是大规模随机性验证；已知区域成员和物理查询的限制保留，不等于从稀疏点云重新发现区域。
+
+24 个模型旧验证 GPU 回放误差为零；48 组新预测的独立 Torch 微平均/逐场景指标最大差 1.33e−15，两张图已实际查看。预处理及汇总曾受大数组 NumPy 读取/转换延迟影响，保留诊断和受控接续：CPU float64 反投影及采样在完整 64 对旧验证数据上证明特征/标签完全一致，尺度差至多 4.44e−16；汇总改为缓冲读取、分块执行原指标公式，四组旧预测的 1,060 个数值单元完全一致。模型、科学方案、全部预测和原生三卡训练保持不变。原始生成报告与最终解释分别保留，当前审阅已完成。[实施修复与核对](../results/region_confirmation/attempt1/metric_runtime_update_01/plan.json)
+
+这九个场景已使用，不能用于改模型后重新宣称 fresh；place 名称排斥也不证明物理空间绝对独立。当前继续原生固定球形归因，决定后续随机重复应纳入的强对照范围。区域确认不替代原生、RGB 或投影用途，不删除既有负结果。[科学计划](region_confirmation_plan.md) · [完整结果与分析](../results/region_confirmation/attempt1/report.md) · [审阅记录](../results/region_confirmation/attempt1/review.json) · [完成状态](../results/region_confirmation/attempt1/metric_runtime_update_01/status.json)
+
 ## 6. 必须与正结果一起保留的负证据
 
 ### 6.1 RGB 匹配：观测形状有用，不等于预测形状流程成功
@@ -193,9 +269,45 @@ R67 两组都从相同距离模型出发、续训相同 20 epochs；其配对差
 
 这些是 full11/log-shape 版本的负结果，不能写成“relative5 已在原生分类失败”，也不能因为五维在匹配成功就跳过原生基元的适用性问题。[R65 报告](../results/round65_actual_gs/attempt1/report1/report.md) · [R66 报告](../results/round66_logshape/attempt1/report.md) · [分类诊断](../results/round66_logshape/classification_diagnostic1/report.md) · [R67 报告](../results/round67_training_path/attempt1/report.md)
 
-**R73 已冻结并开始原生拟合。** 唯一变化是把原 R65 的关系输入换成直接复用的 R69 `CompactPosition('relative5')`；完整 13 维共同内容、骨干、原生 7,757 对象开发缓存、120 epochs/46,800 updates、三个种子和 CE 选模均不变。新增三个拟合，复用五组 R65 对照，六种评价条件完整保留。共同初始化、独立五维公式/MLP 计算、无关系时与 NoPE 一致和有效梯度已通过三项 CPU 检查；CUDA 全配置预检查也已通过，模型 352,220 参数，其中 PE 9,792，预检查峰值约 10.95 GiB。新 SUN3D 确认得分未用于选择本设计。[固定计划](round73_native_relative5_plan.md) · [冻结身份](../results/round73_native_relative5/attempt1/lock.json) · [CUDA 检查](../results/round73_native_relative5/attempt1/cuda_preflight.json)
+**R73 已完成三个原生拟合、统一选模、六条件评价与实际审阅。** 唯一变化是把原 R65 的关系输入换成直接复用的 R69 `CompactPosition('relative5')`；完整 13 维共同内容、骨干、原生 7,757 对象开发缓存、120 epochs/46,800 updates、三个种子和 CE 选模均不变。新增三个拟合，复用五组 R65 对照，六种评价条件完整保留。共同初始化、独立五维公式/MLP 计算、无关系时与 NoPE 一致和有效梯度已通过三项 CPU 检查；CUDA 全配置预检查也已通过，模型 352,220 参数，其中 PE 9,792，预检查峰值约 10.95 GiB。新 SUN3D 确认得分未用于选择本设计。[固定计划](round73_native_relative5_plan.md) · [冻结身份](../results/round73_native_relative5/attempt1/lock.json) · [完整结果](../results/round73_native_relative5/attempt1/report.md)
 
-R73 控制器 PID 97114、exec 会话 47612 已在确认控制器释放资源后启动训练；虽然确认判据未通过，本独立实验仍正常推进。种子 11/22 已在 GPU4/GPU2 训练，已保存的早期健康检查覆盖 4/6 epochs，损失和梯度有限，已完成部分的实际采样流均与 R65 Distance 对应种子一致；种子 33 仍在等待空闲卡。最多三卡并行，不改变预算。当前尚无原生收益结论。[早期健康检查](../results/round73_native_relative5/attempt1/initial_health.json) · [运行状态](../results/round73_native_relative5/attempt1/queue_status.json) · [执行身份](../results/round73_native_relative5/attempt1/execution_identity.json)
+| R73 基础条件 | 三种子 mCA % | 平均 mCA % | 五维减该对照 pp |
+| --- | --- | ---: | ---: |
+| **relative5** | **81.225 / 78.590 / 80.273** | **80.029** | — |
+| Distance | 77.831 / 79.542 / 77.907 | 78.426 | +1.603 |
+| Direct | 74.463 / 77.200 / 78.664 | 76.776 | +3.254 |
+| 旧十一维关系 | 77.875 / 76.013 / 77.387 | 77.092 | +2.938 |
+| Center RoPE | 72.032 / 68.985 / 72.471 | 71.163 | +8.867 |
+| NoPE | 69.903 / 70.562 / 69.021 | 69.829 | +10.201 |
+
+原生基元上的精简收益值得保留：对 Direct / 旧十一维三个种子均改善，类别区间分别为 [+1.370,+5.193] / [+0.813,+5.336] pp。但对 Distance 的种子 22 更差 −0.951 pp，完整类别区间 [−0.153,+3.409] pp 跨零；其余两个种子为 +3.394/+2.367 pp。因此完整用途条件未通过，不能写成已稳定超过最强控制，也不能概括成五维完全无效。
+
+六条件的均值都高于 Distance、Direct 和旧十一维，但种子 22 在全部条件均低于配对 Distance。稀疏/密集条件对 Distance 的均值优势降为 +0.888/+0.971 pp；稀疏对 Direct 的一个种子仅差 −0.078 pp，近似持平，不将这个小差异放大为主失败理由。MACGS / ModelNet 两个来源的平均 mCA 差均为正，但类别集合不同，不能当作跨域迁移证明。验证曲线正常下降且后期接近，没有唯一定位不稳定的病因。
+
+三个拟合均完成 120 epochs/46,800 updates、退出码 0，全部采样流及共同初始化与配对 Distance 一致。所有模型选定后才导出 18 组新预测，按身份复用 90 组控制；108 组的独立指标回算最大差 4.44e−16。GPU 选模回放 logits 误差为零，CPU 与排列检查的微小差异没有改变预测类别；已实际查看比较图、验证曲线与条件热图，热图的均值不能替代逐种子判断。原控制器 PID 97114、exec 会话 47612 已结束，勿重复启动。官方 TEST 仍未用于本轮。[已完成拟合核对](../results/round73_native_relative5/attempt1/completed_fits_check.json) · [统一选模与回放](../results/round73_native_relative5/attempt1/selected.json) · [审阅记录](../results/round73_native_relative5/attempt1/review.json) · [完成状态](../results/round73_native_relative5/attempt1/queue_status.json)
+
+**针对稳定性，已准备并冻结一次固定的五组新种子配对复现，尚未启动训练。** 假设是当前五维对 Distance 的平均收益可重复；竞争解释是旧三种子的偶然波动或持续的效果异质性。只用原五维与原 Distance，新增种子 44/55/66/77/88，共十次 120 epochs/46,800 updates 拟合；数据、共同内容、模型、几何 floor、优化器与 CE 选模都不变。六条件完整保留，十个模型统一选定后才导出旧 dev_eval。程序直接调用原有模型和训练流程，两个检查已确认新五组的模型一致性/共同初始化，以及报告中旧、新种子决策的隔离。[固定复现计划](../results/native_seed_replication/preparation/plan.json) · [冻结身份](../results/native_seed_replication/attempt1/lock.json) · [实现检查](../results/native_seed_replication/attempt1/units.json)
+
+报告将旧三组、新五组、合并八组分开。预先规定的新五组信号是基础 mCA 平均至少 +0.5 pp，且配对种子 bootstrap 95% 下界为正；同时报告条件于种子的类别区间、种子×类别区间、每个种子及所有条件，检查作用范围。它只回答是否值得进一步制定未用数据确认，**不改写 R73 旧判据未通过，也不是新数据确认**。五种子区间仍是旧 765 对象下的近似开发不确定性描述；若不明确，固定批次结束后保留不确定性，不追加种子直到通过。此复现最初在区域对照评分前固定；原计划和判据保持不变。§5.5 的三次区域固定球形归因已完成并支持变化协方差的额外作用；因区域与投影任务给出不同结果，目前先把同一控制用于原生基元，再确定这十次随机重复应纳入的强对照范围。若启动，最多四卡并行；当前尚无此复现的 CUDA 预检查或新拟合结果。
+
+**原生固定球形对照已实现、冻结并启动训练队列。** 只新增 `fixed_isotropic5` 三个旧种子拟合，五维候选和 R65 控制按身份复用；原 120 epochs/46,800 updates、512 tokens、完整 13 维内容、几何 floor、训练流与 CE 选模均不变。完整初始化与原五维相同，CPU 原生全前向与显式固定协方差 PE 一致。CUDA 全配置检查通过：352,220 参数、9,792 PE 参数，关系梯度与一次丢弃的合成更新有效，正式训练预算未被预检查占用。三个种子现已实际并行：11 在 GPU2，22 在 GPU1，33 在 GPU3；恢复并行时的检查点核对分别完成 56/1/27 epochs，三卡利用率为 96%/96%/97%，已完成训练流均与原五维配对一致。种子 22 曾长时间停留在启动阶段，随后在原进程中进入训练，未重启或更换实现；独立 CPU 大数组复制探针也出现超时，但尚未确定唯一原因。保持原完整预算与选模规则。[并行恢复核对](../results/native_shape_attribution/attempt1/parallel_resume_check_20261105.json)
+
+此处检验原生五维相对 Distance 的收益是否来自变化基元形状，或主要来自更丰富的径向特征。六条件、全部类别及来源组保留，三个控制统一选定后才导出旧 dev_eval；不改写 R73 判据，也不使用官方 TEST。原生完整拟合实测峰值约 12.2 GiB、需数小时，因此沿用整卡空闲及至少 34 GiB 可用显存的调度；小型区域任务的共享显存策略不直接套用。原五组新种子复现提案仍保留且未启动。[原生归因计划](../results/native_shape_attribution/preparation/plan.json) · [冻结身份](../results/native_shape_attribution/attempt1/lock.json) · [CUDA 检查](../results/native_shape_attribution/attempt1/cuda_preflight.json) · [运行队列](../results/native_shape_attribution/attempt1/queue_status.json)
+
+**旧 fit 几何的只读诊断提示：协方差所表示的范围差异，比中心坐标的总体尺度差异更明显。** 在查看统计前固定抽样：原生每类按身份取两个对象，共 120 个，每个固定抽取 512 个已缓存基元；观测区域每个旧训练场景取 16 个合格 fit0 对、两视图，共 96 个 64 区域上下文。每个上下文固定抽取 2,048 个非自身有向对，使用既有距离单位 `ℓ=.2`；不读取 val、dev_eval、新场景或官方 TEST，不训练、不扫描参数。两组都做过 RMS 归一化，但分别针对对象和视图对，且原生运行时中心 jitter 未包含在这次缓存诊断中。
+
+| 缓存几何统计：中位数 | 原生优化基元 | 观测区域 |
+| --- | ---: | ---: |
+| 普通中心距离 `‖δ‖/ℓ` | 6.151 | 5.992 |
+| 最短轴标准差 `/ℓ` | 0.01943 | 0.37729 |
+| 协方差度量相对普通平方距离：`(δᵀΣᵢ⁻¹δ)/(‖δ‖²/ℓ²)` | 740.892 | 2.188 |
+| 实际 PE 输入 `log1p(δᵀΣᵢ⁻¹δ)` | 9.985 | 4.272 |
+| 同迹球形协方差下的方向放大比 | 2.094 | 1.343 |
+| RMS 支撑半径 / 最近邻中心距离 | 0.338 | 1.100 |
+
+普通距离中位数接近，协方差度量的相对放大却相差约 339 倍；原生输入的各向异性尾部也更强，同迹球形方向放大比的 95 分位为 1,197.9，对观测区域为 12.55。这支持把“渲染基元形状”和“观测区域范围”的尺度语义区分开。它没有证明 MLP 无法适应、分类失败由此造成，或修改协方差尺度就能改善结果；点数、构造方式、任务与取样都有差异。
+
+指标计算使用 float64，独立线性求解的相对差最大约 7.35e−14，与未修改 PE 实现的描述符差最大约 8.24e−7，没有据此发现数值失稳。观测区域存在相同/极近中心，导致“支撑/最近邻距离”的算术均值被近零分母主导；这里只用中位数与分位数描述典型范围，原数值和零分母计数全部保留，不更改数据或另设门槛。诊断完成后得到的 R73 结果表明：即便输入范围差异很大，五维仍能稳定改善 Direct/旧十一维，故尺度差不能自动解释为失效。是否进行尺度相关设计还需结合补充强对照与稳定性证据，本诊断没有选择新模型或参数。[事前诊断计划](../results/geometry_scale_diagnostic/attempt1/plan.json) · [完整统计与样本身份](../results/geometry_scale_diagnostic/attempt1/result.json) · [解释与边界](../results/geometry_scale_diagnostic/attempt1/interpretation.json)
 
 ## 7. 已完成的 R70：当前图像接法没有稳定收益
 
@@ -234,7 +346,9 @@ R70 运行时已核实 URoPE 正文及官方源码：它将沿 key 射线的固�
 
 目前方法新颖性尚未确证：高斯二次 attention、协方差距离和几何关系编码都有先例；R47 已讨论过高斯二次位置形式。完整移植范围、相机约定、头数/深度锚与单位注意事项见[归档的阅读记录](archive/2026-11-04/docs/round70_related_work_update.md)。另一次[定向公式补查](../results/round71_target_projection/attempt1/targeted_related_work.json) 区分了 GS 中心/时间编码、标量 Gaussian RBF 与完整区域协方差关系；它不是新颖性证明。
 
-## 9. R71：投影交互产生用途，形状关系提供额外收益
+进一步核对原文：[GaussianGPT](https://arxiv.org/html/2603.26661v1#S3.SS2) 将 GS 属性压缩成体素潜变量，RoPE 编码体素坐标与 token 类型；[各向异性局部编码工作](https://arxiv.org/html/2601.02339v1#S3.SS1) 用协方差构造邻域图与谱描述符，再加中心 PE 输入 Transformer。这些先例说明必须区分“形状进入内容特征”与“形状改变位置关系”，不能把使用 Gaussian token 本身当作当前 PE 的贡献。后者的有界度量 `(I+βΣ)⁻¹` 可启发后续建模，但它也可能抹去有效形状差异；当前仅记录假设，待 R73 与固定形状诊断完成后判断，不据此改动在跑实验。[原文、实现对应及边界](../results/research_related_work/comparison_scope_20261104.json)
+
+## 9. 投影交互与参考形状的贡献需分开判断
 
 R71 先保持参考深度输入，避免把新接法与 RGB 几何预测混在一起。沿用 R70 的旧 288/32/240 三元组、6 层 192 宽模型、60 epochs/2,160 updates、共同内容和输入流。12 次新拟合与 R70 基线按身份配对，全部选定后统一导出。
 
@@ -249,7 +363,7 @@ R71 先保持参考深度输入，避免把新接法与 RGB 几何预测混在�
 
 基础 PSNR 对 Distance 的配对差为 +0.193/+0.360/+0.063 dB，对 Direct 为 +0.109/+0.442/+0.244 dB，对 URoPE 为 +0.492/+0.364/+0.464 dB。对四个主要对照，基础 PSNR、LPIPS 在三个种子和五个场景均值上均改善，达到事前固定的实用增益条件。
 
-解释要分两层：只用投影距离已比 R70 PRoPE 高 1.016 dB；五维再高 0.205 dB，并比同信息 Direct 高 0.265 dB。因此支持“交互坐标/位置与几何关系组织都值得考虑”，不能把相对 PRoPE 的全部 1.222 dB 都归给高斯形状。Direct 也获得完整投影信息，它的差距更接近组织方式的作用，而非额外信息来源。
+解释要分两层：只用投影距离已比 R70 PRoPE 高 1.016 dB；五维再高 0.205 dB，并比同信息 Direct 高 0.265 dB。因此支持“交互坐标/位置与几何关系组织都值得考虑”，不能把相对 PRoPE 的全部 1.222 dB 都归给高斯形状。Direct 也获得完整投影信息，它的差距更接近组织方式的作用，而非额外信息来源。后续固定形状诊断进一步发现：仅保留固定查询度量的同结构控制，对 Distance 仍高 +0.181 dB，三个种子均正；所以原来的 +0.205 dB 也不能全部解释为变化的参考协方差带来的收益。
 
 **限制保留：** 外推对 Distance 只有 +0.065 dB，种子 33 为 −0.148 dB、场景区间跨零；变焦 LPIPS 对 Distance 差 +0.00212。五幅固定样例中布局和部分边界较 R70 更清楚，但全部仍有模糊与 patch 块，五维对其他投影控制的视觉差异较细微。所有学习模型的 LPIPS 仍比直接复制参考图差，故不能称高质量 NVS。给定参考深度、旧开发场景、三种子不构成 RGB-only、新场景或原生 3DGS 的一般结论。
 
@@ -287,25 +401,44 @@ R71 先保持参考深度输入，避免把新接法与 RGB 几何预测混在�
 
 独立 PSNR 复算误差约 3.11e−6 dB，不影响结论。固定样例仍模糊、有 patch 块；复制参照 LPIPS 为 0.1778，五维为 0.4527，不能称成熟图像生成。五场景 bootstrap 条件于既定种子，不能用正区间下界覆盖种子不稳定。本队列已使用，不能再称 fresh 或用于救分。[完整报告](../results/projection_confirmation/attempt1/report.md) · [审阅记录](../results/projection_confirmation/attempt1/review.json)
 
-在读取本次确认分数前，另固定了一个**旧数据机制诊断**：保持投影中心、有效性、完整共同内容和参数量，仅把参考投影协方差设为固定目标 patch 协方差 Q。五维输入变成 `[distance, log1p(δᵀQ⁻¹δ), 同一项, log(3), log(3)]`。它隔离“变化的参考形状”与“固定查询中心度量”的贡献；不更改当前候选，不在本次新场景上训练/评分，也不覆盖确认失败。RGB 与给定几何各三种子，仍为旧预算；当前只有计划，尚未实施。[事前诊断计划](../results/projected_shape_attribution/preparation/plan.json)
+### 9.2 固定形状诊断：图像收益大部分保留，协方差的额外作用有限
+
+在读取本次确认分数前，另固定了一个**旧数据机制诊断**：保持投影中心、有效性、完整共同内容和参数量，仅把 PE 中的参考投影协方差设为固定目标 patch 协方差 Q。五维输入变成 `[distance, log1p(δᵀQ⁻¹δ), 同一项, log(3), log(3)]`。它比较“变化的参考形状”与“固定查询中心度量”的贡献；不更改当前候选，不在本次新场景上训练/评分，也不覆盖确认失败。RGB 与给定几何各三种子，仍为旧预算。[事前诊断计划](../results/projected_shape_attribution/preparation/plan.json)
+
+**六次拟合、统一选模、18 份预测、GPU 回放和实际图表审阅均已完成。** 通过在现有关系 MLP 前变换输入实现，无新模块；三个检查确认全部初始化和参数数目与原候选一致、等价于显式 C=Q、仅移除 PE 的参考形状依赖而保留中心梯度。完整几何信息仍在共同内容中；RGB 会分别重新学习几何，因而不是固定预测器下的唯一因果归因。六个对照均完成旧验证集选模后才导出三个条件，按身份复用 R71/R72 原候选与强控制。
+
+| 基础条件 | 原五维 PSNR | 固定形状 PSNR | 原五维减固定形状：三种子 PSNR 差 | LPIPS 均值差（负值更好） |
+| --- | ---: | ---: | --- | ---: |
+| 给定参考几何 | 18.5807 | 18.5567 | +0.009 / +0.167 / −0.104 dB | +0.00412 |
+| RGB 预测几何 | 18.2360 | 18.1808 | +0.022 / +0.094 / +0.049 dB | −0.00411 |
+
+给定几何组的平均 PSNR 差仅 +0.024 dB，方向随种子改变；原五维的基础 SSIM 低 0.00588，LPIPS 在五个场景均值上都略差。固定形状对 Distance / Direct 仍有 +0.181 / +0.241 dB，三个种子均正。因此该图像任务的主要额外收益可以由固定查询度量及其输入组织保留，变化的参考协方差不是已确证的主要来源。这个描述不是正式非劣性证明，也没有把均值比值当作因果贡献百分比。
+
+这也给出一个精简设计的线索：固定形状输入实际只有两个变化量，普通距离 `d` 与目标 patch 单位下的 `t=log1p(δᵀQ⁻¹δ)`。设第一层矩阵的五列为 `w0…w4`，则其输出为 `w0*d+(w1+w2)*t+b+log(3)*(w3+w4)`；重复列和常量可合并成两输入 MLP 的权重与偏置。因此该控制的函数表示不需要变化的参考协方差。此处仅作代数解释，尚未重新训练两输入版本；合并参数后单独训练的优化路径未必相同，现有实现也仍计算上游协方差，不能据此声称已实现加速。
+
+RGB 组则有小幅一致的基础收益：PSNR 平均 +0.055 dB，SSIM +0.00400，LPIPS −0.00411，三个种子方向均有利于原五维。诊断没有另设 +0.10 dB 门槛来否定这条信号。但外推 PSNR 差 −0.007 dB、LPIPS 差 −0.00017，近似持平且方向混合。两组变焦 PSNR 都略好，LPIPS 均值却分别差 +0.01258 / +0.01159，不能概括为全面改善。
+
+固定形状不是自动晋升的新方案：RGB 对 Distance 的 PSNR 仍只有一个种子明显更好，对 URoPE 均值近似持平；尚无其原生或未用场景验证。此诊断削弱的是**投影图像任务中变化协方差的专属归因**，不删除 R68–R69 区域匹配证据，不证明共同内容中的形状无用，也不更改 R72 和新场景确认的混合结果。
+
+各模型完成 60 epochs/2,160 updates、退出码 0；初始化、参数量及全部输入流配对一致。六个旧验证 MSE 的 GPU 回放误差均为零，保存图像独立 PSNR 复算最大差约 3.12e−6 dB、抽样 GPU 指标回放最大差约 8.67e−7，远小于所讨论差异。已实际查看比较图、逐种子条件差图和学习曲线；没有据此宣称查看了新的原始图像样例。控制器 PID 59533、exec 会话 13278 已结束，勿重复启动。审阅状态以 `review.json` 为准，生成时保留的原始结果及队列待审阅标记不作改写。[完整结果与分析](../results/projected_shape_attribution/attempt1/report.md) · [审阅记录](../results/projected_shape_attribution/attempt1/review.json) · [GPU 回放](../results/projected_shape_attribution/attempt1/audit.json) · [六模型选模记录](../results/projected_shape_attribution/attempt1/selections.json) · [冻结身份](../results/projected_shape_attribution/attempt1/lock.json)
 
 ## 10. 证据覆盖、结论与下一步
 
 | 需要回答的问题 | 已有证据 | 当前状态 |
 | --- | --- | --- |
 | 算子/实现是否与定义一致 | 单测、梯度、同信息初始化、实际输入流、选模与指标回算 | 对已完成的相应实验有支持，不等于效果证据 |
-| 形状信息如何进入 PE 更有用 | 早期解耦、R58 标量失败、R68 同信息控制、R69 输入精简 | 支持学习型关系组织；未唯一确定物理成因 |
-| 是否优于强对照 | R68–R69 区域匹配开发正面；R71 旧场景正面，新场景对 Distance 不稳定 | 有条件性用途，尚非一般方案 |
-| 区域收益是否牺牲中心定位 | R68–R69 两类指标共同改善 | 当前正结果不是这种代价交换 |
+| 形状信息如何进入 PE 更有用 | 早期解耦、R58 标量失败、区域开发与九个新场景固定球形确认；投影固定形状保留大部分图像收益 | 变化协方差提供额外区域收益，已在新场景保留；不能把投影用途全部归给它 |
+| 是否优于强对照 | 区域开发和九个可用新场景均优于五项强控制；R71 旧场景正面，投影新场景对 Distance 不稳定 | 区域用途得到确认，尚非一般方案 |
+| 区域收益是否牺牲中心定位 | R68–R69 与九个新场景两类指标共同改善 | 不支持总体此消彼长的解释，细分例外保留 |
 | 是否跨域/稀疏普遍稳健 | 直接迁移失败；固定查询稀疏保持领先但降幅并非全面更小 | 不能宣称普遍鲁棒性 |
 | 五维候选是否改善图像任务 | R71 旧场景通过；新场景对 Direct/相机控制有收益，但对 Distance 不稳定；R72 RGB 为混合结果 | 额外形状关系的一般用途未确证 |
-| 是否用于真实优化 3DGS 也稳定有效 | 已有版本分类负结果；R73 当前五维正在拟合 | 未完成 |
-| 是否有未使用数据确认 | R71 五个新场景、冻结模型确认已完成并审阅 | 完整用途标准未通过，正面子比较保留 |
-| 是否结构精炼且实际高效 | 一个关系 MLP，输入五维；但 pairwise 二次开销显著 | 结构精炼有依据，整体高效未确立 |
+| 是否用于真实优化 3DGS 也稳定有效 | R73 对 Direct/旧十一维三种子均改善，对 Distance 平均 +1.603 pp、一个种子为负 | 明显改进，最强控制下稳定性仍不足 |
+| 是否有未使用数据确认 | 投影五个新场景为混合结果；区域预定十个中的九个可用新场景通过用途及协方差规则 | 区域可用范围内正面确认，不填补缺失场景或覆盖其他任务 |
+| 是否结构精炼且实际高效 | 一个五输入关系 MLP；代数重排使原生前向＋反向耗时下降约 34.35%、峰值显存下降 28.20%，五维仍比同等优化的 Distance 慢约 16.34% | 有限定范围的效率改善；区域未加速，二次开销仍在，不是高斯专属收益 |
 
 因此当前最准确的研究结论是：**高斯参数化值得作为区域关系的组织方式继续研究；现有证据还不足以把它提升为优于强编码方式的一般性位置编码。** “区域形状关系能帮助某个任务”与“必须采用高斯/所有任务都受益”之间仍有证据缺口。
 
-R70 的旧接法停止，R71、[R72 RGB 验证](round72_rgb_projection_plan.md) 及 R71 新场景确认均完成。新场景未通过完整用途标准；保留对部分强控制的收益，也保留对 Distance 的不稳定。下一步执行已冻结的 R73 原生验证与旧数据固定形状诊断，分别回答真实基元适用性和收益归因。RGB 感知指标和几何诊断的正面信号不被删除，也不替代主判断。适用的几何/鲁棒/泛化验证继续保留，但不要求每一处微小尾数同号，不恢复静态求积通用门禁。
+R70 的旧接法停止，R71、[R72 RGB 验证](round72_rgb_projection_plan.md)、R71 新场景确认、固定形状诊断及 R73 原生验证均完成。R73 给出了精简设计在原生基元上的明显改进，Distance 下的种子不稳定仍需解释；新场景确认也保留了部分正面比较与对 Distance 的不稳定。固定形状诊断提示后续图像比较应加入固定查询度量，不能继续以普通 Distance 之上的全部差距代表协方差收益。区域匹配的 GeoTransformer/角度描述符对照已完成并保持正面优势，补齐了当前比较范围。三个区域固定球形对照也已完成：变化协方差额外提供基础/稀疏 +3.340/+3.363 pp 的召回，中心指标共同改善。九个可用新场景确认保留区域用途优势和额外协方差收益（§5.6），当前继续原生固定球形对照，确定真实优化基元的收益来源。针对 R73 随机性问题的五组新种子提案保留且未启动，待原生归因后确定完整强对照范围。保持候选不变，不用补对照替代 RGB 或新场景验证，不由尺度统计直接选择新参数。RGB 感知指标和几何诊断的正面信号不被删除，也不替代主判断。适用的几何/鲁棒/泛化验证继续保留，但不要求每一处微小尾数同号，不恢复静态求积通用门禁。
 
 R72 的全部 12 个模型已选定，旧验证集的只读几何诊断按事前计划完成并实际审阅；继承 R70 的深度与 matrix-log 协方差一致性指标，不增加训练或用途门槛。[诊断计划](../results/round72_rgb_projection/attempt1/geometry_diagnostic1/plan.json)
 
@@ -320,12 +453,23 @@ R71 的旧 fit/val 输入诊断显示，基础条件约 92.9%/96.8% 的参考区
 | 当前设计代码 | [R69](../models/round69_compact_relation.py)、[R70](../models/round70_nvs.py) |
 | R68 的数据、配置、报告和审阅 | [结果目录](../results/round68_fixed_region/attempt1/)、[原计划](archive/2026-11-04/docs/round68_fixed_region_plan.md) |
 | R69 的精简对照及完整次指标 | [结果目录](../results/round69_compact_relation/attempt1/)、[原计划](archive/2026-11-04/docs/round69_compact_relation_plan.md) |
+| 当前固定查询下的几何编码补充对照 | [事前计划](../results/region_geometry_controls/preparation/plan.json)、[冻结身份](../results/region_geometry_controls/attempt1/lock.json)、[运行状态](../results/region_geometry_controls/attempt1/queue_status.json)、[完整结果与审阅](../results/region_geometry_controls/attempt1/report.md)；六次拟合及评价均完成，对两项强控制有正面开发优势 |
 | R65–R67 原生分类与诊断 | [R65](../results/round65_actual_gs/attempt1/)、[R66](../results/round66_logshape/attempt1/)、[R67](../results/round67_training_path/attempt1/) |
+| 原生基元与观测区域的尺度语义 | [旧 fit 诊断](../results/geometry_scale_diagnostic/attempt1/interpretation.json)；只读输入统计，协方差度量范围明显不同，尚非任务效果或唯一病因证据 |
 | R70 配置、数据、选模、导出、资源状态 | [结果目录](../results/round70_nvs/attempt1/)、[冻结锁](../results/round70_nvs/attempt1/lock.json) |
 | R71 完整结果、源身份和审阅 | [结果目录](../results/round71_target_projection/attempt1/)；给定几何投影关系已通过开发用途标准 |
 | R72 RGB 接法与并行验证 | [计划](round72_rgb_projection_plan.md)、[完整结果与审阅](../results/round72_rgb_projection/attempt1/report.md)；混合结果，未通过固定用途标准 |
 | R71 五个新场景确认 | [固定计划](projection_confirmation_plan.md)、[评价冻结身份](../results/projection_confirmation/attempt1/evaluation_lock.json)、[完整结果与审阅](../results/projection_confirmation/attempt1/report.md)；混合结果，完整标准未通过 |
-| R73 当前五维的原生基元验证 | [固定计划](round73_native_relative5_plan.md)、[运行状态](../results/round73_native_relative5/attempt1/queue_status.json)；三个新拟合，复用 R65 完整开发缓存与对照 |
+| R73 当前五维的原生基元验证 | [固定计划](round73_native_relative5_plan.md)、[完整结果与审阅](../results/round73_native_relative5/attempt1/report.md)；已完成，明显改善 Direct/旧十一维，对 Distance 的稳定优势未确立 |
+| 原生五维的固定种子复现 | [事前计划](../results/native_seed_replication/preparation/plan.json)、[冻结身份](../results/native_seed_replication/attempt1/lock.json)；准备完成但暂未启动，先做原生固定球形归因，旧三组结论保留 |
+| 区域固定球形协方差归因 | [事前计划](../results/region_shape_attribution/preparation/plan.json)、[冻结身份](../results/region_shape_attribution/attempt1/lock.json)；三个配对拟合及审阅已完成，基础/稀疏额外 +3.340/+3.363 pp；[完整结果](../results/region_shape_attribution/attempt1/report.md) |
+| 可学习单散度的区域对照 | [事前计划](../results/region_jeffreys_control/preparation/plan.json)；普通距离加经典高斯双向 KL，以同样 MLP 和三个旧种子检验是否需要分开组织四个分量；已通过针对性实现检查，待完成 GPU 训练，不据旧固定 sin/cos 负结果提前判断 |
+| 区域九个可用新场景确认 | [科学计划](region_confirmation_plan.md)、[完整结果与审阅](../results/region_confirmation/attempt1/report.md)；冻结模型保留强控制优势和额外协方差收益，预定第十个场景缺标定 |
+| 当前原实现的 GPU 成本 | [事前计划与完整测量](../results/pe_runtime_diagnostic/attempt1/report.md)；两任务、四方法的整模型前向/反向，保留范围限制 |
+| 相同关系公式的投影重排 | [配对 GPU 成本与审阅](../results/factored_relation_runtime/attempt1/report.md)；原生明显省时省显存，区域未加速，全部兼容控制同等优化；当前训练实现不变 |
+| 原生独立确认的数据入口 | [来源、交集与容量核对](../results/native_confirmation_metadata/attempt1/report.md)、[历史对象复用补查](../results/native_confirmation_metadata/attempt1/historical_overlap1/report.md)、[逐对象缓存验证](../results/native_stream_cache_validation/attempt1/report.md)；官方 TEST 中 2,245 个底层对象早期已用于 ModelNet 开发，另 3,845 个无已知历史 ID 重叠且覆盖 60 类；测试基元与评分仍未开放 |
+| 原生固定球形协方差归因 | [事前计划](../results/native_shape_attribution/preparation/plan.json)、[冻结身份](../results/native_shape_attribution/attempt1/lock.json)；三次完整预算拟合，CUDA 检查通过，训练进行中 |
+| 固定参考形状归因诊断 | [事前计划](../results/projected_shape_attribution/preparation/plan.json)、[完整结果与审阅](../results/projected_shape_attribution/attempt1/report.md)；六次拟合、18 份预测和核查均完成，多数图像收益在固定形状后保留 |
 | R70 预测几何解释检查 | [诊断目录](../results/round70_nvs/attempt1/geometry_diagnostic1/)；解释性检查，不另设通过门槛 |
 | 全部历史说明、失败及未选草案 | [归档索引](archive/2026-11-04/INDEX.md)、[逐文件路径与摘要](archive/2026-11-04/manifest.json) |
 
@@ -338,12 +482,24 @@ R70 a4dee280476efaaba2cd57a3ddf0db3563d9ad059a9a5007a47073458c8d5fd3
 R71 7175d13587615cbdab44c418c61a8e710342b09cf3883e91939807b981941140
 R72 1dcd5251863dd8c56d71dd01376c4f9890d91b00f8b4f7948c5dee6e8165fbb6
 R73 dc262ad27c049625e206d10f13d941c66f958cc17ff0c41cd1aec0bdb5e76cd0
-新场景确认 4df68d631e33f0287fe645e2952f7f427f80a866fd4d8daab4c7684d0bd61c1f
+固定形状诊断 772764310fd430849e58dbdda6a4fd0970e4fea341e16e7d14ca380f95a88a8e
+投影新场景确认 4df68d631e33f0287fe645e2952f7f427f80a866fd4d8daab4c7684d0bd61c1f
+区域新场景确认 6576e827106ca7ee7d28e3192cc991fe225fcd27dddefe57cf95fae012b31bc8
 ```
 
 **新场景确认已完成并审阅：** 五个保留 place 的队列和机械取样规则先于像素读取固定，1,440 个文件共约 218 MB 已直连下载完成、没有失败；240 个三元组的原始像素及缓存存放在用户指定数据盘。R72 未通过，按原计划仅纳入给定几何组 15 个旧验证集已选定模型，不重新训练。像素开放前已冻结全部模型、源码、条件与指标。预处理与 R70 缓存的一致性、输入边界和三条件已检查；45 份模型预测与 6 份零学习参照全部导出，独立复算、图表审阅均完成。旧控制器 PID 24074、exec 会话 24139 已退出，勿重复启动。[固定计划](projection_confirmation_plan.md) · [评价冻结身份](../results/projection_confirmation/attempt1/evaluation_lock.json) · [结果与审阅](../results/projection_confirmation/attempt1/report.md)
 
 **确认数据的当前可用范围：** 已核对 R5/R6/R7 的使用清单，共 21 个已使用或预览的 SUN3D 顶层 place 必须排除；旧 R6/R7 的测试也不能重新标为 fresh。另行保留的 `home_ac`、`hotel_barcelona`、`hotel_graz`、`mit_1_242`、`harvard_computer_lab` 已开放给本次冻结确认，不能以后再当作未见队列重新挑选方案。此前的清单是冻结前快照，现阶段以[像素读取开始记录](../results/projection_confirmation/attempt1/data_access_started.json)和[运行状态](../results/projection_confirmation/attempt1/queue_status.json)为准。GSModel60 登记的本地下载仍仅含官方 TRAIN，官方 TEST 未下载到该范围。[历史使用与候选清单](../results/research_data_usage/confirmation_inventory_20261104.json)
+
+**原生 TEST 的独立性补充：** 与当前 GSModel60 TRAIN 没有对象重叠，不代表与整个历史研究没有重叠。实际 HDF5 行到对象的映射表明，官方 TEST 中 2,245 个底层对象在 R48/R58 已用于 fit/val/dev_eval（1,826/210/209），因此全量不能称为全新对象确认。其余 3,845 个对象包含 2,124 个 MACGS 和 1,721 个原 ModelNet TEST，覆盖全部 60 类。后续固定评价保留完整官方基准，并在 PLY/得分开放前固定这两层报告；当前从头训练的原生模型没有因此被证实直接泄漏 TEST。这里仅访问 ID 元数据，没有查看新效果。[逐对象核对与解释](../results/native_confirmation_metadata/attempt1/historical_overlap1/report.md)
+
+区域确认的九个可用 place（`brown_bm_6`、`brown_cogsci_4`、`harvard_printroom1`、`harvard_c2`、`home_ts`、`hotel_uc`、`hotel_florence_jx`、`mit_36_ti_lab2`、`mit_3_133`）现已开放深度，后续也必须从 fresh 队列排除；`home_han` 仍只有元数据和标定失败记录，没有读取像素。[本次使用登记](../results/research_data_usage/region_confirmation_access_20261105.json)。
+
+**原生测试数据的元数据准备已完成，尚未开放基元或评分。** 通过 hf-mirror.com 直连读取相同固定版本的官方 TEST 清单：6,090 个对象、60 类，与旧 7,757 个开发对象的路径、对象 ID、发布文件哈希均无交集。测试的 ModelNet 来源对象中有 2,245 个属于原始 ModelNet TRAIN，因此该划分只能准确称为 GSModel60 官方 TEST，不能当作原始 ModelNet 官方测试结果；本项目原生模型从头训练，该成员关系本身不证明当前模型泄漏。精确哈希无交集也不能证明没有相关几何或近重复对象。
+
+全部测试原始文件约 75.83 GiB，观察时数据盘空闲约 31.35 GiB；按原转换器的数据类型和 2,048 基元/对象估算，完整缓存数组约 1.208 GiB。当前不能直接保留全量原始下载；正式开放前需固定模型/强对照与分析，安排空间，不临时缩小官方人群。元数据与标签现已查看，测试 PLY 和模型得分仍未访问。这是数据入口准备，不是效果确认，也不改变当前归因及固定复现的优先级。[详细核对](../results/native_confirmation_metadata/attempt1/report.md) · [访问范围登记](../results/research_data_usage/native_confirmation_metadata_access_20261105.json)。
+
+**逐对象下载、校验和缓存的实现现已完成旧数据验证。** 按两类来源各取最小、中位、最大已用 fit 文件，共六对象；其中两个最小文件又通过 hf-mirror.com 直连验证完整网络路径。所有中心、float64 协方差、外观、采样索引、标签及转换统计与原缓存完全一致；实际中断续接和三个自动检查通过，成功后没有原始暂存文件。它只调用原转换器、顺序处理一份临时对象，不修改原始 TRAIN 或在跑训练。最大旧对象约 190 MiB，超过元数据中最大 TEST 文件约 149.5 MiB；完整 TEST 的字节与采样覆盖仍未实际执行。后续空间策略可按约 1.208 GiB 的缓存及单对象上界制定，不能把之前百 GiB 整批下载的资源安排机械当作这种流程的通用前提。[实现、实际比较与范围](../results/native_stream_cache_validation/attempt1/report.md)。
 
 SUN3D 的这些旧场景、模型和预测存在跨轮复用，轮数不等于独立证据份数。GSModel60 的来源版本、文件/缓存身份及划分见 R65 数据记录；当前原始下载目录为 `/mnt/f70f6709-366e-49a0-861f-497645d98975/users/liwt/data`。2026-11-04 的文档归档没有移动原始数据、模型、实验实现或 `results/`。
 

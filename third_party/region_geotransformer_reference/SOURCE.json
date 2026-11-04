@@ -1,0 +1,28 @@
+{
+  "repository": "https://github.com/qinzheng93/GeoTransformer",
+  "commit": "e7a135af4c318ff3b8d7f6c963df094d7e4ea540",
+  "retrieved_unix": 1793814679.696,
+  "files": [
+    {
+      "original_path": "geotransformer/modules/geotransformer/geotransformer.py",
+      "git_blob_sha": "6c82c5d90b84468096e564314b5ca1b804c3bfde",
+      "url": "https://github.com/qinzheng93/GeoTransformer/blob/e7a135af4c318ff3b8d7f6c963df094d7e4ea540/geotransformer/modules/geotransformer/geotransformer.py"
+    },
+    {
+      "original_path": "geotransformer/modules/transformer/positional_embedding.py",
+      "git_blob_sha": "fbe2b8522d1c73337762be4efd225c5ce60df9c8",
+      "url": "https://github.com/qinzheng93/GeoTransformer/blob/e7a135af4c318ff3b8d7f6c963df094d7e4ea540/geotransformer/modules/transformer/positional_embedding.py"
+    },
+    {
+      "original_path": "geotransformer/modules/transformer/rpe_transformer.py",
+      "git_blob_sha": "bc1acddd57ad55b10e8bc19eb2d01a000117c63c",
+      "url": "https://github.com/qinzheng93/GeoTransformer/blob/e7a135af4c318ff3b8d7f6c963df094d7e4ea540/geotransformer/modules/transformer/rpe_transformer.py"
+    },
+    {
+      "original_path": "geotransformer/modules/ops/pairwise_distance.py",
+      "git_blob_sha": "42c31178c155e4d72a4034944fb8a8d4ffb4f6ad",
+      "url": "https://github.com/qinzheng93/GeoTransformer/blob/e7a135af4c318ff3b8d7f6c963df094d7e4ea540/geotransformer/modules/ops/pairwise_distance.py"
+    }
+  ],
+  "purpose": "Pinned original references and MIT license for a positional-operator adaptation on the R68 matched backbone; not a full GeoTransformer benchmark reproduction."
+}
