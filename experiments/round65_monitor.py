@@ -37,7 +37,13 @@ def process(pid, expected_ticks=None):
 
 def snapshot(pilot=PILOT):
     queue = read(pilot / 'queue_status.json')
-    live = [process(queue['pid'], queue['start_ticks']), process(99977, '1396096550')]
+    controller_ticks = queue.get('start_ticks')
+    launch_path = pilot / 'full_validation_launch1.json'
+    if controller_ticks is None and launch_path.exists():
+        controller = read(launch_path)['controller']
+        if controller['pid'] == queue['pid']:
+            controller_ticks = controller['start_ticks']
+    live = [process(queue['pid'], controller_ticks), process(99977, '1396096550')]
     live += [process(row['pid']) for row in queue.get('active', [])]
     runs = []
     for path in sorted((pilot / 'runs').glob('*/*/history.json')):
@@ -46,15 +52,19 @@ def snapshot(pilot=PILOT):
         runs.append(dict(role=path.parent.parent.name, seed=int(path.parent.name),
             epochs=len(training), steps=training[-1]['step'] if training else 0,
             last_loss=training[-1]['loss'] if training else None,
-            finite=all(math.isfinite(row[key]) for row in training for key in ('loss', 'gradient_norm')),
+            finite=(all(math.isfinite(row['loss']) and
+                        math.isfinite(row['gradient_norm'] if 'gradient_norm' in row else row['last_gradient_norm'])
+                        for row in training) if training else None),
             validation_finite=all(math.isfinite(row[key]) for row in validation for key in ('ce', 'oa', 'mca')),
             latest_validation={key: validation[-1][key] for key in ('epoch', 'ce', 'mca')} if validation else None,
-            completed=(path.parent / 'run.json').exists(), failure=(path.parent / 'failure.json').exists()))
+            completed=(path.parent / 'run.json').exists(),
+            failure=any(path.parent.glob('failure*.json'))))
     now = time.time()
     progress = read(DOWNLOAD / 'progress.json')
     progress_age = now-progress['unix']
     partials = []
-    if progress_age > 120:
+    download_complete = (DOWNLOAD / 'completion.json').exists()
+    if progress_age > 120 and not download_complete:
         raw = Path(read(DOWNLOAD / 'plan.json')['raw_root'])
         for path in raw.rglob('*.part'):
             try:
@@ -68,20 +78,21 @@ def snapshot(pilot=PILOT):
         queue_state=queue['state'], queue_heartbeat_age_seconds=now-queue['observed_unix'],
         stage=queue.get('stage'), pending_jobs=queue.get('pending', []),
         queue_error=queue.get('error'), completed_children=len(queue.get('completed', [])),
-        active_jobs=[dict(stage=row['stage'], job=row['job'], pid=row['pid'], gpu=row['gpu']['index'])
+        active_jobs=[dict(stage=row['stage'], job=row['job'], pid=row['pid'],
+                         gpu=row['gpu']['index'] if row.get('gpu') else None)
                      for row in queue.get('active', [])], runs=runs,
         download=progress, download_progress_age_seconds=progress_age,
         download_recent_partials=partials[:8],
-        download_complete=(DOWNLOAD / 'completion.json').exists(),
+        download_complete=download_complete,
         download_failed=(DOWNLOAD / 'failure.json').exists(),
-        report_available=(pilot / 'result.json').exists(),
+        report_available=(pilot / 'result.json').exists() or (pilot / 'report1/generated.json').exists(),
         scientific_interpretation_pending=queue.get('scientific_review_pending', True),
         observation_only=True)
 
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
-    parser.add_argument('--experiment', choices=('pilot3', 'content_route1'), default='pilot3')
+    parser.add_argument('--experiment', choices=('pilot3', 'content_route1', 'attempt1'), default='pilot3')
     args = parser.parse_args()
     pilot = PILOT.parent / args.experiment
     result = snapshot(pilot)
@@ -96,7 +107,7 @@ if __name__ == '__main__':
         print('PROCESS', row['pid'], 'exists', row['exists'], 'state', row.get('state'),
               'identity', row.get('identity_matches'))
     for row in result['runs']:
-        print('RUN', row['role'], row['seed'], 'epoch', row['epochs'],
+        print('RUN', row['role'], row['seed'], 'logged epoch', row['epochs'],
               'finite', row['finite'] and row['validation_finite'], 'failure', row['failure'])
     print('DOWNLOAD', result['download'], 'complete', result['download_complete'],
           'failure', result['download_failed'])

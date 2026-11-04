@@ -1,0 +1,12 @@
+{
+  "repository": "https://github.com/Applied-Intuition-Open-Source/URoPE",
+  "commit": "5d71a04778df7a0a9ed1deca82d9bf5d7de05b09",
+  "retrieval": "GitHub connector fetch pinned files",
+  "files": {
+    "LICENSE": "8c6db340475136df3c1201d458fa5755698eace76e510471ecc9d857d6083dac",
+    "THIRD_PARTY_LICENSES": "131693b742874e06180b79153686d92ad55355f16fa795321f28bf10f66d7a4c",
+    "NOTICE": "f6cd0517afc4053d9bdd0092032f8dd6b9416cd942864bafdee36ba736c1a367",
+    "urope.py": "2d9632e058ccf891a9a78d0c0a7c2cc9d3b2dda559fef2e31cb2303d1b29bd6a"
+  },
+  "code_modifications": false
+}

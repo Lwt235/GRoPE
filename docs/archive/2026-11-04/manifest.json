@@ -1,0 +1,3078 @@
+{
+  "created_at": "2026-11-04",
+  "timezone": "Asia/Shanghai",
+  "purpose": "Historical documentation archive; original bytes preserved; current research consolidated into docs/research_current.md",
+  "files": [
+    {
+      "original": "ROUND55_BUDGET_DIAGNOSTIC_PROTOCOL.md",
+      "archived": "docs/archive/2026-11-04/ROUND55_BUDGET_DIAGNOSTIC_PROTOCOL.md",
+      "sha256": "e137f2d368f8a4b411b065f009030662e0d512ec9fe806c291149c8bda4a095a",
+      "bytes": 5543,
+      "action": "move"
+    },
+    {
+      "original": "ROUND32_LOG_CONDITIONAL_AUDIT_REPAIR_PROTOCOL.md",
+      "archived": "docs/archive/2026-11-04/ROUND32_LOG_CONDITIONAL_AUDIT_REPAIR_PROTOCOL.md",
+      "sha256": "eaee4ed97181350233d656d7997eb16f0a3f1eca85cfc1733d5cf02992af72b2",
+      "bytes": 2897,
+      "action": "move"
+    },
+    {
+      "original": "ROUND36_COMPONENT_ROUND_REFERENCE_PROTOCOL.md",
+      "archived": "docs/archive/2026-11-04/ROUND36_COMPONENT_ROUND_REFERENCE_PROTOCOL.md",
+      "sha256": "197328ab45f6fa5652356141a59a24c828bdb2fd9ce60d44062d01ad7284c021",
+      "bytes": 1030,
+      "action": "move"
+    },
+    {
+      "original": "ROUND42_RENDER_LOSS_CONTROL.md",
+      "archived": "docs/archive/2026-11-04/ROUND42_RENDER_LOSS_CONTROL.md",
+      "sha256": "21636739970052538b3776f0a1e0c73e54fa2bb85a78b58c699dfab256b30d52",
+      "bytes": 6770,
+      "action": "move"
+    },
+    {
+      "original": "ROUND39_SCHUR_DIAGNOSTIC_PROTOCOL.md",
+      "archived": "docs/archive/2026-11-04/ROUND39_SCHUR_DIAGNOSTIC_PROTOCOL.md",
+      "sha256": "56adda2183b00c6b0df28ee8ed686286b4472af7238a8f8afacc904a65072f98",
+      "bytes": 6585,
+      "action": "move"
+    },
+    {
+      "original": "ROUND15_REGIONAL_PROTOCOL.md",
+      "archived": "docs/archive/2026-11-04/ROUND15_REGIONAL_PROTOCOL.md",
+      "sha256": "ca20d316aa4b42205c35b0d898d98d2d266578ce33af73992e1c0cd12eaf4882",
+      "bytes": 8636,
+      "action": "move"
+    },
+    {
+      "original": "round10_report.md",
+      "archived": "docs/archive/2026-11-04/round10_report.md",
+      "sha256": "1ad2b594e6a11c97cd81a8bf3066c0a3b4bdd2a4f787af97934e4aa23648782f",
+      "bytes": 7926,
+      "action": "move"
+    },
+    {
+      "original": "ROUND40_DECOUPLED_GPU_PROTOCOL.md",
+      "archived": "docs/archive/2026-11-04/ROUND40_DECOUPLED_GPU_PROTOCOL.md",
+      "sha256": "8b6b5dcc8445cc07596e1a330c8b9527baa9a5756f2d1d11b913ad1177cfe5a2",
+      "bytes": 7535,
+      "action": "move"
+    },
+    {
+      "original": "ROUND49_JOINT_GAUSSIAN_PROTOCOL.md",
+      "archived": "docs/archive/2026-11-04/ROUND49_JOINT_GAUSSIAN_PROTOCOL.md",
+      "sha256": "aafd644bc03ee0e977a72709dba1a6b455e1b34a3a3b055f22b9322c747a879f",
+      "bytes": 7430,
+      "action": "move"
+    },
+    {
+      "original": "ROUND15_CANDIDATE_PROTOCOL_DRAFT.md",
+      "archived": "docs/archive/2026-11-04/ROUND15_CANDIDATE_PROTOCOL_DRAFT.md",
+      "sha256": "710d16887947cead6004cf7721d4b501ad2e348c112c86adce767a0b55ebe61b",
+      "bytes": 18475,
+      "action": "move"
+    },
+    {
+      "original": "ROUND48_NATIVE_POINT_PE_PROTOCOL.md",
+      "archived": "docs/archive/2026-11-04/ROUND48_NATIVE_POINT_PE_PROTOCOL.md",
+      "sha256": "395acca3a57474373260c9a51a31a41cd1a7fe482dbc6feebd5121e58781f104",
+      "bytes": 9409,
+      "action": "move"
+    },
+    {
+      "original": "ROUND46_NATIVE3D_PROTOCOL.md",
+      "archived": "docs/archive/2026-11-04/ROUND46_NATIVE3D_PROTOCOL.md",
+      "sha256": "3a5e35f19833cd2fed4276e2d4242924aa21b9f60c340563ac5dd20b3f8cfa57",
+      "bytes": 9751,
+      "action": "move"
+    },
+    {
+      "original": "ROUND8_PROTOCOL.md",
+      "archived": "docs/archive/2026-11-04/ROUND8_PROTOCOL.md",
+      "sha256": "141f2a8c4dc0161a98963c8a7c04f66809da58f8e28a68fde39a7bde04b68701",
+      "bytes": 7726,
+      "action": "move"
+    },
+    {
+      "original": "ROUND2_PROTOCOL.md",
+      "archived": "docs/archive/2026-11-04/ROUND2_PROTOCOL.md",
+      "sha256": "7e4df924fe25f8f4b341210320d4335435856ad777823042cdd8f407fb8ce3c9",
+      "bytes": 5158,
+      "action": "move"
+    },
+    {
+      "original": "ROUND41_SHAPE_COMPONENT_DIAGNOSTIC.md",
+      "archived": "docs/archive/2026-11-04/ROUND41_SHAPE_COMPONENT_DIAGNOSTIC.md",
+      "sha256": "f6750606d3ac3b8819645cb62345e54fbe5de5ba972e042fc61dfe3044f48f72",
+      "bytes": 1859,
+      "action": "move"
+    },
+    {
+      "original": "ROUND43_FREQUENCY_DIAGNOSTIC.md",
+      "archived": "docs/archive/2026-11-04/ROUND43_FREQUENCY_DIAGNOSTIC.md",
+      "sha256": "1f8d9b85192e19b9c574b478e8509f646374e68bd2327130a2c4fa4f18e2080d",
+      "bytes": 1940,
+      "action": "move"
+    },
+    {
+      "original": "round9_report.md",
+      "archived": "docs/archive/2026-11-04/round9_report.md",
+      "sha256": "aefc4fc12298e2bfaf27a1bc444071a71740ddca573c367f9ba428834032f9ff",
+      "bytes": 11368,
+      "action": "move"
+    },
+    {
+      "original": "ROUND21_MATCHED_DECOMPOSITION_PROTOCOL.md",
+      "archived": "docs/archive/2026-11-04/ROUND21_MATCHED_DECOMPOSITION_PROTOCOL.md",
+      "sha256": "f4dff7d946b55e6bb70f20b69bbd7533951bea678002b0d9d163d01c316cc9ca",
+      "bytes": 11334,
+      "action": "move"
+    },
+    {
+      "original": "ROUND60_REAL_SCENE_PROTOCOL.md",
+      "archived": "docs/archive/2026-11-04/ROUND60_REAL_SCENE_PROTOCOL.md",
+      "sha256": "3324912157f83382ff163b62105154ca949c1002b0209a5e66180dec18bf5dc1",
+      "bytes": 6006,
+      "action": "move"
+    },
+    {
+      "original": "ROUND15_CANDIDATE_PROTOCOL.md",
+      "archived": "docs/archive/2026-11-04/ROUND15_CANDIDATE_PROTOCOL.md",
+      "sha256": "6dacfff3b0246508f0bb07fff713fbdadb274449c816fd0d8481786281640532",
+      "bytes": 20482,
+      "action": "move"
+    },
+    {
+      "original": "ROUND37_COMPONENT_ROUND_REAL_REFERENCE_PROTOCOL.md",
+      "archived": "docs/archive/2026-11-04/ROUND37_COMPONENT_ROUND_REAL_REFERENCE_PROTOCOL.md",
+      "sha256": "15e034137e3545406ce5b48d77331d7f6a36096a6603eb6f90c898513424b74d",
+      "bytes": 973,
+      "action": "move"
+    },
+    {
+      "original": "ROUND10B_PROTOCOL.md",
+      "archived": "docs/archive/2026-11-04/ROUND10B_PROTOCOL.md",
+      "sha256": "77df177ad42fc7c01dedcf3c47e25c1157ba8279c231ffca0861502020d299e9",
+      "bytes": 4326,
+      "action": "move"
+    },
+    {
+      "original": "ROUND38_POSTFAILURE_DIAGNOSTIC_PROTOCOL.md",
+      "archived": "docs/archive/2026-11-04/ROUND38_POSTFAILURE_DIAGNOSTIC_PROTOCOL.md",
+      "sha256": "ed21d5fc6f5b4e3372720e5c2c01bfbe5a0cbeea44574a69dc807fc3f9d90918",
+      "bytes": 8026,
+      "action": "move"
+    },
+    {
+      "original": "ROUND23_RAY_APPLICABILITY_PROTOCOL.md",
+      "archived": "docs/archive/2026-11-04/ROUND23_RAY_APPLICABILITY_PROTOCOL.md",
+      "sha256": "2efefa442d202c5bd31fb3a1fcf5db953733a500a292c5eecfe755c57617e8ff",
+      "bytes": 9595,
+      "action": "move"
+    },
+    {
+      "original": "ROUND58_OBSERVED_SUPPORT_PROTOCOL.md",
+      "archived": "docs/archive/2026-11-04/ROUND58_OBSERVED_SUPPORT_PROTOCOL.md",
+      "sha256": "194b17b4045c1d5aa28f8c07bdaf76be2f8ac8e1cde107f1037da9f3e24cbde3",
+      "bytes": 9237,
+      "action": "move"
+    },
+    {
+      "original": "ROUND52_CAMERA_FRAME_PROTOCOL.md",
+      "archived": "docs/archive/2026-11-04/ROUND52_CAMERA_FRAME_PROTOCOL.md",
+      "sha256": "7b3042d2aa0afe1833a3bdd850f098dc8d20e565e2640e9b425e4fc91c57be1b",
+      "bytes": 5663,
+      "action": "move"
+    },
+    {
+      "original": "ROUND15_NUMERICAL_PROTOCOL.md",
+      "archived": "docs/archive/2026-11-04/ROUND15_NUMERICAL_PROTOCOL.md",
+      "sha256": "73a35f356abb3a992689205b6c1ef134e1c30714dc8b2d7b975f646ec1deb1d7",
+      "bytes": 4638,
+      "action": "move"
+    },
+    {
+      "original": "ROUND38_RMS_ANCHOR_TRIAGE_PROTOCOL.md",
+      "archived": "docs/archive/2026-11-04/ROUND38_RMS_ANCHOR_TRIAGE_PROTOCOL.md",
+      "sha256": "bbd2989aea76aee55757c1eed284927086ee981f6fa37736d6c5badbf4f99c77",
+      "bytes": 8763,
+      "action": "move"
+    },
+    {
+      "original": "ROUND59_RELATION_ATTRIBUTION_PROTOCOL.md",
+      "archived": "docs/archive/2026-11-04/ROUND59_RELATION_ATTRIBUTION_PROTOCOL.md",
+      "sha256": "b7acfde36620d1fc9342442f0cec2b4ef5241642496b88fffadd542378f86ce4",
+      "bytes": 6687,
+      "action": "move"
+    },
+    {
+      "original": "round2_report.md",
+      "archived": "docs/archive/2026-11-04/round2_report.md",
+      "sha256": "0f50a9063b4a4ca9c5ac73f1df728313c503f1c95a23af8d5c738620f34ceae0",
+      "bytes": 14984,
+      "action": "move"
+    },
+    {
+      "original": "ROUND47_CONDITIONAL_GAUSSIAN_PROTOCOL.md",
+      "archived": "docs/archive/2026-11-04/ROUND47_CONDITIONAL_GAUSSIAN_PROTOCOL.md",
+      "sha256": "08431349ffaca256080b7b34946b55c0a492aa4b0736aa33fd95ecb8ec00e9e1",
+      "bytes": 8199,
+      "action": "move"
+    },
+    {
+      "original": "ROUND11_PROTOCOL.md",
+      "archived": "docs/archive/2026-11-04/ROUND11_PROTOCOL.md",
+      "sha256": "1b951f705b9cfdafb12ac802b4db2cb2fa3651c60fcb0ba57d8bb9054dfee9c5",
+      "bytes": 4825,
+      "action": "move"
+    },
+    {
+      "original": "ROUND63_RGB_DIAGNOSTIC_PROTOCOL.md",
+      "archived": "docs/archive/2026-11-04/ROUND63_RGB_DIAGNOSTIC_PROTOCOL.md",
+      "sha256": "447075f8508a329638cfc0d6e34fd553739365c354b43e859cca2de5a3e1253a",
+      "bytes": 3416,
+      "action": "move"
+    },
+    {
+      "original": "ROUND29_LOG_RMS_PREFLIGHT_PROTOCOL.md",
+      "archived": "docs/archive/2026-11-04/ROUND29_LOG_RMS_PREFLIGHT_PROTOCOL.md",
+      "sha256": "9c959605651e4ede685d78009719cd2663647f1286048b4810af0cdd35af274d",
+      "bytes": 8652,
+      "action": "move"
+    },
+    {
+      "original": "ROUND26_RMS_PROJECTIVE_PREFLIGHT_PROTOCOL.md",
+      "archived": "docs/archive/2026-11-04/ROUND26_RMS_PROJECTIVE_PREFLIGHT_PROTOCOL.md",
+      "sha256": "a1029ad73ffc81c6bab9ca8394852dabb46c405e6ccb1700ac8bfbf774e04bf6",
+      "bytes": 8931,
+      "action": "move"
+    },
+    {
+      "original": "ROUND54_CALIBRATED_PLANE_PROTOCOL.md",
+      "archived": "docs/archive/2026-11-04/ROUND54_CALIBRATED_PLANE_PROTOCOL.md",
+      "sha256": "dd5e3ee3a08d6fbb84e15e4ce9152ccc43bb4df2c268c2ca1ab982e13ca786f5",
+      "bytes": 6579,
+      "action": "move"
+    },
+    {
+      "original": "ROUND44_SPATIAL_PE_PROTOCOL.md",
+      "archived": "docs/archive/2026-11-04/ROUND44_SPATIAL_PE_PROTOCOL.md",
+      "sha256": "4010197e156f31e48b48467d8ef52b8069dfedf593dfdaef06b4aac80f555131",
+      "bytes": 6736,
+      "action": "move"
+    },
+    {
+      "original": "ROUND33_LOG_REAL_REFERENCE_PROTOCOL.md",
+      "archived": "docs/archive/2026-11-04/ROUND33_LOG_REAL_REFERENCE_PROTOCOL.md",
+      "sha256": "9183445c6e12db30d7ae472d132a4caf2c059345a0500706ee3c35c5e1e8e9fb",
+      "bytes": 2880,
+      "action": "move"
+    },
+    {
+      "original": "ROUND25_STUDENT_SCREEN_PROTOCOL.md",
+      "archived": "docs/archive/2026-11-04/ROUND25_STUDENT_SCREEN_PROTOCOL.md",
+      "sha256": "9e806139e6668a102d5284666799bf00ad087c061e573385a2a720e9c8ef8110",
+      "bytes": 7825,
+      "action": "move"
+    },
+    {
+      "original": "ROUND61_NORMAL_RELATION_PROTOCOL.md",
+      "archived": "docs/archive/2026-11-04/ROUND61_NORMAL_RELATION_PROTOCOL.md",
+      "sha256": "3beef3e59d4a7a88d26f54644f65f346011a28964dbb89d92fd5ad7d8e075ca8",
+      "bytes": 5415,
+      "action": "move"
+    },
+    {
+      "original": "round12_report.md",
+      "archived": "docs/archive/2026-11-04/round12_report.md",
+      "sha256": "eb1c67190e7e130518ddbfbfe159d9ed4f5e2f9fde7b9d86927b338609866787",
+      "bytes": 5379,
+      "action": "move"
+    },
+    {
+      "original": "ROUND35_LOG_REAL_REFERENCE_PROTOCOL.md",
+      "archived": "docs/archive/2026-11-04/ROUND35_LOG_REAL_REFERENCE_PROTOCOL.md",
+      "sha256": "5e60f1579db44545528a9a594825052ecf68c3b051ed1dcc14fc85ae2bc85795",
+      "bytes": 1033,
+      "action": "move"
+    },
+    {
+      "original": "ROUND5_PROTOCOL.md",
+      "archived": "docs/archive/2026-11-04/ROUND5_PROTOCOL.md",
+      "sha256": "e5aefc1f991c07db1e78e6be2be267cd2516089b997dee1c77a7012b07a89a06",
+      "bytes": 8170,
+      "action": "move"
+    },
+    {
+      "original": "ROUND18_CONDITIONAL_PREFLIGHT_PROTOCOL.md",
+      "archived": "docs/archive/2026-11-04/ROUND18_CONDITIONAL_PREFLIGHT_PROTOCOL.md",
+      "sha256": "7394b6896f4d7d95d40533994c89ea1d56f23d0525ee9f2d84b36de4889647fd",
+      "bytes": 6537,
+      "action": "move"
+    },
+    {
+      "original": "ROUND15_TRAIN_NUMERICAL24_PROTOCOL.md",
+      "archived": "docs/archive/2026-11-04/ROUND15_TRAIN_NUMERICAL24_PROTOCOL.md",
+      "sha256": "258289109f37a0474f6c1059fa0e8ee9262e88e1a1e27a5b034a9ec7b48ff0c3",
+      "bytes": 2602,
+      "action": "move"
+    },
+    {
+      "original": "ROUND39_DUAL_OVERLAP_PROTOCOL.md",
+      "archived": "docs/archive/2026-11-04/ROUND39_DUAL_OVERLAP_PROTOCOL.md",
+      "sha256": "cb5c227ab0776fb4a9bbd772b04da5b24f384414a6694f0327dd7061d8f85d86",
+      "bytes": 7506,
+      "action": "move"
+    },
+    {
+      "original": "ROUND32_LOG_CONDITIONAL_REFERENCE_PROTOCOL.md",
+      "archived": "docs/archive/2026-11-04/ROUND32_LOG_CONDITIONAL_REFERENCE_PROTOCOL.md",
+      "sha256": "af6c4251e998ebbfeec8edcbcf3ae5e76bc3152b524f2bd68ea7e147bf8332b6",
+      "bytes": 4272,
+      "action": "move"
+    },
+    {
+      "original": "round7_report.md",
+      "archived": "docs/archive/2026-11-04/round7_report.md",
+      "sha256": "18f400cb1239aaf245835da7dff41f47a9bfe966a51bea70519ad3d54209ecd7",
+      "bytes": 12027,
+      "action": "move"
+    },
+    {
+      "original": "ROUND65_ACTUAL_GS_PROTOCOL.md",
+      "archived": "docs/archive/2026-11-04/ROUND65_ACTUAL_GS_PROTOCOL.md",
+      "sha256": "8e23abeff574435a938ce25475b2b0fb5c1661727b6a32616a696d0e328bd25b",
+      "bytes": 10076,
+      "action": "move"
+    },
+    {
+      "original": "ROUND45_PHASE_WARP_PROTOCOL.md",
+      "archived": "docs/archive/2026-11-04/ROUND45_PHASE_WARP_PROTOCOL.md",
+      "sha256": "dd01b496360cf8c7300ff109703cb05fc6671cd990e8a7df259ddd5639fbe537",
+      "bytes": 8685,
+      "action": "move"
+    },
+    {
+      "original": "ROUND57_GAUSSIAN_PAIR_PROTOCOL.md",
+      "archived": "docs/archive/2026-11-04/ROUND57_GAUSSIAN_PAIR_PROTOCOL.md",
+      "sha256": "d99944a24b55c3b67a3bfc5c04a9c6bf8c5c1785b2213acf266f4095c4a64c71",
+      "bytes": 7350,
+      "action": "move"
+    },
+    {
+      "original": "ROUND20_ANCHOR_FIXED_PROTOCOL.md",
+      "archived": "docs/archive/2026-11-04/ROUND20_ANCHOR_FIXED_PROTOCOL.md",
+      "sha256": "b21de3e4a1a693ee01f9c33dcf5fc5954678bb780660ee425045489f29a1586e",
+      "bytes": 12714,
+      "action": "move"
+    },
+    {
+      "original": "ROUND17_SIZE_TEMPERATURE_PROTOCOL.md",
+      "archived": "docs/archive/2026-11-04/ROUND17_SIZE_TEMPERATURE_PROTOCOL.md",
+      "sha256": "a7d91b2eeb8c9e4b223ed41da929b95fd0f1762ad7d0da43186df8536bb25730",
+      "bytes": 11146,
+      "action": "move"
+    },
+    {
+      "original": "ROUND14_TEMPERATURE_PROTOCOL.md",
+      "archived": "docs/archive/2026-11-04/ROUND14_TEMPERATURE_PROTOCOL.md",
+      "sha256": "f3807d8dbb6be693d0c98d6ff88f7e5067449a375b9ddd2b3edac18f18497b96",
+      "bytes": 5602,
+      "action": "move"
+    },
+    {
+      "original": "ROUND15_TRAIN_NUMERICAL_PROTOCOL.md",
+      "archived": "docs/archive/2026-11-04/ROUND15_TRAIN_NUMERICAL_PROTOCOL.md",
+      "sha256": "f6d4592a9262b1b27dcc7c889cddeb2c1d32852fc09f263ecb1fcf4b5e5eed68",
+      "bytes": 3616,
+      "action": "move"
+    },
+    {
+      "original": "ROUND51_VISUAL_ALIGNMENT_PROTOCOL.md",
+      "archived": "docs/archive/2026-11-04/ROUND51_VISUAL_ALIGNMENT_PROTOCOL.md",
+      "sha256": "441790d5d12e8cde9b69cba65be831f23f68fc7af557d2ba5e979791508b2965",
+      "bytes": 6532,
+      "action": "move"
+    },
+    {
+      "original": "round3_report.md",
+      "archived": "docs/archive/2026-11-04/round3_report.md",
+      "sha256": "a65d503261609570d36fa09013bce94fe45e89043cb2e3f76fb31e7ee1580032",
+      "bytes": 13699,
+      "action": "move"
+    },
+    {
+      "original": "ROUND7_PROTOCOL.md",
+      "archived": "docs/archive/2026-11-04/ROUND7_PROTOCOL.md",
+      "sha256": "9da3989cf1e244f86ddd430691fab1a25180c9667679207efa601708f0b9d3ac",
+      "bytes": 6760,
+      "action": "move"
+    },
+    {
+      "original": "round6_report.md",
+      "archived": "docs/archive/2026-11-04/round6_report.md",
+      "sha256": "dee7dd28404cd6c4f35e2b5b9f70741a1dcdf8f5aca33fbd669dff0d27ac77c9",
+      "bytes": 12619,
+      "action": "move"
+    },
+    {
+      "original": "ROUND3_PROTOCOL.md",
+      "archived": "docs/archive/2026-11-04/ROUND3_PROTOCOL.md",
+      "sha256": "67df31c6139836a0cd3fe4887affef35eaec589cfac9186e2a715e57f086fb2d",
+      "bytes": 14040,
+      "action": "move"
+    },
+    {
+      "original": "round14_report.md",
+      "archived": "docs/archive/2026-11-04/round14_report.md",
+      "sha256": "679fdf81d79368f75a8bfb39e9946a278afcdf125a23f4e166cdcaacf970ac19",
+      "bytes": 2467,
+      "action": "move"
+    },
+    {
+      "original": "ROUND15_REGIONAL_AUDIT_PROTOCOL.md",
+      "archived": "docs/archive/2026-11-04/ROUND15_REGIONAL_AUDIT_PROTOCOL.md",
+      "sha256": "3a5420b97a40299c9068d20d9ed0ed237a77eb5de21f8e66bb976080fd32f9d6",
+      "bytes": 5354,
+      "action": "move"
+    },
+    {
+      "original": "ROUND34_LOG_NARROW_REFERENCE_PROTOCOL.md",
+      "archived": "docs/archive/2026-11-04/ROUND34_LOG_NARROW_REFERENCE_PROTOCOL.md",
+      "sha256": "ae02c501979c8f8b2af90cb0322db6e1e436ef268f270792becd06a9f1b3ae2e",
+      "bytes": 1132,
+      "action": "move"
+    },
+    {
+      "original": "round11_report.md",
+      "archived": "docs/archive/2026-11-04/round11_report.md",
+      "sha256": "1d928e73b34383783943c7ec61508ede46d0cb992bd4f0994495094c924073bc",
+      "bytes": 7105,
+      "action": "move"
+    },
+    {
+      "original": "round8_report.md",
+      "archived": "docs/archive/2026-11-04/round8_report.md",
+      "sha256": "3dc9ceca245973c82a87d92acb6ec268c2bbc8a55787b4f95213ce79ab6ee803",
+      "bytes": 9980,
+      "action": "move"
+    },
+    {
+      "original": "round13_report.md",
+      "archived": "docs/archive/2026-11-04/round13_report.md",
+      "sha256": "0310ec08e19cfdf80bc07ac6bad3b5fca991324b2d76fad09c8f20bef49c4245",
+      "bytes": 5606,
+      "action": "move"
+    },
+    {
+      "original": "ROUND53_RAY_FRAME_PROTOCOL.md",
+      "archived": "docs/archive/2026-11-04/ROUND53_RAY_FRAME_PROTOCOL.md",
+      "sha256": "9e8b1460d7ffe884ac89498e35f3f833599057fcaf6683f2ea2311a1919bca0d",
+      "bytes": 7774,
+      "action": "move"
+    },
+    {
+      "original": "ROUND28_RMS_APPLICABILITY_PROTOCOL.md",
+      "archived": "docs/archive/2026-11-04/ROUND28_RMS_APPLICABILITY_PROTOCOL.md",
+      "sha256": "7b808d078038c6b6e40a491619115a3700494c8421dd7e1554eab8494c1ea870",
+      "bytes": 7434,
+      "action": "move"
+    },
+    {
+      "original": "ROUND16_MECHANISM_PROTOCOL.md",
+      "archived": "docs/archive/2026-11-04/ROUND16_MECHANISM_PROTOCOL.md",
+      "sha256": "875a2f6a6f2076ec872fc5d46cd418caf1f0410e3fc51a9ccbdb07426260cae0",
+      "bytes": 4797,
+      "action": "move"
+    },
+    {
+      "original": "ROUND19_CENTER_SEMANTICS_PROTOCOL.md",
+      "archived": "docs/archive/2026-11-04/ROUND19_CENTER_SEMANTICS_PROTOCOL.md",
+      "sha256": "88dacf6f79147ac6a8f2a39c0d6974f8e3d06f67a2461fd58e5292ed889b3483",
+      "bytes": 8525,
+      "action": "move"
+    },
+    {
+      "original": "round5_report.md",
+      "archived": "docs/archive/2026-11-04/round5_report.md",
+      "sha256": "ac57487b12670afdd1ed1a33a023b9fc455e47e8f35ed71dde5afad25ea59b2d",
+      "bytes": 11376,
+      "action": "move"
+    },
+    {
+      "original": "ROUND17_PREFLIGHT_PROTOCOL.md",
+      "archived": "docs/archive/2026-11-04/ROUND17_PREFLIGHT_PROTOCOL.md",
+      "sha256": "f5e815cba9d75a50d93b52cd8b70a645dbd6091dd6fda6a1423af4e73513e923",
+      "bytes": 3561,
+      "action": "move"
+    },
+    {
+      "original": "ROUND66_LOGSHAPE_PROTOCOL.md",
+      "archived": "docs/archive/2026-11-04/ROUND66_LOGSHAPE_PROTOCOL.md",
+      "sha256": "e82e5fc174a261efb71705c5ddc0bf6ede345cb711044946967a23046d4db7e0",
+      "bytes": 6407,
+      "action": "move"
+    },
+    {
+      "original": "ROUND13_TARGET_PROTOCOL.md",
+      "archived": "docs/archive/2026-11-04/ROUND13_TARGET_PROTOCOL.md",
+      "sha256": "e4fc7f5417d0fb65442c64a878ebf14113b44b7488bb715ba8d7f361de2dd2a7",
+      "bytes": 6287,
+      "action": "move"
+    },
+    {
+      "original": "ROUND22_RAY_PREFLIGHT_PROTOCOL.md",
+      "archived": "docs/archive/2026-11-04/ROUND22_RAY_PREFLIGHT_PROTOCOL.md",
+      "sha256": "de72cab25908036baf0b96659ff9bcf16a250be985a06f1f06d0fdb9a6d70616",
+      "bytes": 13704,
+      "action": "move"
+    },
+    {
+      "original": "ROUND9_PROTOCOL.md",
+      "archived": "docs/archive/2026-11-04/ROUND9_PROTOCOL.md",
+      "sha256": "9765242aecfddf960da4c57b4b751c95a25f07afdd0f221cef1dc5d2c9d8c66a",
+      "bytes": 7729,
+      "action": "move"
+    },
+    {
+      "original": "ROUND31_LOG_CONDITIONAL_REFERENCE_PROTOCOL.md",
+      "archived": "docs/archive/2026-11-04/ROUND31_LOG_CONDITIONAL_REFERENCE_PROTOCOL.md",
+      "sha256": "387174b4772522764d7100f47919ae2158e49db4394f7282879592ee149b365a",
+      "bytes": 3984,
+      "action": "move"
+    },
+    {
+      "original": "ROUND64_DEPTH_FIELD_PROTOCOL.md",
+      "archived": "docs/archive/2026-11-04/ROUND64_DEPTH_FIELD_PROTOCOL.md",
+      "sha256": "b4f81704c4078c9223b7afaa7ab682b11574cd52e3a8208a71f664ce7a6ce323",
+      "bytes": 4719,
+      "action": "move"
+    },
+    {
+      "original": "research_report.md",
+      "archived": "docs/archive/2026-11-04/research_report.md",
+      "sha256": "5be5cefc4efc0a4e964a37a9816978779774c96ed9b5d161c0f900558fdba3bd",
+      "bytes": 12035,
+      "action": "move"
+    },
+    {
+      "original": "ROUND15_VALIDATION_PROTOCOL.md",
+      "archived": "docs/archive/2026-11-04/ROUND15_VALIDATION_PROTOCOL.md",
+      "sha256": "2f7bd573d8ff072f4d14a371d8f246d43c800cc0e3b4eec8c4d568571a75fffd",
+      "bytes": 7412,
+      "action": "move"
+    },
+    {
+      "original": "ROUND12_DEPTH_PROTOCOL.md",
+      "archived": "docs/archive/2026-11-04/ROUND12_DEPTH_PROTOCOL.md",
+      "sha256": "9c5915e33c2ac42c56f77a6f044fa0d6ad38052a1f44bf7cbb0d1c2d5a198938",
+      "bytes": 8456,
+      "action": "move"
+    },
+    {
+      "original": "ROUND56_NATIVE_JOINT_PROTOCOL.md",
+      "archived": "docs/archive/2026-11-04/ROUND56_NATIVE_JOINT_PROTOCOL.md",
+      "sha256": "f40028109817ba5b1d0508b2d2b1e280d461aeed25ee82876430f6c2ef8c8b96",
+      "bytes": 6510,
+      "action": "move"
+    },
+    {
+      "original": "ROUND12_DEPTH_DATA_PROTOCOL.md",
+      "archived": "docs/archive/2026-11-04/ROUND12_DEPTH_DATA_PROTOCOL.md",
+      "sha256": "9b43ccc4967035e4325f317298377023d45d735a5d715ebc2b9f436c9ccd96c9",
+      "bytes": 4230,
+      "action": "move"
+    },
+    {
+      "original": "ROUND24_STUDENT_PREFLIGHT_PROTOCOL.md",
+      "archived": "docs/archive/2026-11-04/ROUND24_STUDENT_PREFLIGHT_PROTOCOL.md",
+      "sha256": "0f56aad7a0ae77e22b03d7ee7ce13e1014d2826e58de1cbc125df8b9997815f5",
+      "bytes": 7925,
+      "action": "move"
+    },
+    {
+      "original": "ROUND17_VALIDATION_PROTOCOL.md",
+      "archived": "docs/archive/2026-11-04/ROUND17_VALIDATION_PROTOCOL.md",
+      "sha256": "8fa6d8cb9acd9c0004b983de6e0eeda3a7a58d850f183286144f2360b6af53a5",
+      "bytes": 10910,
+      "action": "move"
+    },
+    {
+      "original": "ROUND41_ACTUAL_GS_PROTOCOL.md",
+      "archived": "docs/archive/2026-11-04/ROUND41_ACTUAL_GS_PROTOCOL.md",
+      "sha256": "9a9923753c1389bdd8570caa50a1ba34e40624b5a716051e0fb023e048722cc6",
+      "bytes": 7098,
+      "action": "move"
+    },
+    {
+      "original": "ROUND15_NUMERICAL24_PROTOCOL.md",
+      "archived": "docs/archive/2026-11-04/ROUND15_NUMERICAL24_PROTOCOL.md",
+      "sha256": "d629ee49523ec1bfe433cc11db990fe18c5c1cfcc4adaf27b48037f3e123c0e4",
+      "bytes": 2879,
+      "action": "move"
+    },
+    {
+      "original": "ROUND27_RMS_REFERENCE_PREFLIGHT_PROTOCOL.md",
+      "archived": "docs/archive/2026-11-04/ROUND27_RMS_REFERENCE_PREFLIGHT_PROTOCOL.md",
+      "sha256": "44b429b0c1de346edf12c7df8548ac90ce40ed96b2f5dfab9df51c7bc2545ca3",
+      "bytes": 10507,
+      "action": "move"
+    },
+    {
+      "original": "ROUND17_CANDIDATE_PROTOCOL.md",
+      "archived": "docs/archive/2026-11-04/ROUND17_CANDIDATE_PROTOCOL.md",
+      "sha256": "6ed97f4b994e7b508878fbea47e2ea58e63c6b35ae928d4da1ebf58ba437212e",
+      "bytes": 15607,
+      "action": "move"
+    },
+    {
+      "original": "ROUND30_LOG_RMS_APPLICABILITY_PROTOCOL.md",
+      "archived": "docs/archive/2026-11-04/ROUND30_LOG_RMS_APPLICABILITY_PROTOCOL.md",
+      "sha256": "e5fdd8b65716b937adf31f1d7e59337920191de2da7fe2d32316df2616690c9b",
+      "bytes": 6085,
+      "action": "move"
+    },
+    {
+      "original": "round4_report.md",
+      "archived": "docs/archive/2026-11-04/round4_report.md",
+      "sha256": "931e4e09f4c6e74bd7d12ed28c45f6c2e4890753263554f874952ffa956d4945",
+      "bytes": 12604,
+      "action": "move"
+    },
+    {
+      "original": "ROUND10_PROTOCOL.md",
+      "archived": "docs/archive/2026-11-04/ROUND10_PROTOCOL.md",
+      "sha256": "9e561723564db6eb53cc3c3b5e6fba2598b61461bcb4f3201ac3cba3912c1f49",
+      "bytes": 7686,
+      "action": "move"
+    },
+    {
+      "original": "ROUND13_MECHANISM_PROTOCOL.md",
+      "archived": "docs/archive/2026-11-04/ROUND13_MECHANISM_PROTOCOL.md",
+      "sha256": "eec0a3ef3a823344b8dd61be759b1fcf808b8111645726ca2eed8717a2cedb3c",
+      "bytes": 4508,
+      "action": "move"
+    },
+    {
+      "original": "ROUND62_RGB_RELATION_PROTOCOL.md",
+      "archived": "docs/archive/2026-11-04/ROUND62_RGB_RELATION_PROTOCOL.md",
+      "sha256": "5c529736211c175d0166138fdbb6e9c24d3b6fb7f99545830f50cf19ff548ee8",
+      "bytes": 7980,
+      "action": "move"
+    },
+    {
+      "original": "ROUND6_PROTOCOL.md",
+      "archived": "docs/archive/2026-11-04/ROUND6_PROTOCOL.md",
+      "sha256": "9fbea0508f6a1c4741efe69860fa73458619fc30efaf7d7e9ff9c1dd5a25cc41",
+      "bytes": 9676,
+      "action": "move"
+    },
+    {
+      "original": "ROUND40_REGION_DIAGNOSTIC_PROTOCOL.md",
+      "archived": "docs/archive/2026-11-04/ROUND40_REGION_DIAGNOSTIC_PROTOCOL.md",
+      "sha256": "2631ff3c5a1fdc12af535a8ab7c3796ff6dff3195c19959542bd50bc657a9dd9",
+      "bytes": 3197,
+      "action": "move"
+    },
+    {
+      "original": "ROUND50_LOCAL_FRAME_PROTOCOL.md",
+      "archived": "docs/archive/2026-11-04/ROUND50_LOCAL_FRAME_PROTOCOL.md",
+      "sha256": "71b9ab807d486fa63fa6dd387ca1eeb161c0b1b307891196e89c992916f98b5f",
+      "bytes": 8383,
+      "action": "move"
+    },
+    {
+      "original": "ROUND12_STRESS_PROTOCOL.md",
+      "archived": "docs/archive/2026-11-04/ROUND12_STRESS_PROTOCOL.md",
+      "sha256": "b33ac637a18ee25771dec6defd99d0f9fce2d089abbf289ab849b7a83e4bd550",
+      "bytes": 9090,
+      "action": "move"
+    },
+    {
+      "original": "ROUND43_FREQUENCY_PARAMETERIZATION_PROTOCOL.md",
+      "archived": "docs/archive/2026-11-04/ROUND43_FREQUENCY_PARAMETERIZATION_PROTOCOL.md",
+      "sha256": "f1720ea110904dab1055d45ee53eadf75d7b01e11e77b8f6655620ef796c742c",
+      "bytes": 8110,
+      "action": "move"
+    },
+    {
+      "original": "docs/round32_log_conditional_reference_design.md",
+      "archived": "docs/archive/2026-11-04/docs/round32_log_conditional_reference_design.md",
+      "sha256": "4c67c196e1789cf88147fee5ab3acb5c4947e58ab9a2c079c60666c4663b870b",
+      "bytes": 3701,
+      "action": "move"
+    },
+    {
+      "original": "docs/round70_related_work_update.md",
+      "archived": "docs/archive/2026-11-04/docs/round70_related_work_update.md",
+      "sha256": "4b89b98c33fb346f946949fd54b827f4b05b2cdb85a5a25b20c26fb4c6ba91a1",
+      "bytes": 4903,
+      "action": "move"
+    },
+    {
+      "original": "docs/normalized_gaussian_pe.md",
+      "archived": "docs/archive/2026-11-04/docs/normalized_gaussian_pe.md",
+      "sha256": "6610e5267ca3025516b634352ae973c7431ef5ea8e9f6bd468523310fc2e15d6",
+      "bytes": 5250,
+      "action": "move"
+    },
+    {
+      "original": "docs/round57_gaussian_pair_report.md",
+      "archived": "docs/archive/2026-11-04/docs/round57_gaussian_pair_report.md",
+      "sha256": "1c85ae012d115828e0b1ca3475de9267a2b6294162db11fa54f88d6ac3c6e81c",
+      "bytes": 8969,
+      "action": "move"
+    },
+    {
+      "original": "docs/round20_anchor_fixed_design_review.md",
+      "archived": "docs/archive/2026-11-04/docs/round20_anchor_fixed_design_review.md",
+      "sha256": "83aa7a650c380638d8488f347f7919456829090f8dc757052113807629af5b40",
+      "bytes": 7184,
+      "action": "move"
+    },
+    {
+      "original": "docs/round11_compression_diagnostic.md",
+      "archived": "docs/archive/2026-11-04/docs/round11_compression_diagnostic.md",
+      "sha256": "a9ce3fe1aafc866c6c7d60ed980f05a1dd8e131ec40605ccce781d17fdbc02dd",
+      "bytes": 4649,
+      "action": "move"
+    },
+    {
+      "original": "docs/mean_feedback_adversarial_review.md",
+      "archived": "docs/archive/2026-11-04/docs/mean_feedback_adversarial_review.md",
+      "sha256": "5b7b2b9a7ccff9af713f12c6919ba9f803bca427d164669d7a1bf1126af1abd1",
+      "bytes": 2339,
+      "action": "move"
+    },
+    {
+      "original": "docs/round15_feasibility_audit_path_repair.md",
+      "archived": "docs/archive/2026-11-04/docs/round15_feasibility_audit_path_repair.md",
+      "sha256": "84740cc555fcc25191045e1ba60be0f880073aa5791800212bd791e04beb5274",
+      "bytes": 2277,
+      "action": "move"
+    },
+    {
+      "original": "docs/round61_normal_relation_plan.md",
+      "archived": "docs/archive/2026-11-04/docs/round61_normal_relation_plan.md",
+      "sha256": "048e11868766257430678758897d1dc2e11c9d73593243f4b3c6cccb2f618f21",
+      "bytes": 6104,
+      "action": "move"
+    },
+    {
+      "original": "docs/round15_actual_v_adapter_review.md",
+      "archived": "docs/archive/2026-11-04/docs/round15_actual_v_adapter_review.md",
+      "sha256": "a5b55f997ae1079d1954564a8dfd4a95511fa1e2d2d365d45185a554d2227453",
+      "bytes": 10468,
+      "action": "move"
+    },
+    {
+      "original": "docs/round3_protocol_review.md",
+      "archived": "docs/archive/2026-11-04/docs/round3_protocol_review.md",
+      "sha256": "30251e18ce39b190de4a368633947637a6a8c40667182c6a93e2a7670e6e314d",
+      "bytes": 10270,
+      "action": "move"
+    },
+    {
+      "original": "docs/round37_reference_budget_diagnostic_design.md",
+      "archived": "docs/archive/2026-11-04/docs/round37_reference_budget_diagnostic_design.md",
+      "sha256": "87daaccd18856808b42ccb5a024ba7ae238aee61133a380e45bef6e0585c8d71",
+      "bytes": 2266,
+      "action": "move"
+    },
+    {
+      "original": "docs/round6_literature_design.md",
+      "archived": "docs/archive/2026-11-04/docs/round6_literature_design.md",
+      "sha256": "3a80d3bd01d35e80344c918d1cd92017afea32771e04c67e75f70e73c1883c01",
+      "bytes": 28655,
+      "action": "move"
+    },
+    {
+      "original": "docs/round27_rms_preflight_report_data/base_20_checks.csv",
+      "archived": "docs/archive/2026-11-04/docs/round27_rms_preflight_report_data/base_20_checks.csv",
+      "sha256": "e21ae1a7c5dedadc8255c6a105d3f2bd3457adc2e5875398020050f6aaf41d02",
+      "bytes": 11516,
+      "action": "move"
+    },
+    {
+      "original": "docs/round27_rms_preflight_report_data/identity_6_checks.csv",
+      "archived": "docs/archive/2026-11-04/docs/round27_rms_preflight_report_data/identity_6_checks.csv",
+      "sha256": "6caaba16fa0defa046e704bf3f022b5d1549ee663541ef6e6e7c97bd905a9127",
+      "bytes": 759,
+      "action": "move"
+    },
+    {
+      "original": "docs/round27_rms_preflight_report_data/production_26_calls.csv",
+      "archived": "docs/archive/2026-11-04/docs/round27_rms_preflight_report_data/production_26_calls.csv",
+      "sha256": "c25251c1acf8cebf35ebf169209d4700dfb715d4e3e3a1a3c80a49ca32ee90a1",
+      "bytes": 2359,
+      "action": "move"
+    },
+    {
+      "original": "docs/round27_rms_preflight_report_data/reference_40_calls.csv",
+      "archived": "docs/archive/2026-11-04/docs/round27_rms_preflight_report_data/reference_40_calls.csv",
+      "sha256": "48c37acfb6669b2f9ac5a387cab906697bf9bbb2ee5e7a2acbd1127715a5b6e5",
+      "bytes": 17159,
+      "action": "move"
+    },
+    {
+      "original": "docs/round33_reference_budget_diagnosis.md",
+      "archived": "docs/archive/2026-11-04/docs/round33_reference_budget_diagnosis.md",
+      "sha256": "3533681ddaf4e65e1963770461c0edee2facf12512e32fef4d6d8e71189a8a1f",
+      "bytes": 8573,
+      "action": "move"
+    },
+    {
+      "original": "docs/round66_classification_diagnostic_plan.md",
+      "archived": "docs/archive/2026-11-04/docs/round66_classification_diagnostic_plan.md",
+      "sha256": "e2f53618927c6908b9d726a18038ab7853f3f82332a2cbb0c482aa66ef803d01",
+      "bytes": 2971,
+      "action": "move"
+    },
+    {
+      "original": "docs/round17_arithmetic_addendum.md",
+      "archived": "docs/archive/2026-11-04/docs/round17_arithmetic_addendum.md",
+      "sha256": "647b37f3766dfad0053bdfc7bc16a06530281f4ff0e5d612e706a1c58c14d8a0",
+      "bytes": 2428,
+      "action": "move"
+    },
+    {
+      "original": "docs/conditional_value_information_diagnostic_draft.md",
+      "archived": "docs/archive/2026-11-04/docs/conditional_value_information_diagnostic_draft.md",
+      "sha256": "eb51612d97f129cc7b4eb27bcb6b4032ea7e05a8b9c7be16ba5f05a2289e4622",
+      "bytes": 5014,
+      "action": "move"
+    },
+    {
+      "original": "docs/round7_protocol_review.md",
+      "archived": "docs/archive/2026-11-04/docs/round7_protocol_review.md",
+      "sha256": "91cceaf8275fe362cdc730a641d1fffa3468684c136a540326061c54efd3277d",
+      "bytes": 9665,
+      "action": "move"
+    },
+    {
+      "original": "docs/round38_rms_anchor_triage_report_data/completion.json",
+      "archived": "docs/archive/2026-11-04/docs/round38_rms_anchor_triage_report_data/completion.json",
+      "sha256": "02d346988bd62d5d21fb4303fb36ff3565453c4e903941814f15c6ccbdcf82e6",
+      "bytes": 2456,
+      "action": "move"
+    },
+    {
+      "original": "docs/round38_rms_anchor_triage_report_data/per_scene.csv",
+      "archived": "docs/archive/2026-11-04/docs/round38_rms_anchor_triage_report_data/per_scene.csv",
+      "sha256": "9269e0de19666ddcf21be4969a323a99b4eccd649483c8c59f94fa54b6b511cb",
+      "bytes": 583,
+      "action": "move"
+    },
+    {
+      "original": "docs/round38_rms_anchor_triage_report_data/report_source.py",
+      "archived": "docs/archive/2026-11-04/docs/round38_rms_anchor_triage_report_data/report_source.py",
+      "sha256": "279992bed10325fce33ae40ccf53a2f1d3645f5de2ca349007ecadd496b7b65c",
+      "bytes": 8384,
+      "action": "move"
+    },
+    {
+      "original": "docs/round60_relation_literature_note.md",
+      "archived": "docs/archive/2026-11-04/docs/round60_relation_literature_note.md",
+      "sha256": "8240151cdc26bae081591bae1cd0237430b68dae08ee2a2168e0b1fc59f685e3",
+      "bytes": 2816,
+      "action": "move"
+    },
+    {
+      "original": "docs/round17_downstream_implementation_plan.md",
+      "archived": "docs/archive/2026-11-04/docs/round17_downstream_implementation_plan.md",
+      "sha256": "6d6f708386adf422bec11c8ae1bd7d7862d1eeff6caf5220ba34befef86806c5",
+      "bytes": 14925,
+      "action": "move"
+    },
+    {
+      "original": "docs/round17_size_temperature_reporting_checklist.md",
+      "archived": "docs/archive/2026-11-04/docs/round17_size_temperature_reporting_checklist.md",
+      "sha256": "6f6de883b43bda98195f063a80f4efbb51793a946fb13ae8f1f72eed69c91840",
+      "bytes": 6379,
+      "action": "move"
+    },
+    {
+      "original": "docs/round45_phase_warp_draft.md",
+      "archived": "docs/archive/2026-11-04/docs/round45_phase_warp_draft.md",
+      "sha256": "79954889b7a4a9868a0689c65e9b4383b5864512ecdc8371b0d8923249342893",
+      "bytes": 4290,
+      "action": "move"
+    },
+    {
+      "original": "docs/round15_pre_result_mechanism_hypotheses.md",
+      "archived": "docs/archive/2026-11-04/docs/round15_pre_result_mechanism_hypotheses.md",
+      "sha256": "d913f6eed1e3d1673e6e24f426c44079c5db086f36ee450735467bd2b743a726",
+      "bytes": 5730,
+      "action": "move"
+    },
+    {
+      "original": "docs/conditional_rectangle_tail_revision_unselected_draft.md",
+      "archived": "docs/archive/2026-11-04/docs/conditional_rectangle_tail_revision_unselected_draft.md",
+      "sha256": "6083be3903af4b22605ed71215e7de709ac59f176c3150c459ff775064857637",
+      "bytes": 9111,
+      "action": "move"
+    },
+    {
+      "original": "docs/round26_rms_quadrature_derivation.md",
+      "archived": "docs/archive/2026-11-04/docs/round26_rms_quadrature_derivation.md",
+      "sha256": "ff886941ae5fc46c629094b87135984d77a246f32bed20efcf85198edaaeae5a",
+      "bytes": 5387,
+      "action": "move"
+    },
+    {
+      "original": "docs/round30_log_rms_applicability_design.md",
+      "archived": "docs/archive/2026-11-04/docs/round30_log_rms_applicability_design.md",
+      "sha256": "ceb71811b8a69861fb53e2275db8d87de7e3e8a858958f3e27c7631ecf68d7b4",
+      "bytes": 3026,
+      "action": "move"
+    },
+    {
+      "original": "docs/round33_log_real_reference_design.md",
+      "archived": "docs/archive/2026-11-04/docs/round33_log_real_reference_design.md",
+      "sha256": "f637fd5e8295b90d152c73769b60fc73a0a1efdfb083e061afe3d95c1cc31273",
+      "bytes": 4459,
+      "action": "move"
+    },
+    {
+      "original": "docs/round52_operator_scope_note.md",
+      "archived": "docs/archive/2026-11-04/docs/round52_operator_scope_note.md",
+      "sha256": "479dbb9fdfede6384c363068f1d24d6e0ac8af639637a74c6112026875051561",
+      "bytes": 2278,
+      "action": "move"
+    },
+    {
+      "original": "docs/round11_protocol_review.md",
+      "archived": "docs/archive/2026-11-04/docs/round11_protocol_review.md",
+      "sha256": "297389cd1896893e2990eb404b0f70f6fa6d4ad4fe64ec574165bfa25b48f706",
+      "bytes": 4878,
+      "action": "move"
+    },
+    {
+      "original": "docs/round37_reference_budget_diagnosis.md",
+      "archived": "docs/archive/2026-11-04/docs/round37_reference_budget_diagnosis.md",
+      "sha256": "3c9a17bc62720a7c9877ba27acd2ef5753aee6cb7e0103e9799e0f30d66b4c13",
+      "bytes": 4405,
+      "action": "move"
+    },
+    {
+      "original": "docs/round10_key_partition_diagnostic.md",
+      "archived": "docs/archive/2026-11-04/docs/round10_key_partition_diagnostic.md",
+      "sha256": "22063e79504452d1a2f5bef735da6131ae5e3db2902b51a22fbda0472bcb0df5",
+      "bytes": 1772,
+      "action": "move"
+    },
+    {
+      "original": "docs/round17_prior_mllmsplat_gstvla_20261031.md",
+      "archived": "docs/archive/2026-11-04/docs/round17_prior_mllmsplat_gstvla_20261031.md",
+      "sha256": "d7c0deabae279496badc2c5e551b361d9d5e25eaf322214c06c6b011ff76a8a4",
+      "bytes": 3675,
+      "action": "move"
+    },
+    {
+      "original": "docs/round17_gs_color_content_feasibility.md",
+      "archived": "docs/archive/2026-11-04/docs/round17_gs_color_content_feasibility.md",
+      "sha256": "26b575540cb982e68561e6e1120fb9a16e412ab150a47b71f87b9e588b61fbf2",
+      "bytes": 11024,
+      "action": "move"
+    },
+    {
+      "original": "docs/round3_implementation_review.md",
+      "archived": "docs/archive/2026-11-04/docs/round3_implementation_review.md",
+      "sha256": "fc8e5b4816b6b703bab46bf906975aef7e1c82b2484fa3f6d7573f4046426363",
+      "bytes": 4457,
+      "action": "move"
+    },
+    {
+      "original": "docs/round11_candidate_review.md",
+      "archived": "docs/archive/2026-11-04/docs/round11_candidate_review.md",
+      "sha256": "d9476cc0b383f5e3f2197bb612f26fa12ce55096560f5b9ca0c996a75ccc72f5",
+      "bytes": 9278,
+      "action": "move"
+    },
+    {
+      "original": "docs/round15_boundary_flux_reserve.md",
+      "archived": "docs/archive/2026-11-04/docs/round15_boundary_flux_reserve.md",
+      "sha256": "17449e3c1c3905a6463880d2fcb55ce2b7fd3710d9caad46c0e4f5fabbe986ed",
+      "bytes": 8078,
+      "action": "move"
+    },
+    {
+      "original": "docs/round19_center_followup_theory_draft.md",
+      "archived": "docs/archive/2026-11-04/docs/round19_center_followup_theory_draft.md",
+      "sha256": "0de484f7ac997fc5a362139e10b645d0d205dfd9f835086132ca76c9db7e51c1",
+      "bytes": 6998,
+      "action": "move"
+    },
+    {
+      "original": "docs/round47_conditional_gaussian_report.md",
+      "archived": "docs/archive/2026-11-04/docs/round47_conditional_gaussian_report.md",
+      "sha256": "50d3f7c9c88944afc79a6d3cab1f3d15ff4027adff67de6c5f3e64cb40765445",
+      "bytes": 10538,
+      "action": "move"
+    },
+    {
+      "original": "docs/round48_native_point_report.md",
+      "archived": "docs/archive/2026-11-04/docs/round48_native_point_report.md",
+      "sha256": "62973d43a68279f371946333c89c6485ae2549f40c8c1ad55e5664a5c2733478",
+      "bytes": 6862,
+      "action": "move"
+    },
+    {
+      "original": "docs/round51_visual_alignment_plan.md",
+      "archived": "docs/archive/2026-11-04/docs/round51_visual_alignment_plan.md",
+      "sha256": "53fa82818bda8d82bc81f5384e53e5292f398ec183b15d1a52671afad117012d",
+      "bytes": 3518,
+      "action": "move"
+    },
+    {
+      "original": "docs/round28_underflow_remedy_unselected.md",
+      "archived": "docs/archive/2026-11-04/docs/round28_underflow_remedy_unselected.md",
+      "sha256": "f1bcd2f6ba632d7bb0380bc308fc071a025e2948fbab3a46576d213dd8262018",
+      "bytes": 7864,
+      "action": "move"
+    },
+    {
+      "original": "docs/round11_target_conflict_protocol.md",
+      "archived": "docs/archive/2026-11-04/docs/round11_target_conflict_protocol.md",
+      "sha256": "57948db72a8eefb84fac0dcde8fabe32454fee74ee769396fb6359aea6817104",
+      "bytes": 3548,
+      "action": "move"
+    },
+    {
+      "original": "docs/round34_log_narrow_reference_report_data/cases23.csv",
+      "archived": "docs/archive/2026-11-04/docs/round34_log_narrow_reference_report_data/cases23.csv",
+      "sha256": "3442d595bf581431196ae9caa63ef70bea11ec5f3de970748349f7069fee430c",
+      "bytes": 10356,
+      "action": "move"
+    },
+    {
+      "original": "docs/round34_log_narrow_reference_report_data/completion.json",
+      "archived": "docs/archive/2026-11-04/docs/round34_log_narrow_reference_report_data/completion.json",
+      "sha256": "25b0fb32b0fc7ac569faea9aa69e253a36eb38057a59109e62df3ba822c1349c",
+      "bytes": 947,
+      "action": "move"
+    },
+    {
+      "original": "docs/round34_log_narrow_reference_report_data/oracles89.csv",
+      "archived": "docs/archive/2026-11-04/docs/round34_log_narrow_reference_report_data/oracles89.csv",
+      "sha256": "82fee0ae5795632c6dbe97137142898045ea53162eca6c9e8f8c837ff53688ab",
+      "bytes": 121079,
+      "action": "move"
+    },
+    {
+      "original": "docs/round34_log_narrow_reference_report_data/statistics.json",
+      "archived": "docs/archive/2026-11-04/docs/round34_log_narrow_reference_report_data/statistics.json",
+      "sha256": "21b68cfc7b5efc6aff2e4110f9d7b37e2a6005cd2b73b6525eb8a9349e3be7cd",
+      "bytes": 36373,
+      "action": "move"
+    },
+    {
+      "original": "docs/round34_log_narrow_reference_report_data/before_execution.json",
+      "archived": "docs/archive/2026-11-04/docs/round34_log_narrow_reference_report_data/before_execution.json",
+      "sha256": "5ace65b36aac54bf455ffc8207ce4944df9e6a352b9a495ef869aa52cd855173",
+      "bytes": 386,
+      "action": "move"
+    },
+    {
+      "original": "docs/round34_log_narrow_reference_report_data/reference_calls46.csv",
+      "archived": "docs/archive/2026-11-04/docs/round34_log_narrow_reference_report_data/reference_calls46.csv",
+      "sha256": "a81894b148018786c265fd28e9e908326cfaf87b1cadb648b1860c29abe14b42",
+      "bytes": 172388,
+      "action": "move"
+    },
+    {
+      "original": "docs/round34_log_narrow_reference_report_data/comparisons247.csv",
+      "archived": "docs/archive/2026-11-04/docs/round34_log_narrow_reference_report_data/comparisons247.csv",
+      "sha256": "02c629bc4f8226c37904cf3ca5bd22cad4fa01222c5fd061bca48c55ecb7f6cd",
+      "bytes": 90100,
+      "action": "move"
+    },
+    {
+      "original": "docs/round34_log_narrow_reference_report_data/before_execution_attempt2.json",
+      "archived": "docs/archive/2026-11-04/docs/round34_log_narrow_reference_report_data/before_execution_attempt2.json",
+      "sha256": "39ba49110b76ee47b58c758ef5ce0d8ccdffd154f5087bb4aad4d010b59647ac",
+      "bytes": 427,
+      "action": "move"
+    },
+    {
+      "original": "docs/round34_log_narrow_reference_report_data/development_attempt1/receipt.json",
+      "archived": "docs/archive/2026-11-04/docs/round34_log_narrow_reference_report_data/development_attempt1/receipt.json",
+      "sha256": "514a34838f13885a5ad027dd4f1aec00c28904d601454c10ac8670d1aba2fa42",
+      "bytes": 281,
+      "action": "move"
+    },
+    {
+      "original": "docs/round34_log_narrow_reference_report_data/development_attempt1/reference_calls46.csv",
+      "archived": "docs/archive/2026-11-04/docs/round34_log_narrow_reference_report_data/development_attempt1/reference_calls46.csv",
+      "sha256": "a81894b148018786c265fd28e9e908326cfaf87b1cadb648b1860c29abe14b42",
+      "bytes": 172388,
+      "action": "move"
+    },
+    {
+      "original": "docs/round34_log_narrow_reference_report_data/development_attempt1/observed_error.txt",
+      "archived": "docs/archive/2026-11-04/docs/round34_log_narrow_reference_report_data/development_attempt1/observed_error.txt",
+      "sha256": "f2c041fde83945239e01eda051f3fd316a5f061a2045fe1c7614b664731df9a1",
+      "bytes": 406,
+      "action": "move"
+    },
+    {
+      "original": "docs/round34_log_narrow_reference_report_data/source_snapshot_attempt2/grope_round34_report_extract.py",
+      "archived": "docs/archive/2026-11-04/docs/round34_log_narrow_reference_report_data/source_snapshot_attempt2/grope_round34_report_extract.py",
+      "sha256": "3461d254183992fc41b396d51a0f1dea521b84823b11a2689812fbcdc3df1ce6",
+      "bytes": 10026,
+      "action": "move"
+    },
+    {
+      "original": "docs/round34_log_narrow_reference_report_data/source_snapshot/grope_round34_report_extract.py",
+      "archived": "docs/archive/2026-11-04/docs/round34_log_narrow_reference_report_data/source_snapshot/grope_round34_report_extract.py",
+      "sha256": "aca0f290c29dea227710ac826ef048a04ad33b4498f525cd5e417641264c2fe2",
+      "bytes": 9996,
+      "action": "move"
+    },
+    {
+      "original": "docs/round9_split_review.md",
+      "archived": "docs/archive/2026-11-04/docs/round9_split_review.md",
+      "sha256": "ffec5e33621b9dc3ef11670a44578b488c212086c824117fd0f465b3e5388097",
+      "bytes": 6607,
+      "action": "move"
+    },
+    {
+      "original": "docs/round17_value_roles_preparation_draft.md",
+      "archived": "docs/archive/2026-11-04/docs/round17_value_roles_preparation_draft.md",
+      "sha256": "6a8a6d7d843961a7671337391323a1ac11a063fc1a4863944884ce8e90617ef7",
+      "bytes": 14340,
+      "action": "move"
+    },
+    {
+      "original": "docs/round60_real_scene_plan.md",
+      "archived": "docs/archive/2026-11-04/docs/round60_real_scene_plan.md",
+      "sha256": "7af20e5065449d942d3fc1d83eafef8030837022900a4335d3e5ddd2c895211a",
+      "bytes": 6615,
+      "action": "move"
+    },
+    {
+      "original": "docs/round58_development_diagnostics.md",
+      "archived": "docs/archive/2026-11-04/docs/round58_development_diagnostics.md",
+      "sha256": "47a92e451e6ec4359f1b891815278a9c4f85b1c9799088d3128b256174ee7c79",
+      "bytes": 1947,
+      "action": "move"
+    },
+    {
+      "original": "docs/round64_depth_field_plan.md",
+      "archived": "docs/archive/2026-11-04/docs/round64_depth_field_plan.md",
+      "sha256": "da64b177e2c95910858920806ae875cd52d7fb78f85a17453ebd1c1c6879565c",
+      "bytes": 5797,
+      "action": "move"
+    },
+    {
+      "original": "docs/round55_budget_diagnostic_plan.md",
+      "archived": "docs/archive/2026-11-04/docs/round55_budget_diagnostic_plan.md",
+      "sha256": "b69d54f24c82db416667eca9093706f21d6e532686367ce3f0df7a057572be3f",
+      "bytes": 4363,
+      "action": "move"
+    },
+    {
+      "original": "docs/round17_trace_theory.md",
+      "archived": "docs/archive/2026-11-04/docs/round17_trace_theory.md",
+      "sha256": "726d2d76fabc97ecfff51b3265695d107354a70591a4efd5c3a9351a1c7268d9",
+      "bytes": 5079,
+      "action": "move"
+    },
+    {
+      "original": "docs/round17_value_interface_preflight_report.md",
+      "archived": "docs/archive/2026-11-04/docs/round17_value_interface_preflight_report.md",
+      "sha256": "8d83121188f37d73f3889bd5fb369c97d61df8a9e43c5946b78102a5911f3ecf",
+      "bytes": 3831,
+      "action": "move"
+    },
+    {
+      "original": "docs/round35_log_real_reference_design.md",
+      "archived": "docs/archive/2026-11-04/docs/round35_log_real_reference_design.md",
+      "sha256": "f6c6187433fee821e8db5cbeb39904b098924f7ebd43fc5d98f768275b8d5102",
+      "bytes": 4242,
+      "action": "move"
+    },
+    {
+      "original": "docs/round53_ray_frame_draft.md",
+      "archived": "docs/archive/2026-11-04/docs/round53_ray_frame_draft.md",
+      "sha256": "bc00a45cfae70abd10fce4c5f2abdd247378ad448143bf1fb878ab21734b6864",
+      "bytes": 6301,
+      "action": "move"
+    },
+    {
+      "original": "docs/round54_calibrated_plane_report.md",
+      "archived": "docs/archive/2026-11-04/docs/round54_calibrated_plane_report.md",
+      "sha256": "805d995a8010d8a303e7ee83f80068d5c4bfed4bce877febe5f10cb0a830925e",
+      "bytes": 7522,
+      "action": "move"
+    },
+    {
+      "original": "docs/round37_component_round_real_reference_design.md",
+      "archived": "docs/archive/2026-11-04/docs/round37_component_round_real_reference_design.md",
+      "sha256": "bdeb0121cc9ac11572a12566594e675705be92b9e2629b7f85f3345a1da2e8d4",
+      "bytes": 4356,
+      "action": "move"
+    },
+    {
+      "original": "docs/rms_anchor_small_depth_limit_unselected.md",
+      "archived": "docs/archive/2026-11-04/docs/rms_anchor_small_depth_limit_unselected.md",
+      "sha256": "44a2bac35240a92a2b0b99da4b39651ea13734a267985a34cf53e95c84a1b364",
+      "bytes": 6797,
+      "action": "move"
+    },
+    {
+      "original": "docs/round18_conditional_normalization_math_review.md",
+      "archived": "docs/archive/2026-11-04/docs/round18_conditional_normalization_math_review.md",
+      "sha256": "b48c5011b9be675a6db592027c2bdbee32b3e07991afaad8bf8de52a91c62ed4",
+      "bytes": 10736,
+      "action": "move"
+    },
+    {
+      "original": "docs/round28_rms_applicability_report_data/success_40_arithmetic.csv",
+      "archived": "docs/archive/2026-11-04/docs/round28_rms_applicability_report_data/success_40_arithmetic.csv",
+      "sha256": "563e669c3f2f3a6dd90521accc899e07ad064eec169edc247a5e9a67ed7fb7cf",
+      "bytes": 9449,
+      "action": "move"
+    },
+    {
+      "original": "docs/round28_rms_applicability_report_data/outcome_72_rows.csv",
+      "archived": "docs/archive/2026-11-04/docs/round28_rms_applicability_report_data/outcome_72_rows.csv",
+      "sha256": "736979bd73789c22327233b13ce7250af2fa53a2349d57a89ecc340c3287838a",
+      "bytes": 24803,
+      "action": "move"
+    },
+    {
+      "original": "docs/round28_rms_applicability_report_data/scene_size_9_rows.csv",
+      "archived": "docs/archive/2026-11-04/docs/round28_rms_applicability_report_data/scene_size_9_rows.csv",
+      "sha256": "3221b88846590df2d552e4aef2708d1edca78c0d6684a4128f67203be87bc33f",
+      "bytes": 656,
+      "action": "move"
+    },
+    {
+      "original": "docs/round17_preflight_report.md",
+      "archived": "docs/archive/2026-11-04/docs/round17_preflight_report.md",
+      "sha256": "318ca6c0fd9de7a8ca05630398717538922afad724874da062643be5e623ccea",
+      "bytes": 8661,
+      "action": "move"
+    },
+    {
+      "original": "docs/round31_log_conditional_reference_design.md",
+      "archived": "docs/archive/2026-11-04/docs/round31_log_conditional_reference_design.md",
+      "sha256": "b894da0e4709a7df2672f2aafe2277c52d7497df6adf5020474be998c144b205",
+      "bytes": 4032,
+      "action": "move"
+    },
+    {
+      "original": "docs/round18_alternative_operator_review.md",
+      "archived": "docs/archive/2026-11-04/docs/round18_alternative_operator_review.md",
+      "sha256": "7999d6682f2d619cdc842a78e5145405a18350f1f5fa0bc37d9e22098b890600",
+      "bytes": 14811,
+      "action": "move"
+    },
+    {
+      "original": "docs/round19_center_semantics_report.md",
+      "archived": "docs/archive/2026-11-04/docs/round19_center_semantics_report.md",
+      "sha256": "ceb84e7b357eae7a4d1b04e7d7ea97b30b30652378c9a81eba180774c7582c87",
+      "bytes": 10895,
+      "action": "move"
+    },
+    {
+      "original": "docs/round29_log_rms_representation.md",
+      "archived": "docs/archive/2026-11-04/docs/round29_log_rms_representation.md",
+      "sha256": "757f34040640adb540d194e81bd911f36c053d4d59031f810fd12329032d5a98",
+      "bytes": 3597,
+      "action": "move"
+    },
+    {
+      "original": "docs/round3_world_review.md",
+      "archived": "docs/archive/2026-11-04/docs/round3_world_review.md",
+      "sha256": "d11b3706a177d70831420d0329f243380bd8ee0650852521d54ec7c85fea16bd",
+      "bytes": 10528,
+      "action": "move"
+    },
+    {
+      "original": "docs/round28_rms_applicability_report.md",
+      "archived": "docs/archive/2026-11-04/docs/round28_rms_applicability_report.md",
+      "sha256": "b5569498dc34477abc8b2e58806bf151160aeb670f31a9d5be859b9f7834af7e",
+      "bytes": 7536,
+      "action": "move"
+    },
+    {
+      "original": "docs/round29_log_rms_preflight_report.md",
+      "archived": "docs/archive/2026-11-04/docs/round29_log_rms_preflight_report.md",
+      "sha256": "0da5bb2577d30614bf16822f0a965368933be58d9ee14a79f522e02ad7d18a43",
+      "bytes": 14893,
+      "action": "move"
+    },
+    {
+      "original": "docs/round17_feasibility_report.md",
+      "archived": "docs/archive/2026-11-04/docs/round17_feasibility_report.md",
+      "sha256": "10b9106e265803ad5b0941ac042206476541dabffcf0b1f5851fe577c4c7cdd7",
+      "bytes": 12014,
+      "action": "move"
+    },
+    {
+      "original": "docs/ray_pushforward_pe_feasibility_draft.md",
+      "archived": "docs/archive/2026-11-04/docs/ray_pushforward_pe_feasibility_draft.md",
+      "sha256": "373ea92fe62ed41b26f43e22f6699a0642958c00b3cf9bfd0653d5cdf1945cba",
+      "bytes": 13827,
+      "action": "move"
+    },
+    {
+      "original": "docs/round42_render_loss_report.md",
+      "archived": "docs/archive/2026-11-04/docs/round42_render_loss_report.md",
+      "sha256": "6c85c48f246bc857ad8f1fa2f8e741c95ad83d2f1b27e4e6f9f2d07cad53e7f4",
+      "bytes": 5991,
+      "action": "move"
+    },
+    {
+      "original": "docs/round12_depth_data_protocol_erratum.md",
+      "archived": "docs/archive/2026-11-04/docs/round12_depth_data_protocol_erratum.md",
+      "sha256": "d0ff591d42f7971d14a1305196b7a179de31053adcefa5ca00a7b125a320445a",
+      "bytes": 622,
+      "action": "move"
+    },
+    {
+      "original": "docs/round9_protocol_review.md",
+      "archived": "docs/archive/2026-11-04/docs/round9_protocol_review.md",
+      "sha256": "2fc2022848ec319b276d394cb31f1eadcdc5acdfe59e64a137aa86417bed29da",
+      "bytes": 15911,
+      "action": "move"
+    },
+    {
+      "original": "docs/round43_frequency_report.md",
+      "archived": "docs/archive/2026-11-04/docs/round43_frequency_report.md",
+      "sha256": "659880e283c51f2e7468342cdfb85ccda8f965fc903586f277b57377333c9ce8",
+      "bytes": 6937,
+      "action": "move"
+    },
+    {
+      "original": "docs/round17_literature_scope.md",
+      "archived": "docs/archive/2026-11-04/docs/round17_literature_scope.md",
+      "sha256": "aeeadde1e4e5f251f4c4da4dd32aaab6c153a3fb13109d3561697c390f6242e2",
+      "bytes": 2576,
+      "action": "move"
+    },
+    {
+      "original": "docs/round41_component_diagnosis.md",
+      "archived": "docs/archive/2026-11-04/docs/round41_component_diagnosis.md",
+      "sha256": "774f65791c37ccb05d183903af1c218b6e82c8efeeb8c057293048954eef3fd5",
+      "bytes": 2520,
+      "action": "move"
+    },
+    {
+      "original": "docs/round22_ray_preflight_report.md",
+      "archived": "docs/archive/2026-11-04/docs/round22_ray_preflight_report.md",
+      "sha256": "c2a8ffe8b134c345070ecc27db79039f876f7abd5dba43bd22cdc29127ae0a95",
+      "bytes": 20223,
+      "action": "move"
+    },
+    {
+      "original": "docs/round17_size_temperature_attribution_review.md",
+      "archived": "docs/archive/2026-11-04/docs/round17_size_temperature_attribution_review.md",
+      "sha256": "31788d844cc3d74e2dd3f697db40425c12aa9e4e785fb6aa26d306b9e515dfea",
+      "bytes": 5508,
+      "action": "move"
+    },
+    {
+      "original": "docs/round15_quartic_numerical24_report.md",
+      "archived": "docs/archive/2026-11-04/docs/round15_quartic_numerical24_report.md",
+      "sha256": "2b77cb96afa72097491bc22b6e9ae9bd797854eff0f48da21ab20dc47b9ae8ca",
+      "bytes": 3867,
+      "action": "move"
+    },
+    {
+      "original": "docs/round36_component_round_reference_design.md",
+      "archived": "docs/archive/2026-11-04/docs/round36_component_round_reference_design.md",
+      "sha256": "2c3b40e7bd8198e9ce3be645be1fc517283c56a5488e96a8f409d48866609d18",
+      "bytes": 4531,
+      "action": "move"
+    },
+    {
+      "original": "docs/round15_validation_blueprint.md",
+      "archived": "docs/archive/2026-11-04/docs/round15_validation_blueprint.md",
+      "sha256": "0c36b0e8116f216e021626999011a5f58b3b3bda1ab07d98e4a3f7eafcb58f73",
+      "bytes": 14946,
+      "action": "move"
+    },
+    {
+      "original": "docs/round45_phase_warp_report.md",
+      "archived": "docs/archive/2026-11-04/docs/round45_phase_warp_report.md",
+      "sha256": "6ae2a0fd3e7fb7366e94652d88787ef5ee66fd39b91893c93689e28dfdfa6858",
+      "bytes": 8706,
+      "action": "move"
+    },
+    {
+      "original": "docs/round36_component_round_reference_report.md",
+      "archived": "docs/archive/2026-11-04/docs/round36_component_round_reference_report.md",
+      "sha256": "0565d4114e26320c8bcca8711a1e3827620ec587cc3a82cecf3685d087bd83ee",
+      "bytes": 14785,
+      "action": "move"
+    },
+    {
+      "original": "docs/round63_rgb_diagnostic_plan.md",
+      "archived": "docs/archive/2026-11-04/docs/round63_rgb_diagnostic_plan.md",
+      "sha256": "b09b0ce399fced645eaac7ced4e9bef7668b292d05dbe3f927591f36215c656c",
+      "bytes": 4834,
+      "action": "move"
+    },
+    {
+      "original": "docs/compact_gaussian_dual_pe_reserve_20261101.md",
+      "archived": "docs/archive/2026-11-04/docs/compact_gaussian_dual_pe_reserve_20261101.md",
+      "sha256": "0301072b635c04b2d4534f792df2b4e615743e0eb537f54f9134178e6780c510",
+      "bytes": 6196,
+      "action": "move"
+    },
+    {
+      "original": "docs/round29_log_rms_preflight_report_data/base_23_rows.csv",
+      "archived": "docs/archive/2026-11-04/docs/round29_log_rms_preflight_report_data/base_23_rows.csv",
+      "sha256": "b5296cf7134f4a0b3fe294e631c26f43345181ff22e3ad30c589f7995643a2a5",
+      "bytes": 17167,
+      "action": "move"
+    },
+    {
+      "original": "docs/round29_log_rms_preflight_report_data/production_29_rows.csv",
+      "archived": "docs/archive/2026-11-04/docs/round29_log_rms_preflight_report_data/production_29_rows.csv",
+      "sha256": "3ec6008047cb10b6655afcc758406601e24bb7b4a79d968e7dfaec64ea5dbbac",
+      "bytes": 88489,
+      "action": "move"
+    },
+    {
+      "original": "docs/round29_log_rms_preflight_report_data/reference_43_rows.csv",
+      "archived": "docs/archive/2026-11-04/docs/round29_log_rms_preflight_report_data/reference_43_rows.csv",
+      "sha256": "29bcad150b6bd10ca10ce21e9973444d99ecc83e0241ba977f0efdf0a1788f15",
+      "bytes": 28746,
+      "action": "move"
+    },
+    {
+      "original": "docs/round29_log_rms_preflight_report_data/identity_6_rows.csv",
+      "archived": "docs/archive/2026-11-04/docs/round29_log_rms_preflight_report_data/identity_6_rows.csv",
+      "sha256": "b59df74ff043736d93eb6aff8b3bacb85204c062a8570c04166ddb5e1e56bfa6",
+      "bytes": 1076,
+      "action": "move"
+    },
+    {
+      "original": "docs/round16_mechanism_report.md",
+      "archived": "docs/archive/2026-11-04/docs/round16_mechanism_report.md",
+      "sha256": "a882f124ba18a439bfa9f1c2d127ac6cb02168b1ad86606fd1d01d4986e17710",
+      "bytes": 11525,
+      "action": "move"
+    },
+    {
+      "original": "docs/round58_observed_support_report.md",
+      "archived": "docs/archive/2026-11-04/docs/round58_observed_support_report.md",
+      "sha256": "06097222807e94612b59d091c357fa12e1a4d9fa74410156a71c450143b21a88",
+      "bytes": 8988,
+      "action": "move"
+    },
+    {
+      "original": "docs/round20_anchor_fixed_report.md",
+      "archived": "docs/archive/2026-11-04/docs/round20_anchor_fixed_report.md",
+      "sha256": "157b2342505aeec15aad017d4eddfdd5ecbb6a5d3f8fcd96c90710d9c44974d6",
+      "bytes": 23429,
+      "action": "move"
+    },
+    {
+      "original": "docs/round18_post_r17_design_review.md",
+      "archived": "docs/archive/2026-11-04/docs/round18_post_r17_design_review.md",
+      "sha256": "018138301165d7717173f8f4dc8ee2cfd95cd64e213f0e12dfb3799cfa550e16",
+      "bytes": 8546,
+      "action": "move"
+    },
+    {
+      "original": "docs/round34_log_narrow_reference_report.md",
+      "archived": "docs/archive/2026-11-04/docs/round34_log_narrow_reference_report.md",
+      "sha256": "a90b96fe7808669718ca50e235e87cb98e274e85e1e976aa12deeacdc2b08476",
+      "bytes": 13281,
+      "action": "move"
+    },
+    {
+      "original": "docs/round20_unselected_ray_measure_note.md",
+      "archived": "docs/archive/2026-11-04/docs/round20_unselected_ray_measure_note.md",
+      "sha256": "8c2010c615526306957bb30c5440824f5cf06e7c27e849ed5ee3f2c85a6ebb2d",
+      "bytes": 5382,
+      "action": "move"
+    },
+    {
+      "original": "docs/round17_regional_report.md",
+      "archived": "docs/archive/2026-11-04/docs/round17_regional_report.md",
+      "sha256": "e559d6efb453158a6f4f02ee36f50565ad41d28e23112c163e00b7bb509945e7",
+      "bytes": 19355,
+      "action": "move"
+    },
+    {
+      "original": "docs/round47_scope_note.md",
+      "archived": "docs/archive/2026-11-04/docs/round47_scope_note.md",
+      "sha256": "e3c1b570645688722e5b1bd0eb684e475116311e250cc544a7a3c9babf70e7b5",
+      "bytes": 4990,
+      "action": "move"
+    },
+    {
+      "original": "docs/round31_log_conditional_reference_report.md",
+      "archived": "docs/archive/2026-11-04/docs/round31_log_conditional_reference_report.md",
+      "sha256": "fa8c1bb2b351377e55d24187f73a0be17751070de833403ca7f5e944ba27e25a",
+      "bytes": 12078,
+      "action": "move"
+    },
+    {
+      "original": "docs/rms_anchor_train_screen_unselected.md",
+      "archived": "docs/archive/2026-11-04/docs/rms_anchor_train_screen_unselected.md",
+      "sha256": "f21e89db69fa6b031a4a9bb91f1dcb8c7d2e204be264ef5daae4d64c37662bdb",
+      "bytes": 8650,
+      "action": "move"
+    },
+    {
+      "original": "docs/round38_delivery_record_note.md",
+      "archived": "docs/archive/2026-11-04/docs/round38_delivery_record_note.md",
+      "sha256": "c2b7ac1080eff36fd3ebf6929613796bf7c32ea58d50375103b6c29e38fe527b",
+      "bytes": 1666,
+      "action": "move"
+    },
+    {
+      "original": "docs/round15_recent_distribution_rope_note.md",
+      "archived": "docs/archive/2026-11-04/docs/round15_recent_distribution_rope_note.md",
+      "sha256": "109931471f00e55923f9f59b9f57b6d6823150a32213a8ec7d8143fecc61b2f3",
+      "bytes": 1344,
+      "action": "move"
+    },
+    {
+      "original": "docs/round17_design_decision.md",
+      "archived": "docs/archive/2026-11-04/docs/round17_design_decision.md",
+      "sha256": "cb475db72944c7d3d44c436bb354dc886f0c2314396638c9fe587641e325a437",
+      "bytes": 5543,
+      "action": "move"
+    },
+    {
+      "original": "docs/round61_literature_scope_note.md",
+      "archived": "docs/archive/2026-11-04/docs/round61_literature_scope_note.md",
+      "sha256": "4bb183489b23744e270ae839832f29a0c18d1965a29c88cc9889202921ca0ad3",
+      "bytes": 2400,
+      "action": "move"
+    },
+    {
+      "original": "docs/compact_skew_pe_reserve_20261101.md",
+      "archived": "docs/archive/2026-11-04/docs/compact_skew_pe_reserve_20261101.md",
+      "sha256": "f7bf2bec9ce0af07ac9a1ab3ca99f2a7c826880fb61349153e502a7856ef34c8",
+      "bytes": 11695,
+      "action": "move"
+    },
+    {
+      "original": "docs/gaussian_unitary_candidate.md",
+      "archived": "docs/archive/2026-11-04/docs/gaussian_unitary_candidate.md",
+      "sha256": "4199cdbdd80ee4def563d4c0f68eab34a75841cc3c109f50daa5ed3d80317e02",
+      "bytes": 5637,
+      "action": "move"
+    },
+    {
+      "original": "docs/round46_native3d_design.md",
+      "archived": "docs/archive/2026-11-04/docs/round46_native3d_design.md",
+      "sha256": "f818ec66f7bab914a1011c64d442d097c830b968ce7ba7ce8ffa1d35f37eef38",
+      "bytes": 4001,
+      "action": "move"
+    },
+    {
+      "original": "docs/round17_validation_implementation_plan.md",
+      "archived": "docs/archive/2026-11-04/docs/round17_validation_implementation_plan.md",
+      "sha256": "4dfc703757ff43938ec7b43fcd051e8323689b7f05b985ae07e119f3d351deac",
+      "bytes": 15803,
+      "action": "move"
+    },
+    {
+      "original": "docs/round15_polynomial_cell_energy_reserve.md",
+      "archived": "docs/archive/2026-11-04/docs/round15_polynomial_cell_energy_reserve.md",
+      "sha256": "4bc10c139da086e13fcd9110247e58c8181598eafad88641e6ca32cf114bef29",
+      "bytes": 12753,
+      "action": "move"
+    },
+    {
+      "original": "docs/round43_scope_note.md",
+      "archived": "docs/archive/2026-11-04/docs/round43_scope_note.md",
+      "sha256": "124788b5263daa5f98612c8356cb747b284e4c6b4eab527673d4a8cdc4d624d2",
+      "bytes": 6592,
+      "action": "move"
+    },
+    {
+      "original": "docs/round13_anchor_closure_review.md",
+      "archived": "docs/archive/2026-11-04/docs/round13_anchor_closure_review.md",
+      "sha256": "4c1d1d27fceb5947933fb02d452f41ee690021e5c433a9c284aa75601adde71b",
+      "bytes": 6014,
+      "action": "move"
+    },
+    {
+      "original": "docs/round18_baseline_reuse_boundaries.md",
+      "archived": "docs/archive/2026-11-04/docs/round18_baseline_reuse_boundaries.md",
+      "sha256": "9c1450920f62bc001e65fc115bc8ace1005a5d45f32c64e108cfbd6b00f359cc",
+      "bytes": 4628,
+      "action": "move"
+    },
+    {
+      "original": "docs/round52_camera_frame_plan.md",
+      "archived": "docs/archive/2026-11-04/docs/round52_camera_frame_plan.md",
+      "sha256": "deb9eb86a434b2c21b050fdd46bd87da0f692d94fe79c10c9da958a0cad353a8",
+      "bytes": 2615,
+      "action": "move"
+    },
+    {
+      "original": "docs/round62_rgb_interpretation_limits.md",
+      "archived": "docs/archive/2026-11-04/docs/round62_rgb_interpretation_limits.md",
+      "sha256": "87925bc6ea02f2f4372e8fa764908da50c47b509406f2eb28bbea59834f5a2bc",
+      "bytes": 2512,
+      "action": "move"
+    },
+    {
+      "original": "docs/round17_compact_design_review_draft.md",
+      "archived": "docs/archive/2026-11-04/docs/round17_compact_design_review_draft.md",
+      "sha256": "73acaccefd1a314fb47df2b843c8508e0f9ff1956faff82af4128abd9c00d2b6",
+      "bytes": 6803,
+      "action": "move"
+    },
+    {
+      "original": "docs/round10_iteration_review.md",
+      "archived": "docs/archive/2026-11-04/docs/round10_iteration_review.md",
+      "sha256": "63caf15376d728e7c15e8417bc351309103715ff87525b22b131621d4cb9e68c",
+      "bytes": 9340,
+      "action": "move"
+    },
+    {
+      "original": "docs/round25_student_screen_report.md",
+      "archived": "docs/archive/2026-11-04/docs/round25_student_screen_report.md",
+      "sha256": "f8b2ac93d11246f603a9313ebf3f7cde8df6678f261acf4fcce739eaf5acc1e2",
+      "bytes": 13681,
+      "action": "move"
+    },
+    {
+      "original": "docs/research_gate_map_20261101.md",
+      "archived": "docs/archive/2026-11-04/docs/research_gate_map_20261101.md",
+      "sha256": "5eccf82c766861a5f38ded8ca4c6456bcb3db609bc58122ae51335f5afadcb96",
+      "bytes": 5998,
+      "action": "move"
+    },
+    {
+      "original": "docs/round53_ray_frame_report.md",
+      "archived": "docs/archive/2026-11-04/docs/round53_ray_frame_report.md",
+      "sha256": "d571c6534091d57c2b93059a78cc784a3a7e24b2c377fad53cb98aa043942494",
+      "bytes": 5457,
+      "action": "move"
+    },
+    {
+      "original": "docs/round15_quartic_numerical_report.md",
+      "archived": "docs/archive/2026-11-04/docs/round15_quartic_numerical_report.md",
+      "sha256": "13e82700818d188c868d1f70c43db094331aeede7ddd47dd9ccd1b806c77b85a",
+      "bytes": 5895,
+      "action": "move"
+    },
+    {
+      "original": "docs/round68_fixed_region_plan.md",
+      "archived": "docs/archive/2026-11-04/docs/round68_fixed_region_plan.md",
+      "sha256": "7e4c9d87054fadfeea68190581ea40e48f4e668659a3d1d375a1d811fd8106fe",
+      "bytes": 6032,
+      "action": "move"
+    },
+    {
+      "original": "docs/round35_log_real_reference_report_data/cases72.csv",
+      "archived": "docs/archive/2026-11-04/docs/round35_log_real_reference_report_data/cases72.csv",
+      "sha256": "4806ebe6f1fcf0e52632eda49d017ba969e445ee414d2a451a9f996f82aec293",
+      "bytes": 38606,
+      "action": "move"
+    },
+    {
+      "original": "docs/round35_log_real_reference_report_data/reference_calls144.csv",
+      "archived": "docs/archive/2026-11-04/docs/round35_log_real_reference_report_data/reference_calls144.csv",
+      "sha256": "b627b3ca00458f52d5f7542a5fb691ed65ac029bdefc28a19f78909abf49fa82",
+      "bytes": 197154,
+      "action": "move"
+    },
+    {
+      "original": "docs/round35_log_real_reference_report_data/oracles19.csv",
+      "archived": "docs/archive/2026-11-04/docs/round35_log_real_reference_report_data/oracles19.csv",
+      "sha256": "10174611c7cf8bf06772494c8a6070aa046daf5610bc0f2503a9a16bc98229f2",
+      "bytes": 43379,
+      "action": "move"
+    },
+    {
+      "original": "docs/round35_log_real_reference_report_data/comparisons254.csv",
+      "archived": "docs/archive/2026-11-04/docs/round35_log_real_reference_report_data/comparisons254.csv",
+      "sha256": "ea53d98f0d9b4e5d4bdebfe3358b5e9dd052a9a3f61f8018ffc381716cef1e8b",
+      "bytes": 62655,
+      "action": "move"
+    },
+    {
+      "original": "docs/round35_log_real_reference_report_data/completion.json",
+      "archived": "docs/archive/2026-11-04/docs/round35_log_real_reference_report_data/completion.json",
+      "sha256": "e0cc6c94e46a967c68e4d86cb16b8846c84917e0bf2e45b01ba8dc0a46f1053f",
+      "bytes": 920,
+      "action": "move"
+    },
+    {
+      "original": "docs/round35_log_real_reference_report_data/statistics.json",
+      "archived": "docs/archive/2026-11-04/docs/round35_log_real_reference_report_data/statistics.json",
+      "sha256": "c0db1051dcaecb90649211ff0e490c3cfd16081660872620bf82599105c5e330",
+      "bytes": 16462,
+      "action": "move"
+    },
+    {
+      "original": "docs/round35_log_real_reference_report_data/before_execution.json",
+      "archived": "docs/archive/2026-11-04/docs/round35_log_real_reference_report_data/before_execution.json",
+      "sha256": "b40b814245f9c7d2dfd0c4ceeebbd662bbdf2863bcab6855f790e156a3dee594",
+      "bytes": 397,
+      "action": "move"
+    },
+    {
+      "original": "docs/round35_log_real_reference_report_data/extraction.log",
+      "archived": "docs/archive/2026-11-04/docs/round35_log_real_reference_report_data/extraction.log",
+      "sha256": "80d5de0387ea63c71a93e7d0b64a1c39d951e36e2e9b80901297c6df7f7f0a3a",
+      "bytes": 3388,
+      "action": "move"
+    },
+    {
+      "original": "docs/round35_log_real_reference_report_data/source_snapshot/grope_round35_report_extract.py",
+      "archived": "docs/archive/2026-11-04/docs/round35_log_real_reference_report_data/source_snapshot/grope_round35_report_extract.py",
+      "sha256": "09a1319b36d812c2836fb03ea24e1e09b5912e7ab4ff1d1ce486f93d3c9df12e",
+      "bytes": 12494,
+      "action": "move"
+    },
+    {
+      "original": "docs/round35_log_real_reference_report_data/draft_history/20261101_postfailure_diagnostic_supplement/report_before_supplement.md",
+      "archived": "docs/archive/2026-11-04/docs/round35_log_real_reference_report_data/draft_history/20261101_postfailure_diagnostic_supplement/report_before_supplement.md",
+      "sha256": "95d0ad945f257fd54aa553c2ab30defa1f09df5527f4a33e4064cab3609e0962",
+      "bytes": 13838,
+      "action": "move"
+    },
+    {
+      "original": "docs/round35_log_real_reference_report_data/draft_history/20261101_postfailure_diagnostic_supplement/edit_receipt.json",
+      "archived": "docs/archive/2026-11-04/docs/round35_log_real_reference_report_data/draft_history/20261101_postfailure_diagnostic_supplement/edit_receipt.json",
+      "sha256": "c53e20db88d896ded74596cc9d14bf4c04bcbcc514e3a3bfaabedd7704c57918",
+      "bytes": 336,
+      "action": "move"
+    },
+    {
+      "original": "docs/round35_log_real_reference_report_data/draft_history/20261101_postfailure_diagnostic_supplement/before_edit.json",
+      "archived": "docs/archive/2026-11-04/docs/round35_log_real_reference_report_data/draft_history/20261101_postfailure_diagnostic_supplement/before_edit.json",
+      "sha256": "1f69cb9802c57b34eb8cf3a1e90a5f988f96abaffc287eabbba4a3d097a10253",
+      "bytes": 562,
+      "action": "move"
+    },
+    {
+      "original": "docs/round41_actual_gs_working_plan.md",
+      "archived": "docs/archive/2026-11-04/docs/round41_actual_gs_working_plan.md",
+      "sha256": "22d918300e03c61dba0bae1f36beb5ecfdcb8ace57f23d643d452580700e3a79",
+      "bytes": 5764,
+      "action": "move"
+    },
+    {
+      "original": "docs/round37_narrow_order_bound_analysis_data/stdout.log",
+      "archived": "docs/archive/2026-11-04/docs/round37_narrow_order_bound_analysis_data/stdout.log",
+      "sha256": "794c718899beea897cd5ccf6268bf1b09787643110111ceee5e06a525d34f4ef",
+      "bytes": 435,
+      "action": "move"
+    },
+    {
+      "original": "docs/round37_narrow_order_bound_analysis_data/results.json",
+      "archived": "docs/archive/2026-11-04/docs/round37_narrow_order_bound_analysis_data/results.json",
+      "sha256": "c1873302d004bcdf0f93348099b71170dd8ae50da115b509d15517cae5c8214b",
+      "bytes": 8129,
+      "action": "move"
+    },
+    {
+      "original": "docs/round37_narrow_order_bound_analysis_data/completion.json",
+      "archived": "docs/archive/2026-11-04/docs/round37_narrow_order_bound_analysis_data/completion.json",
+      "sha256": "b66aea9637e4d34da313a6f363679c53343e831ec4b16cf8c1802d1127742bcb",
+      "bytes": 1421,
+      "action": "move"
+    },
+    {
+      "original": "docs/round37_narrow_order_bound_analysis_data/archive_receipt.json",
+      "archived": "docs/archive/2026-11-04/docs/round37_narrow_order_bound_analysis_data/archive_receipt.json",
+      "sha256": "6a72835e044099b1e2595b4150a460e0b56d904195aa82c66e27d7a3228d9dee",
+      "bytes": 1508,
+      "action": "move"
+    },
+    {
+      "original": "docs/round37_narrow_order_bound_analysis_data/before_execution.json",
+      "archived": "docs/archive/2026-11-04/docs/round37_narrow_order_bound_analysis_data/before_execution.json",
+      "sha256": "0d9c5b8f9181d0c4e36d293720eb1a7d79626a2564be21831492ef640f6008e0",
+      "bytes": 327,
+      "action": "move"
+    },
+    {
+      "original": "docs/round37_narrow_order_bound_analysis_data/before_execution_v2.json",
+      "archived": "docs/archive/2026-11-04/docs/round37_narrow_order_bound_analysis_data/before_execution_v2.json",
+      "sha256": "ed475c5e2a8fb5090d9aa05a3ec3dda301ebcf4ab075d25a6efec899394417c3",
+      "bytes": 643,
+      "action": "move"
+    },
+    {
+      "original": "docs/round37_narrow_order_bound_analysis_data/bounds.py",
+      "archived": "docs/archive/2026-11-04/docs/round37_narrow_order_bound_analysis_data/bounds.py",
+      "sha256": "18b7279d9d4c27cdaedf3656e29721123b37a59a4a91816174c640f88c4fa137",
+      "bytes": 3932,
+      "action": "move"
+    },
+    {
+      "original": "docs/round37_narrow_order_bound_analysis_data/bounds_v2.py",
+      "archived": "docs/archive/2026-11-04/docs/round37_narrow_order_bound_analysis_data/bounds_v2.py",
+      "sha256": "319925cf666cebcc167d88ea41e83f34a3b0ccdd14379c4323b485aa2b8b8d19",
+      "bytes": 3837,
+      "action": "move"
+    },
+    {
+      "original": "docs/round19_center_semantics_design_review.md",
+      "archived": "docs/archive/2026-11-04/docs/round19_center_semantics_design_review.md",
+      "sha256": "0562a6a4dc2a4fcc818350d101cc96370d24f0f4dbc356c0ba4aa55fd670c9fb",
+      "bytes": 4695,
+      "action": "move"
+    },
+    {
+      "original": "docs/round51_operator_scope_note.md",
+      "archived": "docs/archive/2026-11-04/docs/round51_operator_scope_note.md",
+      "sha256": "925d93002fc0652e8c569ef468b02be18dd4639fb34fc7d0c4b1400d34dcdf6b",
+      "bytes": 2068,
+      "action": "move"
+    },
+    {
+      "original": "docs/web_latest_sync.md",
+      "archived": "docs/archive/2026-11-04/docs/web_latest_sync.md",
+      "sha256": "8558bdab1e29906cc3c16b03b351689a3febfbfc68335f335c02ff542fbc1ad1",
+      "bytes": 17613,
+      "action": "move"
+    },
+    {
+      "original": "docs/round3_theory_candidates.md",
+      "archived": "docs/archive/2026-11-04/docs/round3_theory_candidates.md",
+      "sha256": "6a53dd30117cf4ab6975a3e280a2717931a7e598e016765ed58223eb85e3050d",
+      "bytes": 10654,
+      "action": "move"
+    },
+    {
+      "original": "docs/round67_training_path_plan.md",
+      "archived": "docs/archive/2026-11-04/docs/round67_training_path_plan.md",
+      "sha256": "460160bf58b77b5f7e82d0d87d07e9bb114b3507e2961790a6d98af876dcb21d",
+      "bytes": 4358,
+      "action": "move"
+    },
+    {
+      "original": "docs/round16_trace_temperature_review.md",
+      "archived": "docs/archive/2026-11-04/docs/round16_trace_temperature_review.md",
+      "sha256": "9c961742329ac476303f7bf8dc3312e9fccca94edcf5fb36207025ab079ac162",
+      "bytes": 13914,
+      "action": "move"
+    },
+    {
+      "original": "docs/gaussian_overlap_measure_pe_reserve_20261101.md",
+      "archived": "docs/archive/2026-11-04/docs/gaussian_overlap_measure_pe_reserve_20261101.md",
+      "sha256": "fdcb9661ea8d96160cda4dfd9052d3b279e98d1c0e33216c09fa7731aaa6e981",
+      "bytes": 22583,
+      "action": "move"
+    },
+    {
+      "original": "docs/whitened_radial_reference_unselected.md",
+      "archived": "docs/archive/2026-11-04/docs/whitened_radial_reference_unselected.md",
+      "sha256": "beeee5d3c1a12b1b19d7d50420a2d92e213fc156569896847e80abfa31dcee4a",
+      "bytes": 8454,
+      "action": "move"
+    },
+    {
+      "original": "docs/round20_anchor_preparation_draft.md",
+      "archived": "docs/archive/2026-11-04/docs/round20_anchor_preparation_draft.md",
+      "sha256": "1e7e2b5775acc0a4e666f9aa61c830e11bbe68865f4688b079fca4bbf9e44bc8",
+      "bytes": 17397,
+      "action": "move"
+    },
+    {
+      "original": "docs/round12_failure_review.md",
+      "archived": "docs/archive/2026-11-04/docs/round12_failure_review.md",
+      "sha256": "b8c88fb749909a2ca2cfbed63131f34e9a7d4371399f3da67176eac475e63a6a",
+      "bytes": 10009,
+      "action": "move"
+    },
+    {
+      "original": "docs/rms_anchor_train_screen_unselected_history/20261101_cost_v2/edit_receipt.json",
+      "archived": "docs/archive/2026-11-04/docs/rms_anchor_train_screen_unselected_history/20261101_cost_v2/edit_receipt.json",
+      "sha256": "ff7d9b1b9ef4ddcba7452eb1e21089b97e7547d4f2b15c4dd2617034a15451ff",
+      "bytes": 416,
+      "action": "move"
+    },
+    {
+      "original": "docs/rms_anchor_train_screen_unselected_history/20261101_cost_v2/before_edit.json",
+      "archived": "docs/archive/2026-11-04/docs/rms_anchor_train_screen_unselected_history/20261101_cost_v2/before_edit.json",
+      "sha256": "71624424d49f6c8e08df180a18ac18aaba088803a46639e59db0fadd8962d12b",
+      "bytes": 357,
+      "action": "move"
+    },
+    {
+      "original": "docs/rms_anchor_train_screen_unselected_history/20261101_cost_v2/v1.md",
+      "archived": "docs/archive/2026-11-04/docs/rms_anchor_train_screen_unselected_history/20261101_cost_v2/v1.md",
+      "sha256": "344a5814019f8efeb0a10082879bfc684a0515af1627fedabbf29fa0ddd9eb18",
+      "bytes": 6258,
+      "action": "move"
+    },
+    {
+      "original": "docs/round15_feasibility_report.md",
+      "archived": "docs/archive/2026-11-04/docs/round15_feasibility_report.md",
+      "sha256": "7c8954c4363b2d15620a6d581d4276bd80c665739933bb9e2bbdba3f3e887d4f",
+      "bytes": 13193,
+      "action": "move"
+    },
+    {
+      "original": "docs/round39_dual_overlap_report.md",
+      "archived": "docs/archive/2026-11-04/docs/round39_dual_overlap_report.md",
+      "sha256": "97dd1eab7b63c64a1668bc9d579e220b6d59e4b8dc8b98d9d093281c873b5503",
+      "bytes": 5384,
+      "action": "move"
+    },
+    {
+      "original": "docs/round26_rms_projective_design_draft.md",
+      "archived": "docs/archive/2026-11-04/docs/round26_rms_projective_design_draft.md",
+      "sha256": "599f540a4f51b9b016301bbe95aff7275e4fc0aa630850f9bf327c73592b4e53",
+      "bytes": 6537,
+      "action": "move"
+    },
+    {
+      "original": "docs/round3_confirmation_audit.md",
+      "archived": "docs/archive/2026-11-04/docs/round3_confirmation_audit.md",
+      "sha256": "cf34bb02543733c087914c5ba3d2b04953619dd05dffd797a9115afdda438ed0",
+      "bytes": 9280,
+      "action": "move"
+    },
+    {
+      "original": "docs/round17_recent_prior_synthesis_20261031.md",
+      "archived": "docs/archive/2026-11-04/docs/round17_recent_prior_synthesis_20261031.md",
+      "sha256": "3b1a15e8f65361584892a5ec468c3534732237554014b740afa218fbc199eae2",
+      "bytes": 4601,
+      "action": "move"
+    },
+    {
+      "original": "docs/round4_relative_support.md",
+      "archived": "docs/archive/2026-11-04/docs/round4_relative_support.md",
+      "sha256": "78cc1a696043f81ac360f8555d2206a5eb20bbb205fb7ed0dfbeb64099de0ec3",
+      "bytes": 8021,
+      "action": "move"
+    },
+    {
+      "original": "docs/directional_content_compensation_review_draft.md",
+      "archived": "docs/archive/2026-11-04/docs/directional_content_compensation_review_draft.md",
+      "sha256": "d2209699183902b75f7abf2c10c0b8a2be018584b10a4b08096dceac8e528f27",
+      "bytes": 8769,
+      "action": "move"
+    },
+    {
+      "original": "docs/round12_value_hypothesis_review.md",
+      "archived": "docs/archive/2026-11-04/docs/round12_value_hypothesis_review.md",
+      "sha256": "5688f2b7f0b3de7e47c61a4899937156be481977d63a8186614ffcc11e40c4c0",
+      "bytes": 7375,
+      "action": "move"
+    },
+    {
+      "original": "docs/round14_temperature_report.md",
+      "archived": "docs/archive/2026-11-04/docs/round14_temperature_report.md",
+      "sha256": "d9f6d12a8cd284abf7fd58cb8aa4ce44ceed1b62c397c804298ada1232344354",
+      "bytes": 3240,
+      "action": "move"
+    },
+    {
+      "original": "docs/round5_protocol_review.md",
+      "archived": "docs/archive/2026-11-04/docs/round5_protocol_review.md",
+      "sha256": "2af706758b4dec747bf25810a50e73e37e03ea0c7ad655b7d7f386427b596bb1",
+      "bytes": 13906,
+      "action": "move"
+    },
+    {
+      "original": "docs/round35_reference_roundoff_diagnosis.md",
+      "archived": "docs/archive/2026-11-04/docs/round35_reference_roundoff_diagnosis.md",
+      "sha256": "845b8decfc4d3d0fb7b25947d3a4fcf9bec7f15611fe23350fc1d75b8a929ae1",
+      "bytes": 3986,
+      "action": "move"
+    },
+    {
+      "original": "docs/round17_post_validation_branches_draft.md",
+      "archived": "docs/archive/2026-11-04/docs/round17_post_validation_branches_draft.md",
+      "sha256": "fad727852a201b962b80fad3d12d9d999e5979ca654e7cda2c04aedf0dc0fe98",
+      "bytes": 11904,
+      "action": "move"
+    },
+    {
+      "original": "docs/round24_student_preflight_report_data/reference_72_calls.csv",
+      "archived": "docs/archive/2026-11-04/docs/round24_student_preflight_report_data/reference_72_calls.csv",
+      "sha256": "29c4f5f824f99470c8c7b5639cb68788070674abb37c3fa646f7a2a76189965e",
+      "bytes": 10407,
+      "action": "move"
+    },
+    {
+      "original": "docs/round24_student_preflight_report_data/identity_6_checks.csv",
+      "archived": "docs/archive/2026-11-04/docs/round24_student_preflight_report_data/identity_6_checks.csv",
+      "sha256": "e8b1db95fa7c9cbea51d330f9e0321d815312df1debcf414af79e78a7cb11ceb",
+      "bytes": 735,
+      "action": "move"
+    },
+    {
+      "original": "docs/round24_student_preflight_report_data/base_36_cases.csv",
+      "archived": "docs/archive/2026-11-04/docs/round24_student_preflight_report_data/base_36_cases.csv",
+      "sha256": "d2248a5c0669aa2c374c7eaecd7acd8789be1d67e67681233174693ff8b3e188",
+      "bytes": 15821,
+      "action": "move"
+    },
+    {
+      "original": "docs/round26_rms_preflight_report.md",
+      "archived": "docs/archive/2026-11-04/docs/round26_rms_preflight_report.md",
+      "sha256": "2ceca3966576b0e817c447822e30c79c71db8c31b33f3f30ac56be7e031dfad3",
+      "bytes": 11452,
+      "action": "move"
+    },
+    {
+      "original": "docs/round25_student_screen_report_data/pair_48_metrics.csv",
+      "archived": "docs/archive/2026-11-04/docs/round25_student_screen_report_data/pair_48_metrics.csv",
+      "sha256": "9ce52638939e3b0e6b28760987c4b11ba725ce5f26c44a118b73452c10b43a76",
+      "bytes": 14286,
+      "action": "move"
+    },
+    {
+      "original": "docs/round25_student_screen_report_data/numerical_15_maxima.csv",
+      "archived": "docs/archive/2026-11-04/docs/round25_student_screen_report_data/numerical_15_maxima.csv",
+      "sha256": "e5c5becb1f06b3322495ced310798ae4ab3a70b59493de00cb637d8235dc9ba6",
+      "bytes": 1567,
+      "action": "move"
+    },
+    {
+      "original": "docs/round25_student_screen_report_data/scene_and_macro_40_rows.csv",
+      "archived": "docs/archive/2026-11-04/docs/round25_student_screen_report_data/scene_and_macro_40_rows.csv",
+      "sha256": "351978181cc5e2d4d1812e80e6c55dc7b24ab08228053864d301eaed93a6fb71",
+      "bytes": 11145,
+      "action": "move"
+    },
+    {
+      "original": "docs/round25_student_screen_report_data/gate_8_checks.csv",
+      "archived": "docs/archive/2026-11-04/docs/round25_student_screen_report_data/gate_8_checks.csv",
+      "sha256": "b2e7e306fa022d128844be59a7ab4a507c7e85e75b4b19f37946972e2aa67a1c",
+      "bytes": 1612,
+      "action": "move"
+    },
+    {
+      "original": "docs/round61_normal_relation_report.md",
+      "archived": "docs/archive/2026-11-04/docs/round61_normal_relation_report.md",
+      "sha256": "c18a5bb032ff9cadb22f8669deae00513e5c7ec7a4cd5eff893eb335b71be775",
+      "bytes": 5780,
+      "action": "move"
+    },
+    {
+      "original": "docs/round30_log_rms_applicability_report_data/lse_scope_8_rows.csv",
+      "archived": "docs/archive/2026-11-04/docs/round30_log_rms_applicability_report_data/lse_scope_8_rows.csv",
+      "sha256": "ef9b9b9fc15aa11b854036b8fd74a174b2c9d493a7b26a694f4954297c44f4f7",
+      "bytes": 1114,
+      "action": "move"
+    },
+    {
+      "original": "docs/round30_log_rms_applicability_report_data/outcomes_72_rows.csv",
+      "archived": "docs/archive/2026-11-04/docs/round30_log_rms_applicability_report_data/outcomes_72_rows.csv",
+      "sha256": "5e21242f2dbd400f7e11b87c5fc80df534bd3e583fd4aa6f86b06b1441e18fc8",
+      "bytes": 225714,
+      "action": "move"
+    },
+    {
+      "original": "docs/round30_log_rms_applicability_report_data/scene_size_9_rows.csv",
+      "archived": "docs/archive/2026-11-04/docs/round30_log_rms_applicability_report_data/scene_size_9_rows.csv",
+      "sha256": "53297f757694a56d367c73ffaedb338fcd97a4a0069c007241d889ac504bbcbe",
+      "bytes": 1713,
+      "action": "move"
+    },
+    {
+      "original": "docs/round41_related_work_note.md",
+      "archived": "docs/archive/2026-11-04/docs/round41_related_work_note.md",
+      "sha256": "4f29db001b16ed1d7a4424cfb420b087233a730312f6730f9812c69fc7ee4946",
+      "bytes": 5778,
+      "action": "move"
+    },
+    {
+      "original": "docs/round12_value_hypothesis_reserve.md",
+      "archived": "docs/archive/2026-11-04/docs/round12_value_hypothesis_reserve.md",
+      "sha256": "b176ea6294482dea49e4b113aca0af6b6c827ec2cdd75f8aafa9b53d0d369355",
+      "bytes": 3667,
+      "action": "move"
+    },
+    {
+      "original": "docs/round60_real_scene_report.md",
+      "archived": "docs/archive/2026-11-04/docs/round60_real_scene_report.md",
+      "sha256": "e73ba94314f7b1426a4e0caf384579290c01bdbb98f10ca396167f292917a740",
+      "bytes": 7583,
+      "action": "move"
+    },
+    {
+      "original": "docs/round38_postfailure_diagnostic_draft.md",
+      "archived": "docs/archive/2026-11-04/docs/round38_postfailure_diagnostic_draft.md",
+      "sha256": "b6d73c17f3315fde0453b5c2304c5e3aa8f16052d345a355dad4469d8cdb7cda",
+      "bytes": 11883,
+      "action": "move"
+    },
+    {
+      "original": "docs/round44_spatial_report.md",
+      "archived": "docs/archive/2026-11-04/docs/round44_spatial_report.md",
+      "sha256": "27bbc3df9a5994be0dc82809fd1d75f6783f66cc600b0af992702540e2e50aa2",
+      "bytes": 7159,
+      "action": "move"
+    },
+    {
+      "original": "docs/round51_visual_alignment_report.md",
+      "archived": "docs/archive/2026-11-04/docs/round51_visual_alignment_report.md",
+      "sha256": "9213b2e9c78e63db1f99287b4f2700a1cf2de930ae5b89847ef1be8c46ef1c17",
+      "bytes": 7825,
+      "action": "move"
+    },
+    {
+      "original": "docs/round29_log_rms_design.md",
+      "archived": "docs/archive/2026-11-04/docs/round29_log_rms_design.md",
+      "sha256": "b4420c60b950653ac927e289c98421e106166f2709f67902a4018a635e285a29",
+      "bytes": 4471,
+      "action": "move"
+    },
+    {
+      "original": "docs/round5_operator_audit.md",
+      "archived": "docs/archive/2026-11-04/docs/round5_operator_audit.md",
+      "sha256": "b290223e76e46fe0812dd2dd4faf37ab982bf8b128576e797ef7fa276f13eb65",
+      "bytes": 15010,
+      "action": "move"
+    },
+    {
+      "original": "docs/round62_rgb_relation_report.md",
+      "archived": "docs/archive/2026-11-04/docs/round62_rgb_relation_report.md",
+      "sha256": "28bd3e404f4d441d1fd9a196517dc05881cb9b4ea9d466d75a39bcfdb5c3393d",
+      "bytes": 6215,
+      "action": "move"
+    },
+    {
+      "original": "docs/round38_rms_anchor_triage_report.md",
+      "archived": "docs/archive/2026-11-04/docs/round38_rms_anchor_triage_report.md",
+      "sha256": "07c3b282b89eb4fd4a570a861e4f69de589c2527fde692de1fa80ee1a62fed5e",
+      "bytes": 3991,
+      "action": "move"
+    },
+    {
+      "original": "docs/round15_student_t_reserve.md",
+      "archived": "docs/archive/2026-11-04/docs/round15_student_t_reserve.md",
+      "sha256": "532bd5b829e2cc26de9e280748bca6c0b62137ed7ff76ba5307c1b420ab68254",
+      "bytes": 8121,
+      "action": "move"
+    },
+    {
+      "original": "docs/round13_target_conflict_report.md",
+      "archived": "docs/archive/2026-11-04/docs/round13_target_conflict_report.md",
+      "sha256": "c7a00cefde71d459a4cd144359aa5ad586f0f86d4b2873c76dbca093d7141891",
+      "bytes": 2861,
+      "action": "move"
+    },
+    {
+      "original": "docs/round5_dataset_scope_review.md",
+      "archived": "docs/archive/2026-11-04/docs/round5_dataset_scope_review.md",
+      "sha256": "8c7690430acae7218530081049b3f3a5a759bb87404b014bbb4a87214941d9c3",
+      "bytes": 7203,
+      "action": "move"
+    },
+    {
+      "original": "docs/round3_cov_decomposition.md",
+      "archived": "docs/archive/2026-11-04/docs/round3_cov_decomposition.md",
+      "sha256": "8259c74ee0f0c8225f3b5fc4bb0535017f2e4528aeb10e803c53cf4f81d4571b",
+      "bytes": 6328,
+      "action": "move"
+    },
+    {
+      "original": "docs/round34_log_narrow_reference_design.md",
+      "archived": "docs/archive/2026-11-04/docs/round34_log_narrow_reference_design.md",
+      "sha256": "05cae9178184e5d11bf6eb25fc4f456cbc7631904f0cec3dbadaa0f7f0cfc399",
+      "bytes": 4526,
+      "action": "move"
+    },
+    {
+      "original": "docs/round20_ray_measure_math_review.md",
+      "archived": "docs/archive/2026-11-04/docs/round20_ray_measure_math_review.md",
+      "sha256": "7374c58fca77e2289af8d9ad5a7e3c97a53c0dc908ada17a6c8c248e80638d47",
+      "bytes": 4753,
+      "action": "move"
+    },
+    {
+      "original": "docs/general_ray_reference_unselected_draft.md",
+      "archived": "docs/archive/2026-11-04/docs/general_ray_reference_unselected_draft.md",
+      "sha256": "dd908f691a9ebaf228f301528b86eb19141050b80a7cb1a16117c057081e9624",
+      "bytes": 7967,
+      "action": "move"
+    },
+    {
+      "original": "docs/round26_rms_preflight_report_data/identity_6_checks.csv",
+      "archived": "docs/archive/2026-11-04/docs/round26_rms_preflight_report_data/identity_6_checks.csv",
+      "sha256": "6caaba16fa0defa046e704bf3f022b5d1549ee663541ef6e6e7c97bd905a9127",
+      "bytes": 759,
+      "action": "move"
+    },
+    {
+      "original": "docs/round26_rms_preflight_report_data/base_18_checks.csv",
+      "archived": "docs/archive/2026-11-04/docs/round26_rms_preflight_report_data/base_18_checks.csv",
+      "sha256": "bcdab95b6167ed73895dc2baeaf2c47647b8074ce681a3dbef51d3a0e890fbdc",
+      "bytes": 10806,
+      "action": "move"
+    },
+    {
+      "original": "docs/round26_rms_preflight_report_data/production_24_calls.csv",
+      "archived": "docs/archive/2026-11-04/docs/round26_rms_preflight_report_data/production_24_calls.csv",
+      "sha256": "aa7a44e17b61cd9ebccdc158a6632e65eb7155a8970fadfad247dceb4934d2cc",
+      "bytes": 2173,
+      "action": "move"
+    },
+    {
+      "original": "docs/round26_rms_preflight_report_data/reference_36_calls.csv",
+      "archived": "docs/archive/2026-11-04/docs/round26_rms_preflight_report_data/reference_36_calls.csv",
+      "sha256": "14f331540992f4c966896d722873afa07920645af2537ce9fa468599ad405f5d",
+      "bytes": 15801,
+      "action": "move"
+    },
+    {
+      "original": "docs/round36_real_initial_cost_lowerbound_report.md",
+      "archived": "docs/archive/2026-11-04/docs/round36_real_initial_cost_lowerbound_report.md",
+      "sha256": "3f3324d5c5c845884a8ca1326570fee94b45a6554ce3e574da8383cf64e8f667",
+      "bytes": 3024,
+      "action": "move"
+    },
+    {
+      "original": "docs/round41_actual_gs_report.md",
+      "archived": "docs/archive/2026-11-04/docs/round41_actual_gs_report.md",
+      "sha256": "01add281d90efc5233d8a1bd883513a472058c05271ea052e50a9e3111c899d2",
+      "bytes": 6436,
+      "action": "move"
+    },
+    {
+      "original": "docs/round15_validation_implementation_map.md",
+      "archived": "docs/archive/2026-11-04/docs/round15_validation_implementation_map.md",
+      "sha256": "dd55f5c385d28c1306c597460130264156f16001cb4cbd6d866e2a2f79da47da",
+      "bytes": 14126,
+      "action": "move"
+    },
+    {
+      "original": "docs/round39_schur_diagnostic_report.md",
+      "archived": "docs/archive/2026-11-04/docs/round39_schur_diagnostic_report.md",
+      "sha256": "80dc8af3e672f6252c006196d898789b202d9b54c4ce3b7ddca7e2671a549d33",
+      "bytes": 5346,
+      "action": "move"
+    },
+    {
+      "original": "docs/round23_ray_applicability_report_data/all_72_statuses.csv",
+      "archived": "docs/archive/2026-11-04/docs/round23_ray_applicability_report_data/all_72_statuses.csv",
+      "sha256": "9fec2668e67539dedde8a5918ecd49665b3309919f413bf643781e1d2e815e67",
+      "bytes": 31008,
+      "action": "move"
+    },
+    {
+      "original": "docs/round23_ray_applicability_report_data/scene_query_statuses.csv",
+      "archived": "docs/archive/2026-11-04/docs/round23_ray_applicability_report_data/scene_query_statuses.csv",
+      "sha256": "335a03833bebcf472188d274b9abe27cf53ff754446e4eb506c68add1eb4a4cd",
+      "bytes": 809,
+      "action": "move"
+    },
+    {
+      "original": "docs/round18_conditional_preflight_report.md",
+      "archived": "docs/archive/2026-11-04/docs/round18_conditional_preflight_report.md",
+      "sha256": "907fdbf7aa3c9b82b5ecb249e5dad710be3bf44c034936c389a7c945534d884a",
+      "bytes": 6392,
+      "action": "move"
+    },
+    {
+      "original": "docs/round36_component_round_reference_report_data/cases23.csv",
+      "archived": "docs/archive/2026-11-04/docs/round36_component_round_reference_report_data/cases23.csv",
+      "sha256": "eaad22868b8762062ba2a7d18adf4fda9b5534b832fac47ab9c8910b67ae2d4b",
+      "bytes": 10735,
+      "action": "move"
+    },
+    {
+      "original": "docs/round36_component_round_reference_report_data/completion.json",
+      "archived": "docs/archive/2026-11-04/docs/round36_component_round_reference_report_data/completion.json",
+      "sha256": "7e9cb233ea682b5082b38dc0aa904f4d4738ef6bfcd4bafe66da317ccce7a9e5",
+      "bytes": 1083,
+      "action": "move"
+    },
+    {
+      "original": "docs/round36_component_round_reference_report_data/oracles135.csv",
+      "archived": "docs/archive/2026-11-04/docs/round36_component_round_reference_report_data/oracles135.csv",
+      "sha256": "6f184b8352ca21d2c4e6c684c49bb8ce8bf5e2b6954b02271b314eb3ef94e4ef",
+      "bytes": 198087,
+      "action": "move"
+    },
+    {
+      "original": "docs/round36_component_round_reference_report_data/statistics.json",
+      "archived": "docs/archive/2026-11-04/docs/round36_component_round_reference_report_data/statistics.json",
+      "sha256": "f6884849e2b0e6543ca984efba05262c5d6129b993d97990018f8bf270af0f83",
+      "bytes": 48247,
+      "action": "move"
+    },
+    {
+      "original": "docs/round36_component_round_reference_report_data/before_execution.json",
+      "archived": "docs/archive/2026-11-04/docs/round36_component_round_reference_report_data/before_execution.json",
+      "sha256": "de676fea94b9beea90098d80777c0d023400b7e5ddc14dd175f2f05e15246a01",
+      "bytes": 505,
+      "action": "move"
+    },
+    {
+      "original": "docs/round36_component_round_reference_report_data/supplemental_completion_v2.json",
+      "archived": "docs/archive/2026-11-04/docs/round36_component_round_reference_report_data/supplemental_completion_v2.json",
+      "sha256": "cebd849e24eea1f04bb219312c032b97f6f7b9416338adb9ea44d6fb0b5424b6",
+      "bytes": 3008,
+      "action": "move"
+    },
+    {
+      "original": "docs/round36_component_round_reference_report_data/reference_calls46.csv",
+      "archived": "docs/archive/2026-11-04/docs/round36_component_round_reference_report_data/reference_calls46.csv",
+      "sha256": "cd7a22f2df68555e019c6c87bf71349830b89d59c697a62d816ec1ff6b893909",
+      "bytes": 197746,
+      "action": "move"
+    },
+    {
+      "original": "docs/round36_component_round_reference_report_data/extraction.log",
+      "archived": "docs/archive/2026-11-04/docs/round36_component_round_reference_report_data/extraction.log",
+      "sha256": "340ea7789f17d685250fa34dfae97108d40fe7aabf784895504f9ac80fa42bde",
+      "bytes": 8800,
+      "action": "move"
+    },
+    {
+      "original": "docs/round36_component_round_reference_report_data/comparisons339.csv",
+      "archived": "docs/archive/2026-11-04/docs/round36_component_round_reference_report_data/comparisons339.csv",
+      "sha256": "da7d7debce3a55171b6483c260da775fe864683d466c412d69f08a61637b30ec",
+      "bytes": 129919,
+      "action": "move"
+    },
+    {
+      "original": "docs/round36_component_round_reference_report_data/delivery_manifest_draft_v1.json",
+      "archived": "docs/archive/2026-11-04/docs/round36_component_round_reference_report_data/delivery_manifest_draft_v1.json",
+      "sha256": "42d9cf708c2c2e95fea8ac9533b7900036e12899398b5ce2e7c9640115f23186",
+      "bytes": 12088,
+      "action": "move"
+    },
+    {
+      "original": "docs/round36_component_round_reference_report_data/outer_trace_summaries.csv",
+      "archived": "docs/archive/2026-11-04/docs/round36_component_round_reference_report_data/outer_trace_summaries.csv",
+      "sha256": "a1bef1d07f4f1c3582f305f7c0579b2b8074b71d18c206693dbaf654253d6e06",
+      "bytes": 5659,
+      "action": "move"
+    },
+    {
+      "original": "docs/round36_component_round_reference_report_data/source_snapshot/grope_round36_report_extract.py",
+      "archived": "docs/archive/2026-11-04/docs/round36_component_round_reference_report_data/source_snapshot/grope_round36_report_extract.py",
+      "sha256": "d5067bd0b075d6d137e4c4161d01fe9306b846ab7d7b16091a017f7d53aba642",
+      "bytes": 12026,
+      "action": "move"
+    },
+    {
+      "original": "docs/round36_component_round_reference_report_data/draft_history/20261101_source_snapshot_scope_v2/report_v1.md",
+      "archived": "docs/archive/2026-11-04/docs/round36_component_round_reference_report_data/draft_history/20261101_source_snapshot_scope_v2/report_v1.md",
+      "sha256": "4e0e660dd6dbb8d0f561724a39c378cfe27cab240e5af506ae9d3980c9508416",
+      "bytes": 13828,
+      "action": "move"
+    },
+    {
+      "original": "docs/round36_component_round_reference_report_data/draft_history/20261101_source_snapshot_scope_v2/edit_receipt.json",
+      "archived": "docs/archive/2026-11-04/docs/round36_component_round_reference_report_data/draft_history/20261101_source_snapshot_scope_v2/edit_receipt.json",
+      "sha256": "e58b0fc6d62f54236f72827f791b1f3fb35359f3fa35021555b73a580e0436db",
+      "bytes": 604,
+      "action": "move"
+    },
+    {
+      "original": "docs/round36_component_round_reference_report_data/draft_history/20261101_source_snapshot_scope_v2/before_edit.json",
+      "archived": "docs/archive/2026-11-04/docs/round36_component_round_reference_report_data/draft_history/20261101_source_snapshot_scope_v2/before_edit.json",
+      "sha256": "9babd1371a45d17515795fa7112c00d5d216e4cf1035dc0cbd96c395ba4b2089",
+      "bytes": 600,
+      "action": "move"
+    },
+    {
+      "original": "docs/round27_reference_revision_design.md",
+      "archived": "docs/archive/2026-11-04/docs/round27_reference_revision_design.md",
+      "sha256": "d94fa81eafee5c4e21178c5138af1b6e4cf0386be11d254703112d00f8713372",
+      "bytes": 3563,
+      "action": "move"
+    },
+    {
+      "original": "docs/round24_student_preflight_report.md",
+      "archived": "docs/archive/2026-11-04/docs/round24_student_preflight_report.md",
+      "sha256": "75966e388f34f9e63d1fad877aaf4ca44006a58d994710a028e35bcac9462db2",
+      "bytes": 10708,
+      "action": "move"
+    },
+    {
+      "original": "docs/round17_validation_evidence_review.md",
+      "archived": "docs/archive/2026-11-04/docs/round17_validation_evidence_review.md",
+      "sha256": "f5d8712a665be283566df15546502567bd2d28ddfaf46cffdf73baee2a291a9d",
+      "bytes": 16679,
+      "action": "move"
+    },
+    {
+      "original": "docs/round31_log_conditional_reference_report_data/cases23.csv",
+      "archived": "docs/archive/2026-11-04/docs/round31_log_conditional_reference_report_data/cases23.csv",
+      "sha256": "f446db721b569191caa81ed2afc6c767971ee26e7c6fec2a0dd0f7077c0615d3",
+      "bytes": 7057,
+      "action": "move"
+    },
+    {
+      "original": "docs/round31_log_conditional_reference_report_data/comparisons155.csv",
+      "archived": "docs/archive/2026-11-04/docs/round31_log_conditional_reference_report_data/comparisons155.csv",
+      "sha256": "6aeb642c1bb75409b045c4c6e38d146d198b91fad50d8eff21f61a740facecdb",
+      "bytes": 49278,
+      "action": "move"
+    },
+    {
+      "original": "docs/round31_log_conditional_reference_report_data/reference_calls46.csv",
+      "archived": "docs/archive/2026-11-04/docs/round31_log_conditional_reference_report_data/reference_calls46.csv",
+      "sha256": "05cb81c6a634ed3e136d63e16e4dc16ac0bf982d11233e196e469222444707f3",
+      "bytes": 139493,
+      "action": "move"
+    },
+    {
+      "original": "docs/round15_regional_report.md",
+      "archived": "docs/archive/2026-11-04/docs/round15_regional_report.md",
+      "sha256": "9a34f95f26f15a34407ae2387820a5e2c90dcc4cc6928154bb54d5cc3c3f4bb1",
+      "bytes": 9388,
+      "action": "move"
+    },
+    {
+      "original": "docs/gaussian_projection_frame_candidate.md",
+      "archived": "docs/archive/2026-11-04/docs/gaussian_projection_frame_candidate.md",
+      "sha256": "4f80d555b87361176fc951dcd99f2396070d501784e71309ac5b43864c6ebd6d",
+      "bytes": 12517,
+      "action": "move"
+    },
+    {
+      "original": "docs/round17_global_covariance_scale_review.md",
+      "archived": "docs/archive/2026-11-04/docs/round17_global_covariance_scale_review.md",
+      "sha256": "bb7cc9ecf51c18d42d9344a35a62f9d035cbeeb42649147cee256a454c2599d5",
+      "bytes": 4701,
+      "action": "move"
+    },
+    {
+      "original": "docs/round17_regional_audit_path_repair.md",
+      "archived": "docs/archive/2026-11-04/docs/round17_regional_audit_path_repair.md",
+      "sha256": "8749d953861c231eedfad0b6b35bc48639ac01f30fb032708d0346fc253655cf",
+      "bytes": 3738,
+      "action": "move"
+    },
+    {
+      "original": "docs/round32_log_conditional_reference_report_data/cases23.csv",
+      "archived": "docs/archive/2026-11-04/docs/round32_log_conditional_reference_report_data/cases23.csv",
+      "sha256": "0f45fcd7981068642ea91e41c51dc43083ec5b24de3629d6f9c8f95fb747ba22",
+      "bytes": 11604,
+      "action": "move"
+    },
+    {
+      "original": "docs/round32_log_conditional_reference_report_data/comparisons155.csv",
+      "archived": "docs/archive/2026-11-04/docs/round32_log_conditional_reference_report_data/comparisons155.csv",
+      "sha256": "cbc98ec73fb0ce0d5e888f96d244d2e1f582a448b442903c1346e9bebc14eef0",
+      "bytes": 50440,
+      "action": "move"
+    },
+    {
+      "original": "docs/round32_log_conditional_reference_report_data/reference_calls46.csv",
+      "archived": "docs/archive/2026-11-04/docs/round32_log_conditional_reference_report_data/reference_calls46.csv",
+      "sha256": "b78e735fc68d013ef6d1ed3a47c1ed4d58c060bb7ba39a697263f22c098590eb",
+      "bytes": 155249,
+      "action": "move"
+    },
+    {
+      "original": "docs/round64_depth_field_report.md",
+      "archived": "docs/archive/2026-11-04/docs/round64_depth_field_report.md",
+      "sha256": "470c8a62efb24f1f49c89cf7f351967068ccf2a05e349b13234c47417394c2b0",
+      "bytes": 6365,
+      "action": "move"
+    },
+    {
+      "original": "docs/round10_selection_numerical_fix.md",
+      "archived": "docs/archive/2026-11-04/docs/round10_selection_numerical_fix.md",
+      "sha256": "acadf85362d2c2d71272cd2d8c1af682789983c1543de4a76eb22b691e1d7750",
+      "bytes": 2913,
+      "action": "move"
+    },
+    {
+      "original": "docs/round40_gpu_research_report.md",
+      "archived": "docs/archive/2026-11-04/docs/round40_gpu_research_report.md",
+      "sha256": "718fc52900fb213c37b4b49bc867f9189bf01683f6a3386968f530d2e280fb73",
+      "bytes": 7596,
+      "action": "move"
+    },
+    {
+      "original": "docs/round36_real_initial_cost_lowerbound_design.md",
+      "archived": "docs/archive/2026-11-04/docs/round36_real_initial_cost_lowerbound_design.md",
+      "sha256": "5f1cb637b08cc6adc174b2fb8764c35bfba59c1d45cecfc708f0e005ff8e435d",
+      "bytes": 3239,
+      "action": "move"
+    },
+    {
+      "original": "docs/round59_relation_attribution_report.md",
+      "archived": "docs/archive/2026-11-04/docs/round59_relation_attribution_report.md",
+      "sha256": "1d7248c447114906cb16b8d907f7ca5d78b8af42db8bf5bbd25fc9fbe541798d",
+      "bytes": 9013,
+      "action": "move"
+    },
+    {
+      "original": "docs/round21_matched_decomposition_design_review.md",
+      "archived": "docs/archive/2026-11-04/docs/round21_matched_decomposition_design_review.md",
+      "sha256": "53087c977329677dc50851b00199f52626bae611a67d858db5467f930ac8e029",
+      "bytes": 7322,
+      "action": "move"
+    },
+    {
+      "original": "docs/round17_value_interface_preflight_protocol.md",
+      "archived": "docs/archive/2026-11-04/docs/round17_value_interface_preflight_protocol.md",
+      "sha256": "1a67431835c22a164fae713c7f4dd03325ebaf0c721518ec4cfeaf2532eadd47",
+      "bytes": 6319,
+      "action": "move"
+    },
+    {
+      "original": "docs/round33_log_real_reference_report_data/cases72.csv",
+      "archived": "docs/archive/2026-11-04/docs/round33_log_real_reference_report_data/cases72.csv",
+      "sha256": "d84b5f79a8b8280426178e55b205a150cb1e7818ff5184db76b0962c234bb968",
+      "bytes": 38773,
+      "action": "move"
+    },
+    {
+      "original": "docs/round33_log_real_reference_report_data/reference_calls144.csv",
+      "archived": "docs/archive/2026-11-04/docs/round33_log_real_reference_report_data/reference_calls144.csv",
+      "sha256": "2da7078d8784d86218e73192748137771158f5ad2facbf6018b755c2ddd2838f",
+      "bytes": 186749,
+      "action": "move"
+    },
+    {
+      "original": "docs/round33_log_real_reference_report_data/comparisons216.csv",
+      "archived": "docs/archive/2026-11-04/docs/round33_log_real_reference_report_data/comparisons216.csv",
+      "sha256": "35921c2e7c96f48729d2384f822e02e7f5839ea5fc6477a666c8ec1a94598198",
+      "bytes": 46114,
+      "action": "move"
+    },
+    {
+      "original": "docs/round33_log_real_reference_report_data/completion.json",
+      "archived": "docs/archive/2026-11-04/docs/round33_log_real_reference_report_data/completion.json",
+      "sha256": "4adba4acc22ccd829ca9d7cbb6c22ba1bcdde565675b7fa61d4ec43e848471b4",
+      "bytes": 811,
+      "action": "move"
+    },
+    {
+      "original": "docs/round33_log_real_reference_report_data/statistics.json",
+      "archived": "docs/archive/2026-11-04/docs/round33_log_real_reference_report_data/statistics.json",
+      "sha256": "3389424fd5f93cee8594acdaa4c153f96d0c65e3389d1184f7cca6b76d71b22c",
+      "bytes": 13133,
+      "action": "move"
+    },
+    {
+      "original": "docs/round33_log_real_reference_report_data/before_execution.json",
+      "archived": "docs/archive/2026-11-04/docs/round33_log_real_reference_report_data/before_execution.json",
+      "sha256": "1a554cf06ea45a56199a580a678eca7c3272572fbc8eb9c46db2b2440c91f569",
+      "bytes": 345,
+      "action": "move"
+    },
+    {
+      "original": "docs/round33_log_real_reference_report_data/source_snapshot/grope_round33_report_extract.py",
+      "archived": "docs/archive/2026-11-04/docs/round33_log_real_reference_report_data/source_snapshot/grope_round33_report_extract.py",
+      "sha256": "fef0a125f72e0b973240e50268d7a2b9fac0e5f7cd53be6fcb5f7de36d2ba0e1",
+      "bytes": 10728,
+      "action": "move"
+    },
+    {
+      "original": "docs/round33_log_real_reference_report.md",
+      "archived": "docs/archive/2026-11-04/docs/round33_log_real_reference_report.md",
+      "sha256": "96452cf6f08acb52974571ee89902236c9c528c88ab5a81fcc053b2ca64c1640",
+      "bytes": 12245,
+      "action": "move"
+    },
+    {
+      "original": "docs/round17_prior_gpstoken_npnet_20261031.md",
+      "archived": "docs/archive/2026-11-04/docs/round17_prior_gpstoken_npnet_20261031.md",
+      "sha256": "f40b5af01931c8b9d5d4b484be2a691369f6bc4e02ecd18527d0beb45d7ec672",
+      "bytes": 2954,
+      "action": "move"
+    },
+    {
+      "original": "docs/round21_matched_decomposition_report.md",
+      "archived": "docs/archive/2026-11-04/docs/round21_matched_decomposition_report.md",
+      "sha256": "edfe12a9236b28169311a404efed6679e608753662cd2b10e7b34096e1aed5f2",
+      "bytes": 23338,
+      "action": "move"
+    },
+    {
+      "original": "docs/round17_value_roles_preparation_draft.json",
+      "archived": "docs/archive/2026-11-04/docs/round17_value_roles_preparation_draft.json",
+      "sha256": "b50801b3fbc3135fc9b74577b0299b4bcf64c97ffebd8c9a521f74fc785b1232",
+      "bytes": 11181,
+      "action": "move"
+    },
+    {
+      "original": "docs/round10_theory_review.md",
+      "archived": "docs/archive/2026-11-04/docs/round10_theory_review.md",
+      "sha256": "30969551f6e62c9146803298045757f88284f8f158373cc02ebb5da65b14327e",
+      "bytes": 11976,
+      "action": "move"
+    },
+    {
+      "original": "docs/round30_log_rms_applicability_report.md",
+      "archived": "docs/archive/2026-11-04/docs/round30_log_rms_applicability_report.md",
+      "sha256": "db3dbc36f3256872a312cc83bb60a14f8bfdc2aa933f6602591a492f22cd38f9",
+      "bytes": 12008,
+      "action": "move"
+    },
+    {
+      "original": "docs/round10_protocol_review.md",
+      "archived": "docs/archive/2026-11-04/docs/round10_protocol_review.md",
+      "sha256": "fca3b488ca24819e4d66bbf2665c14b23c22a71eb50bfdeaae8aa297722d196d",
+      "bytes": 9902,
+      "action": "move"
+    },
+    {
+      "original": "docs/round32_log_conditional_reference_report.md",
+      "archived": "docs/archive/2026-11-04/docs/round32_log_conditional_reference_report.md",
+      "sha256": "066f7bc8ec9990c42292f1c534a1bb0e2bb6b7d0cac9be6b836028a283ae3080",
+      "bytes": 13438,
+      "action": "move"
+    },
+    {
+      "original": "docs/round14_quartic_closure_review.md",
+      "archived": "docs/archive/2026-11-04/docs/round14_quartic_closure_review.md",
+      "sha256": "4ea0d0bbe489619c12d68796f3558820441c0a9eecbcc9a40a30d46ad30a82fa",
+      "bytes": 11272,
+      "action": "move"
+    },
+    {
+      "original": "docs/round32_breakpoint_coalescing_review.md",
+      "archived": "docs/archive/2026-11-04/docs/round32_breakpoint_coalescing_review.md",
+      "sha256": "2918a7f864dcf80ac58047faf71bf7cf78df5d7247b8bff0db2581cad63a6b06",
+      "bytes": 5124,
+      "action": "move"
+    },
+    {
+      "original": "docs/round38_rms_anchor_triage_design.md",
+      "archived": "docs/archive/2026-11-04/docs/round38_rms_anchor_triage_design.md",
+      "sha256": "adfd5ba02e80404e252e51720ce0040351fcdc5b3b951cec61d6e7f75b9f57bf",
+      "bytes": 3237,
+      "action": "move"
+    },
+    {
+      "original": "docs/round37_component_round_real_reference_report_data/cases72.csv",
+      "archived": "docs/archive/2026-11-04/docs/round37_component_round_real_reference_report_data/cases72.csv",
+      "sha256": "04ed18b22f3b9dd43b073551e4396faf5febf63bb38679ed510e2509eaae33e8",
+      "bytes": 34501,
+      "action": "move"
+    },
+    {
+      "original": "docs/round37_component_round_real_reference_report_data/extraction_invocation_attempt2.json",
+      "archived": "docs/archive/2026-11-04/docs/round37_component_round_real_reference_report_data/extraction_invocation_attempt2.json",
+      "sha256": "74e22a47d6251fd07d24d7822da5015efad654bfb221339b470a01d8fb15ec3f",
+      "bytes": 6611,
+      "action": "move"
+    },
+    {
+      "original": "docs/round37_component_round_real_reference_report_data/reference_calls144.csv",
+      "archived": "docs/archive/2026-11-04/docs/round37_component_round_real_reference_report_data/reference_calls144.csv",
+      "sha256": "ce45389750e3f7996830b95c6c28814e1b1c7885dd5a147541d406cb2656c645",
+      "bytes": 394958,
+      "action": "move"
+    },
+    {
+      "original": "docs/round37_component_round_real_reference_report_data/completion.json",
+      "archived": "docs/archive/2026-11-04/docs/round37_component_round_real_reference_report_data/completion.json",
+      "sha256": "c1970f1fdcf76f29c07b832993906655f67c6908b81788d5e6c5a7f8f259f35a",
+      "bytes": 1190,
+      "action": "move"
+    },
+    {
+      "original": "docs/round37_component_round_real_reference_report_data/comparisons296.csv",
+      "archived": "docs/archive/2026-11-04/docs/round37_component_round_real_reference_report_data/comparisons296.csv",
+      "sha256": "bc773c6782333ccef8e419c8596cbb19b6bf377ac127a53a82a334ae7a278dfa",
+      "bytes": 98382,
+      "action": "move"
+    },
+    {
+      "original": "docs/round37_component_round_real_reference_report_data/extraction_invocation.json",
+      "archived": "docs/archive/2026-11-04/docs/round37_component_round_real_reference_report_data/extraction_invocation.json",
+      "sha256": "1d33456196395aa5788d324247d81d0a47fe6995fe0fe4f48db06b4c5ed9f6ec",
+      "bytes": 6584,
+      "action": "move"
+    },
+    {
+      "original": "docs/round37_component_round_real_reference_report_data/extraction_execution.json",
+      "archived": "docs/archive/2026-11-04/docs/round37_component_round_real_reference_report_data/extraction_execution.json",
+      "sha256": "6b73d148ff03663268907afde9e1a5f068a012c8b05c795f80066a3552f0cb7c",
+      "bytes": 6725,
+      "action": "move"
+    },
+    {
+      "original": "docs/round37_component_round_real_reference_report_data/verify_report_delivery.py",
+      "archived": "docs/archive/2026-11-04/docs/round37_component_round_real_reference_report_data/verify_report_delivery.py",
+      "sha256": "d6ab4b58e4d64edd2ee3a2ccb73ed8b12acb4099763bf149d0c65d9702179202",
+      "bytes": 4097,
+      "action": "move"
+    },
+    {
+      "original": "docs/round37_component_round_real_reference_report_data/statistics.json",
+      "archived": "docs/archive/2026-11-04/docs/round37_component_round_real_reference_report_data/statistics.json",
+      "sha256": "ea9efe46da73ad2774623f6d0c9e54a5de622b9f578e345b4060ac3b7ca90b69",
+      "bytes": 55916,
+      "action": "move"
+    },
+    {
+      "original": "docs/round37_component_round_real_reference_report_data/oracles40.csv",
+      "archived": "docs/archive/2026-11-04/docs/round37_component_round_real_reference_report_data/oracles40.csv",
+      "sha256": "aa16ce0b1fcc98de36ac847764e287bcb6f65016de19d2f649dcf7da603e32c1",
+      "bytes": 90856,
+      "action": "move"
+    },
+    {
+      "original": "docs/round37_component_round_real_reference_report_data/extraction.log",
+      "archived": "docs/archive/2026-11-04/docs/round37_component_round_real_reference_report_data/extraction.log",
+      "sha256": "01ba4bbacfc1f7666b8714c6ee33a9d24c1eab86e05fdefd8f1a76f51b59ba71",
+      "bytes": 354,
+      "action": "move"
+    },
+    {
+      "original": "docs/round37_component_round_real_reference_report_data/extraction_attempt2.log",
+      "archived": "docs/archive/2026-11-04/docs/round37_component_round_real_reference_report_data/extraction_attempt2.log",
+      "sha256": "36a95dcfd6d8eff1b59ef5e1fe00fa1d62c0ae59309a46423af793b6092ee0b4",
+      "bytes": 10269,
+      "action": "move"
+    },
+    {
+      "original": "docs/round37_component_round_real_reference_report_data/execution_receipt.json",
+      "archived": "docs/archive/2026-11-04/docs/round37_component_round_real_reference_report_data/execution_receipt.json",
+      "sha256": "937e517cf7f7573fd349d6d0f8b03c6c59c43fdf2eb3790c8a64df7becacb8c7",
+      "bytes": 6667,
+      "action": "move"
+    },
+    {
+      "original": "docs/round37_component_round_real_reference_report_data/outer_trace_summaries.csv",
+      "archived": "docs/archive/2026-11-04/docs/round37_component_round_real_reference_report_data/outer_trace_summaries.csv",
+      "sha256": "2fc3afaf765d16baa38d7ffc56040f69f9a5cf81d9b474f69b8de4524232c022",
+      "bytes": 14554,
+      "action": "move"
+    },
+    {
+      "original": "docs/round37_component_round_real_reference_report_data/matched_historical_costs40.csv",
+      "archived": "docs/archive/2026-11-04/docs/round37_component_round_real_reference_report_data/matched_historical_costs40.csv",
+      "sha256": "43c7e9f8d19e06928d2cd78a16ecf6055df9fa773b50cbc1a33a9586baad1dba",
+      "bytes": 5937,
+      "action": "move"
+    },
+    {
+      "original": "docs/round37_component_round_real_reference_report_data/extraction_execution_attempt2.json",
+      "archived": "docs/archive/2026-11-04/docs/round37_component_round_real_reference_report_data/extraction_execution_attempt2.json",
+      "sha256": "35b3291e0abe3619c2c82f5116f0cdb0a31e5679a3daadaf45b97bf8368fb2c0",
+      "bytes": 6752,
+      "action": "move"
+    },
+    {
+      "original": "docs/round37_component_round_real_reference_report_data/source_snapshot_attempt2/grope_round37_report_extract.py",
+      "archived": "docs/archive/2026-11-04/docs/round37_component_round_real_reference_report_data/source_snapshot_attempt2/grope_round37_report_extract.py",
+      "sha256": "9d56d664520d58561b60d7b1f52ae762147e51790845bec06fa766249c29bb6d",
+      "bytes": 14855,
+      "action": "move"
+    },
+    {
+      "original": "docs/round37_component_round_real_reference_report_data/source_snapshot_attempt2/grope_round37_report_execute_attempt2.py",
+      "archived": "docs/archive/2026-11-04/docs/round37_component_round_real_reference_report_data/source_snapshot_attempt2/grope_round37_report_execute_attempt2.py",
+      "sha256": "f4f7441874c1e6ca3c683279855d460919241f3f1aa2ff2389e0f81d7c516ab8",
+      "bytes": 1970,
+      "action": "move"
+    },
+    {
+      "original": "docs/round37_component_round_real_reference_report_data/source_snapshot/grope_round37_report_execute.py",
+      "archived": "docs/archive/2026-11-04/docs/round37_component_round_real_reference_report_data/source_snapshot/grope_round37_report_execute.py",
+      "sha256": "69c68df294a1a80afef930e9e68097fc50124a70dc4ca882724a0d968ca99f79",
+      "bytes": 1908,
+      "action": "move"
+    },
+    {
+      "original": "docs/round37_component_round_real_reference_report_data/source_snapshot/grope_round37_report_extract.py",
+      "archived": "docs/archive/2026-11-04/docs/round37_component_round_real_reference_report_data/source_snapshot/grope_round37_report_extract.py",
+      "sha256": "1bbbd54ea66637f79ba7ed0f87b5539f0be01f7839daab4762369904cb68bbdb",
+      "bytes": 14763,
+      "action": "move"
+    },
+    {
+      "original": "docs/round13_mixture_mechanism_review.md",
+      "archived": "docs/archive/2026-11-04/docs/round13_mixture_mechanism_review.md",
+      "sha256": "6698c0891180f3ec4a71fdcf652442e3a56cdbc524e6528b63ab295080b90846",
+      "bytes": 4585,
+      "action": "move"
+    },
+    {
+      "original": "docs/round8_protocol_review.md",
+      "archived": "docs/archive/2026-11-04/docs/round8_protocol_review.md",
+      "sha256": "ec661e5b2c869886f9c194074478c29ce80961c76976abe782cbde1dde6c9918",
+      "bytes": 6779,
+      "action": "move"
+    },
+    {
+      "original": "docs/rms_content_spread_options_unselected.md",
+      "archived": "docs/archive/2026-11-04/docs/rms_content_spread_options_unselected.md",
+      "sha256": "5c19cb93baa259b628515f7f329ce5c7fe0dac457389fef62a938d821ecb762f",
+      "bytes": 4656,
+      "action": "move"
+    },
+    {
+      "original": "docs/round28_rms_applicability_design.md",
+      "archived": "docs/archive/2026-11-04/docs/round28_rms_applicability_design.md",
+      "sha256": "cecb1b372ae832ad775c8c5ae3a75be0c47117d6b1e57e3f2e30a762481f0f06",
+      "bytes": 3643,
+      "action": "move"
+    },
+    {
+      "original": "docs/round37_narrow_order_bound_analysis.md",
+      "archived": "docs/archive/2026-11-04/docs/round37_narrow_order_bound_analysis.md",
+      "sha256": "8ea8188dcc3264f5c8e62ef3bbbaf71c6f03744671a33e9c3e89646470dd42f7",
+      "bytes": 7726,
+      "action": "move"
+    },
+    {
+      "original": "docs/round23_ray_applicability_report.md",
+      "archived": "docs/archive/2026-11-04/docs/round23_ray_applicability_report.md",
+      "sha256": "4f8b420685185a6145af65d1c5eaebfd314346e40ff72fe79e45c7e94d5c6175",
+      "bytes": 10947,
+      "action": "move"
+    },
+    {
+      "original": "docs/round55_budget_diagnostic_report.md",
+      "archived": "docs/archive/2026-11-04/docs/round55_budget_diagnostic_report.md",
+      "sha256": "2f4a06244039c738cfff044a4056fb0557ffa2d398eb0a2a1d6f67e6818c1765",
+      "bytes": 8985,
+      "action": "move"
+    },
+    {
+      "original": "docs/round63_rgb_diagnostic_report.md",
+      "archived": "docs/archive/2026-11-04/docs/round63_rgb_diagnostic_report.md",
+      "sha256": "2100a4a3d8ea4f2689a6dd56d4863b72fdca839d22616562673f39969c05e7d2",
+      "bytes": 5420,
+      "action": "move"
+    },
+    {
+      "original": "docs/round15_validation_draft_preparation_note.md",
+      "archived": "docs/archive/2026-11-04/docs/round15_validation_draft_preparation_note.md",
+      "sha256": "3b2e290f27705d6077608047b29fc6f95df132c1eb3cea489c6baf26bbf577af",
+      "bytes": 1001,
+      "action": "move"
+    },
+    {
+      "original": "docs/round4_design_review.md",
+      "archived": "docs/archive/2026-11-04/docs/round4_design_review.md",
+      "sha256": "d8ccf6465dd73c3e80ecceb5f70eda51941f7bef97df45841d98807d839c7052",
+      "bytes": 13978,
+      "action": "move"
+    },
+    {
+      "original": "docs/round27_rms_preflight_report.md",
+      "archived": "docs/archive/2026-11-04/docs/round27_rms_preflight_report.md",
+      "sha256": "f0ac90ed664a464ae6708c711f30f1776e66db5cf15bfa06653b88f10cd677f1",
+      "bytes": 11265,
+      "action": "move"
+    },
+    {
+      "original": "docs/round7_gs_scope.md",
+      "archived": "docs/archive/2026-11-04/docs/round7_gs_scope.md",
+      "sha256": "bee2f09e2476c93ddce206976f9dce35e4482d362b534f07fc830d694961e7fa",
+      "bytes": 11904,
+      "action": "move"
+    },
+    {
+      "original": "docs/round4_final_audit.md",
+      "archived": "docs/archive/2026-11-04/docs/round4_final_audit.md",
+      "sha256": "1186e5a4e57adf2b1bc296e51c92bf4314c195b96dfd5a011fae38f575b428f6",
+      "bytes": 2350,
+      "action": "move"
+    },
+    {
+      "original": "docs/round15_quadratic_quartic_reserve.md",
+      "archived": "docs/archive/2026-11-04/docs/round15_quadratic_quartic_reserve.md",
+      "sha256": "89d4b53e007a692a2b84fef22a3909dbdababcd1d6e8611e9471161c2971756f",
+      "bytes": 7944,
+      "action": "move"
+    },
+    {
+      "original": "docs/normalized_pe_review.md",
+      "archived": "docs/archive/2026-11-04/docs/normalized_pe_review.md",
+      "sha256": "6b46d6a398a439e6ba41acfddd003001155747d8c51c35a58cf1df8585eebc1c",
+      "bytes": 7801,
+      "action": "move"
+    },
+    {
+      "original": "docs/round64_control_scope_note.md",
+      "archived": "docs/archive/2026-11-04/docs/round64_control_scope_note.md",
+      "sha256": "42e14847725aa2bb444bf07fd35588615ef5fd43472785287f1f4687c3708e47",
+      "bytes": 2493,
+      "action": "move"
+    },
+    {
+      "original": "docs/round46_native3d_report.md",
+      "archived": "docs/archive/2026-11-04/docs/round46_native3d_report.md",
+      "sha256": "edf1a84f0d07e3403ec155cc8fa36e350372eafa90207eb915cf87f28fd89102",
+      "bytes": 7646,
+      "action": "move"
+    },
+    {
+      "original": "docs/round50_local_frame_report.md",
+      "archived": "docs/archive/2026-11-04/docs/round50_local_frame_report.md",
+      "sha256": "c5a80098551a736ed45a956d918bcf8f3b5aa969b5f38418e9a07278ca32f4e2",
+      "bytes": 7977,
+      "action": "move"
+    },
+    {
+      "original": "docs/round17_size_temperature_report.md",
+      "archived": "docs/archive/2026-11-04/docs/round17_size_temperature_report.md",
+      "sha256": "0fe0f76b407b1f6ea8f40f0d741ec083bfa5151d4d22e581dd96e36e0bea61a8",
+      "bytes": 6486,
+      "action": "move"
+    },
+    {
+      "original": "docs/round11_target_conflict_report.md",
+      "archived": "docs/archive/2026-11-04/docs/round11_target_conflict_report.md",
+      "sha256": "b6d4311f3ac64de586704f5f30df6f0da39199086093f5f4a2f5d2ff0c2b3ab0",
+      "bytes": 3717,
+      "action": "move"
+    },
+    {
+      "original": "docs/round56_native_joint_report.md",
+      "archived": "docs/archive/2026-11-04/docs/round56_native_joint_report.md",
+      "sha256": "a5ba9288afbcde91250015a2eab63891d750306ecfd6d5b80fe1be6721cc9a2d",
+      "bytes": 9062,
+      "action": "move"
+    },
+    {
+      "original": "docs/rms_projective_anchor_constructions_unselected.md",
+      "archived": "docs/archive/2026-11-04/docs/rms_projective_anchor_constructions_unselected.md",
+      "sha256": "517d1ba29d90e9bc100170a858b29790588645f2a681e8c7ba6b26a98b2fdb3f",
+      "bytes": 2856,
+      "action": "move"
+    },
+    {
+      "original": "docs/round19_center_semantics_preparation_draft.md",
+      "archived": "docs/archive/2026-11-04/docs/round19_center_semantics_preparation_draft.md",
+      "sha256": "6f019a8c91bc99e845d3c52694890b05395b580b289a93237e8f421f4a84ffc9",
+      "bytes": 6325,
+      "action": "move"
+    },
+    {
+      "original": "docs/round11_validation_inventory.md",
+      "archived": "docs/archive/2026-11-04/docs/round11_validation_inventory.md",
+      "sha256": "9edd9a2d9eb94c576176b5e6a8105d5eb7a81a8ec2b178065680fa12c921982f",
+      "bytes": 17498,
+      "action": "move"
+    },
+    {
+      "original": "docs/student_t4_route_comparison_unselected_draft.md",
+      "archived": "docs/archive/2026-11-04/docs/student_t4_route_comparison_unselected_draft.md",
+      "sha256": "a6799fae6e1756e309f6c516de6e203123970786789ddd1b5cf7465124fb6207",
+      "bytes": 6828,
+      "action": "move"
+    },
+    {
+      "original": "docs/round35_log_real_reference_report.md",
+      "archived": "docs/archive/2026-11-04/docs/round35_log_real_reference_report.md",
+      "sha256": "1c850bd9535b9e819b64b244678d86a61d49f1c7934e69480173c4a067df49e2",
+      "bytes": 15319,
+      "action": "move"
+    },
+    {
+      "original": "docs/round52_camera_frame_report.md",
+      "archived": "docs/archive/2026-11-04/docs/round52_camera_frame_report.md",
+      "sha256": "7148624b45acb6165d4e976a52329de8d1c312b7be9b76bea23ea2103c8ad835",
+      "bytes": 7171,
+      "action": "move"
+    },
+    {
+      "original": "docs/round14_content_temperature_review.md",
+      "archived": "docs/archive/2026-11-04/docs/round14_content_temperature_review.md",
+      "sha256": "543c3eccd23c9f54533a9d2ed8a0e2617f454b8c99f918cb32429bd5906cf3f3",
+      "bytes": 3619,
+      "action": "move"
+    },
+    {
+      "original": "docs/round18_theoretical_options_draft.md",
+      "archived": "docs/archive/2026-11-04/docs/round18_theoretical_options_draft.md",
+      "sha256": "2933d953699e8babadcc769b4ac20b6e443323094480b0e1222a9ec6bf774cce",
+      "bytes": 12703,
+      "action": "move"
+    },
+    {
+      "original": "docs/round27_reference_panel_derivation.md",
+      "archived": "docs/archive/2026-11-04/docs/round27_reference_panel_derivation.md",
+      "sha256": "91f346edcd47405801e9929cc637de5d210e038d69753cd7540b2cfdec2f6cd0",
+      "bytes": 4965,
+      "action": "move"
+    },
+    {
+      "original": "docs/round38_saved_output_diagnostic_report.md",
+      "archived": "docs/archive/2026-11-04/docs/round38_saved_output_diagnostic_report.md",
+      "sha256": "070726bc643147c8f81de7d95bf8a24cc30c3c348546632f38d9ba33e7be4821",
+      "bytes": 4369,
+      "action": "move"
+    },
+    {
+      "original": "docs/round38_same_3d_control_blueprint.md",
+      "archived": "docs/archive/2026-11-04/docs/round38_same_3d_control_blueprint.md",
+      "sha256": "4704664e10aff9761ac2114b9e687ddcbf6097f1186f06e857007dbb628e46a3",
+      "bytes": 7263,
+      "action": "move"
+    },
+    {
+      "original": "docs/round6_protocol_review.md",
+      "archived": "docs/archive/2026-11-04/docs/round6_protocol_review.md",
+      "sha256": "3237d3fbf57571937b0a74c996cdcf33a2a10aedba9dd75477be2db17ba0d305",
+      "bytes": 17348,
+      "action": "move"
+    },
+    {
+      "original": "docs/round20_value_information_preparation_draft.md",
+      "archived": "docs/archive/2026-11-04/docs/round20_value_information_preparation_draft.md",
+      "sha256": "019a42b44939d9587f3ef22ddf1305df84df023e1f547bb9d8e3f96e95951bf0",
+      "bytes": 7673,
+      "action": "move"
+    },
+    {
+      "original": "docs/round37_component_round_real_reference_report.md",
+      "archived": "docs/archive/2026-11-04/docs/round37_component_round_real_reference_report.md",
+      "sha256": "3f32ad4513f359aeca2e115c160a53bd1f2a5b98fe5f5e3682a373b7d8f78640",
+      "bytes": 14891,
+      "action": "move"
+    },
+    {
+      "original": "docs/ray_pushforward_pe_adversarial_review_draft.md",
+      "archived": "docs/archive/2026-11-04/docs/ray_pushforward_pe_adversarial_review_draft.md",
+      "sha256": "985d00cf1a55e716b3c99f05659b8061e948e8f74612707102b5a03b3b180b51",
+      "bytes": 10116,
+      "action": "move"
+    },
+    {
+      "original": "docs/round69_compact_relation_plan.md",
+      "archived": "docs/archive/2026-11-04/docs/round69_compact_relation_plan.md",
+      "sha256": "a34f0611da54b6d07b2d3203a40e777bfe5919158b4bfd840c148725ad5e8b55",
+      "bytes": 4263,
+      "action": "move"
+    },
+    {
+      "original": "docs/round57_attribution_note.md",
+      "archived": "docs/archive/2026-11-04/docs/round57_attribution_note.md",
+      "sha256": "0ec64f86cc6d4c834f59314c654528660fffbbed1b0768d53dc6639a2198d22b",
+      "bytes": 5765,
+      "action": "move"
+    },
+    {
+      "original": "README.md",
+      "archived": "docs/archive/2026-11-04/README_before_reorganization.md",
+      "sha256": "af24bbbafba2e72d439ff9bbf752ec4aa734787ddecb87c0a955230a822a98e5",
+      "bytes": 37872,
+      "action": "snapshot_before_rewrite"
+    },
+    {
+      "original": "docs/research_current.md",
+      "archived": "docs/archive/2026-11-04/docs/research_current_before_reorganization.md",
+      "sha256": "3e94063578dd8b56b429f73c37d509f8a9fe2bb7f416c8828204663931fe73fe",
+      "bytes": 223222,
+      "action": "snapshot_before_rewrite"
+    }
+  ],
+  "runtime_preserved": [
+    "AGENTS.md",
+    "docs/round70_nvs_plan.md",
+    "docs/round70_geometry_diagnostic_plan.md"
+  ],
+  "protected_sha256": {
+    "AGENTS.md": "a37b93d504a40dc8cfd3f852259265788c974d7f2e0fb3c7172202b92f0603ee",
+    "docs/round70_nvs_plan.md": "bc95a26d1c8cacac7e57c628328fe20df1824c6b9b141a7f363a011226e64c0e",
+    "docs/round70_geometry_diagnostic_plan.md": "5439055e6f85762dd444734799309d6673c1a7079fcf9071c66ed71f3615cefb"
+  },
+  "results_and_models_moved": false,
+  "historical_absolute_paths": "Use original-to-archived mapping; old frozen programs may require temporary restoration of document paths. Do not alter historical lock hashes."
+}

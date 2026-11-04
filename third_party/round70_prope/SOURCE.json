@@ -1,0 +1,37 @@
+{
+  "repository": "liruilong940607/prope",
+  "commit": "48b6dd26f1c7e906765379e4a0ef60cc50ddff7c",
+  "files": [
+    {
+      "path": "nvs/lvsm.py",
+      "git_blob": "0b74c5f543895bf9264a9165b3937d5a90fff6f9",
+      "url": "https://github.com/liruilong940607/prope/blob/nvs/nvs/lvsm.py"
+    },
+    {
+      "path": "prope/utils/functional.py",
+      "git_blob": "fb3f08060c839542697173b8005f479f7ac38684",
+      "url": "https://github.com/liruilong940607/prope/blob/nvs/prope/utils/functional.py"
+    },
+    {
+      "path": "prope/utils/config.py",
+      "git_blob": "fb7a823d0bb1db651cfd26e6a6ecc2c8b3b4adcf",
+      "url": "https://github.com/liruilong940607/prope/blob/nvs/prope/utils/config.py"
+    },
+    {
+      "path": "prope/utils/mha.py",
+      "git_blob": "f7aa898d4d1427bda935defc4c28ad9c375c6d1b",
+      "url": "https://github.com/liruilong940607/prope/blob/nvs/prope/utils/mha.py"
+    },
+    {
+      "path": "prope/utils/transformer.py",
+      "git_blob": "9e33b0ad1766bf93fcb1639da63753f6ade5c165",
+      "url": "https://github.com/liruilong940607/prope/blob/nvs/prope/utils/transformer.py"
+    },
+    {
+      "path": "prope/torch.py",
+      "git_blob": "a5c81e1f039c16965eb484e914381eb0b3eaa5b0",
+      "url": "https://github.com/liruilong940607/prope/blob/nvs/prope/torch.py"
+    }
+  ],
+  "license": "MIT notice included in prope/torch.py; upstream nvs branch has no separate LICENSE file."
+}
