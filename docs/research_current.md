@@ -8,9 +8,11 @@
 
 最可靠的正面证据来自 R68–R69：给所有方法相同的完整几何信息，并固定稀疏前后的查询与标签后，候选仍优于距离 MLP、直接几何 MLP 和法向/尺度对照，区域匹配与中心定位共同改善。它支持“**如何组织已有几何信息会影响有限预算下的学习效果**”。
 
-限制同样明确：此前 RGB 匹配和真实优化 3DGS 分类没有建立相对强 MLP 的稳定优势；直接跨域迁移也失败过。R69 的五维候选本身尚未获得原生 3DGS 分类或未使用数据的确认，不能继承其他版本的成功，更不能消除它们的失败。
+限制同样明确：此前 RGB 匹配和真实优化 3DGS 分类没有建立相对强 MLP 的稳定优势；直接跨域迁移也失败过。当前五维的 R73 原生分类已开始拟合。五个未使用场景的投影任务确认已完成，但对投影 Distance 的 PSNR 差为 +0.224/+0.505/−0.471 dB，未通过完整稳定用途标准；不能继承其他版本的成功，更不能消除它们的失败。
 
-**R70 的参考—参考接法没有稳定收益；R71 改为目标 query→参考 key 的投影关系后，给定参考几何组通过了固定用途标准。** R71 五维 PSNR 为 18.581 dB，对同投影 Distance / Direct 分别 +0.205 / +0.265 dB，对 URoPE +0.440 dB，三个种子主指标均改善，LPIPS 也改善。大部分相对 R70 的增益来自投影交互方式，不能全部归给高斯形状。接下来 R72 保持结构和预算，检验 RGB 预测几何能否保留收益；已完成实现检查并在 GPU2/3/4/6 启动四路并行训练。[R70 负结果](../results/round70_nvs/attempt1/report.md) · [R71 完整结果与审阅](../results/round71_target_projection/attempt1/report.md) · [R72 固定计划](round72_rgb_projection_plan.md)
+**R70 的参考—参考接法没有稳定收益；R71 改为目标 query→参考 key 的投影关系后，给定参考几何组通过了固定用途标准。** R71 五维 PSNR 为 18.581 dB，对同投影 Distance / Direct 分别 +0.205 / +0.265 dB，对 URoPE +0.440 dB，三个种子主指标均改善，LPIPS 也改善。大部分相对 R70 的增益来自投影交互方式，不能全部归给高斯形状。R72 的 RGB 版本已四卡完成：18.236 dB，对 Distance / Direct 平均 +0.127 / +0.172 dB，但各有一个种子更差；对 URoPE 仅 +0.044 dB。LPIPS 一致改善，PSNR 尚未稳定胜出，故仅推进 R71 给定几何组的新场景确认。[R70 负结果](../results/round70_nvs/attempt1/report.md) · [R71 完整结果与审阅](../results/round71_target_projection/attempt1/report.md) · [R72 结果与审阅](../results/round72_rgb_projection/attempt1/report.md)
+
+**新场景确认保留了投影交互收益，但没有稳定确认五维形状关系的额外优势。** 五维在新场景对 Direct / URoPE / PRoPE 的基础 PSNR 分别 +0.186 / +0.333 / +0.599 dB，三个种子均正；对 Distance 仅平均 +0.086 dB，种子 33 在五个场景均更差。外推与变焦也存在对 Distance 的退步。这是已完成的混合确认结果，不是数值核查未完成。[确认报告与审阅](../results/projection_confirmation/attempt1/report.md)
 
 ## 2. 要解决的问题，以及为什么考虑高斯参数
 
@@ -191,6 +193,10 @@ R67 两组都从相同距离模型出发、续训相同 20 epochs；其配对差
 
 这些是 full11/log-shape 版本的负结果，不能写成“relative5 已在原生分类失败”，也不能因为五维在匹配成功就跳过原生基元的适用性问题。[R65 报告](../results/round65_actual_gs/attempt1/report1/report.md) · [R66 报告](../results/round66_logshape/attempt1/report.md) · [分类诊断](../results/round66_logshape/classification_diagnostic1/report.md) · [R67 报告](../results/round67_training_path/attempt1/report.md)
 
+**R73 已冻结并开始原生拟合。** 唯一变化是把原 R65 的关系输入换成直接复用的 R69 `CompactPosition('relative5')`；完整 13 维共同内容、骨干、原生 7,757 对象开发缓存、120 epochs/46,800 updates、三个种子和 CE 选模均不变。新增三个拟合，复用五组 R65 对照，六种评价条件完整保留。共同初始化、独立五维公式/MLP 计算、无关系时与 NoPE 一致和有效梯度已通过三项 CPU 检查；CUDA 全配置预检查也已通过，模型 352,220 参数，其中 PE 9,792，预检查峰值约 10.95 GiB。新 SUN3D 确认得分未用于选择本设计。[固定计划](round73_native_relative5_plan.md) · [冻结身份](../results/round73_native_relative5/attempt1/lock.json) · [CUDA 检查](../results/round73_native_relative5/attempt1/cuda_preflight.json)
+
+R73 控制器 PID 97114、exec 会话 47612 已在确认控制器释放资源后启动训练；虽然确认判据未通过，本独立实验仍正常推进。种子 11/22 已在 GPU4/GPU2 训练，已保存的早期健康检查覆盖 4/6 epochs，损失和梯度有限，已完成部分的实际采样流均与 R65 Distance 对应种子一致；种子 33 仍在等待空闲卡。最多三卡并行，不改变预算。当前尚无原生收益结论。[早期健康检查](../results/round73_native_relative5/attempt1/initial_health.json) · [运行状态](../results/round73_native_relative5/attempt1/queue_status.json) · [执行身份](../results/round73_native_relative5/attempt1/execution_identity.json)
+
 ## 7. 已完成的 R70：当前图像接法没有稳定收益
 
 这一轮回答：**同样的五维关系进入真正输出 RGB 的 Transformer 后，是否带来画质收益？** 输出图像是检验 PE 的下游用途；没有更换 GS 渲染器来替代 PE 比较。
@@ -249,7 +255,39 @@ R71 先保持参考深度输入，避免把新接法与 RGB 几何预测混在�
 
 选模回放误差为零，保存图像独立 PSNR 复算最大差约 3.02e−6 dB；已实际审阅比较图、曲线和固定样例。这些小数值误差不影响 +0.2 dB 量级的比较。[完整报告](../results/round71_target_projection/attempt1/report.md) · [当前审阅记录](../results/round71_target_projection/attempt1/review.json) · [冻结计划](round71_target_projection_plan.md)
 
-**R72 已冻结并在 GPU2/3/4/6 四路运行：** 保持 R71 接法，所有方法改用 R70 同一结构的 RGB 七参数预测头，比较投影 Distance、Direct、relative5、URoPE，各三种子，并复用 R70 RGB PRoPE/HRoPE/raymap 等控制。无参考深度、无目标深度、无新监督或模块。主判据继承 R71；若失败就限定给定几何的用途，不靠延长训练救分。用户已恢复多卡并行，最多四个独立单卡任务，保持 batch 和更新预算。[R72 计划](round72_rgb_projection_plan.md) · [运行状态](../results/round72_rgb_projection/attempt1/queue_status.json) · [执行身份](../results/round72_rgb_projection/attempt1/execution_identity.json)。控制器 PID 10444、exec 会话 19276；队列将自动完成选模、三种条件导出、报告和核查，结束后仍需实际审阅。
+**R72 已四卡完成并审阅：** 保持 R71 接法，所有方法改用 R70 同一结构的 RGB 七参数预测头，比较投影 Distance、Direct、relative5、URoPE，各三种子，并复用 R70 RGB PRoPE/HRoPE/raymap 等控制。无参考深度、无目标深度、无新监督或模块。12 次拟合、全部选模、36 份预测和核查均已完成。用户已恢复多卡并行，后续最多四个独立单卡任务，保持 batch 和更新预算。[R72 计划](round72_rgb_projection_plan.md) · [完成状态](../results/round72_rgb_projection/attempt1/queue_status.json) · [审阅记录](../results/round72_rgb_projection/attempt1/review.json)。旧控制器 PID 10444、exec 会话 19276 已结束，勿重复启动。
+
+| RGB-only 方法 | Base PSNR ↑ | LPIPS ↓ | 外推 PSNR | 变焦 PSNR |
+| --- | ---: | ---: | ---: | ---: |
+| R70 PRoPE | 17.4338 | 0.5441 | 13.7114 | 15.7352 |
+| 投影 Distance | 18.1086 | 0.4706 | 14.3057 | 17.7511 |
+| 投影 Direct | 18.0641 | 0.4664 | 14.2052 | 17.7874 |
+| 投影 relative5 | 18.2360 | 0.4353 | 14.1499 | 17.9131 |
+| URoPE | 18.1916 | 0.4762 | 14.0186 | 17.8742 |
+
+五维对 PRoPE 的基础增益为 +0.802 dB，HRoPE / raymap 为 +0.923 / +1.492 dB。但对同投影 Distance 的种子差为 −0.104/+0.091/+0.395 dB，对 Direct 为 −0.056/+0.176/+0.396 dB，对 URoPE 为 −0.211/+0.083/+0.261 dB。LPIPS 对三个强对照在所有种子改善，属于真实的正面开发信号；不能据此事后替换 PSNR 主判据。外推对 Distance 三种子 PSNR 均更差，平均 −0.156 dB。故 RGB 尚未建立稳定全面优势，本次不进入正式新场景确认。
+
+这不是因为数值瑕疵：选模回放误差为零，独立 PSNR 复算最大差约 2.92e−6 dB。实际样例仍模糊且有 patch 块。旧验证集的几何诊断中，五维的深度 AbsRel 从初始 0.3270 降至 0.2748，去迹 log 协方差距离从 3.2247 降至 2.7755；完整 log 协方差距离仅略改善且种子 33 更差，绝对深度误差未优于初始。支持学习到较相关的几何，但不能称准确恢复或唯一归因。[几何诊断与审阅](../results/round72_rgb_projection/attempt1/geometry_diagnostic1/report.md)
+
+### 9.1 五个新场景确认：对 Distance 的优势没有稳定保留
+
+先固定五个未使用 place、机械取样和全部旧验证集已选定的 15 个模型，再下载像素；240 个三元组，三条件、三种子，没有新训练、适配或重选模型。所有预定结果统一导出，并完成独立指标核查和实际图表审阅。
+
+| 给定参考几何的方法 | Base PSNR ↑ | LPIPS ↓ | 外推 PSNR | 变焦 PSNR |
+| --- | ---: | ---: | ---: | ---: |
+| 投影 Distance | 17.9732 | 0.4538 | 15.0306 | 18.0460 |
+| 投影 Direct | 17.8732 | 0.4630 | 14.9762 | 17.8786 |
+| 投影 relative5 | 18.0591 | 0.4527 | 14.9141 | 18.1422 |
+| URoPE | 17.7258 | 0.5056 | 14.3293 | 17.7014 |
+| PRoPE | 17.4601 | 0.5640 | 14.2406 | 15.9864 |
+
+五维对 Direct / URoPE / PRoPE 的基础 PSNR 三种子均正，均值分别 +0.186 / +0.333 / +0.599 dB，LPIPS 也改善。但对 Distance 的配对差为 **+0.224/+0.505/−0.471 dB**，平均 +0.086 dB；种子 33 在五个场景均更差。这不是只因差 0.014 dB 才没过 0.10 门槛。LPIPS 平均差仅 −0.00111、两个种子更差，基础未裁剪 MSE 也略差。
+
+外推对 Distance 的 PSNR −0.116 dB、LPIPS 差 +0.00385，五场景均值两项均更差；变焦 LPIPS 三个种子均差，平均 +0.01224。另一方面，仅投影 Distance 已比 PRoPE 高 +0.513 dB，说明投影交互的作用得以保留，五维额外形状关系的稳定增益尚未确证。不能把本轮概括为全部无效，也不能宣布完整确认通过。
+
+独立 PSNR 复算误差约 3.11e−6 dB，不影响结论。固定样例仍模糊、有 patch 块；复制参照 LPIPS 为 0.1778，五维为 0.4527，不能称成熟图像生成。五场景 bootstrap 条件于既定种子，不能用正区间下界覆盖种子不稳定。本队列已使用，不能再称 fresh 或用于救分。[完整报告](../results/projection_confirmation/attempt1/report.md) · [审阅记录](../results/projection_confirmation/attempt1/review.json)
+
+在读取本次确认分数前，另固定了一个**旧数据机制诊断**：保持投影中心、有效性、完整共同内容和参数量，仅把参考投影协方差设为固定目标 patch 协方差 Q。五维输入变成 `[distance, log1p(δᵀQ⁻¹δ), 同一项, log(3), log(3)]`。它隔离“变化的参考形状”与“固定查询中心度量”的贡献；不更改当前候选，不在本次新场景上训练/评分，也不覆盖确认失败。RGB 与给定几何各三种子，仍为旧预算；当前只有计划，尚未实施。[事前诊断计划](../results/projected_shape_attribution/preparation/plan.json)
 
 ## 10. 证据覆盖、结论与下一步
 
@@ -257,17 +295,19 @@ R71 先保持参考深度输入，避免把新接法与 RGB 几何预测混在�
 | --- | --- | --- |
 | 算子/实现是否与定义一致 | 单测、梯度、同信息初始化、实际输入流、选模与指标回算 | 对已完成的相应实验有支持，不等于效果证据 |
 | 形状信息如何进入 PE 更有用 | 早期解耦、R58 标量失败、R68 同信息控制、R69 输入精简 | 支持学习型关系组织；未唯一确定物理成因 |
-| 是否优于强对照 | R68–R69 区域匹配、R71 给定几何图像任务正面；RGB 与原生分类仍受限 | 有条件性用途，尚非一般方案 |
+| 是否优于强对照 | R68–R69 区域匹配开发正面；R71 旧场景正面，新场景对 Distance 不稳定 | 有条件性用途，尚非一般方案 |
 | 区域收益是否牺牲中心定位 | R68–R69 两类指标共同改善 | 当前正结果不是这种代价交换 |
 | 是否跨域/稀疏普遍稳健 | 直接迁移失败；固定查询稀疏保持领先但降幅并非全面更小 | 不能宣称普遍鲁棒性 |
-| 五维候选是否改善图像任务 | R70 参考—参考负面；R71 给定几何投影关系对强对照稳定改善 | R72 检验 RGB 预测几何 |
-| 是否用于真实优化 3DGS 也稳定有效 | 已有版本分类负结果；当前五维版本尚未直接确认 | 未完成 |
-| 是否有未使用数据确认 | 当前 R68–R72 均为旧开发数据；官方 TEST/保留数据未读取 | 未完成 |
+| 五维候选是否改善图像任务 | R71 旧场景通过；新场景对 Direct/相机控制有收益，但对 Distance 不稳定；R72 RGB 为混合结果 | 额外形状关系的一般用途未确证 |
+| 是否用于真实优化 3DGS 也稳定有效 | 已有版本分类负结果；R73 当前五维正在拟合 | 未完成 |
+| 是否有未使用数据确认 | R71 五个新场景、冻结模型确认已完成并审阅 | 完整用途标准未通过，正面子比较保留 |
 | 是否结构精炼且实际高效 | 一个关系 MLP，输入五维；但 pairwise 二次开销显著 | 结构精炼有依据，整体高效未确立 |
 
 因此当前最准确的研究结论是：**高斯参数化值得作为区域关系的组织方式继续研究；现有证据还不足以把它提升为优于强编码方式的一般性位置编码。** “区域形状关系能帮助某个任务”与“必须采用高斯/所有任务都受益”之间仍有证据缺口。
 
-R70 的旧接法停止，R71 已完成且支持推进 [R72 RGB 验证](round72_rgb_projection_plan.md)。先区分给定几何和预测几何的适用范围，再冻结适合的未使用数据验证。原生基元、适用的几何/鲁棒/泛化验证继续保留，但不要求每一处微小尾数同号，也不恢复静态求积通用门禁。
+R70 的旧接法停止，R71、[R72 RGB 验证](round72_rgb_projection_plan.md) 及 R71 新场景确认均完成。新场景未通过完整用途标准；保留对部分强控制的收益，也保留对 Distance 的不稳定。下一步执行已冻结的 R73 原生验证与旧数据固定形状诊断，分别回答真实基元适用性和收益归因。RGB 感知指标和几何诊断的正面信号不被删除，也不替代主判断。适用的几何/鲁棒/泛化验证继续保留，但不要求每一处微小尾数同号，不恢复静态求积通用门禁。
+
+R72 的全部 12 个模型已选定，旧验证集的只读几何诊断按事前计划完成并实际审阅；继承 R70 的深度与 matrix-log 协方差一致性指标，不增加训练或用途门槛。[诊断计划](../results/round72_rgb_projection/attempt1/geometry_diagnostic1/plan.json)
 
 R71 的旧 fit/val 输入诊断显示，基础条件约 92.9%/96.8% 的参考区域启用了额外投影关系，归一化投影协方差具有变化，未出现整个路径被掩码关闭或所有区域恒定的情况。这只是输入解释，不是用途证据，也不改变冻结设置。[诊断结果](../results/round71_target_projection/attempt1/input_geometry_diagnostic/result.json)
 
@@ -283,7 +323,9 @@ R71 的旧 fit/val 输入诊断显示，基础条件约 92.9%/96.8% 的参考区
 | R65–R67 原生分类与诊断 | [R65](../results/round65_actual_gs/attempt1/)、[R66](../results/round66_logshape/attempt1/)、[R67](../results/round67_training_path/attempt1/) |
 | R70 配置、数据、选模、导出、资源状态 | [结果目录](../results/round70_nvs/attempt1/)、[冻结锁](../results/round70_nvs/attempt1/lock.json) |
 | R71 完整结果、源身份和审阅 | [结果目录](../results/round71_target_projection/attempt1/)；给定几何投影关系已通过开发用途标准 |
-| R72 RGB 接法与并行验证 | [计划](round72_rgb_projection_plan.md)、[结果目录](../results/round72_rgb_projection/attempt1/)；运行结果待完成 |
+| R72 RGB 接法与并行验证 | [计划](round72_rgb_projection_plan.md)、[完整结果与审阅](../results/round72_rgb_projection/attempt1/report.md)；混合结果，未通过固定用途标准 |
+| R71 五个新场景确认 | [固定计划](projection_confirmation_plan.md)、[评价冻结身份](../results/projection_confirmation/attempt1/evaluation_lock.json)、[完整结果与审阅](../results/projection_confirmation/attempt1/report.md)；混合结果，完整标准未通过 |
+| R73 当前五维的原生基元验证 | [固定计划](round73_native_relative5_plan.md)、[运行状态](../results/round73_native_relative5/attempt1/queue_status.json)；三个新拟合，复用 R65 完整开发缓存与对照 |
 | R70 预测几何解释检查 | [诊断目录](../results/round70_nvs/attempt1/geometry_diagnostic1/)；解释性检查，不另设通过门槛 |
 | 全部历史说明、失败及未选草案 | [归档索引](archive/2026-11-04/INDEX.md)、[逐文件路径与摘要](archive/2026-11-04/manifest.json) |
 
@@ -295,10 +337,14 @@ R69 bcd61fb7e4184455ba44cf98cdd65b5a6121630d1742cb4c9dc4eb89193a51fc
 R70 a4dee280476efaaba2cd57a3ddf0db3563d9ad059a9a5007a47073458c8d5fd3
 R71 7175d13587615cbdab44c418c61a8e710342b09cf3883e91939807b981941140
 R72 1dcd5251863dd8c56d71dd01376c4f9890d91b00f8b4f7948c5dee6e8165fbb6
+R73 dc262ad27c049625e206d10f13d941c66f958cc17ff0c41cd1aec0bdb5e76cd0
+新场景确认 4df68d631e33f0287fe645e2952f7f427f80a866fd4d8daab4c7684d0bd61c1f
 ```
 
-**确认数据的当前可用范围：** 已核对 R5/R6/R7 的使用清单，共 21 个已使用或预览的 SUN3D 顶层 place 必须排除；旧 R6/R7 的测试也不能重新标为 fresh。另行保留的 `home_ac`、`hotel_barcelona`、`hotel_graz`、`mit_1_242`、`harvard_computer_lab` 目前是目录元数据候选，尚非已经入组并可直接运行的确认集。GSModel60 登记的本地下载仅含官方 TRAIN；其 TEST 未下载到该范围。后续应先固定候选、对照和选取规则，再核实/采集确认数据；本次没有读取这些新图像、点数据或分数。[使用与候选清单](../results/research_data_usage/confirmation_inventory_20261104.json)
+**新场景确认已完成并审阅：** 五个保留 place 的队列和机械取样规则先于像素读取固定，1,440 个文件共约 218 MB 已直连下载完成、没有失败；240 个三元组的原始像素及缓存存放在用户指定数据盘。R72 未通过，按原计划仅纳入给定几何组 15 个旧验证集已选定模型，不重新训练。像素开放前已冻结全部模型、源码、条件与指标。预处理与 R70 缓存的一致性、输入边界和三条件已检查；45 份模型预测与 6 份零学习参照全部导出，独立复算、图表审阅均完成。旧控制器 PID 24074、exec 会话 24139 已退出，勿重复启动。[固定计划](projection_confirmation_plan.md) · [评价冻结身份](../results/projection_confirmation/attempt1/evaluation_lock.json) · [结果与审阅](../results/projection_confirmation/attempt1/report.md)
 
-SUN3D 的这些旧场景、模型和预测存在跨轮复用，轮数不等于独立证据份数。GSModel60 的来源版本、文件/缓存身份及划分见 R65 数据记录；当前原始下载目录为 `/mnt/f70f6709-366e-49a0-861f-497645d98975/users/liwt/data`。本次只整理说明文档及其历史报告附件，不移动原始数据、模型、实验实现或 `results/`。
+**确认数据的当前可用范围：** 已核对 R5/R6/R7 的使用清单，共 21 个已使用或预览的 SUN3D 顶层 place 必须排除；旧 R6/R7 的测试也不能重新标为 fresh。另行保留的 `home_ac`、`hotel_barcelona`、`hotel_graz`、`mit_1_242`、`harvard_computer_lab` 已开放给本次冻结确认，不能以后再当作未见队列重新挑选方案。此前的清单是冻结前快照，现阶段以[像素读取开始记录](../results/projection_confirmation/attempt1/data_access_started.json)和[运行状态](../results/projection_confirmation/attempt1/queue_status.json)为准。GSModel60 登记的本地下载仍仅含官方 TRAIN，官方 TEST 未下载到该范围。[历史使用与候选清单](../results/research_data_usage/confirmation_inventory_20261104.json)
+
+SUN3D 的这些旧场景、模型和预测存在跨轮复用，轮数不等于独立证据份数。GSModel60 的来源版本、文件/缓存身份及划分见 R65 数据记录；当前原始下载目录为 `/mnt/f70f6709-366e-49a0-861f-497645d98975/users/liwt/data`。2026-11-04 的文档归档没有移动原始数据、模型、实验实现或 `results/`。
 
 归档保留原文 SHA-256 与原路径映射。历史冻结脚本若依赖已迁移文档的旧绝对路径，重跑时应按清单恢复相应路径或建立临时软链，不能改写旧锁。当前运行所需文档路径已单独保留。原 README、原状态长文也有快照，方便追溯每次决定而不让过期“最新状态”继续支配研究。
