@@ -6,13 +6,13 @@
 
 目前，观测区域匹配与 R71 旧场景图像任务支持候选的条件性用途。但五个新场景确认中，五维对 Distance 的 PSNR 差为 +0.224/+0.505/−0.471 dB，未通过完整稳定收益标准；对 Direct、URoPE、PRoPE 的正面比较保留。R72 RGB 也为混合结果。固定形状诊断已完成并审阅：大部分图像收益在固定参考协方差后仍保留，原五维在给定几何组仅高 +0.024 dB、种子方向混合，在 RGB 基础条件有 +0.055 dB 的小幅一致收益。变化协方差的专属贡献需要收窄解释。
 
-R73 原生 3DGS 验证已完成并审阅：五维 mCA 为 80.029%，对 Direct / 旧十一维平均高 +3.254 / +2.938 pp，三个种子均正；对 Distance 平均高 +1.603 pp，但配对差为 +3.394/−0.951/+2.367 pp，稳定用途标准未通过。区域匹配的 GeoTransformer/角度描述符补充对照也已完成：五维基础召回分别高 +4.103/+4.161 pp，三个种子均正、中心 PCK 共同改善。三个区域固定球形对照也已完成：变化协方差比同容量径向控制再高 +3.340/+3.363 pp（基础/稀疏），中心指标共同改善。当前把同一对照用于原生 3DGS，训练队列已启动。历史负结果、确认失败与结论边界同时保留；尚不能宣称一般有效。
+R73 原生 3DGS 验证已完成并审阅：五维 mCA 为 80.029%，对 Direct / 旧十一维平均高 +3.254 / +2.938 pp，三个种子均正；对 Distance 平均高 +1.603 pp，但配对差为 +3.394/−0.951/+2.367 pp，稳定用途标准未通过。区域匹配的 GeoTransformer/角度描述符补充对照也已完成：五维基础召回分别高 +4.103/+4.161 pp，三个种子均正、中心 PCK 共同改善。三个区域固定球形对照也已完成：变化协方差比同容量径向控制再高 +3.340/+3.363 pp（基础/稀疏），中心指标共同改善。同一对照在原生 3DGS 也已完成：五维比固定球形高 +2.731 pp，三个种子均正；固定球形弱于 Distance，原生性能稳定性仍需验证。历史负结果、确认失败与结论边界同时保留；尚不能宣称一般有效。
 
-原生稳定性复现已固定五组新种子、共十次配对拟合，模型与预算保持不变；旧三组、新五组及合并结果分别报告。准备和检查已完成，尚未启动训练；先完成原生固定球形归因，再确定后续强对照范围。
+原生稳定性复现已固定五组新种子、共十次配对拟合，模型与预算保持不变；旧三组、新五组及合并结果分别报告。已完成 **8/10 次完整拟合**：44/55/66/77 均完成。四组旧验证集 mCA 差为 +2.295/+3.817/+1.036/−2.093 pp，平均 +1.264 pp，仍有随机性敏感；这不是五组 dev_eval 主结果。种子 88 已按用户授权恢复两卡并行：五维在 GPU 0 从完整第 100 轮接续，Distance 在 GPU 7 从原定初始化开始。新任务进入原空闲卡后，沿用共享授权；每次启动需至少 20 GiB 空闲，PyTorch 分配上限 16 GiB。完成后自动接续十模型选模、六条件评价与汇总。不追加种子直到通过，也不改写 R73 旧结论。[阶段分析](results/native_seed_replication/attempt1/completion_analysis1/report.md) · [两卡并行接续](results/native_seed_replication/attempt1/parallel_handoff2/report.md)
 
 **区域新场景确认已完成并审阅：** 24 个既有模型、两条件、48 组预测，无新训练。在九个可用的新 place 上，五维基础 R@1 为 41.389%，对 Distance / GeoTransformer / 固定球形分别 +2.988 / +3.362 / +1.782 pp，三个配对种子均改善，中心定位共同改善。预定十个 place 中一个缺官方内参，保留缺失且不替换；结果只覆盖九个可用场景，不覆盖原生/RGB/投影任务的既有负证据。[完整确认与审阅](results/region_confirmation/attempt1/report.md)
 
-原生固定球形训练已恢复过三卡并行，种子 11 已完成；剩余种子 22/33 已从第 73/96 轮完整检查点迁到空闲 GPU0/4。模型、优化器、数据和预算不变，数据搬运及恢复更新的一致性已验证，其他用户任务保留。[当前续跑记录](results/native_shape_attribution/attempt1/resource_handoff1/report.md)
+原生固定球形的三个完整拟合、18 组新预测及审阅均完成，全部输入流配对、GPU 选模回放一致。基础 mCA：五维 80.029%、固定球形 77.298%、Distance 78.426%；稀疏类别区间跨零及局部来源组反例保留。[完整结果与审阅](results/native_shape_attribution/attempt1/report.md)
 
 利用额外空闲卡完成了可学习高斯散度的三个区域对照：散度比 Distance 更好，五维在旧五场景及已用九个扩展场景仍平均高约 1.4–1.6 pp；中心误差存在反例，跨种子/场景区间仍有不确定性。后一个比较不重称为全新数据确认。[散度对照与解释](results/region_jeffreys_control/attempt1/report.md) · [已用九场景补充](results/region_jeffreys_control/attempt1/used_scene_extension1/report.md)
 
@@ -39,8 +39,10 @@ R73 原生 3DGS 验证已完成并审阅：五维 mCA 为 80.029%，对 Direct /
 | [原生确认的历史对象核对](results/native_confirmation_metadata/attempt1/historical_overlap1/report.md) | 官方 TEST 的 2,245 个底层对象曾用于早期 ModelNet 开发，另 3,845 个无已知历史 ID 重叠且覆盖 60 类；不能称全量全新，测试基元和得分未开放 |
 | [逐对象缓存验证](results/native_stream_cache_validation/attempt1/report.md) | 六个已用对象完整复现原缓存，两个对象通过镜像网络验证；完整测试缓存估算约 1.208 GiB，可避免常驻保留全部原始文件 |
 | [缓存到推理的执行准备](results/native_confirmation_runtime_validation/attempt1/report.md) | 旧六对象、两模型、六条件与原预测一致，旧完整验证回放一致；支持来源复用分组，官方 TEST 仍未开放 |
-| [原生固定球形归因](results/native_shape_attribution/preparation/plan.json) | 同一个径向控制迁入原生基元；三次完整预算拟合，CUDA 检查通过，训练进行中 |
-| [原生种子复现](results/native_seed_replication/preparation/plan.json) | 已冻结五组新种子配对比较，仅新增固定随机重复，尚未启动；不改写 R73 旧结论 |
+| [原生固定球形归因](results/native_shape_attribution/attempt1/report.md) | 已完成并审阅；原五维额外 +2.731 pp，三种子均正；固定球形未超过 Distance |
+| [原生未用对象确认准备](results/native_confirmation_protocol/attempt1/report.md) | 已固定条件计划、31 个模型槽位和配对统计规则，五项检查通过；等待固定复现后决定是否开放 TEST |
+| [原生确认执行衔接](results/native_confirmation_workflow_validation/attempt1/report.md) | 条件入口、缓存、八卡推理与汇总已接通并完成旧数据检查；清理后数据盘约 178.94 GiB 可用，足够完整测试集，正式下载与评价尚未开始 |
+| [原生种子复现阶段分析](results/native_seed_replication/attempt1/completion_analysis1/report.md) | 8/10 完成，四组验证差平均 +1.264 pp、3/4 正；已恢复 GPU 0/7 两卡并行补跑 88，完整开发判断待完成；不改写 R73 旧结论 |
 | [models/](models/) / [experiments/](experiments/) / [tests/](tests/) | 方法实现、实验程序与实现检查 |
 | [results/](results/) | 各轮原始结果、配置身份、报告与审阅记录 |
 | [AGENTS.md](AGENTS.md) | 继续研究前应遵循的项目说明 |

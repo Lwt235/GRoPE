@@ -1,0 +1,63 @@
+--- frozen_original_queue
++++ final_pair_shared_parallel_continuation
+@@ -1,12 +1,12 @@
+ def queue():
+     check()
+-    assert not (OUT / 'execution_identity.json').exists()
++    assert not (HANDOFF / 'execution_identity.json').exists()
+     meta = dict(pid=os.getpid(), start_ticks=Path('/proc/self/stat').read_text().rsplit(')', 1)[1].split()[19],
+-        source_sha256=sha(Path(__file__)), lock_sha256=sha(OUT / 'lock.json'), maximum_owned_gpu_jobs=4,
++        source_sha256=sha(Path(__file__)), lock_sha256=sha(OUT / 'lock.json'), maximum_owned_gpu_jobs=2, controller_identity_path=str(HANDOFF / 'execution_identity.json'), execution_policy='GPU0 and GPU7 shared parallel final pair',
+         started_unix=time.time(), resource_dependency=str(REGION), dependency_scientific_success_required=False,
+         goal_complete=False)
+-    write(OUT / 'execution_identity.json', meta)
+-    active, completed, pending, stage = [], [], [], 'resource_dependency'
++    write(HANDOFF / 'execution_identity.json', meta)
++    active, completed, pending, stage = [], read(HANDOFF / 'retained_fits.json')['records'], [], 'resource_dependency'
+ 
+     def record(state, **extra):
+         write(OUT / 'queue_status.json', dict(meta, state=state, stage=stage,
+@@ -35,12 +35,12 @@
+                         raise RuntimeError(f"{item['log']}: exit {code}")
+             if not pending and not active:
+                 break
+-            choices = parent.available_gpus() if gpu and pending else [None]
++            choices = available_gpus() if gpu and pending else [None]
+             available = {r['uuid'] for r in choices if r}
+             stable, previous = available & previous, available
+             busy = {item['gpu']['uuid'] for _, item, _ in active if item['gpu']}
+             for device in choices:
+-                if not pending or len(active) >= (4 if gpu else 1):
++                if not pending or len(active) >= (2 if gpu else 1):
+                     break
+                 if device and (device['uuid'] not in stable or device['uuid'] in busy):
+                     continue
+@@ -51,7 +51,7 @@
+                 if device:
+                     code = 'import numpy; import torch; assert torch.cuda.is_available(); x=torch.ones(4,device="cuda"); assert float(x.sum())==4; torch.cuda.synchronize(); print(torch.cuda.get_device_name())'
+                     probe = subprocess.check_output([sys.executable, '-c', code], env=env, text=True, timeout=60).strip()
+-                    if not any(r['uuid'] == device['uuid'] for r in parent.available_gpus()):
++                    if not any(r['uuid'] == device['uuid'] for r in available_gpus()):
+                         continue
+                 job = pending.pop(0)
+                 command = [sys.executable, '-m', MODULE, action]
+@@ -67,15 +67,17 @@
+                 if device:
+                     busy.add(device['uuid'])
+                 print('LAUNCHED', item, flush=True)
+-            record('running' if active else 'waiting_for_idle_gpu')
++            record('running' if active else 'waiting_for_shared_headroom')
+             time.sleep(5)
+ 
+     try:
+         while not region_released():
+             record('waiting_for_region_resources')
+             time.sleep(10)
+-        batch('preflight', [{}])
++        assert read(OUT / 'cuda_preflight.json')['passed']  # Preserve original full-configuration preflight.
+         jobs = [dict(seed=seed, role=ROLES[(i+j) % 2]) for i, seed in enumerate(SEEDS) for j in range(2)]
++        jobs = [job for job in jobs if not (OUT / 'runs' / job['role'] / str(job['seed']) / 'run.json').exists()]
++        assert jobs == [dict(seed=88, role=role) for role in ROLES]
+         batch('train', jobs)
+         batch('selections', [{}])
+         batch('export', [dict(seed=s) for s in SEEDS])

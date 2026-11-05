@@ -1,0 +1,31 @@
+--- frozen_original_queue
++++ final_pair_idle_continuation
+@@ -1,12 +1,12 @@
+ def queue():
+     check()
+-    assert not (OUT / 'execution_identity.json').exists()
++    assert not (HANDOFF / 'execution_identity.json').exists()
+     meta = dict(pid=os.getpid(), start_ticks=Path('/proc/self/stat').read_text().rsplit(')', 1)[1].split()[19],
+-        source_sha256=sha(Path(__file__)), lock_sha256=sha(OUT / 'lock.json'), maximum_owned_gpu_jobs=4,
++        source_sha256=sha(Path(__file__)), lock_sha256=sha(OUT / 'lock.json'), maximum_owned_gpu_jobs=4, controller_identity_path=str(HANDOFF / 'execution_identity.json'), execution_policy='idle GPU continuation of final two fits',
+         started_unix=time.time(), resource_dependency=str(REGION), dependency_scientific_success_required=False,
+         goal_complete=False)
+-    write(OUT / 'execution_identity.json', meta)
+-    active, completed, pending, stage = [], [], [], 'resource_dependency'
++    write(HANDOFF / 'execution_identity.json', meta)
++    active, completed, pending, stage = [], read(HANDOFF / 'retained_fits.json')['records'], [], 'resource_dependency'
+ 
+     def record(state, **extra):
+         write(OUT / 'queue_status.json', dict(meta, state=state, stage=stage,
+@@ -74,8 +74,10 @@
+         while not region_released():
+             record('waiting_for_region_resources')
+             time.sleep(10)
+-        batch('preflight', [{}])
++        assert read(OUT / 'cuda_preflight.json')['passed']  # Preserve original full-configuration preflight.
+         jobs = [dict(seed=seed, role=ROLES[(i+j) % 2]) for i, seed in enumerate(SEEDS) for j in range(2)]
++        jobs = [job for job in jobs if not (OUT / 'runs' / job['role'] / str(job['seed']) / 'run.json').exists()]
++        assert jobs == [dict(seed=88, role=role) for role in ROLES]
+         batch('train', jobs)
+         batch('selections', [{}])
+         batch('export', [dict(seed=s) for s in SEEDS])

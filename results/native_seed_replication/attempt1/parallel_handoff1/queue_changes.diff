@@ -1,0 +1,37 @@
+--- original_frozen_queue
++++ resource_continuation
+@@ -1,11 +1,11 @@
+ def queue():
+     check()
+-    assert not (OUT / 'execution_identity.json').exists()
++    assert not (HANDOFF / 'execution_identity.json').exists()
+     meta = dict(pid=os.getpid(), start_ticks=Path('/proc/self/stat').read_text().rsplit(')', 1)[1].split()[19],
+-        source_sha256=sha(Path(__file__)), lock_sha256=sha(OUT / 'lock.json'), maximum_owned_gpu_jobs=4,
++        source_sha256=sha(Path(__file__)), lock_sha256=sha(OUT / 'lock.json'), maximum_owned_gpu_jobs=8, controller_identity_path=str(HANDOFF / 'execution_identity.json'),
+         started_unix=time.time(), resource_dependency=str(REGION), dependency_scientific_success_required=False,
+         goal_complete=False)
+-    write(OUT / 'execution_identity.json', meta)
++    write(HANDOFF / 'execution_identity.json', meta)
+     active, completed, pending, stage = [], [], [], 'resource_dependency'
+ 
+     def record(state, **extra):
+@@ -40,7 +40,7 @@
+             stable, previous = available & previous, available
+             busy = {item['gpu']['uuid'] for _, item, _ in active if item['gpu']}
+             for device in choices:
+-                if not pending or len(active) >= (4 if gpu else 1):
++                if not pending or len(active) >= (8 if gpu else 1):
+                     break
+                 if device and (device['uuid'] not in stable or device['uuid'] in busy):
+                     continue
+@@ -74,8 +74,9 @@
+         while not region_released():
+             record('waiting_for_region_resources')
+             time.sleep(10)
+-        batch('preflight', [{}])
++        assert read(OUT / 'cuda_preflight.json')['passed']  # Preserve completed preflight.
+         jobs = [dict(seed=seed, role=ROLES[(i+j) % 2]) for i, seed in enumerate(SEEDS) for j in range(2)]
++        jobs = [job for job in jobs if not (OUT / 'runs' / job['role'] / str(job['seed']) / 'run.json').exists()]
+         batch('train', jobs)
+         batch('selections', [{}])
+         batch('export', [dict(seed=s) for s in SEEDS])
