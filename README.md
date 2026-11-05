@@ -12,7 +12,11 @@ R73 原生 3DGS 验证已完成并审阅：五维 mCA 为 80.029%，对 Direct /
 
 **区域新场景确认已完成并审阅：** 24 个既有模型、两条件、48 组预测，无新训练。在九个可用的新 place 上，五维基础 R@1 为 41.389%，对 Distance / GeoTransformer / 固定球形分别 +2.988 / +3.362 / +1.782 pp，三个配对种子均改善，中心定位共同改善。预定十个 place 中一个缺官方内参，保留缺失且不替换；结果只覆盖九个可用场景，不覆盖原生/RGB/投影任务的既有负证据。[完整确认与审阅](results/region_confirmation/attempt1/report.md)
 
-原生固定球形训练继续在 GPU1/2/3 三卡并行。空闲 A6000 上的实测显示：保持参数与公式不变、重排关系投影顺序后，原生五维前向＋反向由 188.60 降至 123.81 ms，峰值显存由 10.986 降至 7.888 GiB。对照也同等优化后，五维仍比 Distance 慢约 16.34%；区域小输入没有加速。测量不含数据加载、优化器和常驻完整训练缓存，当前训练实现未改动。[并行核对](results/native_shape_attribution/attempt1/parallel_resume_check_20261105.json) · [原实现成本](results/pe_runtime_diagnostic/attempt1/report.md) · [投影重排实测与范围](results/factored_relation_runtime/attempt1/report.md)
+原生固定球形训练已恢复过三卡并行，种子 11 已完成；剩余种子 22/33 已从第 73/96 轮完整检查点迁到空闲 GPU0/4。模型、优化器、数据和预算不变，数据搬运及恢复更新的一致性已验证，其他用户任务保留。[当前续跑记录](results/native_shape_attribution/attempt1/resource_handoff1/report.md)
+
+利用额外空闲卡完成了可学习高斯散度的三个区域对照：散度比 Distance 更好，五维在旧五场景及已用九个扩展场景仍平均高约 1.4–1.6 pp；中心误差存在反例，跨种子/场景区间仍有不确定性。后一个比较不重称为全新数据确认。[散度对照与解释](results/region_jeffreys_control/attempt1/report.md) · [已用九场景补充](results/region_jeffreys_control/attempt1/used_scene_extension1/report.md)
+
+空闲 A6000 上的实测显示：保持参数与公式不变、重排关系投影顺序后，原生五维前向＋反向由 188.60 降至 123.81 ms，峰值显存由 10.986 降至 7.888 GiB。对照也同等优化后，五维仍比 Distance 慢约 16.34%；区域小输入没有加速。测量不含数据加载、优化器和常驻完整训练缓存，当前训练未采用该关系投影重排。[并行核对](results/native_shape_attribution/attempt1/parallel_resume_check_20261105.json) · [原实现成本](results/pe_runtime_diagnostic/attempt1/report.md) · [投影重排实测与范围](results/factored_relation_runtime/attempt1/report.md)
 
 | 位置 | 内容 |
 | --- | --- |
@@ -29,10 +33,12 @@ R73 原生 3DGS 验证已完成并审阅：五维 mCA 为 80.029%，对 Direct /
 | [几何编码补充对照](results/region_geometry_controls/preparation/plan.json) | 当前固定查询与完整共同内容下，新增 GeoTransformer 位置算子及角度描述符 MLP；六次拟合及评价完成，五维保留约 4 pp 的开发优势 |
 | [区域固定球形归因](results/region_shape_attribution/preparation/plan.json) | 已完成三个配对控制与审阅，变化协方差提供额外区域收益 |
 | [区域新场景确认](results/region_confirmation/attempt1/report.md) | 九个可用新场景完成并审阅；用途优势与额外协方差作用保留，预定第十个场景缺标定 |
+| [可学习散度对照](results/region_jeffreys_control/attempt1/report.md) | 当前预算和完整内容下的三个配对控制已完成；五维在经典散度加 MLP 之上仍有额外区域收益，局部反例保留 |
 | [整模型 GPU 成本](results/pe_runtime_diagnostic/attempt1/report.md) | 原实现比旧 full11 省计算，但仍有高于 Distance 的开销；范围和全部测量保留 |
 | [关系投影重排](results/factored_relation_runtime/attempt1/report.md) | 参数与公式不变，原生省时省显存；全部兼容对照同等优化，区域没有速度收益 |
-| [原生独立确认的数据准备](results/native_confirmation_metadata/attempt1/report.md) | 官方 TEST 6,090 个对象的来源、交集与体量已核对；基元内容与评分未开放 |
+| [原生确认的历史对象核对](results/native_confirmation_metadata/attempt1/historical_overlap1/report.md) | 官方 TEST 的 2,245 个底层对象曾用于早期 ModelNet 开发，另 3,845 个无已知历史 ID 重叠且覆盖 60 类；不能称全量全新，测试基元和得分未开放 |
 | [逐对象缓存验证](results/native_stream_cache_validation/attempt1/report.md) | 六个已用对象完整复现原缓存，两个对象通过镜像网络验证；完整测试缓存估算约 1.208 GiB，可避免常驻保留全部原始文件 |
+| [缓存到推理的执行准备](results/native_confirmation_runtime_validation/attempt1/report.md) | 旧六对象、两模型、六条件与原预测一致，旧完整验证回放一致；支持来源复用分组，官方 TEST 仍未开放 |
 | [原生固定球形归因](results/native_shape_attribution/preparation/plan.json) | 同一个径向控制迁入原生基元；三次完整预算拟合，CUDA 检查通过，训练进行中 |
 | [原生种子复现](results/native_seed_replication/preparation/plan.json) | 已冻结五组新种子配对比较，仅新增固定随机重复，尚未启动；不改写 R73 旧结论 |
 | [models/](models/) / [experiments/](experiments/) / [tests/](tests/) | 方法实现、实验程序与实现检查 |
