@@ -4,7 +4,9 @@
 
 **当前统一入口：[研究主文档](docs/research_current.md)。** 文档包含研究动机、五维相对关系 `relative5` 的公式、完整证据链、关键对照、负结果、已完成的新场景确认及最新预测分析。
 
-**正在训练“各自大小球形”控制。** 按指定分支最新计划，仅把 PE 协方差改为 `tr(Σi)/3 · I`，保留完整共同内容；区域匹配和原生 512 分类各三个配对种子，用来区分局部大小与完整椭球关系的贡献。CPU/CUDA 预检通过，六次拟合队列已启动，尚无新用途结论。[固定计划](docs/trace_isotropic_plan.md) · [实时状态](results/trace_isotropic/attempt1/queue_status.json)
+**两组各向异性关系的四组检验已全部完成并实际审阅。** 12 次完整预算训练、统一选模和 144 组新旧预测比较正常结束。仅位移项保留各向异性的 M，区域召回为 **41.489%**，比完整五维高 **0.861 pp**，中心定位平均也改善，但该差的联合区间仍跨零；原生分类 M 为 **78.229%**，低于完整五维的 **80.029%**，也未稳定超过 Distance。仅协方差项保留各向异性的 S 两任务均未保住主要用途。保留完整五维，M 作为区域研究线索；下一项拟区分平均精度与方向残差的控制尚未冻结或训练。[固定计划](docs/anisotropy_components_plan.md) · [完整结果与实际审阅](results/anisotropy_components/attempt1/report.md)
+
+**“各自大小球形”归因已完成并审阅，保留完整五维。** 六次拟合和 96 组新旧预测完成；完整五维对局部球形的区域基础/稀疏召回高 +2.804/+3.820 pp，三个种子均正，中心定位也改善。原生基础 mCA 高 +2.558 pp，配对差 +3.560/−0.048/+4.163 pp，联合种子×类别区间仍跨零；局部球形则比 Distance 低 0.955 pp、三个种子均低。局部大小没有保住主要用途，支持进一步研究方向与非球形的联合关系，但本轮不能单独归因到朝向或宣称一般有效。[固定计划](docs/trace_isotropic_plan.md) · [完整结果与实际审阅](results/trace_isotropic/attempt1/report.md)
 
 **现有预测的成功与失败已整理。** 对 Distance，已用九场景纠正/引入错误为 15.321%/12.333%，原生主确认对象组为 6.999%/5.877%，匹配 256 为 6.489%/6.365%。区域收益保留，原生样本交换与种子依赖明显；尚未找到跨任务一致的几何成功条件。该次整理只分析已有预测，随后启动上述球形归因；跨来源测试仍保留为可选草案。[完整报告与案例](results/prediction_success_failure/attempt1/report.md)
 
@@ -61,6 +63,8 @@ R73 原生 3DGS 验证已完成并审阅：五维 mCA 为 80.029%，对 Direct /
 | [匹配 256 基元训练诊断](results/native_matched256/attempt1/report.md) | 九次训练和完整审阅完成；匹配后对 Distance / 固定球形的准确率增益仅 +0.123 / +0.170 pp，CE 改善保留；未证明数量不匹配是唯一原因 |
 | [三个对称关系量的开发检验](results/symmetric_relation/attempt1/report.md) | 15 次拟合与实际审阅完成；三维损失区域与原生 512 核心用途，匹配 256 局部改善，不推广 |
 | [现有预测的成功与失败](results/prediction_success_failure/attempt1/report.md) | 已有区域/原生预测的逐样本纠正、退步、种子一致性和几何关联；保留全部主比较案例，不作因果或新确认声明 |
+| [局部大小与完整椭球的归因](results/trace_isotropic/attempt1/report.md) | 六次配对拟合与完整审阅完成；局部球形未保住主要用途，完整形状关系的区域额外收益较明确，原生仍有种子/类别不确定性 |
+| [两组各向异性关系的四组检验](results/anisotropy_components/attempt1/report.md) | 12 次完整训练及实际审阅完成；M 保住区域用途但未保住原生收益，S 未支持一般替代，保留完整五维 |
 | [旧模型注意力诊断](results/native_attention_balance_diagnostic/attempt1/report.md) | 九模型、120 旧 fit 对象，未支持全局位置项过强解释弱种子；无新训练或确认 |
 | [models/](models/) / [experiments/](experiments/) / [tests/](tests/) | 方法实现、实验程序与实现检查 |
 | [results/](results/) | 各轮原始结果、配置身份、报告与审阅记录 |

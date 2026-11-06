@@ -13,6 +13,7 @@ import re
 import shutil
 import time
 import urllib.error
+import urllib.parse
 import urllib.request
 import zipfile
 
@@ -214,13 +215,46 @@ def start_access(kind):
             all_620_ids_to_be_treated_as_used_after_access=True,archive_contains_other_unscored_objects=True))
 
 
+class MirrorRedirectHandler(urllib.request.HTTPRedirectHandler):
+    """Keep metadata probes as HEAD and never forward the mirror credential."""
+    def redirect_request(self, req, fp, code, msg, headers, newurl):
+        target = urllib.parse.urlsplit(newurl)
+        if target.scheme != 'https' or not target.hostname or target.username or target.password:
+            raise ValueError('dataset redirects must use HTTPS without embedded credentials')
+        redirected = super().redirect_request(req, fp, code, msg, headers, newurl)
+        if redirected is not None:
+            for name, _ in list(redirected.header_items()):
+                if name.lower() in ('authorization', 'proxy-authorization'):
+                    redirected.remove_header(name)
+            if req.get_method() == 'HEAD':
+                redirected.method = 'HEAD'
+        return redirected
+
+
+def mirror_request(url, token=None, method='GET'):
+    target = urllib.parse.urlsplit(url)
+    if (target.scheme != 'https' or target.hostname != 'hf-mirror.com' or
+            target.port not in (None, 443) or target.username or target.password):
+        raise ValueError('initial dataset request must use the configured HTTPS mirror')
+    if method not in ('GET', 'HEAD'):
+        raise ValueError('only dataset GET and HEAD requests are supported')
+    request = urllib.request.Request(url, method=method)
+    if token:
+        request.add_unredirected_header('Authorization', 'Bearer ' + token)
+    return request
+
+
+def mirror_opener():
+    return urllib.request.build_opener(urllib.request.ProxyHandler({}), MirrorRedirectHandler())
+
+
 def download():
     """Direct mirror with an optional user's existing HF credential; no access request."""
     lock = ready()
     from huggingface_hub import get_token
     token = get_token()
     # Explicitly disable proxy use. Do not print credentials or signed redirects.
-    opener = urllib.request.build_opener(urllib.request.ProxyHandler({}))
+    opener = mirror_opener()
     archive_root = DATA / 'archives'
     archive_root.mkdir(parents=True, exist_ok=True)
     for row in lock['candidate']['archive_files']:
@@ -235,10 +269,9 @@ def download():
             raise OSError('insufficient disk reserve')
         url = ('https://hf-mirror.com/datasets/' + lock['candidate']['repository'] + '/resolve/' +
                lock['candidate']['revision'] + '/' + row['rfilename'])
-        headers = {'Authorization':'Bearer ' + token} if token else {}
         # A failed HEAD writes no data-access marker and never submits gate forms.
         try:
-            with opener.open(urllib.request.Request(url,headers=headers,method='HEAD'),timeout=30):
+            with opener.open(mirror_request(url, token, 'HEAD'), timeout=30):
                 pass
         except urllib.error.HTTPError as e:
             write(OUT / 'download_access_failure.json',dict(observed_unix=time.time(),
@@ -247,7 +280,7 @@ def download():
             raise RuntimeError('dataset access unavailable; see download_access_failure.json') from None
         start_access('archive_download')
         digest, size = hashlib.sha256(), 0
-        with opener.open(urllib.request.Request(url,headers=headers),timeout=60) as source, pending.open('xb') as sink:
+        with opener.open(mirror_request(url, token), timeout=60) as source, pending.open('xb') as sink:
             for chunk in iter(lambda:source.read(4 * 2**20),b''):
                 size += len(chunk)
                 if size > row['size']:
