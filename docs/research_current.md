@@ -1,14 +1,24 @@
 # GRoPE：将高斯参数化转为 Transformer 位置编码
 
-更新：2026-11-05（Asia/Shanghai）。本文是当前设计、证据链、分析与结论的统一入口。历史原文及草案见[归档索引](archive/2026-11-04/INDEX.md)；原始结果仍位于 `results/`。归档不表示删除负结果，也不表示历史草案已执行。
+更新：2026-11-06（Asia/Shanghai）。本文是当前设计、证据链、分析与结论的统一入口。历史原文及草案见[归档索引](archive/2026-11-04/INDEX.md)；原始结果仍位于 `results/`。归档不表示删除负结果，也不表示历史草案已执行。
 
 ## 1. 当前判断
 
 **我们已得到一个结构较精炼、在观测区域匹配上有新场景确认、在部分原生基元对照及给定参考几何的图像任务上有正面开发证据的候选，但还没有得到经验证的一般性方案。** 当前候选叫 `relative5`：由两个高斯区域的中心和协方差构造五个相对量，经一个小型 MLP 生成 Transformer 的相对位置项。
 
+**按指定分支最新方案，已启动“各自大小球形”归因实验。** 仅在 PE 中把每个协方差替换为 `tr(Σi)/3 · I`，共同内容仍保留完整形状；与 Distance、固定球形和完整五维进行配对比较。区域匹配、原生 512 分类各新增三个种子，共六次训练。公式、完整初始化与实际 CUDA 批次检查已通过，当前正在训练，尚无新用途结论。本轮区分局部尺度与方向/非球形的联合贡献，不能单独归因到朝向；使用旧开发数据，不追加模块或访问新确认数据。[实验计划](trace_isotropic_plan.md) · [运行状态](../results/trace_isotropic/attempt1/queue_status.json)
+
+**最新的匹配数量诊断已完成并审阅，未保留明确的准确率优势。** 256 基元训练、验证和评价时，五维 / Distance / 固定球形 mCA 为 76.743% / 76.620% / 76.573%，差仅 +0.123 / +0.170 pp，配对方向混合且区间宽。CE 对两个控制仍为三种子均改善。这削弱“少量基元本身放大形状收益”的解释，但没有证明所有旧收益仅来自数量不匹配。九项训练、统一选模和全部评价正常完成；随后对称关系检验也已结束，未保留核心用途，见 §6.4。[完整结果与实际审阅](../results/native_matched256/attempt1/report.md)
+
+**最新对称三维检验已完成并审阅：15 次训练全部正常结束，但没有形成更好的通用替代。** 对原五维，区域基础召回下降 2.817 pp、原生 512 基元 mCA 下降 2.206 pp，三个种子均退步，区域中心定位也变差。匹配 256 基元的 mCA 平均提高 0.900 pp，但区间较宽且密集条件仍输固定球形。可学习 Jeffreys 的原生 512 mCA 也低于 Distance。保留五维候选。后续讨论将优先级调整为解释已有预测的成功与失败，跨来源确认保留为可选草案。[完整结果与实际审阅](../results/symmetric_relation/attempt1/report.md)
+
+**现有预测的成功与失败整理已完成。** 相对 Distance，已用九场景的五维纠正/引入错误率为 15.321%/12.333%，净 +2.988 pp；原生原确认主组为 6.999%/5.877%，净 +1.122 pp，原主确认区间跨零的判断不变。区域有 522 个查询三种子均被纠正，也有 256 个均退步；原生 337 个对象在不同种子出现相反方向。中心配置歧义提供弱关联线索，但高各向异性、形状差异或两端差异均不是跨任务通用的成功条件。本次只分析已有预测与缓存，未启动训练或新数据下载。[完整分解、案例与边界](../results/prediction_success_failure/attempt1/report.md)
+
 最可靠的正面证据来自区域匹配：R68–R69 给各方法相同的完整几何信息，固定稀疏前后的查询与标签；补充几何控制和固定球形归因后，既有模型又在九个可用的未用场景上保留优势。新场景基础 R@1 为 **41.389%**，对 Distance / GeoTransformer / 固定球形分别 **+2.988 / +3.362 / +1.782 pp**，三个配对种子均正，中心定位也改善。它支持“**如何组织已有区域几何信息会影响学习与迁移效果**”。预定十个场景中一个缺标定，不称完整十场景确认，也不据此覆盖其他任务的负结果。[新场景确认与审阅](../results/region_confirmation/attempt1/report.md)
 
 **R73 原生分类已完整完成并审阅：五维 mCA 为 80.029%，对 Direct / 旧十一维分别高 +3.254 / +2.938 pp，三个种子均正。** 对最强 Distance 平均高 +1.603 pp，但三个配对差为 +3.394/−0.951/+2.367 pp，类别区间跨零；有明显改进，完整稳定用途条件仍未通过。此前 RGB 匹配、直接跨域迁移的失败也保留。五个新场景投影确认对 Distance 的 PSNR 差为 +0.224/+0.505/−0.471 dB，同样未通过完整稳定用途标准。不能把局部改善或其他版本的成功推广成一般有效。[R73 完整结果与审阅](../results/round73_native_relative5/attempt1/report.md)
+
+**原生五组新种子的固定复现现已完成并审阅：基础 mCA 为 79.645% 对 Distance 的 77.763%，平均 +1.882 pp，五组均正。** 配对种子区间 [1.190, 2.714] pp，达到事前确定的开发复现信号；六条件均值均正，但稀疏、密集及 jitter 有个别种子退步，基础种子×类别区间 [−0.322, 4.143] pp 仍跨零。来源收益以 MACGS 更明显，OA/CE 也有反例。它强化了当前旧对象上的可重复平均收益，尚非未用对象确认，也不改写 R73 的原结论。随后固定 31 个已选模型并完成完整官方 TEST 确认：主对象组的新五组基础平均 +1.122 pp，联合区间 [−0.326,2.693] pp，预定结论为证据尚不充分；变化协方差相对固定球形在新对象上再高 +2.244 pp，获得正面归因证据。[完整复现与审阅](../results/native_seed_replication/attempt1/report.md) · [确认模型与规则](../results/native_confirmation/attempt1/evaluation_lock.json) · [正式确认与实际审阅](../results/native_confirmation/attempt1/report.md)
 
 **原生固定球形归因也已完成并审阅：变化协方差使五维相对同参数径向控制再高 +2.731 pp，三个配对种子均正，类别区间 [0.607, 4.995] pp。** 六条件均值及逐种子 mCA/OA/CE 均改善，但稀疏类别区间跨零，局部来源组有反例。固定球形平均 mCA 为 77.298%，低于 Distance 的 78.426%，因此 Distance 仍是后续稳定性复现的主要强对照；旧 R73 未通过的判断不变。[原生归因结果与审阅](../results/native_shape_attribution/attempt1/report.md)
 
@@ -76,6 +86,8 @@ r_{ij}=\operatorname{MLP}(\phi_{ij}).
 实现：[R69 候选](../models/round69_compact_relation.py)、[R70 适配](../models/round70_nvs.py)、[R71 投影接法](../models/round71_target_projection.py)。当前版本属于可学习相对 PE，不能称为新 RoPE 公式、新高斯距离定理或首次提出高斯 attention。
 
 这四个形状相关分量与经典高斯 KL 直接相关：双向 KL 之和 `J=(mi+mj+ti+tj−6)/2`。R58 已使用 `sqrt(J)`，但其固定 sin/cos 加线性读出失败，不能单独说明“先合成标量”就是病因。新增的可学习单散度控制已完成（§5.7）：以普通距离加 `log1p(J)` 的重复槽输入同样 MLP，保留完整初始化和训练预算。它明显改善 Distance，五维在其上仍有区域召回收益，但并非全部中心指标更好。该控制只有两个独立输入，不宣称五维必然最小或已经测得二输入实现效率。[公式来源与比较缺口](../results/research_related_work/gaussian_relation_20261105/notes.md) · [固定控制计划](../results/region_jeffreys_control/preparation/plan.json)
+
+2026-11-06 补充核对了 GPSToken、JSRE、GST-VLA 与 GaussianGPT 的作者原文：高斯参数投影为 query、协方差感知的局部形状编码，以及高斯潜在网格的三维 RoPE 均已有先例。当前贡献需依靠同信息下相对关系组织的实际用途证据，不能表述为首次将高斯参数用于 Transformer。此次没有复现这些完整系统或据其分数改变现行模型；原生可学习 Jeffreys 控制现已补齐（§6.4），未形成更强的一般替代。[原文接法、区别与范围](../results/research_related_work/gaussian_parameter_encoding_20261106/notes.md)
 
 末层无偏置时，\(q_h^\top W_h z_{ij}=(W_h^\top q_h)^\top z_{ij}\)，可以先投影 query，避免显式存储完整关系向量，保留相同参数和数学公式。早期 R70 小型 CPU 检查估算一个 bf16 中间量约为 432 MiB，但隐藏成对量仍约 216 MiB，反向和临时内存仍存在。该检查有 bf16 舍入差异，未改动训练，也没有测量 R70 图像模型的 GPU 收益；下述新增实测只覆盖原生/区域 FP32 模型。[早期检查](../results/round70_nvs/attempt1/cost_diagnostic1/result.json) · [代价说明](../results/round70_nvs/attempt1/cost_diagnostic1/interpretation.json)
 
@@ -305,7 +317,7 @@ R67 两组都从相同距离模型出发、续训相同 20 epochs；其配对差
 
 三个拟合均完成 120 epochs/46,800 updates、退出码 0，全部采样流及共同初始化与配对 Distance 一致。所有模型选定后才导出 18 组新预测，按身份复用 90 组控制；108 组的独立指标回算最大差 4.44e−16。GPU 选模回放 logits 误差为零，CPU 与排列检查的微小差异没有改变预测类别；已实际查看比较图、验证曲线与条件热图，热图的均值不能替代逐种子判断。原控制器 PID 97114、exec 会话 47612 已结束，勿重复启动。官方 TEST 仍未用于本轮。[已完成拟合核对](../results/round73_native_relative5/attempt1/completed_fits_check.json) · [统一选模与回放](../results/round73_native_relative5/attempt1/selected.json) · [审阅记录](../results/round73_native_relative5/attempt1/review.json) · [完成状态](../results/round73_native_relative5/attempt1/queue_status.json)
 
-**原生固定球形归因完成后启动的五组新种子配对复现，已完成 8/10 次拟合，现已恢复补跑剩余两项，整批尚未完成。** 假设仍是当前五维对 Distance 的平均收益可重复；竞争解释是旧三种子的偶然波动或持续的效果异质性。新增种子 44/55/66/77/88，原五维与原 Distance 共十次 120 epochs/46,800 updates 拟合；数据、共同内容、模型、几何 floor、优化器与 CE 选模不变。六条件完整保留，十个模型统一选定后才导出旧 dev_eval。两个既有检查确认模型一致性、共同初始化及旧/新种子决策隔离。[固定复现计划](../results/native_seed_replication/preparation/plan.json) · [科学冻结身份](../results/native_seed_replication/attempt1/lock.json) · [原执行决定](../results/native_seed_replication/preparation/priority_update_20261105_03.json)
+**原生固定球形归因完成后启动的五组新种子配对复现，十次拟合、六条件评价和实际审阅现已全部完成。** 假设是当前五维对 Distance 的平均收益可重复；竞争解释是旧三种子的偶然波动或持续的效果异质性。新增种子 44/55/66/77/88，原五维与原 Distance 共十次 120 epochs/46,800 updates 拟合；数据、共同内容、模型、几何 floor、优化器与 CE 选模不变。六条件完整保留，十个模型统一选定后才导出旧 dev_eval。全部五组共同初始化与 120 轮实际采样流通过原选模核查。[固定复现计划](../results/native_seed_replication/preparation/plan.json) · [科学冻结身份](../results/native_seed_replication/attempt1/lock.json) · [完整结果与审阅](../results/native_seed_replication/attempt1/report.md)
 
 报告将旧三组、新五组和合并八组分开。预定的新五组信号为基础 mCA 平均至少 +0.5 pp，且配对种子 bootstrap 95% 下界为正；同时报告条件于种子的类别区间、种子×类别区间、全部种子及六条件。它只回答是否值得进入另行冻结的未用数据确认，**不改写 R73 旧判据未通过，也不是新数据确认**。五种子区间仍是旧 765 对象下的近似开发不确定性描述；若信号不明确，结束固定批次并重新评估设计，不追加种子直到通过。
 
@@ -315,13 +327,42 @@ R67 两组都从相同距离模型出发、续训相同 20 epochs；其配对差
 
 **用户随后明确授权继续原计划，并允许在已有任务的显卡上共享余量。** 保留八个完整拟合，先在 GPU 0 串行补跑种子 88：最多一个自有 GPU 子任务，连续占用检查及 CUDA 探针通过、启动前至少 20 GiB 空闲，PyTorch 分配器上限 16 GiB。此前实际完整训练峰值约 12.2 GiB；GPU 2 空闲量曾从约 30 GiB 跌至约 5 GiB，故当时未选择。科学配置不变，共享耗时不用于方法速度比较。原共享后台控制器 PID 92132、relative5/88 PID 92266 随后按下段受控接续，勿重复启动。初始首轮正常，后续曾核对第 83 轮进展；八个完整拟合和全部旧记录均保留。[共享恢复历史](../results/native_seed_replication/attempt1/shared_recovery1/report.md) · [原资源安排](../results/native_seed_replication/attempt1/shared_recovery1/plan.json) · [原首轮进度](../results/native_seed_replication/attempt1/shared_recovery1/first_progress.json)
 
-**最新执行：用户通知显卡空闲后，种子 88 已恢复两卡并行。** 整卡方案在切换前因其他新任务进入而未执行，未中断原训练；依照已有共享授权改为 GPU 0/7，各自至少 20 GiB 空闲且通过连续检查与 CUDA 探针后启动，PyTorch 分配上限均为 16 GiB。旧共享控制器受控退出，新控制器 PID 40001；relative5/88 PID 41704 在 GPU 0 从完整第 100 轮、39,000 次更新的模型/优化器/采样器状态接续，Distance/88 PID 41747 在 GPU 7 从原初始化开始。实际恢复检查点身份一致，其他任务保持运行，最终预算仍是 120 轮。两项都结束后自动接续十模型选模、全部新五组六条件开发导出（最多两卡并行）和原报告；实际结果及图表仍待审阅，官方 TEST 未开放。[两卡并行接续与范围](../results/native_seed_replication/attempt1/parallel_handoff2/report.md) · [最终资源安排](../results/native_seed_replication/attempt1/parallel_handoff2/plan.json) · [停止与恢复记录](../results/native_seed_replication/attempt1/parallel_handoff2/stop_record.json)
+**最后两项的执行历史：用户通知显卡空闲后，种子 88 恢复两卡并行，现已完成。** 整卡方案在切换前因其他新任务进入而未执行，未中断原训练；依照已有共享授权改为 GPU 0/7，各自至少 20 GiB 空闲且通过连续检查与 CUDA 探针后启动，PyTorch 分配上限均为 16 GiB。五维从完整第 100 轮的模型/优化器/采样器状态接续，Distance 从原初始化开始，两项均完成 120 轮、退出码 0。随后自动完成十模型选模、两卡六条件开发导出和汇总。控制器 PID 40001 与最后训练、评价进程均已结束，勿重复启动。[两卡并行接续历史](../results/native_seed_replication/attempt1/parallel_handoff2/report.md) · [完成队列](../results/native_seed_replication/attempt1/queue_status.json)
 
-**原生未用对象确认的条件计划和分析实现已准备完成。** 预定保留官方 6,090 个对象，并将其中无已知历史 ID 重叠、覆盖 60 类的 3,845 个对象作为主要泛化判断人群；新五组 relative5 对 Distance 是主比较，旧三组和合并八组分别报告。全部 21 个旧模型及 10 个新模型槽位、六条件、186 组预测范围已固定。主信号要求平均至少 +0.5 pp，且配对种子与类内对象联合重采样区间下界为正；另报条件区间、来源组及所有种子，不用完整官方人群或合并种子成绩救主比较。小种子数的区间仍是近似不确定性描述，不保证精确覆盖率或整体任务成功。
+**完整复现结论：新五组基础 mCA 提升 +1.882 pp，五组均正，原定信号成立。** 五个配对差为 +1.377/+1.983/+0.661/+3.403/+1.985 pp；原五维与 Distance 分别为 79.645% / 77.763%。配对种子区间 [1.190, 2.714] pp，条件于种子的类别区间 [0.148, 3.500] pp；种子×类别敏感性区间 [−0.322, 4.143] pp 仍跨零。新五组基础 OA 平均 +1.882 pp、4/5 正，CE 平均低 0.02660、3/5 改善。MACGS / ModelNet 的 mCA 平均差为 +3.170 / +0.593 pp，分别 4/5、3/5 正；60 类为 34 正、19 负、7 平。来源类别集合不同，不称跨域迁移。
 
-五项分析检查已通过，九份旧预测重现已有 765 对象上的配对点估计；没有新训练或 TEST 基元/评分。当前计划锁仅固定前瞻规则和实现，十个新模型最终身份尚待原选模流程完成。只有固定复现完整结束、其原定信号成立并审阅后，才封存全部模型及执行来源、开放测试数据；不成立则保留未执行计划并重新评估设计。[条件计划、实现及范围](../results/native_confirmation_protocol/attempt1/report.md) · [计划锁](../results/native_confirmation_protocol/attempt1/lock.json)
+六条件 mCA 均值均正，保留种子 88 的 sparse256 −0.468 pp，以及种子 66 的 dense1024 / jitter02 −0.413 / −0.207 pp。种子 77 在选模验证对象上曾为 −2.093 pp，在旧 dev_eval 却为 +3.403 pp，不能仅据一个划分给种子贴稳定的失败标签。十模型 GPU 选模回放误差为零，CPU 和排列微差未改变类别；独立指标最大差 3.33e−16。实际看过全部配对/条件图和十模型训练曲线。原三组 R73 条件仍未通过，合并八组仅作背景，当前也不代表一般有效。[完整结果、解释与下一步](../results/native_seed_replication/attempt1/report.md) · [实际审阅](../results/native_seed_replication/attempt1/review.json)
 
-**确认流程的执行衔接也已完成旧数据检查。** 新入口复用既有缓存、模型和统计，实现最终身份固定、逐对象下载、最多八卡推理和完整汇总；未完成/未审阅/未出现原定复现信号时不能开放 TEST。五项衔接检查通过，21 个旧模型正确对应原选模，12 份六对象缓存输出读取一致，126 份旧开发预测组成的 108 份比较重现原配对 mCA，最大差约 5.11e−14 pp。没有新拟合或新 GPU 推理，也未执行正式下载/31 模型确认；当前缺口为种子 88 的两次拟合、十模型统一选模与整批开发评价及审阅。完整网格的合成检查不能算效果证据。[执行衔接与范围](../results/native_confirmation_workflow_validation/attempt1/report.md)
+**原生未用对象确认的事前方案（现已执行完成）。** 预定保留官方 6,090 个对象，并将其中无已知历史 ID 重叠、覆盖 60 类的 3,845 个对象作为主要泛化判断人群；新五组 relative5 对 Distance 是主比较，旧三组和合并八组分别报告。全部 21 个旧模型及 10 个新模型槽位、六条件、186 组预测范围已固定。主信号要求平均至少 +0.5 pp，且配对种子与类内对象联合重采样区间下界为正；另报条件区间、来源组及所有种子，不用完整官方人群或合并种子成绩救主比较。小种子数的区间仍是近似不确定性描述，不保证精确覆盖率或整体任务成功。
+
+五项分析检查已通过，九份旧预测重现已有 765 对象上的配对点估计；这些执行检查没有新训练或 TEST 基元/评分。现固定复现已完整结束、原信号成立且完成实际审阅，31 个模型和执行来源已全部封存。2026-11-06 已完成 hf-mirror.com 直连的完整 6,090 测试对象下载和逐对象缓存，约 75.826 GiB 原始数据转换为 1.208 GiB 缓存数组；程序自动从 GPU 0、4 两卡启动，随后按空闲资源扩大到最多六卡并行。31 个模型、186 组预测及实际审阅现已完成，所有模型退出码均为 0。模型、六条件与主要人群不变，无新拟合。[条件计划](../results/native_confirmation_protocol/attempt1/report.md) · [最终身份](../results/native_confirmation/attempt1/evaluation_lock.json) · [完整缓存记录](../results/native_confirmation/attempt1/acquisition.json) · [访问登记](../results/native_confirmation/attempt1/data_access_started.json)
+
+**确认执行准备与正式启动的历史：** 五项衔接检查通过，21 个旧模型正确对应原选模，12 份六对象缓存输出读取一致，126 份旧开发预测组成的 108 份比较重现原配对 mCA，最大差约 5.11e−14 pp。那些检查没有新拟合或新 GPU 推理，完整网格的合成检查也不是效果证据。此前缺少的新五组拟合、选模、开发评价和审阅现均完成；首次启动进程 PID 38272 已按下段受控接续，首次启动时数据盘约 157 GiB 可用，已验证镜像及 CDN 跳转均禁用代理，首个对象下载、哈希核对与缓存提交成功。后续进展以实际进程、缓存提交记录和队列为准，不把启动或首对象成功写成完整确认。[执行衔接检查](../results/native_confirmation_workflow_validation/attempt1/report.md) · [正式日志](../results/native_confirmation/attempt1/parallel_download2/controller.log)
+
+**下载资源历史：** 顺序下载较慢，曾接续为四路有界预取；该阶段 PID 7789 现已按下段受控结束。三项边界检查通过，同六个旧 fit 对象及两个已用镜像对象的完整缓存与原实现一致；转换顺序、采样、模型、数据范围与统计均不变。已保留原 32 个提交对象，接续后约 411 秒新增 30 个对象、约 0.89 GB，首次核对累计 62/6,090，无下载错误或限流；这是执行进展，正式评分仍待完整缓存。镜像及 CDN 均直连，临时原文件总上界约 747.5 MiB。[资源接续与证据](../results/native_confirmation/attempt1/parallel_download1/report.md)
+
+**八路预取和后续正式推理均已完成，原控制器 PID 51480 已退出。** 四路传输持续无错误或限流后，为缩短完整测试数据等待，在同一预取实现的既有上限内增加并发。五项并发/续接/错误检查通过，同六个旧 fit 对象的完整缓存与原路径逐字节一致。仅受控停止已核实身份的原下载进程，保留 324 个提交对象并核对前缀一致；原转换顺序、采样、模型与评价不变。镜像及 CDN 始终直连，原始临时文件总上界约 1.31 GiB；完成时预取器已关闭、临时文件已释放，最终传输记录无错误或限流。[八路接续与检查](../results/native_confirmation/attempt1/parallel_download2/report.md)
+
+**正式推理及实际审阅已完成。** 原空闲卡队列自动从两卡扩展到最多六卡，全部 31 个模型退出码为 0，186 份输出均覆盖完整 6,090 对象。独立类别计数复算五个人群的 mCA/OA 和 240 份配对比较，最大指标差 5.55e−16、配对差 6.21e−14 pp；主图已实际查看，31 模型的排列检查均无预测类别变化。原始生成结果的 pending 标记保留，实际审阅以 review.json 为准。共享调度适配本次未启用。[完整结果](../results/native_confirmation/attempt1/report.md) · [实际审阅](../results/native_confirmation/attempt1/review.json)
+
+此前按已有授权准备的共享补充仍可用于后续资源不足时的接续：空闲卡优先、总任务最多八项、其中已占用卡上的共享任务最多两项；共享启动至少 20 GiB 空闲，各任务使用 16 GiB PyTorch 分配上限，并保留连续观察、CUDA 探针和启动前复查。七类模型在六个旧 fit 对象的 dense1024 条件下最大峰值约 3.457 GiB；五维/Distance 的十二组旧输出与原记录完全一致。该执行准备不改变模型、四对象评价 batch、六条件或统计，当前没有重复启动另一队列。[GPU 执行准备与检查](../results/native_confirmation/attempt1/gpu_resources1/report.md)
+
+**完整确认结论：形状关系的额外价值得到支持，基础强对照收益仍不确定。** 主比较在 3,845 个无已知历史 ID 重叠对象上使用新五组，五维 / Distance mCA 为 79.601% / 78.479%，平均 **+1.122 pp**，配对差 +3.293/+2.053/+0.345/−0.131/+0.050 pp。联合种子×类内对象区间 **[−0.326,2.693] pp**，预定结论为 `inconclusive`。关键限制是效应的种子差异和联合不确定性，77 的微小负差本身不构成否定理由。基础 OA 平均 +1.150 pp、4/5 正，CE 降低 0.04079、5/5 改善；60 类中 39 正、17 负、4 平。旧三组和合并八组分别报告；合并八组 +1.221 pp 的正区间不替换新五组主规则。
+
+| 主对象组、新五组条件 | 五维减 Distance mCA pp | 正向种子对 | 联合区间 pp |
+| --- | ---: | ---: | --- |
+| base | +1.122 | 4/5 | [−0.326,2.693] |
+| sparse256 | +2.005 | 5/5 | [0.520,3.500] |
+| dense1024 | +1.103 | 5/5 | [−0.073,2.280] |
+| jitter02 | +1.097 | 4/5 | [−0.322,2.613] |
+| tilt | +1.192 | 5/5 | [−0.170,2.652] |
+| permuted | +1.122 | 4/5 | [−0.326,2.693] |
+
+**变化协方差相对固定球形的确认更明确：** 在同一主对象组、相同旧三组，五维 mCA 79.673% 对固定球形 77.430%，差 **+2.244 pp**，三组 +2.583/+2.365/+1.783 pp，联合区间 **[1.001,3.446] pp**。六条件的逐种子 mCA/OA/CE 均改善，六个 mCA 联合区间下界均正。共同内容仍含真实形状，支持形状参与 PE 的额外用途；不证明每个分量必要或高斯形式唯一。固定球形在主对象组仍比 Distance 平均低约 0.857 pp。对旧 full11，五维仅平均 +0.481 pp、2/3 正，精简没有成为全面准确率优势。
+
+**稀疏现象提供后续解释线索：** 基元由 512 减至 256 时，五维 / Distance 的平均 mCA 下降 2.877/3.761 pp，五维少降 0.883 pp、五组方向一致；这是对原定条件的描述性差值，没有新增显著性判断。稀疏 OA 五组均改善，但种子 77/88 的 CE 更差；permuted 复现 base，不是独立重复。当前均在 512 基元训练，不能据此区分有限观测收益与训练—测试数量变化的适应能力。
+
+来源上，主对象组的 MACGS 为 2,124 对象、30 类，基础 +1.728 pp、5/5 正；其中 ModelNet 为 1,721 对象、30 类，描述性 +0.516 pp、2/5 正。完整 ModelNet 组包含历史复用对象，不能与主对象组的 ModelNet 混写；来源类别集合不同，不是跨域迁移证据。官方全部 6,090 对象现已使用，后续修改不能再以本批次作 fresh confirmation。R73、RGB、投影和直接迁移的既有负结果不改写，整体目标仍未完成。[完整证据、范围与下一步](../results/native_confirmation/attempt1/report.md)
 
 **原生固定球形对照的三次完整拟合、18 组新预测和实际审阅均已完成。** 只在 PE 中把协方差替换为 `.2²I`，完整真实形状仍在共同的 13 维内容中；同五输入 MLP、352,220 模型参数、9,792 PE 参数、完整初始化及全部输入流均配对。三个种子选中 epoch 为 100/105/120，均完成 120 epochs/46,800 updates。
 
@@ -350,6 +391,49 @@ R67 两组都从相同距离模型出发、续训相同 20 epochs；其配对差
 普通距离中位数接近，协方差度量的相对放大却相差约 339 倍；原生输入的各向异性尾部也更强，同迹球形方向放大比的 95 分位为 1,197.9，对观测区域为 12.55。这支持把“渲染基元形状”和“观测区域范围”的尺度语义区分开。它没有证明 MLP 无法适应、分类失败由此造成，或修改协方差尺度就能改善结果；点数、构造方式、任务与取样都有差异。
 
 指标计算使用 float64，独立线性求解的相对差最大约 7.35e−14，与未修改 PE 实现的描述符差最大约 8.24e−7，没有据此发现数值失稳。观测区域存在相同/极近中心，导致“支撑/最近邻距离”的算术均值被近零分母主导；这里只用中位数与分位数描述典型范围，原数值和零分母计数全部保留，不更改数据或另设门槛。诊断完成后得到的 R73 结果表明：即便输入范围差异很大，五维仍能稳定改善 Direct/旧十一维，故尺度差不能自动解释为失效。是否进行尺度相关设计还需结合补充强对照与稳定性证据，本诊断没有选择新模型或参数。[事前诊断计划](../results/geometry_scale_diagnostic/attempt1/plan.json) · [完整统计与样本身份](../results/geometry_scale_diagnostic/attempt1/result.json) · [解释与边界](../results/geometry_scale_diagnostic/attempt1/interpretation.json)
+
+**已进一步检查原始描述符范围是否转化为学习后的注意力失衡。** 事前固定使用与上述诊断完全相同的 120 个旧 fit 对象、各 512 基元，比较原五维、Distance 和同容量固定球形各三个旧种子，覆盖四层、两头。分解原 QK 内容分数与查询相关的位置分数，先扣除每个 query 行的常数偏移再算 RMS；同时观察完整注意力熵和同一层输入下的位置项影响。九个模型不更新、不重选，没有读取 val/dev_eval、新五组模型或官方 TEST。
+
+五维的位置/内容 RMS 比中位数为 **3.003/2.777/2.810**，Distance 为 **4.727/3.573/4.269**，固定球形为 **4.099/4.197/4.133**；五维完整注意力的归一化熵约 **0.71–0.72**，两个径向控制约 **0.58–0.65**。因此本样本不支持“高斯原始描述符大，所以学习后的位置项整体更强、更饱和”的简单解释，也未找到旧弱种子 22 的全局异常。局部集中尾部仍存在：五维/22 的强注意力 query 比例第 95 分位高于另外两个五维种子，但仍低于 Distance/22，不能忽略，也不能单独定位病因。统计含相关的层/头观测，独立输入只有 120 个旧训练对象，方法间内容表示也不同，不能据此声称因果解释或泛化收益。当前决定是保留五组复现与候选结构，不据此添加温度、归一化或门控。九模型观察钩子的首批 logits 误差为零、状态不变，三幅统计图已实际查看。[事前计划](../results/native_attention_balance_diagnostic/attempt1/plan.json) · [完整诊断与范围](../results/native_attention_balance_diagnostic/attempt1/report.md) · [实际审阅](../results/native_attention_balance_diagnostic/attempt1/review.json)
+
+### 6.3 匹配 256 基元：准确率优势缩小，概率预测改善保留
+
+数量对照新增九次拟合，沿用旧 6,227/765/765 对象划分、完整共同内容和 120 epochs / 46,800 updates。生成原 512 基元采样与增强后，仅将前 256 个送入模型；各角色与旧流程的共同初始化、完整数据流配对一致。新模型按 val256 CE 选择，旧模型保留原 val512 CE 选择。以下是相同旧三个种子及相同开发对象的比较：
+
+| 训练→评价基元数 | 五维 mCA % | Distance mCA % | 固定球形 mCA % | 五维减 Distance pp | 五维减固定球形 pp |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| 512→512 | 80.029 | 78.426 | 77.298 | +1.603 | +2.731 |
+| 512→256 | 76.302 | 75.413 | 74.162 | +0.888 | +2.139 |
+| 256→512 | 77.039 | 76.303 | 77.400 | +0.736 | −0.361 |
+| **256→256，主诊断** | **76.743** | **76.620** | **76.573** | **+0.123** | **+0.170** |
+
+匹配条件对 Distance 的配对差为 −0.086/−0.141/+0.597 pp，对固定球形为 +0.918/−1.086/+0.677 pp；种子×类别区间分别为 [−2.167,2.383] / [−2.330,2.973] pp。结果是准确率优势接近零且不确定，不是正式等效性证明。CE 分别改善 0.0280 / 0.0356、三个种子均正向；OA 改善 +0.305 / +0.436 pp，各 2/3 正，不能用它们替换主指标或据 CE 单独声称校准更好。
+
+匹配数量使五维 / Distance / 固定球形在 256 评价上分别提高 +0.441 / +1.206 / +2.411 pp，与控制方法适配后追上的解释相容。五维相对两个控制的优势变化为 −0.765 / −1.970 pp，但差中之差的联合区间仍跨零；训练和选模数量又共同改变，不能确证所有旧增益都是数量不匹配造成的。也不能将官方新五组 sparse256 的 +2.005 pp 与这里旧三组 +0.123 pp 直接相减作因果解释。
+
+更大数量亦有实际反例：256→1024 时，五维对固定球形平均 −2.719 pp，三个种子均负；对 Distance 为 −0.133 pp、方向混合。不能声称对任意数量变化都更稳健。既有原生 512 的新对象形状归因、区域确认及 RGB/迁移负结果保持原判断。
+
+九项训练无恢复/重跑且退出码均为 0，统一选模后导出 54 组新预测、复用 54 组旧预测；GPU 验证回放差为零，独立指标复算最大差 4.44e−16，置换没有分类变化，比较图已实际查看。控制器 PID 105914 和只读观察会话 20388 均正常结束，勿重启；原始待审阅标记保留为生成时快照，实际状态见 `review.json`。本轮没有官方 TEST 访问，不晋升匹配 256 流程，也不追加种子追求通过。[事前计划](native_matched256_plan.md) · [完整报告](../results/native_matched256/attempt1/report.md) · [实际审阅](../results/native_matched256/attempt1/review.json)
+
+### 6.4 对称三维与原生可学习单散度：精简没有保留核心用途
+
+15 次新拟合均完整结束并统一选模，78 组新预测与 138 组复用预测完成审阅。对称三维平均两端的 log 位移度量、log 形状关系，保留普通距离和同一个 MLP；匹配重复槽保证初始化与参数量不变，没有引入模块或调整训练预算。
+
+| 方法 | 区域基础 R@1 % | 原生 512→512 mCA % | 原生 256→256 mCA % |
+| --- | ---: | ---: | ---: |
+| relative5 | 40.628 | 80.029 | 76.743 |
+| Distance | 36.670 | 78.426 | 76.620 |
+| 固定球形 | 37.288 | 77.298 | 76.573 |
+| symmetric3 | 37.811 | 77.824 | 77.642 |
+| 可学习 Jeffreys | 39.074 | 77.351 | 77.085 |
+
+三维相对五维的区域基础 / 稀疏召回低 2.817 / 3.251 pp，三个种子均负；中心 PCK 低 1.010 / 1.277 pp，hard/soft EPE 和 CE 也在三个种子均变差。基础种子×场景区间 [−3.728,−2.119] pp。因此不是区域召回与中心定位的取舍。原生 512 三维对五维低 2.206 pp、三个种子均负，全部扰动条件也逐种子退步；对 Distance 平均低 0.603 pp。Jeffreys 对五维低 2.678 pp、对 Distance 低 1.075 pp；种子 22 完整正常训练但结果较弱，保留而不重跑。
+
+匹配 256 三维对五维 / Distance / 固定球形平均 +0.900 / +1.023 / +1.069 pp，联合区间均跨零。对后两者 CE 三种子均改善，但对五维 CE 均值略差；256→1024 对固定球形仍低 1.509 pp，ModelNet 来源的匹配 256 归因也有三种子负项。局部正面结果不能抵消另外两个主条件的损失，不要求所有细小子组同号。
+
+所有训练损失、梯度有限，初始化和输入流与既有五维配对一致；GPU 选模回放一致，指标独立算术最大差 8.88e−16，排列检查无类别改变，两张图已实际查看。没有用 CPU/GPU 尾数差设置新科学门禁。重复槽没有带来已测得的三输入实现效率，结果也不证明所有三维编码不可能。
+
+按事前决定，保留五维候选，不推广对称三维或单散度，不再追加小模块追逐旧数据分数。当时提出跨来源确认，后续讨论调整为先整理现有预测的成功与失败，见 §10；跨来源草案尚未执行。[固定计划](symmetric_relation_plan.md) · [完整结果、条件与分析](../results/symmetric_relation/attempt1/report.md) · [实际审阅](../results/symmetric_relation/attempt1/review.json)
 
 ## 7. 已完成的 R70：当前图像接法没有稳定收益
 
@@ -469,18 +553,35 @@ RGB 组则有小幅一致的基础收益：PSNR 平均 +0.055 dB，SSIM +0.00400
 | 需要回答的问题 | 已有证据 | 当前状态 |
 | --- | --- | --- |
 | 算子/实现是否与定义一致 | 单测、梯度、同信息初始化、实际输入流、选模与指标回算 | 对已完成的相应实验有支持，不等于效果证据 |
-| 形状信息如何进入 PE 更有用 | 区域开发与九个新场景固定球形确认；原生对固定球形额外 +2.731 pp；投影固定形状保留多数图像收益 | 区域有新场景证据，原生有开发归因证据；不把全部投影用途归给协方差 |
+| 形状信息如何进入 PE 更有用 | 区域九个新场景固定球形确认；原生新对象对固定球形额外 +2.244 pp、联合区间为正；投影固定形状保留多数图像收益 | 区域和原生均有新数据归因证据；投影用途的协方差贡献仍有限 |
 | 是否优于强对照 | 区域开发和九个可用新场景均优于五项强控制；R71 旧场景正面，投影新场景对 Distance 不稳定 | 区域用途得到确认，尚非一般方案 |
 | 区域收益是否牺牲中心定位 | R68–R69 与九个新场景两类指标共同改善 | 不支持总体此消彼长的解释，细分例外保留 |
-| 是否跨域/稀疏普遍稳健 | 直接迁移失败；固定查询稀疏保持领先但降幅并非全面更小 | 不能宣称普遍鲁棒性 |
+| 具体纠正什么、又损失什么 | 已有预测按样本配对分解，保留种子反转、失败案例与输入几何分组 | 区域纠正多于新错误；原生交换明显、匹配 256 近乎抵消；尚无统一几何机制解释 |
+| 是否跨域/稀疏普遍稳健 | 直接迁移失败；512 训练的新对象 sparse256 为正；新 256 匹配流程对两个控制仅 +0.123/+0.170 pp，256→1024 对固定球形退步 | 条件性稀疏证据保留，少量基元本身放大形状收益的解释受到削弱；不是普遍数量鲁棒 |
 | 五维候选是否改善图像任务 | R71 旧场景通过；新场景对 Direct/相机控制有收益，但对 Distance 不稳定；R72 RGB 为混合结果 | 额外形状关系的一般用途未确证 |
-| 是否用于真实优化 3DGS 也稳定有效 | R73 对 Direct/旧十一维三种子均改善，对 Distance 平均 +1.603 pp、一个种子为负 | 明显改进，最强控制下稳定性仍不足 |
-| 是否有未使用数据确认 | 投影五个新场景为混合结果；区域预定十个中的九个可用新场景通过用途及协方差规则 | 区域可用范围内正面确认，不填补缺失场景或覆盖其他任务 |
+| 是否用于真实优化 3DGS 也稳定有效 | 新对象主比较 +1.122 pp、4/5 正，联合区间 [−0.326,2.693]；固定球形归因和稀疏比较为正 | 主确认仍不确定，形状额外用途得到支持，尚非一般稳定优势 |
+| 是否有未使用数据确认 | 投影五场景为混合结果；区域九个可用新场景为正；原生 3,845 主对象组完成固定确认 | 区域用途和原生形状归因为正，原生基础强对照仍不确定，确认集今后均按已用处理 |
 | 是否结构精炼且实际高效 | 一个五输入关系 MLP；代数重排使原生前向＋反向耗时下降约 34.35%、峰值显存下降 28.20%，五维仍比同等优化的 Distance 慢约 16.34% | 有限定范围的效率改善；区域未加速，二次开销仍在，不是高斯专属收益 |
 
 因此当前最准确的研究结论是：**高斯参数化值得作为区域关系的组织方式继续研究；现有证据还不足以把它提升为优于强编码方式的一般性位置编码。** “区域形状关系能帮助某个任务”与“必须采用高斯/所有任务都受益”之间仍有证据缺口。
 
-R70 的旧接法停止，R71、[R72 RGB 验证](round72_rgb_projection_plan.md)、R71 新场景确认、固定形状诊断及 R73 原生验证均完成。R73 给出了精简设计在原生基元上的明显改进，Distance 下的种子不稳定仍需解释；新场景确认也保留了部分正面比较与对 Distance 的不稳定。固定形状诊断提示后续图像比较应加入固定查询度量，不能继续以普通 Distance 之上的全部差距代表协方差收益。区域匹配的 GeoTransformer/角度描述符对照已完成并保持正面优势，补齐了当前比较范围。三个区域固定球形对照也已完成：变化协方差额外提供基础/稀疏 +3.340/+3.363 pp 的召回，中心指标共同改善。九个可用新场景确认保留区域用途优势和额外协方差收益（§5.6），原生固定球形对照现也完成：变化协方差额外 +2.731 pp，但固定球形弱于 Distance。针对 R73 随机性问题，现执行原定五组新种子 relative5 对 Distance 复现；保持固定批次、原预算及新五组主判断，旧三组结论保留。保持候选不变，不用补对照替代 RGB 或新场景验证，不由尺度统计直接选择新参数。RGB 感知指标和几何诊断的正面信号不被删除，也不替代主判断。适用的几何/鲁棒/泛化验证继续保留，但不要求每一处微小尾数同号，不恢复静态求积通用门禁。
+R70 的旧接法停止，R71、[R72 RGB 验证](round72_rgb_projection_plan.md)、R71 新场景确认、固定形状诊断及 R73 原生验证均完成。R73 给出了精简设计在原生基元上的明显改进，Distance 下的种子不稳定仍需解释；新场景确认也保留了部分正面比较与对 Distance 的不稳定。固定形状诊断提示后续图像比较应加入固定查询度量，不能继续以普通 Distance 之上的全部差距代表协方差收益。区域匹配的 GeoTransformer/角度描述符对照已完成并保持正面优势，补齐了当前比较范围。三个区域固定球形对照也已完成：变化协方差额外提供基础/稀疏 +3.340/+3.363 pp 的召回，中心指标共同改善。九个可用新场景确认保留区域用途优势和额外协方差收益（§5.6），原生固定球形对照现也完成：变化协方差额外 +2.731 pp，但固定球形弱于 Distance。针对 R73 随机性问题，原定五组新种子 relative5 对 Distance 复现已完成，新五组基础平均 +1.882 pp、5/5 正，达到原信号；来源与扰动仍有反例。完整官方确认现已完成：主比较 +1.122 pp 的联合区间跨零，变化协方差额外 +2.244 pp 和预定稀疏条件 +2.005 pp 的区间为正。保持候选不变，不用补对照替代 RGB 或新场景验证，不由尺度统计直接选择新参数。RGB 感知指标和几何诊断的正面信号不被删除，也不替代主判断。适用的几何/鲁棒/泛化验证继续保留，但不要求每一处微小尾数同号，不恢复静态求积通用门禁。
+
+**旧数据输入数量对照现已全部完成并实际审阅，详见 §6.3。** 首批六卡并行，末三项接续后，九项均完成 120 轮、46,800 步。统一选模和三卡评价正常结束，GPU 2/3 的其他任务保留；没有采用共享卡。整段训练分配峰值 4.012–4.032 GiB，包含 fit 缓存常驻；单 batch CUDA 预检约 2.84 GiB。未使用关系投影重排。[固定方案](native_matched256_plan.md) · [完成状态](../results/native_matched256/attempt1/queue_status.json) · [报告与解释](../results/native_matched256/attempt1/report.md)
+
+数量匹配结果削弱有限观测本身放大形状收益的解释。随后固定并完成三个对称关系量的开发检验：分别平均两端的 log 位移度量和 log 形状关系，保留普通距离、同一个关系 MLP 和匹配初始化；原生补齐可学习单散度控制。15 次拟合、全部选模和 216 组新旧预测均结束，实际审阅见 §6.4。三维在区域和原生 512 条件的核心收益损失明显，按事前规则不推广，也不追加零散模块。
+
+**当前保留 relative5，优先解释收益来源。** 用户指出新场景能力已有检验，新增跨来源测试回答的是更强的附加问题，不能替代当前机制缺口。已有预测整理已完成，随后用户明确授权按指定分支最新方案执行六次“各自大小球形”配对训练。跨来源下载与推理仍未启动，原 test 620 对象 / 七类、完整 60 类头、无适配的方案保留为未执行草案；不把已有官方 TEST 重新当作 fresh。[跨来源草案](modelnet_cross_source_plan.md) · [已完成的预测分析计划](../results/prediction_success_failure/attempt1/plan.md)
+
+本次主要发现是“纠正与引入错误同时发生”：九场景分别 15.321%/12.333%，原生主对象组分别 6.999%/5.877%，匹配 256 分别 6.489%/6.365%。原生 799 个对象至少被纠正一次、690 个至少退步一次，其中 337 个随种子出现两种方向。区域高中心歧义组额外收益约 0.238–0.899 pp，但高各向异性组四条件净收益均更小，候选形状差异与两端差异方向混合；原生类内几何关联也不普遍一致。不能从简单输入统计推导唯一病因，或以两个全五种子成功对象代表机制。
+
+现有关联只用于提出假设，尚不足以决定新模块或证明高斯 PE 必须优于中心编码。[逐样本汇总、成功/失败案例和完整解释](../results/prediction_success_failure/attempt1/report.md)
+
+**正在执行的下一步是把“局部大小”与“完整椭球关系”分开。** 新增 `trace_isotropic5` 仅改变 PE 的协方差，MLP、完整初始化、共同内容、采样流、优化器和总预算与旧五维一致；区域为 60 轮/1,080 步，原生为 120 轮/46,800 步，各三个种子。四种方法固定比较，统一选模后导出 24 组新预测，复用 72 组旧预测，并报告原有中心指标、歧义分组及全部纠正/退步事件。若局部尺度保留用途，优先考虑更简单的解释；若完整五维仍有清楚的额外优势，才支持方向和非球形的联合用途。任务间不同或不确定则保留边界，不用新的模块或反复确认来补齐。当前 CPU/CUDA 检查通过，正式训练已启动；最多六项并行、共享卡最多两项、每项 16 GiB 分配上限。[固定计划](trace_isotropic_plan.md) · [来源对话方案](../results/trace_isotropic/preparation/source_conversation.json) · [冻结身份](../results/trace_isotropic/attempt1/lock.json) · [实时队列](../results/trace_isotropic/attempt1/queue_status.json)
+
+此前训练等待期间已核对后续原生数据的公开目录：OmniObject 高斯、ShapeNet 和 Objaverse 三个入口的版本与文件大小已通过 hf-mirror.com 直连记录，未下载高斯、图像或归档内容，也未申请访问权限。优先核对前两个来源的任务适配和对象身份；ModelNet_Splats 是当前 GSModel60 的已知上游，不能直接当成完全独立来源。新确认对象、划分与实验尚未确定，此准备不改变固定的开发实验或原结论。[候选事实、限制与访问范围](../results/research_data_usage/native_candidates_20261106/notes.md)
+
+进一步核对公开对象清单后，ShapeSplat 的 ShapeNet train 为 51,934 对象 / 55 类，test 为 520 对象 / 43 类，且 520 个 test ID 全部位于 train 中；其相应配置用于 Gaussian MAE 预训练，不能直接沿用为独立分类确认划分。ModelNet 公开目录排除已知已用 ID 后尚有 747 对象，其中原 test 的 **620 对象 / 七类与当前 MACGS 来源输出同名对应**，可作为保留现有 60 类头、无适配的跨来源确认候选。上一版误将 ModelNet 来源的 30 类等同全 60 类，漏掉了 MACGS 对应；已保存原分析并修正。是否采用这一子集及其模型、条件、统计须在读取新高斯和分数前固定，不代表全 60 类确认。此次只读取元数据与作者 loader，当前 15 次训练保持不变。[清单交集、更正与任务边界](../results/research_data_usage/native_candidates_20261106/split_check1/notes.md)
 
 R72 的全部 12 个模型已选定，旧验证集的只读几何诊断按事前计划完成并实际审阅；继承 R70 的深度与 matrix-log 协方差一致性指标，不增加训练或用途门槛。[诊断计划](../results/round72_rgb_projection/attempt1/geometry_diagnostic1/plan.json)
 
@@ -503,14 +604,18 @@ R71 的旧 fit/val 输入诊断显示，基础条件约 92.9%/96.8% 的参考区
 | R72 RGB 接法与并行验证 | [计划](round72_rgb_projection_plan.md)、[完整结果与审阅](../results/round72_rgb_projection/attempt1/report.md)；混合结果，未通过固定用途标准 |
 | R71 五个新场景确认 | [固定计划](projection_confirmation_plan.md)、[评价冻结身份](../results/projection_confirmation/attempt1/evaluation_lock.json)、[完整结果与审阅](../results/projection_confirmation/attempt1/report.md)；混合结果，完整标准未通过 |
 | R73 当前五维的原生基元验证 | [固定计划](round73_native_relative5_plan.md)、[完整结果与审阅](../results/round73_native_relative5/attempt1/report.md)；已完成，明显改善 Direct/旧十一维，对 Distance 的稳定优势未确立 |
-| 原生五维的固定种子复现 | [事前计划](../results/native_seed_replication/preparation/plan.json)、[阶段分析](../results/native_seed_replication/attempt1/completion_analysis1/report.md)、[两卡接续](../results/native_seed_replication/attempt1/parallel_handoff2/report.md)；8/10 完成，已恢复 GPU 0/7 并行补跑 88；四组验证均值 +1.264 pp、3/4 正，五组开发判断尚未完成，旧三组结论保留 |
+| 原生五维的固定种子复现 | [事前计划](../results/native_seed_replication/preparation/plan.json)、[完整结果与审阅](../results/native_seed_replication/attempt1/report.md)；10/10 拟合与六条件评价完成，新五组基础 +1.882 pp、5/5 正，原信号成立；类别、来源和次指标限制保留，旧三组结论不改写 |
+| 原生匹配 256 基元的数量诊断 | [事前计划](native_matched256_plan.md)、[完整结果与实际审阅](../results/native_matched256/attempt1/report.md)；九次拟合、54 组新预测和审阅完成，匹配后准确率优势接近零，CE 改善保留；不宣称等效或数量不匹配是唯一原因 |
+| 三个对称关系量的开发检验 | [固定比较计划](symmetric_relation_plan.md)、[完整结果与实际审阅](../results/symmetric_relation/attempt1/report.md)；15 次拟合与评价完成，区域与原生 512 对五维均退步，匹配 256 局部改善；三维与单散度均不推广 |
+| 现有预测的成功与失败 | [分析计划](../results/prediction_success_failure/attempt1/plan.md)、[报告与具体案例](../results/prediction_success_failure/attempt1/report.md)、[完整主比较案例表](../results/prediction_success_failure/attempt1/primary_cases.csv.gz)；已有预测的纠正/退步分解与几何关联，无新训练、新推理或 fresh 确认 |
+| 学习后的位置项与内容项平衡 | [旧 fit 诊断与审阅](../results/native_attention_balance_diagnostic/attempt1/report.md)；九模型、120 个原训练对象，未支持全局位置项过强唯一解释弱种子；不新增模块或用途门槛 |
 | 区域固定球形协方差归因 | [事前计划](../results/region_shape_attribution/preparation/plan.json)、[冻结身份](../results/region_shape_attribution/attempt1/lock.json)；三个配对拟合及审阅已完成，基础/稀疏额外 +3.340/+3.363 pp；[完整结果](../results/region_shape_attribution/attempt1/report.md) |
 | 可学习单散度的区域对照 | [固定计划](../results/region_jeffreys_control/preparation/plan.json)、[旧场景结果](../results/region_jeffreys_control/attempt1/report.md)、[已用九场景补充](../results/region_jeffreys_control/attempt1/used_scene_extension1/report.md)；三次拟合与评价完成，五维仍有约 +1.4–1.6 pp 召回收益，保留中心指标反例及种子不确定性 |
 | 区域九个可用新场景确认 | [科学计划](region_confirmation_plan.md)、[完整结果与审阅](../results/region_confirmation/attempt1/report.md)；冻结模型保留强控制优势和额外协方差收益，预定第十个场景缺标定 |
 | 当前原实现的 GPU 成本 | [事前计划与完整测量](../results/pe_runtime_diagnostic/attempt1/report.md)；两任务、四方法的整模型前向/反向，保留范围限制 |
 | 相同关系公式的投影重排 | [配对 GPU 成本与审阅](../results/factored_relation_runtime/attempt1/report.md)；原生明显省时省显存，区域未加速，全部兼容控制同等优化；当前训练实现不变 |
-| 原生独立确认的数据入口 | [来源、交集与容量核对](../results/native_confirmation_metadata/attempt1/report.md)、[历史对象复用补查](../results/native_confirmation_metadata/attempt1/historical_overlap1/report.md)、[逐对象缓存验证](../results/native_stream_cache_validation/attempt1/report.md)、[缓存到推理的执行检查](../results/native_confirmation_runtime_validation/attempt1/report.md)；官方 TEST 中 2,245 个底层对象早期已用于 ModelNet 开发，另 3,845 个无已知历史 ID 重叠且覆盖 60 类；测试基元与评分仍未开放 |
-| 原生未用对象确认规则 | [条件计划与分析检查](../results/native_confirmation_protocol/attempt1/report.md)；31 个模型槽位、六条件、完整官方人群及 3,845 无已知历史重叠对象主比较已固定；最终模型锁和正式数据评价尚未执行 |
+| 原生独立确认的数据入口 | [来源、交集与容量核对](../results/native_confirmation_metadata/attempt1/report.md)、[历史对象复用补查](../results/native_confirmation_metadata/attempt1/historical_overlap1/report.md)、[逐对象缓存验证](../results/native_stream_cache_validation/attempt1/report.md)、[缓存到推理的执行检查](../results/native_confirmation_runtime_validation/attempt1/report.md)；官方 TEST 中 2,245 个底层对象早期已用于 ModelNet 开发，另 3,845 个无已知历史 ID 重叠且覆盖 60 类；已完成完整评分及实际审阅，当前官方数据均按已用处理 |
+| 原生未用对象确认规则与结果 | [条件计划与分析检查](../results/native_confirmation_protocol/attempt1/report.md)、[最终模型锁](../results/native_confirmation/attempt1/evaluation_lock.json)、[完整结果与审阅](../results/native_confirmation/attempt1/report.md)；31 个已选模型、六条件及 3,845 无已知历史重叠对象主比较固定，完整 186 组预测及审阅完成，主比较不确定，固定球形归因为正，零新增拟合 |
 | 原生固定球形协方差归因 | [事前计划](../results/native_shape_attribution/preparation/plan.json)、[冻结身份](../results/native_shape_attribution/attempt1/lock.json)、[完整结果与审阅](../results/native_shape_attribution/attempt1/report.md)；三个完整拟合完成，五维比固定球形 +2.731 pp、三种子均正，Distance 仍为更强基线 |
 | 固定参考形状归因诊断 | [事前计划](../results/projected_shape_attribution/preparation/plan.json)、[完整结果与审阅](../results/projected_shape_attribution/attempt1/report.md)；六次拟合、18 份预测和核查均完成，多数图像收益在固定形状后保留 |
 | R70 预测几何解释检查 | [诊断目录](../results/round70_nvs/attempt1/geometry_diagnostic1/)；解释性检查，不另设通过门槛 |
@@ -532,21 +637,21 @@ R73 dc262ad27c049625e206d10f13d941c66f958cc17ff0c41cd1aec0bdb5e76cd0
 
 **新场景确认已完成并审阅：** 五个保留 place 的队列和机械取样规则先于像素读取固定，1,440 个文件共约 218 MB 已直连下载完成、没有失败；240 个三元组的原始像素及缓存存放在用户指定数据盘。R72 未通过，按原计划仅纳入给定几何组 15 个旧验证集已选定模型，不重新训练。像素开放前已冻结全部模型、源码、条件与指标。预处理与 R70 缓存的一致性、输入边界和三条件已检查；45 份模型预测与 6 份零学习参照全部导出，独立复算、图表审阅均完成。旧控制器 PID 24074、exec 会话 24139 已退出，勿重复启动。[固定计划](projection_confirmation_plan.md) · [评价冻结身份](../results/projection_confirmation/attempt1/evaluation_lock.json) · [结果与审阅](../results/projection_confirmation/attempt1/report.md)
 
-**确认数据的当前可用范围：** 已核对 R5/R6/R7 的使用清单，共 21 个已使用或预览的 SUN3D 顶层 place 必须排除；旧 R6/R7 的测试也不能重新标为 fresh。另行保留的 `home_ac`、`hotel_barcelona`、`hotel_graz`、`mit_1_242`、`harvard_computer_lab` 已开放给本次冻结确认，不能以后再当作未见队列重新挑选方案。此前的清单是冻结前快照，现阶段以[像素读取开始记录](../results/projection_confirmation/attempt1/data_access_started.json)和[运行状态](../results/projection_confirmation/attempt1/queue_status.json)为准。GSModel60 登记的本地下载仍仅含官方 TRAIN，官方 TEST 未下载到该范围。[历史使用与候选清单](../results/research_data_usage/confirmation_inventory_20261104.json)
+**确认数据的当前可用范围：** 已核对 R5/R6/R7 的使用清单，共 21 个已使用或预览的 SUN3D 顶层 place 必须排除；旧 R6/R7 的测试也不能重新标为 fresh。另行保留的 `home_ac`、`hotel_barcelona`、`hotel_graz`、`mit_1_242`、`harvard_computer_lab` 已开放给本次冻结确认，不能以后再当作未见队列重新挑选方案。此前的清单是冻结前快照，现阶段以[像素读取开始记录](../results/projection_confirmation/attempt1/data_access_started.json)和[运行状态](../results/projection_confirmation/attempt1/queue_status.json)为准。原 GSModel60 原始下载目录仅登记官方 TRAIN；正式 TEST 已在 `data/GRoPE/native_confirmation/attempt1/cache` 完成缓存和评价，不能据原目录缺少 TEST 判断它未被使用。[历史使用与候选清单](../results/research_data_usage/confirmation_inventory_20261104.json)
 
-**原生 TEST 的独立性补充：** 与当前 GSModel60 TRAIN 没有对象重叠，不代表与整个历史研究没有重叠。实际 HDF5 行到对象的映射表明，官方 TEST 中 2,245 个底层对象在 R48/R58 已用于 fit/val/dev_eval（1,826/210/209），因此全量不能称为全新对象确认。其余 3,845 个对象包含 2,124 个 MACGS 和 1,721 个原 ModelNet TEST，覆盖全部 60 类。后续固定评价保留完整官方基准，并在 PLY/得分开放前固定这两层报告；当前从头训练的原生模型没有因此被证实直接泄漏 TEST。这里仅访问 ID 元数据，没有查看新效果。[逐对象核对与解释](../results/native_confirmation_metadata/attempt1/historical_overlap1/report.md)
+**原生 TEST 的独立性补充：** 与当前 GSModel60 TRAIN 没有对象重叠，不代表与整个历史研究没有重叠。实际 HDF5 行到对象的映射表明，官方 TEST 中 2,245 个底层对象在 R48/R58 已用于 fit/val/dev_eval（1,826/210/209），因此全量不能称为全新对象确认。其余 3,845 个对象包含 2,124 个 MACGS 和 1,721 个原 ModelNet TEST，覆盖全部 60 类。本次固定评价已保留完整官方基准，并在 PLY/得分开放前固定这两层报告；当前从头训练的原生模型没有因此被证实直接泄漏 TEST。这项前期核对仅访问 ID 元数据；正式效果现已另行完成审阅。[逐对象核对与解释](../results/native_confirmation_metadata/attempt1/historical_overlap1/report.md)
 
-**原生确认的执行准备：** 紧凑缓存现已接入原生模型和六种既有条件，并支持按对象身份固定历史复用分组。只用六个旧 fit 缓存对象验证，relative5/Distance 种子 11 的 12 组预测与原缓存路径完全一致；两模型在旧 765 对象验证集的回放也完全一致，独立指标最大差约 1.94e−16。这里没有新拟合、官方 TEST 输入或效果确认，也未替代最终模型/强对照冻结。六对象的重复不能写成 12 个独立样本。[执行检查与范围](../results/native_confirmation_runtime_validation/attempt1/report.md)
+**原生确认的前期执行准备（正式确认现已另行完成）：** 紧凑缓存现已接入原生模型和六种既有条件，并支持按对象身份固定历史复用分组。只用六个旧 fit 缓存对象验证，relative5/Distance 种子 11 的 12 组预测与原缓存路径完全一致；两模型在旧 765 对象验证集的回放也完全一致，独立指标最大差约 1.94e−16。这里没有新拟合、官方 TEST 输入或效果确认，也未替代最终模型/强对照冻结。六对象的重复不能写成 12 个独立样本。[执行检查与范围](../results/native_confirmation_runtime_validation/attempt1/report.md)
 
 区域确认的九个可用 place（`brown_bm_6`、`brown_cogsci_4`、`harvard_printroom1`、`harvard_c2`、`home_ts`、`hotel_uc`、`hotel_florence_jx`、`mit_36_ti_lab2`、`mit_3_133`）现已开放深度，后续也必须从 fresh 队列排除；`home_han` 仍只有元数据和标定失败记录，没有读取像素。[本次使用登记](../results/research_data_usage/region_confirmation_access_20261105.json)。
 
-**原生测试数据的元数据准备已完成，尚未开放基元或评分。** 通过 hf-mirror.com 直连读取相同固定版本的官方 TEST 清单：6,090 个对象、60 类，与旧 7,757 个开发对象的路径、对象 ID、发布文件哈希均无交集。测试的 ModelNet 来源对象中有 2,245 个属于原始 ModelNet TRAIN，因此该划分只能准确称为 GSModel60 官方 TEST，不能当作原始 ModelNet 官方测试结果；本项目原生模型从头训练，该成员关系本身不证明当前模型泄漏。精确哈希无交集也不能证明没有相关几何或近重复对象。
+**原生测试数据的前期元数据核对如下；正式基元访问、完整评分及实际审阅已于 2026-11-06 按 §6.2 的冻结确认计划完成。** 通过 hf-mirror.com 直连读取相同固定版本的官方 TEST 清单：6,090 个对象、60 类，与旧 7,757 个开发对象的路径、对象 ID、发布文件哈希均无交集。测试的 ModelNet 来源对象中有 2,245 个属于原始 ModelNet TRAIN，因此该划分只能准确称为 GSModel60 官方 TEST，不能当作原始 ModelNet 官方测试结果；本项目原生模型从头训练，该成员关系本身不证明当前模型泄漏。精确哈希无交集也不能证明没有相关几何或近重复对象。
 
-全部测试原始文件约 75.83 GiB，最初观察时数据盘空闲约 31.35 GiB；按原转换器的数据类型和 2,048 基元/对象估算，完整缓存数组约 1.208 GiB。当时不能直接保留全量原始下载，因此准备了有界暂存缓存，不临时缩小官方人群。正式开放前仍需固定模型/强对照与分析。元数据与标签现已查看，测试 PLY 和模型得分仍未访问。这是数据入口准备，不是效果确认，也不改变当前归因及固定复现的优先级。[详细核对](../results/native_confirmation_metadata/attempt1/report.md) · [访问范围登记](../results/research_data_usage/native_confirmation_metadata_access_20261105.json)。
+全部测试原始文件约 75.83 GiB，最初观察时数据盘空闲约 31.35 GiB；按原转换器的数据类型和 2,048 基元/对象估算，完整缓存数组约 1.208 GiB。当时不能直接保留全量原始下载，因此准备了有界暂存缓存，不临时缩小官方人群。这段准备工作当时只查看元数据与标签，没有读取测试 PLY 或得分。随后模型/强对照及分析已固定，正式下载、完整评分与实际审阅现均完成。前期元数据核对本身不是效果确认。[详细核对](../results/native_confirmation_metadata/attempt1/report.md) · [访问范围登记](../results/research_data_usage/native_confirmation_metadata_access_20261105.json)。
 
-**2026-11-05 用户清理后的容量更新：** 上述空间不足是早期观察。本次容量检查时目标数据盘可用约 **178.94 GiB**；完整测试原始文件、缓存和预测约 **77.29 GiB**，加 2 GiB 余量共约 **79.29 GiB**，已足够完整下载并保留原始测试集，现有训练缓存文件均在。该次检查时八个训练进程仍运行，随后最新分析已确认其完整结束、控制器退出及 88 未启动，详见 §6.2。空间已不是下载障碍，但正式测试仍等待固定复现及审阅，没有因容量改善而提前开放数据。[容量实测](../results/native_confirmation_metadata/attempt1/capacity_after_user_cleanup_20261105_01.json)
+**2026-11-05 用户清理后的容量更新：** 上述空间不足是早期观察。本次容量检查时目标数据盘可用约 **178.94 GiB**；完整测试原始文件、缓存和预测约 **77.29 GiB**，加 2 GiB 余量共约 **79.29 GiB**，已足够完整下载并保留原始测试集，现有训练缓存文件均在。该次检查时八个训练进程仍运行，随后最新分析已确认其完整结束、控制器退出及 88 未启动，详见 §6.2。空间在该次检查时已不是障碍；当时正式测试仍等待固定复现及审阅，没有因容量改善而提前开放数据，随后执行状态见 §6.2。[容量实测](../results/native_confirmation_metadata/attempt1/capacity_after_user_cleanup_20261105_01.json)
 
-**逐对象下载、校验和缓存的实现现已完成旧数据验证。** 按两类来源各取最小、中位、最大已用 fit 文件，共六对象；其中两个最小文件又通过 hf-mirror.com 直连验证完整网络路径。所有中心、float64 协方差、外观、采样索引、标签及转换统计与原缓存完全一致；实际中断续接和三个自动检查通过，成功后没有原始暂存文件。它只调用原转换器、顺序处理一份临时对象，不修改原始 TRAIN 或在跑训练。最大旧对象约 190 MiB，超过元数据中最大 TEST 文件约 149.5 MiB；完整 TEST 的字节与采样覆盖仍未实际执行。后续空间策略可按约 1.208 GiB 的缓存及单对象上界制定，不能把之前百 GiB 整批下载的资源安排机械当作这种流程的通用前提。[实现、实际比较与范围](../results/native_stream_cache_validation/attempt1/report.md)。
+**逐对象下载、校验和缓存的实现现已完成旧数据验证。** 按两类来源各取最小、中位、最大已用 fit 文件，共六对象；其中两个最小文件又通过 hf-mirror.com 直连验证完整网络路径。所有中心、float64 协方差、外观、采样索引、标签及转换统计与原缓存完全一致；实际中断续接和三个自动检查通过，成功后没有原始暂存文件。它只调用原转换器、顺序处理一份临时对象，不修改原始 TRAIN 或在跑训练。最大旧对象约 190 MiB，超过元数据中最大 TEST 文件约 149.5 MiB；该前期验证未执行完整 TEST；完整字节校验与采样覆盖已在 2026-11-06 正式流程中完成。后续空间策略可按约 1.208 GiB 的缓存及单对象上界制定，不能把之前百 GiB 整批下载的资源安排机械当作这种流程的通用前提。[实现、实际比较与范围](../results/native_stream_cache_validation/attempt1/report.md)。
 
 SUN3D 的这些旧场景、模型和预测存在跨轮复用，轮数不等于独立证据份数。GSModel60 的来源版本、文件/缓存身份及划分见 R65 数据记录；当前原始下载目录为 `/mnt/f70f6709-366e-49a0-861f-497645d98975/users/liwt/data`。2026-11-04 的文档归档没有移动原始数据、模型、实验实现或 `results/`。
 
