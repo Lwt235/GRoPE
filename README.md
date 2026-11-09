@@ -4,7 +4,17 @@
 
 **当前统一入口：[研究主文档](docs/research_current.md)。** 文档包含研究动机、五维相对关系 `relative5` 的公式、完整证据链、关键对照、负结果、已完成的新场景确认及最新预测分析。
 
-**2026-11-08：同等数量增强的六次原生训练及审阅完成，按事前约定收束本次推广尝试。** 混合训练后，256/512/1024 基元评价的五维−Distance mCA 为 **+0.307/+0.989/+1.599 pp**，每个数量都有一个种子退步，联合区间较宽；没有确立稳定优势。256 条件下 Distance 的改善更大；512 差距缩小却来自两者准确率下降且五维下降更多，1024 差距扩大也来自 Distance 下降更多，不能据此证明旧收益全部来自数量不匹配。五维 CE 在九组新比较中均更低，正面信号保留。完整五维继续为主候选，核心已确认用途以观测区域匹配为主；原生保留形状归因与有限条件证据，不晋升混合训练，不自动增加消融、RGB 或新下载。自主目标保持暂停。[范围与决定](docs/research_current.md#101-最新收敛安排先决定原生任务的适用边界) · [本轮固定方案](docs/native_count_augmentation_plan.md) · [完整结果与实际审阅](results/native_count_augmentation/attempt1/report.md)
+**最新区域重构新场景确认已完成并实际审阅：主用途为混合结果。** 九个可用新地点、864 帧对、12 个既有模型、36 组预测，零训练。重构条件 F−Distance 召回 +1.919 pp、三种子均正，区间 [0.019,3.841] pp；F−GeoTransformer / 固定球形为 +1.704/+0.928 pp，各有一个负种子、区间跨零，稳定强对照优势和额外协方差贡献未完整确认。基础与固定成员稀疏条件对三项控制仍为三种子和联合区间正。保持五维，结束本次重构推广确认；覆盖从 35.479% 降到 19.170%，不称总体更耐稀疏。预定十地点中 home_ph_cz/ph_cz_1 缺外参，保留缺失。[固定确认方案](docs/region_retokenization_confirmation_plan.md) · [完整结果与实际审阅](results/region_retokenization_confirmation/attempt1/report.md)
+
+**此前旧数据边界检验保留为开发证据。** 重构后 F 对 Distance/GeoTransformer 条件召回 +2.463/+2.107 pp，支持进入上述新场景确认；新结果显示旧数据正面信号没有完整迁移。完整五维不变，保留所有正面与混合结论。[旧开发结果](results/region_retokenization/attempt1/report.md)
+
+**原生区域 PE 的四组比较已完成并实际审阅，未建立可靠用途。** 12次完整训练、72组评价全部正常结束。完整五维基础mCA为78.457%，对Distance/Geo分别+0.446/+1.066 pp，均有一个种子退步且联合区间跨零；对中心散布控制仅+0.043 pp。改变输入数量时四组都明显退化。按事前决定结束这条固定区域构造接法，不自动补种子或扫描分组；保留完整五维及既有观测区域匹配证据，总体目标尚未达成。[固定方案](docs/native_region_pe_plan.md) · [完整结果与实际审阅](results/native_region_pe/attempt1/report.md) · [独立复算](results/native_region_pe/attempt1/execution_checks.json)
+
+**2026-11-09：平均精度归一化的六次训练、评价及实际审阅完成，机制收尾结束。** 归一化 N 的区域召回为 39.750%，对 Distance 高 3.081 pp、三个种子均正；完整五维 F 仍高于 N 0.878 pp。原生 N 的 mCA 为 79.344%，对 Distance 高 0.917 pp，但种子方向混合、联合区间跨零，未解决强对照缺口。N 在 ModelNet 基础子组有改善、MACGS 有退步，来源与类别混杂，只保留为线索。固定完整五维，不自动追加消融或晋升 N。[固定方案](docs/normalized_precision_plan.md) · [结果与实际审阅](results/normalized_precision/attempt1/report.md)
+
+**精简版：[固定方法、核心证据与适用边界](docs/research_core.md)。** 用户恢复自主目标后，全查询区域匹配诊断已经完成并审阅：复用 75 份旧预测，无新训练。旧验证阈值下，五维少输出正确、也少输出错误；最高置信少量匹配没有领先，保留较多候选时的均值仍有排序收益。原训练未直接监督无对应拒识，因此结果限定于原模型加最大 softmax 规则。区域对应排序仍是最可靠的用途，可靠输出优势和一般性目标均未确立，不自动新增拒识模块或搜索置信度。[完整诊断与审阅](results/region_selective_matching/attempt1/report.md)。当前目标为 active。
+
+**2026-11-08：同等数量增强的六次原生训练及审阅完成，按事前约定收束本次推广尝试。** 混合训练后，256/512/1024 基元评价的五维−Distance mCA 为 **+0.307/+0.989/+1.599 pp**，每个数量都有一个种子退步，联合区间较宽；没有确立稳定优势。256 条件下 Distance 的改善更大；512 差距缩小却来自两者准确率下降且五维下降更多，1024 差距扩大也来自 Distance 下降更多，不能据此证明旧收益全部来自数量不匹配。五维 CE 在九组新比较中均更低，正面信号保留。完整五维继续为主候选，核心已确认用途以观测区域匹配为主；原生保留形状归因与有限条件证据，不晋升混合训练，不自动增加消融、RGB 或新下载。原生审阅时目标暂停，后已恢复并完成上述区域诊断。[范围与决定](docs/research_current.md#101-最新收敛安排先决定原生任务的适用边界) · [本轮固定方案](docs/native_count_augmentation_plan.md) · [完整结果与实际审阅](results/native_count_augmentation/attempt1/report.md)
 
 **方向无关平均精度控制已全部完成并实际审阅，未保住主要用途。** 六次完整训练及 168 组新旧预测比较结束。Q 的区域召回/原生 mCA 为 **37.641%/77.380%**，完整五维分别高 **2.988/2.649 pp**，两个任务三个种子均正；区域中心定位也共同改善。区域差的联合区间 [2.122,4.181] pp，原生 [−0.663,5.883] pp 仍宽。Q 的原生基础准确率比 Distance 低 1.046 pp、三个种子均低。不推广 Q，保留完整方向关系；平均精度在方向存在时的条件性作用仍待检验。[固定方案](docs/mean_precision_plan.md) · [完整结果与实际审阅](results/mean_precision/attempt1/report.md)
 
@@ -41,6 +51,8 @@ R73 原生 3DGS 验证已完成并审阅：五维 mCA 为 80.029%，对 Direct /
 | 位置 | 内容 |
 | --- | --- |
 | [docs/research_current.md](docs/research_current.md) | 当前设计、证据、分析、结论和下一步的唯一主入口 |
+| [docs/research_core.md](docs/research_core.md) | 固定五维方法、核心证据链、代价和适用边界的精简说明 |
+| [全查询区域可靠性](results/region_selective_matching/attempt1/report.md) | 75 份已有预测的选择性匹配诊断；可靠输出优势未确立，保留候选排序收益 |
 | [原生同等数量增强与范围收束](results/native_count_augmentation/attempt1/report.md) | 六次训练及实际审阅完成；数量增强未确立稳定强对照优势，保留正面信号与限制，结束本次原生推广尝试 |
 | [docs/archive/2026-11-04/INDEX.md](docs/archive/2026-11-04/INDEX.md) | 历史轮次原文、协议、失败记录和未执行草案 |
 | [docs/archive/2026-11-04/manifest.json](docs/archive/2026-11-04/manifest.json) | 归档前后路径与逐文件 SHA-256 |

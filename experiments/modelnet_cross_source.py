@@ -25,23 +25,36 @@ from experiments import round65_run as runner
 from experiments.native_confirmation_analysis import paired_accuracy_summary
 from experiments.native_memmap_runtime import install
 from experiments.native_stream_cache import build_cache
-from experiments.round65_common import ROOT, DATA_ROOT, CONFIG, VARIANTS, read, write, sha
-from models.symmetric_gaussian_relation import SymmetricNativeClassifier
+from experiments.round65_common import ROOT, DATA_ROOT, CONFIG, read, write, sha
 
 OUT = ROOT / 'results/modelnet_cross_source/attempt1'
 DATA = DATA_ROOT / 'GRoPE/modelnet_cross_source/attempt1'
 META = ROOT / 'results/research_data_usage/native_candidates_20261106/modelnet620_candidate_metadata.json'
 PLAN = ROOT / 'docs/modelnet_cross_source_plan.md'
 OLD_LOCK = ROOT / 'results/native_confirmation/attempt1/evaluation_lock.json'
-SYMMETRIC = ROOT / 'results/symmetric_relation/attempt1'
+OLD_CATALOG = ROOT / 'results/native_confirmation_metadata/attempt1/test_catalog.json'
+OLD_EXPORTS = ROOT / 'results/native_confirmation/attempt1/exports'
 SEEDS = (11, 22, 33, 44, 55, 66, 77, 88)
 CLASSES = (1, 4, 11, 12, 13, 15, 20)
+ROLES = ('relative5', 'distance_mlp', 'fixed_isotropic5')
+CONDITIONS = ('base',)
+PREFLIGHT_SHARDS = 2
 CAP_BYTES = 16 * 2**30
 BASE_FACTORY = runtime.make_model
 
 
 def model_for(role):
-    return SymmetricNativeClassifier(role) if role in ('symmetric3', 'jeffreys_mlp') else BASE_FACTORY(role)
+    if role not in ROLES:
+        raise ValueError('undeclared fixed model')
+    return BASE_FACTORY(role)
+
+
+def selected_roster(models):
+    result = [m for m in models if m['role'] in ROLES]
+    expected = {(r, s) for r in ROLES for s in (SEEDS[:3] if r == 'fixed_isotropic5' else SEEDS)}
+    if len(result) != 19 or {(m['role'], m['seed']) for m in result} != expected:
+        raise ValueError('expected eight F/Distance and three fixed-sphere models')
+    return result
 
 
 def source_paths():
@@ -101,17 +114,8 @@ def seal():
     assert sha(META) == 'd783be4eb40ee2a187f5987de07a230cb986d50c30bc092cdd648098bbaf8125'
     assert len(candidate['rows']) == 620 and len(set(virtual_path(r) for r in candidate['rows'])) == 620
     assert set(r['taxonomy_id'] for r in candidate['rows']) == set(CLASSES)
-    review = read(SYMMETRIC / 'review.json')
-    assert review['scientific_review_complete'] and not review['symmetric3_promoted']
-    assert review['result_sha256'] == sha(SYMMETRIC / 'result.json')
-    models = read(OLD_LOCK)['models'].copy()
-    for r in read(SYMMETRIC / 'native512/selected.json')['records']:
-        path = SYMMETRIC / 'native512/runs' / r['role'] / str(r['seed']) / 'best.pt'
-        models.append(dict(role=r['role'], seed=r['seed'], cohort='old3', path=str(path),
-            sha256=r['checkpoint_sha256'], selected_epoch=r['best_epoch'],
-            selection_path=str(SYMMETRIC / 'native512/selected.json'),
-            selection_sha256=sha(SYMMETRIC / 'native512/selected.json')))
-    assert len(models) == 37 and len({(m['role'], m['seed']) for m in models}) == 37
+    models = selected_roster(read(OLD_LOCK)['models'])
+    old_exports = []
     for m in models:
         assert sha(m['path']) == m['sha256']
         assert sha(m['selection_path']) == m['selection_sha256']
@@ -119,16 +123,24 @@ def seal():
                         if (r['role'], r['seed']) == (m['role'], m['seed']))
         assert selected['checkpoint_sha256'] == m['sha256']
         assert selected['best_epoch'] == m['selected_epoch']
-    dependencies = source_paths() + [PLAN, META, OLD_LOCK, SYMMETRIC / 'review.json',
-        SYMMETRIC / 'result.json', OUT / 'cpu_checks.json',
+        prediction = OLD_EXPORTS / m['role'] / str(m['seed']) / 'base.npz'
+        sidecar = read(prediction.with_suffix('.json'))
+        assert sidecar['identity']['checkpoint'] == m and sidecar['identity']['variant'] == 'base'
+        assert sha(prediction) == sidecar['prediction_sha256']
+        old_exports.append(dict(role=m['role'], seed=m['seed'], path=str(prediction),
+            sha256=sidecar['prediction_sha256'], sidecar_sha256=sha(prediction.with_suffix('.json'))))
+    old_rows = [r for r in read(OLD_CATALOG)['rows'] if r['taxonomy_id'] in CLASSES]
+    assert len(old_rows) == 422 and {r['source'] for r in old_rows} == {'MACGS'}
+    dependencies = source_paths() + [PLAN, META, OLD_LOCK, OLD_CATALOG, OUT / 'cpu_checks.json',
         ROOT / 'results/round65_actual_gs/preparation/train_catalog.json',
-        ROOT / 'results/native_confirmation_metadata/attempt1/test_catalog.json']
+        ROOT / 'results/native_region_pe/attempt1/review.json']
     assert read(OUT / 'cpu_checks.json')['passed']
     record = dict(created_unix=time.time(),source_sha256={str(p):sha(p) for p in dependencies},
-        models=models, candidate=candidate, conditions=list(VARIANTS), config=CONFIG,
+        models=models, candidate=candidate, conditions=list(CONDITIONS), config=CONFIG,
+        old_source_exports=old_exports, old_source_objects=len(old_rows),
         class_ids=list(CLASSES), primary_seeds=list(SEEDS), training_updates=0,
         new_inputs_accessed=False, proxy_allowed=False, full_sixty_class_output=True,
-        bootstrap_replicates=10000, bootstrap_seed=80001, maximum_gpu_jobs=6,
+        bootstrap_replicates=10000, bootstrap_seed=80001, maximum_gpu_jobs=2,
         allocator_cap_bytes=CAP_BYTES, overall_goal_complete=False)
     write(OUT / 'lock.json', record)
     (OUT / 'lock.sha256').write_text(sha(OUT / 'lock.json') + '\n')
@@ -138,7 +150,8 @@ def seal():
 def check():
     lock = read(OUT / 'lock.json')
     assert sha(OUT / 'lock.json') == (OUT / 'lock.sha256').read_text().strip()
-    assert lock['config'] == CONFIG and lock['conditions'] == list(VARIANTS)
+    assert lock['config'] == CONFIG and lock['conditions'] == list(CONDITIONS)
+    selected_roster(lock['models'])
     for name, digest in lock['source_sha256'].items():
         assert sha(name) == digest, name
     for m in lock['models']:
@@ -158,8 +171,8 @@ def cuda_setup():
 @torch.inference_mode()
 def preflight(shard):
     lock = check()
-    if shard not in (0, 1, 2):
-        raise ValueError('three fixed preflight shards')
+    if shard not in range(PREFLIGHT_SHARDS):
+        raise ValueError('two fixed preflight shards')
     target = OUT / 'preflight' / f'{shard}.json'
     if target.exists():
         raise ValueError('preserve prior preflight')
@@ -170,7 +183,7 @@ def preflight(shard):
               for k in ('centers', 'covariance', 'appearance', 'indices', 'labels')}
     bundle['ids'] = np.asarray(partition['ids'])
     records = []
-    for m in lock['models'][shard::3]:
+    for m in lock['models'][shard::PREFLIGHT_SHARDS]:
         model = model_for(m['role']).cuda().eval()
         model.load_state_dict(torch.load(m['path'],map_location='cpu',weights_only=True)['state_dict'])
         logits, _ = runner.evaluate(model, bundle, 'base')
@@ -179,16 +192,22 @@ def preflight(shard):
             error = float(np.max(np.abs(z['logits'] - logits)))
             changes = int((z['logits'].argmax(1) != logits.argmax(1)).sum())
         assert error < 2e-4 and changes == 0
-        # Reuse all six established evaluation conditions on four old objects.
+        # Order invariance is an implementation check on old data, not a fresh condition.
         tiny = {k:v[:4] for k,v in bundle.items()}
         peaks = {}
-        for condition in VARIANTS:
+        outputs = {}
+        for condition in ('base', 'permuted'):
             torch.cuda.reset_peak_memory_stats()
             x, _ = runner.evaluate(model, tiny, condition)
             assert x.shape == (4, 60) and np.isfinite(x).all()
             peaks[condition] = torch.cuda.max_memory_allocated()
+            outputs[condition] = x
+        permutation_error = float(np.max(np.abs(outputs['base'] - outputs['permuted'])))
+        permutation_changes = int((outputs['base'].argmax(1) != outputs['permuted'].argmax(1)).sum())
+        assert permutation_error < 2e-4 and permutation_changes == 0
         records.append(dict(role=m['role'],seed=m['seed'],objects=len(logits),
-            gpu_validation_max_error=error,classification_changes=changes,peak_allocated=peaks))
+            gpu_validation_max_error=error,classification_changes=changes,peak_allocated=peaks,
+            permutation_max_error=permutation_error,permutation_changes=permutation_changes))
         del model
         torch.cuda.empty_cache()
         print('PREFLIGHT_MODEL',m['role'],m['seed'],error,flush=True)
@@ -199,11 +218,13 @@ def preflight(shard):
 def ready():
     lock = check()
     rows = []
-    for shard in range(3):
+    for shard in range(PREFLIGHT_SHARDS):
         r = read(OUT / 'preflight' / f'{shard}.json')
         assert r['passed'] and r['lock_sha256'] == sha(OUT / 'lock.json')
         rows.extend(r['records'])
     assert {(r['role'],r['seed']) for r in rows} == {(m['role'],m['seed']) for m in lock['models']}
+    reference = read(OUT / 'old_source_reference.json')
+    assert reference['lock_sha256'] == sha(OUT / 'lock.json') and reference['objects'] == 422
     return lock
 
 
@@ -213,6 +234,9 @@ def start_access(kind):
     if not marker.exists():
         write(marker,dict(started_unix=time.time(),kind=kind,lock_sha256=sha(OUT / 'lock.json'),
             all_620_ids_to_be_treated_as_used_after_access=True,archive_contains_other_unscored_objects=True))
+        write(ROOT / 'results/research_data_usage/modelnet_cross_source_access_20261109.json',
+            dict(read(marker), candidate_path=str(META), candidate_sha256=sha(META),
+                outcome_path=str(OUT), objects=620, no_further_fresh_claim_after_access=True))
 
 
 class MirrorRedirectHandler(urllib.request.HTTPRedirectHandler):
@@ -346,60 +370,144 @@ def export(role, seed):
         no_known_overlap=np.asarray([not r['known_byte_reuse'] for r in rows]))
     checkpoint = next(m for m in lock['models'] if (m['role'],m['seed']) == (role,seed))
     cuda_setup()
-    for condition in VARIANTS:
+    for condition in CONDITIONS:
         runtime.export_one(bundle,checkpoint,condition,groups,OUT/'evaluation'/role/str(seed)/(condition+'.npz'))
         print('EXPORTED',role,seed,condition,flush=True)
 
 
-def report():
-    lock = ready()
-    rows = read(OUT/'catalog.json')['rows']
+def collect_population(lock, *, old=False):
+    rows = read(OLD_CATALOG if old else OUT / 'catalog.json')['rows']
     labels = np.asarray([r['taxonomy_id'] for r in rows])
     ids = np.asarray([r['file_path'] for r in rows])
-    primary_mask = np.asarray([not r['known_byte_reuse'] for r in rows])
+    primary_mask = (np.isin(labels, CLASSES) if old else
+                    np.asarray([not r['known_byte_reuse'] for r in rows]))
+    assert set(labels[primary_mask]) == set(CLASSES)
     records, predictions, ce = [], {}, {}
     for m in lock['models']:
-        for condition in VARIANTS:
-            path = OUT/'evaluation'/m['role']/str(m['seed'])/(condition+'.npz')
+        for condition in CONDITIONS:
+            path = ((OLD_EXPORTS if old else OUT / 'evaluation') /
+                    m['role'] / str(m['seed']) / (condition + '.npz'))
             item = read(path.with_suffix('.json'))
             assert sha(path) == item['prediction_sha256']
             assert item['identity']['checkpoint'] == m and item['identity']['variant'] == condition
+            if old:
+                frozen = next(r for r in lock['old_source_exports']
+                              if (r['role'], r['seed']) == (m['role'], m['seed']))
+                assert frozen['sha256'] == sha(path)
+                assert frozen['sidecar_sha256'] == sha(path.with_suffix('.json'))
             with np.load(path,allow_pickle=False) as z:
                 assert np.array_equal(z['ids'],ids) and np.array_equal(z['labels'],labels)
                 x = z['logits'];pred = x.argmax(1)
+            groups = runtime.summarize_logits(x, labels, dict(selected_population=primary_mask))
+            metrics = groups['selected_population']['metrics']
             key = m['role'],m['seed'],condition
-            predictions[key] = pred
-            ce[key] = item['groups']['no_known_overlap']['metrics']['ce']
-            records.append(dict(role=m['role'],seed=m['seed'],condition=condition,groups=item['groups'],
-                outside_seven_fraction=float((~np.isin(pred,CLASSES)).mean()),
+            predictions[key] = pred[primary_mask]
+            ce[key] = metrics['ce']
+            records.append(dict(role=m['role'],seed=m['seed'],condition=condition,metrics=metrics,
+                outside_seven_fraction=float((~np.isin(pred[primary_mask],CLASSES)).mean()),
                 prediction_sha256=item['prediction_sha256']))
-    comparisons = [('distance_mlp',SEEDS,'all8'),('distance_mlp',SEEDS[:3],'old3'),
-                   ('distance_mlp',SEEDS[3:],'new5')]
-    comparisons += [(r,SEEDS[:3],'old3') for r in
-        ('fixed_isotropic5','direct_mlp','gaussian_relation','center_rope','nope','symmetric3','jeffreys_mlp')]
+    return records, predictions, ce, labels[primary_mask]
+
+
+def comparison_specs():
+    return [('distance_mlp', SEEDS, 'all8'), ('fixed_isotropic5', SEEDS[:3], 'old3'),
+            ('distance_mlp', SEEDS[:3], 'old3'), ('distance_mlp', SEEDS[3:], 'new5')]
+
+
+def summarize_comparisons(predictions, ce, labels, *, bootstrap_seed):
     analyses = []
-    for right,seeds,cohort in comparisons:
-        for condition in VARIANTS:
-            a = np.stack([predictions['relative5',s,condition] for s in seeds])[:,primary_mask]
-            b = np.stack([predictions[right,s,condition] for s in seeds])[:,primary_mask]
-            summary = paired_accuracy_summary(a,b,labels[primary_mask],replicates=10000,seed=80001+len(analyses))
+    for right,seeds,cohort in comparison_specs():
+        for condition in CONDITIONS:
+            a = np.stack([predictions['relative5',s,condition] for s in seeds])
+            b = np.stack([predictions[right,s,condition] for s in seeds])
+            summary = paired_accuracy_summary(a,b,labels,replicates=10000,seed=bootstrap_seed+len(analyses))
             analyses.append(dict(left='relative5',right=right,seeds=list(seeds),cohort=cohort,
                 condition=condition,paired_ce_difference=[ce['relative5',s,condition]-ce[right,s,condition] for s in seeds],**summary))
+    return analyses
+
+
+def reference():
+    """Read only existing official-test predictions, with seven-class matching."""
+    lock = check()
+    if (OUT / 'old_source_reference.json').exists():
+        raise ValueError('preserve the prospectively fixed old reference')
+    records, predictions, ce, labels = collect_population(lock, old=True)
+    analyses = summarize_comparisons(predictions, ce, labels, bootstrap_seed=80021)
+    write(OUT / 'old_source_reference.json', dict(records=records, comparisons=analyses,
+        objects=len(labels), class_ids=list(CLASSES), class_counts=[int((labels == c).sum()) for c in CLASSES],
+        lock_sha256=sha(OUT / 'lock.json'), new_inputs_accessed=False, source='MACGS',
+        descriptive_used_data=True, historical_confirmation_decision_unchanged=True))
+    print('OLD_SOURCE_REFERENCE',len(labels),analyses[0]['mean_gain_pp'],flush=True)
+
+
+def source_gain_change(new_left, new_right, new_labels, old_left, old_right, old_labels,
+                       *, replicates=10000, seed=80101):
+    """New-minus-old PE gain; same seeds/classes, independent objects per source.
+
+    This is a descriptive transport contrast, not an isolated reconstruction effect.
+    """
+    inputs = [(np.asarray(new_left), np.asarray(new_right), np.asarray(new_labels)),
+              (np.asarray(old_left), np.asarray(old_right), np.asarray(old_labels))]
+    classes = np.unique(inputs[0][2])
+    nseeds = inputs[0][0].shape[0]
+    deltas, per_class = [], []
+    for left, right, labels in inputs:
+        if (left.ndim != 2 or left.shape != right.shape or left.shape != (nseeds, len(labels)) or
+                not np.array_equal(np.unique(labels), classes) or nseeds < 1):
+            raise ValueError('unaligned source comparison')
+        delta = 100. * ((left == labels).astype(float) - (right == labels).astype(float))
+        indices = [np.flatnonzero(labels == c) for c in classes]
+        deltas.append((delta, indices))
+        per_class.append(np.stack([delta[:, ix].mean(1) for ix in indices], 1))
+    change = per_class[0] - per_class[1]
+    rng = np.random.default_rng(seed)
+    draws, class_draws = np.empty(replicates), np.empty(replicates)
+    for start in range(0, replicates, 128):
+        stop = min(start + 128, replicates); count = stop - start
+        sw = rng.multinomial(nseeds, np.full(nseeds, 1/nseeds), size=count) / nseeds
+        sampled = np.zeros((count, nseeds))
+        for sign, (delta, indices) in zip((1, -1), deltas):
+            for ix in indices:
+                weights = rng.multinomial(len(ix), np.full(len(ix), 1/len(ix)), size=count)
+                sampled += sign * (weights @ delta[:, ix].T) / (len(ix) * len(classes))
+        draws[start:stop] = (sw * sampled).sum(1)
+        cw = rng.multinomial(len(classes), np.full(len(classes), 1/len(classes)), size=count) / len(classes)
+        class_draws[start:stop] = cw @ change.mean(0)
+    return dict(mean_gain_change_pp=float(change.mean()), paired_seed_gain_changes_pp=change.mean(1).tolist(),
+        class_mean_gain_changes_pp=change.mean(0).tolist(), class_ids=classes.tolist(),
+        crossed_seed_object_bootstrap_95_pp=np.quantile(draws,[.025,.975]).tolist(),
+        class_sensitivity_bootstrap_95_pp=np.quantile(class_draws,[.025,.975]).tolist(),
+        bootstrap_seed=seed,bootstrap_replicates=replicates,
+        source_effect_not_causally_isolated=True)
+
+
+def report():
+    lock = ready()
+    if (OUT / 'result.json').exists():
+        raise ValueError('preserve completed result')
+    records, predictions, ce, labels = collect_population(lock)
+    analyses = summarize_comparisons(predictions, ce, labels, bootstrap_seed=80001)
+    _, old_predictions, _, old_labels = collect_population(lock, old=True)
+    changes = []
+    for right, seeds, cohort in comparison_specs()[:2]:
+        arrays = [np.stack([pop[role,s,'base'] for s in seeds])
+                  for pop in (predictions,old_predictions) for role in ('relative5',right)]
+        stats = source_gain_change(arrays[0],arrays[1],labels,arrays[2],arrays[3],old_labels,
+                                   seed=80101+len(changes))
+        changes.append(dict(left='relative5',right=right,seeds=list(seeds),cohort=cohort,**stats))
     p = analyses[0]
     support = p['mean_gain_pp'] >= .5 and p['crossed_seed_object_bootstrap_95_pp'][0] > 0
-    permutations = [dict(role=m['role'],seed=m['seed'],classification_changes=int(np.sum(
-        predictions[m['role'],m['seed'],'base'] != predictions[m['role'],m['seed'],'permuted'])))
-        for m in lock['models']]
     write(OUT/'result.json',dict(records=records,comparisons=analyses,primary=p,
-        primary_limited_signal=bool(support),permutation=permutations,objects=len(rows),
-        primary_objects=int(primary_mask.sum()),lock_sha256=sha(OUT/'lock.json'),
+        primary_limited_signal=bool(support),source_gain_changes=changes,
+        objects=len(read(OUT/'catalog.json')['rows']),primary_objects=len(labels),
+        old_reference_sha256=sha(OUT/'old_source_reference.json'),lock_sha256=sha(OUT/'lock.json'),
         scientific_review_pending=True,visual_review_pending=True,goal_complete=False,training_updates=0))
     print('CROSS_SOURCE_REPORT_READY',p['mean_gain_pp'],p['crossed_seed_object_bootstrap_95_pp'],flush=True)
 
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
-    parser.add_argument('action',choices=('seal','preflight','download','prepare','export','report'))
+    parser.add_argument('action',choices=('seal','reference','preflight','download','prepare','export','report'))
     parser.add_argument('--shard',type=int)
     parser.add_argument('--role')
     parser.add_argument('--seed',type=int)
