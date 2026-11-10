@@ -1,0 +1,1 @@
+First CUDA compile failed before model checks: Triton 3.2 cannot subscript the nested constexpr stride tuple used here. Replaced with explicit scalar stride constants; mathematical operation and protocol unchanged. Original source and correctness_failure.json are retained. The second check uses correctness_v2 identity.

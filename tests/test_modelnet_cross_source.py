@@ -3,12 +3,39 @@ import unittest
 from unittest import mock
 import urllib.request
 import numpy as np
-from experiments.modelnet_cross_source import choose_member, virtual_path, MirrorRedirectHandler, mirror_request, mirror_opener
+from experiments.modelnet_cross_source import (choose_member, virtual_path, MirrorRedirectHandler,
+    mirror_request, mirror_opener, selected_roster, source_gain_change, SEEDS)
 from experiments.native_confirmation_runtime import summarize_logits
 from experiments.native_confirmation_analysis import paired_accuracy_summary
 
 
 class CrossSourceTests(unittest.TestCase):
+    def test_fixed_roster_does_not_add_or_drop_seeds(self):
+        models = [dict(role=r, seed=s) for r in ('relative5','distance_mlp') for s in SEEDS]
+        models += [dict(role='fixed_isotropic5', seed=s) for s in SEEDS[:3]]
+        self.assertEqual(len(selected_roster(models + [dict(role='nope', seed=11)])), 19)
+        with self.assertRaises(ValueError):
+            selected_roster(models[:-1])
+        with self.assertRaises(ValueError):
+            selected_roster(models + [models[0]])
+
+    def test_source_change_keeps_classes_equal_and_seeds_paired(self):
+        new_y, old_y = np.array([1,1,1,15]), np.array([1,15,15,15])
+        new_a = np.array([[1,1,1,42],[1,1,1,15]])
+        new_b = np.full_like(new_a,42)
+        old_a = np.full_like(new_a,42)
+        result = source_gain_change(new_a,new_b,new_y,old_a,old_a,old_y,replicates=100)
+        self.assertEqual(result['paired_seed_gain_changes_pp'], [50.,100.])
+        self.assertEqual(result['mean_gain_change_pp'], 75.)
+        # Perfect and equally beneficial methods across sources have zero change,
+        # despite different class frequencies and different object sets.
+        result = source_gain_change(np.tile(new_y,(2,1)),new_b,new_y,
+                                    np.tile(old_y,(2,1)),old_a,old_y,replicates=100)
+        self.assertEqual(result['mean_gain_change_pp'],0.)
+        self.assertEqual(result['crossed_seed_object_bootstrap_95_pp'],[0.,0.])
+        with self.assertRaises(ValueError):
+            source_gain_change(new_a,new_b,new_y,old_a,old_a,np.full(4,1),replicates=10)
+
     def test_head_stays_head_and_credentials_stop_at_first_request(self):
         handler = MirrorRedirectHandler()
         for method in ('HEAD', 'GET'):

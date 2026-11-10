@@ -4,6 +4,22 @@
 
 **当前统一入口：[研究主文档](docs/research_current.md)。** 文档包含研究动机、五维相对关系 `relative5` 的公式、完整证据链、关键对照、负结果、已完成的新场景确认及最新预测分析。
 
+**最新：共同二维旋转骨干的比较已完成并审阅。** 12次新增训练后，旧480帧对上五维/Distance/Geo/完整HRoPE/固定H成功率41.736%/38.542%/38.056%/38.889%/40.000%。五维对Distance、Geo、HRoPE及同容量球形均为三个种子改善，联合区间为正；对固定H平均+1.736 pp、三个种子均正，但联合区间[−0.556,3.819]，额外收益仍不确定。保留正面开发证据，不能解释成零效应或一般性成功；整体仍58.264%失败。结束本轮，不自动新地点确认，保留完整HRoPE和固定H强对照。[完整结果与解释](results/region_rotary_relation/attempt1/report.md) · [实际审阅](results/region_rotary_relation/attempt1/review.json)
+
+**固定H=K的简化对照也已完成。** 仅新增三次配对训练，旧480帧对的固定H/完整HRoPE/五维成功率为40.000%/38.889%/35.694%。完整HRoPE−固定H −1.111 pp、联合区间[−4.306,1.944]，学习变换的额外对齐用途尚未确立；固定H对五维/Distance/Geo有明确开发优势。固定版保留二维Q/K/V/输出旋转与self/cross接法，尚无独立地点确认；完整HRoPE辅助指标和错误尾部仍更好。结束此控制，保留强对照、固定五维和全部历史证据，总体目标尚未完成。[完整结果与解释](results/region_fixed_hrope/attempt1/report.md) · [实际审阅](results/region_fixed_hrope/attempt1/review.json)
+
+**同相机信息的十地点确认已完成并实际审阅。** 预定960帧对全部完成，零排除；15个既有模型、零重训。HRoPE/F/Distance/Geo PE/固定球形对齐成功率为35.382%/32.569%/30.938%/30.625%/30.729%。HRoPE对F平均+2.813 pp、三个种子同向，联合95%区间[0.035,5.313]，下界接近零，支持有限领先；对Distance/Geo为+4.444/+4.757 pp，区间[2.604,7.257]/[1.806,7.812]，证据较清楚。F对其他控制保留正平均信号，但均未确认稳定优势。HRoPE仍约64.6%帧对失败，不能称可靠完整系统。保留HRoPE强对照、固定五维与历史证据，结束本次确认；总体目标尚未完成。 [完整确认、范围与修复记录](results/region_hrope_confirmation/attempt1/report.md) · [实际审阅](results/region_hrope_confirmation/attempt1/review.json) · [完成状态](results/region_hrope_confirmation/attempt1/status.json)
+
+**同相机信息的 HRoPE 对照已完成并审阅，研究范围需要收窄。** 15次完整配对训练后，旧五场景480帧对的HRoPE/五维/Distance/Geo PE/固定球形对齐成功率为38.889%/35.694%/32.986%/33.472%/31.458%。HRoPE对五维、Distance和Geo均为三个种子领先且联合区间支持正收益；五维对Distance平均+2.708 pp、区间跨零。所有方法获得同样图像位置与内参，HRoPE保留self/cross作用；这是区域适配与旧数据开发结果。保留HRoPE强对照与固定五维，随后15模型的十地点确认也已完成，结果见上。[完整结果与解释](results/region_hrope_control/attempt1/report.md) · [实际审阅](results/region_hrope_control/attempt1/review.json)
+
+**此前无新增相机输入的区域匹配优势已在旧数据上转成几何对齐收益。** 固定四种PE的既有预测与共同刚体求解器，旧五场景480帧对的五维成功率为32.986%，对Distance/GeoTransformer PE/固定球形高5.000/5.833/5.764 pp；三个种子与联合区间均为正。全部14组求解、独立复算和实际审阅完成，零训练、零新网络推理、零下载。约三分之二帧对仍未达标、尾部错误大，不能称可靠的完整配准系统或一般性成功。下一步核对同条件未用场景的可行性，不重启已关闭的原生来源混合策略。[固定方案](docs/region_pose_utility_plan.md) · [完整结果与边界](results/region_pose_utility/attempt1/report.md) · [实际审阅](results/region_pose_utility/attempt1/review.json)
+
+**类内来源变化检验已完成并实际审阅：任务恢复，稳定强对照优势仍未确立。** 九次完整训练、18份预测和独立复算完成。新增ModelNet七类F/Distance/固定球形mCA由近零恢复到81.908%/82.668%/81.627%，三方法共同受益。主七类两来源等权F−Distance为+5.164 pp，种子+3.699/−0.641/+12.433，联合区间[−2.588,13.128]；F−球形+2.701 pp同样不稳定。收益主要来自MACGS，ModelNet来源平均−0.760 pp。按事前决定结束这项固定训练策略的推广检验，不补种子或改比例，不事后挑来源晋升。完整五维与区域确认保留，一般性目标仍未达成。[完整结果与解释](results/native_source_diversity/attempt1/report.md) · [实际审阅](results/native_source_diversity/attempt1/review.json)
+
+**独占速度复测及优化训练接续已完成。** 5卡启动前被占用，五阶段改在同型号空闲3卡完成；固定球形训练步190.99→95.16 ms，配对节时50.15%、8/8更快，数值和64步检查通过。仅固定球形seed33采用优化，已完成120周期/46,800更新；F−Distance主比较全为原实现。原评价回放一致不证明训练终点等价，F−球形归因保留混合执行限制。汇总接口重复键错误已保留并修复，独立复算最大差2.66e−14。[速度结果与范围](results/native_source_diversity/attempt1/speed_transition/report.md) · [汇总修复](results/native_source_diversity/attempt1/report_recovery1/repair.json)
+
+**同类别来源迁移已完成并实际审阅：完整模型迁移失败，结束本次来源推广。** 七类620对象、19个已有模型、base512、完整60类头，零新增训练。五维/Distance/固定球形的新mCA为0/0.0179/0%；99.78%–99.86%的预测进入原ModelNet来源的其他30类，而这七个目标类别在训练中来自MACGS。类别映射、缓存转换与独立复算核对通过；来源与标签绑定是重要解释线索，外观、拟合及几何的作用尚未被因果分离。近零准确率不能证明PE等效或形状无信息。保持五维和已有区域匹配证据，整体目标仍未完成。[固定方案](docs/modelnet_cross_source_plan.md) · [完整结果与解释](results/modelnet_cross_source/attempt1/report.md) · [实际审阅](results/modelnet_cross_source/attempt1/review.json)
+
 **最新区域重构新场景确认已完成并实际审阅：主用途为混合结果。** 九个可用新地点、864 帧对、12 个既有模型、36 组预测，零训练。重构条件 F−Distance 召回 +1.919 pp、三种子均正，区间 [0.019,3.841] pp；F−GeoTransformer / 固定球形为 +1.704/+0.928 pp，各有一个负种子、区间跨零，稳定强对照优势和额外协方差贡献未完整确认。基础与固定成员稀疏条件对三项控制仍为三种子和联合区间正。保持五维，结束本次重构推广确认；覆盖从 35.479% 降到 19.170%，不称总体更耐稀疏。预定十地点中 home_ph_cz/ph_cz_1 缺外参，保留缺失。[固定确认方案](docs/region_retokenization_confirmation_plan.md) · [完整结果与实际审阅](results/region_retokenization_confirmation/attempt1/report.md)
 
 **此前旧数据边界检验保留为开发证据。** 重构后 F 对 Distance/GeoTransformer 条件召回 +2.463/+2.107 pp，支持进入上述新场景确认；新结果显示旧数据正面信号没有完整迁移。完整五维不变，保留所有正面与混合结论。[旧开发结果](results/region_retokenization/attempt1/report.md)
@@ -44,7 +60,7 @@ R73 原生 3DGS 验证已完成并审阅：五维 mCA 为 80.029%，对 Direct /
 
 利用额外空闲卡完成了可学习高斯散度的三个区域对照：散度比 Distance 更好，五维在旧五场景及已用九个扩展场景仍平均高约 1.4–1.6 pp；中心误差存在反例，跨种子/场景区间仍有不确定性。后一个比较不重称为全新数据确认。[散度对照与解释](results/region_jeffreys_control/attempt1/report.md) · [已用九场景补充](results/region_jeffreys_control/attempt1/used_scene_extension1/report.md)
 
-空闲 A6000 上的实测显示：保持参数与公式不变、重排关系投影顺序后，原生五维前向＋反向由 188.60 降至 123.81 ms，峰值显存由 10.986 降至 7.888 GiB。对照也同等优化后，五维仍比 Distance 慢约 16.34%；区域小输入没有加速。测量不含数据加载、优化器和常驻完整训练缓存，当前训练未采用该关系投影重排。[并行核对](results/native_shape_attribution/attempt1/parallel_resume_check_20261105.json) · [原实现成本](results/pe_runtime_diagnostic/attempt1/report.md) · [投影重排实测与范围](results/factored_relation_runtime/attempt1/report.md)
+空闲 A6000 上的实测显示：保持参数与公式不变、重排关系投影顺序后，原生五维前向＋反向由 188.60 降至 123.81 ms，峰值显存由 10.986 降至 7.888 GiB。对照也同等优化后，五维仍比 Distance 慢约 16.34%；区域小输入没有加速。测量不含数据加载、优化器和常驻完整训练缓存，当时正在运行的训练未采用该关系投影重排；本轮仅固定球形seed33另按独占复测决定使用优化。[并行核对](results/native_shape_attribution/attempt1/parallel_resume_check_20261105.json) · [原实现成本](results/pe_runtime_diagnostic/attempt1/report.md) · [投影重排实测与范围](results/factored_relation_runtime/attempt1/report.md)
 
 九个旧模型在 120 个旧 fit 对象上的只读注意力诊断已完成：五维的位置/内容分数幅度比中位数为 2.78–3.00，低于 Distance 的 3.57–4.73，注意力通常更分散。未发现能把旧弱种子 22 唯一归因于整体位置项过强的证据；局部尾部仍保留，不由此添加温度、归一化或门控，也不把内部统计当成效果确认。[诊断结果与边界](results/native_attention_balance_diagnostic/attempt1/report.md)
 
