@@ -1,0 +1,31 @@
+-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  
+                                                   Name    Self CPU %      Self CPU   CPU total %     CPU total  CPU time avg     Self CUDA   Self CUDA %    CUDA total  CUDA time avg    # of Calls  
+-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  
+                                               aten::mm         0.92%      10.311ms         1.25%      14.005ms      46.995us     681.913ms        63.03%     681.913ms       2.288ms           298  
+void cutlass::Kernel2<cutlass_75_wmma_tensorop_bf16_...         0.00%       0.000us         0.00%       0.000us       0.000us     651.095ms        60.18%     651.095ms      16.277ms            40  
+                                            aten::copy_         0.85%       9.529ms         1.76%      19.848ms      13.429us     131.841ms        12.19%     131.841ms      89.202us          1478  
+                    aten::_efficient_attention_backward         0.06%     709.352us         0.24%       2.736ms      75.992us      82.794ms         7.65%      82.841ms       2.301ms            36  
+fmha_cutlassB_bf16_aligned_64x64_k64_sm80(PyTorchMem...         0.00%       0.000us         0.00%       0.000us       0.000us      82.794ms         7.65%      82.794ms       2.300ms            36  
+void at::native::elementwise_kernel<128, 4, at::nati...         0.00%       0.000us         0.00%       0.000us       0.000us      76.616ms         7.08%      76.616ms     317.908us           241  
+                     aten::_efficient_attention_forward         0.08%     900.311us         0.23%       2.627ms      36.491us      41.100ms         3.80%      41.100ms     570.833us            72  
+fmha_cutlassF_bf16_aligned_64x64_rf_sm80(PyTorchMemE...         0.00%       0.000us         0.00%       0.000us       0.000us      41.100ms         3.80%      41.100ms     570.833us            72  
+void at::native::vectorized_elementwise_kernel<4, at...         0.00%       0.000us         0.00%       0.000us       0.000us      25.195ms         2.33%      25.195ms      66.477us           379  
+void at::native::vectorized_elementwise_kernel<4, at...         0.00%       0.000us         0.00%       0.000us       0.000us      21.899ms         2.02%      21.899ms      36.683us           597  
+void at::native::unrolled_elementwise_kernel<at::nat...         0.00%       0.000us         0.00%       0.000us       0.000us      21.743ms         2.01%      21.743ms      50.448us           431  
+                                             aten::add_         0.29%       3.256ms         0.58%       6.516ms      12.556us      19.370ms         1.79%      19.370ms      37.322us           519  
+                                              aten::mul         1.43%      16.122ms         2.08%      23.413ms      23.891us      18.032ms         1.67%      18.032ms      18.400us           980  
+void at::native::elementwise_kernel<128, 2, at::nati...         0.00%       0.000us         0.00%       0.000us       0.000us      17.262ms         1.60%      17.262ms      18.621us           927  
+                                            aten::addmm         0.45%       5.103ms         0.61%       6.871ms      59.237us      14.910ms         1.38%      14.910ms     128.532us           116  
+                                              aten::cat         0.55%       6.222ms         0.83%       9.320ms      21.134us      13.544ms         1.25%      13.544ms      30.712us           441  
+                                     aten::masked_fill_         0.08%     942.412us         0.16%       1.812ms      16.781us      12.103ms         1.12%      12.103ms     112.062us           108  
+void at::native::elementwise_kernel<128, 4, at::nati...         0.00%       0.000us         0.00%       0.000us       0.000us      12.103ms         1.12%      12.103ms     112.062us           108  
+void cutlass::Kernel2<cutlass_75_wmma_tensorop_bf16_...         0.00%       0.000us         0.00%       0.000us       0.000us      11.776ms         1.09%      11.776ms     163.561us            72  
+                                              aten::add         0.33%       3.722ms         0.52%       5.792ms      18.042us      11.348ms         1.05%      11.348ms      35.352us           321  
+void cutlass::Kernel2<cutlass_75_wmma_tensorop_bf16_...         0.00%       0.000us         0.00%       0.000us       0.000us      11.169ms         1.03%      11.169ms       2.792ms             4  
+                                            aten::fill_         0.27%       3.064ms         0.67%       7.523ms      12.193us       8.349ms         0.77%       8.349ms      13.532us           617  
+                                             aten::gelu         0.16%       1.843ms         0.24%       2.659ms      32.039us       7.721ms         0.71%       7.721ms      93.018us            83  
+void at::native::vectorized_elementwise_kernel<4, at...         0.00%       0.000us         0.00%       0.000us       0.000us       7.721ms         0.71%       7.721ms      93.018us            83  
+void cutlass::Kernel2<cutlass_80_wmma_tensorop_bf16_...         0.00%       0.000us         0.00%       0.000us       0.000us       7.661ms         0.71%       7.661ms      56.331us           136  
+-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  
+Self CPU time total: 1.125s
+Self CUDA time total: 1.082s

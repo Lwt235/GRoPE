@@ -1,14 +1,20 @@
 # GRoPE：将高斯参数化转为 Transformer 位置编码
 
-**当前执行范围：** 有限目标 `address_intervention1` 已完成；对应地址未带来可靠原生输出增量，固定Prefix训练修补仍关闭，本轮无自动后继。[授权与执行记录](research_autonomous_continuation.md)
+**当前执行范围：** 用户已将[粗场景记忆比较](gaussian_memory_coarse_budget_plan.md)设为有限目标，`coarse_memory_pe1`正在正式训练：同内容和预算的强中心／球形／完整高斯三组，各三种子2000步，查询两遍均从第一层读粗记忆。预检和240份缓存已完成；没有新确认或自动后继研究。上一有限目标`native_gaussian_pe1`已完成并收束末四层形状扩展，历史正负结果继续保留。[上一轮报告](../results/gaussian_memory/native_gaussian_pe1/report.md) · [本轮授权记录](research_autonomous_continuation.md)
 
 更新：2026-11-11（Asia/Shanghai）。本文是当前设计、证据链、分析与结论的统一入口。历史原文及草案见[归档索引](archive/2026-11-04/INDEX.md)；原始结果仍位于 `results/`。归档不表示删除负结果，也不表示历史草案已执行。
 
+**当前新目标（2026-11-11已授权执行）：** 用户明确“设为目标并执行计划”，有限目标`coarse_memory_pe1`已启动。[有限预算粗场景记忆比较](gaussian_memory_coarse_budget_plan.md)检验中心、球形范围、完整形状的用途；查询两遍均从第一层读取粗记忆，不复用已读取完整历史的前缀。三组各三种子、2000步，两个容量共同训练，主看空间结构并保留偏差和成本。当前实现及两个旧训练片段的全层预检已通过，正在构建完整旧数据缓存；尚无正式开发比较结论。不把未压缩PE先获胜设为通用前提。历史首段的无后继任务是上一有限目标完成时的状态，本段为后续授权更新。
+
 精简阅读入口：[固定方法、核心证据与适用边界](research_core.md)。该说明不替代本文件的完整历史和未完成事项。
 
-**最新路线建议（尚未执行）：** 已核对[相关工作参考](codex://threads/01a1c8bf-4174-7d42-b2d8-c5ead1bf2db5?hostId=remote-ssh-discovered%3AGPU)及Point3R、StreamVGGT、Spann3R、M3、Slot3R原文与相关官方实现。优先保留VGGT家族，先用官方StreamVGGT完成一次零训练原生历史读取验证，再在相同内容与适配条件下检验高斯相对强点位置编码的增量；不把内容升维或改V当作已确诊答案。[具体下一步计划](gaussian_memory_native_route_plan.md)。本次仅制定方案，尚未建立新目标或启动下载/训练。
+**当前路线与执行计划：** 已核对[相关工作参考](codex://threads/01a1c8bf-4174-7d42-b2d8-c5ead1bf2db5?hostId=remote-ssh-discovered%3AGPU)及Point3R、StreamVGGT、Spann3R、M3、Slot3R原文与相关官方实现。优先保留VGGT家族，先用官方StreamVGGT完成一次零训练原生历史读取验证，再在相同内容与适配条件下检验高斯相对强点位置编码的增量；不把内容升维或改V当作已确诊答案。[具体下一步计划](gaussian_memory_native_route_plan.md)。该有限目标已完成，见下方结果；用户随后授权[四组原生高斯PE比较](gaussian_memory_native_pe_plan.md)，查询几何和适配配置已固定，12次正式训练及完整评价已结束，未体现有用的形状增量，见下方最新结果。
 
-**最新完成（address_intervention1）：对应寻址增强，没有建立原生输出净改进。** 12旧地点、旧新Soft各三种子、固定0.5对应/打乱读取，1152份输出与672行背景参照完成独立评分；288份原结果完全回放，无支持时严格回退，两图实际审阅。持续遮挡History下，旧/新Soft对应来源读取分数升至3.02276%/2.98348%，主区域误差却平均增加0.47%/1.02%、两项区间跨零，各仅3/12地点改善。旧Soft打乱地址退步3.83%、区间支持退步；对应组比打乱组空间误差低7.39%、区间为正，但相对原读取的空间收益仍不确定。历史独有干预也没有净改进。保留有限地址作用，不采用干预、不扫描强度、不把V或decoder当作已定位病因；具体后续结构未选择或排队。全部是真值辅助的旧数据诊断，零训练/下载，无新确认。[完整报告](../results/gaussian_memory/address_intervention1/report.md) · [方法取舍](../results/gaussian_memory/address_intervention1/method_decision.json) · [证据边界](gaussian_memory_evidence_scope.md)
+**最新完成（native_gaussian_pe1）：共同适配有偏差收益，编码选型没有实用差异。** 四组同一原生内容、三个配对种子、各2000步、312份输出完成。持续遮挡ROI中官方/原生适配/强中心/球形/完整高斯log-MSE为1.584619/1.364770/1.364773/1.364783/1.364778。共同适配平均降13.87% [11.54,16.41]%，12地点和三种子均正，99.95%的减少对应ROI均值偏差平方下降；空间误差仅低0.26%、区间跨零。完整高斯对中心主误差高0.000393%、对球形低0.000304%，主区间均跨零，空间增量也极小；完整输入及事前输入分组均无有用优势。辅助微小正负区间全部保留，不作为实用胜负。完整输入的共同适配全图空间误差平均高5.11%、辅助区间刚支持恶化，不能称全面几何改进。完整高斯/中心/原生适配直接查询中位数310/284/210ms，D对B慢9.2%、对A慢47.7%。12次训练5.858 worker小时、峰值8.264GiB；独立评分最大差2.22e-15，两图已审阅。全部旧开发数据，无新确认，不采用新高斯方法，不补种子或调公式。结论仅限未压缩原生内容、预测几何、冻结writer/DPT和末四层适配，不能作为所有粗高斯记忆研究的门槛。[报告](../results/gaussian_memory/native_gaussian_pe1/report.md) · [方法取舍](../results/gaussian_memory/native_gaussian_pe1/method_decision.json)
+
+**前一轮完成（native_history1）：原生因果通路复现完成，额外历史净收益仍未建立。** 官方StreamVGGT、12旧地点、一个固定检查点、四组96输出及独立复算完成，两图实际审阅。持续遮挡下H/R缺失区log-MSE为1.584619/1.580801，H平均高0.24%、95%相对收益区间[−11.31,+9.91]%，8/12地点改善但少数地点退步较大。H对撤掉早期直接缓存的H-drop低5.10%、9/12地点改善，区间仍跨零。新增一致ROI支持7.65%、5地点为零；约97.03%主误差来自区域均值偏差，去均值空间误差仅平均低0.59%、区间跨零。home_bksh为最大退步反例，ROI高73.35%。96份独立评分最大差1.78e−15；元数据别名修复未改预测。GPU片段循环合计69.69秒、峰值6.955GiB，零训练、无新确认。保留官方K/V为研究载体，不宣称高斯方法或额外历史已有效；下一阶段回到同内容、同适配的强中心PE与形状增量，该轮完成时具体设计未启动，当前后继执行见首段。[完整报告](../results/gaussian_memory/native_history1/report.md) · [方法取舍](../results/gaussian_memory/native_history1/method_decision.json) · [证据边界](gaussian_memory_evidence_scope.md)
+
+**前一轮完成（address_intervention1）：对应寻址增强，没有建立原生输出净改进。** 12旧地点、旧新Soft各三种子、固定0.5对应/打乱读取，1152份输出与672行背景参照完成独立评分；288份原结果完全回放，无支持时严格回退，两图实际审阅。持续遮挡History下，旧/新Soft对应来源读取分数升至3.02276%/2.98348%，主区域误差却平均增加0.47%/1.02%、两项区间跨零，各仅3/12地点改善。旧Soft打乱地址退步3.83%、区间支持退步；对应组比打乱组空间误差低7.39%、区间为正，但相对原读取的空间收益仍不确定。历史独有干预也没有净改进。保留有限地址作用，不采用干预、不扫描强度、不把V或decoder当作已定位病因；具体后续结构未选择或排队。全部是真值辅助的旧数据诊断，零训练/下载，无新确认。[完整报告](../results/gaussian_memory/address_intervention1/report.md) · [方法取舍](../results/gaussian_memory/address_intervention1/method_decision.json) · [证据边界](gaussian_memory_evidence_scope.md)
 
 **前一轮完成（memory_addressability1）：空间地址有作用，形状增量与历史净用途仍未建立。** 12旧地点、48状态、21冻结读取器、1512组Q/K及19008行诊断评分完成；零训练/下载，独立对应计数与原生哨兵完全重现，三图实际审阅。持续遮挡下早期独有来源覆盖从11.37%经筛选/合并降至4.83%；加入历史后全图槽成员覆盖净减6.46 pp、区间为负，ROI净减2.91 pp仍不确定。同旧Soft Q/K加高斯先验，来源读取分数从0.08560%升至0.99047%，三个种子和区间同向；固定球形1.02233%，额外形状优势未确立。这是来源与注意力代理，不能替代最终任务成绩；home_at虽来源保留大幅下降，历史输出反而改善，不能将写入损失判为唯一病因。不改模型、不重开Prefix训练修补；当时建议的对应地址干预现已完成，结果见上方最新实验。[完整报告](../results/gaussian_memory/memory_addressability1/report.md) · [可支持的研究主张](gaussian_memory_evidence_scope.md)
 
@@ -20,7 +26,7 @@
 
 **前一轮完成（native_anchor_probe1）：把尺度交还当前观测，没有形成方法改进。** 固定模型、12对旧窗口，对9720份预测统一施加无标签尺度约束，并复算144行Native；GPU批处理66.17秒、零训练/下载、六图实际审阅完成。Soft的History-Corrective主误差高0.11%，基本持平；History-Prefix高3.81%、三个种子退步，但两项地点区间均跨零。约束后历史比近期均值低1.16%/0.71%、三个种子同向，主区间仍跨零；对同样约束的强C主误差高0.34%/0.40%，独立PE收益未确立。History-Prefix比Center低1.33%、三种子与区间同向，保留有限形状线索；去均值空间误差不变是代数性质，不能作为新改进。不采用该尺度约束，结束公式调整分支。全部是已用数据，无新确认。[完整报告](../results/gaussian_memory/native_anchor_probe1/report.md) · [方法取舍](../results/gaussian_memory/native_anchor_probe1/method_decision.json)
 
-**本轮已完成的固定计划：** [address_intervention1](gaussian_memory_address_intervention_plan.md)。固定对应地址与打乱地址干预已结束，当前有限主张见[证据边界](gaussian_memory_evidence_scope.md)，无自动后继。
+**已完成的当前计划：** [native_gaussian_pe1](gaussian_memory_native_pe_plan.md)，四组各三种子、2000步匹配适配、312份输出和审阅完成；当前没有排队的后继实验。[native_history1](gaussian_memory_native_route_plan.md)为已完成的父轮，不重启。
 
 **前一轮完成（history_read1）：窗口外历史未确立整体用途，但出现空间改善与整体偏差相抵消的证据。** 固定15个模型、12对已有窗口、四组256槽记忆，零训练/下载，9,108份新预测独立复算、756行父轮评分身份复用、七图实际审阅完成。History-Corrective的Soft对新C/强旧C主误差平均低6.62%/2.82%，三个种子同向但地点区间跨零；同一Soft加入历史后，Corrective主误差高1.98%，Prefix高0.12%，均不确定。预定空间指标却在Prefix下低9.25%，三个种子、11/12地点改善、区间为正；空间项减少0.001926，偏差平方增加0.002128，抵消整体收益。高斯对Center的历史空间误差低6.90%/8.33%，但对强C空间优势仍未确立。Corrective末态约243槽含早期来源、27槽含晚期来源，当前覆盖低于近期重置；Prefix改善吸收仍未形成整体历史收益，不能把失败唯一归因writer。全部是已用子集，无新确认。[完整报告](../results/gaussian_memory/history_read1/report.md) · [方法取舍](../results/gaussian_memory/history_read1/method_decision.json)
 
