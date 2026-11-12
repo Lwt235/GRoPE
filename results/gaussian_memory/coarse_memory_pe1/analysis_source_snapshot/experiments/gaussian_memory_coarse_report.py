@@ -89,7 +89,11 @@ def render():
         for n in CAPACITIES:
             t=runtime['median_seconds'][str(n)];lines.append(f"| {n} | {t['center']*1000:.1f} | {t['sphere']*1000:.1f} | {t['gaussian']*1000:.1f} |")
         lines+=['',runtime['scope']]
-    lines+=['','## 示例与反例','',f"预定前三ID加最大空间退步例，去重后为{a['fixed_example_ids']}；最大退步地点{a['worst_place']}。图用固定首种子，选例按三种子平均；全部地点和反例保留。误差图仅展示ROI内去均值平方log误差差，正值蓝色为高斯改善，各行色域已标明，至少±0.01以免放大小数差异。",'','![Cases](figures/cases.png)','','[固定计划](../../../docs/gaussian_memory_coarse_budget_plan.md) · [完整分析](analysis.json) · [独立评分](independent_result_checks.json) · [训练身份](training_lock.json)']
+        context=OUT/'timing_resource_context.json'
+        if context.exists():
+            ctx=read(context)
+            lines+=['',f"资源环境：GPU {ctx['gpu']}，共享worker={ctx['shared']}。若共享，启动前要求其他驻留进程对应的设备计算利用率不高于5%，使用既有12GiB单worker上限；保留前后占用记录。这是条件性耗时实测，不能称独占性能基准。"]
+    lines+=['','缓存K保留原生Q/K归一化和二维旋转后的FP32表示，V为BF16；实际字节已逐张量计数，未按二者都为BF16估算。本轮不改缓存精度或训练来追求更小数字。全缓存来源边界、形状和实际持久字节的核对见[input_inventory.json](input_inventory.json)。','','## 示例与反例','',f"预定前三ID加最大空间退步例，去重后为{a['fixed_example_ids']}；最大退步地点{a['worst_place']}。图用固定首种子，选例按三种子平均；全部地点和反例保留。误差图仅展示ROI内去均值平方log误差差，正值蓝色为高斯改善，各行色域已标明，至少±0.01以免放大小数差异。",'','![Cases](figures/cases.png)','','[固定计划](../../../docs/gaussian_memory_coarse_budget_plan.md) · [完整分析](analysis.json) · [独立评分](independent_result_checks.json) · [训练身份](training_lock.json)']
     (OUT/'report.md').write_text('\n'.join(lines)+'\n')
     with (OUT/'metrics.csv').open('w',newline='') as f:
         writer=csv.DictWriter(f,fieldnames=list(flat[0]));writer.writeheader();writer.writerows(flat)

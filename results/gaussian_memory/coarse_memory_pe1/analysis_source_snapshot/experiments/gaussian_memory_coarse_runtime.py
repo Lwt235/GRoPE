@@ -48,11 +48,12 @@ def timing(model,p):
                             d,out=forward_query(model,s,checkpoint_blocks=False,return_tokens=True)
                         with torch.autocast('cuda',enabled=False):poses,_=model.camera_head(out,past_key_values_camera=list(camera),use_cache=True)
                         mu,cov=query_geometry(d,poses[-1][0,0],s['native_hw'],s['geometry_unit'],s['geometry_origin'])
-                        replay_max=max(replay_max,float((d.cpu()-cpu['first_pass_depth']).abs().max()))
                         s['query_means']=mu;s['query_covariances']=cov;z=descriptors(s,kind)
                         torch.cuda.synchronize();mid=time.perf_counter()
                         with torch.autocast('cuda',dtype=torch.bfloat16):result=forward_query(model,s,adapter,kind,z,False)
                         torch.cuda.synchronize();end=time.perf_counter()
+                        # Audit transfer/check is outside the measured query interval.
+                        replay_max=max(replay_max,float((d.cpu()-cpu['first_pass_depth']).abs().max()))
                         if repeat:times.append(end-begin);parts.append([mid-begin,end-mid])
                         del d,out,poses,mu,cov,z,result
                     records.append(dict(kind=kind,id=rid,condition=c,capacity=n,seconds=times,median_seconds=float(np.median(times)),first_pass_median_seconds=float(np.median(parts,axis=0)[0]),second_pass_median_seconds=float(np.median(parts,axis=0)[1])))

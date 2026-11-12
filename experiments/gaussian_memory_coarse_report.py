@@ -69,12 +69,12 @@ def render():
         '', '查询两遍都从当前RGB骨干特征开始，全部24个global层读取粗记忆；没有读取完整历史的query prefix或早期DPT特征旁路。源writer和DPT冻结，24层Q/输出rank8适配与共享关系映射合计786,784参数。第一遍预测相机/深度生成查询几何，三组共用，查询真值不进入PE。该实验是受限接收端训练，不是全模型训练。',
         '', '源构建允许暂时使用完整源K/V，查询前释放；这是静态构建后的读取预算比较，尚未实现全程固定内存或在线融合。高斯表示观测支持区域，不是光度优化后的3DGS。K/V仍按层保留，不能称最终单特征紧凑架构。',
         '', 'B与C/D是固定容量的描述选择，非严格嵌套特征消融；C/D为同迹形状控制。跨容量的第一遍几何也可能改变，容量交互不能唯一归因形状。官方dense和single-view均未作本轮匹配适配，只是质量/成本背景；PE主证据来自同预算B/C/D。',
-        '', '主终点事前固定为256槽持续遮挡ROI去均值log-MSE；原始误差、均值偏差平方、全图、完整输入和成本均保留。统计分解不证明唯一物理尺度病因，模型原始输出未按查询真值对齐。','', '## 主表','', '| 槽数 | 条件 | 方法 | ROI原始误差 | ROI空间误差 | ROI偏差平方 | 全图原始误差 |','|---|---|---|---:|---:|---:|---:|']
+        '', '主终点事前固定为256槽持续遮挡ROI去均值log-MSE；原始误差、均值偏差平方、全图、完整输入和成本均保留。统计分解不证明唯一物理尺度病因，模型原始输出未按查询真值对齐。','', '## 主表','', '| 槽数 | 条件 | 方法 | ROI原始误差 | ROI空间误差 | ROI偏差平方 | 全图原始误差 | 全图空间误差 |','|---|---|---|---:|---:|---:|---:|---:|']
     flat=[]
     for n in CAPACITIES:
         for c in p['conditions']:
             for k,row in a['tables'][str(n)][c].items():
-                lines.append(f"| {n} | {c} | {k} | {row['hidden_log_mse']:.6f} | {row['hidden_centered_log_mse']:.6f} | {row['hidden_bias_squared']:.6f} | {row['log_mse']:.6f} |")
+                lines.append(f"| {n} | {c} | {k} | {row['hidden_log_mse']:.6f} | {row['hidden_centered_log_mse']:.6f} | {row['hidden_bias_squared']:.6f} | {row['log_mse']:.6f} | {row['centered_log_mse']:.6f} |")
                 flat.append(dict(capacity=n,condition=c,kind=k,**row))
     lines+=['','## 持续遮挡配对比较','','正数表示候选误差更低；5000次地点和种子配对重采样。三个种子和十二旧地点不是一般分布保证。区间跨零不证明等效，极小正区间也不自动构成实用收益。','','| 槽数 | 比较 | ROI空间降误差% [95%区间] | ROI原始降误差% [95%区间] | 空间改善地点/种子 |','|---|---|---:|---:|---|']
     for n in CAPACITIES:
@@ -83,13 +83,30 @@ def render():
             lines.append(f"| {n} | {pair} | {s['relative_gain_percent']:+.6f} [{sc[0]:+.6f}, {sc[1]:+.6f}] | {r['relative_gain_percent']:+.6f} [{rc[0]:+.6f}, {rc[1]:+.6f}] | {s['positive_places']}/12; {s['positive_seeds']}/3 |")
     lines+=['','![Summary](figures/summary.png)','','## 成本与实现检查','',f"训练循环合计{a['training_worker_hours']:.3f} worker小时、峰值已分配{a['training_peak_GiB']:.3f}GiB。432份适配输出及72份新参照独立NumPy评分，最大指标差{checks['max_metric_abs']:.3g}。逐种子初始化、计划采样与实际采样日志配对一致，每拟合两档容量各2000个微样本。",'','矩合并与NumPy独立复算通过。无位置变更的全层查询在相同零global掩码下，与官方模型输出完全一致；不加该零掩码时BF16不同注意力内核导致相对RMS约0.0582%，已保留诊断而未更改科学算子。该检查不代替任务效用。','']
     for n in CAPACITIES:
-        b=a['budgets'][str(n)];lines.append(f"- {n}槽：完整持久状态{b['MiB']:.3f}MiB，包含特殊token和相机缓存。完整协方差元数据可省的上界不足再容纳一个全24层K/V槽，因此同上限中心组不能多加一槽。静态源构建峰值{b['static_construction_peak_GiB']:.3f}GiB、中位源重放{b['source_build_seconds_median']:.3f}s。")
+        b=a['budgets'][str(n)];lines.append(f"- {n}槽：完整持久状态{b['MiB']:.3f}MiB，包含特殊token和相机缓存。完整协方差元数据可省的上界不足再容纳一个全24层K/V槽，因此同上限中心组不能多加一槽。缓存准备实测峰值{b['static_construction_peak_GiB']:.3f}GiB、中位源编码/相机重放{b['source_build_seconds_median']:.3f}s；该准备复用了先前源预测几何，不代表完整冷构建成本。完整来源几何重建另见下方实测。")
     if runtime:
         lines+=['','两遍查询实测（固定两个训练片段，两条件，两容量，首种子，预热后各三次，源驻GPU，排除模型/磁盘加载）：','','| 槽数 | Center ms | Sphere ms | Gaussian ms |','|---|---:|---:|---:|']
         for n in CAPACITIES:
             t=runtime['median_seconds'][str(n)];lines.append(f"| {n} | {t['center']*1000:.1f} | {t['sphere']*1000:.1f} | {t['gaussian']*1000:.1f} |")
         lines+=['',runtime['scope']]
-    lines+=['','## 示例与反例','',f"预定前三ID加最大空间退步例，去重后为{a['fixed_example_ids']}；最大退步地点{a['worst_place']}。图用固定首种子，选例按三种子平均；全部地点和反例保留。误差图仅展示ROI内去均值平方log误差差，正值蓝色为高斯改善，各行色域已标明，至少±0.01以免放大小数差异。",'','![Cases](figures/cases.png)','','[固定计划](../../../docs/gaussian_memory_coarse_budget_plan.md) · [完整分析](analysis.json) · [独立评分](independent_result_checks.json) · [训练身份](training_lock.json)']
+        if 'official_query_median_seconds' in runtime:
+            native_MiB=runtime['official_persistent_bytes']/2**20
+            lines+=['',f"同四个固定训练条件下，官方未压缩单遍查询中位数{runtime['official_query_median_seconds']*1000:.1f}ms，完整来源状态{native_MiB:.3f}MiB。它是未适配的一遍背景参照，PE主比较仍为匹配的B/C/D。",'','从来源RGB重新预测深度/相机并生成几何、归一化键、FPS和聚合的完整来源构建实测（来源图像和模型已载入，临时允许完整原生KV，排除磁盘I/O；不是全程有界内存）：']
+            peak=max(r['construction_peak_GiB'] for r in runtime['full_source_construction_records'])
+            for n in CAPACITIES:
+                ratio=native_MiB/a['budgets'][str(n)]['MiB']
+                lines.append(f"- {n}槽完整来源构建中位数{runtime['full_source_construction_median_seconds'][str(n)]:.3f}s；来源持久状态约缩小{ratio:.2f}倍。该比值不包括模型权重和临时激活，且聚合压缩为三组共有。")
+            lines+=['',f"四个来源构建条件的峰值已分配显存最高{peak:.3f}GiB；旧缓存准备计时未包含的来源深度头和几何生成现已计入。分项、与实际使用来源几何的重放差及原生KV字节见runtime.json。"]
+        context=OUT/'timing_resource_context.json'
+        if context.exists():
+            ctx=read(context)
+            lines+=['',f"资源环境：GPU {ctx['gpu']}，共享worker={ctx['shared']}。若共享，启动前要求其他驻留进程对应的设备计算利用率不高于5%，使用既有12GiB单worker上限；保留前后占用记录。这是条件性耗时实测，不能称独占性能基准。"]
+            if 'samples' in ctx:
+                lines+=['',f"此表使用事前登记的固定成本复测：首轮设备后来被其他任务使用，其原始数据保留在cost_shared_attempt1；卡6空闲后按相同片段、模型和重复次数重新测量，未按耗时选择片段或取更快的结果。全过程每五秒采样，共{len(ctx['samples'])}次，观测到外部计算进程={ctx['foreign_process_observed']}。采样不能排除采样间短暂占用，不将本设备的描述推广为一般硬件性能保证。"]
+            after=ctx.get('after',{}).get(str(ctx['gpu']))
+            if after and after[0]>512:
+                lines+=['','本次启动时设备空闲，但结束后检测到其他任务驻留并有计算负载；不同方法按顺序测量，外部负载可能随时间变化。以上耗时保留为当时运行条件的描述，不据此给三种编码排序或宣称加速。持久状态字节、输出评分和几何重放检查不依赖这一耗时比较。']
+    lines+=['','缓存K保留原生Q/K归一化和二维旋转后的FP32表示，V为BF16；实际字节已逐张量计数，未按二者都为BF16估算。本轮不改缓存精度或训练来追求更小数字。全缓存来源边界、形状和实际持久字节的核对见[input_inventory.json](input_inventory.json)。','','## 示例与反例','',f"预定前三ID加最大空间退步例，去重后为{a['fixed_example_ids']}；最大退步地点{a['worst_place']}。图用固定首种子，选例按三种子平均；全部地点和反例保留。误差图仅展示ROI内去均值平方log误差差，正值蓝色为高斯改善，各行色域已标明，至少±0.01以免放大小数差异。",'','![Cases](figures/cases.png)','','[固定计划](../../../docs/gaussian_memory_coarse_budget_plan.md) · [完整分析](analysis.json) · [独立评分](independent_result_checks.json) · [训练身份](training_lock.json)']
     (OUT/'report.md').write_text('\n'.join(lines)+'\n')
     with (OUT/'metrics.csv').open('w',newline='') as f:
         writer=csv.DictWriter(f,fieldnames=list(flat[0]));writer.writeheader();writer.writerows(flat)

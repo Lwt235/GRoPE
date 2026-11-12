@@ -1,12 +1,121 @@
 # GRoPE：将高斯参数化转为 Transformer 位置编码
 
-**当前执行范围：** 用户已将[粗场景记忆比较](gaussian_memory_coarse_budget_plan.md)设为有限目标，`coarse_memory_pe1`正在正式训练：同内容和预算的强中心／球形／完整高斯三组，各三种子2000步，查询两遍均从第一层读粗记忆。预检和240份缓存已完成；没有新确认或自动后继研究。上一有限目标`native_gaussian_pe1`已完成并收束末四层形状扩展，历史正负结果继续保留。[上一轮报告](../results/gaussian_memory/native_gaussian_pe1/report.md) · [本轮授权记录](research_autonomous_continuation.md)
+**首配对种子中间描述（2026-11-13，非最终取舍）：** native_input_pe1已有6/12拟合完成及4224份预测。首种子L/P/S/G主空间误差为0.02234237/0.02223455/0.02223519/0.02223574，G对P平均高约0.0054%，尚无实用PE增量；G对L的主均值低0.48%，其他查询低6.38%，完整输入AbsRel反高14.72%。仅首种子描述，无区间、采用或新确认；其余种子照原2000步预算执行，不为微小差异追加数值修补。[首种子描述](../results/gaussian_memory/native_input_pe1/first_seed_description.json)。
 
-更新：2026-11-11（Asia/Shanghai）。本文是当前设计、证据链、分析与结论的统一入口。历史原文及草案见[归档索引](archive/2026-11-04/INDEX.md)；原始结果仍位于 `results/`。归档不表示删除负结果，也不表示历史草案已执行。
+**正式训练启动（2026-11-12）：** native_input_pe1的44场景/352查询几何缓存和8项训练片段预检完成；零残差原生差0，48交互块/DPT及新增PE梯度有效，新读取器Adam恢复差0，预检峰值10.063GiB。配置、来源与实际采样锁定，L/P/S首种子已在GPU3/4/7启动，G及后续种子排队。仅正式启动前补齐full/missing配置字段，未产生训练/效果后变更；[修复记录](../results/gaussian_memory/native_input_pe1/failures/pre_run_conditions_v1/record.json)。三种子结果尚待完成，O6仍开放。
 
-**当前新目标（2026-11-11已授权执行）：** 用户明确“设为目标并执行计划”，有限目标`coarse_memory_pe1`已启动。[有限预算粗场景记忆比较](gaussian_memory_coarse_budget_plan.md)检验中心、球形范围、完整形状的用途；查询两遍均从第一层读取粗记忆，不复用已读取完整历史的前缀。三组各三种子、2000步，两个容量共同训练，主看空间结构并保留偏差和成本。当前实现及两个旧训练片段的全层预检已通过，正在构建完整旧数据缓存；尚无正式开发比较结论。不把未压缩PE先获胜设为通用前提。历史首段的无后继任务是上一有限目标完成时的状态，本段为后续授权更新。
+**当前授权执行（2026-11-12）：native_input_pe1已设为有限目标。** 按[执行方案](native_input_pe_execution_plan.md)实现单次输入注意力的L/P/S/G配对验证，固定32训练/12开发、四组各三种子2000步、8448新预测。服务O6及O4/O5，复用O2/O3，改C3并在明确新条件下复测C4；旧投影阴性不改写。已在空闲GPU3/4生成仅由保存场景/给定相机决定的几何缓存，尚无正式训练或新效果结论。下方“仅设计”为授权前形成记录。
+
+**最新分析与建议（2026-11-12，仅设计）：** [训练覆盖结果分析与下一项建议](native_training_coverage_results_analysis_20261112.md)。覆盖对主空间迁移有有限正证据，片段内约35%–52%的优势仍明显强于开发地点约4%–9%的均值；共同标定改善、场景差异和保存内容质量尚未分离。建议 `native_input_pe1`：固定32训练/12开发、来源状态和完整原生接收训练，用一次输入端注意力替换当前MLP融合，匹配L/P/S/G四组、各三种子2000步，直接检验读取时投影PE对强中心的增量。主要变更C3并在新条件下复测C4，服务O6及O4/O5；明确复用旧投影描述，不宣称新公式或推翻冻结接收下的阴性。旧数据、传感器/给定相机等边界保留，尚未设目标或执行，上一有限目标保持完成。
+
+**最新完成（2026-11-12）：native_training_coverage1完成。** 固定结构与2000步预算，训练12→32地点；新增Local/Render各三种子六拟合、4224新预测及2304继承评分、独立复算和两图实际审阅完成。主开发原查询R对Local由误差高1.37%变为低8.76% [−8.42,+21.86]%，三种子同向；主覆盖交互−0.002239 [−0.005162,−0.0000336]，端点接近零，属于有限正证据。R自身误差对旧R低12.51% [3.93,23.34]%，Local也低2.80%但不确定，改善并非仅由Local退步造成。
+
+其他查询/八查询合并R对Local低3.64%/6.06%，净优势与覆盖交互区间均跨零；开发主比较仅7/12地点有利。原始ROI/完整全图AbsRel对各自旧版本两方法均明显改善，但32地点R对Local的原始ROI优势5.83%及完整AbsRel退步3.99%仍不确定。原/新增训练片段留出视角低51.67%/35.25%，片段内用途保留。
+
+保留32地点R为候选，不定稿为可靠跨地点方法；结束此次覆盖对照，不自动追加数据、步数或模块。O4/O5有条件正证据，O6未检验；旧数据、sensor/joint-validity、给定相机/尺度、静态来源边界及所有历史结果保留。六份最终权重已持久化，RAM冗余退休；一次GPU6第62步让出后转7续训，无丢弃更新。总体研究目标仍未达成。
+
+[完整报告](../results/gaussian_memory/native_training_coverage1/report.md) · [固定数表](../results/gaussian_memory/native_training_coverage1/report_tables.md) · [覆盖图](../results/gaussian_memory/native_training_coverage1/figures/coverage.png)。下方“进行中／仅设计／尚未产生”按形成时点保留，最新状态以本段及当前对应表为准。
+
+**当前授权执行（2026-11-12）：native_training_coverage1已设为有限目标。** 按[固定方案](native_training_coverage_execution_plan.md)保留结构、完整原生接收适配与2000步预算，将训练从12扩至32地点，新增Local/Render各三种子共六次拟合。21个完整可用额外地点按预定哈希选20，原12开发地点保持隔离；主检验为固定开发原查询上的R−Local覆盖交互及32地点净用途，新查询/片段内迁移等保留。服务O4/O5、扩展O2/O3数据实例，改变C1/C6数据覆盖，O6仍未检验；旧coverage和view_transfer的正负证据保留。输入与新增来源准备已开始，暂无正式训练或新效果结论。
+
+**最新完成（2026-11-12）：native_receiver_view_transfer1固定权重检查完成。** 12份既有模型/24份保存场景，2304新预测及2304旧评分回放、配对迁移和两图实际审阅完成，零重训。训练片段未训练视角的Render对Local空间误差低55.59% [46.53,61.31]%，三个种子和12/12地点均有利；冻结接收行低55.79%。开发新视角平均高3.12%，区间[−33.40,+22.80]%（降误差方向），9/12地点有利但少数较大退步抵消均值，可靠跨地点收益仍未建立。
+
+证据支持已训练片段内的跨视角遮挡恢复，削弱“仅拟合画面有效”的解释；不证明一般3D读取能力或训练规模是唯一病因。训练/开发新视角的ROI来源支持96.47%/80.48%，条件质量差异保留；查询迁移的训练−开发差分区间跨零。新训练视角原始ROI误差低50.32%，完整输入AbsRel的2.42%均值优势仍不确定。O4/O5有限正证据、O6未检验、旧数据/sensor/给定相机/静态来源边界均保留；上一跨地点候选结束决定不改写。有限检查结束，不采用为一般方法，无自动后继训练。
+
+[完整报告](../results/gaussian_memory/native_receiver_view_transfer1/report.md) · [固定数表](../results/gaussian_memory/native_receiver_view_transfer1/report_tables.md) · [迁移图](../results/gaussian_memory/native_receiver_view_transfer1/figures/transfer.png)。下方“进行中／仅设计／尚未产生”按形成时点保留，以本段为最新状态。
+
+**当前授权执行（2026-11-12）：native_receiver_view_transfer1已设为有限目标。** 用户接受固定权重跨视角检查，按[执行方案](native_receiver_view_transfer_execution_plan.md)复用12份模型及24份保存场景，零重训，新增固定查询的2304份预测并比较迁移层级。服务O4/O5、复用O2/O3，C1–C6不改，O6仍未检验；旧负结果和完成决定保留。已开始输入与资源准备，尚无新效果结论。
+
+**最新分析与建议（2026-11-12，仅设计）：** [原生接收适配结果与跨视角迁移检查](native_receiver_results_analysis_20261112.md)。目前最明确的是训练画面优势未稳定迁移到未见地点；1.37%的开发均值差不能证明普遍伤害，完整解冻也没有建立强Local净收益。建议复用A/F两种接收条件的Local/Render共12份已有权重，在原24地点增加固定未训练查询`[1,4,7,10]`，以2304份推理比较“拟合画面→同片段未训练视角→未见地点”的收益范围。新增查询RGB/深度已存在，零重训；不改C1–C6，仅扩评价范围，服务O4/O5，O6仍未检验。旧coverage1/context_supervision1的迁移阴性保留，不承诺扩大数据即可解决。此建议尚未设目标或执行；下面已完成候选和结束决定不变。
+
+**最新完成（2026-11-12）：native_receiver_adaptation1有限验证完成。** Local／Global／Render各三个配对种子、各2000步，全部24组frame/global交互块与原DPT同等训练，2880份新预测和864份继承开发结果、配对交互、完整训练集评价、成本及两图实际审阅完成。Render主空间误差0.022975，Local 0.022665、Global 0.029797；R对Local平均高1.37%，降误差区间[−29.36,+16.57]%，未建立可靠净用途，也不证明普遍有害。对Global低22.89% [4.32,39.45]%，正确绑定对打乱低22.16% [8.53,37.70]%，保留空间组织与绑定的有限正证据。
+
+R−Local适配交互−0.000492，区间[−0.002967,+0.002147]跨零；R−Global交互−0.005174，区间[−0.012570,−0.000675]。训练集R对Local低41.42%而开发优势未建立，旧冻结行已有53.08%训练优势；共同适配不是该现象的唯一来源。原始缺失与完整全图AbsRel相对Local平均高7.29%/4.61%，区间跨零；支持ROI对Global低26.14%有支持、对Local低8.19%仍不确定。
+
+结束此版固定保存内容＋单次融合＋小数据完整原生接收适配候选，不采用Render或Global，也不把Local称为高斯方法。O4整体可靠净用途未建立；本轮服务O4/O5、主要改C6，复用O2/O3，O6新增PE价值未检验。全部为旧数据、sensor辅助来源/共同有效性、给定相机和静态来源，非纯RGB、新确认或全writer/编码器联合训练；不外推为所有3DGS memory不可行，也不设为新PE研究的通用门槛。总体精炼有效方法仍未达成，无自动后继。
+
+[完整报告](../results/gaussian_memory/native_receiver_adaptation1/report.md) · [固定数表](../results/gaussian_memory/native_receiver_adaptation1/report_tables.md) · [方法取舍](../results/gaussian_memory/native_receiver_adaptation1/method_decision.json)
+
+以下旧“当前／进行中／仅设计”措辞均按形成时点保留；本段为最新状态。
+
+**两配对种子中间描述（非最终取舍）：** 共同适配Local/Global/Render主空间误差0.022671/0.029323/0.022905；R对Local平均高1.04%（两种子分别低0.055%／高2.12%），对Global低21.89%，正确绑定对打乱低23.11%。训练集同指标R/Local为0.004338/0.007747，开发相对Local优势未建立；原始缺失误差R/Local为0.112456/0.107239，完整AbsRel为0.274628/0.268602。1920份新预测独立复算最大差1.92e−15，不给部分置信区间或方法采用，第三种子及2000步预算保持。[两种子描述](../results/gaussian_memory/native_receiver_adaptation1/two_seed_description.json)。
+
+**首配对种子中间描述（非最终取舍）：** 20261110的共同适配Local/Global/Render缺失ROI空间误差为0.022575/0.028688/0.022562；R对Local仅低0.055%，对Global低21.35%，正确绑定对打乱低21.35%。训练集同指标R/Local为0.004369/0.008265，开发优势未相应保留。原始ROI误差R/Local为0.106994/0.107604；完整全图AbsRel为0.261883/0.266064。13份导出共1248新预测独立复算最大差1.92e−15，无部分置信区间、新确认或方法采用；剩余配置与预算保持。[首种子描述](../results/gaussian_memory/native_receiver_adaptation1/first_seed_description.json)。
+
+
+**进度更新（2026-11-12）：native_receiver_adaptation1已完成2/9次2000步。** 首种子Local/Global的开发、完整训练集及冻结行训练集评价共576份新预测已导出，独立复算最大差1.92e−15；两份最终原生权重已SHA核对持久化到数据盘。Render和后续种子继续训练，尚无完整配对方法结论。临时续训转专用内存文件系统后，检查点写入约8s，原慢盘130–226s记录保留；科学源码/配置不变。[运行状态](../results/gaussian_memory/native_receiver_adaptation1/execution_status.json)。
+
+
+**正式训练启动（2026-11-12）：** native_receiver_adaptation1六个原训练条件预检完成，零融合/原前向一致、48交互块及DPT有梯度，完整模型与双优化器恢复预测差0，峰值10.429GiB。科学配置及来源身份已锁定，Local/Global首种子已在真实GPU2/1启动，实际约6.37亿原生参数与原融合共同训练；正式输出尚未齐备，无效果结论。预检顺序优化器引用修复及资源让出记录保留。[运行状态](../results/gaussian_memory/native_receiver_adaptation1/execution_status.json)。
+
+
+**当前授权执行（2026-11-12）：native_receiver_adaptation1已设为有限目标。** 用户接受原生接收网络共同适配建议，见[固定执行方案](native_receiver_adaptation_execution_plan.md)。复用保存场景及原融合，三组各三种子2000步，同等训练全部原生frame/global块和原DPT；主要改C6、服务O4/O5，O6仍未解决。已开始资源与旧训练片段预检准备；首个18GiB准入检查因显存余量不足而未启动CUDA子进程，按实测资源继续安排。当前无正式训练或新效果结论；下方“仅设计”为授权前记录。
+
+
+**最新分析与建议（2026-11-12，仅设计）：** [直接融合结果的解释与原生接收网络适配建议](rendered_feature_results_analysis_20261112.md)。已有预测分解显示：R对Local原始误差增加的95.22%伴随ROI均值偏差平方增加；支持区内空间改善被无支持区内退步抵消。该描述不定位唯一病因，也不产生GT可部署选择器。建议复用同一场景与融合结构，让Local/Global/Render同等微调全部原生frame/global块及DPT，与已完成冻结行比较接收训练条件的交互。主要变更C6、服务O4/O5，O6仍待明确检验；已有末四层LoRA、联合writer和各接口正负结果保留。新增九次拟合只是提案，尚未设新目标或执行，旧有限目标保持完成。
+
+
+**最新完成（2026-11-12）：rendered_feature_native1有限验证完成。** Local／Global／Render各三个配对种子、各2000步，共九次训练；864份适配与288份绑定打乱预测、全量独立复算、成本测量和两图实际审阅完成。Render相对Local的缺失ROI空间误差高3.20%，三个种子均退步，地点/种子区间仍宽且跨零；原始缺失误差与完整全图AbsRel分别高18.99%和17.15%，区间支持增加。不采用本版Render或Global，也不把Local晋升为高斯方法，结束固定保存内容＋单次输入融合候选。
+
+保留有限正证据：正确绑定比打乱的主空间误差低25.77% [15.86,37.59]%；来源一致支持ROI内Render比Global低13.60% [1.81,25.75]%，但相对Local的9.53%均值收益区间跨零。依赖与条件线索不等于整体净用途。三组是同容量的附加上下文选择，不是完整Local再追加来源的严格嵌套比较，不能据此宣布来源条件信息为零。
+
+本轮实现O4/O5的一种读取接法，复用O2/O3；O4可靠净用途未建立，O6新增PE价值未在本轮检验，原生2D RoPE保持。全部为旧数据、来源传感器/共同有效性、给定相机、静态来源和冻结骨干/DPT条件，非纯RGB或新确认。总体精炼有效方案目标仍未达成，本有限目标不自动启动后继研究；所有历史正负结果保留。
+
+[完整报告](../results/gaussian_memory/rendered_feature_native1/report.md) · [固定数表](../results/gaussian_memory/rendered_feature_native1/report_tables.md) · [方法取舍](../results/gaussian_memory/rendered_feature_native1/method_decision.json)
+
+以下按形成时间保留历史进度和前轮结论；其中“进行中”“仅设计”“当前”均指该段记录时点，最新状态以上文为准。
+
+**两种子中间描述（非最终取舍）：** Local/Global/Render主空间误差0.024986/0.027384/0.025646；R对Local高2.64%（逐种子高2.27%/3.02%），对Global低6.35%，正确绑定对打乱低26.09%。缺失原始误差对Local高16.86%，完整全图AbsRel高15.98%。768份新预测独立复算最大差1.32e−15；无新区间或新确认，第三种子及最后检查点不变。[两种子描述](../results/gaussian_memory/rendered_feature_native1/two_seed_description.json)。
+
+**首种子中间描述（非最终取舍）：** Local/Global/Render缺失ROI空间log-MSE为0.025018/0.027106/0.025587。Render对Local误差高2.27%、对Global低5.60%；正确绑定对打乱低25.93%，依赖不等于净用途。缺失ROI原始误差对Local高19.52%，完整全图AbsRel高15.48%。480份当前新预测独立复算最大差1.32e−15；本段只比较首配对种子，无区间/新确认，不改变剩余配置、样本或预算。[首种子描述](../results/gaussian_memory/rendered_feature_native1/first_seed_description.json)。
+
+**当前执行（2026-11-12）：rendered_feature_native1已获用户授权并设为目标。** 正按[固定执行方案](rendered_feature_native_execution_plan.md)实现Local／Global／Render的单次输入融合；24份场景缓存和六项原训练预检已完成，已完成8/9次2000步训练及960份新预测导出（其中768份已作中间独立复算），完整暖查询成本完成；仅最后Render仍在训练，最终评价待齐。O4/O5用途与O6的PE增量分开判断，旧投影阴性结果保留。[队列状态](../results/gaussian_memory/rendered_feature_native1/queue_status.json)。下方“仅设计”属于授权前形成记录。
+
+**最新分析与下一项建议（2026-11-12，仅设计）：** [可学习投影结果的原因分析与直接特征融合建议](learned_projection_results_analysis_20261112.md)。已有结果支持结束当前投影标量修补；下一项建议复用同一保存场景，在图像编码器输出处直接融合按查询视角渲染的特征，以同容量Local／场景平均Global／空间Render三组检验原生深度净用途。服务O4/O5、主要改变C3；O6的PE增量仍待后续明确检验，不能用渲染用途替代。已核对prototype1、view_token1、context_supervision1、joint_write1及最近三轮，区别与结果分支见链接。当前没有后继目标或训练；下面最新已完成结论保持。
+
+**当前完成（2026-11-12）：learned_projection_pe1有限验证已完成。** 三组各三种子2000步、864份新预测独立复算、成本及两图实际审阅完成。保留中心关系并学习投影输入后，G相对P/S主空间误差仍平均高3.02%/0.96%，三个种子均退步，区间跨零；S对P也无增量。各组相对同容量L的净用途未确立。旧固定G的完整输入空间代价修复17.08% [4.68,28.09]%，属于接口修复，未转为超过本轮强中心的收益。
+
+结束当前投影标量输入在此接口上的映射/强度修补，不采用G/S，也不晋升P为可靠memory方法。来源传感器/共同有效性、静态给定相机、冻结骨干和旧数据是边界，非纯RGB或新确认；旧来源质量正证据和区域任务成果保留，无自动后继。下方按轮次保留历史，以本段为当前状态。
+
+[完整报告](../results/gaussian_memory/learned_projection_pe1/report.md) · [固定数表](../results/gaussian_memory/learned_projection_pe1/report_tables.md) · [方法取舍](../results/gaussian_memory/learned_projection_pe1/method_decision.json)
+
+**上一轮状态（2026-11-12）：source_geometry_control1有限验证已完成。** 48份来源状态、四组各三种子2000步（12次训练）、1152份适配预测及1728份干预全部完成；2880份新预测独立复算、三张最终图已实际审阅。来源质量改善有有限正证据，但投影PE增量和相对L的可靠净用途未建立，结束此固定诊断，不晋升G或自动开展后继任务。
+
+P-sensor对P-pred的缺失ROI空间误差低4.27% [0.71,11.91]%，三个种子同向，说明中心PE读取器能利用来源几何及绑定的质量改善。G对P在pred/sensor条件主误差平均高6.62%/5.02%，区间跨零；主交互+0.000453，区间[−0.001950,+0.003349]，未建立质量解锁G优势。G-sensor对L平均高0.63%；P-sensor对L低4.18%但区间跨零。
+
+完整输入ROI中，G对P在pred/sensor条件的空间误差高17.64%/19.25%，区间均支持增加。传感器源场景直接深度AbsRel平均低44.25%，但空间质量和特征重观察未全面改善，不能称精确oracle。两行共同有效性也使用传感器信息，均是额外来源信息的旧数据诊断，不是纯RGB方法成绩或新确认。
+
+[完整报告](../results/gaussian_memory/source_geometry_control1/report.md) · [固定数表](../results/gaussian_memory/source_geometry_control1/report_tables.md) · [方法取舍](../results/gaussian_memory/source_geometry_control1/method_decision.json)
+
+**完成后的分析与建议（2026-11-12，仅设计）：** [结果原因与可学习投影PE对照](source_geometry_results_analysis_20261112.md)。六组配对中G训练末期损失均低于P，开发主均值却更差；sensor条件G在7/12地点改善，另有较大反例，符合适应性不足的可能性但未唯一定位病因。建议只改C4，在同一中心MLP中增加投影输入，比较中心／中心＋球形投影／中心＋完整投影；使用保存sensor场景、三种子各2000步，检验固定映射与替换中心关系的影响。当前仅建议，未设新目标或启动；已完成负结果和非RGB诊断边界保留。
+
+**上一轮状态（2026-11-12）：gaussian_scene_memory1的C1–C6有限实现与验证已完成。** 24份来源场景、L/T/C/P/G各三种子2000步（15次训练）、1440份适配预测、288份参照和864份固定干预全部完成；2592份预测独立复算，三张最终图已实际审阅。当前配置未建立可靠场景净用途或投影PE增量，结束此版接法，不晋升G，也不将负结果外推为所有3DGS memory不可行。全部为旧数据，没有新确认或自动后继任务。
+
+主终点缺失ROI空间log-MSE的L/T/C/P/G为0.025027/0.025058/0.024764/0.024685/0.026404。G相对P/L/T误差平均高6.97%/5.50%/5.37%，三个种子相对P均退步，但地点重采样区间跨零，不能断言总体必然有害。P/C对L平均低1.37%/1.05%，区间跨零且种子方向不一，也不晋升为可靠方法。正确G对打乱绑定/错误相机的主误差低21.77%/16.38%，区间为正，支持对应关系被使用；这不等于超过强匹配对照。
+
+[完整报告](../results/gaussian_memory/gaussian_scene_memory1/report.md) · [固定结果表](../results/gaussian_memory/gaussian_scene_memory1/report_tables.md) · [方法取舍](../results/gaussian_memory/gaussian_scene_memory1/method_decision.json)
+
+**本轮设计的来源（2026-11-12，当时仅建议，现已另获授权执行）：** [原因分析与来源几何质量对照](gaussian_scene_memory_analysis_20261112.md)。重新汇总显示来源旋转残差训练/旧开发中位2.62°/4.74°，开发有33.70°/85.94°反例；给定查询相机不等于来源场景几何准确。建议用同一构建接口的预测/传感器来源深度分别训练P/G，检验来源质量是否改变PE差值。该分析时仅完成已有记录的描述性汇总；随后用户授权source_geometry_control1，该有限验证已完成，结果见首段。来源质量有作用，但仍未唯一定位病因。
+
+**实施修复记录（已完成）：** 正式Gaussian拟合前修正AnySplat XYZW→gsplat WXYZ，归档旧派生状态并重建全部24份；抽样协方差最大相对差约6.16e−7。首T拟合前修复patch中心深度采样。十五次最终训练、保存重读和配对身份均在正确状态下核对；配置、假设与预算未按开发成绩调整。[修复记录](../results/gaussian_memory/gaussian_scene_memory1/failures/quaternion_order_v1/source_fix.json)。
+
+**每次制定、调整或恢复计划前必读：** [大纲—方案对应与尝试记录](research_outline_alignment.md)。新计划须注明服务的大纲项、实现尝试与临时条件，核对相关旧结果并解释本轮的信息价值；计划变化及实验完成／失败／收束后同步更新记录。此要求用于防偏移和重复，不新增数值门禁或审批步骤。
+
+**上一有限目标已完成：gaussian_scene_memory1。** 用户指定的C1–C6已实现并按固定方案检验，见[实施记录](gaussian_scene_memory_execution_plan.md)。该次授权是在coarse_memory_pe1完成之后，未改写上一轮负结果。下方带日期的进度是历史记录，当前状态以首段和最终报告为准。
+
+**路线澄清与下一项设计（2026-11-11）：** 用户重新强调“VGGT的memory本身是比较coarse的3DGS场景表达”，并要求检索文献、细化方案和防止偏移。[文献与具体方案](gaussian_scene_memory_plan_20261111.md)已整理：以可渲染高斯场景和按可见性绑定的内容为载体，同时检验原生几何用途与PE增量；首轮明确限定静态场景、给定相机，设计时尚未启动；现已按另行授权完成场景构建、全部固定训练与评价，最终结果见首段。早期`prototype1`已经实现gsplat特征记忆，不能把“加上renderer”说成首次实现；粗K/V比较是局部证据，其胜负不作为原始3DGS memory路线的前置门槛。以下固定轮次已按原计划完成，历史正负结果均保留；本次有限目标不自动启动新场景方案。
+
+前两种子G对P原始误差低8.87%的迹象在第三种子翻转，三种子合并反而高2.08%。完整输入全图AbsRel对P/T仍平均低6.04%/6.46%，但区间跨零且第三种子退步；对L仅低0.032%。保留辅助正结果，不改主终点。粗场景部分视角有错位、模糊与覆盖缺失，原始初始化也有损失，不能唯一归因writer、特征绑定、PE或接收网络。
+
+**上一项已完成范围：** `coarse_memory_pe1`的三组各三种子2000步训练、432份适配输出、参照、独立复算和成本测量已完成。空间主指标没有实用范围/形状增量，结束此固定粗K/V读取接法的形状扩展；本轮无新确认、无自动后继研究。可渲染统一场景记忆随后另获用户授权，后续有限验证已完成，见首段。[本轮报告](../results/gaussian_memory/coarse_memory_pe1/report.md) · [本轮授权记录](research_autonomous_continuation.md)
+
+更新：2026-11-12（Asia/Shanghai）。本文是当前设计、证据链、分析与结论的统一入口。历史原文及草案见[归档索引](archive/2026-11-04/INDEX.md)；原始结果仍位于 `results/`。归档不表示删除负结果，也不表示历史草案已执行。
+
+**前轮结果（coarse_memory_pe1）：粗记忆中的范围和方向也未建立空间增量。** 同内容/存储上限、全24层两遍查询、三组各三种子2000步，432份适配输出、72份新参照和24份官方评分完成。256槽持续遮挡ROI的中心/球形/高斯空间log-MSE为0.047483/0.047566/0.047580；高斯对中心降误差−0.204% [−0.400,+0.185]%，三个种子均未改善，对球形−0.029%且区间跨零。1024槽对中心−0.114% [−0.321,+0.218]%，也无实用增量。中心比冻结粗读取的ROI原始误差低95.54%，99.55%的下降对应均值偏差平方减少，空间收益区间仍跨零；这不是高斯形状证据或记忆必要性证明。完整输入256槽的高斯/球形对中心ROI AbsRel约低1.25%/1.16%的辅助正结果保留。源状态约783→44/152MiB是共同压缩收益；固定空闲卡复测两遍查询约361–365/403–405ms，官方单遍背景约144ms，不能称加速。九次训练15.185 worker小时、峰值5.762GiB；独立指标最大差1.78e−15，两图已审阅。全部旧开发数据。结束本固定接法，不补种子或修公式；保留历史区域正证据，不将本轮作为新3DGS场景方案的前置门槛。[完整报告](../results/gaussian_memory/coarse_memory_pe1/report.md) · [方法取舍](../results/gaussian_memory/coarse_memory_pe1/method_decision.json)
 
 精简阅读入口：[固定方法、核心证据与适用边界](research_core.md)。该说明不替代本文件的完整历史和未完成事项。
+
+`coarse_memory_pe1`最后一个拟合曾在仅有本任务的卡7上与球形组并行，原队列同名项经进程锁验证完成后退出，没有重复训练。训练和汇总进程均已退出，调度变更及完整日志保留在结果目录。
 
 **当前路线与执行计划：** 已核对[相关工作参考](codex://threads/01a1c8bf-4174-7d42-b2d8-c5ead1bf2db5?hostId=remote-ssh-discovered%3AGPU)及Point3R、StreamVGGT、Spann3R、M3、Slot3R原文与相关官方实现。优先保留VGGT家族，先用官方StreamVGGT完成一次零训练原生历史读取验证，再在相同内容与适配条件下检验高斯相对强点位置编码的增量；不把内容升维或改V当作已确诊答案。[具体下一步计划](gaussian_memory_native_route_plan.md)。该有限目标已完成，见下方结果；用户随后授权[四组原生高斯PE比较](gaussian_memory_native_pe_plan.md)，查询几何和适配配置已固定，12次正式训练及完整评价已结束，未体现有用的形状增量，见下方最新结果。
 
@@ -26,7 +135,7 @@
 
 **前一轮完成（native_anchor_probe1）：把尺度交还当前观测，没有形成方法改进。** 固定模型、12对旧窗口，对9720份预测统一施加无标签尺度约束，并复算144行Native；GPU批处理66.17秒、零训练/下载、六图实际审阅完成。Soft的History-Corrective主误差高0.11%，基本持平；History-Prefix高3.81%、三个种子退步，但两项地点区间均跨零。约束后历史比近期均值低1.16%/0.71%、三个种子同向，主区间仍跨零；对同样约束的强C主误差高0.34%/0.40%，独立PE收益未确立。History-Prefix比Center低1.33%、三种子与区间同向，保留有限形状线索；去均值空间误差不变是代数性质，不能作为新改进。不采用该尺度约束，结束公式调整分支。全部是已用数据，无新确认。[完整报告](../results/gaussian_memory/native_anchor_probe1/report.md) · [方法取舍](../results/gaussian_memory/native_anchor_probe1/method_decision.json)
 
-**已完成的当前计划：** [native_gaussian_pe1](gaussian_memory_native_pe_plan.md)，四组各三种子、2000步匹配适配、312份输出和审阅完成；当前没有排队的后继实验。[native_history1](gaussian_memory_native_route_plan.md)为已完成的父轮，不重启。
+**已完成的有限计划：** [coarse_memory_pe1](gaussian_memory_coarse_budget_plan.md)九次训练、432份适配输出及参照、成本与审阅完成；其父轮[native_gaussian_pe1](gaussian_memory_native_pe_plan.md)和[native_history1](gaussian_memory_native_route_plan.md)均保持已完成状态。当前无排队的后继实验，可渲染场景新方案仅为设计，不自动启动。
 
 **前一轮完成（history_read1）：窗口外历史未确立整体用途，但出现空间改善与整体偏差相抵消的证据。** 固定15个模型、12对已有窗口、四组256槽记忆，零训练/下载，9,108份新预测独立复算、756行父轮评分身份复用、七图实际审阅完成。History-Corrective的Soft对新C/强旧C主误差平均低6.62%/2.82%，三个种子同向但地点区间跨零；同一Soft加入历史后，Corrective主误差高1.98%，Prefix高0.12%，均不确定。预定空间指标却在Prefix下低9.25%，三个种子、11/12地点改善、区间为正；空间项减少0.001926，偏差平方增加0.002128，抵消整体收益。高斯对Center的历史空间误差低6.90%/8.33%，但对强C空间优势仍未确立。Corrective末态约243槽含早期来源、27槽含晚期来源，当前覆盖低于近期重置；Prefix改善吸收仍未形成整体历史收益，不能把失败唯一归因writer。全部是已用子集，无新确认。[完整报告](../results/gaussian_memory/history_read1/report.md) · [方法取舍](../results/gaussian_memory/history_read1/method_decision.json)
 

@@ -45,6 +45,7 @@ def check_and_score():
             samplehash=hashlib.sha256(json.dumps([r['samples'] for r in log]).encode()).hexdigest()
             identities[(kind,seed)]=dict(initial=status['initial_state_sha256'],schedule=status['schedule_sha256'],actual_sample_sha256=samplehash,capacities=counts,checkpoint=ev['checkpoint_sha256'])
             data=load(ev['prediction_path']);assert len(data['keys'])==48==len(ev['rows'])
+            assert data['keys']==[list(k) for k in example_keys(p,'development')]
             for key,pred,record in zip(data['keys'],data['depth_metric'],ev['rows']):
                 rid,q,c,n=key;assert q==11 and (record['id'],record['condition'],record['capacity'])==(rid,c,n)
                 scores=numpy_scores(pred.numpy(),targets[rid,c])
@@ -58,6 +59,8 @@ def check_and_score():
     rows.extend(official)
     ref=read(OUT/'evaluation/references.json');assert sha256(ref['prediction_path'])==ref['prediction_sha256']
     data=load(ref['prediction_path'])
+    expected_ref=[[m['id'],c,n,kind] for m in p['catalog'] for c in p['conditions'] for n,kind in [(0,'single_view'),*[(n,'coarse_frozen') for n in CAPACITIES]]]
+    assert len(ref['rows'])==len(data['depth_metric'])==72 and data['keys']==expected_ref
     for key,pred,record in zip(data['keys'],data['depth_metric'],ref['rows']):
         rid,c,n,kind=key;s=numpy_scores(pred.numpy(),targets[rid,c]);maxdiff=max(maxdiff,max(abs(s[k]-record[k]) for k in s))
         rows.append(dict(id=rid,place=record['place'],condition=c,capacity=n,kind=kind,seed=None,**s))
@@ -93,9 +96,11 @@ def analyze():
         rec=[read(OUT/'cache'/(keyname(rid,11,c,n)+'.json')) for rid in ids for c in p['conditions']]
         actual=[r['persistent_bytes'] for r in rec];assert len(set(actual))==1
         # Removing the full source covariance cannot buy one extra 24-layer KV slot.
-        possible_saving=(n+40)*3*3*4;extra_slot_bytes=24*2*16*64*2+3*4+8+4+1
+        header=torch.load(sample_path(ids[0],11,p['conditions'][0],n),map_location='cpu',mmap=True,weights_only=False)
+        kv_bytes_per_slot=(header['keys'].numel()*header['keys'].element_size()+header['values'].numel()*header['values'].element_size())//(n+40)
+        possible_saving=(n+40)*3*3*4;extra_slot_bytes=kv_bytes_per_slot+3*4+8+4+1
         assert possible_saving<extra_slot_bytes
-        budgets[str(n)]=dict(actual_persistent_bytes=actual[0],MiB=actual[0]/2**20,source_camera_bytes=rec[0]['camera_bytes'],maximum_center_metadata_saving_bytes=possible_saving,extra_slot_bytes=extra_slot_bytes,extra_center_slot_fits=False,source_build_seconds_median=float(np.median([r['source_build_seconds'] for r in rec])),static_construction_peak_GiB=max(r['peak_GiB'] for r in rec),offline_audit_cache_bytes=sum(sample_path(*k).stat().st_size for k in example_keys(p,'train')+example_keys(p,'development') if k[3]==n))
+        budgets[str(n)]=dict(actual_persistent_bytes=actual[0],MiB=actual[0]/2**20,key_dtype=str(header['keys'].dtype),value_dtype=str(header['values'].dtype),KV_bytes_per_slot=kv_bytes_per_slot,source_camera_bytes=rec[0]['camera_bytes'],maximum_center_metadata_saving_bytes=possible_saving,extra_slot_bytes=extra_slot_bytes,extra_center_slot_fits=False,source_build_seconds_median=float(np.median([r['source_build_seconds'] for r in rec])),static_construction_peak_GiB=max(r['peak_GiB'] for r in rec),offline_audit_cache_bytes=sum(sample_path(*k).stat().st_size for k in example_keys(p,'train')+example_keys(p,'development') if k[3]==n))
     statuses=[read(OUT/f'{k}_{s}'/'status.json') for k in KINDS for s in SEEDS]
     result=dict(complete=True,tables=tables,comparisons=comparisons,budgets=budgets,capacity_effect_difference_256_minus_1024_percent_95=np.percentile(interaction,[2.5,97.5]).tolist(),capacity_effect_scope='Paired overall-interface condition; first-pass geometry changes too, not a uniquely isolated covariance cause',worst_id=worst,worst_place=places[ids.index(worst)],fixed_example_ids=selected,bootstrap=p['bootstrap'],training_worker_hours=sum(s['seconds_this_invocation'] for s in statuses)/3600,training_peak_GiB=max(s['peak_GiB'] for s in statuses),new_confirmation=False,all_data_previously_used=True,plan_sha256=sha256(OUT/'plan.json'))
     write_json(OUT/'analysis.json',result);write_json(OUT/'figure_selection.json',dict(fixed=p['fixed_examples'],worst=worst,ids=selected,seed=SEEDS[0],selection='maximum 256 persistent ROI spatial Gaussian minus Center error across paired seeds'))
