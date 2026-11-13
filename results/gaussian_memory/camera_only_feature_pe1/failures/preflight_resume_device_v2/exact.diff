@@ -1,0 +1,58 @@
+--- results/gaussian_memory/camera_only_feature_pe1/failures/preflight_resume_device_v2/camera_only_feature_run.py.before
++++ experiments/camera_only_feature_run.py
+@@ -72,9 +72,13 @@
+ 
+ def preflight():
+     if (d.OUT/'preflight.json').exists():assert d.read(d.OUT/'preflight.json')['complete'];return
+-    assert not d.resources(admission=True)['stop_reasons'];checks=[];native_model=native_load();shared=[]
++    assert not d.resources(admission=True)['stop_reasons'];checks=[];shared=[]
++    recovered=(d.CACHE/'preflight/resume.pt').exists() and d.read(d.OUT/'budget.json')['counts']['pilot_updates']>0
++    native_model=None if recovered else native_load()
+     for meta in d.contract()['training_catalog'][:2]:
+         rid=meta['id'];q=2;x,g,f=source_input(rid);v=d.load(d.view_path(rid,q),'cuda');b,a=d.cached_anchor(rid,q);b=b.cuda();a=a.cuda()
++        if recovered:
++            shared.append((rid,x,g,v,b,a));checks.append(dict(id=rid,initial_assertions_passed_before_recorded_optimizer_device_assertion=True,actual_render_and_native_repeated=False));continue
+         query=d.load(d.old.query_path(rid,q),'cuda');actual,aa=render_anchor(f,query,'preflight')
+         checks.append(dict(id=rid,anchor_cache_vs_real_max_abs=float((actual-b).abs().max()),alpha_cache_vs_real_max_abs=float((aa-a).abs().max()),same_physical_render_path=True,valid_keys=int(v['key_mask'].sum())))
+         shared.append((rid,x,g,v,b,a))
+@@ -91,7 +95,12 @@
+     parameter_counts={};identities={};gradients={}
+     for arm in d.ARMS:
+         reader=model_new(d.SEEDS[0]);opt=optimizer(reader);identities[arm]=digest(reader);parameter_counts[arm]=sum(p.numel() for p in reader.parameters())
+-        for step in range(2):
++        pilot_start=0
++        if recovered and arm=='P':
++            saved=d.load(d.CACHE/'preflight/resume.pt');reader.load_state_dict(saved['model']);opt.load_state_dict(saved['optimizer']);restore_rng(saved['rng']);pilot_start=saved['step']
++            assert pilot_start==1
++            assert all(torch.equal(saved['optimizer']['state'][i][k].cpu(),opt.state_dict()['state'][i][k].cpu()) for i in saved['optimizer']['state'] for k in ('step','exp_avg','exp_avg_sq'))
++        for step in range(pilot_start,2):
+             opt.zero_grad(set_to_none=True);loss=0
+             for rid,x,g,v,b,a in shared:
+                 target=d.load(d.old.patch_path(rid,2,'full'),'cuda')['patches'][0]
+@@ -99,7 +108,7 @@
+             gradients[arm]={name:float(p.grad.norm()) for name,p in reader.named_parameters() if p.grad is not None}
+             torch.nn.utils.clip_grad_norm_(reader.parameters(),5.);d.charge('pilot',pilot_updates=1,pilot_reader=2,pilot_source=2);opt.step()
+             if arm=='P' and step==0:
+-                p=d.CACHE/'preflight/resume.pt';d.tensor_save(p,snapshot(reader,opt,step+1,arm,d.SEEDS[0],[]));saved=d.load(p,'cuda')
++                p=d.CACHE/'preflight/resume.pt';d.tensor_save(p,snapshot(reader,opt,step+1,arm,d.SEEDS[0],[]));saved=d.load(p)
+                 other=model_new(d.SEEDS[0]);other.load_state_dict(saved['model']);other_opt=optimizer(other);other_opt.load_state_dict(saved['optimizer']);restore_rng(saved['rng'])
+                 rid,x,g,v,b,a=shared[0]
+                 with torch.no_grad():
+@@ -107,7 +116,7 @@
+                     one=read_one(reader,reader.encode_source(x),v,b,a,arm);two=read_one(other,other.encode_source(x),v,b,a,arm)
+                 assert torch.equal(one,two)
+                 assert digest(reader)==digest(other)
+-                assert all(torch.equal(opt.state_dict()['state'][i][k],other_opt.state_dict()['state'][i][k]) for i in opt.state_dict()['state'] for k in ('step','exp_avg','exp_avg_sq'))
++                assert all(torch.equal(opt.state_dict()['state'][i][k].cpu(),other_opt.state_dict()['state'][i][k].cpu()) for i in opt.state_dict()['state'] for k in ('step','exp_avg','exp_avg_sq'))
+                 reader,opt=other,other_opt
+         assert gradients[arm]['key.weight']>0 and gradients[arm]['position.2.weight']>0 and gradients[arm]['decoder.2.weight']>0
+     assert len(set(identities.values()))==1 and len(set(parameter_counts.values()))==1
+@@ -133,7 +142,7 @@
+     if status.exists():assert d.read(status)['complete'];return
+     reader=model_new(seed);opt=optimizer(reader);order=schedule(seed);initial=digest(reader);first=0;resume=d.CACHE/'resumes'/f'{arm}_{seed}.pt'
+     if resume.exists():
+-        state=d.load(resume,'cuda');assert state['arm']==arm and state['seed']==seed and state['order']==order
++        state=d.load(resume);assert state['arm']==arm and state['seed']==seed and state['order']==order
+         reader.load_state_dict(state['model']);opt.load_state_dict(state['optimizer']);restore_rng(state['rng']);first=state['step']
+     d.write(folder/'initial_identity.json',dict(seed=seed,arm=arm,initial_sha256=initial,parameter_count=sum(x.numel() for x in reader.parameters()),schedule=order,precision='FP32',fixed_final_step=2000))
+     start=time.monotonic();last_resource=0;space=None

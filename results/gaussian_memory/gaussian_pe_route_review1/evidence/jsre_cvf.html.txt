@@ -1,0 +1,123 @@
+
+
+
+    
+    
+    
+    ICCV 2025 Open Access Repository
+    
+    
+    
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+        
+        
+    
+    
+
+        
+
+            ICCV 2025 open access
+        
+        
+
+            These ICCV 2025 papers are the Open Access versions, provided by the
+Computer Vision Foundation.
+
+Except for the watermark, they are identical to the accepted versions;
+the final published version of the proceedings is available on IEEE Xplore.
+        
+        
+
+            This material is presented to ensure timely dissemination of scholarly and technical work.
+Copyright and all rights therein are retained by authors or by other copyright holders.
+All persons copying this information are expected to adhere to the terms and constraints invoked 
+by each author's copyright.
+
+
+            
+                
+                
+            
+
+        
+    
+    
+
+        
+ Powered by:
+        
+        
+ 
+        
+ 
+        
+ Sponsored by:
+        
+        
+        
+    
+
+
+
+
+    
+    
+
+        Joint Semantic and Rendering Enhancements in 3D Gaussian Modeling with Anisotropic Local Encoding
+    
+    
+    
+        
+Jingming He, Chongyi Li, Shiqi Wang, Sam Kwong; Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV), 2025, pp. 28354-28363
+    
+    
+    
+Abstract
+    
+    
+
+
+    
+
+    Recent works propose extending 3DGS with semantic feature vectors for simultaneous semantic segmentation and image rendering. However, these methods often treat the semantic and rendering branches separately, relying solely on 2D supervision while ignoring the 3D Gaussian geometry. Moreover, current adaptive strategies adapt the Gaussian set depending solely on rendering gradients, which can be insufficient in subtle or textureless regions. In this work, we propose a joint enhancement framework for 3D semantic Gaussian modeling that synergizes both semantic and rendering branches. Firstly, unlike conventional point cloud shape encoding, we introduce an anisotropic 3D Gaussian Chebyshev descriptor using the Laplace-Beltrami operator to capture fine-grained 3D shape details, thereby distinguishing objects with similar appearances and reducing reliance on potentially noisy 2D guidance. In addition, without relying solely on rendering gradient, we adaptively adjust Gaussian allocation and spherical harmonics (SH) with local semantic and shape signals, enhancing rendering efficiency through selective resource allocation. Finally, we employ a cross-scene knowledge transfer module to continuously update learned shape patterns, enabling faster convergence and robust representations without relearning shape information from scratch for each new scene. Experiments on multiple datasets demonstrate improvements in segmentation accuracy and rendering quality while maintaining high rendering frame rates.
+    
+    
+    
+Related Material
+    
+    
+
+    
+[pdf]
+[supp]
+
+[bibtex]
+
+@InProceedings{He_2025_ICCV,
+    author    = {He, Jingming and Li, Chongyi and Wang, Shiqi and Kwong, Sam},
+    title     = {Joint Semantic and Rendering Enhancements in 3D Gaussian Modeling with Anisotropic Local Encoding},
+    booktitle = {Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV)},
+    month     = {October},
+    year      = {2025},
+    pages     = {28354-28363}
+}
+        
+
+

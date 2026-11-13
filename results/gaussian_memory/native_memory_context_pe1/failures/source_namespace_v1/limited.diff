@@ -1,0 +1,49 @@
+--- experiments/native_memory_context_train.py before
++++ experiments/native_memory_context_train.py after
+@@ -12,7 +12,7 @@
+ from experiments.gaussian_scene_config import schedule
+ from experiments.gaussian_scene_preflight import objective,metric_depth
+ from models.gaussian_scene_rendered import RenderedFeatureFusion
+-from models.gaussian_memory_context import MemoryContextWriter,forward_read
++from models.gaussian_scene_context_writer import MemoryContextWriter,forward_read
+ from models.gaussian_scene_memory import rasterize_field
+ 
+ STOP=False
+@@ -47,7 +47,14 @@
+ 
+ def verify_lock():
+     lock=read(OUT/'configuration_lock.json');assert lock['plan_sha256']==sha256(OUT/'plan.json') and lock['scientific_plan_sha256']==sha256(SCIENCE_PLAN)
+-    assert all(sha256(ROOT/n)==v for n,v in lock['source_sha256'].items());return lock
++    revision=OUT/'engineering_source_revision_v1.json'
++    if revision.exists():
++        rev=read(revision);assert rev['original_lock_sha256']==sha256(OUT/'configuration_lock.json')
++        assert all(sha256(path)==h for path,h in rev['original_source_snapshots'].items())
++        assert all(sha256(ROOT/n)==h for n,h in rev['current_source_sha256'].items())
++        assert sha256(ROOT/rev['moved_writer_path'])==lock['source_sha256']['models/gaussian_memory_context.py']
++    else:assert all(sha256(ROOT/n)==v for n,v in lock['source_sha256'].items())
++    return lock
+ 
+ 
+ def snapshot(model,fusion,pe,opts,step,identity):
+--- experiments/native_memory_context_preflight.py before
++++ experiments/native_memory_context_preflight.py after
+@@ -9,7 +9,7 @@
+ from experiments.native_receiver_data import core_state,core_load,enable_receiver,digest
+ from experiments.native_receiver_runtime import model_load,forward_read as old_forward
+ from experiments.gaussian_scene_preflight import objective,metric_depth
+-from models.gaussian_memory_context import MemoryContextWriter,forward_read
++from models.gaussian_scene_context_writer import MemoryContextWriter,forward_read
+ from models.gaussian_scene_memory import rasterize_field
+ 
+ def numpy_check(field,graph):
+--- experiments/native_memory_context_queue.py before
++++ experiments/native_memory_context_queue.py after
+@@ -14,7 +14,7 @@
+ from experiments.native_memory_context_launch import active_seconds
+ from experiments.native_memory_context_resources import check
+ 
+-SCIENCE_FILES=['experiments/native_memory_context_'+n+'.py' for n in ['data','prepare','preflight','train','launch','queue','score','cost','resources']]+['models/gaussian_memory_context.py','models/gaussian_scene_rendered.py','models/gaussian_scene_memory.py','models/gaussian_scene_native.py','experiments/native_receiver_data.py','experiments/native_receiver_runtime.py','experiments/native_coverage_data.py','experiments/rendered_feature_data.py','experiments/gaussian_scene_config.py','experiments/gaussian_scene_preflight.py']
++SCIENCE_FILES=['experiments/native_memory_context_'+n+'.py' for n in ['data','prepare','preflight','train','launch','queue','score','cost','resources']]+['models/gaussian_scene_context_writer.py','models/gaussian_scene_rendered.py','models/gaussian_scene_memory.py','models/gaussian_scene_native.py','experiments/native_receiver_data.py','experiments/native_receiver_runtime.py','experiments/native_coverage_data.py','experiments/rendered_feature_data.py','experiments/gaussian_scene_config.py','experiments/gaussian_scene_preflight.py']
+ 
+ def freeze():
+     p=plan();assert read(OUT/'preflight.json')['complete']

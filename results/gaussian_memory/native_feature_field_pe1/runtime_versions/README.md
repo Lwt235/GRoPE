@@ -1,0 +1,1 @@
+source_fit_v1.py是J全形成及C资源让出前的精确执行版本，SHA与J/configuration_lock一致。现行版本仅补恢复RNG及跨资源段累计计时，源公式/预算/更新序列不改；C未完成部分用现行版恢复。历史reader和native源码完全未改，最终运行源文件身份见configuration/manifest。

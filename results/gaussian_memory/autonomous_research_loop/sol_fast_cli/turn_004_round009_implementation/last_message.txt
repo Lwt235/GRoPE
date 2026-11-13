@@ -1,0 +1,12 @@
+本轮完整交付：[报告](/home/liwt/GRoPE/results/gaussian_memory/native_pose_memory_pe1/report.md) · [实现交接](/home/liwt/GRoPE/results/gaussian_memory/native_pose_memory_pe1/implementation_handoff.json)。
+
+12×2000拟合、4224输出、独立复算、成本与两图审阅完成。主G−P为 **+2.778 pp [−2.083,+8.333]**，未达预定筛；G/Native成功率为27.083%/29.167%。训练适配正线索和开发阴性均保留，无fresh或总体成功声明。
+
+GPU累计0.436499 worker小时；DATA保守峰值6.418 GiB。自有GPU进程均已退出，工程无未完项。请求Sol/high/fast；后台有效配置未独立暴露，保持unknown。
+
+SHA256：
+
+- report：`a6a3cc77248385d86aa6963c583739c97ed23bb7dfba1301174b807402d7e91d`
+- handoff：`bf1e4f268b59ceb825e8ffb0a0f24d2130d26bb0127a37ff86d3e20714fe7f67`
+
+交回原Astra科学取舍。本turn结束释放写租约，未启动后继。

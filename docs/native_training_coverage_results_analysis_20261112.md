@@ -1,5 +1,7 @@
 # 训练覆盖结果分析与下一项建议
 
+**后续状态（2026-11-13）：** 下方形成时提出的native_input_pe1已获授权并完成，主G/P增量0.323%不确定，单次attention候选结束；不改写原覆盖实验或当时建议的历史状态。[完成报告](../results/gaussian_memory/native_input_pe1/report.md)。
+
 2026-11-12。依据已完成的 [native_training_coverage1](../results/gaussian_memory/native_training_coverage1/report.md)。本文为结果解释和下一项设计，未设新目标、未启动训练；上一有限目标保持完成。
 
 ## 证据支持到哪一步

@@ -1,0 +1,327 @@
+
+
+
+    
+    
+    
+    
+     
+    SplatFormer: Point Transformer for Robust 3D Gaussian Splatting
+
+    
+    
+
+    
+
+        
+     
+    
+    
+    
+    
+    
+    
+    
+
+        
+    
+    
+    
+    
+
+
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+
+
+
+    
+
+        
+
+            
+
+                SplatFormer  
+ 
+                 Point Transformer for Robust 3D Gaussian Splatting
+                 
+
+                  (ICLR 2025 Spotlight)    
+              
+            
+        
+        
+
+            
+
+                
+                    
+
+                        
+                          Yutong Chen
+                        1
+
+                    
+                    
+
+                        
+                          Marko Mihajlovic
+                        1
+
+                    
+                    
+
+                        
+                            Xiyi Chen
+                        2
+
+                    
+                    
+
+                        
+                          Yiming Wang
+                        1
+
+                    
+                    
+
+                        
+                          Sergey Prokudin
+                        1,3
+
+                    
+                    
+
+                        
+                          Siyu Tang
+                        1
+
+                    
+                
+            
+        
+        
+
+            
+
+            1ETH Zürich 
+  
+            2University of Maryland, College Park
+  
+            3ROCS, University Hospital Balgrist, University of Zürich
+          
+        
+
+
+        
+
+                
+
+                    
+                        
+
+                            
+                             
+                                
+Paper
+                            
+                        
+                        
+
+                             
+                            
+                                
+Code
+
+                            
+                        
+                        
+
+                             
+                            
+                                
+Open Review
+
+                            
+                        
+                    
+                
+        
+
+        
+        
+
+            
+
+            
+
+                TL;DR
+            
+            
+            
+
+                    We analyze the performance of novel view synthesis methods in challenging out-of-distribution (OOD)camera views and introduce SplatFormer, a data-driven 3D transformer designed to refine 3D Gaussian splatting primitives for improved quality in extreme camera scenarios.
+            
+        
+
+        
+        
+        
+
+            
+
+                
+                
+
+                    Overview Video
+                
+                
+                
+
+
+            
+        
+
+        
+
+            
+
+            
+
+               Problem
+            
+            
+            
+
+                    
+ We study out-of-distribution (OOD) novel view synthesis, where test views significantly differ from input views. Existing NVS methods, including MipNeRF360 and 3DGS, and those designed for sparse inputs like LaRa faces challenges in this setting. 
+                
+            
+        
+
+        
+
+            
+
+                
+
+                    Method
+                
+                 
+
+                    We introduce SplatFormer, a generalizable 3D point transformer network designed for feed-forward refinement of Gaussian splats, enabling robust out-of-distribution novel view synthesis (OOD-NVS). The reconstruction process begins by generating an initial set of 3D Gaussians from input images. However, these splats are biased toward the input views and are not robust for out-of-distribution views. SplatFormer refines these splats through a hierarchical neural network that models residuals to the initial splat attributes. The model is trained using 2D rendering loss on Objaverse 1.0 and Shapenet. 
+                
+                
+
+            
+        
+
+        
+
+            
+
+                
+
+                    Robustness to Deviated Test Views
+                
+                 
+
+                    3DGS significantly degrades as the test view deviates from the distribution of input views, which our solution, SplatFormer, is more robust to the viewing angles' deviation.
+                
+                
+
+            
+        
+
+
+        
+
+            
+
+                
+
+                    Results on Unseen Datasets
+                
+                
+                  
+                    
+                
+                
+            
+                
+
+
+         
+
+            
+
+                
+
+                    Citation
+                
+                
+
+                    
+
+                
+
+@misc{chen2024splatformer,
+    title = {SplatFormer: Point Transformer for Robust 3D Gaussian Splatting},
+    author = {Chen, Yutong and Mihajlovic, Marko and Chen, Xiyi and Wang, Yiming and Prokudin, Sergey and Tang, Siyu},
+    booktitle = {International Conference on Learning Representations (ICLR)},
+    year = {2025}
+}
+
+                
+            
+        
+        
+
+            
+
+                
+
+                    Funding
+                
+                
+
+                 This study was conducted within the national Proficiency research project funded by the Swiss Innovation Agency Innosuisse in 2021 as one of 15 flagship initiatives.
+                
+            
+        
+
+        
+
+            
+
+                
+
+                    Acknowledge
+                
+                
+
+                   The website template was borrowed from Michaël Gharbi.
+                
+            
+        
+
+
+

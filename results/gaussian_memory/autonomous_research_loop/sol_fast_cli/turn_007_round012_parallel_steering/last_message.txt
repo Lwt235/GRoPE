@@ -1,0 +1,10 @@
+已完整交付：[报告](/home/liwt/GRoPE/results/gaussian_memory/native_scene_exchange_pe1/report.md) · [交接](/home/liwt/GRoPE/results/gaussian_memory/native_scene_exchange_pe1/implementation_handoff.json)。
+
+- 七卡并行落实，断点精确续跑；21×2000、14784新预测＋704继承评分、独立复算、bootstrap及两图实际审阅全部完成。
+- U/G对U/P主降误差−0.027%［−0.142%，+0.048%］，反馈×PE交互区间跨零；PE及Native主空间净用途筛未达。raw、偏差和AbsRel正证据完整保留。
+- GPU **6.974/12 worker小时**；DATA保守峰值 **3.506/12GiB**；项目上界281.45MiB。全部自有实验进程已退出。
+
+报告SHA256：`0f24505c819bb590974be6ca918338784f212635e8c0cb11af4e772672fd1897`  
+交接SHA256：`e2bd7d1cd550c6f1bebd2eaf12f1e430635dc9a5c3ac451bc46b192e9423bd06`
+
+请求配置仍为Sol/high/Fast；后台有效配置未独立暴露，Fast记unknown。无fresh或总体成功声明。释放实现写租约，待主核验后交原Astra，不启动后继。

@@ -1,0 +1,9 @@
+# round004实施交付
+
+主报告report.md、全数表report_tables.md；scoring/metrics.json包含4224新+2112继承全部seed/place/query/support指标，summary.json与两份CSV包含所有固定配对区间。scoring/independent_recomputation.json核对全部4224新输出。method_decision.json仅是事前经验分支实测标记，方法取舍/科学后继交原Astra。
+
+数据缓存按原计划native_covariance_role_v1：geometry/44份FP64干预源；rendered/176份三几何r/有效alpha及回退索引；predictions/4224份逐query原子输出。manifest继承逐文件持久化SHA与全量预测评分核验，不重hash旧大权重。
+
+configuration_lock.json和source_snapshot/保留运行源码及权威输入身份，evaluation_mask_identity.json补齐原44场支持掩码来源。input_statistics_summary.json、fallback_cases.csv与逐query统计保存零支持/回退/原覆盖质量/范数边界。CPU查表修复在failures/，不改锁定模型源码或科学方案。
+
+cost.json、resources/ledger.jsonl、runtime/、process_exit.json为真实费用与退出证据。figures/两PNG已实际view_image审阅。living docs已同步，原事前文字折叠保留。当前实施完结，无待恢复GPU工作；不重复拟合/预测或自行选择后继。

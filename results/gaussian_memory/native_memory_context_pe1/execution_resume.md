@@ -1,0 +1,27 @@
+# Round003 exact execution and recovery
+
+New experiment native_memory_context_pe1; no old model/weight continuation. Original authority round_003/plan.json remains fixed. Creation requested gpt-6.1-sol/high; followup no model fields; backend effective unexposed. Root owns goal/state/events.
+
+Only one queue may hold queue.lock. Read queue_status and host /proc UID/starttime/command before recovering; never dispatch a second live queue. Each worker has runtime parent/child PID and GPU UUID recorded. Full model+fusion+writer+two Adam states+step+all RNG+plan/science/schedule identities saved every100 updates in owned tmpfs. On resource SIGTERM complete latest and serialize a durable DATA/resumes snapshot under shared publication.lock before exit75. Final weights persist and SHA verify twice before retiring owned RAM recovery. Exact resume reuses same schedule suffix. Retain every attempted/discarded update and active worker time; no extra effective training. Unexpected lost updates need explicit reconciliation, never silent count reset.
+
+DATA52GiB includes all fixed outputs plus single24GiB concurrent two-resume/one serialized replacement peak. Ledger credits already written outputs once; no prior result deletion. Absolute peak H<6/free<5GiB stops; external0.5GiB/30s drop stops only when H<8. Two30s H>=8 admission snapshots. Project<=2GiB and >=8GiB admission free. CUDA max2workers/max1foreignsharedcard; cap14/20GiB admission on idle cards or12/18shared, yield free6. GPU worker hard8h incl prep/loads/recovery/export/evaluation/cost.
+
+All completed model/scenes have per-task atomic markers. Evaluation reloads permanent memory once per model/scene then uses all8queries/two conditions, zero writer/sourceRGB calls. Do not repeat completed exports, predictions or training. Cost exactly200native+150writer, counted separately. All data old; no fresh confirmation.
+
+Preflight ordinary float-path failure and derived inherited metadata cleanup preserved under failures/. The final successful six pilot updates are discarded and are not repeated. Current scientific code/config locks freeze before formal training; subsequent engineering repairs must be separately versioned.
+
+## Exact running handles and remaining delivery (phase snapshot)
+
+The original unique queue is host PID104639, UID1020, starttime1481218053; exec handle7118. Reporting-only postqueue is PID113121, exec handle7110. Read exact current child identities in runtime/*.json and queue_status.json before any recovery. CPU status watcher exec39308 only reads files and exits automatically when postqueue reaches ready/failed; never treat it as a GPU worker. No replacement queue or task has been started. All six first/two-seed fits and their4224 predictions/264 states are complete at this snapshot; third P/S are active and G third is pending. Live counts always come from budget/progress, not this historical paragraph.
+
+Current ordinary source identity is engineering_source_revision_v3.json, chained to preservedv2/v1 and the unchanged original configuration_lock.json. New writer lives in models/gaussian_scene_context_writer.py; historical models/gaussian_memory_context.py is restored to its old context_supervision1 locked SHA. v2 only improves resource accounting/JSON atomic writes. Do not undo identity records or repeat the successful six pilots.
+
+Postqueue waits for the existing nine-fit queue, then runs independent CPU score, exactly200 actual complete-query plus150 independent writer cost calls, finite checks and two figures. It does not train or choose a method. When postqueue/status.json is fixed_endpoint_ready_for_actual_visual_review, actually open figures/outcomes.png and depth_cases.png, then save visual_review.json with observations/limitations and complete=true. Verify host owned GPU/queue/postqueue exit and persist process_exit.json (including the initial ordinary preflight failure1 and all later exits). Run experiments.native_memory_context_delivery to write report/current/outline/evidence/execution updates, then --handoff to make final manifest/implementation_handoff and round003 reference. Send final path/SHA/budgets and empirical findings to/root; end turn and release lease for original Astra. No new scientific successor or goal calls. Parent may arrange a later explicit Fast Sol task only after this turn is fully complete; current task/configuration stays unchanged.
+
+### v3 ordinary sparse-padding correction
+
+The one-line source_graph mask uses nonself distance for padding; a two-valid-node CPU fixture confirms self appears once and all padding is masked. Current44 source graphs have2047–2048 valid nodes and32 true neighbors per valid row, so this branch correction is mathematically identical on all fixed inputs. No cache, model parameter, schedule, native/writer GPU forward, training trajectory or budget changed. Original lock and priorv1/v2 sources/diffs remain archived; cost/finish validate currentv3 source map. Root explicitly accepted this ordinary correction and no new GPU audit is authorized.
+
+## Fixed execution complete
+
+All9fits/396states/6336predictions/cost/independent score/actual figures/report delivered. No remaining GPU or training work; root dispatches same Astra. See implementation_handoff and manifest for immutable identities, exits and budgets. Original scientific lock retained; engineering_source_revision_v1/v2/v3 preserve namespace/resource/sparse-padding repairs; all fixed44 graphs and numerical training unchanged without changing model code bytes/math.

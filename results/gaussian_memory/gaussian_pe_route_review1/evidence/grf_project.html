@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GaussianRenderFormer: Transformer-based Rendering of 3D Gaussian Splats</title>
+  <meta name="description" content="A transformer that renders 3D Gaussian splats directly, with no rasterizer in the renderer: one token per Gaussian, and a decoder that turns camera rays into pixels.">
+  <meta name="keywords" content="3D Gaussian splatting, neural rendering, transformer, RenderFormer, learned renderer">
+  <meta name="author" content="Shahaf Valencia Levy, Sagie Benaim">
+
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="GaussianRenderFormer: Transformer-based Rendering of 3D Gaussian Splats">
+  <meta property="og:description" content="A transformer that renders 3D Gaussian splats directly, with no rasterizer in the renderer.">
+  <meta property="og:image" content="static/videos/camera_path_0023_poster.jpg">
+
+  <meta name="citation_title" content="GaussianRenderFormer: Transformer-based Rendering of 3D Gaussian Splats">
+  <meta name="citation_author" content="Valencia Levy, Shahaf">
+  <meta name="citation_author" content="Benaim, Sagie">
+  <meta name="citation_publication_date" content="2026/11/03">
+  <meta name="citation_arxiv_id" content="2611.05593">
+  <meta name="citation_pdf_url" content="https://arxiv.org/pdf/2611.05593">
+
+  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+  <link rel="stylesheet" href="static/css/site.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script defer src="static/js/main.js"></script>
+</head>
+<body>
+
+  <button class="scroll-to-top" onclick="scrollToTop()" title="Scroll to top" aria-label="Scroll to top">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <main id="main-content">
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">GaussianRenderFormer: Transformer-based Rendering of 3D Gaussian Splats</h1>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">Shahaf Valencia Levy,</span>
+              <span class="author-block">Sagie Benaim</span>
+            </div>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">The Hebrew University of Jerusalem</span>
+            </div>
+
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <span class="link-block">
+                  <a href="https://arxiv.org/pdf/2611.05593" target="_blank"
+                     class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon"><i class="fas fa-file-pdf"></i></span>
+                    <span>Paper</span>
+                  </a>
+                </span>
+                <span class="link-block">
+                  <a href="https://arxiv.org/abs/2611.05593" target="_blank"
+                     class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon"><i class="ai ai-arxiv"></i></span>
+                    <span>arXiv</span>
+                  </a>
+                </span>
+                <span class="link-block">
+                  <a href="https://github.com/SVLwoof/gaussianformer" target="_blank"
+                     class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon"><i class="fab fa-github"></i></span>
+                    <span>Code</span>
+                  </a>
+                </span>
+                <span class="link-block">
+                  <a href="https://huggingface.co/collections/shahafvl/gaussianformer-6abb727b461d7c89d5308f1c" target="_blank"
+                     class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">&#129303;</span>
+                    <span>Models</span>
+                  </a>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Teaser: camera path videos -->
+  <section class="hero teaser">
+    <div class="container is-max-desktop">
+      <div class="hero-body">
+        <div class="video-grid">
+          <div>
+            <video data-autoplay muted loop playsinline preload="metadata" poster="static/videos/camera_path_0023_poster.jpg">
+              <source src="static/videos/camera_path_0023.mp4" type="video/mp4">
+            </video>
+            <div class="video-labels"><span>Reference</span><span>Ours</span></div>
+          </div>
+          <div>
+            <video data-autoplay muted loop playsinline preload="metadata" poster="static/videos/camera_path_0031_poster.jpg">
+              <source src="static/videos/camera_path_0031.mp4" type="video/mp4">
+            </video>
+            <div class="video-labels"><span>Reference</span><span>Ours</span></div>
+          </div>
+        </div>
+        <h2 class="subtitle has-text-centered" style="margin-top: 1rem;">
+          GaussianRenderFormer renders 3D Gaussian splats with a neural network, with no rasterizer in the renderer.
+          Left in each video: the reference, a rasterization of the object's full splat. Right: our model from a
+          20,000-Gaussian input. Both objects were never seen in training.
+        </h2>
+      </div>
+    </div>
+  </section>
+
+  <!-- Abstract -->
+  <section class="section hero is-light">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>
+              Can a neural network learn to render 3D Gaussian splats on its own, with no rasterizer in the renderer?
+              We present GaussianRenderFormer, a transformer that takes a set of Gaussians and a camera and outputs the
+              image directly. Each Gaussian becomes one token in a view-independent encoder, and a view-dependent
+              decoder turns small patches of camera rays into pixels by attending to those tokens. Trained on 26,820
+              Objaverse objects pruned to 20,000 Gaussians each, GaussianRenderFormer renders 300 unseen objects at
+              38.08 dB PSNR against the full, unpruned splats, while rasterizing the same pruned input reaches
+              44.02 dB. The gap is not one of generalization, and our diagnostics are consistent with a bottleneck in
+              the view decoder: telling it the projected footprint of each Gaussian, which it could in principle
+              infer, adds 1.4 dB. Under-training is not ruled out.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Method -->
+  <section class="section">
+    <div class="container is-max-desktop">
+      <h2 class="title is-3 has-text-centered">Method</h2>
+      <img class="method-figure" src="static/images/architecture.svg" alt="Overview of GaussianRenderFormer">
+      <p class="figure-caption">
+        Each Gaussian's 14 parameters are embedded as one token, and a view-independent scene encoder (top) lets these
+        tokens exchange information, using a 3D rotary embedding of their centers. For each view, the image is split
+        into 4&times;4-pixel patches, and each patch becomes a token built from its camera rays. The view decoder
+        (bottom) lets these tokens attend to the scene tokens, using a 2D rotary embedding of where each Gaussian lands
+        in the image and an embedding of its projected footprint, and a DPT head turns them into pixels.
+      </p>
+      <div class="content" style="margin-top: 1.5rem;">
+        <p>
+          GaussianRenderFormer keeps <a href="https://microsoft.github.io/renderformer/" target="_blank">RenderFormer</a>'s
+          two-stage layout and starts from its pretrained weights. Three changes adapt its view decoder to Gaussians:
+        </p>
+        <ul>
+          <li><b>A 2D rotary embedding</b> of where each Gaussian lands in the image, on the cross-attention.</li>
+          <li><b>The projected footprint</b> of each Gaussian, its 2D covariance in the image, on the attention keys.</li>
+          <li><b>Smaller patches</b> of 4&times;4 pixels.</li>
+        </ul>
+        <p>
+          Where each Gaussian lands and how large it appears are computed per Gaussian, while which Gaussians cover each
+          pixel and how they blend is learned.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Results: comparison sliders -->
+  <section class="section hero is-light">
+    <div class="container is-max-desktop">
+      <h2 class="title is-3 has-text-centered">Held-out objects</h2>
+      <p class="has-text-centered" style="margin-bottom: 1rem;">Move across an image to compare the reference (left) with our render (right).</p>
+      <div class="compare-grid">
+        <div>
+          <div class="compare">
+            <img src="static/images/teaser/0099_model.png" alt="Ours">
+            <img class="compare-top" src="static/images/teaser/0099_reference.png" alt="Reference">
+            <span class="compare-label left">Reference</span><span class="compare-label right">Ours</span>
+            <div class="compare-handle"></div>
+          </div>
+          <div class="compare-psnr">40.76 dB</div>
+        </div>
+        <div>
+          <div class="compare">
+            <img src="static/images/teaser/0244_model.png" alt="Ours">
+            <img class="compare-top" src="static/images/teaser/0244_reference.png" alt="Reference">
+            <span class="compare-label left">Reference</span><span class="compare-label right">Ours</span>
+            <div class="compare-handle"></div>
+          </div>
+          <div class="compare-psnr">39.06 dB</div>
+        </div>
+        <div>
+          <div class="compare">
+            <img src="static/images/teaser/1545_model.png" alt="Ours">
+            <img class="compare-top" src="static/images/teaser/1545_reference.png" alt="Reference">
+            <span class="compare-label left">Reference</span><span class="compare-label right">Ours</span>
+            <div class="compare-handle"></div>
+          </div>
+          <div class="compare-psnr">40.13 dB</div>
+        </div>
+        <div>
+          <div class="compare">
+            <img src="static/images/teaser/1392_model.png" alt="Ours">
+            <img class="compare-top" src="static/images/teaser/1392_reference.png" alt="Reference">
+            <span class="compare-label left">Reference</span><span class="compare-label right">Ours</span>
+            <div class="compare-handle"></div>
+          </div>
+          <div class="compare-psnr">38.91 dB</div>
+        </div>
+        <div>
+          <div class="compare">
+            <img src="static/images/teaser/1022_model.png" alt="Ours">
+            <img class="compare-top" src="static/images/teaser/1022_reference.png" alt="Reference">
+            <span class="compare-label left">Reference</span><span class="compare-label right">Ours</span>
+            <div class="compare-handle"></div>
+          </div>
+          <div class="compare-psnr">38.44 dB</div>
+        </div>
+        <div>
+          <div class="compare">
+            <img src="static/images/teaser/0631_model.png" alt="Ours">
+            <img class="compare-top" src="static/images/teaser/0631_reference.png" alt="Reference">
+            <span class="compare-label left">Reference</span><span class="compare-label right">Ours</span>
+            <div class="compare-handle"></div>
+          </div>
+          <div class="compare-psnr">40.50 dB</div>
+        </div>
+      </div>
+      <p class="figure-caption">
+        Six objects never seen in training, chosen by hand for variety. Reference: a rasterization of each object's full
+        splat. Ours: GaussianRenderFormer from a 20,000-Gaussian input. PSNR on the crop around the object.
+      </p>
+
+      <div class="columns is-centered" style="margin-top: 1.5rem;">
+        <div class="column is-half">
+          <div class="compare compare-zoom">
+            <img src="static/images/teaser/0631_zoom_model.png" alt="Ours, zoomed">
+            <img class="compare-top" src="static/images/teaser/0631_zoom_reference.png" alt="Reference, zoomed">
+            <span class="compare-label left">Reference</span><span class="compare-label right">Ours</span>
+            <div class="compare-handle"></div>
+          </div>
+          <p class="figure-caption">A 3&times; zoom of the most detailed region of the last object, where the model softens the stone's texture.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Results: numbers -->
+  <section class="section">
+    <div class="container is-max-desktop">
+      <h2 class="title is-3 has-text-centered">Results</h2>
+      <div class="content">
+        <p>
+          On 300 objects never used during development, against renders of the full, unpruned splats (28 views per
+          object):
+        </p>
+      </div>
+      <div class="table-container">
+        <table class="table results-table is-striped">
+          <thead>
+            <tr><th>Renderer</th><th>PSNR (dB) &uarr;</th><th>SSIM &uarr;</th><th>LPIPS &darr;</th><th>Time per view</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>gsplat on the 20k input</td><td>44.02</td><td>0.9954</td><td>0.0046</td><td>0.7 ms</td></tr>
+            <tr><td><b>Ours</b></td><td><b>38.08</b></td><td><b>0.9814</b></td><td><b>0.0113</b></td><td>275 ms</td></tr>
+            <tr><td>Ours without the footprint</td><td>36.67</td><td>0.9779</td><td>0.0140</td><td></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="content">
+        <p>
+          The gap to rasterization is not one of generalization: on its training objects the model scores 38.25 dB.
+          Our diagnostics are consistent with a bottleneck in the view decoder, though under-training is not ruled out.
+          Time on one NVIDIA L40S GPU at 512&times;512 pixels.
+        </p>
+      </div>
+
+      <h3 class="title is-4" style="margin-top: 2rem;">Camera paths</h3>
+      <div class="columns is-centered">
+        <div class="column is-two-thirds">
+          <video data-autoplay muted loop playsinline preload="metadata" poster="static/videos/camera_path_0007_poster.jpg"
+                 style="width: 100%; border-radius: 6px; background: #000;">
+            <source src="static/videos/camera_path_0007.mp4" type="video/mp4">
+          </video>
+          <div class="video-labels"><span>Reference</span><span>Ours</span></div>
+        </div>
+      </div>
+      <p class="figure-caption">
+        A smooth 96-frame path around a held-out object, with the distance varying between 1.35 and 2.05 and no frame on a
+        training camera. The model renders every frame on its own and was never trained on sequences, and reaches
+        38.52 dB per frame on average over 30 held-out objects.
+      </p>
+
+      <h3 class="title is-4" style="margin-top: 2rem;">A real capture</h3>
+      <div class="real-grid">
+        <div class="col-label">Full region, rasterized</div>
+        <div class="col-label">20k-Gaussian input, rasterized</div>
+        <div class="col-label">Ours, 20k-Gaussian input</div>
+        <img src="static/images/real/v01_reference.png" alt="Reference">
+        <img src="static/images/real/v01_raster20k.png" alt="Rasterized input">
+        <img src="static/images/real/v01_model20k.png" alt="Ours">
+        <img src="static/images/real/v04_reference.png" alt="Reference">
+        <img src="static/images/real/v04_raster20k.png" alt="Rasterized input">
+        <img src="static/images/real/v04_model20k.png" alt="Ours">
+      </div>
+      <p class="figure-caption">
+        A region of the bonsai scene from the <a href="https://jonbarron.info/mipnerf360/" target="_blank">Mip-NeRF 360</a> dataset (images CC BY 4.0), seen from two orbit cameras and cropped around the region. Left: the full region
+        (346,027 Gaussians) rasterized with gsplat, used as the reference. Middle: the region pruned to 20,000 Gaussians
+        and rasterized. Right: our model on the same pruned input. Over the full frame, our model scores 34.1 dB and
+        gsplat 35.7 dB against the reference.
+      </p>
+    </div>
+  </section>
+
+  <!-- Limitations -->
+  <section class="section hero is-light">
+    <div class="container is-max-desktop">
+      <h2 class="title is-3 has-text-centered">Limitations</h2>
+      <div class="content">
+        <ul>
+          <li>GaussianRenderFormer is not yet a practical replacement for a rasterizer: it stays several dB below
+            rasterizing the same input, is several hundred times slower and needs far more memory.</li>
+          <li>We train and evaluate on single objects viewed from outside. Rendering a full scene, with the camera
+            inside it, remains open.</li>
+          <li>It renders well only in its training configuration. Other input sizes, camera distances, resolutions and
+            fields of view cost it quality.</li>
+          <li>It uses only the view-independent color of each Gaussian and cannot relight.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- BibTeX -->
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <div class="bibtex-header">
+        <h2 class="title">BibTeX</h2>
+        <button class="copy-bibtex-btn" onclick="copyBibTeX(this, 'bibtex-code')" title="Copy BibTeX to clipboard">
+          <i class="fas fa-copy"></i>
+          <span class="copy-text">Copy</span>
+        </button>
+      </div>
+      <pre id="bibtex-code"><code>@article{valencialevy2026gaussianrenderformer,
+  title={GaussianRenderFormer: Transformer-based Rendering of 3D Gaussian Splats},
+  author={Valencia Levy, Shahaf and Benaim, Sagie},
+  journal={arXiv preprint arXiv:2611.05593},
+  year={2026}
+}</code></pre>
+
+      <p style="margin-top: 1.5rem;">
+        GaussianRenderFormer builds on <a href="https://microsoft.github.io/renderformer/" target="_blank">RenderFormer</a>
+        and starts from its weights. If you use it, please also cite RenderFormer:
+      </p>
+      <div class="bibtex-header">
+        <h3 class="title is-5">RenderFormer</h3>
+        <button class="copy-bibtex-btn" onclick="copyBibTeX(this, 'bibtex-renderformer')" title="Copy BibTeX to clipboard">
+          <i class="fas fa-copy"></i>
+          <span class="copy-text">Copy</span>
+        </button>
+      </div>
+      <pre id="bibtex-renderformer"><code>@inproceedings{zeng2025renderformer,
+  title={RenderFormer: Transformer-based Neural Rendering of Triangle Meshes with Global Illumination},
+  author={Chong Zeng and Yue Dong and Pieter Peers and Hongzhi Wu and Xin Tong},
+  booktitle={ACM SIGGRAPH 2025 Conference Papers},
+  year={2025}
+}</code></pre>
+    </div>
+  </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content">
+            <p>
+              This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a>,
+              which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+              This website is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+              Commons Attribution-ShareAlike 4.0 International License</a>.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

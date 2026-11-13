@@ -1,0 +1,81 @@
+"""Runtime-journal-independent backstop for the resource sidecar, no CUDA use."""
+import fcntl,json,os,signal,time
+from pathlib import Path
+from experiments import native_render_parameter_resource_sidecar as m
+FOLDER=m.FOLDER/'proc_backstop'
+STOP=False
+
+def handler(*_):
+ global STOP
+ STOP=True
+
+def workers(q,cached):
+ # The scientific queue's live descendants establish ownership before training.
+ processes={}
+ for p in Path('/proc').iterdir():
+  if not p.name.isdigit():continue
+  try:
+   pid=int(p.name);raw=(p/'stat').read_text();tail=raw[raw.rfind(')')+2:].split();processes[pid]=(int(tail[1]),tail[0])
+  except (FileNotFoundError,ProcessLookupError,PermissionError):pass
+ descendants={q['pid']}
+ while True:
+  more={pid for pid,(parent,state) in processes.items() if parent in descendants}
+  if more<=descendants:break
+  descendants|=more
+ for pid in descendants-{q['pid']}:
+  ident=m.identity(pid)
+  if ident and ident['state']!='Z' and ident['uid']==os.getuid():
+   argv=Path('/proc',str(pid),'cmdline').read_bytes().split(b'\0')
+   if b'experiments.native_render_parameter_train' in argv and b'experiments.native_render_parameter_launch' not in argv:cached[str(pid)]=ident
+ # An explicitly registered cost launcher is outside the completed queue tree.
+ registration=m.FOLDER/'cost_launcher_identity.json'
+ if registration.exists():
+  launch=m.read(registration);current=m.same(launch,'experiments.native_render_parameter_launch')
+  if current:
+   for pid,(parent,state) in processes.items():
+    if parent!=launch['pid'] or state=='Z':continue
+    ident=m.identity(pid)
+    if ident and ident['uid']==os.getuid() and 'experiments.native_render_parameter_cost' in ident['cmdline']:cached[str(pid)]=ident
+ return cached
+
+def stop(q,cached,reason):
+ with (m.FOLDER/'stop_once.lock').open('a') as guard:
+  fcntl.flock(guard,fcntl.LOCK_EX)
+  return stop_serial(q,cached,reason)
+
+def stop_serial(q,cached,reason):
+ current=m.same(q,'-m experiments.native_render_parameter_queue')
+ if current:os.kill(q['pid'],signal.SIGSTOP)
+ cached=workers(q,cached);sent=[]
+ for value in cached.values():
+  if m.same(value) and m.signal_once(value):sent.append(value)
+ deadline=time.monotonic()+60
+ while any(m.process_remaining(v) for v in cached.values()) and time.monotonic()<deadline:time.sleep(1)
+ left=[v for v in cached.values() if m.process_remaining(v)]
+ record=dict(epoch=time.time(),reason=reason,queue=q,SIGTERM_workers=sent,still_live=left,complete=not left,independent_of_runtime_journal=True)
+ m.write(FOLDER/'safe_stop.json',record)
+ if left:raise RuntimeError('Backstop checkpoint wait expired; no kill or automatic restart')
+
+def main():
+ FOLDER.mkdir(exist_ok=True);config=m.read(m.FOLDER/'config.json');q=config['queue'];cached={};normal=False
+ signal.signal(signal.SIGTERM,handler);signal.signal(signal.SIGINT,handler)
+ try:
+  while True:
+   cached=workers(q,cached)
+   if (m.FOLDER/'release_after_cost.json').exists():
+    assert not any(m.same(v) for v in cached.values());normal=True;break
+   r=m.read(m.FOLDER/'current.json')
+   for pid in [r['monitor_pid'],r['watchdog_pid']]:
+    ident=m.identity(pid)
+    if ident is None or ident['state']=='Z':raise RuntimeError('Core resource guard exited')
+   if time.time()-r['epoch']>8:raise RuntimeError('Core resource ledger heartbeat stale')
+   if STOP:raise RuntimeError('Backstop received stop signal')
+   m.write(FOLDER/'current.json',dict(epoch=time.time(),cached_worker_identities=cached,core_monitor_pid=r['monitor_pid'],core_watchdog_pid=r['watchdog_pid'],own_identity=m.identity(os.getpid()),runtime_journal_not_read=True))
+   time.sleep(2)
+ except BaseException as exc:
+  stop(q,cached,repr(exc));raise
+ finally:
+  if not normal:stop(q,cached,'backstop_finally')
+ m.write(FOLDER/'complete.json',dict(complete=True,epoch=time.time(),all_cached_workers_exited=True))
+
+if __name__=='__main__':main()

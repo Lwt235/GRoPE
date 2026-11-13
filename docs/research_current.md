@@ -1,5 +1,187 @@
 # GRoPE：将高斯参数化转为 Transformer 位置编码
 
+<!-- native_scene_exchange_pe1 implementation status -->
+**round015实施中（2026-11-13），`native_task_writer_pe1`固定18拟合已启动。** 原生任务到共享物理成场的有限梯度／完整恢复预检已通过；C/J×P/S/G按唯一合同执行，尚无完整效果或fresh结论。[唯一合同](../results/gaussian_memory/autonomous_research_loop/round_015/science_plan.md) · [实时实施状态](../results/gaussian_memory/native_task_writer_pe1/queue_status.json) · [有限预检](../results/gaussian_memory/native_task_writer_pe1/preflight.json)。O2–O6保持，C1/C2/C6改变成场梯度，C3/C4复用实际渲染与同信息完整普通Σ，C5仍临时；全frame/global/DPT学习不是新贡献。旧接口启动失败与本次身份恢复独立留账，既有关闭决定和全部历史正负证据保留。
+
+**round013科学取舍完成（2026-11-13）：关闭 `native_scene_exchange_pe1` 两块工作副本 PE 家族及自动变体，无后继实施合同。** 主PE与反馈交互未立，Native主空间误差明确退步；共同raw／偏差／AbsRel正证据及L控制、零覆盖和反例分别保留。[唯一科学判断](../results/gaussian_memory/autonomous_research_loop/round_013/science_plan.md) · [完整结果](../results/gaussian_memory/native_scene_exchange_pe1/report.md) · [实现交接](../results/gaussian_memory/native_scene_exchange_pe1/implementation_handoff.json)。O2–O6目标保持，C3/C6已检验、C4同信息强中心；原场不写query。整体未达、未暂停、无外部阻塞或fresh候选；不派发Sol变体。
+<!-- /native_scene_exchange_pe1 implementation status -->
+
+**round012科学取舍与唯一后继（2026-11-13）：关闭 `native_feature_field_pe1`，固定一次 `native_scene_exchange_pe1`；合同形成时尚未实施，现已交付上述结果。** 来源特征与形状确实共同形成，但PE／Native净用途及形成交互未获支持；保留来源重构、共同feature和绑定正证据，不补形成变体。后继只比较两对既有原生块中，GS工作槽是否允许读取当前图像再被读回，配同信息P/S/G及当前图像工作槽／Native控制。[唯一判断与合同](../results/gaussian_memory/autonomous_research_loop/round_012/science_plan.md) · [本轮完整结果](../results/gaussian_memory/native_feature_field_pe1/report.md)。
+
+上述为round012合同形成记录；现已完整实施并由round013评价关闭。O2–O6保持，C3查询内消息图和C6匹配学习已检验，C4完整普通Σ与强中心保持；source-only形成、固定场读出与相机细化的旧关闭决定不改。
+
+**round011实施完成（2026-11-13，已由round012完成科学取舍）：`native_feature_field_pe1`完成88份场×300、18×2000及全量独立评价。** 主J行G/P降误差+0.0857% [−2.8703,+3.1167]%，形成交互区间跨零；两行PE及Native净用途均未达预定筛。来源重构和共同feature读取正线索、全部零覆盖/反例/代价保留。[完整报告](../results/gaussian_memory/native_feature_field_pe1/report.md) · [实现交接](../results/gaussian_memory/native_feature_field_pe1/implementation_handoff.json) · [唯一科学合同](../results/gaussian_memory/autonomous_research_loop/round_011/science_plan.md)。
+
+O2–O6保持；C1/C2及C6实际加入source-only完整特征形成，C3/C4/C5固定为测量接口。源重构不替代O6，sensor/给定相机/静态四源/冻结原生/人工缺失/旧数据仍是范围限制；无fresh、总体成功或自选后继。历史关闭决定不改。
+
+**round010科学取舍（2026-11-13）：结束 `native_pose_memory_pe1` 及自动变体，不选择后继拟合。** 开发G−P平均+2.778 pp仍不确定，G对Native净用途未建立；训练及同片段迁移主要保留为共同适配证据。直接Gaussian位置算子与四个K字段在函数形式上不同，但本次未形成有据的新合同，旧区域正例／原生阴性不改。[唯一科学判断](../results/gaussian_memory/autonomous_research_loop/round_010/science_plan.md) · [完整结果](../results/gaussian_memory/native_pose_memory_pe1/report.md)。
+
+O2/O3公共状态、O4读取和O5真实渲染已实现，O6可靠原生PE增量及fresh确认仍未达；C3/C4/C6本接法收束，C5真实初值只是已检验的临时条件。0新GPU／训练／预测，无新确认候选；整体目标未完成、未暂停、无外部阻塞，全部反例、尾部和source-prefix成本保留。
+
+**round008有界论证完成（2026-11-13）：物理支撑与内容地址应分开定义，但本次未导出新实施合同。** 区域矩中的中心散布须由强中心共享；基元内协方差的额外PE作用已有直接对照。仅改分组/名称、改写入来源矩或共同学习状态，尚未提供新的可辨识条件；这不是所有区域PE无效的证明。保持round007路线收束，0 GPU/训练/新预测，不派生矩扫描或综述。[唯一论证与决定](../results/gaussian_memory/autonomous_research_loop/round_008/science_plan.md)。
+
+本轮澄清O3公共记忆的地址语义、O6同信息位置增量及C2/C4边界，无C1–C6实施变更；O2–O6完整目标和原正负/反例均保持，总体未完成、未暂停、无外部阻塞。
+
+**round007科学决定（2026-11-13）：结束camera_only_feature_pe1及其自动变体，本轮未选择后继实验。** 共同reader较RasterFill有条件收益，但主G/P未建立实用位置增量，三组均未建立相对Native的净用途；保留小幅球形feature线索、全图代价、零覆盖及反例，不换主终点或追加拟合。总体目标未达，此为具体路线收束，不是总体暂停、成功或外部阻塞。[唯一科学判断与合同](../results/gaussian_memory/autonomous_research_loop/round_007/science_plan.md) · [完整结果](../results/gaussian_memory/camera_only_feature_pe1/report.md)。
+
+O2/O3公共状态、O4多视角读取、O5真实渲染已实现；O6 memory-reader PE增量与可靠原生净用途仍未建立。C1/C5保持，C2/C3/C4/C6本轮接法结束自动变体；sensor/给定相机/静态场/固定几何/冻结VGGT/depth及旧数据仍是临时范围。原结果与相关历史不改，没有合格确认候选或verified fresh reserve。
+
+<details>
+<summary>round006实施交付原记录（现已完成Astra取舍）</summary>
+
+**round006实施完成（2026-11-13，camera_only_feature_pe1）：完整结果交原Astra评价。** 九次各2000更新、396正常＋36置换公共状态、3312feature／4368native预测、独立NumPy复算、固定配对bootstrap、同调用成本及两图实际审阅齐备。开发原query主空间G/P降误差+0.1020% [-4.0429, +3.7452]%，预定PE筛flag=False；G/S=+0.6866% [-4.1856, +5.2527]%，S/P=-0.5887% [-4.1450, +1.9493]%。三组对Native净用途、RasterFill材料性代价及全部辅助／训练／其他query结果均保留，不以feature替换主端点，不把共同读取收益归为PE。未选择候选、未宣布等价／非劣性或总体成功。[完整报告](../results/gaussian_memory/camera_only_feature_pe1/report.md) · [全数表](../results/gaussian_memory/camera_only_feature_pe1/report_tables.md) · [实测flags](../results/gaussian_memory/camera_only_feature_pe1/method_decision.json)。
+
+本轮仅小camera-only reader学习完整encoder feature残差，VGGT全部冻结；P/S/G共享完整Σ普通内容、中心邻域／密度、真实render anchor和相机，以同29维位置预算比较K位置组织，非nested独占信息。源K/V一次保存重载供8query读取，原GS保留只读依赖；10个原覆盖全零query及最大反例均未筛除。O2–O5公共GS／读取／渲染与O6 memory reader PE分列，C1/C5保持、C2/C3/C4/C6按计划改变；给定相机尺度、sensor/joint-validity、静态四源、2048×1024、固定场、已知ROI／depth／旧数据仍为临时范围。历史区域正证据、Render／writer条件用途及近轮阴性继续有效，无verified fresh reserve。
+
+实际GPU含失败／加载／I/O为0.386715worker小时≤6，全部自有GPU子进程正常退出；0native训练，六discarded pilot不重复，失败环境／恢复断言仅作原轮版本修复。实际预算native4570／4650、reader3441／3500、独立source590／600、真实raster307／400；120次reader成本包含在200次完整query内，无额外benchmark。DATA约14.9385GiB≤18，项目≤1GiB，恢复与资源账完整。主复用原`/root/research_analysis_astra`作取舍，不自动后继；本CLI turn结束释放实施租约。实现UUID仍`01a1d350-d1ec-70f2-9e37-8960b2dfe7a8`，请求Sol/high/fast，主client观察与后台实际值分列，tier unknown；未操作主goal/state/events或全局认证。
+
+</details>
+
+<details>
+<summary>round006事前科学计划／派发记录（现已完成实施，保留形成时文字）</summary>
+
+**round006科学取舍与下一有限实施（2026-11-13）：结束四项原文核查，固定一次camera-only视图特征PE比较。** Astra已完整评价GRF/GPSToken/SplatFormer/JSRE事实：仅GRF存在可定位的额外footprint key分支，其消融仍缺同容量强中心，公共永久cache未由公开pipeline实证；其他三项主要为普通参数/ROI内容、中心组织、传播或状态细化。正式版本/仓库身份/源码unknown保留，不据缺代码机械否决，不再扩综述或将系统分数当O6。原固定场＋当前RGB＋深度共同适配接口的自动PE修补保持关闭，历史区域PE正证据、Render/writer条件用途及近轮全部阴性均保留。
+
+下一项[**camera_only_feature_pe1**](camera_only_feature_pe_execution_plan.md)直接学习公共GS＋相机→完整VGGT encoder view features，reader不接当前RGB/教师/深度/缺失mask。真实GS render归一化anchor共同；只增加一个128维四头cross-attention reader，P/S/G共享完整Σ普通内容、中心邻域散布及多尺度中心位置、相机/覆盖、容量/初值/训练。位置最后四维分别用中心density、trace球和原Σ投影。源K/V一次保存重载，同一状态读取8query；原生VGGT全部冻结，只在已知missing ROI替换patch。**主终点仍为开发原query的原生ROI空间深度G/P；特征重构不能替代下游或独立确认。**
+
+实质变化是直接视图特征监督及无当前RGB读取旁路、冻结接收器，非换PE层或重命名prototype/context-supervision。O2–O5真实公共GS/渲染保留，O6在服务VGGT的memory reader中，非原生24层新增PE；C1/C5保持，C2/C3/C4/C6改变。sensor/给定相机尺度/静态四源/固定几何与内容/旧数据/depth仍是临时范围。无RGB不保证形状增量，位置对照也非额外形状信息对比。
+
+固定9×2000/batch2，3312 feature/4368 native（含144绑定置换），396正常＋36辅助state；6worker小时、native≤4650/reader≤3500/source编码≤600/实际gsplat≤400、新DATA≤18GiB/项目≤1GiB。当前CPU快照DATA约344.91GiB、项目15.70GiB可用，Sol启动前仍核验实时GPU/CUDA与峰值空间；普通工程在同一实施内版本化，不单设合同审计轮。无新训练/预测已发生。
+
+主PE和相对Native净用途过实用筛后，至多保留一个开发候选，再全历史审查与锁真未用确认；所有已有地点/query均是开发，无verified fresh reserve。共同读取有益但PE无增量、仅feature正或全阴性，分别保留分层证据并结束此单层camera-only特征监督PE家族的自动变体，不补seed/层/损失/数据。微小不确定退步不作硬零容差否决，材料性全图/用途代价完整权衡。总体目标未达，也没有总体暂停或外部阻塞。
+
+[本轮完整分析](../results/gaussian_memory/autonomous_research_loop/round_006/analysis.md) · [固定机器计划](../results/gaussian_memory/autonomous_research_loop/round_006/plan.json) · [数据与旧使用身份](../results/gaussian_memory/autonomous_research_loop/round_006/data_contract.json)。分析仍复用collaboration `/root/research_analysis_astra` 创建请求gpt-6-astra/max，followup无覆盖字段且后台effective未知。下一实现只复用现有CLI UUID `01a1d350-d1ec-70f2-9e37-8960b2dfe7a8`，主每turn请求Sol/high/fast；client Sol/high可见、后台实际Fast未暴露。主顺序派发并独占goal/state/events，当前为计划已定、待实施状态。
+
+
+</details>
+
+<details>
+<summary>round005事实交付原记录（现已由Astra完成评价）</summary>
+
+**round005实施事实核查完成（2026-11-13，gaussian_pe_route_review1）：四项事实已交付，待原Astra科学评价。** 固定GaussianRenderFormer／GPSToken／SplatFormer／JSRE完成有界原文、作者代码及unknown记录，48/48次外部URL操作、22/24份作者源码／README／配置后停止取证，0 GPU／CUDA探测／模型推理／训练／渲染／数据或权重下载。没有新效果分数、fresh确认、候选采用或总体目标达成。[事实报告](../results/gaussian_memory/gaussian_pe_route_review1/report.md) · [逐项数据流与工程边界](../results/gaussian_memory/gaussian_pe_route_review1/mechanism_facts.json) · [来源与固定commit](../results/gaussian_memory/gaussian_pe_route_review1/sources.json)。
+
+核实的路径分别为：GRF全属性普通token＋中心3D/2D RoPE＋投影footprint的key分支；GPSToken二维区域五参数与ROI内容共同进入普通Q/K/V并更新区域／内容；SplatFormer全GS属性作普通feature、中心网格序列化／稀疏CPE，所读wrapper关闭独立RPE；JSRE原文为形状图描述加中心PE、另有协方差传播及frustum依赖。系统指标、模块消融、普通形状内容和参数PE分别列出，不能互相代称。GPSToken论文／代码参数更新存在版本写法差异；SplatFormer正式版受挑战页限制；JSRE当前tree无模型实现、候选仓库作者归属缺反向链接核验，unknown保留。缺代码或现成隔离消融不自动否决。
+
+O6仅得到问题与同信息控制条件事实，O2/O3公共状态、O4视角依赖及O5渲染边界分别核查；O1与C1–C6无实验变更。中心对照须共享普通完整形状内容、中心可得邻域／方向／多尺度结构、相机／coverage／容量／初始化／训练与监督。传感器／给定相机尺度／静态四源／2048×1024／depth／旧数据仍是临时范围；没有verified fresh reserve，后续合格候选才另锁真独立确认。
+
+原Astra对round004的`limited_uncertain_or_mixed`决定及历史正负证据继续有效：开发形状依赖未满足原规则，训练片段条件形状用途与Render／writer共同线索保留；不称纯中心充分、等效／非劣性、重训中心方法劣势或O6成功。Sol本轮只交事实与张量／分支要求，不判断实质新问题或选择下一实验。主核验后交回同一`/root/research_analysis_astra`，本CLI turn结束释放实施写租约，不自动检索／训练。
+
+实现UUID仍为`01a1d350-d1ec-70f2-9e37-8960b2dfe7a8`；派发实际请求`gpt-6.1-sol/high/service_tier=fast`，主先前见client-selected Sol/high；本角色独立后台effective值未暴露，实际tier为unknown，未改全局设置／认证。未调用goal或改主state/events，原科学计划和交接身份保持。
+
+</details>
+
+<details>
+<summary>round005事前计划／派发记录（事实实施已完成，保留形成时文字）</summary>
+
+**当前科学决定与下一有限阶段（2026-11-13，round_005）：关闭固定场形状诊断，执行一次有界参数PE原文/作者源码核查。** Astra已完整评价`native_covariance_role1`并执行`limited_uncertain_or_mixed`事前分支：开发C_match/S_match相对F误差增加0.5957%/1.3999%，区间跨零，未建立预定实用依赖；训练片段其他query增加4.0803%/5.3332%的条件正证据保留。结束本诊断及同固定场协方差PE自动接口修补，不追加邻域/尺度/范数/seed/训练扫描；保留全部raw、偏差、完整图代价、零覆盖query及反例。C仍共享原trace/最薄轴，原内容/a_F含形状，不称纯中心充分、非劣性、重训方法优劣、O6成功或fresh确认。
+
+下一项[gaussian_pe_route_review1](gaussian_pe_route_review_execution_plan.md)固定GaussianRenderFormer、GPSToken、SplatFormer、JSRE四项，核查真实书目/官方作者代码和μ/Σ/opacity/f到Q/K/V/位置/状态/渲染的事实链、原消融及强中心同信息对照可实现性。Sol只交事实和工程边界；机制解释、实质区别和至多一个候选取舍由原Astra回收结果后负责。固定24作者源码/配置文件、48次外部取回、60分钟、项目新增≤128MiB，0 GPU/训练/模型推理/数据或权重下载；未知项可以交回，不开无界综述。现无可采用候选，但不是总体目标成功或外部阻塞，也不自动启动下一训练。
+
+直接服务O6问题定义并核查O2–O5公共粗场/读取边界；C1–C6不作实验改动。中心几何、共同普通形状内容、容量/训练范围须明确，系统成绩不替代PE增量。sensor/joint-validity、给定相机尺度、静态四源、2048/1024、depth和旧数据继续是临时范围；全部已用，当前无verified fresh reserve，合格候选以后须另审全历史并先锁真独立确认。
+
+实施只复用现有CLI UUID `01a1d350-d1ec-70f2-9e37-8960b2dfe7a8`，请求`gpt-6.1-sol/high/service_tier=fast`；主已见client-selected Sol/high，后台Fast未独立暴露。分析仍为原collaboration Astra/max创建请求，复用无配置覆盖字段、后台有效值不可独立核验。科学写租约在分析交接后由主顺序转交，主独占goal/state/events。[本轮分析](../results/gaussian_memory/autonomous_research_loop/round_005/analysis.md) · [固定计划](../results/gaussian_memory/autonomous_research_loop/round_005/plan.json)。下列记录保留形成时状态，当前选择以下方对应表及本段为准。
+
+
+</details>
+
+<details>
+<summary>round004实施事实记录（现已由Astra评价并关闭诊断）</summary>
+
+**round004固定诊断实施完成（2026-11-13，native_covariance_role1）：开发未形成预定实用形状依赖，片段内条件依赖保留。** F/C_raw/C_match/S_match各1056、共4224新预测与2112继承评分，全部独立NumPy复算（最大差1.64e−15）、5000配对区间、528真实渲染输入和两图实际审阅齐备。开发主C_match−F误差增加+0.5957% [−0.8526,+1.7919]%，S_match−F +1.3999% [−0.2811,+3.0246]%，三种子均为正但区间跨零，均未满足事前实用依赖规则；C_raw−F +1.3708%也不确定。不称等效、非劣性或原形状无用。
+
+训练32片段其他query的C_match−F +4.0803% [1.7890,6.4606]%、S_match−F +5.3332% [2.6680,8.8185]%有条件证据；原12/新增20分别保留，全图/原始/偏差/支持分层和fidelity_01/q11最大平均反例均完整输出。四组仍对Local保留约38.85–41.95%片段内空间降误差，开发F相对Local误差低8.7369%，区间仍跨零。开发C/S回退原覆盖质量占比0.1494%/0.0146%，四个原覆盖全零query保留；新F与旧缓存的开发空间差+0.0238%单列，无输出相等门槛。
+
+预定经验分支为`limited_uncertain_or_mixed`：本次四组诊断结束，不追加同场协方差PE接口/邻域/尺度/范数/种子/训练扫描；完整评价与任何后继均交主复用原Astra。此轮直接服务O4/O5、只读复用O2/O3，为O6设计/范围提供证据，**没有新增Transformer PE、O6成功、重训中心方法劣势或fresh确认**。C仍享有原trace/最薄轴，绑定内容及a_F含原形状；C1/C2/C5/C6保持、C3仅四输入、C4不加PE，sensor/joint-validity/给定相机尺度/静态四源/旧数据/depth均为临时边界。总体精炼公共记忆＋可靠参数PE目标未达，无已核验fresh reserve。
+
+0训练/新权重/下载/源重建，native4232（4224正式+8预检）≤4272、gsplat528≤600，GPU0.165128worker小时≤1、DATA2.809215GiB≤4，全部worker正常退出。实现复用CLI UUID `01a1d350-d1ec-70f2-9e37-8960b2dfe7a8`；主见client-selected Sol/high，不冒称后台Fast已核验。原科学计划/交接不改，主goal/state/events未操作；历史正负结果和普通CPU身份查表修复记录均保留。[完整报告](../results/gaussian_memory/native_covariance_role1/report.md) · [全数表](../results/gaussian_memory/native_covariance_role1/report_tables.md) · [预定实测标记](../results/gaussian_memory/native_covariance_role1/method_decision.json)。
+
+</details>
+
+<details>
+<summary>round004事前计划与接口待建快照（现已完成实施，原形成时文字保留）</summary>
+
+**当前科学取舍与下一有限阶段（2026-11-13，round_004）：结束来源关系 writer PE，固定一次形状条件用途诊断。** Astra已评价`native_memory_context_pe1`全部结果：主开发G/P降误差−0.0577% [−0.3739,+0.1347]%，G/S、S/P亦无实用增量；上界未接近事前1%幅度。共同writer的G/R +8.5578%开发原查询线索仍跨零，其他开发query约+0.0395%；训练片段其他query对Local约+43.10%保留，不能归为PE增量。原始/偏差/全图代价、支持分层、种子/地点反例和首P图计时顺序边界均保留。不追加writer层/邻域/关系或训练修补，不称非劣性、净用途已保留或fresh确认。
+
+下一项[**native_covariance_role1**](native_covariance_role_execution_plan.md)为零训练固定Render诊断：F原完整形状、C_raw中心邻域结构替代、C_match同原有效覆盖的中心替代、S_match同覆盖球形；C额外共享原基元trace与最薄轴尺度，中心集合几何不算形状独有。原内容/中心/opacity及旧三份Render权重保持，新F与干预走相同实际渲染路径。固定32训练其他query/12开发原query，4224新预测+2112继承、native≤4272、GPU≤1worker小时、DATA≤4GiB/项目≤1GiB；未启动实施。
+
+它直接服务O4/O5并为O6提供后续设计依据，**没有新增PE或O6成功结论**。仅当两个覆盖匹配控制在开发都有实用代价，才保留原局部合成/覆盖行为先匹配的后续attention PE设计理由；其他结果收窄并结束同固定场的协方差PE接口轮换。固定权重分布依赖不证明重训中心方法受限；原绑定内容/a_F仍包含完整形状。诊断结束不追加扫描，阴性也不等于总体目标已达成。
+
+核心公共粗3DGS记忆＋可靠参数PE目标保持。C1/C2/C5/C6保持、C3仅四种评价输入、C4不加PE；sensor/joint-validity、给定相机尺度、静态四源/旧数据/深度任务均为临时边界。无已核验fresh reserve，未来合格候选须另审全部使用历史并先锁未用数据。下一实现为**待主建立的Sol/High/Fast CLI任务，实际UUID待填**，Astra仍复用原子任务；请求配置不冒充后台核验。[本轮分析](../results/gaussian_memory/autonomous_research_loop/round_004/analysis.md) · [固定计划与分支](../results/gaussian_memory/autonomous_research_loop/round_004/plan.json)。下列旧轮文字保留形成时状态，当前决定以本段及现行对应表为准。
+
+
+</details>
+
+**round_003完整实施记录（2026-11-13，随后已由Astra评价并结束本接法）。** 来源侧单层128维四头/32邻域writer，P/S/G各三种子2000步、396份永久可重载query-independent状态、6336新预测/4224继承评分、独立复算、200完整query/150writer成本与两图实际审阅齐备。开发原查询主空间G/P降误差-0.0577% [-0.3739, +0.1347]%，G/S-0.0843% [-0.6298, +0.5190]%、S/P+0.0265% [-0.5141, +0.5536]%；G对原R/Local分别+8.5578% [-1.1705, +17.7495]%/+16.5669% [-7.9059, +32.6010]%。共同writer用途不计作O6增量，辅助raw/训练内/完整输出及反例全部保留，未决区间不称非劣性。
+
+writer为408,768参数、总可训练638,580,386；完整形状普通内容/中心距离方向角度/原Render几何覆盖共同，唯四关系PE槽不同。原生query2D RoPE保持，旧24层Q/K PE未装入；O6在公共记忆writer Transformer中，非native query PE。训练/保存同FP16内容，一状态供八query/两条件，评价无writer/sourceRGB。GPU5.098770workerh、DATA27.0626GiB，在8h/52GiB/2GiB硬预算内；普通浮点缓存路径/历史源码命名碰撞修复有版本，原科学锁和模型数学保留，无追加拟合。sensor/给定相机/静态来源/旧数据范围继续，完整目标未达，无fresh确认；Astra现已关闭本关系PE接法，当前后继见页首round_004。[完整报告](../results/gaussian_memory/native_memory_context_pe1/report.md) · [数表](../results/gaussian_memory/native_memory_context_pe1/report_tables.md) · [实测标记](../results/gaussian_memory/native_memory_context_pe1/method_decision.json)。
+
+<details>
+<summary>round_003方案形成与启动记录（现已完成，保留原状态）</summary>
+
+
+**round_003启动快照（2026-11-13，已完成后保留形成时记录）：** 原Sol已完成44份source-only图/关系及352份原合成贡献矩阵准备；两旧训练场景NumPy字段核对、六个丢弃pilot更新/梯度及完整model+两Adam+RNG恢复通过。九拟合唯一队列已在空闲GPU0/1开始P/S首种子，启动后当时快照P1530/S1520步、正式累计3057/18000更新，尚无完整拟合/全量效果或方法取舍。原8worker小时/52GiB/2GiB预算、9×2000、6336预测/396永久共享状态及固定方案保持；预检浮点路径和历史源码命名恢复、资源账修复均按普通版本留证，无额外科学方案/拟合。原生query24层参数PE未装入；writer为408,768参数，P/S/G共同完整形状普通内容和强中心信息，评价固定一状态供八query。下方“待实施”文字是方案形成时记录，当前已正式运行。[可恢复执行说明](../results/gaussian_memory/native_memory_context_pe1/execution_resume.md) · [实际队列](../results/gaussian_memory/native_memory_context_pe1/queue_status.json) · [预检](../results/gaussian_memory/native_memory_context_pe1/preflight.json)。
+
+**当前科学取舍与下一有限阶段（2026-11-13，round_003）：结束渲染后参数Q/K PE，检验保存前关系编码。** Astra已评价`native_render_parameter_pe1`全部结果：开发G/P主空间降误差−2.935%，三种子均未改善，G/S、S/P亦未形成主筛依据；raw的9.409%正增量和训练内线索保留，但不能替换主量。共同query开销相对原R约26.47%，不由G/P约−0.8%掩盖。结束这一接法，不补种子、步骤或参数扫描；未检出材料性损害不等于非劣性、用途保持或独立确认。
+
+下一项 [native_memory_context_pe1](native_memory_context_pe_execution_plan.md) 只增加一个来源侧128维四头、32个固定中心邻居的共享Transformer block，输出并保存一份query-independent内容状态；原几何/opacity/覆盖、Render算子、融合及原生2D RoPE保持，渲染内容允许随学习改变。P/S/G共用原始1024维内容和**完整log-cov普通内容**，中心距离/方向/角度及相同邻域；只有关系PE的最后四维为零/球形/完整形状。共同writer用途不算PE增量，中心集合结构不归为形状独有收益。它直接服务O6在公共记忆writer中的接口，**不是给VGGT原生query attention加PE**；后者候选已关闭。
+
+固定32训练/12旧开发、9×2000、6336新预测/4224继承评分、396永久共享状态，GPU≤8worker小时、数据≤52GiB/项目≤2GiB（含完整恢复/原子替换峰值）。同一状态供八视角读取，评价不再调用writer或参考RGB；一次写入、暖query及N=1/4/8/32摊销分别计费。若只有共同writer、raw或训练内收益，则关闭此单层局部Gaussian关系PE写入接法的自动变体；若有实质开发PE增量，才另查全历史并锁定真正未用数据确认。当前没有fresh reserve，也没有新实验结果。
+
+C1/C3/C5保持；C2/C4/C6分别改变内容形成、PE位置和共享writer训练。sensor/joint-validity、给定相机尺度、静态四源、冻结encoder、depth任务均为临时范围；完整公共GS记忆＋可靠PE目标未达。此句为方案形成时状态；现已正式启动实施，见页首快照与执行链接。[完整分析](../results/gaussian_memory/autonomous_research_loop/round_003/analysis.md) · [固定计划与分支](../results/gaussian_memory/autonomous_research_loop/round_003/plan.json)。以下记录保留形成时状态及全部正负证据。
+
+
+</details>
+
+**最新完整结果（2026-11-13，round_002）：native_render_parameter_pe1固定实施完成，交回Astra取舍。** 保留原Render的P/S/G各三种子2000步、6336新预测与4224继承评分、独立复算、200完整暖查询及两图实际审阅均完成。开发原查询G/P主空间误差高2.935%（降误差95%区间[−10.158,+1.284]%），三个种子均未改善；S/P高3.837%，G/S低0.868%但区间跨零，预定主筛均不通过。G对原R高2.592%、对Local低6.394%，区间均跨零，净用途仍不确定；不把跨零称等效、非劣性或用途保持。
+
+G/P原始ROI误差低9.409%[2.580,19.123]%，bias²同步下降；完整AbsRel低6.887%但区间跨零。训练片段其他查询G对原R低2.609%[0.812,4.902]%、对Local低43.460%[36.676,49.234]%，保留原Render的条件用途；G/P的0.769%均值增量仍不确定。主空间、原始/标定与片段内用途分别陈述，不改主终点或唯一归因。暖完整query R/P/S/G中位110.30/140.66/139.44/139.50ms，G/P成本条件通过，但相对原R公共PE开销约26.47%。
+
+实际保留18000/尝试18009/旧丢弃9更新，pilot6另列；预检实际17/计费18（训练pilot6、R回放4、零PE4、恢复3/4）清楚分项。GPU总5.202248 worker小时，本轮DATA22.522GiB、项目约0.053GiB，均在原8h/26/2GiB内；资源余量按独立附录运行，完整状态安全让出、容量恢复后唯一替代队列续接，全部GPU/守护正常退出，RAM冗余退休，未删除旧成果。实现/恢复成立、用途与O6增量、独立确认分开；O6本接法主筛未达，raw及训练正证据保留。全部旧数据、sensor/joint-validity/给定相机/静态来源范围继续，总体目标未达；方法决定与下一方案交回同一Astra，实现阶段不自行续训。[完整报告](../results/gaussian_memory/native_render_parameter_pe1/report.md) · [全数表](../results/gaussian_memory/native_render_parameter_pe1/report_tables.md) · [实测规则标记](../results/gaussian_memory/native_render_parameter_pe1/method_decision.json)。
+
+<details>
+<summary>本轮实施与资源历史（按形成时状态保留）</summary>
+
+**空间恢复核验（2026-11-13，主任务）：** 数据盘实时可用约391.35GiB、项目盘16.03GiB，足以覆盖剩余7.481GiB固定产物、0.5GiB暂存和现行余量；主机确认P1975/S1993完整检查点仍在且多张GPU空闲。按既有授权交回原Sol顺序恢复，保持全部科学身份、9×2000/6336预测和8worker小时等预算；须先安全退役持非75退出句柄的旧暂停控制器、确认锁释放，再启动唯一替代队列，不重复已完成结果。以下资源缺口均为历史快照。[恢复交接输入](../results/gaussian_memory/autonomous_research_loop/round_002/capacity_restored_resume_dispatch.json)。
+
+**实时资源补记（2026-11-13，主任务核验）：** 数据盘可用空间继续降至约7.380GiB，已小于固定剩余产物7.481GiB；包含0.5GiB暂存和现行6.5GiB准入余量后，恢复缺口约7.101GiB，建议协调8GiB稳定空间。此前0.221GiB缺口仅为当时快照。P1975/S1993完整恢复状态仍在，原队列T、GPUworker无活动；无新训练、丢弃或效果取舍，科学身份和预算不变。[本次实时核验](../results/gaussian_memory/autonomous_research_loop/round_002/resource_revalidation_turn_002.json)。
+
+**资源重新准入等待（2026-11-13）：** round_002首次附录yield后P/S第三种子已完整保存1975/1993步，G未启动；保留15968/实际尝试15977/旧丢弃9/新增丢弃0更新，累计4.533755 GPU worker小时。六份完整拟合及4224新预测保留，原队列34546保持T，无活动GPUworker；相隔41.4秒快照H=6.279407GiB，重新准入缺口0.220593GiB。未降低阈值、重启或改变科学锁，主任务协调稳定空间。CPU监视退出竞态修复已留证据、尚未启动；未从不齐结果作方法取舍。[恢复交接](../results/gaussian_memory/native_render_parameter_pe1/resource_yield_v1.json) · [精确恢复说明](../results/gaussian_memory/native_render_parameter_pe1/execution_resume.md)。以下进度按形成时保留。
+
+
+**资源审查完成（2026-11-13，round_002）：允许按补充条件恢复，尚未恢复。** 原10GiB是工程预留，科学计划/配置锁/已有checkpoint身份保持。剩余固定产物7.481GiB另加0.5GiB暂存额度后，当前预计峰值余量约6.995GiB；可用独立监控sidecar在两次间隔30秒、峰值余量均≥6.5GiB时恢复，<6GiB、30秒无解释下降≥0.5GiB或实际可用<5GiB即先停原队列、完整保存并退出。8 GPU worker小时、数据26GiB/项目2GiB硬预算及永久final落盘不变，不删除旧/他人成果、不以RAM冒充交付。当前无须另腾原2.505GiB预留缺口；实时资源变化仍须重查。主任务交回原Sol后才恢复；6/9拟合及部分预测不作方法取舍。[资源判断](../results/gaussian_memory/autonomous_research_loop/round_002/resource_review.md) · [资源补充v1](../results/gaussian_memory/autonomous_research_loop/round_002/resource_addendum_v1.json)。下方资源等待记录保留当时现场。
+
+
+**资源安全等待（2026-11-13，round_002）：** `native_render_parameter_pe1`已完成前两种子P/S/G共6/9拟合及4224新预测；第三种子P19/S22步完整状态已保存，G尚未启动。数据盘实时余量14.976GiB、固定剩余产物约7.481GiB，预计完成后7.495GiB低于原10GiB工程余量；仅本人worker已退出，原队列PID34546明确SIGSTOP，禁止重复队列或未经新交接恢复。实际保留12041/尝试12050/旧丢弃9更新，累计3.489576 GPU worker小时；科学公式、样本、精度及硬预算均未改变，也未以不齐结果作方法取舍。交回原Astra仅审查工程资源余量；当前不是方法阴性、完整结项或总体研究阻塞。[精确停态](../results/gaussian_memory/native_render_parameter_pe1/disk_resource_pause.json) · [恢复说明](../results/gaussian_memory/native_render_parameter_pe1/execution_resume.md) · [资源交接](../results/gaussian_memory/native_render_parameter_pe1/resource_pause_handoff.json)。下方旧进度按形成时保留。
+
+
+**实施进展（2026-11-13，round_002）：** 352份位置字段已完成并锁定，原r/patch/scene只读复用；两训练输入独立NumPy抽样字段差0、零PE原R一致、六个丢弃更新和完整状态恢复预检通过。P/S首种子20261110在空闲GPU0/2正式训练，固定九拟合各2000步；尚无完整效果或方法采用。预检Adam恢复内存重叠及跳过阶段清理两项普通修复保留，无额外pilot更新或科学方案变更。[执行状态](../results/gaussian_memory/native_render_parameter_pe1/queue_status.json) · [预检](../results/gaussian_memory/native_render_parameter_pe1/preflight.json)。
+
+</details>
+
+**当前授权（2026-11-13）：双模型自主研究循环。** `native_input_pe1`已按原预算完整结项；用户新授权复用Astra(max)分析任务与Sol(high)实现任务，顺序交接、逐轮有限预算，至明确暂停、合格独立确认或需用户输入的外部阻塞。旧段落的“无自动后继”为当时授权边界，现由新授权接续，不改变历史结论。[授权与协议](../results/gaussian_memory/autonomous_research_loop/authorization.md)、[可恢复状态](../results/gaussian_memory/autonomous_research_loop/state.json)。分析继续复用原collaboration Astra任务；原Sol已退休，用户指定的gpt-6.1-sol/high/service_tier=fast CLI角色已实际建立并完成round004，后续复用UUID `01a1d350-d1ec-70f2-9e37-8960b2dfe7a8`，不另建实现角色。创建请求/可见metadata与后台实际配置分开记录，不静默替换；见[接口授权补充](../results/gaussian_memory/autonomous_research_loop/authorization.md)。
+
+**最新方法取舍与有限计划（2026-11-13，round_002）：保留原Render，直接检验参数PE。** 固定分解主要进入“局部内容依赖”分支：C−R的大幅代价与N/M仍保留40%以上片段内空间用途并存；完整输出也有幅度敏感。保留原局部内容、覆盖衰减与MLP，结束该机制诊断，不以M约3.69%的旧用途差距残差追加扫描；固定权重分布扰动不能唯一诊断attention失败。
+
+下一项 [native_render_parameter_pe1](native_render_parameter_pe_execution_plan.md) 固定P/S/G三组：三者共用原Render及包含中心均值、多尺度Fourier、**中心间离散二阶矩**和中心—射线量的强中心字段；新增六槽分别为零、球形/完整基元intrinsic log-cov。只以一个68,928参数共享MLP给原24个global attention的Q/K增加PE，原V、2D RoPE、融合和完整接收训练保持；不是旧投影标量或五维成对关系换名，也不把中心集合形状归为基元协方差独有收益。
+
+计划固定32训练/12旧开发、9次各2000步、6336新预测和4224继承评分、8 GPU worker小时上限，新增数据盘/项目盘不超过26/2GiB。以开发原查询空间G/P为主，预定G/S、S/P及R/Local净用途和原始/全图代价；主开发至少1%且区间/三种子支持才考虑后续独立确认；R/Local均值及训练内权衡不设零容差否决，开发材料性损伤按相对增加≥1%且区间支持判定，所有未决退步保留。只训练片段改善则保留条件范围，阴性则结束此固定参数Q/K接法，不扫描宽度/频率/层/强度/步数。当前状态为分析完成、待主任务顺序交接实现，尚无该轮拟合或效果。
+
+直接服务O6及O4/O5，复用O2/O3；C1/C2/C5/C6保持，C3使用原Render，新增改变C4。sensor/joint-validity、给定相机/尺度、静态来源及depth任务仍是临时范围。全部是已用数据；有候选后必须另查全研究使用历史并锁定真正未用身份，当前没有已核验fresh reserve。总体目标仍未达成。[本轮分析](../results/gaussian_memory/autonomous_research_loop/round_002/analysis.md) · [固定预算与分支](../results/gaussian_memory/autonomous_research_loop/round_002/plan.json)。以下日期段落保留形成时状态，当前对应表已同步。
+
+**最新完成（2026-11-13）：native_render_factorization1零训练固定诊断完成。** 复用32地点Render三份最终权重，4224新干预预测、2112继承评分、24基准回放、独立复算、完整数表/成本及两图实际审阅完成。训练片段其他查询C−R空间误差+0.009208 [0.006210,0.012551]，32/32地点同向；N−R为+0.000112 [−0.000139,0.000407]，M−R为+0.000230 [0.000015,0.000491]。N/M仍保留约41.19%/40.40%对Local片段内空间降误差；M小幅残余代价不称等效，局部内容替换与分布改变也非纯地址因果量。开发C−R为+0.004472 [0.001612,0.008059]，跨地点R净用途仍不确定。
+
+归一化N的完整全图AbsRel在训练/开发相对R高15.56%/19.81%，整体范数M将均值代价缩至2.70%/3.10%且区间跨零；不能只以主空间指标忽略完整输出。结果是固定Render的条件依赖，不唯一诊断新attention失败，也不直接验证O6。4248前向、0.199164 worker小时、峰值4.686GiB，两worker均退出，无训练/重复/新增数据。固定诊断结束并交回同一Astra作方法取舍，不增加机制扫描或自动训练；历史阴性和完整科学目标继续保留。[报告](../results/gaussian_memory/native_render_factorization1/report.md) · [数表](../results/gaussian_memory/native_render_factorization1/report_tables.md) · [交接](../results/gaussian_memory/native_render_factorization1/implementation_handoff.json)。
+
+形成时的[固定执行方案](native_render_factorization_execution_plan.md)及[机器计划](../results/gaussian_memory/autonomous_research_loop/round_001/plan.json)保持可追溯；所有已完成轮次及历史取舍如下。
+
+**最新完成（2026-11-13）：native_input_pe1完成。** 四组各三种子2000步，12拟合、8448新预测及4224继承评分、独立复算、实际查询成本和两图审阅齐备。主G对中心P空间误差低0.323% [−0.047,+0.985]%，对球形低0.228%，均未建立可靠实用增量；G对Local高1.524%，净用途未确立。训练片段其他查询G对Local高6.70% [2.63,11.26]%，当前输入attention替换未保留旧Render的41.95%训练内优势；问题不再仅是跨地点泛化。
+
+首种子两训练样例中投影项对注意力作用较弱，是描述线索而非唯一病因；新增训练拟合查询G/P低0.4705%的辅助正结果保留。结束单次输入attention＋投影标量候选，不采用G/S/P为有效方法，保留旧32地点Render有条件参考及历史正负证据。O6已直接检验但未形成采用理由；sensor/给定相机/静态来源/旧数据边界不变。12份权重持久化、RAM冗余退休，两次完整状态转移无丢弃更新；有限目标完成，总体研究目标仍未达成，无自动后继训练。
+
+[完整报告](../results/gaussian_memory/native_input_pe1/report.md) · [数表](../results/gaussian_memory/native_input_pe1/report_tables.md) · [方法取舍](../results/gaussian_memory/native_input_pe1/method_decision.json)。下方旧“进行中／仅设计”按形成时点保留，以此完成记录及当前对应表为准。
+
+**两配对种子中间描述（2026-11-13，非最终取舍）：** native_input_pe1已有9/12拟合完成，最后P/S/G第三种子运行中。前两种子G对P主空间误差均值低0.316%，对L反高1.017%；其他查询G对P/L低1.048%/3.918%，完整输入AbsRel对L高11.79%。无区间、采用或新确认，原预算保持。S第二种子在GPU1出现外部任务后第661步保存完整状态，已在空闲GPU6续训并完成，2000步日志连续。[两种子描述](../results/gaussian_memory/native_input_pe1/two_seed_description.json) · [资源转移](../results/gaussian_memory/native_input_pe1/runtime_relocation_v1/record.json)。
+
 **首配对种子中间描述（2026-11-13，非最终取舍）：** native_input_pe1已有6/12拟合完成及4224份预测。首种子L/P/S/G主空间误差为0.02234237/0.02223455/0.02223519/0.02223574，G对P平均高约0.0054%，尚无实用PE增量；G对L的主均值低0.48%，其他查询低6.38%，完整输入AbsRel反高14.72%。仅首种子描述，无区间、采用或新确认；其余种子照原2000步预算执行，不为微小差异追加数值修补。[首种子描述](../results/gaussian_memory/native_input_pe1/first_seed_description.json)。
 
 **正式训练启动（2026-11-12）：** native_input_pe1的44场景/352查询几何缓存和8项训练片段预检完成；零残差原生差0，48交互块/DPT及新增PE梯度有效，新读取器Adam恢复差0，预检峰值10.063GiB。配置、来源与实际采样锁定，L/P/S首种子已在GPU3/4/7启动，G及后续种子排队。仅正式启动前补齐full/missing配置字段，未产生训练/效果后变更；[修复记录](../results/gaussian_memory/native_input_pe1/failures/pre_run_conditions_v1/record.json)。三种子结果尚待完成，O6仍开放。

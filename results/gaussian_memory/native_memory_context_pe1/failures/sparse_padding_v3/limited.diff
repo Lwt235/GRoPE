@@ -1,0 +1,22 @@
+--- experiments/native_memory_context_prepare.py before
++++ experiments/native_memory_context_prepare.py after
+@@ -20,7 +20,7 @@
+     nonself=dist.clone();nonself.fill_diagonal_(torch.inf)
+     others=torch.argsort(nonself,dim=1,stable=True)[:,:31]
+     neighbors=torch.cat((torch.arange(n,device=p.device)[:,None],others),1)
+-    mask=valid[neighbors]&torch.isfinite(torch.gather(dist,1,neighbors));mask[:,0]=True
++    mask=valid[neighbors]&torch.isfinite(torch.gather(nonself,1,neighbors));mask[:,0]=True
+     # Invalid query slots are never updated, but self prevents NaN softmax.
+     refs=torch.argsort(nonself,dim=1,stable=True)[:,:3];rv=p[refs]-p[:,None]
+     refok=torch.isfinite(torch.gather(nonself,1,refs));rv=rv*refok[:,:,None]
+--- experiments/native_memory_context_train.py before
++++ experiments/native_memory_context_train.py after
+@@ -47,7 +47,7 @@
+ 
+ def verify_lock():
+     lock=read(OUT/'configuration_lock.json');assert lock['plan_sha256']==sha256(OUT/'plan.json') and lock['scientific_plan_sha256']==sha256(SCIENCE_PLAN)
+-    revision=OUT/'engineering_source_revision_v2.json'
++    revision=OUT/'engineering_source_revision_v3.json'
+     if revision.exists():
+         rev=read(revision);assert rev['original_lock_sha256']==sha256(OUT/'configuration_lock.json')
+         assert all(sha256(path)==h for path,h in rev['original_source_snapshots'].items())

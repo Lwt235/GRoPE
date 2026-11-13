@@ -34,7 +34,7 @@ def main():
         v=s['comparisons'][endpoint+'/'+kind+'-P'];ax.plot(range(12),v['per_place_relative_percent'],marker='o',label=kind+' vs P',color=color)
     ax.axhline(0,c='black',linewidth=.8);ax.set_xticks(range(12),s['development_places'],rotation=65,ha='right',fontsize=7);ax.legend(fontsize=8)
     low,high=ax.get_ylim();ax.set_ylim(min(-1.,low),max(1.,high))
-    ax.set_ylabel('Error reduction (%)');ax.set_title('All12 unseen places, three-seed means')
+    ax.set_ylabel('Error reduction (%)');ax.set_title('All12 unseen places, three-seed means\nAt least +/-1% display span; no effect threshold')
     fig.suptitle('One input attention | matched saved content |32 training places | old sensor-assisted data',fontsize=12)
     fig.savefig(folder/'outcomes.png',dpi=150);plt.close(fig)
     rows=read(OUT/'scoring/metrics.json')['rows'];candidates=[]

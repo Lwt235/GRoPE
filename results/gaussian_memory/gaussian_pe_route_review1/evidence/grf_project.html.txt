@@ -1,0 +1,504 @@
+
+
+
+  
+  
+  GaussianRenderFormer: Transformer-based Rendering of 3D Gaussian Splats
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+  
+
+
+
+  
+    
+  
+
+  
+
+  
+
+    
+
+      
+
+        
+
+          
+
+            
+GaussianRenderFormer: Transformer-based Rendering of 3D Gaussian Splats
+            
+
+              Shahaf Valencia Levy,
+              Sagie Benaim
+            
+            
+
+              The Hebrew University of Jerusalem
+            
+
+            
+
+              
+
+                
+                  
+                    
+                    Paper
+                  
+                
+                
+                  
+                    
+                    arXiv
+                  
+                
+                
+                  
+                    
+                    Code
+                  
+                
+                
+                  
+                    🤗
+                    Models
+                  
+                
+              
+            
+          
+        
+      
+    
+  
+
+  
+  
+
+    
+
+      
+
+        
+
+          
+
+            
+              
+            
+            
+ReferenceOurs
+          
+          
+
+            
+              
+            
+            
+ReferenceOurs
+          
+        
+        
+
+          GaussianRenderFormer renders 3D Gaussian splats with a neural network, with no rasterizer in the renderer.
+          Left in each video: the reference, a rasterization of the object's full splat. Right: our model from a
+          20,000-Gaussian input. Both objects were never seen in training.
+        
+      
+    
+  
+
+  
+  
+
+    
+
+      
+
+        
+
+          
+Abstract
+          
+
+            
+
+              Can a neural network learn to render 3D Gaussian splats on its own, with no rasterizer in the renderer?
+              We present GaussianRenderFormer, a transformer that takes a set of Gaussians and a camera and outputs the
+              image directly. Each Gaussian becomes one token in a view-independent encoder, and a view-dependent
+              decoder turns small patches of camera rays into pixels by attending to those tokens. Trained on 26,820
+              Objaverse objects pruned to 20,000 Gaussians each, GaussianRenderFormer renders 300 unseen objects at
+              38.08 dB PSNR against the full, unpruned splats, while rasterizing the same pruned input reaches
+              44.02 dB. The gap is not one of generalization, and our diagnostics are consistent with a bottleneck in
+              the view decoder: telling it the projected footprint of each Gaussian, which it could in principle
+              infer, adds 1.4 dB. Under-training is not ruled out.
+            
+          
+        
+      
+    
+  
+
+  
+  
+
+    
+
+      
+Method
+      
+      
+
+        Each Gaussian's 14 parameters are embedded as one token, and a view-independent scene encoder (top) lets these
+        tokens exchange information, using a 3D rotary embedding of their centers. For each view, the image is split
+        into 4×4-pixel patches, and each patch becomes a token built from its camera rays. The view decoder
+        (bottom) lets these tokens attend to the scene tokens, using a 2D rotary embedding of where each Gaussian lands
+        in the image and an embedding of its projected footprint, and a DPT head turns them into pixels.
+      
+      
+
+        
+
+          GaussianRenderFormer keeps RenderFormer's
+          two-stage layout and starts from its pretrained weights. Three changes adapt its view decoder to Gaussians:
+        
+        
+          
+A 2D rotary embedding of where each Gaussian lands in the image, on the cross-attention.
+          
+The projected footprint of each Gaussian, its 2D covariance in the image, on the attention keys.
+          
+Smaller patches of 4×4 pixels.
+        
+        
+
+          Where each Gaussian lands and how large it appears are computed per Gaussian, while which Gaussians cover each
+          pixel and how they blend is learned.
+        
+      
+    
+  
+
+  
+  
+
+    
+
+      
+Held-out objects
+      
+Move across an image to compare the reference (left) with our render (right).
+      
+
+        
+
+          
+
+            
+            
+            ReferenceOurs
+            
+
+          
+          
+40.76 dB
+        
+        
+
+          
+
+            
+            
+            ReferenceOurs
+            
+
+          
+          
+39.06 dB
+        
+        
+
+          
+
+            
+            
+            ReferenceOurs
+            
+
+          
+          
+40.13 dB
+        
+        
+
+          
+
+            
+            
+            ReferenceOurs
+            
+
+          
+          
+38.91 dB
+        
+        
+
+          
+
+            
+            
+            ReferenceOurs
+            
+
+          
+          
+38.44 dB
+        
+        
+
+          
+
+            
+            
+            ReferenceOurs
+            
+
+          
+          
+40.50 dB
+        
+      
+      
+
+        Six objects never seen in training, chosen by hand for variety. Reference: a rasterization of each object's full
+        splat. Ours: GaussianRenderFormer from a 20,000-Gaussian input. PSNR on the crop around the object.
+      
+
+      
+
+        
+
+          
+
+            
+            
+            ReferenceOurs
+            
+
+          
+          
+A 3× zoom of the most detailed region of the last object, where the model softens the stone's texture.
+        
+      
+    
+  
+
+  
+  
+
+    
+
+      
+Results
+      
+
+        
+
+          On 300 objects never used during development, against renders of the full, unpruned splats (28 views per
+          object):
+        
+      
+      
+
+        
+          
+            
+RendererPSNR (dB) ↑SSIM ↑LPIPS ↓Time per view
+          
+          
+            
+gsplat on the 20k input44.020.99540.00460.7 ms
+            
+Ours38.080.98140.0113275 ms
+            
+Ours without the footprint36.670.97790.0140
+          
+        
+      
+      
+
+        
+
+          The gap to rasterization is not one of generalization: on its training objects the model scores 38.25 dB.
+          Our diagnostics are consistent with a bottleneck in the view decoder, though under-training is not ruled out.
+          Time on one NVIDIA L40S GPU at 512×512 pixels.
+        
+      
+
+      
+Camera paths
+      
+
+        
+
+          
+            
+          
+          
+ReferenceOurs
+        
+      
+      
+
+        A smooth 96-frame path around a held-out object, with the distance varying between 1.35 and 2.05 and no frame on a
+        training camera. The model renders every frame on its own and was never trained on sequences, and reaches
+        38.52 dB per frame on average over 30 held-out objects.
+      
+
+      
+A real capture
+      
+
+        
+Full region, rasterized
+        
+20k-Gaussian input, rasterized
+        
+Ours, 20k-Gaussian input
+        
+        
+        
+        
+        
+        
+      
+      
+
+        A region of the bonsai scene from the Mip-NeRF 360 dataset (images CC BY 4.0), seen from two orbit cameras and cropped around the region. Left: the full region
+        (346,027 Gaussians) rasterized with gsplat, used as the reference. Middle: the region pruned to 20,000 Gaussians
+        and rasterized. Right: our model on the same pruned input. Over the full frame, our model scores 34.1 dB and
+        gsplat 35.7 dB against the reference.
+      
+    
+  
+
+  
+  
+
+    
+
+      
+Limitations
+      
+
+        
+          
+GaussianRenderFormer is not yet a practical replacement for a rasterizer: it stays several dB below
+            rasterizing the same input, is several hundred times slower and needs far more memory.
+          
+We train and evaluate on single objects viewed from outside. Rendering a full scene, with the camera
+            inside it, remains open.
+          
+It renders well only in its training configuration. Other input sizes, camera distances, resolutions and
+            fields of view cost it quality.
+          
+It uses only the view-independent color of each Gaussian and cannot relight.
+        
+      
+    
+  
+
+  
+  
+
+    
+
+      
+
+        
+BibTeX
+        
+          
+          Copy
+        
+      
+      @article{valencialevy2026gaussianrenderformer,
+  title={GaussianRenderFormer: Transformer-based Rendering of 3D Gaussian Splats},
+  author={Valencia Levy, Shahaf and Benaim, Sagie},
+  journal={arXiv preprint arXiv:2611.05593},
+  year={2026}
+}
+
+      
+
+        GaussianRenderFormer builds on RenderFormer
+        and starts from its weights. If you use it, please also cite RenderFormer:
+      
+      
+
+        
+RenderFormer
+        
+          
+          Copy
+        
+      
+      @inproceedings{zeng2025renderformer,
+  title={RenderFormer: Transformer-based Neural Rendering of Triangle Meshes with Global Illumination},
+  author={Chong Zeng and Yue Dong and Pieter Peers and Hongzhi Wu and Xin Tong},
+  booktitle={ACM SIGGRAPH 2025 Conference Papers},
+  year={2025}
+}
+    
+  
+
+  
+
+  
+    
+
+      
+
+        
+
+          
+
+            
+
+              This page was built using the Academic Project Page Template,
+              which was adopted from the Nerfies project page.
+              This website is licensed under a Creative
+              Commons Attribution-ShareAlike 4.0 International License.
+            
+          
+        
+      
+    
+  
+
+
+
