@@ -1,7 +1,7 @@
 # 共享高斯记忆：当前可以说什么
 
 <!-- native_scene_exchange_pe1 implementation status -->
-**round015实施中（2026-11-13）。** [唯一合同](../results/gaussian_memory/autonomous_research_loop/round_015/science_plan.md)对应共享物理成场→实际原生查询损失的新条件；[有限预检](../results/gaussian_memory/native_task_writer_pe1/preflight.json)确认梯度与完整恢复，固定18拟合进行中。[当前状态](../results/gaussian_memory/native_task_writer_pe1/queue_status.json)。C/J×P/S/G检验形成、PE总训练效应及交互；不能称固定同场直接效应、准确物理几何、效果或fresh。O2–O6保持，C1/C2/C6改变，全部旧正负与关闭决定不改。
+**round028实施中（2026-11-14）。** O2/O3公共GS固定预算、O4/O5原生对应读取与O6同信息强中心比较保持；仅C2改为逐来源贡献F／匹配均值M，其他接口及任务条件复用。PCA／44场绑定与五组真实梯度恢复检查已完成，15fit唯一队列运行，尚无效果判断。[唯一合同](../results/gaussian_memory/autonomous_research_loop/round_028/science_plan.md) · [实际执行](../results/gaussian_memory/native_source_resolved_pe1/queue_status.json)。[round027关闭](../results/gaussian_memory/autonomous_research_loop/round_027/science_plan.md)及历史证据不改；全部used，未主张fresh或总体成功。
 
 **round013评价完成（2026-11-13）：关闭两块工作副本PE家族，无后继合同。** [唯一科学判断](../results/gaussian_memory/autonomous_research_loop/round_013/science_plan.md)分别处理微小PE／无正反馈交互、Native主空间退步和共同raw／偏差／AbsRel正证据；L控制不证明来源普遍无用。[完整报告](../results/gaussian_memory/native_scene_exchange_pe1/report.md)、[manifest](../results/gaussian_memory/native_scene_exchange_pe1/manifest.json)保留全部零覆盖／反例／成本／身份。O2–O6完整目标、历史正负及旧关闭决定不变，无fresh、总体成功／暂停或外部阻塞。
 <!-- /native_scene_exchange_pe1 implementation status -->

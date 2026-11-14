@@ -1,7 +1,7 @@
 # 研究大纲与实现对应：持续更新记录
 
 <!-- native_scene_exchange_pe1 implementation status -->
-**round015实施中（2026-11-13），`native_task_writer_pe1`按固定合同执行。** 原生损失到共享J物理几何与内容的梯度、完整Adam/RNG恢复已验证；18次固定拟合进行中，尚无完整效果／fresh。[唯一科学合同](../results/gaussian_memory/autonomous_research_loop/round_015/science_plan.md) · [实施状态](../results/gaussian_memory/native_task_writer_pe1/queue_status.json)。O2–O6保持，C1/C2/C6实质改变；C3/C4实际渲染与完整普通Σ共同，C5临时。实质问题是任务成场是否改变PE训练链总效应及形成交互；完整接收学习早已覆盖，所有旧决定保留。
+**round028实施中（2026-11-14）。** O2/O3公共GS固定预算、O4/O5原生对应读取与O6同信息强中心比较保持；仅C2改为逐来源贡献F／匹配均值M，其他接口及任务条件复用。PCA／44场绑定与五组真实梯度恢复检查已完成，15fit唯一队列运行，尚无效果判断。[唯一合同](../results/gaussian_memory/autonomous_research_loop/round_028/science_plan.md) · [实际执行](../results/gaussian_memory/native_source_resolved_pe1/queue_status.json)。[round027关闭](../results/gaussian_memory/autonomous_research_loop/round_027/science_plan.md)及历史证据不改；全部used，未主张fresh或总体成功。
 
 **round013科学取舍完成（2026-11-13）：关闭两块原生工作副本 PE 家族及自动变体，无后继合同。** O2/O3公共场、O4/O5真实读取、O6同信息P/S/G比较均已执行；C3消息图／C6学习改变未建立主PE或Native空间净用途。共同raw／偏差／AbsRel正证据、L控制及空间退步分列；C1/C2/C4/C5临时边界保持。[唯一科学判断](../results/gaussian_memory/autonomous_research_loop/round_013/science_plan.md) · [完整报告](../results/gaussian_memory/native_scene_exchange_pe1/report.md)。总体目标未达、未暂停，无fresh候选或外部阻塞；不派生变体。
 <!-- /native_scene_exchange_pe1 implementation status -->
@@ -289,18 +289,18 @@ P-sensor对P-pred的缺失ROI空间误差低4.27% [0.71,11.91]%，三个种子�
 
 | 大纲编号 | 大纲中的意思 | 当前对应 | 对应关系与待验证部分 |
 | --- | --- | --- | --- |
-| O1 | VGGT是per-token，每个token是一个场景点 | 图像patch、物理基元与隐藏内容分开 | 学到任务几何不等于更准确物理几何；Σ不是位姿不确定性。 |
-| O2 | 3DGS建立一个公共的场景表达 | 共享source-only writer一次形成、保存重载公共场（实施中） | query监督仅通过训练共享权重；部署不以query优化或写回场。 |
-| O3 | 为VGGT建立memory，形式为比较coarse的3DGS | 原44份2048槽／1024D初始化，计划C内容／J几何＋内容训练 | 旧source特征形成已关闭；新任务成场实施中，不能称有效。 |
-| O4 | 每个view从3DGS场景表达提取当前view相关信息 | 同一保存场供八query／full-missing复用，实际渲染后原生深度 | Native／Local／Render参照与PE控制分列，不用训练内或重构替代用途。 |
-| O5 | 读取用到3DGS渲染和参数 | 当前物理场实际alpha合成内容、普通Σ及位置量 | 新条件为原生任务梯度回到几何；一次成场与逐query成本分列。 |
-| O6 | 参数表示为PE | 复用原24个global Q/K的P/S/G，执行C/J形成交互 | 完整普通Σ／强中心共享；识别PE训练链总效应，非固定同场直接效应。 |
+| O1 | VGGT是per-token，每个token是一个场景点 | 单图上下文按来源分解保存，点由实际锚输入定义 | 来源残差不是已认证物理点或定位不确定性。 |
+| O2 | 3DGS建立一个公共的场景表达 | 原四source几何，共同F/M source-only状态 | 一次保存、多query复用，不写回query。 |
+| O3 | 为VGGT建立memory，形式为比较coarse的3DGS | 2048槽×1024维，四块255维特征＋质量 | 通道分辨率换来源分解；全局PCA和混合锚前缀计入依赖。 |
+| O4 | 每个view从3DGS场景表达提取当前view相关信息 | 沿用真实预测query相机的原生点跟踪 | 保持原端点／标签／覆盖，不据结果选子组。 |
+| O5 | 读取用到3DGS渲染和参数 | 原alpha绑定、投影可见量及首global只读K/V | 不增层或新reader；仅匹配改变保存内容。 |
+| O6 | 参数表示为PE | F内P/S/G及M内P/G，普通完整Σ和中心共有 | 主PE、表示效应、交互和净用途分列；[round028合同](../results/gaussian_memory/autonomous_research_loop/round_028/science_plan.md)实施中，尚无效果结论。 |
 
 O1的技术澄清依据[VGGT原文§3.2–3.3](https://arxiv.org/html/2503.11651v1)。O2–O6保留导师原始目的；不能因为某一种实现失败，自动修改这些目标。大纲并未规定在线更新、未知相机或端到端训练，它们目前是能力边界和后续开放问题，不能擅自说成已完成，也不能擅自当成用户要求放弃的目标。
 
 ## 2. 当前实现选择与临时简化
 
-当前为[round015共享原生任务成场合同](../results/gaussian_memory/autonomous_research_loop/round_015/science_plan.md)，正在实施；下表区分当前选择与已有证据。[round014有界调研](../results/gaussian_memory/autonomous_research_loop/round_014/science_plan.md)、[round013工作副本关闭](../results/gaussian_memory/autonomous_research_loop/round_013/science_plan.md)、round010相机细化、round007固定场、round008语义论证及round012来源形成旧决定保持，不将临时选择升级为普适条件。
+当前[round028合同](../results/gaussian_memory/autonomous_research_loop/round_028/science_plan.md)选择一次固定预算的来源分解表示：逐来源贡献F与可由其精确得到的均值M，只改变C2保存的关联。沿原对应链作同信息PE比较，保留旧完整均值P、L和Native参照；[round027](../results/gaussian_memory/autonomous_research_loop/round_027/science_plan.md)的旧接法关闭及区域K正证据／R未决不改。当前PCA／44场绑定及真实梯度恢复检查完成，唯一15fit队列运行；尚无完整效果结果。
 
 **已完成并结束的选择：** `native_input_pe1`沿用C1/C2/C5/C6；C3单次输入attention替换旧MLP，C4复用8维P/S/G。12拟合及完整审阅未建立实用PE增量或来源净用途，结束该固定接法；旧32地点Render保留为有条件研究参考。当前实现选择和临时范围见下表；先前冻结接口阴性及本轮小幅辅助正结果均保留。
 
@@ -308,14 +308,14 @@ O1的技术澄清依据[VGGT原文§3.2–3.3](https://arxiv.org/html/2503.11651
 
 | 选择编号／关联大纲 | 当前选择及理由 | 其他解释或实现 | 当前证据和边界 |
 | --- | --- | --- | --- |
-| C1／O2、O3 | 原44份sensor/joint-validity场初始化共享点式writer | C学f／opacity，J另学μ／Σ；不分组／增删槽 | 改变原生任务下的成场条件；旧来源重构及粗头writer结果保留。 |
-| C2／O3、O4 | 每个最终writer从来源输入形成可重载公共物理场 | 无query输入／逐场景参数；训练query仅提供共享权重梯度 | 各PE组训练后场可不同，评价同场多view复用，不写回查询。 |
-| C3／O4、O5 | 复用实际Render、单次融合和完整原生链 | 只添加点式成场MLP，非新reader／工作token反馈 | 旧固定场接口不被重命名重开；新干预是场的梯度终点。 |
-| C4／O6 | 复用46强中心＋6个P/S/G位置维进入global Q/K | 同一完整Σ普通输入、完整render和容量共同 | PE总训练效应与形成交互分开；不称固定同场直接因果。 |
-| C5／O4、O5 | 给定相机／单位、静态四来源、原missing ROI保持 | writer不接query相机／RGB／标签；读取仍用当前view | sensor、深度／人工缺失、旧地点均临时；无fresh。 |
-| C6／O2–O6 | 全frame/global/DPT与writer/fusion/PE共同学习 | 沿原查询深度损失；encoder和初始化依赖冻结 | 全接收解冻早已覆盖；新梯度到共享物理成场已预检，完整效果待评价。 |
+| C1／O2、O3 | 原44场几何／opacity和source alpha绑定固定 | 不优化或更换物理场 | 来源sensor／相机特权仍在。 |
+| C2／O3、O4 | F保留逐来源残差，M仅保留同均值与来源质量 | 共同source-only PCA255，总内容1024维 | 新的可推翻条件；对旧完整均值作强参照，不因降维削弱对照。 |
+| C3／O4、O5 | 复用首global只读GS和两帧TrackHead | 不增层／反馈／reader | 仅为C2匹配试验复用；旧均值接法关闭不撤销。 |
+| C4／O6 | F/P、F/S、F/G、M/P、M/G完整匹配 | PE组共享全部内容／Σ／强中心 | 同表示PE、表示效应及交互分列；旧全维L／P与Native继承参照。 |
+| C5／O4 | 原32训练／12开发，原相机初值／点标签 | PCA只见训练地点source，query真值只监督评分 | 全部used，有限sensor标签与混合锚前缀仍为临时范围。 |
+| C6／O2–O6 | 原映射／位置MLP／首对rank8 LoRA | 三原seed、15×1000、固定末步 | 无新学习模块／额外损失；未达分支结束，不扫描来源／秩或续训。 |
 
-已实现基底仍是来源图像→公共粗高斯特征场；固定场camera-only、原生相机细化、source-only特征形成及查询内工作副本接法均已完整评价并收束。下一有限问题为共享物理成场接受原生任务梯度，尚未实施。公共状态、PE、原生净用途、成本与独立确认分别判断，不删除渲染／区域正例或原生阴性；完整目标未达、未暂停、无外部阻塞。
+已实现基底与完整历史保留；[round012](../results/gaussian_memory/autonomous_research_loop/round_012/science_plan.md)、[round016](../results/gaussian_memory/autonomous_research_loop/round_016/science_plan.md)与[round020](../results/gaussian_memory/autonomous_research_loop/round_020/science_plan.md)的家族关闭不改。round021对固定旧模型提出的条件问题已由round022收束；公共状态、PE、原生用途、成本与独立确认分别判断。整体未达、未暂停，无外部阻塞或fresh候选。
 
 **C3变更的形成记录（后已授权完成，非待执行提案）：** 来源图像编码器内容按查询视角直接渲染，在当前同一编码器输出处加入单个残差融合层，再运行全部原生层与DPT。C1/C2保存状态不变，C5/C6给定相机、传感器特权、静态和冻结条件仍为临时边界；C4投影标量修补保持收束，O6未来比较需要另行明确。固定Local／Global／Render三组同容量训练，检验空间内容是否提供超出共同适配和场景整体信息的原生用途。与prototype1、末层教师恢复和joint_write1独立粗头的实质区别，以及不同结果下的取舍，见[分析与建议](learned_projection_results_analysis_20261112.md)。
 
@@ -331,7 +331,15 @@ O1的技术澄清依据[VGGT原文§3.2–3.3](https://arxiv.org/html/2503.11651
 
 | 尝试／证据来源 | 对应大纲／选择 | 已做的尝试与结果 | 当前取舍与防重复提示 |
 | --- | --- | --- | --- |
-| [native_task_writer_pe1合同](../results/gaussian_memory/autonomous_research_loop/round_015/science_plan.md)，计划已定、未实施 | O2–O6；C1/C2共享物理成场、C6原生任务梯度 | C/J×P/S/G拟比较同信息PE的训练链总效应与形成交互；当前无结果。 | 区别粗头／源重构／内容writer／临时反馈；全接收解冻不是新缺口，旧关闭决定不改。 |
+| [round028来源分解合同](../results/gaussian_memory/autonomous_research_loop/round_028/science_plan.md)，实施中 | O2–O6；C2关联保留 | 同预算F/M表示及同信息P/S/G，旧完整均值／L／Native不削弱；暂无结果。 | 实质区别为保留被跨来源均值删除的残差；原接口／任务不变，旧家族关闭保留。 |
+| [round026原生跟踪](../results/gaussian_memory/autonomous_research_loop/round_026/science_plan.md)，[round027取舍](../results/gaussian_memory/autonomous_research_loop/round_027/science_plan.md) | O2–O6；C3只读接口／C5对应任务／C6匹配学习 | 12×1000完整[报告](../results/gaussian_memory/native_track_memory_pe1/report.md)：G−P未立；L也有Native增益，GS对L连续误差／尾部辅助改善保留。 | 按原分支关闭本接法，无后继合同；区域内容证据与旧R5／pose／深度结论不改，不称普遍无效。 |
+| [round025跨view内容报告](../results/gaussian_memory/native_crossview_content1/report.md)，[round026取舍](../results/gaussian_memory/autonomous_research_loop/round_026/science_plan.md) | O2–O4；C2内容性质／C5匹配范围 | K=.7182 [.6589,.7700]条件阳性、R跨1；108/192主对、12地点，稀疏覆盖与投影歧义保留。 | 有限测量结束；不是独立同表面、view-offset确诊、PE／Native／fresh；不扫描阈值或重做统计。 |
+| [round023实际内容输入支撑报告](../results/gaussian_memory/native_content_support1/report.md)，[round024收束](../results/gaussian_memory/autonomous_research_loop/round_024/science_plan.md) | O2–O6；C2性质测量／C4控制 | 96图6144VJP；G−P+.8902pp [−.0548,2.0968]未达，G−S+1.1026pp条件阳性；局部结构与广域部分均保留。 | 本支撑理由结束，无后继合同；全部零覆盖／反例保留，非PE／Native／fresh，不增probe或恢复旧家族。 |
+| [round021采样尺度范围诊断](../results/gaussian_memory/autonomous_research_loop/round_021/science_plan.md)，[round022收束](../results/gaussian_memory/autonomous_research_loop/round_022/science_plan.md)（[报告](../results/gaussian_memory/native_sampling_scope1/report.md)） | O2–O6；仅新增C5评价条件 | H/L/U=1/40/7，H一地点；H与交互跨地点区间不可估，原全体G/P仍不确定；0新预测。 | 条件证据不足，非无效证明；保留L/U／零覆盖／代价／反例，无后继合同，不改阈值、换行／数据或重训。 |
+| [round019公共GS地址偏置](../results/gaussian_memory/autonomous_research_loop/round_019/science_plan.md)，[round020已收束](../results/gaussian_memory/autonomous_research_loop/round_020/science_plan.md)（[报告](../results/gaussian_memory/native_read_address_pe1/report.md)） | O2–O6；C4/C6 | 9×1000／6336新预测；A/P−0.05170%区间跨零，A/B及Native／Local联合用途未过筛；A/S范围单列。 | 关闭此接法及自动变体，无后继合同；共同后端差异与全部正负／支持／零覆盖／反例／成本保留，不重训、不称fresh。 |
+| [round018内容任务桥接](../results/gaussian_memory/autonomous_research_loop/round_018/science_plan.md) | O3–O6问题判断；C2/C3/C4，非实验 | 读行Gram由同w通用地址精确复现；同物理一阶内容由中心框架等预算换基。旧条件值储备未执行。 | 无后继合同，0新实验；一般寻址／值端用途不冒称PE，旧关闭与正负保留。 |
+| [round017相对仿射候选审查](../results/gaussian_memory/autonomous_research_loop/round_017/science_plan.md) | O6问题判断；C2/C4，非实验 | 核心逆／对偶乘积已有R50/R53；物理场直接定框架的任务桥接未成立，不据自抵消启动拟合。 | 无后继合同，0 GPU／训练／预测；不外推物理条件已试尽或总体结束。 |
+| [native_task_writer_pe1](../results/gaussian_memory/native_task_writer_pe1/report.md)，[round016已评价关闭](../results/gaussian_memory/autonomous_research_loop/round_016/science_plan.md) | O2–O6；C1/C2共享物理成场、C6原生任务梯度 | J/G对P主空间+1.5822%区间跨零，形成交互／Native净用途未立；训练拟合及开发raw／bias／AbsRel条件PE正证据、完整图代价、支持与反例保留。 | 关闭本原生任务成场PE家族及自动变体，无候选／后继；不证明零效应、不全局否决，旧决定不改。 |
 | [native_scene_exchange_pe1](../results/gaussian_memory/native_scene_exchange_pe1/report.md)，round013已评价关闭 | O2–O6；C3查询内消息图、C6匹配学习 | 两对原生块R／U×P/S/G及L／Native完整完成；主PE极小、反馈交互未立，Native空间退步；raw／偏差／AbsRel改善保留。 | 实质区别是临时图像→GS→图像回传；本家族结束自动变体，无后继，不外推全部GS-PE。 |
 | [native_feature_field_pe1](../results/gaussian_memory/native_feature_field_pe1/report.md)，round012已评价关闭 | O2–O6；C1/C2形成、C6来源优化 | 88×300、18×2000完成；源重构及Σ梯度成立，J/G对P+0.0857%不确定，PE／Native／形成交互均未支持候选。 | 关闭该source-only特征形成条件自动变体，保留共同feature／绑定正证据及全部反例，不晋升C/J或球形。 |
 | [native_pose_memory_pe1报告](../results/gaussian_memory/native_pose_memory_pe1/report.md)，round010已评价并关闭 | O2–O6；C5真实初值与C6位姿监督 | 主G−P +2.778 pp区间跨零；G/Native 27.083%/29.167%；训练范围适配和连续误差权衡保留。 | 开发净用途未达，结束单reader相机细化自动变体；直接算子有形式区别但本次无新合同，不补拟合或扩确认。 |

@@ -1,0 +1,81 @@
+"""Unique resource-admitted process manager; every stage contributes to one round budget."""
+import os,sys,time,json,fcntl,subprocess,signal,argparse
+from pathlib import Path
+ROOT=Path('/home/liwt/GRoPE');OUT=ROOT/'results/gaussian_memory/native_source_resolved_pe1';DATA=Path('/mnt/f70f6709-366e-49a0-861f-497645d98975/users/liwt/data/GRoPE/gaussian_memory/native_source_resolved_pe_v1');STOP=False
+def stop(*a):
+    global STOP;STOP=True
+def now():return __import__('datetime').datetime.now(__import__('datetime').timezone.utc).isoformat()
+def write(p,x):
+    p=Path(p);p.parent.mkdir(parents=True,exist_ok=True);q=p.with_name(p.name+'.tmp');q.write_text(json.dumps(x,indent=2)+'\n');q.replace(p)
+def read(p):return json.loads(Path(p).read_text())
+def gpus():
+    rows=[]
+    for line in subprocess.check_output(['nvidia-smi','--query-gpu=index,uuid,memory.used,memory.free,utilization.gpu','--format=csv,noheader,nounits'],text=True).splitlines():
+        i,u,m,f,v=[s.strip() for s in line.split(',')];rows.append(dict(index=int(i),uuid=u,used_MiB=int(m),free_MiB=int(f),util=int(v)))
+    apps={}
+    for line in subprocess.check_output(['nvidia-smi','--query-compute-apps=gpu_uuid,pid','--format=csv,noheader,nounits'],text=True).splitlines():
+        u,p=[s.strip() for s in line.split(',')];apps.setdefault(u,set()).add(int(p))
+    return rows,apps
+def main():
+    p=argparse.ArgumentParser();p.add_argument('phase',choices=['build','preflight','fits','cost']);a=p.parse_args();OUT.mkdir(exist_ok=True);DATA.mkdir(exist_ok=True);(OUT/'workers').mkdir(exist_ok=True);(OUT/'logs').mkdir(exist_ok=True);signal.signal(signal.SIGTERM,stop)
+    with (OUT/'pool.lock').open('a') as lock:
+        fcntl.flock(lock,fcntl.LOCK_EX|fcntl.LOCK_NB);assert all(w.get('actual_wait_returned') for w in [read(p) for p in (OUT/'workers').glob('*.json')]),'Old child not waited; inspect before any recovery'
+        jobs=[0] if a.phase=='build' else ([0] if a.phase in ('preflight','cost') else [(k,s) for s in (20261110,20261111,20261112) for k in ('F_P','F_S','F_G','M_P','M_G')]);active={};failed=[]
+        def complete(job):
+            if a.phase=='build':return (OUT/'build_complete.json').exists()
+            if a.phase=='preflight':return (OUT/'preflight.json').exists()
+            if a.phase=='cost':return (OUT/'actual_cost.json').exists()
+            return (OUT/'evaluation'/f'{job[0]}_{job[1]}.json').exists()
+        def training(job):
+            return a.phase=='fits' and not (OUT/'fits'/f'{job[0]}_{job[1]}_complete.json').exists()
+        try:
+            while True:
+                for name,w in list(active.items()):
+                    code=w['child'].poll();w['info'].update(elapsed_seconds=time.monotonic()-w['start'],exit_code=code)
+                    if code is not None:
+                        w['info'].update(exit_code=w['child'].wait(),actual_wait_returned=True,ended_utc=now());w['log'].close();del active[name]
+                        if code not in (0,75):failed.append(w['info'])
+                        
+                    write(OUT/'workers'/f'{name}.json',w['info'])
+                records=[read(p) for p in (OUT/'workers').glob('*.json')];seconds=sum(w['elapsed_seconds'] for w in records);used=sum(p.stat().st_size for p in DATA.rglob('*') if p.is_file());project=sum(p.stat().st_size for p in OUT.rglob('*') if p.is_file());avail=int(next(l.split()[1] for l in Path('/proc/meminfo').read_text().splitlines() if l.startswith('MemAvailable:')))*1024
+                halt=STOP or bool(failed) or seconds>18*3600-180 or used+256*2**20>8*2**30 or project+64*2**20>2**30
+                pending=[j for j in jobs if not complete(j) and not any(w['job']==j for w in active.values())];rows,apps=gpus()
+                policy=read(OUT/'cohost_policy.json') if (OUT/'cohost_policy.json').exists() else {};admissions=read(OUT/'cohost_admissions.json') if (OUT/'cohost_admissions.json').exists() else [];external_policy=read(OUT/'external_eval_policy.json') if (OUT/'external_eval_policy.json').exists() else {}
+                if not halt:
+                    for g in rows:
+                        if not pending:break
+                        own=[w for w in active.values() if w['info']['gpu_uuid']==g['uuid']];ownpids={w['info']['pid'] for w in own};foreign=apps.get(g['uuid'],set())-ownpids;cohost=False
+                        allowed=set(external_policy.get('allowed_external_PIDs',{}).get(g['uuid'],[]));external_share=bool(a.phase=='fits' and external_policy.get('enabled') and not own and foreign and foreign<=allowed and not training(pending[0]) and g['used_MiB']<=external_policy.get('maximum_external_used_MiB',12288) and g['free_MiB']>=external_policy.get('minimum_admission_free_MiB',36864) and g['util']<=35)
+                        if avail<20*2**30 or (foreign and not external_share):continue
+                        if not own:
+                            if not external_share and (g['used_MiB']>256 or g['free_MiB']<24000 or g['util']>2 or apps.get(g['uuid'])):continue
+                        else:
+                            # One measured low-memory evaluator plus one new formal
+                            # fit only. No pair of30GiB training caches on a card.
+                            if not (a.phase=='fits' and policy.get('enabled') and len(own)==1 and not training(own[0]['job']) and training(pending[0]) and g['free_MiB']>=policy.get('minimum_free_MiB',36864) and len(admissions)<policy.get('maximum_total_admissions',0)):continue
+                            cohost=True
+                        j=pending.pop(0);name=f'{a.phase}_{j}_{time.time_ns()}'.replace(' ','');env=dict(os.environ,CUDA_VISIBLE_DEVICES=g['uuid'],MKL_THREADING_LAYER='GNU',OMP_NUM_THREADS='2',MKL_NUM_THREADS='2',OPENBLAS_NUM_THREADS='2',PATH='/home/liwt/miniColmap/.venv/bin:/usr/local/cuda-12.4/bin:'+os.environ['PATH'],CUDA_HOME='/usr/local/cuda-12.4',TORCH_CUDA_ARCH_LIST='8.6',TORCH_EXTENSIONS_DIR='/mnt/f70f6709-366e-49a0-861f-497645d98975/users/liwt/data/GRoPE/gaussian_memory/torch_extensions',MAX_JOBS='2');cmd=[sys.executable,'-u','-m','experiments.native_source_resolved_build','--name',name] if a.phase=='build' else [sys.executable,'-u','-m','experiments.native_source_resolved_run',a.phase,'--name',name]
+                        if a.phase=='fits':cmd+=['--kind',j[0],'--seed',str(j[1])]
+                        if external_share:env['GROPE_EVAL_MEMORY_CAP_MIB']=str(external_policy.get('GPU_allocator_cap_MiB',8192))
+                        if a.phase=='cost':cmd=[sys.executable,'-u','-m','experiments.native_source_resolved_cost','--name',name]
+                        lf=(OUT/'logs'/f'{name}.log').open('a');t=time.monotonic();child=subprocess.Popen(cmd,cwd=ROOT,env=env,stdout=lf,stderr=subprocess.STDOUT);info=dict(name=name,phase=a.phase,job=j,pid=child.pid,GPU_index=g['index'],gpu_uuid=g['uuid'],started_utc=now(),elapsed_seconds=0.,exit_code=None,admission=g,cohost_with_own_evaluator=cohost,external_eval_share=external_share,external_share_policy=external_policy if external_share else None,log=str(OUT/'logs'/f'{name}.log'));active[name]=dict(child=child,log=lf,info=info,start=t,job=j);write(OUT/'workers'/f'{name}.json',info);print(dict(launched=a.phase,job=j,pid=child.pid,GPU_index=g['index'],cohost=cohost,external_eval_share=external_share),flush=True)
+                        if cohost:admissions.append(dict(utc=now(),worker=name,job=j,GPU_index=g['index'],existing_own_evaluator_PIDs=list(ownpids),measured_eval_used_MiB=g['used_MiB'],free_before_MiB=g['free_MiB'],policy=policy));write(OUT/'cohost_admissions.json',admissions)
+                for w in active.values():
+                    g=next(g for g in rows if g['uuid']==w['info']['gpu_uuid'])
+                    owned={x['info']['pid'] for x in active.values() if x['info']['gpu_uuid']==g['uuid']};foreign=apps.get(g['uuid'],set())-owned;backoff=w['info'].get('cohost_with_own_evaluator') and list(w['job']) in policy.get('stop_jobs',[])
+                    shared=w['info'].get('external_eval_share',False);allowed=set(external_policy.get('allowed_external_PIDs',{}).get(g['uuid'],[]));foreign_conflict=bool(foreign and not (shared and external_policy.get('enabled') and foreign<=allowed));floor=external_policy.get('protected_free_floor_MiB',24576) if shared else 6144
+                    if shared and g['util']>=90:w.setdefault('high_util_since',time.monotonic())
+                    else:w.pop('high_util_since',None)
+                    contention=shared and time.monotonic()-w.get('high_util_since',time.monotonic())>=30
+                    if (halt or g['free_MiB']<floor or foreign_conflict or backoff or contention) and not w.get('signalled'):w['info']['stop_reason']='external_PID_arrived' if foreign_conflict else ('external_eval_share_headroom_or_contention' if shared and (g['free_MiB']<floor or contention) else ('cohost_budget_backoff' if backoff else 'resource_or_requested_stop'));w['child'].send_signal(signal.SIGTERM);w['signalled']=True
+                write(OUT/'queue_status.json',dict(utc=now(),phase=a.phase,manager_pid=os.getpid(),active=[w['info'] for w in active.values()],pending=pending,failed=failed,GPU_worker_seconds=seconds,DATA_bytes=used,project_bytes=project,RAM_available_bytes=avail,prepared_pairs=len(list((OUT/'prepared_pairs').glob('*.json'))),no_default_two_worker_cap=True))
+                if not active and (halt or not pending):break
+                time.sleep(2)
+        finally:
+            for w in active.values():
+                if w['child'].poll() is None:w['child'].send_signal(signal.SIGTERM)
+            for name,w in active.items():
+                code=w['child'].wait();w['info'].update(elapsed_seconds=time.monotonic()-w['start'],exit_code=code,actual_wait_returned=True,ended_utc=now());w['log'].close();write(OUT/'workers'/f'{name}.json',w['info'])
+        ok=not failed and not halt and all(complete(j) for j in jobs);write(OUT/f'pool_{a.phase}_complete.json',dict(complete=ok,actual_children_all_waited=True,ended_utc=now(),failed=failed));print(dict(complete=ok,phase=a.phase),flush=True)
+        if not ok:raise SystemExit(75)
+if __name__=='__main__':main()

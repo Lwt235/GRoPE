@@ -78,14 +78,14 @@ def summarize(data):
                             aa[method]=a
                             with warnings.catch_warnings():
                                 warnings.simplefilter('ignore',RuntimeWarning);summaries[key+'/'+method]=dict(mean=float(np.nanmean(a)) if np.isfinite(a).any() else None,per_seed=np.nanmean(a,1).tolist(),per_place=np.nanmean(a,0).tolist())
-                        if region.startswith('roi_new_render_'):continue
+                        if region.startswith('roi_new_render_') or metric=='log_bias':continue
                         with warnings.catch_warnings():
                             warnings.simplefilter('ignore',RuntimeWarning)
                             for a,b in pairs:
                                 if np.isfinite(aa[a]).any() and np.isfinite(aa[b]).any():comparisons[key+'/'+a+'-'+b]=contrast(aa[a],aa[b],indices)
                             I=(aa['J_P']-aa['J_G'])-(aa['C_P']-aa['C_G']);ss,pp=indices;boot=np.nanmean(I[ss,pp],(1,2))
                             interactions[key]=dict(mean_absolute=float(np.nanmean(I)) if np.isfinite(I).any() else None,interval95_absolute=np.nanpercentile(boot,[2.5,97.5]).tolist(),per_seed_absolute=np.nanmean(I,1).tolist(),per_place_absolute=np.nanmean(I,0).tolist(),positive_favors_geometry_formation_PE=True)
-    summary=json_finite(dict(summaries=summaries,comparisons=comparisons,interactions=interactions,bootstrap=dict(draws=5000,seed=20261113,unit='paired seeds and places; queries averaged within place',all_data_used=True),effect='Total training-chain effect; formed fields and native receiver can differ between arms. Not identical-field direct PE causality.'))
+    summary=json_finite(dict(summaries=summaries,comparisons=comparisons,interactions=interactions,bootstrap=dict(draws=5000,seed=20261113,unit='paired seeds and places; queries averaged within place',all_data_used=True),signed_log_bias='Signed means/per-seed/per-place and raw per-prediction values retained; no error-reduction percent on signed bias.',effect='Total training-chain effect; formed fields and native receiver can differ between arms. Not identical-field direct PE causality.'))
     d.write(d.OUT/'scoring/summary.json',summary);primary='development12/fit/missing/roi/centered_log_mse';checks={}
     for pair in [a+'-'+b for a,b in pairs]:
         v=summary['comparisons'][primary+'/'+pair];checks[pair]=dict(practical_supported=v['reduction_percent']>=1 and v['interval95_percent'][0]>0 and all(x>0 for x in v['per_seed_percent']),**v)

@@ -42,9 +42,9 @@ def resource(admission=False):
 
 def charge(worker,phase,**counts):journal(OUT/'calls'/f'{worker}.jsonl',dict(utc=now(),phase=phase,**counts))
 
-@functools.lru_cache(6)
+@functools.lru_cache(32)
 def basefield(rid):return load(old.scene_path(rid))
-@functools.lru_cache(24)
+@functools.lru_cache(256)
 def sample(rid,q,c):return dict(patches=load(old.patch_path(rid,q,c))['patches'],query=load(old.query_path(rid,q)),hw=(448,448),condition=c)
 
 def initialize():

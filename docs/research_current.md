@@ -1,7 +1,7 @@
 # GRoPE：将高斯参数化转为 Transformer 位置编码
 
 <!-- native_scene_exchange_pe1 implementation status -->
-**round015实施中（2026-11-13），`native_task_writer_pe1`固定18拟合已启动。** 原生任务到共享物理成场的有限梯度／完整恢复预检已通过；C/J×P/S/G按唯一合同执行，尚无完整效果或fresh结论。[唯一合同](../results/gaussian_memory/autonomous_research_loop/round_015/science_plan.md) · [实时实施状态](../results/gaussian_memory/native_task_writer_pe1/queue_status.json) · [有限预检](../results/gaussian_memory/native_task_writer_pe1/preflight.json)。O2–O6保持，C1/C2/C6改变成场梯度，C3/C4复用实际渲染与同信息完整普通Σ，C5仍临时；全frame/global/DPT学习不是新贡献。旧接口启动失败与本次身份恢复独立留账，既有关闭决定和全部历史正负证据保留。
+**round028实施中（2026-11-14）。** `native_source_resolved_pe1`已完成训练来源PCA255、44场F/M绑定及五组真实梯度／完整恢复检查，唯一队列开始15个配对fit；当前结果尚未形成。[唯一合同](../results/gaussian_memory/autonomous_research_loop/round_028/science_plan.md) · [实际队列](../results/gaussian_memory/native_source_resolved_pe1/queue_status.json)。仅C2来源表示实质改变，O2–O6及同信息强中心保持；[round027关闭决定](../results/gaussian_memory/autonomous_research_loop/round_027/science_plan.md)、旧完整均值P/G、L、Native参照与全部正负／反例不改。全部used，无fresh或总体成功。
 
 **round013科学取舍完成（2026-11-13）：关闭 `native_scene_exchange_pe1` 两块工作副本 PE 家族及自动变体，无后继实施合同。** 主PE与反馈交互未立，Native主空间误差明确退步；共同raw／偏差／AbsRel正证据及L控制、零覆盖和反例分别保留。[唯一科学判断](../results/gaussian_memory/autonomous_research_loop/round_013/science_plan.md) · [完整结果](../results/gaussian_memory/native_scene_exchange_pe1/report.md) · [实现交接](../results/gaussian_memory/native_scene_exchange_pe1/implementation_handoff.json)。O2–O6目标保持，C3/C6已检验、C4同信息强中心；原场不写query。整体未达、未暂停、无外部阻塞或fresh候选；不派发Sol变体。
 <!-- /native_scene_exchange_pe1 implementation status -->
