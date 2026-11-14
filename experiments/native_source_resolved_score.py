@@ -1,4 +1,5 @@
 """Independent final-coordinate PCK/EPE, paired-place/seed outcomes and full failures."""
+import os
 import json,time,math,collections,resource
 from pathlib import Path
 import numpy as np
@@ -151,5 +152,5 @@ def score():
                     e=np.asarray(errors);tails.append(dict(cohort=cohort,query_set=qset,kind=kind,seed=seed,labelled_points=len(e),model_failure_infinite_points=int(np.isinf(e).sum()),pooled_point_tail_is_descriptive_not_primary_equal_place_estimator=True,percentiles_pixels={str(p):(float(np.percentile(e,p)) if len(e) and np.isfinite(e).all() else None) for p in (50,90,95,99)},maximum_pixels=float(e.max()) if len(e) else None))
     d.write(d.OUT/'scoring/summary.json',clean(summary));d.write(d.OUT/'scoring/viewpairs.json',clean(rows));d.write(d.OUT/'scoring/query.json',clean(queryrows));d.write(d.OUT/'scoring/source.json',clean(sourcerows));d.write(d.OUT/'scoring/place.json',clean(place));d.write(d.OUT/'scoring/pooled_point_tails.json',clean(tails))
     d.write(d.OUT/'scoring/label_coverage_cohorts.json',d.read(d.prior.OUT/'scoring/label_coverage_cohorts.json'));d.write(d.OUT/'scoring/coverage.json',clean(coverage));d.write(d.OUT/'scoring/support_strata.json',clean(strata));d.write(d.OUT/'scoring/all_pairwise_counterexamples.json',clean(counterexamples))
-    d.write(d.OUT/'CPU_scoring_runtime.json',dict(complete=True,wall_seconds=time.monotonic()-t,peak_RSS_bytes=resource.getrusage(resource.RUSAGE_SELF).ru_maxrss*1024,CUDA_initialized=torch.cuda.is_initialized(),new_model_calls=0));print(json.dumps(clean(dict(primary=primary,flags=flags)),indent=2),flush=True)
+    d.write(d.OUT/'CPU_scoring_runtime.json',dict(complete=True,PID=os.getpid(),wall_seconds=time.monotonic()-t,peak_RSS_bytes=resource.getrusage(resource.RUSAGE_SELF).ru_maxrss*1024,CUDA_initialized=torch.cuda.is_initialized(),new_model_calls=0));print(json.dumps(clean(dict(primary=primary,flags=flags)),indent=2),flush=True)
 if __name__=='__main__':score()

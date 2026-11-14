@@ -1,4 +1,5 @@
 """Round028 delivery from terminal workers and exported evidence; no model calls."""
+import os
 import json,collections,time,resource
 from pathlib import Path
 from experiments import native_source_resolved_data as d
@@ -82,13 +83,15 @@ def main():
 
 ## 主要事实及范围
 
+主PE F/G−F/P为{estimate(P['F_G-F_P'])}pp，未通过预定筛；F/P−M/P表示效应与PE交互的区间均跨零。相对Native4的有条件共同适配收益保留，但对旧完整均值P和L的净用途未建立；全部数据used，无独立确认候选。
+
 {primary}
 {absolute}
 主PE F_G−F_P为{estimate(P['F_G-F_P'])}pp；表示F_P−M_P为{estimate(P['F_P-M_P'])}pp；表示×PE交互为{estimate(I)}pp。原合同开发筛：F/G PE={flags['F_G']['PE_increment']}、对旧P/L/Native4净用途={flags['F_G']['net_over_old_full_mean_P_L_Native4']}、候选={flags['F_G']['development_candidate']}；F/S次要候选={flags['F_S']['development_candidate']}。预定规则是PE均值≥1pp且95%下界>0，并对旧完整P、L、Native4净差区间均为正才形成开发候选；F/S同规则仅属次要，不能挽救G主比较。仅表示或连续误差改善保留内容用途，不替代O6；候选未立时结束此固定预算接法，后续科学取舍仍交原Astra，不追加扫描。标记不替代材料性尾部／成本权衡；没有fresh确认或总体目标达成。
 
-共同内容表示、同表示PE及原生净用途分列。F/M是同信息均值／质量匹配下的学习链总效果，不是固定同一接收器的直接因果干预，也不能唯一归为同物理表面关联；F/G与M/G各自学习。旧P/G/L使用完整1024维内容而非新PCA初值，是保留较强完整信息的研究参照，不冒称严格新初始化配对。Native4没有GS来源sensor/pose特权，净用途只限该条件。
+共同内容表示、同表示PE及原生净用途分列。F/M是共同均值／质量匹配、F额外保留来源残差的学习链总效果，不是固定同一接收器的直接因果干预，也不能唯一归为同物理表面关联；F/G与M/G各自学习。旧P/G/L使用完整1024维内容而非新PCA初值，是保留较强完整信息的研究参照，不冒称严格新初始化配对。Native4没有GS来源sensor/pose特权，净用途只限该条件。
 
-![主结果](figures/primary.png)
+![主结果]({d.OUT}/figures/primary.png)
 
 主估计每锚/query对有效点先算PCK@8（448px），再锚、query、地点等权；无标签端点undefined，模型/初始化失败保留PCK0、EPE∞。5000次配对交叉重采样地点与种子，seed20261114，共同索引；不把点或view对当独立地点。主连续EPE差{estimate(pe['EPE'])}px、每view对95%尾部差{estimate(pe['EPE95'])}px，负值有利F/G，不能替代主PCK。所有dev/train、原/other/all8、原train12/added20、逐place/seed/query/anchor和尾部见[完整数表](report_tables.md)、[summary](scoring/summary.json)、[viewpairs](scoring/viewpairs.json)、[query](scoring/query.json)、[source](scoring/source.json)、[pooled tails](scoring/pooled_point_tails.json)。other/added不是fresh。
 
@@ -112,13 +115,13 @@ def main():
 
 该覆盖表只连接不变的原label清单，不重复旧像素指标计算。
 
-![覆盖](figures/coverage.png)
+![覆盖]({d.OUT}/figures/coverage.png)
 
 {wt}
 全部方向的view对差与最大反例未截断地保留于[清单](scoring/all_pairwise_counterexamples.json)。图包括固定首开发例及最大开发F/G−F/P、F/P−M/P、F/G−L反例；无图像排除或视觉调阈值。sensor投影、遮挡与场景边界不等于独立真实物理轨迹。
 
-![坐标与反例](figures/tracking_cases.png)
-![全部训练轨迹](figures/training.png)
+![坐标与反例]({d.OUT}/figures/tracking_cases.png)
+![全部训练轨迹]({d.OUT}/figures/training.png)
 
 图已实际查看，具体观察见[figure_review](figure_review.json)。新21120预测由独立NumPy计算、Torch FP64复核PCK/EPE/median/tail／失败／无标签，最大绝对差{s['independent_NumPy_Torch_max_difference']:.12g}，覆盖{s['independent_NumPy_Torch_records']}记录；旧12672训练参照与2816Native评分直接连接原独立审计结果，没有重算旧像素指标。
 
@@ -129,24 +132,24 @@ def main():
 
 唯一成本案例fit00/a0/q2、首seed，从既有448 RGB张量重新DINO编码，真实source native前缀＋DPT＋camera/depth/sensor标定；query重新编码、初始完整native query＋camera、真实GS raster和字段、第二完整带记忆native query＋DPT＋TrackHead。2次DINO、1source frame、1初始化query、5适配query／5四迭代TrackHead、1raster；无新增Native2/4/P/G/L成本调用。共享阶段执行一次并向各适用pipeline计账；F/M状态各一次加载、PCA／binding／源prefix／query／模型与adapter冷加载单列。1/4/8摊销包括每场一次binding及载入、native anchor形成，训练共同PCA全局开销单列，原GS形成另列，绝不当作免费。因此表中摊销是已存在原场／来源token条件下的新形成加混合锚与完整query成本，不是完整raw RGB→状态→query的总延迟。
 
-固定顺序F/P,F/S,F/G,M/P,M/G，首次TrackHead/kernel初始化与warm缓存不能单独辨识；只一个案例，不推断稳定态速度排序或独立cold-first-GS延迟。成本卡准入独占、其他卡现场见[cost_dispatch](cost_dispatch.json)；不是服务器隔离benchmark。原raw图像decode/resize、sensor获取不在448张量起点内；这里的重新编码不是fresh研究数据。旧Native2/4/P/G/L成本只作为带原范围的历史参考，不是与新五组严格同时的延迟比较。
+模型／输入的cold标签仅指新进程载入，OS页缓存和驱动／kernel缓存未清空，不是uncached磁盘／驱动启动benchmark。固定顺序F/P,F/S,F/G,M/P,M/G，首次TrackHead/kernel初始化与warm缓存不能单独辨识；只一个案例，不推断稳定态速度排序或独立cold-first-GS延迟。成本卡准入独占、其他卡现场见[cost_dispatch](cost_dispatch.json)；不是服务器隔离benchmark。原raw图像decode/resize、sensor获取不在448张量起点内；这里的重新编码不是fresh研究数据。旧Native2/4/P/G/L成本只作为带原范围的历史参考，不是与新五组严格同时的延迟比较。
 
 单锚依赖逻辑KV {b['single_anchor_native_KV']/2**20:.3f}MiB、实际底层QKV backing {b['single_anchor_KV_unique_storage_including_strided_QKV_base']/2**20:.3f}MiB，DPT {b['single_anchor_Track_DPT']/2**20:.3f}MiB，source camera KV backing {b['source_camera_KV_unique_storage']/2**20:.6f}MiB与公制对齐常量{b['source_metric_alignment']}bytes也必须保留；F/M内容每份约{b['source_resolved_F_content']/2**20:.3f}MiB，全局PCA {b['shared_global_PCA']/2**20:.3f}MiB，原几何／源中心依赖{(b['original_GS_field']+b['original_source_GEOMETRY_fields'])/2**20:.3f}MiB。原完整均值f在新成本read中去除，不作模型输入；存量原场文件仍含该未使用均值，不能把其几何张量字节当作共享文件物理体积。以上计数是一锚形成后的运行态张量，不是新落盘的纯GS历史：native prefix/DPT实际由只读source-DINO cache重建，未写新的prefix文件；660依赖索引补全该源cache路径。[actual_cost](actual_cost.json)另列原source-DINO/RGB/sensor/场文件的实际路径和字节。已有重建输入的存储／形成不免费。全局adapter参数约{b['global_adapter_FP32_parameters']/2**20:.3f}MiB，完整Adam是训练恢复依赖而非部署必要项；全局native权重和query临时激活另列，不能由4MiB内容文件称整个混合历史已经压缩成功。
 
 ## 实现、恢复、实际资源
 
-五个真实预检query/backward的source/位置输出／两LoRA梯度有限非零，native参数与源prefix只读；一次F/P完整参数＋Adam＋CPU/CUDA RNG＋1000sampler精确恢复。[preflight](preflight.json)记录所有实际梯度和有限精度差，未重复旧原生禁用记忆／空支持检查，引用其不变接口的[原验证](../native_track_memory_pe1/preflight.json)。最初CPU在受限文件系统写DATA失败exit1、0GPU/模型调用；随后使用已授权host环境正常构建，记录[startup001](engineering_revisions/startup001.json)。GPU4随后出现外部高利用率任务，F/P评价保存34marker、M/P训练保存完整step8后actualwait75。旧FIFO同卡补位逻辑被队首待恢复评价阻住；版本化修复为按每卡选择兼容pending项，以及同一训一评容量的双向补位。仅SIGTERM自有manager114384，旧owner22661 actualexit75、所有child实际wait；F/S已133评价、F/G204评价、M/Gstep139一并保存。新唯一manager89284/owner24252按完整状态只补缺失；恢复时GPU6也已有外部任务，未当空卡使用。M/P从9继续、F/P从第35个未提交case继续，不重做有效训练／已提交预测；所有加载、恢复与争用均进worker账。[head_of_line002](engineering_revisions/head_of_line002.json)保留代码前版本／身份和实际退出。GPU4两次短空隙又使恢复任务仅前进到M/G140、141就礼让，所有冷载计入预算。随后不再刷新正常6/7任务，增加CPU-only guard持续观测GPU4，外部活动后稳定空闲120秒才在未来worker导入torch／CUDA／大模型前放行；冷却内CPU快速exit75、0模型调用记录保留，pool墙钟仍保守计入预算，详见[admission_guard003](engineering_revisions/admission_guard003.json)。已知自有正常阶段切换不机械重置等待；新外部活动才重置该卡。guard没有作业派发权，fits完成自动终止。后来实际发现短外部PID可在5秒观察间隔内出现后消失，未来worker的pre-CUDA准入遂同时读取同卡external_PID_arrived的actualwait收据，以最近退出为120秒冷却下界，覆盖GPU7同类事件；未重启manager89284或中断正常worker，[foreign_receipt007](engineering_revisions/foreign_receipt007.json)保留代码版本。一次16.7秒只读利用率观察中，GPU6连续5–84%、均值26.25%，两worker各用约1.54／1.68个CPU核、物理磁盘读取0、总写入约200KiB；短时低util包含主机发射／同步与小算子突发，未用额外模型或benchmark细分其占比，也未发现足以安全改变live数值路径的明显优化，见[utilization006](engineering_revisions/utilization006_live_observation.json)。其余普通失败与礼让以[worker](workers)、[工程记录](engineering_revisions)实际发生为准，不把失败预检记成功。
+五个真实预检query/backward的source/位置输出／两LoRA梯度有限非零，native参数与源prefix只读；一次F/P完整参数＋Adam＋CPU/CUDA RNG＋1000sampler精确恢复。[preflight](preflight.json)记录所有实际梯度和有限精度差，未重复旧原生禁用记忆／空支持检查，引用其不变接口的[原验证](../native_track_memory_pe1/preflight.json)。最初CPU在受限文件系统写DATA失败exit1、0GPU/模型调用；随后使用已授权host环境正常构建，记录[startup001](engineering_revisions/startup001.json)。GPU4随后出现外部高利用率任务，F/P评价保存34marker、M/P训练保存完整step8后actualwait75。旧FIFO同卡补位逻辑被队首待恢复评价阻住；版本化修复为按每卡选择兼容pending项，以及同一训一评容量的双向补位。仅SIGTERM自有manager114384，旧owner22661 actualexit75、所有child实际wait；F/S已133评价、F/G204评价、M/Gstep139一并保存。新唯一manager89284/owner24252按完整状态只补缺失；恢复时GPU6也已有外部任务，未当空卡使用。M/P从9继续、F/P从第35个未提交case继续，不重做有效训练／已提交预测；所有加载、恢复与争用均进worker账。[head_of_line002](engineering_revisions/head_of_line002.json)保留代码前版本／身份和实际退出。GPU4两次短空隙又使恢复任务仅前进到M/G140、141就礼让，所有冷载计入预算。随后不再刷新正常6/7任务，增加CPU-only guard持续观测GPU4，外部活动后稳定空闲120秒才在未来worker导入torch／CUDA／大模型前放行；冷却内CPU快速exit75、0模型调用记录保留，pool墙钟仍保守计入预算，详见[admission_guard003](engineering_revisions/admission_guard003.json)。已知自有正常阶段切换不机械重置等待；新外部活动才重置该卡。guard没有作业派发权，fits完成自动终止。后来实际发现短外部PID可在5秒观察间隔内出现后消失，未来worker的pre-CUDA准入遂同时读取同卡external_PID_arrived的actualwait收据，以最近退出为120秒冷却下界，覆盖GPU7同类事件，并持续观测全部物理卡的外部活动；未重启manager89284或中断正常worker，[foreign_receipt007](engineering_revisions/foreign_receipt007.json)保留代码版本。一次16.7秒只读利用率观察中，GPU6连续5–84%、均值26.25%，两worker各用约1.54／1.68个CPU核、物理磁盘读取0、总写入约200KiB；短时低util包含主机发射／同步与小算子突发，未用额外模型或benchmark细分其占比，也未发现足以安全改变live数值路径的明显优化，见[utilization006](engineering_revisions/utilization006_live_observation.json)。其余普通失败与礼让以[worker](workers)、[工程记录](engineering_revisions)实际发生为准，不把失败预检记成功。
 
-唯一动态队列按实时CUDA/PID、显存／RAM／空间准入所有安全空卡，无默认双卡上限；foreign PID到达只礼让本轮进程，在当前有效更新／case原子提交后保存完整checkpoint并actualwait，永久final/已提交marker不重复。一个已final的约5.7GB evaluator可与独立待训约29.4GB fit在有余量的自有安全卡共存，两份训练缓存不共卡；不以余显存冒称他人高利用率卡空闲。所有外部工作和旧结果保持，旧GLIBC不动、无系统安装／下载。
+唯一动态队列按实时CUDA/PID、显存／RAM／空间准入所有安全空卡，无默认双卡上限；foreign PID到达只礼让本轮进程，在当前有效更新／case原子提交后保存完整checkpoint并actualwait，永久final/已提交marker不重复。一个已final的约5.7GB evaluator可与独立待训约29.4GB fit在有余量的自有安全卡共存，两份训练缓存不共卡；不以余显存冒称他人高利用率卡空闲。运行中GPU4曾暂为两个自有evaluator，静态一训二评估计40813/48671MiB、余7858MiB，比当前6144MiB底线多1714MiB；但已加载manager没有安全动态三进程接口，未为改并发而重启／打断有效工作，也未额外benchmark。此为本次在线调度选择，不是硬件装不下或默认双卡限制，[concurrency008](engineering_revisions/concurrency008_live_decision.json)保留判断。后来0–3卡实际释放并连续安全空闲超过200秒，原cost单例先在GPU4完成实际27.651857worker秒、worker130826与owner70765均actualexit0；随后仅对已训练完成的两个evaluator在case边界SIGTERM，旧69822／118942实际wait75，同一89284改派GPU0／9403与GPU1／9405，从各自682／474已提交case之后续接，原GPU6／111661和GPU7／119327两次训练未中断。没有新增拟合、评价重算或benchmark；余下空卡没有独立既定任务便不造工作，[eval_redistribution009](engineering_revisions/eval_redistribution009.json)保留完整实际收据。其后6/7又出现新外部任务，末两M模型评价分别在738／568已提交case处安全退出75，15份step1000永久final不变；当时全8卡均为外部高负载，原唯一manager等待安全资源，GPUworker计时保持不变。等待中先在CPU导出并实际查看完整训练图，后续仍只补缺失，详见[foreign_all_cards011](engineering_revisions/foreign_all_cards011.json)及实际worker收据。所有外部工作和旧结果保持，旧GLIBC不动、无系统安装／下载。
 
-总GPUworker **{r['GPU_worker_hours']:.6f}h /18h**，含加载、PCA／绑定、失败、预检、恢复、缓存重建、完整训练／评价／成本，所有{r['worker_count']}子worker实际wait返回。新DATA最终{r['DATA_final_bytes']/2**30:.4f}GiB、含并发原子暂存保守峰{r['DATA_peak_conservative_bytes']/2**30:.4f}GiB /8GiB；项目含源码最终{r['project_final_bytes']/2**30:.4f}GiB、保守峰{r['project_peak_conservative_bytes']/2**30:.4f}GiB /1GiB。完整Adam checkpoint最大{r['full_Adam_checkpoint_max_bytes']/2**20:.3f}MiB，15永久final保留，无自有RAM文件系统暂存或隐藏副本。失败worker未采全峰值明记unknown。[完整调用／资源账](runtime_budget_calls.json)含PID/卡/实际wait、checkpoint反传重计算、恢复和唯一更新；CPU评分／图／交付实际资源另列。最终终端退出确认见[actual_terminal_confirmation](actual_terminal_confirmation.json)。
+总GPUworker **{r['GPU_worker_hours']:.6f}h /18h**，含加载、PCA／绑定、失败、预检、恢复、缓存重建、完整训练／评价／成本，所有{r['worker_count']}子worker实际wait返回。新DATA最终{r['DATA_final_bytes']/2**30:.4f}GiB、含并发原子暂存保守峰{r['DATA_peak_conservative_bytes']/2**30:.4f}GiB /8GiB；报告写出时项目含源码{r['project_final_bytes']/2**30:.4f}GiB、保守峰{r['project_peak_conservative_bytes']/2**30:.4f}GiB /1GiB。完整Adam checkpoint最大{r['full_Adam_checkpoint_max_bytes']/2**20:.3f}MiB，15永久final保留，无自有RAM文件系统暂存或隐藏副本。失败worker未采全峰值明记unknown。[完整调用／资源账](runtime_budget_calls.json)含PID/卡/实际wait、checkpoint反传重计算、恢复和唯一更新；CPU评分／图／交付实际资源另列（[评分](CPU_scoring_runtime.json)、[图末次](CPU_figure_runtime.json)，先前排版导出时间另存pass1／pass2与early记录）；其PID为sandbox进程空间，评分host PID35827另行观测，不能混作host PID2。封存后的项目总字节含manifest／handoff自身，见完整资源账。476次准入延后在torch/CUDA导入前快速退出、0模型调用，其pool墙钟仍保守计入上述预算。最终终端退出确认见[actual_terminal_confirmation](actual_terminal_confirmation.json)。
 
 ## 大纲与交回边界
 
-O2/O3公共粗GS、O4/O5真实多query读取和O6同信息强中心比较保持；仅C2逐来源表示实质改变，C1/C3/C4/C5/C6匹配复用。PCA255、2048×1024、静态四源、混合原生锚前缀、来源sensor/pose特权及旧有限标签是实施选择。round027旧完整均值家族关闭、历史区域内容K证据／R替换未决、depth/pose/writer/address等正负与反例不改；本轮不证明准确物理Σ、纯GS替代历史、一般PE有效／无效、fresh或总体成功。只有本合同事实交主→原Astra作集中科学取舍，不自选后继或追加训练。
+O2/O3公共粗GS、O4/O5真实多query读取和O6同信息强中心比较保持；仅C2逐来源表示实质改变，C1/C3/C4/C5/C6匹配复用。PCA255、2048×1024、静态四源、混合原生锚前缀、来源sensor/pose特权及旧有限标签是实施选择。round027旧完整均值家族关闭、历史区域内容K证据／R替换未决、depth/pose/writer/address等正负与反例不改；round026旧manager停止触发源unknown及旧成本单例固定顺序边界沿原报告保留，没有追认原因或额外复测。本轮不证明准确物理Σ、纯GS替代历史、一般PE有效／无效、fresh或总体成功。只有本合同事实交主→原Astra作集中科学取舍，不自选后继或追加训练。
 '''
     (d.OUT/'report.md').write_text(report);living(s)
-    d.write(d.OUT/'CPU_delivery_runtime.json',dict(complete=True,wall_seconds=time.monotonic()-start,peak_RSS_bytes=resource.getrusage(resource.RUSAGE_SELF).ru_maxrss*1024,new_model_calls=0))
+    d.write(d.OUT/'CPU_delivery_runtime.json',dict(complete=True,PID=os.getpid(),wall_seconds=time.monotonic()-start,peak_RSS_bytes=resource.getrusage(resource.RUSAGE_SELF).ru_maxrss*1024,new_model_calls=0))
     handoff=dict(round=28,experiment='native_source_resolved_pe1',status='completed_ready_for_original_Astra_assessment',authoritative_science_plan=dict(path=str(d.SCIENCE),sha256=d.SCIENCE_SHA),report=dict(path=str(d.OUT/'report.md'),sha256=d.sha(d.OUT/'report.md')),artifacts=str(d.OUT/'artifact_manifest.json'),summary=str(d.OUT/'scoring/summary.json'),tables=str(d.OUT/'report_tables.md'),runtime_budget=str(d.OUT/'runtime_budget_calls.json'),actual_cost=str(d.OUT/'actual_cost.json'),figure_review=str(d.OUT/'figure_review.json'),actual=dict(fits=15,formal_updates=15000,new_predictions=21120,inherited_trained_references=12672,inherited_native_references=2816,GPU_worker_hours=r['GPU_worker_hours'],all_GPU_children_actual_waited=True),primary_FG_minus_FP=P['F_G-F_P'],representation_FP_minus_MP=P['F_P-M_P'],PE_interaction=I,development_flags=flags,unresolved_material_issues=[],limits=['All used development, no fresh confirmation','FP16/BF16 F/M initial rounding disclosed: fixed preflight coordinate max4.655px/RMS1.051px, no bitwise initial-output claim','Inherited old full mean P/G/L are stronger full-content references, not new PCA initialization-paired controls','Sensor/pose labels and source privilege, sparse/zero coverage retained','Mixed native source anchor plus GS, no pure GS history replacement claim','One fixed-order prepared448-RGB cost case; old reference cost timings inherited, no matched steady-state benchmark'],roles=dict(task='/root/research_implementation_sol_recovery',original_creation='gpt-6.1-sol/high',backend_effective_unknown=True,Fast_requested_or_verified=False,main_goal_state_events_modified=False),no_successor_started=True,scientific_disposition_reserved_for_original_Astra=True,completed_utc=d.now())
     d.write(d.OUT/'implementation_handoff.json',handoff);print(json.dumps(dict(report=handoff['report'],primary=handoff['primary_FG_minus_FP'],GPU_worker_hours=r['GPU_worker_hours'])),flush=True)
 if __name__=='__main__':main()

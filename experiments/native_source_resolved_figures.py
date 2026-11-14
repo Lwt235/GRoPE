@@ -1,4 +1,5 @@
 """Finite report figures from already exported coordinates and score tables."""
+import os
 import json,time,resource,collections
 import numpy as np
 import torch
@@ -8,13 +9,18 @@ import matplotlib.pyplot as plt
 from experiments import native_source_resolved_data as d
 
 def training_figure(out):
-    colors=['#4c78a8','#72b7b2','#e45756','#b279a2','#f2a541'];fig,ax=plt.subplots(figsize=(9,4.5));total=0
+    colors=['#4c78a8','#72b7b2','#e45756','#b279a2','#f2a541'];fig,ax=plt.subplots(figsize=(9,4.5));byfit=collections.defaultdict(list)
     for p in sorted((d.OUT/'calls').glob('fits*')):
-        updates=[v for l in p.read_text().splitlines() if (v:=json.loads(l))['kind']=='formal_update']
-        if not updates:continue
-        total+=len(updates);kind,seed=updates[0]['arm'],updates[0]['seed'];x=np.array([v['step'] for v in updates]);y=np.array([v['loss'] for v in updates]);bins=np.arange(0,len(y),25);ax.plot(x[bins],np.add.reduceat(y,bins)/np.minimum(25,len(y)-bins),c=colors[list(d.KINDS).index(kind)],alpha=.5,label=f'{kind}/{seed}')
-    assert total==15000
-    ax.set(xlabel='Formal update',ylabel='SmoothL1 training loss (25-update means)',title='All paired fits; last-step evaluation only');ax.legend(ncol=4,fontsize=7);fig.tight_layout();fig.savefig(out/'training.png',dpi=180);plt.close(fig)
+        for line in p.read_text().splitlines():
+            event=json.loads(line)
+            if event['kind']=='formal_update':byfit[event['arm'],event['seed']].append(event)
+    assert sum(map(len,byfit.values()))==15000
+    for kind in d.KINDS:
+        for seed in d.SEEDS:
+            updates=sorted(byfit[kind,seed],key=lambda v:v['step']);assert [v['step'] for v in updates]==list(range(1,1001))
+            x=np.array([v['step'] for v in updates]);y=np.array([v['loss'] for v in updates]);bins=np.arange(0,len(y),25)
+            ax.plot(x[bins],np.add.reduceat(y,bins)/np.minimum(25,len(y)-bins),c=colors[list(d.KINDS).index(kind)],ls=['-','--',':'][list(d.SEEDS).index(seed)],alpha=.7,label=f'{kind}/{seed}')
+    ax.set(xlabel='Formal update',ylabel='SmoothL1 training loss (25-update means)',title='All paired fits; resumed fragments joined by unique update');ax.legend(ncol=5,fontsize=6.8);fig.tight_layout();fig.savefig(out/'training.png',dpi=180);plt.close(fig)
 
 def main():
     start=time.monotonic();torch.set_num_threads(2);out=d.OUT/'figures';out.mkdir(exist_ok=True)
@@ -48,14 +54,14 @@ def main():
     def image(x):
         v=x.detach().numpy().transpose(1,2,0);return np.clip(v/255 if v.max()>1.5 else v,0,1)
     for i,case in enumerate(cases):
-        rid,a,q,seed=case['id'],case['anchor'],case['query'],case['seed'];obj=d.load(d.case(rid,a,q));valid=obj['labels']['valid'].numpy();gt=obj['labels']['target'].numpy();points=d.point_grid().numpy();sp=d.load(d.source(rid));qp=d.load(d.old.query_path(rid,q));ax[i,0].imshow(image(sp['rgb'][d.SOURCES.index(a)]));ax[i,0].scatter(points[:,0],points[:,1],c=np.where(valid,'#00d4ff','#bbbbbb'),s=12);ax[i,0].set_title(f'{rid} anchor{a}: {valid.sum()}/64 labelled')
+        rid,a,q,seed=case['id'],case['anchor'],case['query'],case['seed'];obj=d.load(d.case(rid,a,q));valid=obj['labels']['valid'].numpy();gt=obj['labels']['target'].numpy();points=d.point_grid().numpy();sp=d.load(d.source(rid));qp=d.load(d.old.query_path(rid,q));ax[i,0].imshow(image(sp['rgb'][d.SOURCES.index(a)]));ax[i,0].scatter(points[:,0],points[:,1],c=np.where(valid,'#00d4ff','#bbbbbb'),s=12);ax[i,0].set_title(f'{rid} anchor{a}\nseed{seed}; {valid.sum()}/64 labelled',fontsize=9)
         for j,kind in enumerate(('F_P','M_P','F_G','L','Native4'),1):
-            pred=(obj['Native4']['coords'][-1] if kind=='Native4' else d.load((d.prior.CACHE if kind=='L' else d.CACHE)/'predictions'/f'{kind}_{seed}'/rid/f'{a}_{q}.pt')['coords'][-1]).numpy();err=np.linalg.norm(pred-gt,axis=-1);ax[i,j].imshow(image(qp['rgb']));ax[i,j].scatter(pred[~valid,0],pred[~valid,1],c='#bbbbbb',s=8,alpha=.45)
+            pred=(obj['Native4']['coords'][-1] if kind=='Native4' else d.load((d.prior.CACHE if kind=='L' else d.CACHE)/'predictions'/f'{kind}_{seed}'/rid/f'{a}_{q}.pt')['coords'][-1]).numpy();score_record=score_index[kind,None if kind=='Native4' else seed,rid,a,q];err=np.asarray(score_record['point_errors'],dtype=float);ax[i,j].imshow(image(qp['rgb']));ax[i,j].scatter(pred[~valid,0],pred[~valid,1],c='#bbbbbb',s=8,alpha=.45)
             for pp,gg,e in zip(pred[valid],gt[valid],err[valid]):ax[i,j].plot([pp[0],gg[0]],[pp[1],gg[1]],c='#00c878' if e<=8 else '#ff4055',lw=.8,alpha=.8)
-            ax[i,j].scatter(gt[valid,0],gt[valid,1],s=10,c='#00d4ff',marker='+');ax[i,j].scatter(pred[valid,0],pred[valid,1],s=9,c=np.where(err[valid]<=8,'#00c878','#ff4055'));score=score_index[kind,None if kind=='Native4' else seed,rid,a,q]['PCK8'];score_text=f'{score*100:.1f}%' if score is not None else 'undefined (no GT)';ax[i,j].set_title(f'{kind}, query{q}: PCK {score_text}')
+            ax[i,j].scatter(gt[valid,0],gt[valid,1],s=10,c='#00d4ff',marker='+');ax[i,j].scatter(pred[valid,0],pred[valid,1],s=9,c=np.where(err[valid]<=8,'#00c878','#ff4055'));score=score_record['PCK8'];score_text=f'{score*100:.1f}%' if score is not None else 'undefined (no GT)';ax[i,j].set_title(f'{kind}, query{q}\nPCK {score_text}',fontsize=9)
         for aa in ax[i]:aa.set(xlim=(-.5,447.5),ylim=(447.5,-.5),xticks=[],yticks=[])
         ax[i,0].set_ylabel(case['reason'],fontsize=8);selections.append(case)
-    fig.suptitle('Sensor / pose labels in cyan; prediction-to-label error green ≤8px, red >8px; grey unlabelled predictions',fontsize=10);fig.tight_layout();fig.savefig(out/'tracking_cases.png');plt.close(fig)
+    fig.suptitle('Sensor / pose labels in cyan; prediction-to-label error green ≤8px, red >8px; grey unlabelled predictions',fontsize=10);fig.tight_layout(rect=(0,0,1,.955),h_pad=2.5,w_pad=.7);fig.savefig(out/'tracking_cases.png');plt.close(fig)
     if not (out/'training.png').exists():training_figure(out)
-    d.write(d.OUT/'figure_manifest.json',dict(complete=True,selection=selections,files=[str(p) for p in out.glob('*.png')],actual_viewing_record_required=True,no_new_predictions_or_scoring=True));d.write(d.OUT/'CPU_figure_runtime.json',dict(complete=True,wall_seconds=time.monotonic()-start,peak_RSS_bytes=resource.getrusage(resource.RUSAGE_SELF).ru_maxrss*1024,CUDA_initialized=torch.cuda.is_initialized(),new_model_calls=0));print('figure exports complete',flush=True)
+    d.write(d.OUT/'figure_manifest.json',dict(complete=True,selection=selections,files=[str(p) for p in out.glob('*.png')],actual_viewing_record_required=True,no_new_predictions_or_scoring=True));d.write(d.OUT/'CPU_figure_runtime.json',dict(complete=True,PID=os.getpid(),wall_seconds=time.monotonic()-start,peak_RSS_bytes=resource.getrusage(resource.RUSAGE_SELF).ru_maxrss*1024,CUDA_initialized=torch.cuda.is_initialized(),new_model_calls=0));print('figure exports complete',flush=True)
 if __name__=='__main__':main()
