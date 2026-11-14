@@ -1,7 +1,7 @@
 # 共享高斯记忆：当前可以说什么
 
 <!-- native_scene_exchange_pe1 implementation status -->
-**round028来源分解实施交付（2026-11-14）。** 15×1000及21120新预测、旧完整均值P/G、L、Native继承对照与全部辅助／反例／成本完成。主F/G−F/P 0.156 [-0.718, 0.986] pp；表示F/P−M/P 0.307 [-0.956, 1.706] pp；交互 0.320 [-1.342, 2.114] pp。 F/G开发筛=False、F/S次要筛=False；机械标记不替代尾部及成本科学取舍。[完整报告](../results/gaussian_memory/native_source_resolved_pe1/report.md) · [实现交接](../results/gaussian_memory/native_source_resolved_pe1/implementation_handoff.json) · [唯一合同](../results/gaussian_memory/autonomous_research_loop/round_028/science_plan.md)。仅C2表示实质改变，O2/O3公共粗GS、O4/O5真实多query读取及O6同信息强中心保持；旧关闭与正负证据不改，全部used、无fresh或总体成功，交原Astra评价。
+**round029科学取舍完成（2026-11-14）：结束固定预算的来源分解PE接法及自动变体，无后继实施合同。** 主PE、表示效应、交互及相对旧完整均值／L的净用途未立；共同Native收益、连续误差与区域内容正证据、全部反例和有限精度边界保留。仅本次C2表示与配套C4/C6条件收束，O2–O6完整目标不改，旧关闭不撤销。全部used、无fresh候选；总体未达、未暂停、无外部阻塞。[唯一科学判断](../results/gaussian_memory/autonomous_research_loop/round_029/science_plan.md) · [完整报告](../results/gaussian_memory/native_source_resolved_pe1/report.md) · [原合同](../results/gaussian_memory/autonomous_research_loop/round_028/science_plan.md)。
 
 **round013评价完成（2026-11-13）：关闭两块工作副本PE家族，无后继合同。** [唯一科学判断](../results/gaussian_memory/autonomous_research_loop/round_013/science_plan.md)分别处理微小PE／无正反馈交互、Native主空间退步和共同raw／偏差／AbsRel正证据；L控制不证明来源普遍无用。[完整报告](../results/gaussian_memory/native_scene_exchange_pe1/report.md)、[manifest](../results/gaussian_memory/native_scene_exchange_pe1/manifest.json)保留全部零覆盖／反例／成本／身份。O2–O6完整目标、历史正负及旧关闭决定不变，无fresh、总体成功／暂停或外部阻塞。
 <!-- /native_scene_exchange_pe1 implementation status -->

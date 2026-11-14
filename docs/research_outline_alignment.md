@@ -1,7 +1,7 @@
 # 研究大纲与实现对应：持续更新记录
 
 <!-- native_scene_exchange_pe1 implementation status -->
-**round028来源分解实施交付（2026-11-14）。** 15×1000及21120新预测、旧完整均值P/G、L、Native继承对照与全部辅助／反例／成本完成。主F/G−F/P 0.156 [-0.718, 0.986] pp；表示F/P−M/P 0.307 [-0.956, 1.706] pp；交互 0.320 [-1.342, 2.114] pp。 F/G开发筛=False、F/S次要筛=False；机械标记不替代尾部及成本科学取舍。[完整报告](../results/gaussian_memory/native_source_resolved_pe1/report.md) · [实现交接](../results/gaussian_memory/native_source_resolved_pe1/implementation_handoff.json) · [唯一合同](../results/gaussian_memory/autonomous_research_loop/round_028/science_plan.md)。仅C2表示实质改变，O2/O3公共粗GS、O4/O5真实多query读取及O6同信息强中心保持；旧关闭与正负证据不改，全部used、无fresh或总体成功，交原Astra评价。
+**round029科学取舍完成（2026-11-14）：结束固定预算的来源分解PE接法及自动变体，无后继实施合同。** 主PE、表示效应、交互及相对旧完整均值／L的净用途未立；共同Native收益、连续误差与区域内容正证据、全部反例和有限精度边界保留。仅本次C2表示与配套C4/C6条件收束，O2–O6完整目标不改，旧关闭不撤销。全部used、无fresh候选；总体未达、未暂停、无外部阻塞。[唯一科学判断](../results/gaussian_memory/autonomous_research_loop/round_029/science_plan.md) · [完整报告](../results/gaussian_memory/native_source_resolved_pe1/report.md) · [原合同](../results/gaussian_memory/autonomous_research_loop/round_028/science_plan.md)。
 
 **round013科学取舍完成（2026-11-13）：关闭两块原生工作副本 PE 家族及自动变体，无后继合同。** O2/O3公共场、O4/O5真实读取、O6同信息P/S/G比较均已执行；C3消息图／C6学习改变未建立主PE或Native空间净用途。共同raw／偏差／AbsRel正证据、L控制及空间退步分列；C1/C2/C4/C5临时边界保持。[唯一科学判断](../results/gaussian_memory/autonomous_research_loop/round_013/science_plan.md) · [完整报告](../results/gaussian_memory/native_scene_exchange_pe1/report.md)。总体目标未达、未暂停，无fresh候选或外部阻塞；不派生变体。
 <!-- /native_scene_exchange_pe1 implementation status -->
@@ -294,13 +294,13 @@ P-sensor对P-pred的缺失ROI空间误差低4.27% [0.71,11.91]%，三个种子�
 | O3 | 为VGGT建立memory，形式为比较coarse的3DGS | 2048槽×1024维，四块255维特征＋质量 | 通道分辨率换来源分解；全局PCA和混合锚前缀计入依赖。 |
 | O4 | 每个view从3DGS场景表达提取当前view相关信息 | 沿用真实预测query相机的原生点跟踪 | 保持原端点／标签／覆盖，不据结果选子组。 |
 | O5 | 读取用到3DGS渲染和参数 | 原alpha绑定、投影可见量及首global只读K/V | 不增层或新reader；仅匹配改变保存内容。 |
-| O6 | 参数表示为PE | F内P/S/G及M内P/G，普通完整Σ和中心共有 | 主PE、表示效应、交互和净用途分列；[round028合同](../results/gaussian_memory/autonomous_research_loop/round_028/science_plan.md)完整结果见[本轮报告](../results/gaussian_memory/native_source_resolved_pe1/report.md)，主PE／表示／交互及净用途分列。 |
+| O6 | 参数表示为PE | 已测F内P/S/G及M内P/G，普通完整Σ和中心共有 | [round029](../results/gaussian_memory/autonomous_research_loop/round_029/science_plan.md)按原分支结束本接法；PE、表示与交互未立，共同及辅助用途分列，不外推普遍无效。 |
 
 O1的技术澄清依据[VGGT原文§3.2–3.3](https://arxiv.org/html/2503.11651v1)。O2–O6保留导师原始目的；不能因为某一种实现失败，自动修改这些目标。大纲并未规定在线更新、未知相机或端到端训练，它们目前是能力边界和后续开放问题，不能擅自说成已完成，也不能擅自当成用户要求放弃的目标。
 
 ## 2. 当前实现选择与临时简化
 
-当前[round028合同](../results/gaussian_memory/autonomous_research_loop/round_028/science_plan.md)选择一次固定预算的来源分解表示：逐来源贡献F与可由其精确得到的均值M，只改变C2保存的关联。沿原对应链作同信息PE比较，保留旧完整均值P、L和Native参照；[round027](../results/gaussian_memory/autonomous_research_loop/round_027/science_plan.md)的旧接法关闭及区域K正证据／R未决不改。当前15fit与全量评价／成本已完成，科学取舍交原Astra；[完整结果](../results/gaussian_memory/native_source_resolved_pe1/report.md)。
+当前[round029取舍](../results/gaussian_memory/autonomous_research_loop/round_029/science_plan.md)已结束[round028](../results/gaussian_memory/autonomous_research_loop/round_028/science_plan.md)固定预算来源分解PE：F/M完整比较未建立候选，不采用新表示，原完整均值仅保留为简单研究参照。下表登记本次已测条件，无待实施变体；[round027](../results/gaussian_memory/autonomous_research_loop/round_027/science_plan.md)旧关闭、区域K正证据／R未决及全部[本轮结果](../results/gaussian_memory/native_source_resolved_pe1/report.md)保持。
 
 **已完成并结束的选择：** `native_input_pe1`沿用C1/C2/C5/C6；C3单次输入attention替换旧MLP，C4复用8维P/S/G。12拟合及完整审阅未建立实用PE增量或来源净用途，结束该固定接法；旧32地点Render保留为有条件研究参考。当前实现选择和临时范围见下表；先前冻结接口阴性及本轮小幅辅助正结果均保留。
 
@@ -309,11 +309,11 @@ O1的技术澄清依据[VGGT原文§3.2–3.3](https://arxiv.org/html/2503.11651
 | 选择编号／关联大纲 | 当前选择及理由 | 其他解释或实现 | 当前证据和边界 |
 | --- | --- | --- | --- |
 | C1／O2、O3 | 原44场几何／opacity和source alpha绑定固定 | 不优化或更换物理场 | 来源sensor／相机特权仍在。 |
-| C2／O3、O4 | F保留逐来源残差，M仅保留同均值与来源质量 | 共同source-only PCA255，总内容1024维 | 新的可推翻条件；对旧完整均值作强参照，不因降维削弱对照。 |
+| C2／O3、O4 | 已测F逐来源残差与M同均值／质量控制 | 共同source-only PCA255，总内容1024维 | 表示主效应未立，不采用F/M；保留辅助正证据与实际有限精度边界，不扫描秩或来源权重。 |
 | C3／O4、O5 | 复用首global只读GS和两帧TrackHead | 不增层／反馈／reader | 仅为C2匹配试验复用；旧均值接法关闭不撤销。 |
-| C4／O6 | F/P、F/S、F/G、M/P、M/G完整匹配 | PE组共享全部内容／Σ／强中心 | 同表示PE、表示效应及交互分列；旧全维L／P与Native继承参照。 |
+| C4／O6 | F/P、F/S、F/G、M/P、M/G完整匹配已完成 | PE组共享全部内容／Σ／强中心 | 主／次PE候选未立，交互不确定；旧全维L／P与Native参照、共同用途及全部反例保留。 |
 | C5／O4 | 原32训练／12开发，原相机初值／点标签 | PCA只见训练地点source，query真值只监督评分 | 全部used，有限sensor标签与混合锚前缀仍为临时范围。 |
-| C6／O2–O6 | 原映射／位置MLP／首对rank8 LoRA | 三原seed、15×1000、固定末步 | 无新学习模块／额外损失；未达分支结束，不扫描来源／秩或续训。 |
+| C6／O2–O6 | 原映射／位置MLP／首对rank8 LoRA | 三原seed、15×1000、固定末步已完成 | 按原分支结束，不续训／补seed或精度修补；本次无后继实施合同。 |
 
 已实现基底与完整历史保留；[round012](../results/gaussian_memory/autonomous_research_loop/round_012/science_plan.md)、[round016](../results/gaussian_memory/autonomous_research_loop/round_016/science_plan.md)与[round020](../results/gaussian_memory/autonomous_research_loop/round_020/science_plan.md)的家族关闭不改。round021对固定旧模型提出的条件问题已由round022收束；公共状态、PE、原生用途、成本与独立确认分别判断。整体未达、未暂停，无外部阻塞或fresh候选。
 
@@ -331,7 +331,7 @@ O1的技术澄清依据[VGGT原文§3.2–3.3](https://arxiv.org/html/2503.11651
 
 | 尝试／证据来源 | 对应大纲／选择 | 已做的尝试与结果 | 当前取舍与防重复提示 |
 | --- | --- | --- | --- |
-| [round028来源分解结果](../results/gaussian_memory/native_source_resolved_pe1/report.md)，实施完成 | O2–O6；C2关联保留 | 同预算F/M与同信息PE已完整测量，旧完整均值／L／Native强参照、尾部与全部反例保留；科学取舍待Astra。 | 实质区别为保留被跨来源均值删除的残差；原接口／任务不变，旧家族关闭保留。 |
+| [round028来源分解结果](../results/gaussian_memory/native_source_resolved_pe1/report.md)，[round029已取舍](../results/gaussian_memory/autonomous_research_loop/round_029/science_plan.md) | O2–O6；C2关联保留 | 同预算F/M、主PE与交互未建立候选；共同Native／辅助连续正证据、旧强参照、有限精度与全部反例保留。 | 已结束本接法及自动变体，无后继合同；确已检验逐来源残差保留，不再将其冒称未试，也不外推全部关联／GS用途无效。 |
 | [round026原生跟踪](../results/gaussian_memory/autonomous_research_loop/round_026/science_plan.md)，[round027取舍](../results/gaussian_memory/autonomous_research_loop/round_027/science_plan.md) | O2–O6；C3只读接口／C5对应任务／C6匹配学习 | 12×1000完整[报告](../results/gaussian_memory/native_track_memory_pe1/report.md)：G−P未立；L也有Native增益，GS对L连续误差／尾部辅助改善保留。 | 按原分支关闭本接法，无后继合同；区域内容证据与旧R5／pose／深度结论不改，不称普遍无效。 |
 | [round025跨view内容报告](../results/gaussian_memory/native_crossview_content1/report.md)，[round026取舍](../results/gaussian_memory/autonomous_research_loop/round_026/science_plan.md) | O2–O4；C2内容性质／C5匹配范围 | K=.7182 [.6589,.7700]条件阳性、R跨1；108/192主对、12地点，稀疏覆盖与投影歧义保留。 | 有限测量结束；不是独立同表面、view-offset确诊、PE／Native／fresh；不扫描阈值或重做统计。 |
 | [round023实际内容输入支撑报告](../results/gaussian_memory/native_content_support1/report.md)，[round024收束](../results/gaussian_memory/autonomous_research_loop/round_024/science_plan.md) | O2–O6；C2性质测量／C4控制 | 96图6144VJP；G−P+.8902pp [−.0548,2.0968]未达，G−S+1.1026pp条件阳性；局部结构与广域部分均保留。 | 本支撑理由结束，无后继合同；全部零覆盖／反例保留，非PE／Native／fresh，不增probe或恢复旧家族。 |

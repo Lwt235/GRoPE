@@ -1,6 +1,14 @@
+# 已按用户要求暂停
+
+目标状态 **paused**。round030原Astra/max已实际interrupt（原状态running），没有收到本阶段FINAL；原Sol/high已待命，全部round028 GPU／CPU实验早已结束。**用户明确恢复前不再派发、检索或启动实验。** [暂停检查点](round_030/pause_checkpoint.json)与[state.json](state.json)为恢复依据。恢复后复用原Astra上下文续接round030，先检查已消耗的检索预算及已有文件，不重复round029判断／round028训练；原CLI和旧进程句柄不可恢复。
+
 # 当前双模型循环恢复入口
 
-当前round028 native_source_resolved_pe1由原Sol/high独占科学写租约；**唯一科学manager89284／owner exec24252**。当前子进程、卡号、步数与评价数以[state.json](state.json)的round028_training_progress及实验queue_status.json实际观测为准，不能据历史PID恢复。06:34Z首seed五组均永久1000已完成；F_P/F_S首seed分别1000＋1408评价完整结束（workers89517/96733 actualwait0），2/15完整fit完成，F_P/F_S第二seed已入原队列。GPU6/7各一训一评；GPU4 CPU-only稳定准入guard101461／owner79990，忙后120秒稳定空闲才许futureCUDA加载，非第二训练manager。主不poll Sol-owned24252/79990。旧manager114384／exec22661及全部children actualwait75，原build99600/preflight88814均exit0，均不可再poll或重启；GPU4短gap让用和完整检查点恢复保留。固定15×1000、≤18GPU worker小时／DATA8GiB／项目1GiB；约3.10workerh，按实时安全卡补位无默认双卡上限。[唯一合同](round_028/science_plan.md) · [实施交接](round_028/implementation_dispatch.json)。原Astra/max completed待命，后台effective未知／Fast字段不支持。完整目标active、未达、未暂停，全部used非fresh，等待全部实验/评价/成本/报告实际交付后回原Astra。
+round029原Astra/max已实际FINAL：按原分支结束round028来源分解PE及自动变体，无后继实施合同。[科学判断](round_029/science_plan.md) · [交接](round_029/analysis_handoff.json) · [主一次完成检查](round_029/coordinator_completion_check.json)。本轮与全部旧正负、辅助用途及有限精度/覆盖边界保留，整体目标未达、未暂停、无外部阻塞；不重开PCA/来源/seed/训练扫描。
+
+round030只做一次有上限的新信息获取与问题选择，区别于重复解读round029：[输入](round_030/analysis_input_handoff.json) · [实际派发](round_030/analysis_dispatch.json)。0GPU/训练/预测/数据下载，至多4篇直接相关primary工作、6次定向检索，无凑数最低要求。科学角度由原Astra/max选择，不强行制造实验；只有形成实质新问题的有限合同并actualFINAL才交原Sol/high。实际接受状态和唯一写租约以[state.json](state.json)为准，禁止重复派发。两个原子智能体复用，后台effective未知，Fast字段不支持/未核实；原CLI停用。持续授权及[精炼协议](protocol.md)保持，主独占goal/state/events。
+
+round028模型和全部CPU工作已终结：[完整报告](../native_source_resolved_pe1/report.md) · [唯一实施交接](../native_source_resolved_pe1/implementation_handoff.json) · [主交付检查](round_028/coordinator_implementation_delivery_check.json)。禁止恢复89284/24252、101461/79990、70765、36516或其他旧句柄。
 
 <details><summary>先前恢复状态（历史）</summary>
 
