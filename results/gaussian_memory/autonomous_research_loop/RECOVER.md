@@ -1,14 +1,14 @@
-# 已按用户要求暂停
+# 当前恢复入口：round051原Astra构造性方法设计，整体active
 
-目标状态 **paused**。round030原Astra/max已实际interrupt（原状态running），没有收到本阶段FINAL；原Sol/high已待命，全部round028 GPU／CPU实验早已结束。**用户明确恢复前不再派发、检索或启动实验。** [暂停检查点](round_030/pause_checkpoint.json)与[state.json](state.json)为恢复依据。恢复后复用原Astra上下文续接round030，先检查已消耗的检索预算及已有文件，不重复round029判断／round028训练；原CLI和旧进程句柄不可恢复。
+round050已actualFINAL且主独立completed并采纳：[具体判断](round_050/science_plan.md) · [一次完成检查](round_050/coordinator_analysis_completion_check.json)。关闭作者STAC固定96帧预算点配置及自动变体，保留AbsRel／偏差正证据；H/W全96的重复输出不是紧预算压缩证据。无新实施合同，无fresh候选，总体revision31 active未达。
 
-# 当前双模型循环恢复入口
+**当前唯一科学写者：原 `/root/research_analysis_astra` 已实际followup且独立running。** round051是构造性状态／更新／遗忘／读取设计任务：[唯一输入](round_051/analysis_input_handoff.json) · [实际派发](round_051/analysis_dispatch.json)。不重分析049，不复算旧数值或复做作者加载；0 GPU／训练／模型调用，必要一手资料有界辅助。若形成实质候选才交一个有限科学合同，Sol负责工程具体化；无候选则交具体构造与失败点，不制造实验。
 
-round029原Astra/max已实际FINAL：按原分支结束round028来源分解PE及自动变体，无后继实施合同。[科学判断](round_029/science_plan.md) · [交接](round_029/analysis_handoff.json) · [主一次完成检查](round_029/coordinator_completion_check.json)。本轮与全部旧正负、辅助用途及有限精度/覆盖边界保留，整体目标未达、未暂停、无外部阻塞；不重开PCA/来源/seed/训练扫描。
+原Astra创建请求gpt-6-astra/max复用、后台effective未知；原Sol6.1/high completed待命，Fast接口无字段不声称开启。round049全部36流／评分／成本／图和owner均终态，不恢复任何旧队列／句柄。旧goal服务round003正文已过时，以[总体目标](goal_revision_after_round042/revised_goal.md)、[目标记录](continuous_loop_goal_record.json)及state.json为准。旧关闭及全部正负／反例／used身份保持。
 
-round030只做一次有上限的新信息获取与问题选择，区别于重复解读round029：[输入](round_030/analysis_input_handoff.json) · [实际派发](round_030/analysis_dispatch.json)。0GPU/训练/预测/数据下载，至多4篇直接相关primary工作、6次定向检索，无凑数最低要求。科学角度由原Astra/max选择，不强行制造实验；只有形成实质新问题的有限合同并actualFINAL才交原Sol/high。实际接受状态和唯一写租约以[state.json](state.json)为准，禁止重复派发。两个原子智能体复用，后台effective未知，Fast字段不支持/未核实；原CLI停用。持续授权及[精炼协议](protocol.md)保持，主独占goal/state/events。
+actualFINAL且独立completed后主再一次采纳并接续。主独占goal/state/events/dispatch/metrics/protocol/RECOVER；持续自主、顺序单写及暂停／恢复规则保持。
 
-round028模型和全部CPU工作已终结：[完整报告](../native_source_resolved_pe1/report.md) · [唯一实施交接](../native_source_resolved_pe1/implementation_handoff.json) · [主交付检查](round_028/coordinator_implementation_delivery_check.json)。禁止恢复89284/24252、101461/79990、70765、36516或其他旧句柄。
+下方仅历史。
 
 <details><summary>先前恢复状态（历史）</summary>
 

@@ -1,7 +1,23 @@
 # 研究大纲与实现对应：持续更新记录
 
 <!-- native_scene_exchange_pe1 implementation status -->
-**round029科学取舍完成（2026-11-14）：结束固定预算的来源分解PE接法及自动变体，无后继实施合同。** 主PE、表示效应、交互及相对旧完整均值／L的净用途未立；共同Native收益、连续误差与区域内容正证据、全部反例和有限精度边界保留。仅本次C2表示与配套C4/C6条件收束，O2–O6完整目标不改，旧关闭不撤销。全部used、无fresh候选；总体未达、未暂停、无外部阻塞。[唯一科学判断](../results/gaussian_memory/autonomous_research_loop/round_029/science_plan.md) · [完整报告](../results/gaussian_memory/native_source_resolved_pe1/report.md) · [原合同](../results/gaussian_memory/autonomous_research_loop/round_028/science_plan.md)。
+**round051设计完成：唯一后继`stream_geometric_map1`待顺序实施。** 用有全局槽数上界的几何矩地图直接约束当前相机配准，比较完整形状G、同信息强面元P、普通内容C与原生窗口W；不再压缩K/V或增加PE。[唯一科学合同](../results/gaussian_memory/autonomous_research_loop/round_051/science_plan.md) · [round050关闭决定](../results/gaussian_memory/autonomous_research_loop/round_050/science_plan.md)。O2/O3/O4为核心，O5/O6无新增主张；这只是几何地图，未称完整3DGS或有效方法。[总体revision31](../results/gaussian_memory/autonomous_research_loop/goal_revision_after_round042/revised_goal.md)保持active未达，旧正负／关闭和used身份不变、无fresh。本分析未运行实验，实施由主在actual FINAL后顺序交Sol。
+
+**round047事实实施完成：`stac_route_review1`。** 固定作者commit核实默认四帧chunk、hot＋几何邻域代表读取、全历史相机重算及随体素增长的状态；CUDA merger内部精确融合／count-bias／排序、完整权重加载与动态峰值保留unknown。[事实报告](../results/gaussian_memory/stac_route_review1/report.md) · [来源与取回账](../results/gaussian_memory/stac_route_review1/retrieval_ledger.json) · [唯一交接](../results/gaussian_memory/stac_route_review1/implementation_handoff.json)。O2/O3/O4信息边界，O5/O6与C1–C6无实验变更；0 GPU探测／模型调用／训练／权重数据下载，不冒称同byte、加载成功或效果，全部关闭和正负保持。
+
+**round044实施完成：`stream_spatial_merge1`。** C/I/G各12×96自身有界有效均值流及原W引用齐备；主I_shape=E_I−E_G为-0.2811 [-1.4494, 1.0647]°。共同M401、完整同byte/失败恢复/独立评分与原支持/NA/反例保留，GPU共2.942438worker小时；六项旋转净用途与raw深度代价并列于[完整报告](../results/gaussian_memory/stream_spatial_merge1/report.md)及[唯一交接](../results/gaussian_memory/stream_spatial_merge1/implementation_handoff.json)。O2/O3/O4与C1–C6临时范围保持，0训练/下载、全部used，无fresh或总体成功；现已由[round045科学取舍](../results/gaussian_memory/autonomous_research_loop/round_045/science_plan.md)关闭该固定家族，不自动后继；原实施与全部证据保留。
+
+**round042科学取舍完成。** X/K聚合阳性保留，但同byte的M材料性更好，结束XYZ斜率与自动变体；层12主导、其余层／特殊query反向及全部反例限制广泛解释。O2/O3/O4仅为条件组件证据，未建立三维组织必要性、原生净用途、在线或fresh。C1–C6为已检验临时条件；不调层救假设或自动M原生接入。[唯一判断](../results/gaussian_memory/autonomous_research_loop/round_042/science_plan.md) · [完整结果](../results/gaussian_memory/stream_response_moment1/report.md)。
+
+**round041实施完成：`stream_response_moment1`。** 主X/K平均E相对下降+66.942% [+63.203,+70.635]%，mean E_X/K/M=0.195/0.5899/0.1174；X/K分项flag=True，M/X材料性flag=True。12×96完整F教师、144捕获、全部query/NA/反例、同byte编码、独立复算与完整成本齐备；GPU共0.528221worker小时，全部自有GPU及评分CPU实际终态。[完整报告](../results/gaussian_memory/stream_response_moment1/report.md) · [短交接](../results/gaussian_memory/stream_response_moment1/implementation_handoff.json) · [唯一合同](../results/gaussian_memory/autonomous_research_loop/round_040/science_plan.md)。O2/O3/O4仅组件依据，C1–C6为完整教师/有效矩/原RoPE/旧used数据/冻结闭式拟合的临时范围；不替代原生净用途、Gaussian/PE或fresh，旧关闭与[主控制目标](../results/gaussian_memory/autonomous_research_loop/goal_revision_20261115/revised_goal.md)保持。现已由round042完成取舍，原实施记录保留。
+
+**round040设计完成：`stream_response_moment1`。** 同一真实来源与query下，以同byte的XYZ仿射矩、普通key-PCA矩和细分均值检验响应可保留性；不是旧代表选择修补。完整教师与临时库计费，0模型训练；阳性仅为组件依据，不替代原生净用途／高斯／PE／fresh。O2空间—内容、O3表示代价、O4读取组件；C1–C6临时范围见[唯一科学合同](../results/gaussian_memory/autonomous_research_loop/round_040/science_plan.md)，本分析未启动GPU或派发实现。
+
+**round039科学取舍完成（2026-11-15）：关闭`stream_patch_retention1`的U/C固定代表保存及自动变体，不晋升候选。** C/U正均值受home_md主导，原主增量／净用途未立，C有明确raw深度代价及额外更新成本；去均值结构、绝对几何／平移辅助正证据及全部反例保留。无有据的新实施合同，不扫描FPS／哈希／配额或自动转高斯。O3有界工程已实现、O4可靠精度—成本未立；O2中心范围有限，O5/O6未新增，C1–C6为已检验临时条件。全部used、无fresh或总体成功。[唯一科学判断](../results/gaussian_memory/autonomous_research_loop/round_039/science_plan.md) · [完整结果](../results/gaussian_memory/stream_patch_retention1/report.md) · [实现交接](../results/gaussian_memory/stream_patch_retention1/implementation_handoff.json)。
+
+**round037科学取舍完成（2026-11-15）：结束四格诊断及自动分解，唯一后继`stream_patch_retention1`已在round038完整实施，结果见上述。** 保留联合旋转收益与raw深度代价，直接读取未决，不能推出必要耦合或相机隐藏值主因。唯一后继在同实际byte、自身在线反馈下比较普通分散U与预测3D中心覆盖C，保存未融合原生patch束；旧T/D整帧及PE家族关闭保持。O3/O4为主，O2仅中心空间参照，O5/O6不新增；C1–C6临时选择、全部used、无fresh或自动高斯晋升。[唯一判断与合同](../results/gaussian_memory/autonomous_research_loop/round_037/science_plan.md) · [round036完整结果及全部反例](../results/gaussian_memory/stream_history_factorization1/report.md) · [实现交接](../results/gaussian_memory/stream_history_factorization1/implementation_handoff.json)。
+
+**round035科学取舍完成（2026-11-15）：关闭T/D固定配额整帧保存及自动变体，固定一次历史形成×当前读取诊断。** 旋转主线索未达；T的平移／绝对几何、D的深度偏差改善及全部反例保留，不换主终点。下一项`stream_history_factorization1`交叉F/W形成与F/W读取，并固定同一W相机历史；完整诊断库计费，不称有界部署或高斯P2。[唯一判断与合同](../results/gaussian_memory/autonomous_research_loop/round_035/science_plan.md) · [完整结果](../results/gaussian_memory/stream_native_retention1/report.md)。服务O3/O4机制与用途，O2高斯不新增、O5/O6可选，C1–C6为临时条件；全部used，研究继续、总体未达，旧关闭保持。
 
 **round013科学取舍完成（2026-11-13）：关闭两块原生工作副本 PE 家族及自动变体，无后继合同。** O2/O3公共场、O4/O5真实读取、O6同信息P/S/G比较均已执行；C3消息图／C6学习改变未建立主PE或Native空间净用途。共同raw／偏差／AbsRel正证据、L控制及空间退步分列；C1/C2/C4/C5临时边界保持。[唯一科学判断](../results/gaussian_memory/autonomous_research_loop/round_013/science_plan.md) · [完整报告](../results/gaussian_memory/native_scene_exchange_pe1/report.md)。总体目标未达、未暂停，无fresh候选或外部阻塞；不派生变体。
 <!-- /native_scene_exchange_pe1 implementation status -->
@@ -279,7 +295,7 @@ P-sensor对P-pred的缺失ROI空间误差低4.27% [0.71,11.91]%，三个种子�
 
 形成时待实现（现已完成）的[native_render_factorization1](native_render_factorization_execution_plan.md)：复用44份保存场景与三份32地点Render权重，零训练检查O4/O5已有用途对局部内容/覆盖的条件依赖，为O6下一接口选择提供依据。本轮没有新方法采用或O6增量结论。最近完成[native_input_pe1](native_input_pe_execution_plan.md)的12拟合/8448新预测及完整审阅，G/P主增量0.323%不确定、候选结束；中心组内容仍来自高斯绑定，比较只隔离读时PE增量。
 
-核心目标：**为VGGT建立一份比较粗的、以3DGS为形式的公共场景记忆；当前视图从中提取相关信息，读取利用渲染和高斯参数，参数参与位置编码。**
+原大纲核心目标（历史）：为VGGT建立公共粗3DGS记忆，利用渲染和参数读取，参数参与PE。**用户于round031明确要求评估并修改目标：现以有界公共三维记忆的原生精度—成本与长间隔重访信息保留为主，各向异性高斯为待检验候选；渲染／PE为可选组件。** [修订正文与授权边界](../results/gaussian_memory/autonomous_research_loop/round_031/revised_goal.md)。旧研究主张及结果不追改，当前没有证明高斯优于强基线。
 
 此前完成的是[native_receiver_view_transfer1](../results/gaussian_memory/native_receiver_view_transfer1/report.md)：复用A/F两种接收条件的Local/Render共12份已有权重、24份场景，新增2304份新查询推理，回放2304份旧指标，零重训。A_Render在训练片段未训练视角对Local空间误差低55.59% [46.53,61.31]%，三种子/12地点均有利；开发新视角平均高3.12%且区间跨零。证据收窄为片段内跨视角用途，跨地点可靠净用途和O6仍未建立；有限检查结束，无自动后继。前轮[native_receiver_adaptation1](native_receiver_adaptation_execution_plan.md)的全部拟合及结束决定保留。
 
@@ -289,18 +305,18 @@ P-sensor对P-pred的缺失ROI空间误差低4.27% [0.71,11.91]%，三个种子�
 
 | 大纲编号 | 大纲中的意思 | 当前对应 | 对应关系与待验证部分 |
 | --- | --- | --- | --- |
-| O1 | VGGT是per-token，每个token是一个场景点 | 单图上下文按来源分解保存，点由实际锚输入定义 | 来源残差不是已认证物理点或定位不确定性。 |
-| O2 | 3DGS建立一个公共的场景表达 | 原四source几何，共同F/M source-only状态 | 一次保存、多query复用，不写回query。 |
-| O3 | 为VGGT建立memory，形式为比较coarse的3DGS | 2048槽×1024维，四块255维特征＋质量 | 通道分辨率换来源分解；全局PCA和混合锚前缀计入依赖。 |
-| O4 | 每个view从3DGS场景表达提取当前view相关信息 | 沿用真实预测query相机的原生点跟踪 | 保持原端点／标签／覆盖，不据结果选子组。 |
-| O5 | 读取用到3DGS渲染和参数 | 原alpha绑定、投影可见量及首global只读K/V | 不增层或新reader；仅匹配改变保存内容。 |
-| O6 | 参数表示为PE | 已测F内P/S/G及M内P/G，普通完整Σ和中心共有 | [round029](../results/gaussian_memory/autonomous_research_loop/round_029/science_plan.md)按原分支结束本接法；PE、表示与交互未立，共同及辅助用途分列，不外推普遍无效。 |
+| O1 | VGGT是per-token，每个token是一个场景点 | 原生patch K/V含上下文与源图位置，不等同单一物理点 | 支撑统计不冒充定位不确定性。 |
+| O2 | 3DGS建立一个公共的场景表达 | 新目标保留公共三维结构，以高斯空间记忆为候选 | 未具备外观／opacity和渲染证据时不称完整3DGS。 |
+| O3 | 为VGGT建立memory，形式为比较coarse的3DGS | 以全部实际历史字节约束保存与遗忘 | [round051](../results/gaussian_memory/autonomous_research_loop/round_051/science_plan.md)固定全局4096格矩地图与有限原生／相机历史，待实施；[round050](../results/gaussian_memory/autonomous_research_loop/round_050/science_plan.md)旧作者配置关闭保持。 |
+| O4 | 每个view从3DGS场景表达提取当前view相关信息 | 原生长间隔几何与完整成本为主线 | [round051](../results/gaussian_memory/autonomous_research_loop/round_051/science_plan.md)将几何记忆用于原生输出后的位姿配准，主G/C及强面元／窗口比较；既有[round049正负](../results/gaussian_memory/stac_native_budget1/report.md)不改，未有新效果。 |
+| O5 | 读取用到3DGS渲染和参数 | 按用户新目标改为可选择的读取能力 | 首阶段只原生K/V；不强制渲染、投影RoPE或位姿闭环。 |
+| O6 | 参数表示为PE | 从每轮主线改为组件级待验证问题 | 若提出PE收益，仍须同信息强中心／球形匹配；[旧结果和关闭](../results/gaussian_memory/autonomous_research_loop/round_029/science_plan.md)保持。 |
 
-O1的技术澄清依据[VGGT原文§3.2–3.3](https://arxiv.org/html/2503.11651v1)。O2–O6保留导师原始目的；不能因为某一种实现失败，自动修改这些目标。大纲并未规定在线更新、未知相机或端到端训练，它们目前是能力边界和后续开放问题，不能擅自说成已完成，也不能擅自当成用户要求放弃的目标。
+O1的技术澄清依据[VGGT原文§3.2–3.3](https://arxiv.org/html/2503.11651v1)。上述优先级调整来自本次用户明确要求及[round031论证](../results/gaussian_memory/autonomous_research_loop/round_031/science_plan.md)，不是由单一失败自动推导。在线、未知相机和训练范围仍需逐合同说明；已有结果不被新目标改写。
 
 ## 2. 当前实现选择与临时简化
 
-当前[round029取舍](../results/gaussian_memory/autonomous_research_loop/round_029/science_plan.md)已结束[round028](../results/gaussian_memory/autonomous_research_loop/round_028/science_plan.md)固定预算来源分解PE：F/M完整比较未建立候选，不采用新表示，原完整均值仅保留为简单研究参照。下表登记本次已测条件，无待实施变体；[round027](../results/gaussian_memory/autonomous_research_loop/round_027/science_plan.md)旧关闭、区域K正证据／R未决及全部[本轮结果](../results/gaussian_memory/native_source_resolved_pe1/report.md)保持。
+当前为[round051唯一合同](../results/gaussian_memory/autonomous_research_loop/round_051/science_plan.md)的几何矩地图与直接位姿读取，尚未实施；下表是本轮临时选择。此前作者chunk4／全前缀camera及S/H/W配置在[round048](../results/gaussian_memory/autonomous_research_loop/round_048/science_plan.md)完整保留，已由[round050](../results/gaussian_memory/autonomous_research_loop/round_050/science_plan.md)关闭；[round045](../results/gaussian_memory/autonomous_research_loop/round_045/science_plan.md)、[round042](../results/gaussian_memory/autonomous_research_loop/round_042/science_plan.md)、U/C、T/D和旧PE关闭不改。
 
 **已完成并结束的选择：** `native_input_pe1`沿用C1/C2/C5/C6；C3单次输入attention替换旧MLP，C4复用8维P/S/G。12拟合及完整审阅未建立实用PE增量或来源净用途，结束该固定接法；旧32地点Render保留为有条件研究参考。当前实现选择和临时范围见下表；先前冻结接口阴性及本轮小幅辅助正结果均保留。
 
@@ -308,14 +324,14 @@ O1的技术澄清依据[VGGT原文§3.2–3.3](https://arxiv.org/html/2503.11651
 
 | 选择编号／关联大纲 | 当前选择及理由 | 其他解释或实现 | 当前证据和边界 |
 | --- | --- | --- | --- |
-| C1／O2、O3 | 原44场几何／opacity和source alpha绑定固定 | 不优化或更换物理场 | 来源sensor／相机特权仍在。 |
-| C2／O3、O4 | 已测F逐来源残差与M同均值／质量控制 | 共同source-only PCA255，总内容1024维 | 表示主效应未立，不采用F/M；保留辅助正证据与实际有限精度边界，不扫描秩或来源权重。 |
-| C3／O4、O5 | 复用首global只读GS和两帧TrackHead | 不增层／反馈／reader | 仅为C2匹配试验复用；旧均值接法关闭不撤销。 |
-| C4／O6 | F/P、F/S、F/G、M/P、M/G完整匹配已完成 | PE组共享全部内容／Σ／强中心 | 主／次PE候选未立，交互不确定；旧全维L／P与Native参照、共同用途及全部反例保留。 |
-| C5／O4 | 原32训练／12开发，原相机初值／点标签 | PCA只见训练地点source，query真值只监督评分 | 全部used，有限sensor标签与混合锚前缀仍为临时范围。 |
-| C6／O2–O6 | 原映射／位置MLP／首对rank8 LoRA | 三原seed、15×1000、固定末步已完成 | 按原分支结束，不续训／补seed或精度修补；本次无后继实施合同。 |
+| C1／O2、O3 | 单帧因果原生前端；地图先读后写、自身几何反馈 | 当前相机只用有限首帧／近期pose-token四轮精化，旧输出不修订 | 无GT／教师／旧观测回读；几何不回写原生hidden。 |
+| C2／O3、O4 | 有限原生KV＋4096格中心／二阶矩／计数及一个SE(3) | 共同3GiB总历史上限；普通C/W获得释放字节 | 全部backing／相机／索引／恢复和历史工作区收费，96帧不证明长期效果。 |
+| C3／O4、O5 | 当前原生点图通过局部刚体配准读取几何地图 | G完整矩、P强轴对称面元，配普通内容C／窗口W | 主原生旋转，不以配准残差替代用途；不称纯固定场形状因果。 |
+| C4／O6 | 原生norm／来源RoPE保持，几何矩只作用配准度量 | P具有同一完整普通矩、中心／法向／trace／法向厚度 | 无PE或定位协方差标定主张，O6单独保留。 |
+| C5／O4 | 原12×96及既有GT重访身份 | 新单帧提交全部重新评价，不继承旧chunk4成绩 | 全部used；保留NA／失败／反例，独立确认另锁。 |
+| C6／O2–O6 | 既有官方权重冻结，0训练／权重下载 | 共同有限配准优化属于在线状态读取，不学习模型 | [唯一合同](../results/gaussian_memory/autonomous_research_loop/round_051/science_plan.md)，必要工程与资源准入在同次实施内完成。 |
 
-已实现基底与完整历史保留；[round012](../results/gaussian_memory/autonomous_research_loop/round_012/science_plan.md)、[round016](../results/gaussian_memory/autonomous_research_loop/round_016/science_plan.md)与[round020](../results/gaussian_memory/autonomous_research_loop/round_020/science_plan.md)的家族关闭不改。round021对固定旧模型提出的条件问题已由round022收束；公共状态、PE、原生用途、成本与独立确认分别判断。整体未达、未暂停，无外部阻塞或fresh候选。
+已实现基底与完整历史保留；[round012](../results/gaussian_memory/autonomous_research_loop/round_012/science_plan.md)、[round016](../results/gaussian_memory/autonomous_research_loop/round_016/science_plan.md)与[round020](../results/gaussian_memory/autonomous_research_loop/round_020/science_plan.md)的家族关闭不改。round021条件问题已由round022收束；公共状态、PE、原生用途、成本与独立确认仍分开判断。**整体未达，用户已明确恢复顺序研究**；round043固定合同已由round044完整实施、round045关闭该家族；round047源码取证与round049作者路线比较均完成，round050关闭该配置；round051提出直接几何读取的新有限合同，round042／039关闭不改；此前round031仅分析的授权边界作为历史保留，无fresh候选。
 
 **C3变更的形成记录（后已授权完成，非待执行提案）：** 来源图像编码器内容按查询视角直接渲染，在当前同一编码器输出处加入单个残差融合层，再运行全部原生层与DPT。C1/C2保存状态不变，C5/C6给定相机、传感器特权、静态和冻结条件仍为临时边界；C4投影标量修补保持收束，O6未来比较需要另行明确。固定Local／Global／Render三组同容量训练，检验空间内容是否提供超出共同适配和场景整体信息的原生用途。与prototype1、末层教师恢复和joint_write1独立粗头的实质区别，以及不同结果下的取舍，见[分析与建议](learned_projection_results_analysis_20261112.md)。
 

@@ -20,7 +20,7 @@
 
 ## 持续授权、资源与配置边界
 
-完整目标仍为精炼 VGGT 公共3DGS记忆、Gaussian Transformer PE 相对强中心的可靠收益/范围及合适独立确认。保留阴性；证据不足可收束具体路线，不能把一轮结束当总体成功、擅自暂停或伪装外部阻塞。只在用户暂停/停止、完整目标获证或确需用户输入的外部阻塞时依既有规则处理。
+总体采用[revision31目标](goal_revision_after_round042/revised_goal.md)，近期以已采纳的[round048合同](round_048/science_plan.md)及后继实际状态为准：研究同实际历史字节与输入权限下公共三维记忆的原生精度—成本和重访信息保留，高斯为候选，PE／渲染须各自证明。round049已完整actualFINAL／独立completed并经[主一次检查](round_049/coordinator_implementation_delivery_check.json)采纳；round050关闭该STAC配置、无实施合同；当前原Astra/max按[round051集中输入](round_051/analysis_input_handoff.json)实际构造有实质区别的有界状态／遗忘设计，原Sol/high待命。旧家族关闭、全部正负和used身份保持，无fresh候选，总体active未达；旧goal服务正文无法修改，不恢复旧队列或伪造总体完成，仓库目标记录和state.json为当前依据。持续授权与暂停／恢复／终止规则保持。
 
 GPU 并行数按实时空卡、独立剩余任务与 CPU/RAM/存储余量调整，遵守本轮明确硬限，保留唯一作业分配及恢复身份；已有双队列不作为后轮默认并发上限。保护他人 GPU/进程和旧成果，保留旧 GLIBC；资源准入、恢复及每轮有限预算按已授权计划，普通修复版本化。请求参数与后台生效配置分列；collaboration.followup_task 不支持重传 model/effort，按原创建配置复用；CLI 可用时每次显式参数且只 resume 精确 UUID，不能重复创建或静默替换。若同一任务的写锁由共享应用服务持有，可在确认旧回合终止后通过应用端向同一 UUID 显式传入相同 Sol/high 续接；不终止共享服务或删除锁。本次应用端没有 Fast 参数，须明确记录未显式请求，不能声称开启；偏好保留，后台 tier 仍 unknown。公开子任务输出可由主转述并标来源，私有推理不转发。
 
